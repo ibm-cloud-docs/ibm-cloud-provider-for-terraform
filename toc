@@ -1,0 +1,92 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="terraform" category="dev_ops" audience="compute" href="/docs/terraform?topic=terraform-getting-started" path="terraform"}
+Terraform on IBM Cloud
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    about.md
+    whats-new.md
+    
+    {: .topicgroup}
+    Tutorials
+        tutorials/clusters.md
+        tutorials/install_redhat_openshift.md
+        [Tutorial: Deploying a 3-Tier Web App in a Virtual Private Cloud (VPC)](https://github.com/jonghall/ibmcloud-terraform-vpc)
+    {: .navgroup-end}
+    
+    {: .navgroup id="howto"}
+    setup_cli.md
+    migrate.md
+    create-terraform-template.md
+    manage_resources.md
+    autodeploy_template.md
+    provider-endpoint.md
+    {: .navgroup-end}
+    
+    {: .navgroup id="reference"}
+    {: .topicgroup}
+    IBM Cloud provider for Terraform on IBM Cloud
+         provider/sitemap.md
+         provider/version_changelog.md
+         
+         provider/provider-ref.md
+         provider/api-gateway-resources.md
+         provider/api-gateway-data-source.md
+         provider/certificate-manager-resources.md
+         provider/certificate-manager-data-sources.md
+         provider/classic-infrastructure-resources.md
+         provider/classic-infrastructure-data-sources.md
+         provider/cloud-foundry-resources.md
+         provider/cloud-foundry-data-sources.md
+         provider/databases-resources.md
+         provider/databases-data-sources.md
+         provider/direct-link-gateway-resources.md
+         provider/direct-link-gateway-data-sources.md
+         provider/dns-resources.md
+         provider/dns-datasources.md
+         provider/event-streams-data-sources.md
+         provider/event-streams-resources.md
+         provider/function-resources.md
+         provider/function-data-sources.md
+         provider/iam-resources.md
+         provider/iam-data-sources.md
+         provider/internet-services-resources.md
+         provider/internet-service-data-sources.md
+         provider/key-management-service-resources.md
+         provider/key-management-service-data-sources.md
+         provider/container-resources.md
+         provider/container-data-sources.md
+         provider/object-storage-resources.md
+         provider/object-storage-data-sources.md
+         provider/power-vsi-resources.md
+         provider/power-vsi-data-sources.md
+         provider/resource-management-resources.md
+         provider/resource-management-data-sources.md
+         provider/schemastics-data-sources.md
+         provider/transit-gateway-resources.md
+         provider/transit-gateway-data-sources.md
+         provider/vpc-infrastructure-resources.md
+         provider/vpc-infrastructure-data-sources.md
+         provider/vpc-gen2-resources.md
+         provider/vpc-gen2-data-sources.md   
+   
+    [Sample Terraform on IBM Cloud templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples)
+    template_ov.md
+    [Terraform documentation](https://www.terraform.io/docs/)
+    [Terraform CLI reference](https://www.terraform.io/docs/commands/index.html)
+    [Architecture reference: Highly available, secured, and managed Kubernetes environment](https://github.com/ibm-cloud-architecture/refarch-public-iaas-iks)
+    {: .navgroup-end}
+    
+    {: .navgroup id="help"}
+    faqs.md
+    terraform_ts_index.md
+
+    {: .topicgroup}
+    Troubleshooting
+        region.md
+    {: .navgroup-end}
+
+
+
