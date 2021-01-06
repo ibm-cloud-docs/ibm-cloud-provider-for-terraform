@@ -2,11 +2,11 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-05"
+lastupdated: "2021-01-06"
 
 keywords: terraform provider plugin, terraform certificate manager, terraform cert manager, terraform certificate
 
-subcollection: terraform
+subcollection: ibm-cloud-provider-for-terraform
 
 ---
 

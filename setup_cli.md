@@ -2,11 +2,11 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-05"
+lastupdated: "2021-01-06"
 
 keywords: install IBM Cloud Provider plug-in for Terraform cli, set up IBM Cloud Provider plug-in for Terraform cli, ibm cloud provider plugin, IBM Cloud Provider plug-in for Terraform
 
-subcollection: terraform
+subcollection: ibm-cloud-provider-for-terraform
 
 ---
 {:beta: .beta}

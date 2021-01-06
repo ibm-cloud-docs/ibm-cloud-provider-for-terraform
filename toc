@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="terraform" category="dev_ops" audience="compute" href="/docs/terraform?topic=terraform-getting-started" path="terraform"}
+{: .toc subcollection="ibm-cloud-provider-for-terraform" category="dev_ops" audience="compute" href="/docs/ibm-cloud-provider-for-terraform?topic=terraform-getting-started" path="terraform"}
 Terraform on IBM Cloud
 
     {: .navgroup id="learn"}
