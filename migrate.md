@@ -2,11 +2,11 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-05"
+lastupdated: "2021-01-06"
 
 keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, IBM Cloud Provider plug-in for Terraform, provision resources
 
-subcollection: terraform
+subcollection: ibm-cloud-provider-for-terraform
 
 ---
 

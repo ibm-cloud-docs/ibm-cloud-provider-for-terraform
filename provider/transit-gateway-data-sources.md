@@ -2,11 +2,11 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-05"
+lastupdated: "2021-01-06"
 
 keywords: terraform provider plugin, terraform transit gateway, terraform  transit gateways,  terraform transit gateway location, transit gateway locations, transit gateway, transit location
 
-subcollection: terraform
+subcollection: ibm-cloud-provider-for-terraform
 
 ---
 

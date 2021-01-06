@@ -2,11 +2,11 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-05"
+lastupdated: "2021-01-06"
 
 keywords: IBM Cloud Provider plug-in for Terraform, ansible, red hat, openshift, automate, automation, iaas
 
-subcollection: terraform
+subcollection: ibm-cloud-provider-for-terraform
 
 content-type: tutorial
 services: terraform, openshift

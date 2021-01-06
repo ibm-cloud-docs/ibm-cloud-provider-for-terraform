@@ -2,11 +2,11 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-05"
+lastupdated: "2021-01-06"
 
 keywords: Terraform on {{site.data.keyword.cloud_notm}}, configuration files, resources, what is Terraform on {{site.data.keyword.cloud_notm}}, automation, automate
 
-subcollection: terraform
+subcollection: ibm-cloud-provider-for-terraform
 
 ---
 

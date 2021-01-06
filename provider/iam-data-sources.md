@@ -2,11 +2,11 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-05"
+lastupdated: "2021-01-06"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
-subcollection: terraform
+subcollection: ibm-cloud-provider-for-terraform
 
 ---
 

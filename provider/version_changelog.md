@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2021
-lastupdated: "2021-01-05"
+lastupdated: "2021-01-06"
 
 keywords: terraform, terraform provider release, terraform provider versions
 
-subcollection: terraform
+subcollection: ibm-cloud-provider-for-terraform
 
 ---
 
