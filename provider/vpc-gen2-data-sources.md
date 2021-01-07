@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-07"
 
 keywords: terraform provider plugin, terraform gen 2, terraform gen 2 compute
 
@@ -1276,7 +1276,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`templates.network_interfaces.security_groups`|String|List of security groups of  the subnet. |
 |`templates.network_interfaces.primary_ipv4_address`|String|The IPv4 address assigned to the network interface. |
 |`templates.boot_volume`|String|A nested block describes the boot volume configuration for the template. |
-|`templates.boot_volume.encryption`|String|The encryption key CRN to encrypt the boot volume attached. |
+|`templates.boot_volume.encryption`|String|The encryption key CRN such as HPCS, Key Protect, etc., is provided to encrypt the boot volume attached.  |
 |`templates.boot_volume.name`|String|The name of the boot volume. |
 |`templates.boot_volume.size`|String|The boot volume size to configure in giga bytes. |
 |`templates.boot_volume.iops`|String|The IOPS for the boot volume. |
