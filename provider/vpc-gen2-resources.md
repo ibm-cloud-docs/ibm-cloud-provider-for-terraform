@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06" 
+lastupdated: "2021-01-07" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -2428,7 +2428,7 @@ Review the output parameters that you can access after your resource is created.
 |`resource_type`|String|The endpoint gateway resource type.|
 |`created_at`|String|The created date and time of the endpoint gateway.|
 |`health_state`|String|The health state of the endpoint gateway.|
-|`lifecycle_state`|String|The lifecyle state of the endpoint gateway.|
+|`lifecycle_state`|String|The lifecycle state of the endpoint gateway.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 ### Import
@@ -2603,6 +2603,68 @@ The `ibm_is_volume` can be imported by using volume ID.
 terraform import ibm_is_volume.example d7bec597-4726-451f-8a63-e62e6f19c32c
 ```
 {: pre}
+
+## `ibm_is_vpc` 
+{: #provider-vps}
+
+Create, update, or delete a Virtual Private Cloud (VPC). VPCs allow you to create your own space in {{site.data.keyword.cloud_notm}} to run an isolated environment within the public cloud. VPC gives you the security of a private cloud, with the agility and ease of a public cloud.
+{: shortdesc}
+
+For more information, see [About Virtual Private Cloud](/docs/vpc-on-classic?topic=vpc-on-classic-about). 
+
+### Sample IBM Cloud Provider plug-in for Terraform code
+{: #vpc-sample}
+
+```
+resource "ibm_is_vpc" "testacc_vpc" {
+    name = "test"
+}
+```
+{: codeblock}
+
+### Input parameters
+{: #vpc-input}
+
+Review the input parameters that you can specify for your resource. 
+{: shortdesc}
+
+| Input parameter | Data type | Required / optional | Description | Forces new resource |
+| ------------- |-------------| ----- | -------------- | ------- |
+| `classic_access` | Boolean | Optional | Specify if you want to create a VPC that can connect to classic infrastructure resources. Enter **true** to set up private network connectivity from your VPC to classic infrastructure resources that are created in the same {{site.data.keyword.cloud_notm}} account, and **false** to disable this access. If you choose to not set up this access, you cannot enable it after the VPC is created. Make sure to review the [prerequisites](/docs/vpc-on-classic-network?topic=vpc-on-classic-setting-up-access-to-your-classic-infrastructure-from-vpc#vpc-prerequisites) before you create a VPC with classic infrastructure access. Note that you can enable one VPC for classic infrastructure access per {{site.data.keyword.cloud_notm}} account only. | No |
+|`address_prefix_management`|String|Optional|Indicates whether a default address prefix should be created automatically (`auto`) or manually (`manual`) for each zone in this VPC. Default value `auto`.| No |
+| `name` | String | Required | Enter a name for your VPC. |  No |
+| `resource_group` | String | Optional | Enter the ID of the resource group where you want to create the VPC. To list available resource groups, run `ibmcloud resource groups`. If you do not specify a resource group, the VPC is created in the `default` resource group. |  Yes |
+| `tags` | Array of Strings | Optional | Enter any tags that you want to associate with your VPC. Tags might help you find your VPC more easily after it is created. Separate multiple tags with a comma (`,`). |  No |
+
+### Output parameters
+{: #vpc-arguments}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+| Output parameter | Data type | Description |
+| ------------- |-------------| -------------- |
+|`crn`|String|The CRN of the VPC.|
+| `default_security_group` | String | The unique identifier of the default security group that was created for your VPC. | 
+| `id` | String | The unique identifier of the VPC that you created. |
+|`subnets`|List of subnets|A list of subnets that are attached to a VPC.|
+|`subnets.name`|String|The name of the subnet.|
+|`subnets.id`|String|The ID of the subnet.|
+|`subnets.status`|String|The status of the subnet.|
+|`subnets.total_ipv4_address_count`|Integer|The total number of IPv4 addresses in the subnet.|
+|`subnets.available_ipv4_address_count`|Integer|The number of IPv4 addresses in the subnet that are available for you to be used.|
+| `status` | String | The provisioning status of your VPC. | 
+| `cse_source_addresses`|List of Cloud Service Endpoints|A list of the cloud service endpoints that are associated with your VPC, including their source IP address and zone.|
+|`cse_source_addresses.address`|String|The IP address of the cloud service endpoint.|
+|`cse_source_addresses.zone_name`|String|The zone where the cloud service endpoint is located.|
+
+### Timeouts
+{: #vpc-timeout}
+
+The following timeouts are defined for the resource: 
+
+- **create**: The creation of the VPC is considered `failed` when no response is received for 10 minutes. 
+- **delete**: The deletion of the VPC is considered `failed` when no response is received for 10 minutes. 
 
 
 ## `ibm_is_vpc_address_prefix`
