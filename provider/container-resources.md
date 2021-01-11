@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06" 
+lastupdated: "2021-01-11" 
 
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes
 
@@ -765,6 +765,75 @@ The following timeouts are defined for this resource.
 * **create**: The enablement of the feature is considered `failed` if no response is received for 90 minutes.
 * **update**: The update of the feature is considered `failed` if no response is received for 90 minutes. 
 
+## `ibm_cr_namespace`
+{: #cr-namespace}
+
+Create, update, or delete a container registry namespace. For more information, about container registry, see [About IBM Cloud Container Registry](/docs/Registry?topic=Registry-registry_overview).
+{: shortdesc}
+
+### Sample IBM Cloud Provider plug-in for Terraform code
+{: #cr-namespace}
+
+The following example shows how to configure an `ALB`.
+{: shortdesc}
+
+```
+resource "ibm_cr_namespace" "test" {
+  name              = "test123"
+  resource_group_id = "c34128405d5742549538xxx1237"
+}
+```
+
+```
+data "ibm_resource_group" "rg" {
+  name = "default"
+}
+resource "ibm_cr_namespace" "rg_namespace" {
+  name              = "testaasd2312"
+  resource_group_id = data.ibm_resource_group.rg.id
+}
+```
+
+### Input parameter
+{: #cr-namespace}
+
+Review the input parameters that you can specify for your resource. 
+{: shortdesc}
+
+| Input parameter | Data type | Required / optional | Description | Forces new resource |
+| ------------- |-------------| ----- | -------------- | ------- |
+| `name` | String | Required | The name of the namespaces to create. | Yes |
+| `resource_group_id` | String | Optional | The ID of the resource group to which the namespace is assigned. If not provided, default resource group ID will be assigned. | Yes |
+
+### Output parameters
+{: #cr-namespace}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+| Output parameter | Data type | Description |
+| ------------ |-------------| -------------- |
+| `id` | String | The name of the namespace.| 
+| `crn` | String | The `CRN` of the namespace.|
+| `created_on` | String | The created time of the namespace.|
+| `updated_on` | String | The updated time of the namespace.|
+
+### Import
+{: #cr-namespace}
+
+The `ibm_cr_namespace` resource can be imported by using the ID. The ID is formed from the name (namespace name) `ID=name`.
+
+**Synax**
+
+```
+terraform import ibm_cr_namespace.test <name of the namespace>
+```
+
+**Example**
+
+```
+terraform import ibm_cr_namespace.test namespace-name
+```
 
 ## `ibm_container_worker_pool`
 {: #container-pool}

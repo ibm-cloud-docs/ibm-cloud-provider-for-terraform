@@ -152,4 +152,3 @@ Error: Error waiting for create resource alb cert (buvlsclf0qcur3hjcrng/ingress-
 
 You need to update the IBM Cloud Provider plug-in for Terraform provider to use `version 1.16.1` and above.
 
-This is a test statement.This is a test statement.
