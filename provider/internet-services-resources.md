@@ -402,10 +402,10 @@ The following attributes are exported:
 
 |Name|Data type|Description|
 |----|-----------|--------|
-|`created_on`|String|Create data and time of the custom page.|
+|`created_on`|String|Created date and time of the custom page.|
 |`description`|String|The description of the custom page.|
 |`id`|String|The record ID. It is a combination of `<domain_id>,<cis_id>` attributes concatenated with `:`.|
-|`modified_on`|String|Modified data and time of the custom page.|
+|`modified_on`|String|Modified date and time of the custom page.|
 |`preview_target`|String|The custom page target.|
 |`required_tokens`|List|The custom page required token which is expected from URL page. |
 |`state`|String|The custom page state. This is set default when there is an empty URL and can customize when URL is set with some URL.|

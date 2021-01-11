@@ -2355,19 +2355,19 @@ The following example creates a VPN gateway.
 
 ```
 resource "ibm_is_virtual_endpoint_gateway" "endpoint_gateway1" {
-		
+
   name = "my-endpoint-gateway-1"
   target {
-  name          = "ibm-dns-server2"
+	name          = "ibm-dns-server2"
     resource_type = "provider_infrastructure_service"
   }
   vpc = ibm_is_vpc.testacc_vpc.id
-  resource_group = data.ibm_resource_group.test_acc.id    
+  resource_group = data.ibm_resource_group.test_acc.id
 }
 
 resource "ibm_is_virtual_endpoint_gateway" "endpoint_gateway2" {
-  name = "my-endpoint-gateway-1"
- 	target {
+	name = "my-endpoint-gateway-1"
+	target {
 	  name          = "ibm-dns-server2"
 	  resource_type = "provider_infrastructure_service"
 	}
@@ -2470,10 +2470,6 @@ resource "ibm_is_virtual_endpoint_gateway_ip" "virtual_endpoint_gateway_ip" {
 Review the input parameters that you can specify for your resource. 
 {: shortdesc}
 
-    gateway - (Required, string,ForceNew) Endpoint gateway ID
-    reserved_ip - (Required, string,ForceNew) Endpoint gateway IP id
-
-
 |Name|Data type|Required / optional|Description|Forces new resource|
 |----|-----------|-----------|---------------------| ------- |
 |`gateway`|String|Required|The endpoint gateway ID.| Yes |
@@ -2503,7 +2499,6 @@ Review the output parameters that you can access after your resource is created.
 ### Import
 {: #virtual-endpoint-gwyip-import}
 
-The `ibm_is_virtual_endpoint_gateway` can be imported by using virtual endpoint gateway ID.
 The `ibm_is_virtual_endpoint_gateway_ip` can be imported using virtual endpoint gateway ID and gateway IP ID.
 
 **Example**
@@ -2512,7 +2507,6 @@ terraform import ibm_is_virtual_endpoint_gateway_ip.example d7bec597-4726-451f-8
 
 ```
 {: pre}
-
 
 ## `ibm_is_volume`
 {: #volume}
