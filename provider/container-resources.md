@@ -47,7 +47,7 @@ Before you start working with your resource, make sure to review the [required p
 ## `ibm_container_addons`
 {: #container-addons}
 
-Enable, update or disable a single add-on or a set of add-ons.
+Enable, update or disable a single add-on or a set of add-ons. For more information, see [Cluster addons](/docs/containers?topic=containers-api-at-iam#ks-cluster).
 {: shortdesc}
 
 ### Sample IBM Cloud Provider plug-in for Terraform code
@@ -58,7 +58,6 @@ resource "ibm_container_addons" "addons" {
   cluster = ibm_container_vpc_cluster.cluster.name
   addons {
     name    = "istio"
-    version = "1.6"
     version = "1.7"
   }
   addons {
@@ -84,6 +83,10 @@ resource "ibm_container_addons" "addons" {
   addons {
     name    = "vpc-block-csi-driver"
     version = "2.0.3"
+  }
+  addons {
+    name    = "cluster-autoscaler"
+    version = "1.0.1"
   }
 }
 
@@ -235,7 +238,7 @@ Review the output parameters that you can access after your resource is created.
 | `cloud_cert_instance_id` | String | The {{site.data.keyword.cloudcerts_long_notm}} instance ID from which the certificate was downloaded. |
 | `domain_name` | String | The domain name of the certificate. |
 | `expires_on` | Date | The date the certificate expires. |
-| `id` | String | The unique identifier of the certificate in the format `<cluster_name_id>/<secret_name>`.
+| `id` | String | The unique identifier of the certificate in the format `<cluster_name_id>/<secret_name>`. |
 | `issuer_name` | String | The name of the issuer of the certificate. | 
 |`status`|String| The Status of the secret. |
 
@@ -259,6 +262,49 @@ The following timeouts are defined for this resource.
 * **Create**: The creation of the SSL certificate is considered `failed` if no response is received for 10 minutes.
 * **Delete**: The deletion of the SSL certificate is considered `failed` if no response is received for 10 minutes.
 * **Update**: The update of the SSL certificate is considered `failed` if no response is received for 10 minutes. 
+
+## `ibm_container_api_key_reset`
+{: #container-api-key-reset}
+
+Create, update, or delete Kubernetes API key. For more information, about Kubernetes API key, see [Assigning cluster access](/docs/containers?topic=containers-users#access-checklist).
+{: shortdesc}
+
+### Sample IBM Cloud Provider plug-in for Terraform code
+{: #container-api-key-reset}
+
+The following example reset Kubernetes API key.
+
+```
+resource "ibm_container_api_key_reset" "reset" {
+    region ="us-east"
+    resource_group_id = "766f3584b2c840ee96d856bc04551da8"
+    reset_api_key=2
+
+}
+
+```
+
+### Input parameters
+{: #container-api-key-reset}
+
+Review the input parameters that you can specify for your resource. 
+{: shortdesc}
+
+| Input parameter | Data type | Required / optional | Description | Force new resource |
+| ------------- |-------------| ----- | -------------- | ------ |
+| `region` | String | Required | The region in which API key has to be reset.| Yes |
+| `resource_group_id` | String | Optional | The ID of the resource group. You can retrieve the value from data source `ibm_resource_group`. If not provided defaults to default resource group. | Yes |
+| `reset_api_key` | Integer | Optional | Determines the API key need reset or not. This attribute is added to avoid the state dependencies. You need to increment the attribute to reset the API key on same `region` and `resource_group_id`. The default value is `1`.| No |
+
+### Output parameters
+{: #container-api-key-reset}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+| Output parameter | Data type | Description |
+| ------------- |-------------| -------------- |
+| `id` | String | The resource ID. ID is a combination of `<region>/<resource_group_id>`.|
 
 ## `ibm_container_bind_service`
 {: #container-bind}

@@ -230,7 +230,7 @@ Review the output parameters that you can access after your resource is created.
 ## `ibm_container_cluster`
 {: #container-cluster}
 
-Retrieve information about an existing {{site.data.keyword.containerlong_notm}} cluster. 
+Retrieve information about an existing {{site.data.keyword.containerlong_notm}} cluster. For more information, about container cluster, see [About Kubernetes](/docs/containers?topic=containers-getting-started).
 {: shortdesc}
 
 ### Sample IBM Cloud Provider plug-in for Terraform code
@@ -273,6 +273,9 @@ Review the output parameters that you can access after you retrieved your data s
 
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
+|`api_key_id`|String| The ID of the API key.|
+|`api_key_owner_name`|String| The name of the key owner.|
+|`api_key_owner_email`|String| The Email ID of the key owner.|
 | `albs` | List of objects | A list of Ingress application load balancers (ALBs) that are attached to the cluster. |
 | `albs.id` | String | The unique identifier of the Ingress ALB. |
 | `albs.name` | String | The name of the Ingress ALB. |
@@ -678,7 +681,7 @@ Review the output parameters that you can access after you retrieved your data s
 ## `ibm_container_vpc_cluster`
 {: #container-vpc-cluster}
 
-Retrieve information about a VPC cluster in {{site.data.keyword.containerlong_notm}}. 
+Retrieve information about a VPC cluster in {{site.data.keyword.containerlong_notm}}. For more information, about VPC cluster, see [about {{site.data.keyword.containerlong_notm}}] (/docs/containers?topic=containers-getting-started).
 {: shortdesc}
 
 ### Sample IBM Cloud Provider plug-in for Terraform code
@@ -723,6 +726,9 @@ Review the output parameters that you can access after you retrieved your data s
 
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
+|`api_key_id`|String| The ID of the API key.|
+|`api_key_owner_name`| String |The name of the key owner.|
+|`api_key_owner_email`|String |The Email ID of the key owner.|
 | `albs` | List of objects | A list of Ingress application load balancers (ALBs) that are attached to the cluster. |
 | `albs.id` | String | The unique identifier of the Ingress ALB. |
 | `albs.name` | String | The name of the Ingress ALB. |

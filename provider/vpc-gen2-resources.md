@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-07" 
+lastupdated: "2021-01-11" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -2403,10 +2403,6 @@ Review the input parameters that you can specify for your resource.
 |Name|Data type|Required / optional|Description|Forces new resource|
 |----|-----------|-----------|---------------------| ------- |
 |`name`|String|Required|The endpoint gateway name.| Yes |
-|`target`|List|Required|The endpoint gateway target.| No |
-|`target.name`|String|Required|The endpoint gateway target name.| No |
-|`target.resource_type`|String|Required|The endpoint gateway target resource type.| No |
-|`vpc`|String|Required|The VPC ID.| No |
 |`ips`|List|Optional|The endpoint gateway resource group.| No |
 |`ips.id`|String|Optional|The endpoint gateway resource group IPs ID.| No |
 |`ips.name`|String|Optional|The endpoint gateway resource group IPs name.| No |
@@ -2414,6 +2410,11 @@ Review the input parameters that you can specify for your resource.
 |`ips.resource_type`|String|Computed|The endpoint gateway resource group VPC resource type.| No |
 |`resource_group`|String|Optional|The resource group ID.| Yes |
 |`tags`|List of strings| Optional |A list of tags associated with the instance.| No |
+|`target`|List|Required|The endpoint gateway target.| No |
+|`target.crn`|String|Optional|The endpoint gateway target `CRN`. If CRN not specified, `name` must be specified.| Yes|
+|`target.name`|String|Required|The endpoint gateway target name.| No |
+|`target.resource_type`|String|Required|The endpoint gateway target resource type.| No |
+|`vpc`|String|Required|The VPC ID.| No |
 {: caption="Table. Available input parameters" caption-side="top"}
 
 ### Output parameters
@@ -2438,7 +2439,7 @@ The `ibm_is_virtual_endpoint_gateway` can be imported by using virtual endpoint 
 
 **Example**
 ```
-terraform import ibm_is_virtual_endpoint_gateway.example d7bec597-4726-451f-8a63-e62e6f19c345
+terraform import ibm_is_virtual_endpoint_gateway.example d7bec597-4726-451f-8a63-xxxxsdf345
 ```
 {: pre}
 
@@ -2898,7 +2899,7 @@ Review the input parameters that you can specify for your resource.
 |`action`|String|Optional|The action to perform with a packet matching the route.| No |
 |`destination`|String|Required| The destination of the route. |  Yes |
 |`name`|String|Optional|The user-defined name of the route. If unspecified, the name will be a hyphenated list of randomly selected words. You need to provide unique name within the VPC routing table the route resides in.| No |
-|`next_hop`|String|Optional| The next hop of the route. |  No |
+|`next_hop`|String|Required| The next hop of the route. |  Yes |
 |`routing_table`|String|Required|The routing table ID.| No |
 |`vpc`|String|Required| The VPC ID.| Yes |
 |`zone`|String|Required| Name of the zone. |  Yes |
