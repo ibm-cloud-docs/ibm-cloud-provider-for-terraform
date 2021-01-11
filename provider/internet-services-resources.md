@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-11"
 
 keywords: terraform provider, terraform resources internet service, terraform resources cis, tf provider plugin
 
@@ -2100,7 +2100,7 @@ Provides an {{site.data.keyword.cis_full_notm}} WAF rule group resource. This re
 {: shortdesc}
 
 ### Sample IBM Cloud Provider plug-in for Terraform code
-{: ##cis-waf-grp-sample}
+{: #cis-waf-grp-sample}
 
 The following example shows how you can add a WAF group resource to an {{site.data.keyword.cis_full_notm}} domain. 
 
@@ -2116,7 +2116,7 @@ resource "ibm_cis_waf_group" "test" {
 {: codeblock}
 
 ### Input parameter 
-{: ##cis-waf-grp-input}
+{: #cis-waf-grp-input}
 
 Review the input parameters that you can specify for your resource. 
 {: shortdesc}
@@ -2130,7 +2130,7 @@ Review the input parameters that you can specify for your resource.
 |`mode`|String|Required|The WAF group mode. Valid values are `on` and `off`. |
 
 ### Output parameter
-{: ##cis-waf-grp-output}
+{: #cis-waf-grp-output}
 
 Review the output parameters that you can access after your resource is created. 
 {: shortdesc}
@@ -2144,7 +2144,7 @@ Review the output parameters that you can access after your resource is created.
 |`modified_rules_count`| String |Number of rules modified in WAF Group.|
 
 ### Import
-{: ##cis-waf-grp-import}
+{: #cis-waf-grp-import}
 
 The `ibm_cis_waf_group` resource can be imported by using the ID. The ID is formed from the WAF Rule Group ID, the WAF rule package ID, the domain ID of the domain and the CRN (Cloud Resource Name)  Concatenated  by using `:` character.
 
