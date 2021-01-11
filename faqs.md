@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-11"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -152,3 +152,4 @@ Error: Error waiting for create resource alb cert (buvlsclf0qcur3hjcrng/ingress-
 
 You need to update the IBM Cloud Provider plug-in for Terraform provider to use `version 1.16.1` and above.
 
+This is a test statement.This is a test statement.

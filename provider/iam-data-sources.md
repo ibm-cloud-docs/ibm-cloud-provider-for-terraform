@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-11"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -60,7 +60,7 @@ data "ibm_iam_access_group" "accgroup" {
 ```
 
 ### Input parameters
-{: ##access-group-input}
+{: #access-group-input}
 
 Review the input parameters that you can specify for your data source.
 
