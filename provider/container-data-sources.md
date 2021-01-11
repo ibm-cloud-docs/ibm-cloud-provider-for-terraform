@@ -542,14 +542,14 @@ Review the output parameters that you can access after you retrieved your data s
 | `valid_kube_versions` | String | The supported Kubernetes version in {{site.data.keyword.containerlong_notm}} clusters. | 
 | `valid_openshift_versions` | String | The supported OpenShift Container Platform version in {{site.data.keyword.openshiftlong_notm}} clusters.|
 
-## `ibm_cr_namespace`
-{: #cr-namespace-ds}
+## `ibm_cr_namespaces`
+{: #cr-namespaces-ds}
 
 Lists a container registry namespaces of an account. For more information, about container registry, see [About IBM Cloud Container Registry](/docs/Registry?topic=Registry-registry_overview).
 {: shortdesc}
 
 ### Sample IBM Cloud Provider plug-in for Terraform code
-{: #cr-namespace-ds}
+{: #cr-namespaces-ds}
 
 The following example shows how to configure an `ALB`.
 
@@ -558,13 +558,13 @@ data "ibm_cr_namespace" "test" {}
 ```
 
 ### Input parameters
-{: #cr-namespace-ds}
+{: #cr-namespaces-ds}
 
 The input parameters are not supported for this data source. 
 {: shortdesc}
 
 ### Output parameters
-{: #cr-namespace-ds}
+{: #cr-namespaces-ds}
 
 Review the output parameters that are exported.
 {: shortdesc}
