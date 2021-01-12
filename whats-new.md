@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-12"
 
 keywords: terraform resources, terraform modules, terraform provider, terraform autodeploy, 
 
@@ -28,6 +28,24 @@ subcollection: ibm-cloud-provider-for-terraform
 
 Learn about the latest changes to the IBM Cloud Provider plug-in for Terraform service that are grouped by month.
 
+## 13 January 2021
+{: #13-january-2021}
+
+<table>
+    <thead>
+    <th style="width:80px">New resources</th>
+    <th style="width:80px">New data sources</th>
+    <th style="width:500px">Enhancements</th>
+    </thead>
+  <tbody>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[ibm_container_api_key_reset](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-container-resources#container-api-key-reset)</li><li style="margin:0px; padding:0px">[ibm_cr_namespace](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-container-resources#cr-namespace)</li><li style="margin:0px; padding:0px">[ibm_iam_service_api_key](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-iam-resources#iam-service-api-key)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[ibm_cr_namespaces](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-container-data-sources#cr-namespaces-ds)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">Support `api_key_id`, `api_key_owner_name`, and `api_key_owner_email` attributes for [ibm_container_cluster resource](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-container-data-sources#container-cluster-output)</li><li style="margin:0px; padding:0px">Support `crn` in target attribute for VPC virtual endpoint for [ibm_is_virtual_endpoint_gateway](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-resources#virtual-endpoint-gwy-input)</li><li style="margin:0px; padding:0px">Updated an example for [ibm_container_addons resource](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-container-resources#container-addons)</li><li style="margin:0px; padding:0px">Updated next-hop attribute as required for [ibm_is_vpc_route](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-resources#vpc-route-input)</li></ul></td>
+    </tr>
+  </tbody>
+  </table>
+
   
 ## 29 December 2020
 {: #29-december-2020}
@@ -40,7 +58,7 @@ Learn about the latest changes to the IBM Cloud Provider plug-in for Terraform s
     </thead>
   <tbody>
     <tr>
- <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[ibm_cis_certificate_order](/docs/terraform?topic=terraform-cis-resources#cis-certificate-order)</li><li style="margin:0px; padding:0px">[ibm_cis_certificate_upload](/docs/terraform?topic=terraform-cis-resources#cis-certificate-upload)<li style="margin:0px; padding:0px">[ibm_cis_dns_records_import](/docs/terraform?topic=terraform-cis-resources#cis-dns-records-import)<li style="margin:0px; padding:0px">[ibm_cis_dns_record](/docs/terraform?topic=terraform-cis-resources#cis-dns-record)<li style="margin:0px; padding:0px">[ibm_cis_page_rule](/docs/terraform?topic=terraform-cis-resources#cis-page-rule)</li><li style="margin:0px; padding:0px">[ibm_is_virtual_endpoint_gateway](/docs/terraform?topic=terraform-vpc-gen2-resources#virtual-endpoint-gwy)</li><li style="margin:0px; padding:0px">[ibm_is_virtual_endpoint_gateway_ip](/docs/terraform?topic=terraform-vpc-gen2-resources#virtual-endpoint-gwyip)</li></ul></td>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[ibm_cis_certificate_order](/docs/terraform?topic=terraform-cis-resources#cis-certificate-order)</li><li style="margin:0px; padding:0px">[ibm_cis_certificate_upload](/docs/terraform?topic=terraform-cis-resources#cis-certificate-upload)</li><li style="margin:0px; padding:0px">[ibm_cis_dns_records_import](/docs/terraform?topic=terraform-cis-resources#cis-dns-records-import)</li><li style="margin:0px; padding:0px">[ibm_cis_dns_record](/docs/terraform?topic=terraform-cis-resources#cis-dns-record)</li><li style="margin:0px; padding:0px">[ibm_cis_page_rule](/docs/terraform?topic=terraform-cis-resources#cis-page-rule)</li><li style="margin:0px; padding:0px">[ibm_is_virtual_endpoint_gateway](/docs/terraform?topic=terraform-vpc-gen2-resources#virtual-endpoint-gwy)</li><li style="margin:0px; padding:0px">[ibm_is_virtual_endpoint_gateway_ip](/docs/terraform?topic=terraform-vpc-gen2-resources#virtual-endpoint-gwyip)</li></ul></td>
       <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[ibm_cis_certificates](/docs/terraform?topic=terraform-cis_data#cis-certificates)</li><li style="margin:0px; padding:0px">[ibm_cis_custom_certificates](/docs/terraform?topic=terraform-cis_data#cis-custom-certificates)</li><li style="margin:0px; padding:0px">[ibm_cis_page_rules](/docs/terraform?topic=terraform-cis_data#cis-page-rules)</li><li style="margin:0px; padding:0px">[ibm_cis_dns_record](/docs/terraform?topic=terraform-cis_data#cis-dns-record
 )</li><li style="margin:0px; padding:0px">[ibm_is_virtual_endpoint_gateways](/docs/terraform?topic=terraform-vpc-gen2-data-sources#vpc-endpoint-gwysds)</li><li style="margin:0px; padding:0px">[ibm_is_virtual_endpoint_gateway_ips](/docs/terraform?topic=terraform-vpc-gen2-data-sources#vpc-endpoint-gwy-ipsds)</li><li style="margin:0px; padding:0px">[ibm_is_virtual_endpoint_gateway](/docs/terraform?topic=terraform-vpc-gen2-data-sources#vpc-endpoint-gwyds)</li></ul></td>
       <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">Status attribute for [ibm_container_alb_cert resource](/docs/terraform?topic=terraform-container-resources#container-alb-cert)</li><li style="margin:0px; padding:0px">Persistence and namespace attribute for [ibm_container_alb_cert resource](/docs/terraform?topic=terraform-container-resources#container-alb-cert)</li><li style="margin:0px; padding:0px">Labels argument for [ibm_container_cluster resource](/docs/terraform?topic=terraform-container-resources#container-cluster)</li></ul></td>
