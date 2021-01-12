@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-12"
 
 keywords: terraform, terraform provider release, terraform provider versions
 
@@ -40,6 +40,29 @@ subcollection: ibm-cloud-provider-for-terraform
 
 View information for updates to the IBM Cloud Provider plug-in for Terraform.
 {:shortdesc}
+
+## Changelog for 1.19.0, released 9 January 2021
+{: #changelog-v1190}
+
+The following table shows the changes that are included in version 1.19.0 of the IBM Cloud Provider plug-in for Terraform.
+{: shortdesc}
+
+| Previous | Current | Description |
+| -------- | ------- | ----------- |
+| 1.18.0 | 1.19.0 |[See the release notes for the IBM Cloud Provider plug-in for Terraform version 1.19.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.19.0){: external}.|
+{: caption="IBM Cloud Provider plug-in for Terraform provider 1.19.0" caption-side="top"}
+
+## Changelog for 1.18.0, released 24 December 2020
+{: #changelog-v1180}
+
+The following table shows the changes that are included in version 1.18.0 of the IBM Cloud Provider plug-in for Terraform.
+{: shortdesc}
+
+| Previous | Current | Description |
+| -------- | ------- | ----------- |
+| 1.17.0 | 1.18.0 |[See the release notes for the IBM Cloud Provider plug-in for Terraform version 1.18.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.18.0){: external}.|
+{: caption="IBM Cloud Provider plug-in for Terraform provider 1.18.0" caption-side="top"}
+
 
 ## Changelog for 1.17.0, released 10 December 2020
 {: #changelog-v1170}
