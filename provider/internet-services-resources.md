@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-11"
 
 keywords: terraform provider, terraform resources internet service, terraform resources cis, tf provider plugin
 
@@ -402,10 +402,10 @@ The following attributes are exported:
 
 |Name|Data type|Description|
 |----|-----------|--------|
-|`created_on`|String|Create data and time of the custom page.|
+|`created_on`|String|Created date and time of the custom page.|
 |`description`|String|The description of the custom page.|
 |`id`|String|The record ID. It is a combination of `<domain_id>,<cis_id>` attributes concatenated with `:`.|
-|`modified_on`|String|Modified data and time of the custom page.|
+|`modified_on`|String|Modified date and time of the custom page.|
 |`preview_target`|String|The custom page target.|
 |`required_tokens`|List|The custom page required token which is expected from URL page. |
 |`state`|String|The custom page state. This is set default when there is an empty URL and can customize when URL is set with some URL.|
@@ -2100,7 +2100,7 @@ Provides an {{site.data.keyword.cis_full_notm}} WAF rule group resource. This re
 {: shortdesc}
 
 ### Sample IBM Cloud Provider plug-in for Terraform code
-{: ##cis-waf-grp-sample}
+{: #cis-waf-grp-sample}
 
 The following example shows how you can add a WAF group resource to an {{site.data.keyword.cis_full_notm}} domain. 
 
@@ -2116,7 +2116,7 @@ resource "ibm_cis_waf_group" "test" {
 {: codeblock}
 
 ### Input parameter 
-{: ##cis-waf-grp-input}
+{: #cis-waf-grp-input}
 
 Review the input parameters that you can specify for your resource. 
 {: shortdesc}
@@ -2130,7 +2130,7 @@ Review the input parameters that you can specify for your resource.
 |`mode`|String|Required|The WAF group mode. Valid values are `on` and `off`. |
 
 ### Output parameter
-{: ##cis-waf-grp-output}
+{: #cis-waf-grp-output}
 
 Review the output parameters that you can access after your resource is created. 
 {: shortdesc}
@@ -2144,7 +2144,7 @@ Review the output parameters that you can access after your resource is created.
 |`modified_rules_count`| String |Number of rules modified in WAF Group.|
 
 ### Import
-{: ##cis-waf-grp-import}
+{: #cis-waf-grp-import}
 
 The `ibm_cis_waf_group` resource can be imported by using the ID. The ID is formed from the WAF Rule Group ID, the WAF rule package ID, the domain ID of the domain and the CRN (Cloud Resource Name)  Concatenated  by using `:` character.
 

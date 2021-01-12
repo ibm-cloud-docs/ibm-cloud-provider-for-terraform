@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-11"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -669,6 +669,72 @@ Review the output parameters that you can access after your resource is created.
 
 
 
+## `ibm_iam_service_api_key`
+{: #iam-service-api-key}
+
+Create, update, or delete an IAM service API key by using resource group and resource type.For more information, about IAM service API key, see [Managing IAM acces, API keys](/docs/cli?topic=cli-ibmcloud_commands_iam).
+{: shortdesc}
+
+### Sample IBM Cloud Provider plug-in for Terraform code
+{: #iam-service-api-key}
+
+```
+resource "ibm_iam_service_id" "serviceID" {
+  name = "servicetest"
+}
+
+resource "ibm_iam_service_api_key" "testacc_apiKey" {
+  name = "testapikey"
+  iam_service_id = ibm_iam_service_id.serviceID.iam_id
+}
+```
+
+### Input parameters
+{: #iam-service-api-key}
+
+Review the input parameters that you can specify for your resource. 
+{: shortdesc}
+
+|Name|Data type|Required / optional|Description|
+|----|-----------|-----------|---------------------|
+|`name`|String|Required|The name of the service API key.|
+|`description` |String|Optional|The description of the service API key.|
+|`iam_service_id` |String|Required|The IAMID of the service.|
+|`apikey` |String|Optional|The API key value. This property only contains the API key value for the following cases: `create an API key`, `update a Service API key that stores the API key value as retrievable`, or `get a service API key that stores the API key value as retrievable`. All other operations do not return the API key value. For example, all user API key related operations, except for create, do not contain the API key value.|
+|`locked`|Bool|Optional| The API key cannot be changed if set to `true`.|
+|`store_value`|Bool|Optional| The boolean value whether API key value is retrievable in the future.|
+|`file`|String|Optional| The file name where API key is to be stored.|
+
+### Output parameters
+{: #iam-service-api-key}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+| Output parameter | Data type | Description |
+| ------------- |-------------| -------------- |
+|`account_id` |String| The account Id of the API key.|
+|`entity_tag `| String|The version or entity tag of the service API key.|
+|`id`|String|The unique identifier of the API key.|
+|`crn` |String| The `CRN` of the service API key.|
+|`created_by`|String|The IAM ID of the service that is created by the API key.|
+|`created_at`|String|The date and time service API key was created.|
+|`modified_at`|String|The date and time service API key was modified.|
+
+
+
+
+
+### Import
+{: #iam-service-api-key}
+
+The `ibm_iam_service_api_key` can be imported by using service API Key.
+
+**Example**
+
+```
+terraform import ibm_iam_service_api_key.testacc_apiKey ApiKey-9d12342134f-41c2-a541-7b0be37c3da0
+```
 
 ## `ibm_iam_service_id`
 {: #iam-service-id}

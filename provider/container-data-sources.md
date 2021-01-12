@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-11"
  
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes
 
@@ -230,7 +230,7 @@ Review the output parameters that you can access after your resource is created.
 ## `ibm_container_cluster`
 {: #container-cluster}
 
-Retrieve information about an existing {{site.data.keyword.containerlong_notm}} cluster. 
+Retrieve information about an existing {{site.data.keyword.containerlong_notm}} cluster. For more information, about container cluster, see [About Kubernetes](/docs/containers?topic=containers-getting-started).
 {: shortdesc}
 
 ### Sample IBM Cloud Provider plug-in for Terraform code
@@ -273,6 +273,9 @@ Review the output parameters that you can access after you retrieved your data s
 
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
+|`api_key_id`|String| The ID of the API key.|
+|`api_key_owner_name`|String| The name of the key owner.|
+|`api_key_owner_email`|String| The Email ID of the key owner.|
 | `albs` | List of objects | A list of Ingress application load balancers (ALBs) that are attached to the cluster. |
 | `albs.id` | String | The unique identifier of the Ingress ALB. |
 | `albs.name` | String | The name of the Ingress ALB. |
@@ -537,7 +540,44 @@ Review the output parameters that you can access after you retrieved your data s
 | ------------- |-------------| -------------- |
 | `id` | String | The unique identifier of the cluster. | 
 | `valid_kube_versions` | String | The supported Kubernetes version in {{site.data.keyword.containerlong_notm}} clusters. | 
-| `valid_openshift_versions` | String | The supported OpenShift Container Platform version in {{site.data.keyword.openshiftlong_notm}} clusters.
+| `valid_openshift_versions` | String | The supported OpenShift Container Platform version in {{site.data.keyword.openshiftlong_notm}} clusters.|
+
+## `ibm_cr_namespaces`
+{: #cr-namespaces-ds}
+
+Lists a container registry namespaces of an account. For more information, about container registry, see [About IBM Cloud Container Registry](/docs/Registry?topic=Registry-registry_overview).
+{: shortdesc}
+
+### Sample IBM Cloud Provider plug-in for Terraform code
+{: #cr-namespaces-ds}
+
+The following example shows how to configure an `ALB`.
+
+```
+data "ibm_cr_namespace" "test" {}
+```
+
+### Input parameters
+{: #cr-namespaces-ds}
+
+The input parameters are not supported for this data source. 
+{: shortdesc}
+
+### Output parameters
+{: #cr-namespaces-ds}
+
+Review the output parameters that are exported.
+{: shortdesc}
+
+| Output parameter | Data type | Description |
+| ------------- |-------------| -------------- |
+| `id` | String | The unique identifier of the namespace datasource. | 
+| `namespaces` | String | List of namespaces available in the account. | 
+| `namespaces.name` | String | The name of the namespace to create. |
+| `namespaces.resource_group_id` | String | ID of the resource group to which the namespace is assigned. |
+| `namespaces.crn` | String | The `CRN` of the namespace.|
+| `namespaces.created_on` | String | The created time of the namespace.|
+| `namespaces.updated_on` | String | The updated time of the namespace.|
 
 ## `ibm_container_worker_pool`
 {: #container-worker-pool}
@@ -641,7 +681,7 @@ Review the output parameters that you can access after you retrieved your data s
 ## `ibm_container_vpc_cluster`
 {: #container-vpc-cluster}
 
-Retrieve information about a VPC cluster in {{site.data.keyword.containerlong_notm}}. 
+Retrieve information about a VPC cluster in {{site.data.keyword.containerlong_notm}}. For more information, about VPC cluster, see [about {{site.data.keyword.containerlong_notm}}] (/docs/containers?topic=containers-getting-started).
 {: shortdesc}
 
 ### Sample IBM Cloud Provider plug-in for Terraform code
@@ -686,6 +726,9 @@ Review the output parameters that you can access after you retrieved your data s
 
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
+|`api_key_id`|String| The ID of the API key.|
+|`api_key_owner_name`| String |The name of the key owner.|
+|`api_key_owner_email`|String |The Email ID of the key owner.|
 | `albs` | List of objects | A list of Ingress application load balancers (ALBs) that are attached to the cluster. |
 | `albs.id` | String | The unique identifier of the Ingress ALB. |
 | `albs.name` | String | The name of the Ingress ALB. |

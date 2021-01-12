@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-11"
 
 keywords: terraform internet services, terraform cis, terraform provider plugin
 
@@ -207,12 +207,12 @@ Review the output parameters that you can access after you retrieved your data s
 
 |Name|Data type|Description|
 |----|-----------|----------|
-|`created_on`|String|Create data and time of the custom page.|
+|`created_on`|String|Created date and time of the custom page.|
 | `cis_id` | String | The ID of the CIS service instance.  |
 | `description` | String | The description of the custom page.|
 | `domain_id` | String | The domain ID to change custom page. |
 | `id` | String | The custom page ID. It is a combination of `<page_id>, <domain_id>, <cis_id>` attributes concatenated with `:`.|
-|`modified_on`|String|Modified data and time of the custom page.|
+|`modified_on`|String|Modified date and time of the custom page.|
 | `page_id ` | String | The custom page identifier. Valid values are `basic_challenge`, `waf_challenge`, `waf_block`, `ratelimit_block`, `country_challenge`, `ip_block`, `under_attack`, `500_errors`, `1000_errors`, `always_online`. |
 | `preview_target` | String | The target custom page.|
 | `required_tokens` | String | The custom page required token which is expected from the URL page.|

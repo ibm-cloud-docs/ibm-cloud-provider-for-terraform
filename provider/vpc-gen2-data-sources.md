@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-11"
 
 keywords: terraform provider plugin, terraform gen 2, terraform gen 2 compute
 
@@ -124,7 +124,7 @@ Review the output parameters that you can access after you retrieve your data so
 | ------------- |-------------| -------------- |
 | `flow_log_collectors` | String | Lists all the flow logs in the {{site.data.keyword.cloud_notm}}. |
 | `flow_log_collectors.active` | String | Indicates whether the collector is active. |
-| `flow_log_collectors.created_at` | String | The data and time the flow log created. |
+| `flow_log_collectors.created_at` | String | The date and time the flow log created. |
 | `flow_log_collectors.crn` | String | The CRN of the flow log collector. |
 | `flow_log_collectors.href` | String | The URL of the flow log collector. |
 | `flow_log_collectors.id` | String | The unique identifier of the flow log collector. |
@@ -1276,7 +1276,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`templates.network_interfaces.security_groups`|String|List of security groups of  the subnet. |
 |`templates.network_interfaces.primary_ipv4_address`|String|The IPv4 address assigned to the network interface. |
 |`templates.boot_volume`|String|A nested block describes the boot volume configuration for the template. |
-|`templates.boot_volume.encryption`|String|The encryption key CRN to encrypt the boot volume attached. |
+|`templates.boot_volume.encryption`|String|The encryption key CRN such as HPCS, Key Protect, etc., is provided to encrypt the boot volume attached.  |
 |`templates.boot_volume.name`|String|The name of the boot volume. |
 |`templates.boot_volume.size`|String|The boot volume size to configure in giga bytes. |
 |`templates.boot_volume.iops`|String|The IOPS for the boot volume. |
@@ -1328,14 +1328,14 @@ Review the output parameters that you can access after you retrieved your data s
 
 |Name|Data type|Description|
 |----|-----------|-------------|
-|`resource_group`|String| The unique identifier for the resource group.|
-|`created_at`|String|The created data and time of the endpoint gateway.|
+|`created_at`|String|The created date and time of the endpoint gateway.|
 |`health_state`|String|Endpoint gateway health state. `ok: Healthy`, `degraded: Suffering from compromised performance, capacity, or connectivity`, `faulted: Completely unreachable, inoperative, or entirely incapacitated`, `inapplicable: The health state does not apply because of the current lifecycle state`. A resource with a lifecycle state of failed or deleting will have a health state of inapplicable. A pending resource may have this state.|
 |`lifecycle_state`|String|The endpoint gateway lifecycle state, supported values are `deleted`, `deleting`, `failed`, `pending`, `stable`, `updating`, `waiting`, `suspended`.|
 |`ips`|String|The unique identifier for the reserved IP.|
 |`ips.id`|String|The collection of reserved IPs bound to an endpoint gateway.|
 |`ips.name`|String|The user defined or system provided name of the resource IP.|
 |`ips.resource_type`|String|The endpoint gateway IP resource type.|
+|`resource_group`|String| The unique identifier for the resource group.|
 |`target`|String| The endpoint gateway target.|
 |`target.name`|String|The target name.|
 |`target.resource_type`|String|The resource type of the subnet reserved IP.|
@@ -1376,13 +1376,13 @@ Review the output parameters that you can access after you retrieved your data s
 
 |Name|Data type|Description|
 |----|-----------|-------------|
+|`address`|String|The endpoint gateway IP address.|
+|`auto_delete`|String|The endpoint gateway IP auto delete.|
+|`created_at`|String|The created date and time of the endpoint gateway IP.|
 |`id`|String|The endpoint gateway reserved IP ID.|
 |`name`|String|The endpoint gateway IP name.|
 |`reserved_ip`|String|The endpoint gateway reserved IP ID.|
-|`created_at`|String|The created date and time of the endpoint gateway IP.|
 |`resource_type`|String|The endpoint gateway IP resource type.|
-|`auto_delete`|String|The endpoint gateway IP auto delete.|
-|`address`|String|The endpoint gateway IP address.|
 |`target`|String|The endpoint gateway target details.|
 |`target.id`|String|The IPs target ID.|
 |`target.name`|String|The IPs target name.|
@@ -1407,13 +1407,8 @@ data "ibm_is_virtual_endpoint_gateways" "data_test" {
 ### Input parameters
 {: #vpc-endpoint-gwysds-input}
 
-Review the input parameters that you can specify for your data source. 
+The input parameters is not support for the data source. 
 {: shortdesc}
-
-|Name|Data type| Required / optional|Description|
-|----|-----------|--------|----------------------|
-|`name`|String|Required|The endpoint gateways name.|
-{: caption="Table. Available input parameters" caption-side="top"}
 
 ### Output parameters
 {: #vpc-endpoint-gwysds-output}
@@ -1423,16 +1418,16 @@ Review the output parameters that you can access after you retrieved your data s
 
 |Name|Data type|Description|
 |----|-----------|-------------|
-|`id`|String| The endpoint gateway ID.|
-|`name`|String| The endpoint gateway name.|
-|`resource_group`|String| The unique identifier for the resource group.|
-|`created_at`|String|The created data and time of the endpoint gateway.|
+|`created_at`|String|The created date and time of the endpoint gateway.|
 |`health_state`|String|Endpoint gateway health state. `ok: Healthy`, `degraded: Suffering from compromised performance, capacity, or connectivity`, `faulted: Completely unreachable, inoperative, or entirely incapacitated`, `inapplicable: The health state does not apply because of the current lifecycle state`. A resource with a lifecycle state of failed or deleting will have a health state of inapplicable. A pending resource may have this state.|
 |`lifecycle_state`|String|The endpoint gateway lifecycle state, supported values are `deleted`, `deleting`, `failed`, `pending`, `stable`, `updating`, `waiting`, `suspended`.|
+|`id`|String| The endpoint gateway ID.|
 |`ips`|String|The collection of reserved IPs bound to an endpoint gateway.|
 |`ips.id`|String|The unique identifier for the reserved IP.|
 |`ips.name`|String|The user defined or system provided name of the resource IP.|
 |`ips.resource_type`|String|The endpoint gateway IP resource type or the subnet reserved IP.|
+|`name`|String| The endpoint gateway name.|
+|`resource_group`|String| The unique identifier for the resource group.|
 |`target`|String| The endpoint gateway target services.|
 |`target.name`|String|The endpoint gateway target name.|
 |`target.resource_type`|String|The endpoint gateway target resource type.|

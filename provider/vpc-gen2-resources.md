@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06" 
+lastupdated: "2021-01-11" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -2355,19 +2355,19 @@ The following example creates a VPN gateway.
 
 ```
 resource "ibm_is_virtual_endpoint_gateway" "endpoint_gateway1" {
-		
+
   name = "my-endpoint-gateway-1"
   target {
-  name          = "ibm-dns-server2"
+	name          = "ibm-dns-server2"
     resource_type = "provider_infrastructure_service"
   }
   vpc = ibm_is_vpc.testacc_vpc.id
-  resource_group = data.ibm_resource_group.test_acc.id    
+  resource_group = data.ibm_resource_group.test_acc.id
 }
 
 resource "ibm_is_virtual_endpoint_gateway" "endpoint_gateway2" {
-  name = "my-endpoint-gateway-1"
- 	target {
+	name = "my-endpoint-gateway-1"
+	target {
 	  name          = "ibm-dns-server2"
 	  resource_type = "provider_infrastructure_service"
 	}
@@ -2403,10 +2403,6 @@ Review the input parameters that you can specify for your resource.
 |Name|Data type|Required / optional|Description|Forces new resource|
 |----|-----------|-----------|---------------------| ------- |
 |`name`|String|Required|The endpoint gateway name.| Yes |
-|`target`|List|Required|The endpoint gateway target.| No |
-|`target.name`|String|Required|The endpoint gateway target name.| No |
-|`target.resource_type`|String|Required|The endpoint gateway target resource type.| No |
-|`vpc`|String|Required|The VPC ID.| No |
 |`ips`|List|Optional|The endpoint gateway resource group.| No |
 |`ips.id`|String|Optional|The endpoint gateway resource group IPs ID.| No |
 |`ips.name`|String|Optional|The endpoint gateway resource group IPs name.| No |
@@ -2414,6 +2410,11 @@ Review the input parameters that you can specify for your resource.
 |`ips.resource_type`|String|Computed|The endpoint gateway resource group VPC resource type.| No |
 |`resource_group`|String|Optional|The resource group ID.| Yes |
 |`tags`|List of strings| Optional |A list of tags associated with the instance.| No |
+|`target`|List|Required|The endpoint gateway target.| No |
+|`target.crn`|String|Optional|The endpoint gateway target `CRN`. If CRN not specified, `name` must be specified.| Yes|
+|`target.name`|String|Required|The endpoint gateway target name.| No |
+|`target.resource_type`|String|Required|The endpoint gateway target resource type.| No |
+|`vpc`|String|Required|The VPC ID.| No |
 {: caption="Table. Available input parameters" caption-side="top"}
 
 ### Output parameters
@@ -2428,7 +2429,7 @@ Review the output parameters that you can access after your resource is created.
 |`resource_type`|String|The endpoint gateway resource type.|
 |`created_at`|String|The created date and time of the endpoint gateway.|
 |`health_state`|String|The health state of the endpoint gateway.|
-|`lifecycle_state`|String|The lifecyle state of the endpoint gateway.|
+|`lifecycle_state`|String|The lifecycle state of the endpoint gateway.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 ### Import
@@ -2438,7 +2439,7 @@ The `ibm_is_virtual_endpoint_gateway` can be imported by using virtual endpoint 
 
 **Example**
 ```
-terraform import ibm_is_virtual_endpoint_gateway.example d7bec597-4726-451f-8a63-e62e6f19c345
+terraform import ibm_is_virtual_endpoint_gateway.example d7bec597-4726-451f-8a63-xxxxsdf345
 ```
 {: pre}
 
@@ -2469,10 +2470,6 @@ resource "ibm_is_virtual_endpoint_gateway_ip" "virtual_endpoint_gateway_ip" {
 Review the input parameters that you can specify for your resource. 
 {: shortdesc}
 
-    gateway - (Required, string,ForceNew) Endpoint gateway ID
-    reserved_ip - (Required, string,ForceNew) Endpoint gateway IP id
-
-
 |Name|Data type|Required / optional|Description|Forces new resource|
 |----|-----------|-----------|---------------------| ------- |
 |`gateway`|String|Required|The endpoint gateway ID.| Yes |
@@ -2502,7 +2499,6 @@ Review the output parameters that you can access after your resource is created.
 ### Import
 {: #virtual-endpoint-gwyip-import}
 
-The `ibm_is_virtual_endpoint_gateway` can be imported by using virtual endpoint gateway ID.
 The `ibm_is_virtual_endpoint_gateway_ip` can be imported using virtual endpoint gateway ID and gateway IP ID.
 
 **Example**
@@ -2511,7 +2507,6 @@ terraform import ibm_is_virtual_endpoint_gateway_ip.example d7bec597-4726-451f-8
 
 ```
 {: pre}
-
 
 ## `ibm_is_volume`
 {: #volume}
@@ -2603,6 +2598,68 @@ The `ibm_is_volume` can be imported by using volume ID.
 terraform import ibm_is_volume.example d7bec597-4726-451f-8a63-e62e6f19c32c
 ```
 {: pre}
+
+## `ibm_is_vpc` 
+{: #provider-vps}
+
+Create, update, or delete a Virtual Private Cloud (VPC). VPCs allow you to create your own space in {{site.data.keyword.cloud_notm}} to run an isolated environment within the public cloud. VPC gives you the security of a private cloud, with the agility and ease of a public cloud.
+{: shortdesc}
+
+For more information, see [About Virtual Private Cloud](/docs/vpc-on-classic?topic=vpc-on-classic-about). 
+
+### Sample IBM Cloud Provider plug-in for Terraform code
+{: #vpc-sample}
+
+```
+resource "ibm_is_vpc" "testacc_vpc" {
+    name = "test"
+}
+```
+{: codeblock}
+
+### Input parameters
+{: #vpc-input}
+
+Review the input parameters that you can specify for your resource. 
+{: shortdesc}
+
+| Input parameter | Data type | Required / optional | Description | Forces new resource |
+| ------------- |-------------| ----- | -------------- | ------- |
+| `classic_access` | Boolean | Optional | Specify if you want to create a VPC that can connect to classic infrastructure resources. Enter **true** to set up private network connectivity from your VPC to classic infrastructure resources that are created in the same {{site.data.keyword.cloud_notm}} account, and **false** to disable this access. If you choose to not set up this access, you cannot enable it after the VPC is created. Make sure to review the [prerequisites](/docs/vpc-on-classic-network?topic=vpc-on-classic-setting-up-access-to-your-classic-infrastructure-from-vpc#vpc-prerequisites) before you create a VPC with classic infrastructure access. Note that you can enable one VPC for classic infrastructure access per {{site.data.keyword.cloud_notm}} account only. | No |
+|`address_prefix_management`|String|Optional|Indicates whether a default address prefix should be created automatically (`auto`) or manually (`manual`) for each zone in this VPC. Default value `auto`.| No |
+| `name` | String | Required | Enter a name for your VPC. |  No |
+| `resource_group` | String | Optional | Enter the ID of the resource group where you want to create the VPC. To list available resource groups, run `ibmcloud resource groups`. If you do not specify a resource group, the VPC is created in the `default` resource group. |  Yes |
+| `tags` | Array of Strings | Optional | Enter any tags that you want to associate with your VPC. Tags might help you find your VPC more easily after it is created. Separate multiple tags with a comma (`,`). |  No |
+
+### Output parameters
+{: #vpc-arguments}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+| Output parameter | Data type | Description |
+| ------------- |-------------| -------------- |
+|`crn`|String|The CRN of the VPC.|
+| `default_security_group` | String | The unique identifier of the default security group that was created for your VPC. | 
+| `id` | String | The unique identifier of the VPC that you created. |
+|`subnets`|List of subnets|A list of subnets that are attached to a VPC.|
+|`subnets.name`|String|The name of the subnet.|
+|`subnets.id`|String|The ID of the subnet.|
+|`subnets.status`|String|The status of the subnet.|
+|`subnets.total_ipv4_address_count`|Integer|The total number of IPv4 addresses in the subnet.|
+|`subnets.available_ipv4_address_count`|Integer|The number of IPv4 addresses in the subnet that are available for you to be used.|
+| `status` | String | The provisioning status of your VPC. | 
+| `cse_source_addresses`|List of Cloud Service Endpoints|A list of the cloud service endpoints that are associated with your VPC, including their source IP address and zone.|
+|`cse_source_addresses.address`|String|The IP address of the cloud service endpoint.|
+|`cse_source_addresses.zone_name`|String|The zone where the cloud service endpoint is located.|
+
+### Timeouts
+{: #vpc-timeout}
+
+The following timeouts are defined for the resource: 
+
+- **create**: The creation of the VPC is considered `failed` when no response is received for 10 minutes. 
+- **delete**: The deletion of the VPC is considered `failed` when no response is received for 10 minutes. 
 
 
 ## `ibm_is_vpc_address_prefix`
@@ -2836,7 +2893,7 @@ Review the input parameters that you can specify for your resource.
 |`action`|String|Optional|The action to perform with a packet matching the route.| No |
 |`destination`|String|Required| The destination of the route. |  Yes |
 |`name`|String|Optional|The user-defined name of the route. If unspecified, the name will be a hyphenated list of randomly selected words. You need to provide unique name within the VPC routing table the route resides in.| No |
-|`next_hop`|String|Optional| The next hop of the route. |  No |
+|`next_hop`|String|Required| The next hop of the route. |  Yes |
 |`routing_table`|String|Required|The routing table ID.| No |
 |`vpc`|String|Required| The VPC ID.| Yes |
 |`zone`|String|Required| Name of the zone. |  Yes |
