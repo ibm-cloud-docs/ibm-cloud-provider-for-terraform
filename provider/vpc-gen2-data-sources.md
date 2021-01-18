@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-11"
+lastupdated: "2021-01-18"
 
 keywords: terraform provider plugin, terraform gen 2, terraform gen 2 compute
 
@@ -1353,7 +1353,7 @@ Create, update, or delete a VPC endpoint gateway IPs by using virtual endpoint g
 
 ```
 data "ibm_is_virtual_endpoint_gateway_ips" "data_test1" {
-  gateway_id     = ibm_is_virtual_endpoint_gateway.endpoint_gateway.id
+  gateway     = ibm_is_virtual_endpoint_gateway.endpoint_gateway.id
 }
 ```
 
