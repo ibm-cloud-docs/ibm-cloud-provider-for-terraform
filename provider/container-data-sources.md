@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-11"
+lastupdated: "2021-01-19"
  
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes
 
@@ -549,7 +549,7 @@ Lists a container registry namespaces of an account. For more information, about
 {: shortdesc}
 
 ### Sample IBM Cloud Provider plug-in for Terraform code
-{: #cr-namespaces-ds}
+{: #cr-namespaces-ds-sample}
 
 The following example shows how to configure an `ALB`.
 
@@ -558,13 +558,13 @@ data "ibm_cr_namespace" "test" {}
 ```
 
 ### Input parameters
-{: #cr-namespaces-ds}
+{: #cr-namespaces-ds-input}
 
 The input parameters are not supported for this data source. 
 {: shortdesc}
 
 ### Output parameters
-{: #cr-namespaces-ds}
+{: #cr-namespaces-ds-output}
 
 Review the output parameters that are exported.
 {: shortdesc}

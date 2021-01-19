@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-11" 
+lastupdated: "2021-01-19" 
 
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes
 
@@ -818,7 +818,7 @@ Create, update, or delete a container registry namespace. For more information, 
 {: shortdesc}
 
 ### Sample IBM Cloud Provider plug-in for Terraform code
-{: #cr-namespace}
+{: #cr-namespace-sample}
 
 The following example shows how to configure an `ALB`.
 {: shortdesc}
@@ -841,7 +841,7 @@ resource "ibm_cr_namespace" "rg_namespace" {
 ```
 
 ### Input parameter
-{: #cr-namespace}
+{: #cr-namespace-input}
 
 Review the input parameters that you can specify for your resource. 
 {: shortdesc}
@@ -852,7 +852,7 @@ Review the input parameters that you can specify for your resource.
 | `resource_group_id` | String | Optional | The ID of the resource group to which the namespace is assigned. If not provided, default resource group ID will be assigned. | Yes |
 
 ### Output parameters
-{: #cr-namespace}
+{: #cr-namespace-output}
 
 Review the output parameters that you can access after your resource is created. 
 {: shortdesc}
@@ -865,7 +865,7 @@ Review the output parameters that you can access after your resource is created.
 | `updated_on` | String | The updated time of the namespace.|
 
 ### Import
-{: #cr-namespace}
+{: #cr-namespace-import}
 
 The `ibm_cr_namespace` resource can be imported by using the ID. The ID is formed from the name (namespace name) `ID=name`.
 

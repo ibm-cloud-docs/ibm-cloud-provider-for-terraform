@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-11"
+lastupdated: "2021-01-19"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -676,7 +676,7 @@ Create, update, or delete an IAM service API key by using resource group and res
 {: shortdesc}
 
 ### Sample IBM Cloud Provider plug-in for Terraform code
-{: #iam-service-api-key}
+{: #iam-service-api-key-code}
 
 ```
 resource "ibm_iam_service_id" "serviceID" {
@@ -690,7 +690,7 @@ resource "ibm_iam_service_api_key" "testacc_apiKey" {
 ```
 
 ### Input parameters
-{: #iam-service-api-key}
+{: #iam-service-api-key-input}
 
 Review the input parameters that you can specify for your resource. 
 {: shortdesc}
@@ -706,7 +706,7 @@ Review the input parameters that you can specify for your resource.
 |`file`|String|Optional| The file name where API key is to be stored.|
 
 ### Output parameters
-{: #iam-service-api-key}
+{: #iam-service-api-key-output}
 
 Review the output parameters that you can access after your resource is created. 
 {: shortdesc}
@@ -726,7 +726,7 @@ Review the output parameters that you can access after your resource is created.
 
 
 ### Import
-{: #iam-service-api-key}
+{: #iam-service-api-key-import}
 
 The `ibm_iam_service_api_key` can be imported by using service API Key.
 
