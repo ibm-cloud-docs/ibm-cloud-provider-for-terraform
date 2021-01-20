@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-19" 
+lastupdated: "2021-01-20" 
 
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes
 
@@ -1191,7 +1191,7 @@ data "ibm_resource_group" "resource_group" {
 resource "ibm_container_vpc_cluster" "cluster" {
   name              = "mycluster"
   vpc_id            = ibm_is_vpc.vpc1.id
-  flavor            = "bc1-2x8"
+  flavor            = "bc1.2x8"
   worker_count      = 3
   resource_group_id = data.ibm_resource_group.resource_group.id
 
@@ -1204,7 +1204,7 @@ resource "ibm_container_vpc_cluster" "cluster" {
 resource "ibm_container_vpc_worker_pool" "cluster_pool" {
   cluster           = ibm_container_vpc_cluster.cluster.id
   worker_pool_name  = "mywp"
-  flavor            = "bc1-4x16"
+  flavor            = "bc1.4x16"
   vpc_id            = ibm_is_vpc.vpc1.id
   worker_count      = 3
   resource_group_id = data.ibm_resource_group.resource_group.id
@@ -1252,7 +1252,7 @@ data "ibm_resource_group" "resource_group" {
 resource "ibm_container_vpc_cluster" "cluster" {
   name              = "mycluster"
   vpc_id            = ibm_is_vpc.vpc1.id
-  flavor            = "bx2-4x16"
+  flavor            = "bx2.4x16"
   worker_count      = 3
   resource_group_id = data.ibm_resource_group.resource_group.id
   kube_version      = 1.17.5
@@ -1266,7 +1266,7 @@ resource "ibm_container_vpc_cluster" "cluster" {
 resource "ibm_container_vpc_worker_pool" "cluster_pool" {
   cluster           = ibm_container_vpc_cluster.cluster.id
   worker_pool_name  = "mywp"
-  flavor            = "bx2-2x8"
+  flavor            = "bx2.2x8"
   vpc_id            = ibm_is_vpc.vpc1.id
   worker_count      = 3
   resource_group_id = data.ibm_resource_group.resource_group.id
