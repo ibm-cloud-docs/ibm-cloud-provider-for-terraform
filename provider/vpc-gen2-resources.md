@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-11" 
+lastupdated: "2021-01-20" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -1224,7 +1224,7 @@ Review the input parameters that you can specify for your resource.
 |`lb`|String|Required|The load balancer unique identifier.| Yes |
 |`port`|Integer|Required|The listener port number. Valid range 1 to 65535.| No |
 |`protocol`|String|Required|The listener protocol. Enumeration type are `http`, `tcp`, and `https`. Network Load Balancer supports only `tcp` protocol.| No |
-|`default_pool`|String|Required| The load balancer pool unique identifier.| No |
+|`default_pool`|String|Optional| The load balancer pool unique identifier.| No |
 |`certificate_instance`|String|Optional|The CRN of the certificate instance.| No |
 |`connection_limit`|Integer|Optional|The connection limit of the listener. Valid range is 1 to 15000. Network Load Balancer do not support `connection_limit` argument.| No |
 
