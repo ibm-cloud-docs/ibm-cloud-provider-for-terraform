@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-19"
+lastupdated: "2021-01-22"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -699,7 +699,7 @@ Review the input parameters that you can specify for your resource.
 |----|-----------|-----------|---------------------|
 |`name`|String|Required|The name of the service API key.|
 |`description` |String|Optional|The description of the service API key.|
-|`iam_service_id` |String|Required|The IAMID of the service.|
+|`iam_service_id` |String|Required|The IAM ID of the service.|
 |`apikey` |String|Optional|The API key value. This property only contains the API key value for the following cases: `create an API key`, `update a Service API key that stores the API key value as retrievable`, or `get a service API key that stores the API key value as retrievable`. All other operations do not return the API key value. For example, all user API key related operations, except for create, do not contain the API key value.|
 |`locked`|Bool|Optional| The API key cannot be changed if set to `true`.|
 |`store_value`|Bool|Optional| The boolean value whether API key value is retrievable in the future.|

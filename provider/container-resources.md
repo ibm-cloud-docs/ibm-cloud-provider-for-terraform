@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-20" 
+lastupdated: "2021-01-22" 
 
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes
 
@@ -869,7 +869,7 @@ Review the output parameters that you can access after your resource is created.
 
 The `ibm_cr_namespace` resource can be imported by using the ID. The ID is formed from the name (namespace name) `ID=name`.
 
-**Synax**
+**Syntax**
 
 ```
 terraform import ibm_cr_namespace.test <name of the namespace>
