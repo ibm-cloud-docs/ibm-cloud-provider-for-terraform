@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-22"
 
-keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, IBM Cloud Provider plug-in for Terraform, provision resources
+keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, Terraform, provision resources
 
 subcollection: ibm-cloud-provider-for-terraform
 
@@ -36,10 +36,10 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 
-# Managing IBM Cloud resources with IBM Cloud Provider plug-in for Terraform
+# Managing IBM Cloud resources with Terraform
 {: #manage_resources}
 
-Use the IBM Cloud Provider plug-in for Terraform CLI to create your platform and infrastructure resources in {{site.data.keyword.cloud_notm}}. 
+Use the Terraform CLI to create your platform and infrastructure resources in {{site.data.keyword.cloud_notm}}. 
 {: shortdesc}
 
 ## Provisioning IBM Cloud resources
@@ -48,10 +48,10 @@ Use the IBM Cloud Provider plug-in for Terraform CLI to create your platform and
 To provision {{site.data.keyword.cloud_notm}} resources, you must describe the state of your resources that you want to achieve in a configuration file.  
 {: shortdesc}
 
-IBM Cloud Provider plug-in for Terraform configuration files are written by using the [HashiCorp Configuration Language (HCL) ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.terraform.io/docs/configuration/syntax.html) or JSON syntax. When you create your configuration file, you must describe the type of resource that you want and the state that you want to achieve for your resource. IBM Cloud Provider plug-in for Terraform reads this configuration and creates an execution plan with the steps that were identified to achieve the specified state. If existing resources are found, IBM Cloud Provider plug-in for Terraform identifies the necessary steps to update them. 
+Terraform configuration files are written by using the [HashiCorp Configuration Language (HCL) ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.terraform.io/docs/configuration/syntax.html) or JSON syntax. When you create your configuration file, you must describe the type of resource that you want and the state that you want to achieve for your resource. Terraform reads this configuration and creates an execution plan with the steps that were identified to achieve the specified state. If existing resources are found, Terraform identifies the necessary steps to update them. 
 
 Before you begin: 
-- [Install the IBM Cloud Provider plug-in for Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/terraform?topic=terraform-setup_cli#setup_cli).
+- [Install the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/terraform?topic=terraform-setup_cli#setup_cli).
 - [Configure the {{site.data.keyword.cloud_notm}} Provider plug-in to use your {{site.data.keyword.cloud_notm}} credentials](/docs/terraform?topic=terraform-setup_cli#configure_provider). 
 
 The following example shows how you can configure a virtual server in {{site.data.keyword.cloud_notm}} by using JSON syntax. A virtual server is an {{site.data.keyword.cloud_notm}} infrastructure resource that incurs costs. Be sure to review [available plans ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/infrastructure/virtual-server-group) before you proceed. 
@@ -60,7 +60,7 @@ The following example shows how you can configure a virtual server in {{site.dat
 Looking for other resource types? Find a complete list of supported resource types in the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/terraform?topic=terraform-setup_cli#configure_provider). 
 {: tip}
 
-1. Create a configuration file that is named `sample.tf` with the following content. Configuration file names must have the `.tf` extension to be found by IBM Cloud Provider plug-in for Terraform. Store this file in the same folder that you used to store your {{site.data.keyword.cloud_notm}} credentials. 
+1. Create a configuration file that is named `sample.tf` with the following content. Configuration file names must have the `.tf` extension to be found by Terraform. Store this file in the same folder that you used to store your {{site.data.keyword.cloud_notm}} credentials. 
    ```
    resource "ibm_compute_vm_instance" "vm1" {
     hostname = "vm1"
@@ -78,7 +78,7 @@ Looking for other resource types? Find a complete list of supported resource typ
    ```
    {: codeblock}
    
-2. Initialize IBM Cloud Provider plug-in for Terraform. 
+2. Initialize Terraform. 
    ```
    terraform init
    ```
@@ -94,15 +94,15 @@ Looking for other resource types? Find a complete list of supported resource typ
 
    * provider.ibm: version = "~> 0.11"
 
-   IBM Cloud Provider plug-in for Terraform has been successfully initialized!
+   Terraform has been successfully initialized!
 
-   You may now begin working with IBM Cloud Provider plug-in for Terraform. Try running "terraform plan" to see any changes that are required for your infrastructure. All IBM Cloud Provider plug-in for Terraform commands should now work.
+   You may now begin working with Terraform. Try running "terraform plan" to see any changes that are required for your infrastructure. All Terraform commands should now work.
 
-   If you ever set or change modules or backend configuration for IBM Cloud Provider plug-in for Terraform, rerun this command to reinitialize your working directory. If you forget, other commands detects it and remind you to do so if necessary.
+   If you ever set or change modules or backend configuration for Terraform, rerun this command to reinitialize your working directory. If you forget, other commands detects it and remind you to do so if necessary.
    ```
    {: screen}
    
-3. Generate an IBM Cloud Provider plug-in for Terraform execution plan. When you execute this command, IBM Cloud Provider plug-in for Terraform validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in. 
+3. Generate an Terraform execution plan. When you execute this command, Terraform validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in. 
    ```
    terraform plan
    ```
@@ -110,14 +110,14 @@ Looking for other resource types? Find a complete list of supported resource typ
 
    Example output:
    ```
-   Refreshing IBM Cloud Provider plug-in for Terraform state in-memory prior to plan...
+   Refreshing Terraform state in-memory prior to plan...
    The refreshed state be used to calculate this plan, but not be persisted to local or remote state storage.
 
    An execution plan has been generated and is shown here.
    Resource actions are indicated with the following symbols:
      + create
 
-   IBM Cloud Provider plug-in for Terraform perform the following actions:
+   Terraform perform the following actions:
 
      + ibm_compute_vm_instance.vm1
          id:                           <computed>
@@ -162,11 +162,11 @@ Looking for other resource types? Find a complete list of supported resource typ
 
    Plan: 1 to add, 0 to change, 0 to destroy.
    ------------------------------------------------------------------------
-   **Note** You didn't specify an "-out" parameter to save this plan, so IBM Cloud Provider plug-in for Terraform can't guarantee that exactly these actions be performed if "terraform apply" is subsequently run.
+   **Note** You didn't specify an "-out" parameter to save this plan, so Terraform can't guarantee that exactly these actions be performed if "terraform apply" is subsequently run.
    ```
    {: screen}
    
-4. Review the execution plan to verify the steps that were identified by IBM Cloud Provider plug-in for Terraform to provision the virtual server.  
+4. Review the execution plan to verify the steps that were identified by Terraform to provision the virtual server.  
 
 5. Create your infrastructure resources.  
    ```
@@ -225,7 +225,7 @@ Looking for other resource types? Find a complete list of supported resource typ
 ## Updating IBM Cloud resources
 {: #update_resources}
 
-You can update your resources by changing your IBM Cloud Provider plug-in for Terraform configuration file and applying these changes in your environment. 
+You can update your resources by changing your Terraform configuration file and applying these changes in your environment. 
 {: shortdesc}
 
 1. List your {{site.data.keyword.cloud_notm}} resources. 
@@ -278,7 +278,7 @@ You can update your resources by changing your IBM Cloud Provider plug-in for Te
    
 2. Open your `sample.tf` configuration file and change a value. For example, you can change the **network_speed** to **100**. To find an overview of parameters that you can change, see the [{{site.data.keyword.cloud_notm}} resource reference](/docs/terraform?topic=terraform-setup_cli#configure_provider).
    
-3. Create an IBM Cloud Provider plug-in for Terraform execution plan.
+3. Create an Terraform execution plan.
  
    ```
    terraform plan
@@ -287,7 +287,7 @@ You can update your resources by changing your IBM Cloud Provider plug-in for Te
    
    Example output: 
    ```
-   Refreshing IBM Cloud Provider plug-in for Terraform state in-memory prior to plan...
+   Refreshing Terraform state in-memory prior to plan...
    The refreshed state be used to calculate this plan, but not be persisted to local or remote state storage.
 
    ibm_compute_vm_instance.vm1: Refreshing state... (ID: 51404681)
@@ -298,7 +298,7 @@ You can update your resources by changing your IBM Cloud Provider plug-in for Te
    Resource actions are indicated with the following symbols:
     ~ update in-place
 
-   IBM Cloud Provider plug-in for Terraform performs the following actions:
+   Terraform performs the following actions:
 
     ~ ibm_compute_vm_instance.vm1
     network_speed: "10" => "100"
@@ -322,16 +322,16 @@ You can update your resources by changing your IBM Cloud Provider plug-in for Te
 ## Removing IBM Cloud resources 
 {: #remove_resources}
 
-You can use IBM Cloud Provider plug-in for Terraform to remove {{site.data.keyword.cloud_notm}} resources if you do not want them anymore. 
+You can use Terraform to remove {{site.data.keyword.cloud_notm}} resources if you do not want them anymore. 
 {: shortdesc}
 
-1. Show the summary of steps that IBM Cloud Provider plug-in for Terraform identified to remove your {{site.data.keyword.cloud_notm}} resources. 
+1. Show the summary of steps that Terraform identified to remove your {{site.data.keyword.cloud_notm}} resources. 
    ```
    terraform plan -destroy
    ```
    {: pre}
    
-2. Verify the IBM Cloud Provider plug-in for Terraform execution plan. 
+2. Verify the Terraform execution plan. 
 3. Remove your {{site.data.keyword.cloud_notm}} resources. 
    ```
    terraform destroy
@@ -345,14 +345,14 @@ You can use IBM Cloud Provider plug-in for Terraform to remove {{site.data.keywo
    Resource actions are indicated with the following symbols:
      - destroy
 
-   IBM Cloud Provider plug-in for Terraform performs the following actions:
+   Terraform performs the following actions:
 
      - ibm_compute_vm_instance.vm1
 
    Plan: 0 to add, 0 to change, 1 to destroy.
 
    Do you really want to destroy?
-     IBM Cloud Provider plug-in for Terraform destroys all your managed infrastructure, as shown above.
+     Terraform destroys all your managed infrastructure, as shown above.
      There is no undo. Only 'yes' is accepted to confirm.
 
      Enter a value: yes

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-22"
 
 keywords: terraform provider plugin, terraform functions, terraform openwhisk, terraform function action, terraform serverless, terraform namespace
 
@@ -41,7 +41,7 @@ subcollection: ibm-cloud-provider-for-terraform
 Review the {{site.data.keyword.openwhisk_short}} resources that you can create, update, or delete.
 {: shortdesc}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_function_action`
@@ -50,7 +50,7 @@ Before you start working with your resource, make sure to review the [required p
 Create, update, or delete a {{site.data.keyword.openwhisk_short}} action. Actions are stateless code snippets that run on the {{site.data.keyword.openwhisk_short}} platform. An action can be written as a JavaScript, Swift, or Python function, a Java method, or a custom executable program packaged in a Docker container. To bundle and share related actions, use the `function_package` resource.
 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #fn-action-sample}
 
 ####  Simple JavaScript action
@@ -217,7 +217,7 @@ terraform import ibm_function_action.nodeAction Namespace-01:nodezip
 
 Create, update, or delete an IBM Cloud Functions namespace. For more information, about managing namespace, see [Managing namespace](/docs/openwhisk?topic=openwhisk-namespaces). Then, you can create IAM managed namespaces to group entities such as actions, triggers or both.
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #fn-namespace-sample}
 
 The following example creates the namespace and package at a specific location.
@@ -298,7 +298,7 @@ terraform import ibm_function_namespace.namespace 4cf78bb1-2298-413f-8575-246494
 
 Create, update, or delete an IBM Cloud Functions package. You can the packages to bundle together a set of related actions, and share them with others. To create actions, use the `function_action` resource.
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #fn-package-sample}
 
 #### Create a package
@@ -413,7 +413,7 @@ Review the output parameters that you can access after your resource is created.
 Create, update, or delete an IBM Cloud Functions rule. Events from external and internal event sources are channeled through a trigger, and rules allow your actions to react to these events. To set triggers, use the `function_trigger` resource.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #fn-rule-sample}
 
 The following example creates a rule for an action. 
@@ -504,7 +504,7 @@ terraform import ibm_function_rule.sampleRule alarmrule
 Create, update, or delete an IBM Cloud Functions trigger. Events from external and internal event sources are channeled through a trigger, and rules allow your actions to react to these events. To set rules, use the `function_rule` resource.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #fn-trigger-sample}
 
 #### Creating triggers

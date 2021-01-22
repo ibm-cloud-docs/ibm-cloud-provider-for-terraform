@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-22"
 
 keywords: terraform provider plugin, terraform cloud databases, terraform databases, terraform postgres, terraform mysql, terraform compose
 
@@ -38,9 +38,9 @@ subcollection: ibm-cloud-provider-for-terraform
 # {{site.data.keyword.databases-for}} data sources 
 {: #databases-data-sources}
 
-You can reference the output parameters for each resource in other resources or data sources by using [IBM Cloud Provider plug-in for Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_database`
@@ -52,7 +52,7 @@ Create a read-only copy of an existing {{site.data.keyword.cloud_notm}} database
 Configuration of an {{site.data.keyword.databases-for}} `data_source` requires that the `region` parameter is set for the IBM provider in the `provider.tf`. The region must be the same as the `location` that the {{site.data.keyword.databases-for}} instance is deployed into. If not specified, `us-south` is used by default. A `terraform refresh` of the `data_source` fails if the region and the location differ.
 {: note}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #database-sample}
 
 The following example creates a read-only copy of the `mydatabase` instance in `us-east`.  
@@ -73,7 +73,7 @@ Review the input parameters that you can specify for your data source.
 
 |Name|Data type|Required/optional|Description|
 |----|-----------|------|--------|
-|`name`|String|Required|The name of the {{site.data.keyword.databases-for}} instance. IBM Cloud does not enforce that service names are unique and it is possible that duplicate service names exist. The first located service instance is used by IBM Cloud Provider plug-in for Terraform. The name must not include spaces.|
+|`name`|String|Required|The name of the {{site.data.keyword.databases-for}} instance. IBM Cloud does not enforce that service names are unique and it is possible that duplicate service names exist. The first located service instance is used by Terraform. The name must not include spaces.|
 | `resource_group_id`| String | Optional | The ID of the resource group where the {{site.data.keyword.databases-for}} instance is deployed into. The default is `default`. |
 |`location` | String | Optional | The location where the {{site.data.keyword.databases-for}} instance is deployed into. |
 |`service` | String | Optional| The service type of the instance. To retrieve this value, run `ibmcloud catalog service-marketplace` or `ibmcloud catalog search`.  |

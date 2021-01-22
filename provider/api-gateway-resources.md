@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-22"
 
 keywords: terraform provider plugin, terraform certificate manager, terraform cert manager, terraform certificate
 
@@ -38,7 +38,7 @@ subcollection: ibm-cloud-provider-for-terraform
 #  API Gateway resources
 {: #api-gateway-resources}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_api_gateway_endpoint`
@@ -46,7 +46,7 @@ Before you start working with your resource, make sure to review the [required p
 
 Create, update, or delete an API endpoint for an API gateway. 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #api-gw-endpoint-sample}
 
 #### Example for a single  API Documentation as input
@@ -141,7 +141,7 @@ Endpoint subscriptions can be added only if the endpoint is online. Make sure to
 {: important}
 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #api-gw-endpoint-subscript-sample}
 
 ```

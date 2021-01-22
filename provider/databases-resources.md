@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-22"
 
 keywords: terraform provider plugin, terraform cloud databases, terraform databases, terraform postgres, terraform mysql, terraform compose
 
@@ -38,21 +38,21 @@ subcollection: ibm-cloud-provider-for-terraform
 # {{site.data.keyword.databases-for}} resources
 {: #databases-resources}
 
-Review the {{site.data.keyword.databases-for}} resources that you can create, modify, or delete. You can reference the output parameters for each resource in other resources or data sources by using [IBM Cloud Provider plug-in for Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+Review the {{site.data.keyword.databases-for}} resources that you can create, modify, or delete. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 {: shortdesc}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_database`
 {: #db}
 
-Create, update, or delete a {{site.data.keyword.databases-for}} instance. The `ibmcloud_api_key` that is defined in the `provider` block and used by IBM Cloud Provider plug-in for Terraform must have sufficient IAM access to create and modify {{site.data.keyword.databases-for}} instances. Also, must have access to the resource group where you want to deploy the instance. For more information, see the [documentation](/docs/databases-for-postgresql?topic=databases-for-postgresql-user-management).
+Create, update, or delete a {{site.data.keyword.databases-for}} instance. The `ibmcloud_api_key` that is defined in the `provider` block and used by Terraform must have sufficient IAM access to create and modify {{site.data.keyword.databases-for}} instances. Also, must have access to the resource group where you want to deploy the instance. For more information, see the [documentation](/docs/databases-for-postgresql?topic=databases-for-postgresql-user-management).
 
-To create a {{site.data.keyword.databases-for}} instance, you must specify the `region` and `ibmcloud_api_key` parameters in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. The region must match the region where you want to deploy your instance. If the region is not specified `us-south` is used by default. 
+To create a {{site.data.keyword.databases-for}} instance, you must specify the `region` and `ibmcloud_api_key` parameters in the `provider` block of your Terraform configuration file. The region must match the region where you want to deploy your instance. If the region is not specified `us-south` is used by default. 
 {: note}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #db-sample}
 
 To find an example for configuring a virtual server instance that connects to a PostgreSQL database, see [here](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-database).
@@ -88,7 +88,7 @@ value = ibm_database.<your_database>.connectionstrings.0.composed
 }
 
 ```
-### Sample2 IBM Cloud Provider plug-in for Terraform code
+### Sample2 Terraform code
 {: #db-time-recovery-sample}
 
 To find an example for configuring point in time recovery time by using `ibm_database` resource. 
@@ -109,7 +109,7 @@ resource "ibm_database" "test_acc" {
   point_in_time_recovery_deployment_id = "crn:v1:bluemix:public:databases-for-postgresql:us-south:a/4448261269a14562b839e0a3019ed980:0b8c37b0-0f01-421a-bb32-056c6565b461::"
 }
 ```
-### Sample3 IBM Cloud Provider plug-in for Terraform code by using auto_scaling
+### Sample3 Terraform code by using auto_scaling
 {: #auto-scaling}
 
 ```
@@ -172,7 +172,7 @@ Review the input parameters that you can specify for your resource.
 |----|-----------|-----------|---------------------| --------|
 |`name`|String|Required|A descriptive name that is used to identify the database instance. The name must not include spaces.| No |
 |`plan`|String|Required|The name of the service plan that you choose for your instance. Supported values are `standard`. | No |
-|`location`|String|Required|The location where you want to deploy your instance. The location must match the `region` parameter that you specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. The default value is `us-south`. Currently, supported regions are `us-south`, `us-east`, `eu-gb`, `eu-de`, `au-syd`, `jp-tok`, `oslo01`. | No |
+|`location`|String|Required|The location where you want to deploy your instance. The location must match the `region` parameter that you specify in the `provider` block of your Terraform configuration file. The default value is `us-south`. Currently, supported regions are `us-south`, `us-east`, `eu-gb`, `eu-de`, `au-syd`, `jp-tok`, `oslo01`. | No |
 |`resource_group_id`|String|Optional| The ID of the resource group where you want to create the instance. To retrieve this value, run `ibmcloud resource groups` or use the `ibm_resource_group` data source. If no value is provided, the `default` resource group is used.| No |
 |`tags`|Array of strings|Optional|A list of tags that you want to add to your instance. | No |
 |`service`|String|Required| The type of {{site.data.keyword.databases-for}} that you want to create. Only the following services are currently accepted: `databases-for-etcd`, `databases-for-postgresql`, `databases-for-redis`, `databases-for-elasticsearch`, `messages-for-rabbitmq`, and `databases-for-mongodb`.| No |
@@ -233,7 +233,7 @@ Review the output parameters that you can access after your resource is created.
 |`status`|String|The status of the instance. |
 |`adminuser`|String|The user ID of the database administrator. Example, `admin` or `root`.|
 |`version`|String|The database version.|
-|`connectionstrings`|Array|A list of connection strings for the database for each user ID. For more information, about how to use connection strings, see the [documentation](/docs/databases-for-postgresql?topic=databases-for-postgresql-connection-strings). The results are returned in pairs of the userid and string: `connectionstrings.1.name = admin connectionstrings.1.string = postgres://admin:$PASSWORD@79226bd4-4076-4873-b5ce-b1dba48ff8c4.b8a5e798d2d04f2e860e54e5d042c915.databases.appdomain.cloud:32554/ibmclouddb?sslmode=verify-full` Individual string parameters can be retrieved by using IBM Cloud Provider plug-in for Terraform variables and outputs `connectionstrings.x.hosts.x.port` and `connectionstrings.x.hosts.x.host`|
+|`connectionstrings`|Array|A list of connection strings for the database for each user ID. For more information, about how to use connection strings, see the [documentation](/docs/databases-for-postgresql?topic=databases-for-postgresql-connection-strings). The results are returned in pairs of the userid and string: `connectionstrings.1.name = admin connectionstrings.1.string = postgres://admin:$PASSWORD@79226bd4-4076-4873-b5ce-b1dba48ff8c4.b8a5e798d2d04f2e860e54e5d042c915.databases.appdomain.cloud:32554/ibmclouddb?sslmode=verify-full` Individual string parameters can be retrieved by using Terraform variables and outputs `connectionstrings.x.hosts.x.port` and `connectionstrings.x.hosts.x.host`|
 
 ### Timeouts
 {: #db-timeout}
@@ -252,7 +252,7 @@ ICD create instance typically takes between 10 - 20 minutes. Delete and update t
 ### Import
 {: #db-import}
 
-The database instance can be imported by using the ID, that is formed from the CRN. To import the resource, you must specify the `region` parameter in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. If the region is not specified, `us-south` is used by default. An IBM Cloud Provider plug-in for Terraform refresh or apply fails, if the database instance is not in the same region as configured in the provider or its alias.
+The database instance can be imported by using the ID, that is formed from the CRN. To import the resource, you must specify the `region` parameter in the `provider` block of your Terraform configuration file. If the region is not specified, `us-south` is used by default. An Terraform refresh or apply fails, if the database instance is not in the same region as configured in the provider or its alias.
 
 CRN is a 120 digit character string of the form -  `crn:v1:bluemix:public:databases-for-postgresql:us-south:a/4ea1882a2d3401ed1e459979941966ea:79226bd4-4076-4873-b5ce-b1dba48ff8c4::`
 {: important}
@@ -269,7 +269,7 @@ terraform import ibm_database.my_db <crn>
 terraform import ibm_database.my_db crn:v1:bluemix:public:databases-for-postgresql:us-south:a/4ea1882a2d3401ed1e459979941966ea:79226bd4-4076-4873-b5ce-b1dba48ff8c4::
 ```
 
-Import requires a minimal IBM Cloud Provider plug-in for Terraform config file to allow importing.
+Import requires a minimal Terraform config file to allow importing.
 
 ```
 resource "ibm_database" "<your_database>" {

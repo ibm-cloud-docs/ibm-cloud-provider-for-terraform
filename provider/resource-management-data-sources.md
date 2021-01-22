@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-22"
 
 keywords: terraform provider plugin, terraform resource group, terraform resource management, terraform iam services
 
@@ -38,7 +38,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # Resource management data sources
 {: #resource-management-data-sources}
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_resource_group`
@@ -47,7 +47,7 @@ Before you start working with your data source, make sure to review the [require
 Retrieve information about an {{site.data.keyword.cloud_notm}} resource group. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #resource-group-sample}
 
 The following two examples retrieve information about the `default` resource group. 
@@ -93,7 +93,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an IAM-enabled service instance.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #resouce-instance-sample}
 
 ```
@@ -144,7 +144,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about existing access keys for an IAM-enabled service instance.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #resource-key-sample}
 
 The following example retrieves information about the `myobjectKey` access key. 
@@ -190,7 +190,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about the quota for an IAM-enabled service instance. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #resource-quota-sample}
 
 ```

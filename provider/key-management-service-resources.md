@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-22"
 
 keywords: terraform provider plugin, terraform key management service, terraform key management, terraform kms, kms, terraform key protect, terraform kp, terraform root key, hyper protect crypto service, HPCS
 
@@ -41,13 +41,13 @@ subcollection: ibm-cloud-provider-for-terraform
 Create, modify, or delete [{{site.data.keyword.cloud_notm}} Key Protect](/docs/key-protect?topic=key-protect-about) resources.
 {: shortdesc}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_kms_key`
 {: #kms-key}
 
-This resource can be used for management of keys in both Key Protect and Hyper Protect Crypto Service (HPCS). It allows standard and root keys to be created and deleted. The region parameter in the `provider.tf` file must be set. If region parameter is not specified, `us-south` is used as default. If the region in the `provider.tf` file is different from the Key Protect instance, the instance cannot be retrieved by IBM Cloud Provider plug-in for Terraform and the IBM Cloud Provider plug-in for Terraform action fails. 
+This resource can be used for management of keys in both Key Protect and Hyper Protect Crypto Service (HPCS). It allows standard and root keys to be created and deleted. The region parameter in the `provider.tf` file must be set. If region parameter is not specified, `us-south` is used as default. If the region in the `provider.tf` file is different from the Key Protect instance, the instance cannot be retrieved by Terraform and the Terraform action fails. 
 {: shortdesc}
 
 After creating an  Hyper Protect Crypto Service instance you need to initialize the instance properly with the crypto units, in order to create, or manage Hyper Protect Crypto Service keys. For more information, about how to initialize the Hyper Protect Crypto Service instance, see [Initialize Hyper Protect Crypto](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) only for HPCS instance. 
@@ -186,9 +186,9 @@ Review the input parameters that you can specify for your resource.
 |`standard_key`|Bool|Optional|Set flag `true` for standard key, and `false` for root key. Default value is **false**.| Yes |
 |`policies`|List|Optional|Set policies for a key, for an automatic rotation policy or a dual authorization policy to protect against the accidental deletion of keys. Policies follow the following structure.| No |
 |`policies.rotation`|List|Optional|Specifies the key rotation time interval in months, with a minimum of 1, and a maximum of 12. | No |
-|`policies.rotation.interval_month`|Integer|Required|Specifies the key rotation time interval in months. CONSTRAINTS: 1 ≤ value ≤ 12 **NOTE:** Rotation policy cannot be set for standard key and imported key. Once the rotation policy is set, it cannot be unset or removed by using IBM Cloud Provider plug-in for Terraform. | No |
+|`policies.rotation.interval_month`|Integer|Required|Specifies the key rotation time interval in months. CONSTRAINTS: 1 ≤ value ≤ 12 **NOTE:** Rotation policy cannot be set for standard key and imported key. Once the rotation policy is set, it cannot be unset or removed by using Terraform. | No |
 |`policies.dual_auth_delete`|List|Required|Data associated with the dual authorization delete policy.| No |
-|`policies.dual_auth_delete.enabled`|Bool|Required|If set to `true`, Key Protect enables a dual authorization policy on a single key. **NOTE:** Once the dual authorization policy is set on the key, it cannot be reverted. A key with dual authorization policy enabled cannot be destroyed by using IBM Cloud Provider plug-in for Terraform.| No |
+|`policies.dual_auth_delete.enabled`|Bool|Required|If set to `true`, Key Protect enables a dual authorization policy on a single key. **NOTE:** Once the dual authorization policy is set on the key, it cannot be reverted. A key with dual authorization policy enabled cannot be destroyed by using Terraform.| No |
 
 
 ### Output parameters
@@ -240,13 +240,13 @@ terraform import ibm_kms_key.crn crn:v1:bluemix:public:kms:us-south:a/faf6addbf6
 Create, or delete a Key Protect standard or root key.  
 {: shortdesc}
 
-To use the `ibm_kp_key` resource, the region parameter in the `provider.tf` file must be set to the same region that your Key Protect service instance. If region parameter is not specified, `us-south` is used as default. If the region in the `provider.tf` file is different from the Key Protect instance, the instance cannot be retrieved by IBM Cloud Provider plug-in for Terraform and the IBM Cloud Provider plug-in for Terraform action fails. 
+To use the `ibm_kp_key` resource, the region parameter in the `provider.tf` file must be set to the same region that your Key Protect service instance. If region parameter is not specified, `us-south` is used as default. If the region in the `provider.tf` file is different from the Key Protect instance, the instance cannot be retrieved by Terraform and the Terraform action fails. 
 {: note}
 
 `ibm_kp_key` resource will be deprecated shortly, as a replacement, you can use `ibm_kms_key` resource.
 {: important}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #kp-key-sample}
 
 ```

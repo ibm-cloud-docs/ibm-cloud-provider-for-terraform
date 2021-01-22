@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06" 
+lastupdated: "2021-01-22" 
 
 keywords: terraform provider plugin, terraform resource group, terraform iam service, terraform resource management
 
@@ -38,7 +38,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # Resource management resources
 {: #resource-mgmt-resources}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_resource_group`
@@ -47,7 +47,7 @@ Before you start working with your resource, make sure to review the [required p
 Create, update, or delete an IBM Cloud resource group. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #rg-sample}
 
 ```
@@ -101,7 +101,7 @@ terraform import ibm_resource_group.example <resource_group_ID>
 
 Create, update, or delete an IAM-enabled service instance. 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #resource-instance-sample}
 
 ```
@@ -186,7 +186,7 @@ Create, update, or delete service credentials for an IAM-enabled service.
 By default, the `ibm_resource_key` resource creates service credentials that use the public service endpoint of a service. To create service credentials that use the private service endpoint instead, you must explicitly define that by using the `parameter` input parameter. Note that your service might not support private service endpoints yet. 
 {: note}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #resource-key-sample}
 
 #### Creating credentials for a resource without a service ID

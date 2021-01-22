@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-22"
 
 keywords: terraform provider plugin, terraform dns, terraform vpc dns, terraform private dns
 
@@ -38,12 +38,12 @@ subcollection: ibm-cloud-provider-for-terraform
 # DNS Services resources
 {: #dns-resources}
 
-Review the IBM Cloud DNS service resources that you can create, modify, or delete. You can reference the output parameters for each resource in other resources or data sources by using [IBM Cloud Provider plug-in for Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+Review the IBM Cloud DNS service resources that you can create, modify, or delete. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 {: shortdesc}
 
 For more information, about IBM Cloud DNS service, see [About DNS services](/docs/dns-svcs?topic=dns-svcs-about-dns-services).
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 
@@ -53,7 +53,7 @@ Before you start working with your resource, make sure to review the [required p
 Provides a private DNS Global Load Balancer resource. This allows DNS Global Load Balancer to create, update, and delete. For more information, see [Working with global Load Balancers](/docs/dns-svcs?topic=dns-svcs-global-load-balancers). 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #dns-glb-sample}
 
 ```
@@ -129,7 +129,7 @@ terraform import ibm_dns_glb.example 6ffda12064634723b079acdb018ef308/5ffda12064
 Provides a private DNS Global Load Balancer monitor resource. This allows DNS Global Load Balancer monitor to create, update, and delete. For more information, see [Viewing Global Load Balancer events](/docs/dns-svcs?topic=dns-svcs-health-check-events). 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #dns-glb-monitor-sample}
 
 ```
@@ -216,7 +216,7 @@ terraform import ibm_dns_glb_monitor.example 6ffda12064634723b079acdb018ef308/43
 Provides a private DNS Global Load Balancer pool resource. This allows DNS Global Load Balancer pool to  create, update, and delete. For more information, see [Viewing Global Load Balancer events](/docs/dns-svcs?topic=dns-svcs-health-check-events#health-check-event-properties)
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #dns-glb-pool-sample}
 
 ```
@@ -308,7 +308,7 @@ Create or delete a DNS permitted network. For more information, see [Managing pe
 You can add a VPC as a permitted network to a DNS entry only. 
 {: note}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #dns-permitted-network-sample}
 
 ```
@@ -351,7 +351,7 @@ Review the output parameters that you can access after your resource is created.
 Create, update, or delete a DNS record. For more information, see [Managing DNS records](/docs/dns-svcs?topic=dns-svcs-managing-dns-records). 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #dns-record-sample}
 
 ```
@@ -476,7 +476,7 @@ terraform import ibm_dns_resource_record.example <instance_id>/<zone_id>/<dns_re
 Create, update, or delete a DNS zone. For more information, see [Managing DNS zones](/docs/dns-svcs?topic=dns-svcs-managing-dns-zones).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #dns-zone-sample}
 
 ```

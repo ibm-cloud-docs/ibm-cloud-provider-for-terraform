@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-20" 
+lastupdated: "2021-01-22" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -38,7 +38,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # VPC infrastructure resources
 {: #vpc-gen2-resources}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_is_flow_log`
@@ -47,7 +47,7 @@ Before you start working with your resource, make sure to review the [required p
 Create, update, delete and suspend the flow log resource.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #ibm_is_flow-sample}
 
 ```
@@ -145,7 +145,7 @@ terraform import ibm_is_flow_log.example d7bec597-4726-451f-8a53-e62e6f19c32c
 Create a floating IP address that you can associate with a {{site.data.keyword.vsi_is_short}} instance. You can use the floating IP address to access your instance from the public network, independent of whether the subnet is attached to a public gateway. For more information, see [About floatig IP](/docs/vpc?topic=vpc-creating-a-vpc-using-the-rest-apis#create-floating-ip-api-tutorial).
 {: shortdesc}
 
- ### Sample IBM Cloud Provider plug-in for Terraform code
+ ### Sample Terraform code
 {: #floating-ip-sample}
 
 The following example shows how to create a {{site.data.keyword.vsi_is_short}} instance and associate a floating IP address to the primary network interface of the virtual server instance. 
@@ -228,7 +228,7 @@ Create, update, or cancel an Internet Key Exchange (IKE) policy.
 
 IKE is an IPSec (Internet Protocol Security) standard protocol that is used to ensure secure communication over the VPC VPN service. For more information, see [Using VPC with your VPC](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-vpn-with-your-vpc). 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #ike-sample}
 
 ```
@@ -289,7 +289,7 @@ terraform import ibm_is_ike_policy.example d7bec597-4726-451f-8a63-e62e6f19c32c
 Create, update, or delete a {{site.data.keyword.vsi_is_short}} instance. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #instance-sample}
 
 #### Example for creating an instance in a VPC
@@ -527,7 +527,7 @@ terraform import ibm_is_instance.example a1aaa111-1111-111a-1a11-a11a1a11a11a
 Create, update, or delete an instance group on VPC.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-is-instance-sample}
 
 The following example creates an instance in a VPC generation-2 infrastructure
@@ -639,7 +639,7 @@ The following timeouts are defined for this resource.
 Create, update, or delete an instance group manager on VPC of an instance group.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-is-instance-grpmanager-sample}
 
 The following example creates an instance group manager.
@@ -751,7 +751,7 @@ terraform import ibm_is_instance_group_manager.manager r006-eea6b0b7-babd-47a8-8
 Create, update, or delete a policy of an instance group manager.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-is-instance-grpmanager-policy-sample}
 
 The following example creates a policy for an instance group manager.
@@ -871,7 +871,7 @@ terraform import ibm_is_instance_group_manager_policy.policy r006-eea6b0b7-babd-
 Create, update, or delete an instance template on VPC.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-is-instance-template-sample}
 
 The following example creates an instance template in a VPC generation-2 infrastructure
@@ -984,7 +984,7 @@ terraform import ibm_is_instance_template.template r006-14140f94-fcc4-1349-96e7-
 Create, update, or cancel an IPSec policy. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #ipsec-policy-sample}
 
 ```
@@ -1032,7 +1032,7 @@ Review the output parameters that you can access after your resource is created.
 Upload, update, or delete a custom virtual server instance image. For more information, about how to create a custom image, see the [VPC documentation](/docs/vpc?topic=vpc-managing-images).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #image-sample}
 
 ```
@@ -1097,7 +1097,7 @@ terraform import ibm_is_image.example d7bec597-4726-451f-8a63-e62e6f19c32c
 Create, update, or delete a VPC Load Balancer. For more information, see [Load Balancers for VPC](/docs/vpc?topic=vpc-nlb-vs-elb).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #lb-sample}
 
 An example to create an application load balancer:
@@ -1176,10 +1176,10 @@ terraform import ibm_is_lb.example d7bec597-4726-451f-8a63-e62e6f19c32c
 
 Create, update, or delete a listener for a VPC load balancer. For more information, see [working with listeners](/docs/vpc?topic=vpc-nlb-listeners).
 
-When provisioning the load balancer listener along with load balancer pool or pool member, use explicit dependencies on the resources or perform the IBM Cloud Provider plug-in for Terraform apply with parallelism 1. 
+When provisioning the load balancer listener along with load balancer pool or pool member, use explicit dependencies on the resources or perform the Terraform apply with parallelism 1. 
 {: note}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #lb-listener-sample}
 
 ```
@@ -1264,7 +1264,7 @@ terraform import ibm_is_lb_listener.example <loadbalancer_ID>/<listener_ID>
 Create, update, or delete a load balancer listener policy.  
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #lb-listener-policy-sample}
 
 
@@ -1391,7 +1391,7 @@ The following timeouts are defined for this resource.
 Create, update, or delete a VPC load balancer listener policy rule.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #lb-listener-policy-rule-sample}
 
 ```
@@ -1487,7 +1487,7 @@ The following timeouts are configured for the resource:
 Create, update, or delete a VPC load balancer pool.  For more information, see [working with pool](/docs/vpc?topic=vpc-nlb-pools).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code to create a Load Balancer pool.
+### Sample Terraform code to create a Load Balancer pool.
 {: #lb-pool-sample}
 
 ```
@@ -1503,7 +1503,7 @@ resource "ibm_is_lb_pool" "testacc_pool" {
 }
 ```
 
-### Sample IBM Cloud Provider plug-in for Terraform code to create a Load Balancer pool with HTTPS protocol.
+### Sample Terraform code to create a Load Balancer pool with HTTPS protocol.
 {: #lb-pool-https-sample2}
 
 ```
@@ -1577,7 +1577,7 @@ terraform import ibm_is_lb_pool.example <loadbalancer_ID>/<pool_ID>
 Create, update, or delete a pool member for a VPC load balancer. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #lb-pool-member-sample}
 
 In the following example, you can create a load balancer pool member for application load balancer:
@@ -1656,7 +1656,7 @@ terraform import ibm_is_lb_pool_member.example <loadbalancer_ID>/<pool_ID>/<pool
 Create, update, or delete a network access control list (ACL). 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #network-acl-sample}
 
 ```
@@ -1758,7 +1758,7 @@ Public gateways enable a VPC subnet and all the instances that are connected to 
 To attach a public gateway that you created to a subnet, use the `public_gateway` input parameter in the [`ibm_is_subnet` resource](#subnet).
 {: note}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #public-gateway-sample}
 
 The following example shows how you can create a public gateway for all the subnets that are located in a specific zone. 
@@ -1832,7 +1832,7 @@ When you want to create a security group and security group rule for a virtual s
 {: note}
 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #sec-group-sample}
 
 ```
@@ -1900,7 +1900,7 @@ Create, update, or delete a security group rule.
 When you want to create a security group and security group rule for a virtual server instance in your VPC, you must create these resources in a specific order to avoid errors during the creation of your virtual server instance. For an example, see [Example for creating an instance with custom security group rules](#custom-sec-group-rules). 
 {: note}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #sec-group-rule-sample}
 
 In the following example, you create a different type of protocol rules `ALL`, `ICMP`, `UDP` and `TCP`.
@@ -2006,7 +2006,7 @@ Create, update, or delete a security group network interface attachment.
 {: shortdesc}
 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #sec-group-netint-sample}
 
 ```
@@ -2073,7 +2073,7 @@ Create, update, or delete an SSH key. The SSH key is used to access a Gen 2 virt
 {: shortdesc}
 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #ssh-key-sample}
 
 ```
@@ -2126,7 +2126,7 @@ terraform import ibm_is_ssh_key.example <ssh_key_ID>
 Create, update, or delete a subnet.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #subnet-sample}
 
 ```
@@ -2226,7 +2226,7 @@ terraform import ibm_is_subnet.example d7bec597-4726-451f-8a63-e62e6f19c32c
 Create, update, or delete a subnet network ACL attachment resource.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #subnet-network-sample}
 
 
@@ -2348,7 +2348,7 @@ terraform import ibm_is_subnet_network_acl_attachment.example d7bec597-4726-451f
 Create, update, or delete a VPC endpoint gateway by using virtual endpoint gateway resource. For more information, about the VPC endpoint gateway, see [Creating an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #virtual-endpoint-gwy-sample}
 
 The following example creates a VPN gateway. 
@@ -2451,7 +2451,7 @@ Create, update, or delete a VPC endpoint gateway IP by using virtual endpoint ga
 {: shortdesc}
 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #virtual-endpoint-gwyip-sample}
 
 The following example creates a VPN gateway IP.
@@ -2514,7 +2514,7 @@ terraform import ibm_is_virtual_endpoint_gateway_ip.example d7bec597-4726-451f-8
 Create, update, or delete a VPC block storage volume. For more information, about the VPC block storage volume, see [Getting started with VPC](/docs/vpc).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #volume-sample}
 
 The following example creates a volume with 10 IOPS. 
@@ -2607,7 +2607,7 @@ Create, update, or delete a Virtual Private Cloud (VPC). VPCs allow you to creat
 
 For more information, see [About Virtual Private Cloud](/docs/vpc-on-classic?topic=vpc-on-classic-about). 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-sample}
 
 ```
@@ -2668,7 +2668,7 @@ The following timeouts are defined for the resource:
 Create, update, or delete an IP address prefix. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #address-prefix-sample}
 
 ```
@@ -2728,7 +2728,7 @@ terraform import ibm_is_vpc_address_prefix.example <vpc_ID>/<address_prefix_ID>
 Create, update, or delete a VPC route. For more information, about VPC routes, see [Setting up advanced routing in VPC](/docs/vpc?topic=vpc-about-custom-routes).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-route-sample}
 
 ```
@@ -2795,7 +2795,7 @@ The resource is set up with the following timeouts:
 This resource allows VPC routing tables to create, update, or delete. For more information, about VPC routes, see [routing tables for VPC](/docs/vpc?topic=vpc-list-routing-tables-for-vpc).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-routing-table-sample}
 
 ```
@@ -2867,7 +2867,7 @@ This resource allows VPC routing tables to create, update, or delete. For more i
 {: shortdesc}
 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-routing-table-route-sample}
 
 ```
@@ -2930,7 +2930,7 @@ terraform import ibm_is_vpc_routing_table_route.example 56738c92-4631-4eb5-8938-
 Create, update, or delete a VPC gateway. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpn-gateway-sample}
 
 ```
@@ -2989,7 +2989,7 @@ The following timeouts are specified for this resource:
 Create, update, or delete a VPN gateway connection. For more information, about VPN gateway, see [adding connections to a VPN gateway](/docs/vpc?topic=vpc-vpn-adding-connections).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpn-gateway-connection-sample}
 
 ```

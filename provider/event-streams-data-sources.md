@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-22"
 
 keywords: terraform provider plugin, terraform event streams, terraform event stream service, terraform event streams topic
 
@@ -39,10 +39,10 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #event-streams-ds}
 
 
-Review the [Event Streams](/docs/EventStreams?topic=EventStreams-about) resource that you can connect, administer, developed with event streams and integrate with the other services. You can reference the output parameters for each resource in other resources or data sources by using [IBM Cloud Provider plug-in for Terraform interpolation syntax](https://www.terraform.io/docs/configuration/resources.html){: external}.
+Review the [Event Streams](/docs/EventStreams?topic=EventStreams-about) resource that you can connect, administer, developed with event streams and integrate with the other services. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration/resources.html){: external}.
 {: shortdesc}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## ibm_event_streams_topic
@@ -51,7 +51,7 @@ Before you start working with your resource, make sure to review the [required p
 Import the name of an existing event streams topic as a read-only data source. Then, You can reference the fields of the data source in other resources within the same configuration by using interpolation syntax. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #event-stream-ds-sample}
 
 ```

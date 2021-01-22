@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-18"
+lastupdated: "2021-01-22"
 
 keywords: terraform provider plugin, terraform functions, terraform openwhisk, terraform function action, terraform serverless
 
@@ -35,7 +35,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 
 
-# Index of IBM Cloud Provider plug-in for Terraform resources and data sources 
+# Index of Terraform resources and data sources 
 
 ## API Gateway
 {: #ibm-api-gateway}
