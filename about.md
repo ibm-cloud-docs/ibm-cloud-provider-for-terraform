@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-22"
+lastupdated: "2021-01-23"
 
 keywords: Terraform on {{site.data.keyword.cloud_notm}}, configuration files, resources, what is Terraform on {{site.data.keyword.cloud_notm}}, automation, automate
 
@@ -38,7 +38,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # About Terraform on {{site.data.keyword.cloud_notm}}
 {: #about}
 
-With Terraform, you can automate the {{site.data.keyword.Bluemix_notm}} resource provisioning to build, change, and version complex, multi-tier cloud environments. 
+With {{site.data.keyword.cloud}} Provider plug-in for Terraform, you can automate the {{site.data.keyword.cloud_notm}} resource provisioning to build, change, and version complex, multi-tier cloud environments. 
 {: shortdesc} 
 
 Terraform is an open source software that enables predictable and consistent provisioning of cloud resources by using a high-level scripting language. Supported resources include Infrastructure-as-a-Service (IaaS), Platform-as-a-Service (PaaS), and Function-as-a-Service (FaaS). By working with different cloud providers, you can use Terraform to configure and automate your cloud resource provisioning across cloud providers. 
