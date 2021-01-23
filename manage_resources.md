@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-22"
+lastupdated: "2021-01-23"
 
 keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, Terraform, provision resources
 
@@ -60,7 +60,8 @@ The following example shows how you can configure a virtual server in {{site.dat
 Looking for other resource types? Find a complete list of supported resource types in the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/terraform?topic=terraform-setup_cli#configure_provider). 
 {: tip}
 
-1. Create a configuration file that is named `sample.tf` with the following content. Configuration file names must have the `.tf` extension to be found by Terraform. Store this file in the same folder that you used to store your {{site.data.keyword.cloud_notm}} credentials. 
+1. Create a configuration file that is named `sample.tf` with the following content. Configuration file names must have the `.tf` extension to be found by Terraform. Store this file in the same folder that you used to store your {{site.data.keyword.cloud_notm}} credentials.
+
    ```
    resource "ibm_compute_vm_instance" "vm1" {
     hostname = "vm1"
@@ -79,12 +80,14 @@ Looking for other resource types? Find a complete list of supported resource typ
    {: codeblock}
    
 2. Initialize Terraform. 
+
    ```
    terraform init
    ```
    {: pre}
    
-   Example output: 
+   Example output:
+
    ```
    Initializing provider plugins...
 
@@ -102,13 +105,15 @@ Looking for other resource types? Find a complete list of supported resource typ
    ```
    {: screen}
    
-3. Generate an Terraform execution plan. When you execute this command, Terraform validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in. 
+3. Generate an Terraform execution plan. When you execute this command, Terraform validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in.
+
    ```
    terraform plan
    ```
    {: pre}
 
    Example output:
+
    ```
    Refreshing Terraform state in-memory prior to plan...
    The refreshed state be used to calculate this plan, but not be persisted to local or remote state storage.
@@ -169,6 +174,7 @@ Looking for other resource types? Find a complete list of supported resource typ
 4. Review the execution plan to verify the steps that were identified by Terraform to provision the virtual server.  
 
 5. Create your infrastructure resources.  
+   
    ```
    terraform apply
    ```
@@ -229,12 +235,14 @@ You can update your resources by changing your Terraform configuration file and 
 {: shortdesc}
 
 1. List your {{site.data.keyword.cloud_notm}} resources. 
+   
    ```
    terraform show
    ```
    {: pre}
    
-   Example output: 
+   Example output:
+
    ```
    ibm_compute_vm_instance.vm1:
      id = 62364997
@@ -286,6 +294,7 @@ You can update your resources by changing your Terraform configuration file and 
    {: pre}
    
    Example output: 
+
    ```
    Refreshing Terraform state in-memory prior to plan...
    The refreshed state be used to calculate this plan, but not be persisted to local or remote state storage.
@@ -307,13 +316,15 @@ You can update your resources by changing your Terraform configuration file and 
    ```
    {: screen}
    
-4. Apply the changes to your {{site.data.keyword.cloud_notm}} resources. 
+4. Apply the changes to your {{site.data.keyword.cloud_notm}} resources.
+
    ```
    terraform apply
    ```
    {: pre}
    
-5. Verify that your {{site.data.keyword.cloud_notm}} resources are updated. 
+5. Verify that your {{site.data.keyword.cloud_notm}} resources are updated.
+
    ```
    terraform show
    ```
@@ -326,19 +337,23 @@ You can use Terraform to remove {{site.data.keyword.cloud_notm}} resources if yo
 {: shortdesc}
 
 1. Show the summary of steps that Terraform identified to remove your {{site.data.keyword.cloud_notm}} resources. 
+
    ```
    terraform plan -destroy
    ```
    {: pre}
    
 2. Verify the Terraform execution plan. 
+
 3. Remove your {{site.data.keyword.cloud_notm}} resources. 
+
    ```
    terraform destroy
    ```
    {: pre}
    
-   Example output: 
+   Example output:
+
    ```
    ibm_compute_vm_instance.vm1: Refreshing state... (ID: 60948867)
    An execution plan has been generated and is shown here.
@@ -364,7 +379,8 @@ You can use Terraform to remove {{site.data.keyword.cloud_notm}} resources if yo
    ```
    {: screen}
    
-4. Verify that your {{site.data.keyword.cloud_notm}} resources are removed. 
+4. Verify that your {{site.data.keyword.cloud_notm}} resources are removed.
+ 
    ```
    terraform show
    ```
