@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-23"
+lastupdated: "2021-01-25"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -192,7 +192,7 @@ To find a full list of {{site.data.keyword.cloud_notm}} resources that you can p
 
 4. [Retrieve your {{site.data.keyword.cloud_notm}} classic infrastructure user name and API key](/docs/account?topic=account-classic_keys). You use this user name and API key to provision the classic infrastructure virtual server in your {{site.data.keyword.cloud_notm}} account. 
         
-6. Create a local Terraform variables file that is named `terraform.tfvars` to store your {{site.data.keyword.cloud_notm}} classic infrastructure credentials and the {{site.data.keyword.cloud_notm}} API key. Make sure to save this file in the folder that you created for your first Terraform project. Variables that are defined in the `terraform.tfvars` file are automatically loaded by Terraform when the {{site.data.keyword.cloud_not}} Provider plug-in is initialized and you can reference them in every Terraform configuration file that you use. 
+6. Create a local Terraform variables file that is named `terraform.tfvars` to store your {{site.data.keyword.cloud_notm}} classic infrastructure credentials and the {{site.data.keyword.cloud_notm}} API key. Make sure to save this file in the folder that you created for your first Terraform project. Variables that are defined in the `terraform.tfvars` file are automatically loaded by Terraform when the {{site.data.keyword.cloud_notm}} Provider plug-in is initialized and you can reference them in every Terraform configuration file that you use. 
 
    Because the `terraform.tfvars` file contains confidential information, do not push this file to your version control system where you store the Terraform configuration files of the resources that you want to provision. This file is meant to be on your local system only. 
    {: important}
@@ -285,7 +285,7 @@ To find a full list of {{site.data.keyword.cloud_notm}} resources that you can p
 ## Provisioning an {{site.data.keyword.cloud_notm}} Virtual Server for VPC
 {: #sample_vpc_config}
 
-Use {{site.date.keyword.cloud_norm}} Provider plug-in for Terraform to provision a VPC, and set up networking for your VPC, and provision a Virtual Service for VPC in your {{site.data.keyword.cloud_notm}} account. 
+Use {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform to provision a VPC, and set up networking for your VPC, and provision a Virtual Service for VPC in your {{site.data.keyword.cloud_notm}} account. 
 {: shortdesc}
 
 A VPC allows you to create your own space in {{site.data.keyword.cloud_notm}} so that you can run an isolated environment in the public cloud with custom network policies. The example in this topic provisions the following VPC infrastructure resources for you: 
@@ -772,7 +772,7 @@ To create a VPC and a virtual server instance:
 ## Provisioning an {{site.data.keyword.cloud_notm}} Virtual Server for Classic Infrastructure
 {: #sample_infrastructure_config}
 
-You can provision your Virtual Server for Classic Infrastructure by using the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. Similar to the {{site.date.keyword.cloud_notm}} Virtual Server for VPC that you provisioned earlier, you create another configuration file with the specification for your virtual server instance. 
+You can provision your Virtual Server for Classic Infrastructure by using the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. Similar to the {{site.data.keyword.cloud_notm}} Virtual Server for VPC that you provisioned earlier, you create another configuration file with the specification for your virtual server instance. 
 {: shortdesc}
 
 Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classic infrastructure resource that incurs costs. Be sure to review the [available plans ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/infrastructure/virtual-server-group) before you proceed.
