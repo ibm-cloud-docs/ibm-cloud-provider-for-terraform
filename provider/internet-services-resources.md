@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-11"
+lastupdated: "2021-01-22"
 
 keywords: terraform provider, terraform resources internet service, terraform resources cis, tf provider plugin
 
@@ -38,10 +38,10 @@ subcollection: ibm-cloud-provider-for-terraform
 # Internet services resources
 {: #cis-resources}
 
-Review the [{{site.data.keyword.cis_full_notm}}](/docs/cis?topic=cis-about-ibm-cloud-internet-services-cis) resources that you can create, modify, or delete. You can reference the output parameters for each resource in other resources or data sources by using [IBM Cloud Provider plug-in for Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+Review the [{{site.data.keyword.cis_full_notm}}](/docs/cis?topic=cis-about-ibm-cloud-internet-services-cis) resources that you can create, modify, or delete. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 {: shortdesc}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_cis`
@@ -49,7 +49,7 @@ Before you start working with your resource, make sure to review the [required p
 
 Create, update, or delete an {{site.data.keyword.cis_full_notm}} instance. 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-sample}
 
 ```
@@ -129,7 +129,7 @@ terraform import ibm_cis.myorg <crn>
  Provides an {{site.data.keyword.cis_full_notm}} cache settings resource. This resource is associated with an {{site.data.keyword.cis_full_notm}} instance and a CIS Domain resource. It allows to create, update, or delete cache settings of a domain of an {{site.data.keyword.cis_full_notm}} CIS instance. For more information about cache setting, refer to [CIS cache concepts](/docs/cis?topic=cis-caching-concepts).
  {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-cache-sample}
 
 ```
@@ -210,7 +210,7 @@ terraform import ibm_cis_cache_settings.cache_settings 9caf68812ae9b3f0377fdf986
  Provides an {{site.data.keyword.cis_full_notm}} certificate order resource. This resource is associated with an {{site.data.keyword.cis_full_notm}} instance and a CIS domain resource. It allows to order and delete dedicated certificates of a domain of a CIS instance. For more information about CIS certificate order, refer to [managing origin certificates](/docs/cis?topic=cis-cis-origin-certificates).
  {: shortdesc}
 
- ### Sample IBM Cloud Provider plug-in for Terraform code
+ ### Sample Terraform code
 {: #cis-certificate-order-sample}
 
 ```
@@ -281,7 +281,7 @@ terraform import ibm_cis_certificate_order.myorg certificate_order 48996f0da6ed7
  Provides an {{site.data.keyword.cis_full_notm}} certificate upload resource. This resource is associated with an {{site.data.keyword.cis_full_notm}} instance and a CIS domain resource. It allows to upload, update, and delete certificates of a domain of a CIS instance. For more information about CIS certificate upload, refer to [Installing an origin certificate on your server](/docs/cis?topic=cis-cis-origin-certificates#cis-origin-certificates-installing).
  {: shortdesc}
 
- ### Sample IBM Cloud Provider plug-in for Terraform code
+ ### Sample Terraform code
 {: #cis-certificate-upload-sample}
 
 ```
@@ -365,7 +365,7 @@ terraform import ibm_cis_certificate_upload.certificate 48996f0da6ed76251b475971
  Provides an {{site.data.keyword.cis_full_notm}} custom page resource that is associated with an IBM CIS instance and a CIS domain resource. It allows to create, update, and delete a custom page of a domain of a CIS instance. For more information about custom page, refer to [CIS custom page](/docs/cis?topic=cis-custom-page).
  {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-custom-sample}
 
 ```
@@ -443,7 +443,7 @@ terraform import ibm_cis_custom_page.custom_page basic_challenge:9caf68812ae9b3f
 Provides an {{site.data.keyword.cis_full_notm}} DNS records import resource. This resource is associated with an {{site.data.keyword.cis_full_notm}} instance and a CIS domain resource. It allows to import DNS records from file of a domain of a CIS instance. For more information, about CIS DNS records, refer to [managing DNS records](/docs/dns-svcs?topic=dns-svcs-managing-dns-records).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-dns-records-import-sample}
 
 ```
@@ -511,7 +511,7 @@ terraform import ibm_cis_dns_records_import.myorgs 0:0:records.txt:9caf68812ae9b
 Create, update, or delete an {{site.data.keyword.cis_full_notm}} domain.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-domain-sample}
 
 ```
@@ -577,7 +577,7 @@ terraform import ibm_cis_domain.myorg 1aaa11111aa1a1a1111aaa111111a11a:crn:v1:bl
 Customize the {{site.data.keyword.cis_full_notm}} domain settings.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-domain-settings-sample}
 
 ```
@@ -716,7 +716,7 @@ Review the output parameters that you can access after your resource is created.
 Create, update, or delete an {{site.data.keyword.cis_full_notm}} DNS record resource. This resource is associated with an {{site.data.keyword.cis_full_notm}} instance and a CIS domain resource. For more information, about CIS DNS record, refer to [managing DNS records](/docs/dns-svcs?topic=dns-svcs-managing-dns-records).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-dns-record-sample}
 
 **Example Usage 1** Create a record.
@@ -1034,7 +1034,7 @@ terraform import ibm_cis_dns_record.myorg  48996f0da6ed76251b475971b097205c:9caf
 Create, update, or delete an edge functions action for a domain to include in your CIS edge functions action resource.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-edge-functions-action-sample}
 
 The example to add an edge functions action to the domain.
@@ -1105,7 +1105,7 @@ terraform import ibm_cis_edge_functions_action.test_action sample_script:9caf688
 Create, update, or delete an edge functions trigger for a domain to include in your CIS edge functions trigger resource.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-edge-functions-trigger-sample}
 
 The example to add an edge functions trigger to the domain.
@@ -1180,7 +1180,7 @@ terraform import ibm_cis_edge_functions_trigger.test_trigger 48996f0da6ed76251b4
 Create, update, or delete a firewall for a domain that you included in your {{site.data.keyword.cis_full_notm}} instance. For more information, see [firewall rule actions](/docs/cis?topic=cis-actions).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-firewall-sample}
 
 ```
@@ -1314,10 +1314,10 @@ terraform import ibm_cis_firewall.myorg lockdowns lockdowns:48996f0da6ed76251b47
 Create, update, or delete a global load balancer. 
 {: shortdesc}
 
-The IBM Cloud IBM Cloud Provider plug-in for Terraform Provider plug-in does not support the setup of a region pool for a global load balancer. 
+The IBM Cloud Terraform Provider plug-in does not support the setup of a region pool for a global load balancer. 
 {: note}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-global-lb-sample}
 
 ```
@@ -1414,7 +1414,7 @@ terraform import ibm_cis_dns_record.myorg  111a11a1aa1aa11111a111111a111111a:1aa
 Create, update, or delete an HTTPS health check for your {{site.data.keyword.cis_full_notm}} instance. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-health-sample}
 
 ```
@@ -1498,7 +1498,7 @@ terraform import ibm_cis_healthcheck.myorg 1aaaa111111aa11111111111a1a11a1:crn:v
 Create, update, or delete an origin pool for your {{site.data.keyword.cis_full_notm}} instance.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-origin-pool-sample}
 
 ```
@@ -1589,7 +1589,7 @@ terraform import ibm_cis_origin_pool.myorg 1aaaa111111aa11111111111a1a11a1:crn:v
 Provides an {{site.data.keyword.cis_full_notm}} page rule resource, to create, update, delete page rules of a domain. This resource is associated with an {{site.data.keyword.cis_full_notm}} instance and an {{site.data.keyword.cis_full_notm}} domain resource. For more information, about {{site.data.keyword.cis_full_notm}} page rules, see [using page rules](/docs/cis?topic=cis-use-page-rules).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-page-rule-sample}
 
 ```
@@ -1751,7 +1751,7 @@ Create, update, or delete custom rate limits for an {{site.data.keyword.cis_full
 Rate limiting rule can only be created when you have the enterprise plan for {{site.data.keyword.cis_full_notm}}.
 {: note}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #rate-limit-sample}
 
 The following example shows how you can add a rate limit to an {{site.data.keyword.cis_full_notm}} domain. 
@@ -1855,7 +1855,7 @@ Create, update, or delete range application an {{site.data.keyword.cis_full_notm
 {: shortdesc}
 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis_range_app-sample}
 
 The following example shows how you can add a rate limit to an {{site.data.keyword.cis_full_notm}} domain. 
@@ -1943,7 +1943,7 @@ terraform import ibm_cis_range_app.myorg 48996f0da6ed76251b475971b097205c:9caf68
 Provides an {{site.data.keyword.cis_full_notm}} routing resource. This resource is associated with an {{site.data.keyword.cis_full_notm}} instance and an {{site.data.keyword.cis_short}} domain resource. It allows to change routing of a domain of an {{site.data.keyword.cis_short}} instance. For more information, refer to [about {{site.data.keyword.cis_short}}](/docs/cis?topic=cis-about-ibm-cloud-internet-services-cis).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #routing-sample}
 
 The following example shows how you can add a routing resource to an {{site.data.keyword.cis_full_notm}} domain. 
@@ -2015,7 +2015,7 @@ terraform import ibm_cis_routing.routing 9caf68812ae9b3f0377fdf986751a78f:crn:v1
 Create, update, or delete an {{site.data.keyword.cis_full_notm}} TLS settings resources. This resource is associated with an {{site.data.keyword.cis_full_notm}} instance and an {{site.data.keyword.cis_full_notm}}Domain resource.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-tls-sample}
 
 ```
@@ -2099,7 +2099,7 @@ The `ibm_cis_tls_settings` resource is imported using the ID. The ID is formed f
 Provides an {{site.data.keyword.cis_full_notm}} WAF rule group resource. This resource is associated with an {{site.data.keyword.cis_full_notm}} instance and a CIS Domain resource. It allows to change WAF Groups mode of a domain of a CIS instance. It is also named as CIS rule set. Please find `OWASP` rule set set tab under WAF of your instance in UI. For more information, refer to [{{site.data.keyword.cis_full_notm}} rule sets](/docs/cis?topic=cis-waf-settings#cis-ruleset-for-waf).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-waf-grp-sample}
 
 The following example shows how you can add a WAF group resource to an {{site.data.keyword.cis_full_notm}} domain. 
@@ -2177,7 +2177,7 @@ terraform import ibm_cis_domain.myorg  3d8fb0c18b5a6ba7682c80e94c7937b2:57d96f0d
 Provides an {{site.data.keyword.cis_full_notm}} WAF package resource. This resource is associated with an {{site.data.keyword.cis_full_notm}} instance and a CIS domain resource. It allows to change WAF package settings of a domain of an {{site.data.keyword.cis_full_notm}} instance. It is also named as `OWASP` rule set. For more information, about WAF refer to [Web Application Firewall concepts](/docs/cis?topic=cis-waf-q-and-a).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-waf-package-sample}
 
 The following example shows how you can add a WAF package resource to an {{site.data.keyword.cis_full_notm}} domain. 
@@ -2251,7 +2251,7 @@ terraform import ibm_cis_waf_package.waf_package 489d96f0da6ed76251b475971b09720
 Provides an {{site.data.keyword.cis_full_notm}} WAF rule settings resource. This resource is associated with an {{site.data.keyword.cis_full_notm}} instance and a CIS Domain resource. It allows to change WAF rule settings of a domain of a CIS instance. For more information, refer to [{{site.data.keyword.cis_full_notm}} rule sets](/docs/cis?topic=cis-waf-settings#cis-ruleset-for-waf).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-waf-rule-sample}
 
 The following example shows how you can add a WAF rule resource to an {{site.data.keyword.cis_full_notm}} domain. 

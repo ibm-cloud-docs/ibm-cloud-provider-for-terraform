@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-22"
 
 keywords: terraform provider plugin, terraform cloud foundry, terraform cf resources, terraform cf org, terraform cf space
 
@@ -38,9 +38,9 @@ subcollection: ibm-cloud-provider-for-terraform
 # Cloud Foundry data sources
 {: #cloud-foundry-data-sources}
 
-You can reference the output parameters for each resource in other resources or data sources by using [IBM Cloud Provider plug-in for Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 
@@ -51,7 +51,7 @@ Retrieve information about an existing {{site.data.keyword.cloud_notm}} account.
 {: shortdesc}
 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cf-account-sample}
 
 The following example retrieves information about an {{site.data.keyword.cloud_notm}} account that belongs to the `myorg` Cloud Foundry organization. 
@@ -101,7 +101,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an existing Cloud Foundry app. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cf-app-sample}
 
 The following example retrieves information about the `my-app` Cloud Foundry app.  
@@ -155,7 +155,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an existing private domain for an app. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cf-private-domain-sample}
 
 The following example retrieves information about the `example.com` domain. 
@@ -196,7 +196,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an existing shared domain for an app. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cf-shared-domain-sample}
 
 The following example retrieves information about the `example.com` domain. 
@@ -237,7 +237,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an existing app route. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cf-app-route-sample}
 
 The following example retrieves information about an app route. 
@@ -284,7 +284,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an existing Cloud Foundry organization. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {; #cf-org-sample}
 
 The following example retrieves information about the `myorg` Cloud Foundry organization. 
@@ -326,7 +326,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about a quota for a Cloud Foundry organization. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cf-org-quota-sample}
 
 The following example retrieves information for an existing quota plan. 
@@ -376,7 +376,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about a Cloud Foundry service instance. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cf-service-instance-sample}
 
 The following example retrieves information about the `mycloudantdb` instance. 
@@ -427,7 +427,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about existing service credentials that a Cloud Foundry service instance uses. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cf-service-key-sample}
 
 The following example retrieves service key information for the `mycloudantdb` service instance. 
@@ -478,7 +478,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about a service plan for a Cloud Foundry service. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cf-service-plan-sample}
 
 The following example retrieves information about the `Lite` service plan for the `CloudantNOSQLDB` service. 
@@ -521,7 +521,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an existing Cloud Foundry space.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cf-space-sample}
 
 The following example retrieves information about the `prod` Cloud Foundry space.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-11"
+lastupdated: "2021-01-22"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -42,7 +42,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #vsi_config}
 {: faq}
 
-The IBM Cloud Provider plug-in for Terraform `ibm_compute_vm_instance` resource includes optional and mandatory configuration parameters. To find an overview of how you can configure your virtual server, use the {{site.data.keyword.Bluemix_notm}} CLI.  
+The Terraform `ibm_compute_vm_instance` resource includes optional and mandatory configuration parameters. To find an overview of how you can configure your virtual server, use the {{site.data.keyword.Bluemix_notm}} CLI.  
 
 1. Install the [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli). 
 
@@ -61,7 +61,7 @@ Most {{site.data.keyword.Bluemix_notm}} platform resources provision within a fe
 
 Use the `terraform apply` and `terraform destroy` times in the following table as a reference for when you can expect your commands to complete. 
 
-If the IBM Cloud Provider plug-in for Terraform operation does not complete due to a timeout, wait for the resource state change to complete and retry the operation. 
+If the Terraform operation does not complete due to a timeout, wait for the resource state change to complete and retry the operation. 
 {: tip}
 
 <table>
@@ -95,15 +95,15 @@ If the IBM Cloud Provider plug-in for Terraform operation does not complete due 
 </tbody>
 </table>
 
-## How do I setup IBM Cloud Provider plug-in for Terraform version 0.13.0?
+## How do I setup Terraform version 0.13.0?
 {: #ibm-terraform-provider-v13}
 {: faq}
 
-Complete the following steps can be used in IBM IBM Cloud Provider plug-in for Terraform provider to support IBM Cloud Provider plug-in for Terraform version 0.13.0:
+Complete the following steps can be used in IBM Terraform provider to support Terraform version 0.13.0:
 
 1. From the HashiCorp site, [download version 0.13.x](https://releases.hashicorp.com/terraform/){: external}
-2. Find the [IBM Cloud Provider plug-in for Terraform provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases) version.
-2. Include the shared IBM Cloud Provider plug-in for Terraform block in the `providers.tf` file.
+2. Find the [Terraform provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases) version.
+2. Include the shared Terraform block in the `providers.tf` file.
 
   **Syntax**
 
@@ -130,8 +130,8 @@ Complete the following steps can be used in IBM IBM Cloud Provider plug-in for T
      }
    }
   ```
-3. If you are using IBM Cloud Provider plug-in for Terraform modules, the shared IBM Cloud Provider plug-in for Terraform block to be used in all the module folders that is been used.
-    Detailed steps in the IBM IBM Cloud Provider plug-in for Terraform documentation will be published shortly.
+3. If you are using Terraform modules, the shared Terraform block to be used in all the module folders that is been used.
+    Detailed steps in the IBM Terraform documentation will be published shortly.
     {: note}
 
 ## Why I am getting an issue when trying to provision an `ibm_container_alb_cert`?
@@ -150,5 +150,5 @@ Error: Error waiting for create resource alb cert (buvlsclf0qcur3hjcrng/ingress-
 
 **Solution**
 
-You need to update the IBM Cloud Provider plug-in for Terraform provider to use `version 1.16.1` and above.
+You need to update the Terraform provider to use `version 1.16.1` and above.
 

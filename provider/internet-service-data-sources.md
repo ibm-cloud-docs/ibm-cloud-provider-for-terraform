@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-11"
+lastupdated: "2021-01-22"
 
 keywords: terraform internet services, terraform cis, terraform provider plugin
 
@@ -38,9 +38,9 @@ subcollection: ibm-cloud-provider-for-terraform
 # Internet Services data sources
 {: #cis_data}
 
-You can reference the output parameters for each resource in other resources or data sources by using [IBM Cloud Provider plug-in for Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_cis`
@@ -49,7 +49,7 @@ Before you start working with your data source, make sure to review the [require
 Retrieve information about an {{site.data.keyword.cis_full_notm}} instance. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-sample}
 
 The following example retrieves information about an {{site.data.keyword.cis_full_notm}} instance. 
@@ -91,7 +91,7 @@ Review the output parameters that you can access after you retrieved your data s
  Imports a read only copy of an existing {{site.data.keyword.cis_full_notm}} certificates resource. For more information about CIS certificate order, refer to [managing origin certificates](/docs/cis?topic=cis-cis-origin-certificates).
  {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-certificates-dssample}
 
 ```
@@ -138,7 +138,7 @@ Review the output parameters that you can access after you retrieved your data s
  Imports a read only copy of an existing {{site.data.keyword.cis_full_notm}} custom certificates resource. For more information about CIS certificate order, refer to [upload custom certificates](/docs/cis?topic=cis-manage-your-ibm-cis-for-optimal-security#upload-custom-certs).
  {: shortdesc}
  
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-custom-certificates-dssample}
 
 ```
@@ -187,7 +187,7 @@ Review the output parameters that you can access after you retrieved your data s
  Imports a read only copy of an existing {{site.data.keyword.cis_full_notm}} custom pages resource. For more information, about custom page, refer to [CIS custom page](/docs/cis?topic=cis-custom-page).
  {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-custom-pages-sample}
 
 ```
@@ -226,7 +226,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an {{site.data.keyword.cis_full_notm}} domain name service record. For more information, about DNS records, refer to [Managing DNS records](/docs/dns-svcs?topic=dns-svcs-managing-dns-records). 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-dns-record-sample}
 
 The following example retrieves information about an {{site.data.keyword.cis_full_notm}} domain. 
@@ -280,7 +280,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an {{site.data.keyword.cis_full_notm}} domain. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-domain-sample}
 
 The following example retrieves information about an {{site.data.keyword.cis_full_notm}} domain. 
@@ -328,7 +328,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an {{site.data.keyword.cis_full_notm}} edge function actions resource.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-edge-functions-actions-dssample}
 
 The following example retrieves information about an {{site.data.keyword.cis_full_notm}} edge function actions resource.
@@ -377,7 +377,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an {{site.data.keyword.cis_full_notm}} edge function triggers resource.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-edge-functions-triggers-dssample}
 
 The following example retrieves information about an {{site.data.keyword.cis_full_notm}} edge function actions resource.
@@ -420,7 +420,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieves an existing {{site.data.keyword.cis_full_notm}} instance. For more information, see [firewall rule actions](/docs/cis?topic=cis-actions).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-firewall-dssample}
 
 ```
@@ -430,7 +430,7 @@ data "ibm_cis_firewall" "lockdown" {
   firewall_type = "lockdowns"
 }
 ```
-IBM IBM Cloud Provider plug-in for Terraform provider supports only lock down rules.
+IBM Terraform provider supports only lock down rules.
 {: note}
 
 ### Input parameters
@@ -487,7 +487,7 @@ Exactly one of `lockdown`, `access_rule`, and `ua_rule` is allowed for the firew
 Retrieve information 24 X 7 availability and performance of your application by using the {{site.data.keyword.cis_full_notm}} global load balancers. For more information, refer to [CIS global loadbalancer](/docs/cis?topic=cis-configure-glb).Import the details of an existing {{site.data.keyword.cis_full_notm}} global load balancers as a read-only data source. You can then reference the fields of the data source in other resources within the same configuration using interpolation syntax.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-global-lb-dssample}
 
 The following example retrieves information about an {{site.data.keyword.cis_full_notm}} global load balancer resource.
@@ -543,7 +543,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an {{site.data.keyword.cis_full_notm}} global load balancer health monitor or check as a read-only data source.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-healthchecks-sample}
 
 The following example retrieves information about an {{site.data.keyword.cis_full_notm}} domain. 
@@ -594,10 +594,10 @@ Review the output parameters that you can access after you retrieved your data s
 ## `ibm_cis_ip_addresses`
 {: #cis_ip}
 
-Import a list of all IP addresses that the CIS proxy uses. The CIS proxy uses these IP addresses for both `client-to-proxy` and `proxy-to-origin` communication. You can reference the IP addresses by using IBM Cloud Provider plug-in for Terraform interpolation syntax to configure and allowed IP addresses in firewalls, network ACLs, and security groups. 
+Import a list of all IP addresses that the CIS proxy uses. The CIS proxy uses these IP addresses for both `client-to-proxy` and `proxy-to-origin` communication. You can reference the IP addresses by using Terraform interpolation syntax to configure and allowed IP addresses in firewalls, network ACLs, and security groups. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-ip-sample}
 
 The following example retrieves information about IP addresses that {{site.data.keyword.cis_full_notm}} uses for name servers. 
@@ -630,7 +630,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieves an {{site.data.keyword.cis_full_notm}} origin pool resource. This provides a pool of origins that is used by an {{site.data.keyword.cis_full_notm}} Global Load Balancer. This resource is associated with an {{site.data.keyword.cis_full_notm}} instance and optionally an {{site.data.keyword.cis_full_notm}} Health check monitor resource.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #origin-pools-sample}
 
 ```
@@ -685,7 +685,7 @@ Retrieve information for a rate limiting rule of an {{site.data.keyword.cis_full
 To retrieve information about a rate limiting rule, you must have the enterprise plan for an {{site.data.keyword.cis_full_notm}}. 
 {: note}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #rate-limit-sample}
 
 ```
@@ -750,7 +750,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve an information of an {{site.data.keyword.cis_full_notm}} page rules resource. For more information, about {{site.data.keyword.cis_full_notm}} page rules, see [using page rules](/docs/cis?topic=cis-use-page-rules).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-page-rules-dssample}
 
 ```
@@ -863,7 +863,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve an information of an {{site.data.keyword.cis_full_notm}} range applications. For more information, about CIS range application, see [getting started with range](/docs/cis?topic=cis-cis-range).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-range-apps-dssample}
 
 ```
@@ -911,7 +911,7 @@ Review the output parameters that you can access after you retrieved your data s
 Import the details of an existing {{site.data.keyword.cis_full_notm}} WAF rule groups. For more information, about WAF refer to [Web Application Firewall concepts](/docs/cis?topic=cis-waf-q-and-a).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-waf-groups-dssimple}
 
 ```
@@ -956,7 +956,7 @@ Review the output parameters that you can access after you retrieved your data s
 Import the details of an existing {{site.data.keyword.cis_full_notm}} WAF package resource. For more information, about WAF refer to [CIS rule sets](/docs/cis?topic=cis-waf-settings).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-waf-packages-dssimple}
 
 ```
@@ -998,7 +998,7 @@ Review the output parameters that you can access after you retrieved your data s
 Import the details of an existing {{site.data.keyword.cis_full_notm}} WAF rules resource. For more information, see [CIS rule sets](/docs/cis?topic=cis-waf-settings#cis-ruleset-for-waf).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cis-waf-rules-dssimple}
 
 ```

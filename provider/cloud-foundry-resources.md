@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-22"
 
 keywords: terraform provider plugin, terraform cloud foundry, terraform cf resources, terraform cf org, terraform cf space
 
@@ -38,10 +38,10 @@ subcollection: ibm-cloud-provider-for-terraform
 # Cloud Foundry resources
 {: #cloud-foundry-resources}
 
-Review the [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started) resources that you can create, modify, or delete. You can reference the output parameters for each resource in other resources or data sources by using [IBM Cloud Provider plug-in for Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+Review the [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started) resources that you can create, modify, or delete. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 {: shortdesc}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_app`
@@ -50,7 +50,7 @@ Before you start working with your resource, make sure to review the [required p
 Create, update, or delete a Cloud Foundry app. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cf-app-sample}
 
 The following example creates the `my-app` Node.js Cloud Foundry app. 
@@ -91,7 +91,7 @@ Review the input parameters that you can specify for your resource.
 |`service_instance_guid`|Set|Optional| The GUID of the service instance that you want to bind to the app.|
 |`wait_time_minutes`|Integer|Optional| The duration, expressed in minutes, to wait for the app to restage or start. The default value is `20`. A value of `0` means that there is no wait period.|
 |`app_path`|String| Required| The path to the compressed file of the app. The compressed file must contain all the app files without subdirectories. To create the compressed file, go to the directory where your app files are and run `zip -r myapplication.zip *`.|
-|`app_version`	|String|Optional|The version of the app. If you make changes to the content in the app compressed file specified by _app_path_, IBM Cloud Provider plug-in for Terraform can't detect the changes. You can let IBM Cloud Provider plug-in for Terraform know that your file content has changed by either changing the application compressed file name or by using this argument to indicate the version of the file.|
+|`app_version`	|String|Optional|The version of the app. If you make changes to the content in the app compressed file specified by _app_path_, Terraform can't detect the changes. You can let Terraform know that your file content has changed by either changing the application compressed file name or by using this argument to indicate the version of the file.|
 |`health_check_http_endpoint`|String|Optional|The endpoint that you want to use to determine if the app is healthy. |
 |`health_check_type`|String| Optional|The type of health check that you want to perform. Supported values are `port`, and `process`. The default values is `port`. |
 |`health_check_timeout`|Integer|Optional| The number of seconds to wait for the health check to respond during the start of your app before the health check is considered failed. |
@@ -118,7 +118,7 @@ Review the output parameters that you can access after your resource is created.
 Create, update, or delete a private domain for your Cloud Foundry app. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cf-app-private-domain-sample}
 
 The following example creates the `example.com` private domain. 
@@ -169,7 +169,7 @@ Review the output parameters that you can access after your resource is created.
 Create, update, or delete a shared domain for your Cloud Foundry app. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cf-shared-domain-sample}
 
 The following example creates the `example.com` shared domain. 
@@ -214,7 +214,7 @@ Review the output parameters that you can access after your resource is created.
 Create, update, or delete a route for your Cloud Foundry app. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cf-route-sample}
 
 The following example creates a route for the `example.com` shared domain. 
@@ -272,7 +272,7 @@ Review the output parameters that you can access after your resource is created.
 Create, update, or delete a Cloud Foundry organization. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cf-org-sample}
 
 The following example create the `myorg` Cloud Foundry organization and assigns users access to the organization. 
@@ -307,7 +307,7 @@ Review the input parameters that you can specify for your resource.
 {: caption="Table. Available input parameters" caption-side="top"}
 
 
-By default, the user that creates this resource is assigned the **Manager** Cloud Foundry role. IBM Cloud Provider plug-in for Terraform returns an error when you assign the **Manager** or Cloud Foundry user role to yourself. User information is not persisted in the IBM Cloud Provider plug-in for Terraform state file to avoid any incorrect information.
+By default, the user that creates this resource is assigned the **Manager** Cloud Foundry role. Terraform returns an error when you assign the **Manager** or Cloud Foundry user role to yourself. User information is not persisted in the Terraform state file to avoid any incorrect information.
 {: important}
 
 ### Output parameters
@@ -338,7 +338,7 @@ terraform import ibm_org.myorg abde-12345
 Create, update, or delete a Cloud Foundry service instance. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cf-service-sample}
 
 The following example creates the `speech_to_text` Cloud Foundry service instance. 
@@ -397,7 +397,7 @@ Review the output parameters that you can access after your resource is created.
 Create, update, or delete a service key for your Cloud Foundry service instance. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cf-service-key-sample}
 
 The following example creates the `mycloudantkey` service key. 
@@ -446,7 +446,7 @@ Review the output parameters that you can access after your resource is created.
 Create, update, or delete a Cloud Foundry space. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cf-space-sample}
 
 The following example creates the `myspace` Cloud Foundry space. 

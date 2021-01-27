@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-22"
 
 keywords: terraform provider plugin, terraform classic infrastructure, terraform classic, terraform softlayer, terraform sl, terraform vsi, terraform Bare Metal server
 
@@ -38,10 +38,10 @@ subcollection: ibm-cloud-provider-for-terraform
 # Classic infrastructure resources
 {: #infrastructure-resources}
 
-Review the Classic infrastructure resources that you can create, modify, or delete. You can reference the output parameters for each resource in other resources or data sources by using [IBM Cloud Provider plug-in for Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+Review the Classic infrastructure resources that you can create, modify, or delete. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 {: shortdesc}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
  
 ## `ibm_cdn`
@@ -50,7 +50,7 @@ Before you start working with your resource, make sure to review the [required p
 Create, or delete a CDN mapping. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #cdn-sample}
 
 ```
@@ -111,7 +111,7 @@ Review the output parameters that you can access after your resource is created.
 Create, update, or delete autoscaling groups. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #autoscale-group-sample}
 
 In the following example, you can create an auto scaling group that uses a Debian image. 
@@ -193,7 +193,7 @@ Review the output parameters that you can access after your resource is created.
 Create, update, or delete a policy for an autoscaling group.  
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #autoscale-policy-sample}
 
 In the following example, you can create an autoscaling policy.
@@ -264,11 +264,11 @@ Review the output parameters that you can access after your resource is created.
 Provides a Bare Metal resource. This allows Bare Metal servers to be created, updated, and deleted. This resource supports both monthly Bare Metal servers and hourly Bare Metal servers. For more information, on Bare Metal severs, refer [IBM Cloud Bare Metal server page](https://www.ibm.com/cloud/bare-metal-servers).
 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #bm-sample}
 
 #### Hourly Bare Metal server
-When the `ibm_compute_bare_metal` resource definition has a `fixed_config_preset` attribute, IBM Cloud Provider plug-in for Terraform creates an hourly Bare Metal server. The monthly bare metal server resource provides options to configure process, memory, network, disk, and RAID. You can also assign VLANs and subnets for the target monthly bare metal server.  Hardware specifications are predefined in the `fixed_config_preset` attribute and cannot be modified. To configure the monthly bare metal server, you must provide more attributes such as `package_key_name`, `proecss_key_name`, `disk_key_names`, and `os_key_name`. The following example shows you how to create a new hourly Bare Metal server.
+When the `ibm_compute_bare_metal` resource definition has a `fixed_config_preset` attribute, Terraform creates an hourly Bare Metal server. The monthly bare metal server resource provides options to configure process, memory, network, disk, and RAID. You can also assign VLANs and subnets for the target monthly bare metal server.  Hardware specifications are predefined in the `fixed_config_preset` attribute and cannot be modified. To configure the monthly bare metal server, you must provide more attributes such as `package_key_name`, `proecss_key_name`, `disk_key_names`, and `os_key_name`. The following example shows you how to create a new hourly Bare Metal server.
 {: shortdesc}
 
 ##### Example of an hourly Bare Metal server
@@ -293,7 +293,7 @@ resource "ibm_compute_bare_metal" "hourly-bm1" {
 ```
 
 #### Monthly Bare Metal server
-When the `fixed_config_preset` attribute is not configured, IBM Cloud Provider plug-in for Terraform creates a monthly Bare Metal server resource. The monthly Bare Metal server resource provides options to configure process, memory, network, disk, and RAID. You can also assign VLANs and subnets for the target monthly Bare Metal server. To configure the monthly Bare Metal server, you must provide more attributes such as `package_key_name`, `proecss_key_name`, `disk_key_names`, and `os_key_name`. The following example shows you how to create a new monthly Bare Metal server.
+When the `fixed_config_preset` attribute is not configured, Terraform creates a monthly Bare Metal server resource. The monthly Bare Metal server resource provides options to configure process, memory, network, disk, and RAID. You can also assign VLANs and subnets for the target monthly Bare Metal server. To configure the monthly Bare Metal server, you must provide more attributes such as `package_key_name`, `proecss_key_name`, `disk_key_names`, and `os_key_name`. The following example shows you how to create a new monthly Bare Metal server.
 
 ##### Example of a monthly Bare Metal server
 ```
@@ -339,7 +339,7 @@ resource "ibm_compute_bare_metal" "monthly_bm1" {
 }
 ```
 
-**Note**: Monthly Bare Metal servers do not support `immediate cancellation`. When IBM Cloud Provider plug-in for Terraform deletes the monthly Bare Metal server, the `anniversary date cancellation` option is used.
+**Note**: Monthly Bare Metal servers do not support `immediate cancellation`. When Terraform deletes the monthly Bare Metal server, the `anniversary date cancellation` option is used.
 
 #### Create a Bare Metal server that uses quote ID
 If you already have a quote ID for the Bare Metal server, you can create a new Bare Metal server with the quote ID. The following example shows you how to create a new Bare Metal server with a quote ID.
@@ -448,7 +448,7 @@ Review the input parameters that you can specify for your resource.
 |`private_vlan_id`|Integer|Optional|The private VLAN to be used for the private network interface of the instance. You can find accepted values in the [VLAN network](https://cloud.ibm.com/classic/network/vlans). Click the VLAN that you want and notes the ID in the resulting URL.|
 |`public_subnet`|String|Optional|The public subnet to be used for the public network interface of the instance. Accepted values are primary public networks. You can find accepted values in the [subnets Docs](https://cloud.ibm.com/classic/network/subnets).|
 |`private_subnet`|String|Optional| The private subnet to be used for the private network interface of the instance. Accepted values are primary private networks. You can find accepted values in the [subnets Docs](https://cloud.ibm.com/classic/network/subnets).|
-|`quote_id`|String|Optional|When you define `quote_id`, IBM Cloud Provider plug-in for Terraform uses specifications in the quote to create a Bare Metal server. You can find the quote ID in the [IBM Cloud infrastructure customer portal](https://cloud.ibm.com/classic) by navigating to **Account > Sales > Quotes**.|
+|`quote_id`|String|Optional|When you define `quote_id`, Terraform uses specifications in the quote to create a Bare Metal server. You can find the quote ID in the [IBM Cloud infrastructure customer portal](https://cloud.ibm.com/classic) by navigating to **Account > Sales > Quotes**.|
 {: caption="Table. Available input parameters" caption-side="top"}
 
 ### Output parameters
@@ -477,7 +477,7 @@ Provides a Dedicated Host resource. This allows dedicated host to be created, up
 
 For more information, refer to the [{{site.data.keyword.cloud_notm}} API Docs](http://sldn.softlayer.com/reference/datatypes/SoftLayer_Virtual_DedicatedHost).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #dedicated-host-sample}
 
 In the following example, you can create a dedicated host:
@@ -528,7 +528,7 @@ The following attributes are exported:
 
 Create, update, or delete a monitor for your virtual server instance. With monitors, you can verify the health of your virtual server instance by sending ping requests to the instance and checking the responsiveness of your instance. For more information, see [Viewing and managing monitors](/docs/virtual-servers?topic=virtual-servers-monitoring-intro).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #compute-monitor-sample}
 
 In the following example, you can create a monitor:
@@ -580,7 +580,7 @@ The following attributes are exported:
 
 Create, update, or delete a placement group for your virtual server instance. With placement groups, you can control the physical host your virtual server instance is deployed to. For more information, see [Placement groups](/docs/virtual-servers?topic=virtual-servers-placement-groups). 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #plmt-group-sample}
 
 ```
@@ -634,7 +634,7 @@ Provides provisioning hooks that contains all the information that is needed to 
 
 For more information, see the [IBM Cloud Classic Infrastructure (SoftLayer)  API Docs](http://sldn.softlayer.com/reference/datatypes/SoftLayer_Provisioning_Hook).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #provision-hook-sample}
 
 ```
@@ -676,7 +676,7 @@ Provide an SSH key resource. This allows SSH keys to be created, updated, and de
 
 For more information, see the [IBM Cloud Classic Infrastructure (SoftLayer)  API Docs](http://sldn.softlayer.com/reference/datatypes/SoftLayer_Security_Ssh_Key).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #ssh-key-sample}
 
 ```
@@ -721,7 +721,7 @@ Provides an SSL certificate resource. This allows SSL certificates to be created
 
 For more information, see the [IBM Cloud Classic Infrastructure (SoftLayer) security certificates Docs](http://sldn.softlayer.com/reference/datatypes/SoftLayer_Security_Certificate).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #ssl-compute-cert-sample}
 
 In the following example, you can use a certificate on file:
@@ -795,7 +795,7 @@ To access the SoftLayer API, the user can log in with the username and API key. 
 
 If the {{site.data.keyword.cloud_notm}} API [`getBlueIdAuthenticationRequiredFlag`](https://api.softlayer.com/rest/v3/SoftLayer_Account/getBlueIdAuthenticationRequiredFlag) returns `false`, the account is a local account.
 
-#### Sample IBM Cloud Provider plug-in for Terraform code
+#### Sample Terraform code
 {: #compute-user-sample}
 
 The following example shows how to use this resource with SoftLayer accounts:
@@ -886,7 +886,7 @@ The following arguments are supported:
 |`has_api_key`|(Optional, boolean) When the value is `true`, a SoftLayer API key is created for the user. The key is returned in the `api_key` attribute. When the value is `false`, any existing SoftLayer API keys for the user are deleted. The default value is `false`.|
 |`last_name`|(Required, string) The user's last name.|
 |`username`|(Required for SoftLayer accounts, optional for IBMid accounts, string) A unique name to identify a user globally across all SoftLayer login. The username is also the user login. Once a username is created, it cannot be changed. You must define a username when the account is a SoftLayer account. The user name is generated by SoftLayer when the account is an IBMid account. For example, if an IBMid had an account number of `1234567` and an email address (IBMid) of `test@example.com`, then SoftLayer would generate `1234567_test@example.com` as the username. This argument is optional for an IBMid account.|
-|`password`|(Required for SoftLayer accounts, string) The initial password for the user account. The password is hashed and encoded before it is stored in the IBM Cloud Provider plug-in for Terraform state file. For an IBMid account, the password argument is ignored. For a SoftLayer account, the password must conform to SoftLayer's password policies to avoid failures.  Valid passwords must meet the following rules: <ul><li>Be 8 to 20 characters in length.</li><li>Have a combination of uppercase and lowercase characters. </li><li>Contain at least one number. </li><li>Contain at least one of the following special characters: <code>_</code>, <code>-</code>, <code>&#124;</code>, <code>@</code>, <code>.</code>, <code>,</code>, <code>?</code>, <code>/</code>, <code>!</code>, <code>~</code>, <code>#</code>, <code>$</code>, <code>%</code>, <code>^</code>, <code>&</code>, <code>*</code>, <code>(</code>, <code>)</code>, <code>{</code>, <code>}</code>, <code>[</code>, <code>]</code>, <code>=</code>.|
+|`password`|(Required for SoftLayer accounts, string) The initial password for the user account. The password is hashed and encoded before it is stored in the Terraform state file. For an IBMid account, the password argument is ignored. For a SoftLayer account, the password must conform to SoftLayer's password policies to avoid failures.  Valid passwords must meet the following rules: <ul><li>Be 8 to 20 characters in length.</li><li>Have a combination of uppercase and lowercase characters. </li><li>Contain at least one number. </li><li>Contain at least one of the following special characters: <code>_</code>, <code>-</code>, <code>&#124;</code>, <code>@</code>, <code>.</code>, <code>,</code>, <code>?</code>, <code>/</code>, <code>!</code>, <code>~</code>, <code>#</code>, <code>$</code>, <code>%</code>, <code>^</code>, <code>&</code>, <code>*</code>, <code>(</code>, <code>)</code>, <code>{</code>, <code>}</code>, <code>[</code>, <code>]</code>, <code>=</code>.|
 |`permissions`|(Optional, string) Permissions assigned to this user. This is a set of zero or more string values. See the [{{site.data.keyword.cloud_notm}} API Docs for user permissions](https://sldn.softlayer.com/reference/datatypes/SoftLayer_User_Customer_CustomerPermission_Permission).|
 |`state`|(Required, string) The state of a user's street address.|
 |`timezone`|(Required, string) The user's time zone as a short name value (e.g., "EST"). For accepted values, see the [{{site.data.keyword.cloud_notm}} API Docs for time zones](http://sldn.softlayer.com/reference/datatypes/SoftLayer_Locale_Timezone).|
@@ -923,7 +923,7 @@ For more information, see the [IBM Cloud Classic Infrastructure API Docs](http:/
 
 **NOTE**: Update is not supported when the `bulk_vms` parameter is used.
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vm-sample}
 
 In the following example, you can create a VM instance by using a Debian image:
@@ -1159,7 +1159,7 @@ Provides a single DNS domain managed on IBM Cloud Classic Infrastructure (SoftLa
 Individual records, such as `A`, `AAAA`, `CTYPE`, and `MX` records, are stored in the domain's associated resource records by using the `ibm_dns_record` resource.
 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #dns-domain-sample}
 
 ```
@@ -1201,7 +1201,7 @@ Configures the (custom) name servers associated with a DNS domain registration m
 This resource is typically used in conjunction with {{site.data.keyword.cis_full_notm}} to enable DNS services for the domain to be managed via {{site.data.keyword.cis_full_notm}}. All further configuration of the domain is then performed by using the Cloud Internet Services resource instances. To transfer management control, the IBM Cloud DNS domain registration is updated with the Internet Services specific name servers. This step is required before the domain in Cloud Internet Services becomes active and start serving web traffic. Using interpolation syntax, the computed name servers of the CIS resource are passed into this resource. 
 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #dns-register-sample}
 
 ```
@@ -1261,7 +1261,7 @@ The following attributes are exported:
 
 The `ibm_dns_secondary` resource represents a single secondary DNS zone managed on SoftLayer. Each record created within the secondary DNS service defines which zone is transferred, what server it is transferred from, and the frequency that zone transfers occur at. Zone transfers are performed automatically based on the transfer frequency set on the secondary DNS record.
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #dns-second-sample}
 
 ```
@@ -1307,7 +1307,7 @@ Provides a single DNS reverse record managed on IBM Cloud Classic Infrastructure
 
 The IBM Cloud Classic Infrastructure (SoftLayer) object  [SoftLayer_Dns_Domain_ResourceRecord](https://sldn.softlayer.com/reference/datatypes/SoftLayer_Dns_Domain_ResourceRecord) is used for most create-retrieve-update-delete (`CRUD`) operations.
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #dns-rev-rec-sample}
 ```
 resource "ibm_dns_reverse_record" "testreverserecord" {
@@ -1351,7 +1351,7 @@ The IBM Cloud Classic Infrastructure (SoftLayer) object  [SoftLayer_Dns_Domain_R
 
 The SOA and NS records are automatically created by IBM Cloud Classic Infrastructure (SoftLayer) when the domain is created, you don't need to create those manually.
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #dns-record-sample}
 
 #### `A` Record
@@ -1565,7 +1565,7 @@ You can order or find firewalls in the IBM Cloud infrastructure customer portal 
 
 For an overview of supported firewalls, see [Exploring firewalls](/docs/hardware-firewall-dedicated?topic=fortigate-10g-exploring-firewalls).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #firewall-sample}
 
 ```
@@ -1617,7 +1617,7 @@ Create a firewall with multiple VLANs.
 
 For more information, see the [IBM Cloud (SoftLayer) multi VLAN firewall Request Docs](https://sldn.softlayer.com/reference/datatypes/SoftLayer_Container_Product_Order_Network_Protection_Firewall_Dedicated/).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #multivlan-firewall-sample}
 
 In the following example, you can create a firewall with multiple VLANs:
@@ -1674,9 +1674,9 @@ Provides rules for firewall resources in IBM. One rule resource is allowed per f
 
 When a rules resource is created, it cannot be deleted. IBM does not allow entire rule deletion.
 
-Firewalls should have at least one rule. If IBM Cloud Provider plug-in for Terraform destroys the rules resources, _permit from any to any with `TCP`, `UDP`, `ICMP`, `GRE`, `PPTP`, `ESP`, and `HA_` rule to be configured.
+Firewalls should have at least one rule. If Terraform destroys the rules resources, _permit from any to any with `TCP`, `UDP`, `ICMP`, `GRE`, `PPTP`, `ESP`, and `HA_` rule to be configured.
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #firewall-policy-sample}
 
 ```
@@ -1745,7 +1745,7 @@ Provides a firewall in IBM. One firewall protects one public VLAN and provides i
 
 For more information, about how to configure a firewall, see the [docs](/docs/hardware-firewall-shared?topic=hardware-firewall-shared-about-hardware-firewall-shared-).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #shared-fw-sample}
 
 ```
@@ -1784,7 +1784,7 @@ The following attributes are exported:
 Create, update, or delete an IPSec VPN resource.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #ipsec-vpn-sample}
 
 The following example creates an IPSec VPN resource. 
@@ -1837,7 +1837,7 @@ Review the output parameters that you can access after your resource is created.
 
 Provides a resource for local load balancers. This allows local load balancers to be created, updated, and deleted.
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #lb-sample}
 
 In the following example, you can create a local load balancer:
@@ -1907,7 +1907,7 @@ Provides a resource for a load balancer as a service. This allows a load balance
 
 Cloud load balancer creation takes 5 to 10 minutes. Destroy can take up to 30 minutes. Cloud Load Balancer does not support customization of acceptable response codes. Only the range 2xx is considered healthy. Redirects in the range 3xx are considered unhealthy. 
  
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #lbaas-sample}
 
 ```
@@ -1992,7 +1992,7 @@ The following attributes are exported:
 
 Provides a resource for the health monitors of IBM LBaaS. This allows you to update a health monitor configuration of the load balancer. Health monitors are created and deleted by the creation and deletion of LBaaS protocols.
  
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #health-monitor-sample}
 
 ```
@@ -2081,7 +2081,7 @@ Provides a resource for attaching the server instance to IBM Cloud Load Balancer
 
 
  
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #instance-attachment-sample}
 
 ```
@@ -2157,7 +2157,7 @@ Provides a resource for local load balancer services. This allows local load bal
 
 For more information, see the [IBM Cloud Classic Infrastructure (SoftLayer)  API Docs](http://sldn.softlayer.com/reference/datatypes/SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #lb-service-sample}
 
 In the following example, you can create a local load balancer service:
@@ -2200,7 +2200,7 @@ Provides a resource for local load balancer service groups. This allows local lo
 
 For more information, see the [IBM Cloud Classic Infrastructure (SoftLayer)  API Docs](http://sldn.softlayer.com/reference/datatypes/SoftLayer_Network_Application_Delivery_Controller_LoadBalancer_Service_Group).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #service-group-sample}
 
 In the following example, you can create a local load balancer service group:
@@ -2258,7 +2258,7 @@ You can also use the following REST URL to get a listing of VPX choices along wi
 https://<userName>:<apiKey>@api.softlayer.com/rest/v3/SoftLayer_Product_Package/192/getItems.json?objectMask=id;capacity;description;units;keyName;prices.id;prices.categories.id;prices.categories.name
 ```
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #lb-vpx-sample}
 
 Review the [IBM Cloud Classic Infrastructure  Docs](http://sldn.softlayer.com/reference/datatypes/SoftLayer_Network_Application_Delivery_Controller) for more information.
@@ -2317,11 +2317,11 @@ The following attributes are exported:
 
 Configure a high availability (HA) pair with two `NetscalerVPX` devices. The two `NetscalerVPXs` must be version 10.5 and located in the same subnet. A primary `NetscalerVPX` provides load-balancing services in active mode, and a secondary `NetscalerVPX` provides load-balancing services when the primary `NetscalerVPX` fails. For more information, refer to the  [Citrix support Docs  ](https://support.citrix.com/article/CTX116748){: external} and the [Knowledge layer Netscaler Docs](/docs/citrix-netscaler-vpx?topic=citrix-netscaler-vpx-setting-up-citrix-netscaler-vpx-for-high-availability-ha-).
 
-**NOTE**: This resource only supports Netscaler VPX 10.5. The [NITRO API](https://docs.citrix.com/en-us/netscaler/11/nitro-api.html) is used to configure HA. IBM Cloud Provider plug-in for Terraform can only access the NITRO API in the IBM Cloud Classic Infrastructure (SoftLayer) private network, so connect to the private network when running IBM Cloud Provider plug-in for Terraform. You can also use the [SSL VPN](https://www.ibm.com/cloud/vpn-access){: external} to access a private network connection.
+**NOTE**: This resource only supports Netscaler VPX 10.5. The [NITRO API](https://docs.citrix.com/en-us/netscaler/11/nitro-api.html) is used to configure HA. Terraform can only access the NITRO API in the IBM Cloud Classic Infrastructure (SoftLayer) private network, so connect to the private network when running Terraform. You can also use the [SSL VPN](https://www.ibm.com/cloud/vpn-access){: external} to access a private network connection.
 
-The two `NetscalerVPXs` use the same password in HA mode. When you create this resource, IBM Cloud Provider plug-in for Terraform changes the password of the secondary Netscaler VPX to the password of the primary Netscaler VPX. When you destroy this resource, IBM Cloud Provider plug-in for Terraform restores the original password of the secondary Netscaler VPX.
+The two `NetscalerVPXs` use the same password in HA mode. When you create this resource, Terraform changes the password of the secondary Netscaler VPX to the password of the primary Netscaler VPX. When you destroy this resource, Terraform restores the original password of the secondary Netscaler VPX.
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #lb-vpx-ha-sample}
 
 ```
@@ -2388,9 +2388,9 @@ The following attributes are exported:
 
 Provides a resource for VPX load balancer services. This allows VPX load balancer services to be created, updated, and deleted. For more information, see the [IBM Cloud Classic Infrastructure (SoftLayer)  API Docs](http://sldn.softlayer.com/reference/datatypes/SoftLayer_Network_LoadBalancer_Service).  
 
-**NOTE**: If you use Netscaler VPX 10.5, IBM Cloud Provider plug-in for Terraform uses Netscaler's [NITRO REST API](https://docs.citrix.com/en-us/netscaler/11/nitro-api.html) to manage the resource.  IBM Cloud Provider plug-in for Terraform can only access the NITRO API in the IBM Cloud Classic Infrastructure (SoftLayer) private network, so connect to the private network when running IBM Cloud Provider plug-in for Terraform. You can also use the [SSL VPN](https://www.ibm.com/cloud/vpn-access){: external} to access a private network connection.
+**NOTE**: If you use Netscaler VPX 10.5, Terraform uses Netscaler's [NITRO REST API](https://docs.citrix.com/en-us/netscaler/11/nitro-api.html) to manage the resource.  Terraform can only access the NITRO API in the IBM Cloud Classic Infrastructure (SoftLayer) private network, so connect to the private network when running Terraform. You can also use the [SSL VPN](https://www.ibm.com/cloud/vpn-access){: external} to access a private network connection.
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpx-svc-sample}
 
 In the following example, you can create a VPX load balancer:
@@ -2444,9 +2444,9 @@ The following attributes are exported:
 
 Provides a resource for VPX load balancer virtual IP addresses. This allows VPX load balancer virtual IP addresses to be created, updated, and deleted.  
 
-**NOTE**: If you use Netscaler VPX 10.5, IBM Cloud Provider plug-in for Terraform uses Netscaler's [NITRO REST API](https://docs.citrix.com/en-us/netscaler/11/nitro-api.html) to manage the resource.  IBM Cloud Provider plug-in for Terraform can only access the NITRO API in the IBM Cloud Classic Infrastructure (SoftLayer) private network, so connect to the private network when running IBM Cloud Provider plug-in for Terraform. You can also use the [SSL VPN](https://www.ibm.com/cloud/vpn-access){: external} to access a private network connection.
+**NOTE**: If you use Netscaler VPX 10.5, Terraform uses Netscaler's [NITRO REST API](https://docs.citrix.com/en-us/netscaler/11/nitro-api.html) to manage the resource.  Terraform can only access the NITRO API in the IBM Cloud Classic Infrastructure (SoftLayer) private network, so connect to the private network when running Terraform. You can also use the [SSL VPN](https://www.ibm.com/cloud/vpn-access){: external} to access a private network connection.
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #lb-vpx-vip-sample}
 
 The following example configuration supports Netscaler VPX 10.1 and 10.5:
@@ -2558,7 +2558,7 @@ For more information, see the [IBM Cloud Classic Infrastructure (SoftLayer)  API
 
 For more information, about getting started, see the [IBM Virtual Router Appliance Docs](/docs/gateway-appliance?topic=gateway-appliance-getting-started).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #network-gateway-sample}
 
 #### Stand-alone configuration
@@ -2712,7 +2712,7 @@ For more information, see the [IBM Cloud Classic Infrastructure (SoftLayer)  API
 
 For more information, about getting started, see the [IBM Virtual Router Appliance Docs](/docs/gateway-appliance?topic=gateway-appliance-getting-started).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #network-vlan-associate-sample}
 
 ```
@@ -2776,7 +2776,7 @@ Provide a resource to attach security group to a network interface. This allows 
 
 For more information, see the [IBM Cloud Classic Infrastructure  (SoftLayer)  API Docs](http://sldn.softlayer.com/reference/datatypes/SoftLayer_Virtual_Network_SecurityGroup_NetworkComponentBinding).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #network-sg-attachment-sample}
 
 ```
@@ -2830,7 +2830,7 @@ Provides a public IP resource to route between servers. This allows public IP's 
 
 For more information, see the [IBM Cloud Classic Infrastructure (SoftLayer)  API Docs](http://sldn.softlayer.com/reference/services/SoftLayer_Network_Subnet_IpAddress_Global).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #public-ip-sample}
 
 ```
@@ -2882,13 +2882,13 @@ ibm_network_public_ip provides the following [Timeouts](https://www.terraform.io
 
 Provides a VLAN resource. This allows public and private VLANs to be created, updated, and canceled.
 
-If you have a default SoftLayer account, you do not have permission to create a VLAN by using the SoftLayer API. If you want to create a VLAN with IBM Cloud Provider plug-in for Terraform, you must get the required permissions in advance. Contact a SoftLayer sales person or open a ticket.
+If you have a default SoftLayer account, you do not have permission to create a VLAN by using the SoftLayer API. If you want to create a VLAN with Terraform, you must get the required permissions in advance. Contact a SoftLayer sales person or open a ticket.
 
-You can manage existing VLANs with IBM Cloud Provider plug-in for Terraform by using the `terraform import` command. The command requires the VLAN IDs, which you can find in the [IBM Cloud infrastructure customer portal](https://cloud.ibm.com/classic/network/vlans). After the VLAN IDs are imported into SoftLayer, the IDs provide useful information such as subnets and child resource counts. When you run the `terraform destroy` command, the billing item for the VLAN is deleted. The VLAN remains in SoftLayer until you delete remaining resources on the VLAN, such as virtual guests, secondary subnets, and firewalls.
+You can manage existing VLANs with Terraform by using the `terraform import` command. The command requires the VLAN IDs, which you can find in the [IBM Cloud infrastructure customer portal](https://cloud.ibm.com/classic/network/vlans). After the VLAN IDs are imported into SoftLayer, the IDs provide useful information such as subnets and child resource counts. When you run the `terraform destroy` command, the billing item for the VLAN is deleted. The VLAN remains in SoftLayer until you delete remaining resources on the VLAN, such as virtual guests, secondary subnets, and firewalls.
 
 For more information, refer to the [{{site.data.keyword.cloud_notm}} API Docs](http://sldn.softlayer.com/reference/datatypes/SoftLayer_Network_Vlan).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vlan-sample}
 
 In the following example, you can create a VLAN:
@@ -2961,7 +2961,7 @@ VRF at an IaaS account level can be used as an alternative to VLAN Spanning and 
 
 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vlan-spanning-sample}
 
 ```
@@ -3001,7 +3001,7 @@ Retrieve the account name for an existing Object Storage instance within your IB
 
 Do not use this resource for managing the lifecycle of an Object Storage instance in IBM. For lifecycle management, see the [Swift API](https://docs.openstack.org/api-ref/object-store/) or [Swift resources](https://github.com/TheWeatherCompany/terraform-provider-swift).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #os-account-sample}
 
 ```
@@ -3034,7 +3034,7 @@ Provides a networking security group resource that controls access to the public
 
 For more information, see the [IBM Cloud Classic Infrastructure (SoftLayer)  API Docs](http://sldn.softlayer.com/reference/datatypes/SoftLayer_Network_SecurityGroup).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #sec-group-sample}
 
 ```
@@ -3075,7 +3075,7 @@ Provide a rule for a security group. You can set the IP range to manage incoming
 
 For more information, see the [IBM Cloud Classic Infrastructure (SoftLayer)  API Docs](http://sldn.softlayer.com/reference/datatypes/SoftLayer_Network_SecurityGroup_Rule).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #sec-group-rule-sample}
 
 ```
@@ -3123,7 +3123,7 @@ Provides a block storage resource. This allows iSCSI-based Endurance and Perform
 
 Block storage can be accessed and mounted through a Multipath Input/Output Internet Small Computer System Interface (iSCSI) connection.
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #storage-block-sample}
 
 In the following example, you can create 20G of Endurance block storage with 10G snapshot capacity and 0.25 IOPS/GB.
@@ -3204,7 +3204,7 @@ The following attributes are exported:
 
 Provides an EVault  storage resource. This allows [IBM Cloud Backup](/docs/Backup?topic=Backup-getting-started) storage to be created, updated, and deleted.
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #storage-evault-sample}
 
 In the following example, you can create 20G of EVault storage.
@@ -3268,7 +3268,7 @@ File storage is mounted by using the NFS protocol. For example, a file storage r
 
 See [Mounting File Storage](/docs/FileStorage?topic=FileStorage-mountingLinux) for NFS configuration.
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #storage-file-sample}
 
 In the following example, you can create 20G of Endurance file storage with a 10G snapshot capacity and 0.25 IOPS/GB.
@@ -3381,7 +3381,7 @@ The static IPv4 subnet provides secondary IP addresses for primary IP addresses.
 
 Both the public portable IPv6 subnet and the public static IP only accept `64` as a value for the `capacity` attribute. They provide 2^64 IP addresses. For more detail, refer to [IPv6 address](/docs/subnets?topic=subnets-about-subnets-and-ips).
 
-### Sample IBM Cloud Provider plug-in for Terraform code of portable subnet
+### Sample Terraform code of portable subnet
 {: #subnet-sample}
 The following example creates a private portable subnet which has one available IPv4 address:
 
@@ -3400,7 +3400,7 @@ resource "ibm_subnet" "portable_subnet" {
 }
 ```
 
-Users can use IBM Cloud Provider plug-in for Terraform built-in functions to get IP addresses from `portable subnet`. The following example returns the first usable IP address of the portable subnet `test`.:
+Users can use Terraform built-in functions to get IP addresses from `portable subnet`. The following example returns the first usable IP address of the portable subnet `test`.:
 
 ```
 resource "ibm_subnet" "test" {
@@ -3433,7 +3433,7 @@ resource "ibm_subnet" "static_subnet" {
 }
 ```
 
-Users can use IBM Cloud Provider plug-in for Terraform built-in functions to get IP addresses from `subnet`. The following example returns the first usable IP address in the static subnet `test`:
+Users can use Terraform built-in functions to get IP addresses from `subnet`. The following example returns the first usable IP address in the static subnet `test`:
 
 ```
 resource "ibm_subnet" "test" {
@@ -3499,7 +3499,7 @@ ibm_subnet provides the following [Timeouts](https://www.terraform.io/docs/confi
 
 Provides an SSL certificate resource. This allows SSL certificates to be requested, and delete request for SSL certificates.
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #ssl-cert-sample}
 
 In the following example, you can use a certificate on file:

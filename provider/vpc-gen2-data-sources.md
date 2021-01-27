@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-18"
+lastupdated: "2021-01-22"
 
 keywords: terraform provider plugin, terraform gen 2, terraform gen 2 compute
 
@@ -38,10 +38,10 @@ subcollection: ibm-cloud-provider-for-terraform
 # VPC infrastructure data sources 
 {: #vpc-gen2-data-sources}
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
-You can reference the output parameters for each resource in other resources or data sources by using [IBM Cloud Provider plug-in for Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}.
+You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}.
 {: note}
 
 ## ibm_is_floating_ip
@@ -50,7 +50,7 @@ You can reference the output parameters for each resource in other resources or 
 Retrieve the information about VPC floating IP. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #floating-ip-g2-dssample}
 
 The following example retrieves information about the VPC floating IP.
@@ -97,7 +97,7 @@ Review the output parameters that you can access after you retrieved your data s
 Import the details of an existing {{site.data.keyword.cloud_notm}} infrastructure flow logs as a read only data source.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #ibm-is-flowlogs-sample}
 
 
@@ -141,7 +141,7 @@ Review the output parameters that you can access after you retrieve your data so
 Retrieve information about a virtual server image for Gen 2 compute. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-image-sample}
 
 The following example retrieves information about the `centos-7.x-amd64` image. 
@@ -188,7 +188,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about Gen 2 virtual server images. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-images-sample}
 
 ```
@@ -229,7 +229,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve the details for a Gen 2 {{site.data.keyword.vsi_is_short}} instance.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #instance-sample}
 
 ```
@@ -349,7 +349,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve the details for all Gen 2 {{site.data.keyword.vsi_is_short}} instances in your account.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #instances-sample}
 
 ```
@@ -415,7 +415,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve the details for all Gen 2 {{site.data.keyword.vsi_is_short}} instance group in your account.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #instance-group-sample}
 
 ```
@@ -462,7 +462,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve all the instance group managers information of an instance group.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #instance-group-managers-sample}
 
 In the following example, you can retrieve a list of instance group managers information.
@@ -508,7 +508,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve the policy information of an instance group manager.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #instance-group-manager-policy-sample}
 
 In the following example, you can retrieve a policy information of an instance group manager.
@@ -555,7 +555,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve the details for all Gen 2 {{site.data.keyword.vsi_is_short}} instance group manager policies in your account.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #instance-group-manager-sample}
 
 In the following example, you can retrieve a policy information of an instance group manager.
@@ -601,7 +601,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about a virtual server instance profile. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-instance-profile-sample}
 
 The following example retrieves information about the `bx2-2x8` instance profile. 
@@ -644,7 +644,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about supported virtual server instance profiles. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-instance-profiles-sample}
 
 ```
@@ -682,7 +682,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve the details for a public gateway data source.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #public-gwy-g2-sample}
 
 The following example shows how you can retrieve information about the `us-south` region. 
@@ -741,7 +741,7 @@ Review the output parameters that you can access after you retrieve your data so
 Import the details of an existing IBM VPC Load Balancer as a read only data source.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #ibm-is-lb-sample}
 
 The following example shows how you can retrieve information about the `us-south` region. 
@@ -835,7 +835,7 @@ Review the output parameters that you can access after you retrieve your data so
 Import the details of an existing IBM VPC Load Balancers as a read only data source.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #ibm-is-lbs-sample}
 
 The following example shows how you can declare the data. 
@@ -902,7 +902,7 @@ Review the output parameters that you can access after you retrieve your data so
 Retrieve information of an existing {{site.data.keyword.cloud_notm}} Infrastructure load balancer profiles.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #ibm-is-lb-profiles-sample}
 
 ```
@@ -941,7 +941,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about a VPC Gen 2 Compute region. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-region-sample}
 
 ```
@@ -982,11 +982,11 @@ Review the output parameters that you can access after you retrieved your data s
 ## `ibm_is_security_group`
 {: #sec-group-datasource}
 
-Import the details of a security group as a read-only data source. You can reference the output parameters for each data source by using [IBM Cloud Provider plug-in for Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+Import the details of a security group as a read-only data source. You can reference the output parameters for each data source by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 {: shortdesc}
 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #sec-group-sample}
 
 The following example allows to create a different types of protocol rules `ALL`, `ICMP`, `UDP`, `TCP` and read the security group.
@@ -1085,7 +1085,7 @@ Review the output parameters that are exported.
 Retrieve information about a VPC Gen 2 SSH key. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-ssh-key-sample}
 
 ```
@@ -1128,7 +1128,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about a VPC Gen 2 compute subnet. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-subnet-sample}
 
 ```
@@ -1188,7 +1188,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about all existing VPC subnets in an IBM Cloud account. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-subnets-sample}
 
 ```
@@ -1231,7 +1231,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about all the instance template in an account. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-instance-templates-sample}
 
 The following example, you can fetch information of list of the instance templates VPC gen-2 infrastructure.
@@ -1299,7 +1299,7 @@ Review the output parameters that you can access after you retrieved your data s
 Create, update, or delete a VPC endpoint gateway by using virtual endpoint gateway resource. For more information, about the VPC endpoint gateway, see [Creating an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-endpoint-gwyds-sample}
 
 ```
@@ -1348,7 +1348,7 @@ Review the output parameters that you can access after you retrieved your data s
 Create, update, or delete a VPC endpoint gateway IPs by using virtual endpoint gateway ips resource. For more information, about the VPC endpoint gateways, see [About VPC gateways](/docs/vpc?topic=vpc-about-vpe).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-endpoint-gwy-ipsds-sample}
 
 ```
@@ -1395,7 +1395,7 @@ Review the output parameters that you can access after you retrieved your data s
 Create, update, or delete a VPC endpoint gateways by using virtual endpoint gateways resource. For more information, about the VPC endpoint gateway, see [Creating an endpoint gateway](/docs/vpc?topic=vpc-ordering-endpoint-gateway).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-endpoint-gwysds-sample}
 
 ```
@@ -1440,7 +1440,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about a Gen 2 compute VPC. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-sample}
 
 ```
@@ -1497,7 +1497,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information of an existing {{site.data.keyword.cloud_notm}} infrastructure VPC default routing table. For more information, see [routing tables for VPC](/docs/vpc?topic=vpc-list-routing-tables-for-vpc).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-default-routing-table-dssample}
 
 ```
@@ -1554,7 +1554,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information of an existing {{site.data.keyword.cloud_notm}} infrastructure VPC default routing table. For more information, see [routing tables for VPC](/docs/vpc?topic=vpc-list-routing-tables-for-vpc).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-routing-table-dssample}
 
 ```
@@ -1612,7 +1612,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information of an existing {{site.data.keyword.cloud_notm}} infrastructure VPC default routing tables. For more information, see [routing tables for VPC](/docs/vpc?topic=vpc-list-routing-tables-for-vpc).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-routing-tables-dssample}
 
 ```
@@ -1669,7 +1669,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information of an existing VPN gateways. For more information, see [use a VPC/VPN gateway for secure and private on-premises access](/docs/vpc-on-classic?topic=solution-tutorials-vpc-site2site-vpn).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-gateways-dssample}
 
 ```
@@ -1714,7 +1714,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information of an existing VPN gateway connections. For more information, see [adding connections to a VPN gateway](/docs/vpc?topic=vpc-vpn-adding-connections).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-gateways-connection-dssample}
 
 ```
@@ -1769,7 +1769,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about a Gen 2 compute zone. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-zone-sample}
 
 ```
@@ -1811,7 +1811,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieves information about Gen 2 compute zones. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #vpc-zones-sample}
 
 ```

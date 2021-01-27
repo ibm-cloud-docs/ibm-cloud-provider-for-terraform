@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-22"
 
-keywords: install IBM Cloud Provider plug-in for Terraform cli, set up IBM Cloud Provider plug-in for Terraform cli, ibm cloud provider plugin, IBM Cloud Provider plug-in for Terraform
+keywords: install Terraform cli, set up Terraform cli, ibm cloud provider plugin, Terraform
 
 subcollection: ibm-cloud-provider-for-terraform
 
@@ -37,7 +37,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # Setting up the CLI and preparing your environment
 {: #setup_cli}
 
-Before you can automate your {{site.data.keyword.cloud_notm}} resource provisioning, you must install the IBM Cloud Provider plug-in for Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in.
+Before you can automate your {{site.data.keyword.cloud_notm}} resource provisioning, you must install the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in.
 {: shortdesc}
 
 ## Installing the Terraform on {{site.data.keyword.cloud_notm}} CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in

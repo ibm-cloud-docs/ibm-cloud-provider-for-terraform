@@ -11,6 +11,7 @@ Terraform on IBM Cloud
     
     {: .topicgroup}
     Tutorials
+        [Architecture reference: Highly available, secured, and managed Kubernetes environment](https://github.com/ibm-cloud-architecture/refarch-public-iaas-iks)
         tutorials/clusters.md
         tutorials/install_redhat_openshift.md
         [Tutorial: Deploying a 3-Tier Web App in a Virtual Private Cloud (VPC)](https://github.com/jonghall/ibmcloud-terraform-vpc)
@@ -27,7 +28,7 @@ Terraform on IBM Cloud
     
     {: .navgroup id="reference"}
     {: .topicgroup}
-    IBM Cloud provider for Terraform on IBM Cloud
+    IBM Cloud Provider plug-in for Terraform
          provider/sitemap.md
          provider/version_changelog.md
          
@@ -72,11 +73,7 @@ Terraform on IBM Cloud
          provider/vpc-gen2-resources.md
          provider/vpc-gen2-data-sources.md   
    
-    [Sample Terraform on IBM Cloud templates](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples)
     template_ov.md
-    [Terraform documentation](https://www.terraform.io/docs/)
-    [Terraform CLI reference](https://www.terraform.io/docs/commands/index.html)
-    [Architecture reference: Highly available, secured, and managed Kubernetes environment](https://github.com/ibm-cloud-architecture/refarch-public-iaas-iks)
     {: .navgroup-end}
     
     {: .navgroup id="help"}

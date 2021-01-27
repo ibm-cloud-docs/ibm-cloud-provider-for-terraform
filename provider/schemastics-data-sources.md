@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-22"
 
 keywords: terraform provider plugin, terraform schematics data source, terraform schematics workspace 
 
@@ -38,7 +38,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # Schematics data sources
 {: #schematics-data-sources}
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_schematics_workspace`
@@ -47,7 +47,7 @@ Before you start working with your data source, make sure to review the [require
 Retrieve information about a Schematics workspace. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #schematics-workspace-sample}
 
 The following example retrieves information about the `my-workspace-id` workspace.  
@@ -79,7 +79,7 @@ Review the output parameters that you can access after you retrieved your data s
 |Name|Data type|Description|
 |----|-----------|-------------|
 | `name`|String| The name of the workspace.|
-|`types`|String|The supported types of the IBM Cloud Provider plug-in for Terraform version. |
+|`types`|String|The supported types of the Terraform version. |
 |`status`|String| The status of the workspace.|
 |`is_frozen`|Boolean|If set to **true**, the workspace is frozen and disabled for changes. If set to **false**, the workspace is unfrozen and updates can be made to the workspace.|
 | `is_locked`|Boolean|If set to **true**, the workspace is locked and disabled for changes. If set to **false**, the workspace is unlocked and updates can be made to the workspace.|
@@ -92,10 +92,10 @@ Review the output parameters that you can access after you retrieved your data s
 ## `ibm_schematics_output`
 {: #schematics-output}
 
-Retrieve state information for a Schematics workspace. For detailed information about how to use this data source, see [Accessing IBM Cloud Provider plug-in for Terraform state information across workspaces](/docs/schematics?topic=schematics-remote-state). 
+Retrieve state information for a Schematics workspace. For detailed information about how to use this data source, see [Accessing Terraform state information across workspaces](/docs/schematics?topic=schematics-remote-state). 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #schematics-output-sample}
 
 The following example retrieves information about the `my-workspace-id` workspace.  
@@ -133,17 +133,17 @@ Review the output parameters that you can access after you retrieved your data s
 
 |Name|Data type|Description|
 |----|-----------|-------------|
-|`output_values`|Map|A list of IBM Cloud Provider plug-in for Terraform output values that were exported for the workspace. All map entries are listed as key-value pairs.|
+|`output_values`|Map|A list of Terraform output values that were exported for the workspace. All map entries are listed as key-value pairs.|
 |`output_json`|String|The output values of a Schematics workspace in JSON format. |
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 ## `ibm_schematics_state`
 {: #schematics-state}
 
-Retrieve information about the IBM Cloud Provider plug-in for Terraform state file for a Schematics workspace.
+Retrieve information about the Terraform state file for a Schematics workspace.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #schematics-state-sample}
 
 The following example retrieves information about the `my-workspace-id` workspace.  
@@ -177,6 +177,6 @@ Review the output parameters that you can access after you retrieved your data s
 
 |Name|Data type|Description|
 |----|-----------|-------------|
-|`state_store`|String|The URL to the location where the IBM Cloud Provider plug-in for Terraform state file is stored. |
-|`state_store_json`|String|The JSON representation of the IBM Cloud Provider plug-in for Terraform state file.
+|`state_store`|String|The URL to the location where the Terraform state file is stored. |
+|`state_store_json`|String|The JSON representation of the Terraform state file.
 {: caption="Table 1. Available output parameters" caption-side="top"}

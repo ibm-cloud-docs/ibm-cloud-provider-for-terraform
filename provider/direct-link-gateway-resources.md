@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-06"
+lastupdated: "2021-01-22"
 
 keywords:  terraform provider plugin, direct link gateway, terraform direct link gateway, terraform direct link gateway data sources
 
@@ -39,10 +39,10 @@ subcollection: ibm-cloud-provider-for-terraform
 # Direct Link Gateway resources
 {: #dl-gateway-resource}
 
-Use {{site.data.keyword.cloud_notm}} [Direct Link](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl) to seamlessly connect your on-premises resources to your cloud resources. The speed and reliability of direct link extends your organization’s data center network. You can reference the output parameters for each resource in other resources or data sources by using [IBM Cloud Provider plug-in for Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}.
+Use {{site.data.keyword.cloud_notm}} [Direct Link](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl) to seamlessly connect your on-premises resources to your cloud resources. The speed and reliability of direct link extends your organization’s data center network. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}.
 {: shordesc}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_dl_gateway`
@@ -51,7 +51,7 @@ Before you start working with your resource, make sure to review the [required p
 Create, update, or delete a direct link gateway by using the direct link gateway resource. For more information, see [about Direct Link](/docs/dl?topic=dl-dl-about).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code to create direct link of dedicated type
+### Sample Terraform code to create direct link of dedicated type
 {: #dl-gwy-sample}
 
 In the following example, you can create direct link of dedicated type:
@@ -82,7 +82,7 @@ resource ibm_dl_gateway test_dl_gateway {
 ```
 {: pre}
 
-### Sample IBM Cloud Provider plug-in for Terraform code to create direct link of connect type
+### Sample Terraform code to create direct link of connect type
 {: #dl-gwy-sample2}
 
 In the following example, you can create direct link of connect type:
@@ -153,7 +153,7 @@ Review the output parameters that you can access after your resource is created.
 |`provider_api_managed`|String|Indicates whether gateway changes need to be made via a provider portal.|
 |`operational_status`|String|The gateway operational status. For gateways pending LOA approval, patch operational_status to the appropriate value to approve or reject its LOA. For example, `loa_accepted`.|
 
-The `Operational_status(Gateway operational status)` and `loa_reject_reason(LOA reject reason)` cannot be updated by using IBM Cloud Provider plug-in for Terraform as the status and reason keeps changing with the different workflow actions.
+The `Operational_status(Gateway operational status)` and `loa_reject_reason(LOA reject reason)` cannot be updated by using Terraform as the status and reason keeps changing with the different workflow actions.
 {: note}
 
 ### Import
@@ -174,7 +174,7 @@ terraform import ibm_dl_gateway.example 5ffda12064634723b079acdb018ef308
 Create, update, or delete a direct link gateway virtual connection by using the direct link gateway resource.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #dl-gwy-vc-sample}
 
 ```

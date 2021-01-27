@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-01-12"
+lastupdated: "2021-01-22"
 
 keywords: terraform resources, terraform modules, terraform provider, terraform autodeploy, 
 
@@ -23,10 +23,10 @@ subcollection: ibm-cloud-provider-for-terraform
 {:download: .download}
 {:preview: .preview}
 
-# What's new in IBM Cloud Provider plug-in for Terraform?
+# What's new in Terraform?
 {: #new-in-terraform}
 
-Learn about the latest changes to the IBM Cloud Provider plug-in for Terraform service that are grouped by month.
+Learn about the latest changes to the Terraform service that are grouped by month.
 
 ## 13 January 2021
 {: #13-january-2021}

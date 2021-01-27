@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-19"
+lastupdated: "2021-01-22"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -41,7 +41,7 @@ subcollection: ibm-cloud-provider-for-terraform
 Create, modify, or delete [{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM)](/docs/account?topic=account-iamoverview) resources. 
 {: shortdesc}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your IBM Cloud Provider plug-in for Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_iam_access_group`
@@ -50,7 +50,7 @@ Before you start working with your resource, make sure to review the [required p
 Create, modify, or delete an IAM access group. Access groups can be used to define a set of permissions that you want to grant to a group of users. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #iam-access-group-sample}
 
 The following example creates an access group that is named `mygroup`. 
@@ -101,7 +101,7 @@ Add, update, or remove users from an IAM access group.
 Multiple `ibm_iam_access_group_members` resources with the same group name produce inconsistent behavior. 
 {: important}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #iam-access-group-members-sample}
 
 The following example creates an IAM access group and a service ID. Then, the service ID and a user with the ID `user@ibm.com` is added to the access group. 
@@ -167,7 +167,7 @@ $ terraform import ibm_iam_access_group_members.example AccessGroupId-5391772e-1
 Create, update, or delete an IAM policy for an IAM access group. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #iam-access-group-policy-sample}
 
 #### Create a policy for all IAM-enabled resources
@@ -407,7 +407,7 @@ Create, update, or delete a dynamic rule for an IAM access group. With dynamic r
 
 For more information, see [Creating dynamic rules for access groups](/docs/account?topic=account-rules). 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #iam-group-dynamic-rule-sample}
 
 ```
@@ -473,7 +473,7 @@ terraform import ibm_iam_access_group_dynamic_rule.example <access_group_ID>/<ru
 Create or delete an IAM service authorization policy. 
 {: shortdesc} 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #iam-auth-policy-sample}
 
 #### Authorization policy between two services
@@ -589,7 +589,7 @@ terraform import ibm_iam_authorization_policy.example 11aa1a11-11a1-11aa-1111-11
 Provides a resource for IAM Service Authorizations policy to be detached. This allows authorization policy to deleted.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #iam-auth-policy-detach-sample}
 
 ```
@@ -626,7 +626,7 @@ Create, update, or delete a custom IAM role.
 
 For more information, about IAM custom roles, see [Creating custom roles](/docs/account?topic=account-custom-roles).
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #iam-custom-role-sample}
 
 ```
@@ -675,7 +675,7 @@ Review the output parameters that you can access after your resource is created.
 Create, update, or delete an IAM service API key by using resource group and resource type.For more information, about IAM service API key, see [Managing IAM acces, API keys](/docs/cli?topic=cli-ibmcloud_commands_iam).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #iam-service-api-key-code}
 
 ```
@@ -699,7 +699,7 @@ Review the input parameters that you can specify for your resource.
 |----|-----------|-----------|---------------------|
 |`name`|String|Required|The name of the service API key.|
 |`description` |String|Optional|The description of the service API key.|
-|`iam_service_id` |String|Required|The IAMID of the service.|
+|`iam_service_id` |String|Required|The IAM ID of the service.|
 |`apikey` |String|Optional|The API key value. This property only contains the API key value for the following cases: `create an API key`, `update a Service API key that stores the API key value as retrievable`, or `get a service API key that stores the API key value as retrievable`. All other operations do not return the API key value. For example, all user API key related operations, except for create, do not contain the API key value.|
 |`locked`|Bool|Optional| The API key cannot be changed if set to `true`.|
 |`store_value`|Bool|Optional| The boolean value whether API key value is retrievable in the future.|
@@ -742,7 +742,7 @@ terraform import ibm_iam_service_api_key.testacc_apiKey ApiKey-9d12342134f-41c2-
 Create, update, or delete an IAM service ID by using resource group and resource type.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #iam-service-id-sample}
 
 ```
@@ -787,7 +787,7 @@ Review the output parameters that you can access after your resource is created.
 Create, update, or delete an IAM service policy. 
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #iam-service-policy-sample}
 
 #### Service Policy for All Identity and Access enabled services 
@@ -972,7 +972,7 @@ $ terraform import ibm_iam_service_policy.example <service_ID>/<service_policy_I
 
 Create, update, or delete an IAM user policy. To assign a policy to one user, the user must exist in the account to which you assign the policy. 
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #iam-user-policy-sample}
 
 #### User Policy for All Identity and Access enabled services 
@@ -1135,7 +1135,7 @@ $ terraform import ibm_iam_user_policy.example <ibm_id>/<user_policy_ID>
 Retrieve information about an IAM user settings. The IP addresses configured here are the only details a user can use to log in to the {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #iam-users-sample}
 
 ```
@@ -1176,7 +1176,7 @@ The following attributes are exported:
 Invite, update, or delete IAM users to your IBM Cloud account. User to be invited can be added to one or more access groups. For more information, see [inviting users](/docs/account?topic=account-access-getstarted).
 {: shortdesc}
 
-### Sample IBM Cloud Provider plug-in for Terraform code
+### Sample Terraform code
 {: #iam-user-invite-sample}
 
 #### Inviting batch of users
