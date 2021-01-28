@@ -325,7 +325,7 @@ To find a full list of {{site.data.keyword.cloud_notm}} resources that you can p
    </tr>
    <tr>
    <td><code>generation</code></td>
-   <td>Enter <strong>1</strong> to configure the {{site.data.keyword.cloud_notm}} provider plug-in to provision VPC on Classic infrastructure resources. This value is used for all VPC resources that you specify in your Terraform configuration files. You can remove this parameter if you are not working with the VPC resources.</td>
+   <td>Enter <strong>1</strong> to configure the {{site.data.keyword.cloud_notm}} provider plug-in to provision generation 2 VPC on Classic infrastructure resources. This value is used for all VPC resources that you specify in your Terraform configuration files. You can remove this parameter if you are not working with the VPC resources.</td>
    </tr>
    <tr>
    <td><code>region</code></td>

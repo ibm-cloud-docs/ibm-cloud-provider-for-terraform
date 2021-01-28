@@ -2245,7 +2245,7 @@ Review the input parameters that you can specify for your resource.
 |Name|Data type|Required / optional|Description|Forces new resource |
 |----|-----------|-----------|---------------------|-------|
 |`ipv4_cidr_block`|String|Optional|The IPv4 range of the subnet.| Yes |
-|`total_ipv4_address_count`|String|Optional|The total number of IPv4 addresses. Either `ipv4_cid_block` or `total_pv4_address_count` input parameters must be provided in the resource.| Yes |
+|`total_ipv4_address_count`|String|Optional|The total number of IPv4 addresses. Either `ipv4_cidr_block` or `total_pv4_address_count` input parameters must be provided in the resource.| Yes |
 |`ip_version`|String|Optional|The IP Version. The default is `ipv4`.| Yes |
 |`name`|String|Required| The name of the subnet.| No |
 |`network_acl`|String|Optional|The ID of the network ACL for the subnet.| No |
