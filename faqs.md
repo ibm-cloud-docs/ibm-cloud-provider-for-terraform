@@ -177,6 +177,7 @@ Complete the following steps can be used in IBM Terraform provider to support Te
      }
    }
   ```
+  {: codeblock}
 
   **Example**
 
@@ -190,6 +191,8 @@ Complete the following steps can be used in IBM Terraform provider to support Te
      }
    }
   ```
+  {: codeblock}
+  
 3. If you are using Terraform modules, the shared Terraform block to be used in all the module folders that is been used.
     Detailed steps in the IBM Terraform documentation will be published shortly.
     {: note}
