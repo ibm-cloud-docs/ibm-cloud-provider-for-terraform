@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-22"
+lastupdated: "2021-01-28"
 
 keywords:  terraform provider plugin, direct link gateway, terraform direct link gateway, terraform direct link gateway data sources
 
@@ -10,29 +10,89 @@ subcollection: ibm-cloud-provider-for-terraform
 
 ---
 
+{:DomainName: data-hd-keyref="APPDomain"}
+{:DomainName: data-hd-keyref="DomainName"}
+{:android: data-hd-operatingsystem="android"}
+{:api: .ph data-hd-interface='api'}
+{:apikey: data-credential-placeholder='apikey'}
+{:app_key: data-hd-keyref="app_key"}
+{:app_name: data-hd-keyref="app_name"}
+{:app_secret: data-hd-keyref="app_secret"}
+{:app_url: data-hd-keyref="app_url"}
+{:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: data-hd-programlang="c#"}
+{:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
+{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
+{:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
+{:generic: data-hd-operatingsystem="generic"}
+{:generic: data-hd-programlang="generic"}
 {:gif: data-image-type='gif'}
+{:go: .ph data-hd-programlang='go'}
 {:help: data-hd-content-type='help'}
+{:hide-dashboard: .hide-dashboard}
+{:hide-in-docs: .hide-in-docs}
 {:important: .important}
+{:ios: data-hd-operatingsystem="ios"}
+{:java: .ph data-hd-programlang='java'}
+{:java: data-hd-programlang="java"}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:javascript: data-hd-programlang="javascript"}
 {:new_window: target="_blank"}
+{:note .note}
 {:note: .note}
+{:objectc data-hd-programlang="objectc"}
+{:org_name: data-hd-keyref="org_name"}
+{:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
+{:python: .ph data-hd-programlang='python'}
+{:python: data-hd-programlang="python"}
+{:route: data-hd-keyref="route"}
+{:row-headers: .row-headers}
+{:ruby: .ph data-hd-programlang='ruby'}
+{:ruby: data-hd-programlang="ruby"}
+{:runtime: architecture="runtime"}
+{:runtimeIcon: .runtimeIcon}
+{:runtimeIconList: .runtimeIconList}
+{:runtimeLink: .runtimeLink}
+{:runtimeTitle: .runtimeTitle}
 {:screen: .screen}
+{:script: data-hd-video='script'}
+{:service: architecture="service"}
+{:service_instance_name: data-hd-keyref="service_instance_name"}
+{:service_name: data-hd-keyref="service_name"}
 {:shortdesc: .shortdesc}
+{:space_name: data-hd-keyref="space_name"}
+{:step: data-tutorial-type='step'}
+{:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift-ios: .ph data-hd-programlang='iOS Swift'}
+{:swift-server: .ph data-hd-programlang='server-side Swift'}
+{:swift: .ph data-hd-programlang='swift'}
+{:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
+{:term: .term}
 {:tip: .tip}
+{:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
-{:step: data-tutorial-type='step'}
+{:tutorial: data-hd-content-type='tutorial'}
+{:ui: .ph data-hd-interface='ui'}
+{:unity: .ph data-hd-programlang='unity'}
+{:url: data-credential-placeholder='url'}
+{:user_ID: data-hd-keyref="user_ID"}
+{:vbnet: .ph data-hd-programlang='vb.net'}
+{:video: .video}
+
 
 
 # Direct Link Gateway data sources
@@ -41,7 +101,7 @@ subcollection: ibm-cloud-provider-for-terraform
 Use {{site.data.keyword.cloud_notm}} [Direct Link](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl) to seamlessly connect your on-premises resources to your cloud resources. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}.
 {: shordesc}
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## ibm_dl_gateway
@@ -327,6 +387,91 @@ Review the output parameters that you can access after your resource is created.
 |`ports.location_display_name`|String|The port location long name.|
 |`ports.location_name`|String|The port location name.|
 |`ports.id`|String|The port identifier.|
+|`ports.provider_name`|String|The port's provider name.|
+|`ports.supported_link_speeds`|String|The port supported speeds in megabits per second.|
+
+## ibm_dl_provider_gateways
+{: #dl-provider-gwy-ds}
+
+Import the details of an existing IBM Cloud Infrastructure direct link provider gateway as a read-only data source.  For more information, refer to [about Direct Link](/docs/dl?topic=dl-dl-about#use-case-connect).
+{: shortdesc}
+
+### Sample Terraform code
+{: #dl-provider-gwy-dssample}
+
+```
+data "ibm_dl_provider_gateways" "ds_dlproviderGateways" {
+}
+```
+{: codeblock}
+
+### Input parameters
+{: #dl-provider-gwy-dsinput}
+
+There is no input parameters that you need to specify for the data source. 
+{: shortdesc}
+
+### Output parameters
+{: #dl-provider-gwy-dsoutput}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+| Output parameter | Data type | Description |
+| ------------- |-------------| -------------- |
+|`gateways`|String|List of all the direct link ports.List of all Direct Link provider gateways in the IBM Cloud Infrastructure. |
+|`gateways.bgp_asn`|String| The customer BGP ASN.|
+|`gateways.created_at`|String| The date and time resource was created.|
+|`gateways.crn`|String| The CRN of the gateway.|
+|`gateways.global`|Boolean| The gateways with global routing set as `true` can connect to networks outside their associated region.|
+|`gateways.id`|String| The unique identifier of the gateway.|
+|`gateways.name`|String| The unique user defined name for the gateway.|
+|`gateways.operational_status`|String| The operational status of the gateway.|
+|`gateways.resource_group`|String| The resource group identifier.|
+|`gateways.speed_mbps`|String| The gateway speed in megabits per second.|
+|`gateways.type`|String| The gateway type.|
+|`gateways.bgp_cer_cidr`|String| The BGP customer edge router CIDR.|
+|`gateways.bgp_ibm_asn`|String| The IBM BGP ASN.|
+|`gateways.bgp_ibm_cidr`|String| The IBM BGP CIDR.|
+|`gateways.bgp_status`|String| The gateway BGP status.|
+|`gateways.port`|String| The port identifier.|
+|`gateways.provider_api_managed`|String| Indicates whether gateway was created through a provider portal. If set `true`, gateway can only be changed or deleted through the corresponding provider portal.|
+|`gateways.vlan`|String| The VLAN allocated for the gateway. Only set for `type=connect` gateways created directly through the IBM portal.|
+
+## ibm_dl_provider_ports
+{: #dl-provider-ports-ds}
+
+Import the details of an existing {{site.data.keyword.cloud_notm}} infrastructure direct link provider ports.
+{: shortdesc}
+
+### Sample Terraform code
+{: #dl-provider-ports-dssample}
+
+```
+data "ibm_dl_provider_ports" "ds_dl_provider_ports" {
+}
+```
+{: codeblock}
+
+### Input parameters
+{: #dl-provider-ports-dsinput}
+
+There is no input parameters that you need to specify for the data source. 
+{: shortdesc}
+
+### Output parameters
+{: #dl-provider-ports-dsoutput}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+| Output parameter | Data type | Description |
+| ------------- |-------------| -------------- |
+|`ports`|String|List of all the direct link ports in the {{site.data.keyword.cloud_notm}} infrastructure.|
+|`ports.label`|String|The port label.|
+|`ports.location_display_name`|String|The port location long name.|
+|`ports.location_name`|String|The port location name.|
+|`ports.port_id`|String|The port identifier.|
 |`ports.provider_name`|String|The port's provider name.|
 |`ports.supported_link_speeds`|String|The port supported speeds in megabits per second.|
 

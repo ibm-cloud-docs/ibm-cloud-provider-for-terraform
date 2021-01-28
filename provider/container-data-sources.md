@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-22"
+lastupdated: "2021-01-28"
  
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes
 
@@ -10,29 +10,89 @@ subcollection: ibm-cloud-provider-for-terraform
 
 ---
 
+{:DomainName: data-hd-keyref="APPDomain"}
+{:DomainName: data-hd-keyref="DomainName"}
+{:android: data-hd-operatingsystem="android"}
+{:api: .ph data-hd-interface='api'}
+{:apikey: data-credential-placeholder='apikey'}
+{:app_key: data-hd-keyref="app_key"}
+{:app_name: data-hd-keyref="app_name"}
+{:app_secret: data-hd-keyref="app_secret"}
+{:app_url: data-hd-keyref="app_url"}
+{:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: data-hd-programlang="c#"}
+{:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
+{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
+{:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
+{:generic: data-hd-operatingsystem="generic"}
+{:generic: data-hd-programlang="generic"}
 {:gif: data-image-type='gif'}
+{:go: .ph data-hd-programlang='go'}
 {:help: data-hd-content-type='help'}
+{:hide-dashboard: .hide-dashboard}
+{:hide-in-docs: .hide-in-docs}
 {:important: .important}
+{:ios: data-hd-operatingsystem="ios"}
+{:java: .ph data-hd-programlang='java'}
+{:java: data-hd-programlang="java"}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:javascript: data-hd-programlang="javascript"}
 {:new_window: target="_blank"}
+{:note .note}
 {:note: .note}
+{:objectc data-hd-programlang="objectc"}
+{:org_name: data-hd-keyref="org_name"}
+{:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
+{:python: .ph data-hd-programlang='python'}
+{:python: data-hd-programlang="python"}
+{:route: data-hd-keyref="route"}
+{:row-headers: .row-headers}
+{:ruby: .ph data-hd-programlang='ruby'}
+{:ruby: data-hd-programlang="ruby"}
+{:runtime: architecture="runtime"}
+{:runtimeIcon: .runtimeIcon}
+{:runtimeIconList: .runtimeIconList}
+{:runtimeLink: .runtimeLink}
+{:runtimeTitle: .runtimeTitle}
 {:screen: .screen}
+{:script: data-hd-video='script'}
+{:service: architecture="service"}
+{:service_instance_name: data-hd-keyref="service_instance_name"}
+{:service_name: data-hd-keyref="service_name"}
 {:shortdesc: .shortdesc}
+{:space_name: data-hd-keyref="space_name"}
+{:step: data-tutorial-type='step'}
+{:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift-ios: .ph data-hd-programlang='iOS Swift'}
+{:swift-server: .ph data-hd-programlang='server-side Swift'}
+{:swift: .ph data-hd-programlang='swift'}
+{:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
+{:term: .term}
 {:tip: .tip}
+{:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
-{:step: data-tutorial-type='step'}
+{:tutorial: data-hd-content-type='tutorial'}
+{:ui: .ph data-hd-interface='ui'}
+{:unity: .ph data-hd-programlang='unity'}
+{:url: data-credential-placeholder='url'}
+{:user_ID: data-hd-keyref="user_ID"}
+{:vbnet: .ph data-hd-programlang='vb.net'}
+{:video: .video}
+
 
 
 # Kubernetes Service data sources
@@ -40,7 +100,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 
@@ -60,6 +120,7 @@ data "ibm_container_addons" "addons" {
   cluster= ibm_container_addons.addons.cluster
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-addons-dsinput}
@@ -111,6 +172,7 @@ data "ibm_container_alb" "alb" {
   alb_id = "public-cr083d810e501d4c73b42184eab5a7ad56-alb"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-alb-dsinput}
@@ -156,6 +218,7 @@ data "ibm_container_alb_cert" "cert" {
   cluster_id  = "myCluster"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-albcert-dsinput}
@@ -202,6 +265,7 @@ data "ibm_container_bind_service" "bind_service" {
   namespace_id          = "default"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-bind-dsinput}
@@ -243,6 +307,8 @@ data "ibm_container_cluster" "cluster" {
   cluster_name_id = "mycluster"
 }
 ```
+{: codeblock}
+
 The following example retrieves the name of the cluster.
 
 ```
@@ -250,6 +316,7 @@ data "ibm_container_cluster" "cluster_foo" {
   name = "FOO"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-cluster-input}
@@ -337,6 +404,7 @@ data "ibm_container_cluster_config" "cluster_foo" {
   config_dir      = "/home/mycluster_config"
 }
 ```
+{: codeblock}
 
 ** Example for downloading the TLS certificates and permission files for the cluster administrator in a classic or VPC  {{site.data.keyword.containerlong_notm}} cluster **
 
@@ -360,6 +428,7 @@ resource "kubernetes_namespace" "example" {
   }
 }
 ```
+{: codeblock}
 
 ** Example for connecting to the cluster by using the cluster host and token in a classic or VPC  {{site.data.keyword.containerlong_notm}} cluster **
 
@@ -381,6 +450,7 @@ resource "kubernetes_namespace" "example" {
   }
 }
 ```
+{: codeblock}
 
 ** Example for downloading the TLS certificates and permission files for the cluster administrator in a classic {{site.data.keyword.openshiftlong_notm}} cluster **
 
@@ -403,6 +473,7 @@ resource "kubernetes_namespace" "example" {
   }
 }
 ```
+{: codeblock}
 
 ** Example for connecting to the cluster by using the cluster host and token in a classic {{site.data.keyword.openshiftlong_notm}} cluster **
 
@@ -423,6 +494,7 @@ resource "kubernetes_namespace" "example" {
   }
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-cluster-config-input}
@@ -474,6 +546,7 @@ data "ibm_container_cluster_worker" "cluster" {
   worker_id    = "dal10-1112222abd111222"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-worker-input}
@@ -519,6 +592,7 @@ data "ibm_container_cluster_versions" "cluster_versions" {
   resource_group_id          = "11222333111abc111"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-cluster-versions-input}
@@ -556,6 +630,7 @@ The following example shows how to configure an `ALB`.
 ```
 data "ibm_cr_namespace" "test" {}
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cr-namespaces-ds-input}
@@ -596,6 +671,7 @@ data "ibm_container_worker_pool" "testacc_ds_worker_pool"{
   cluster          = ibm_container_cluster.testacc_cluster.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-worker-pool-input}
@@ -647,6 +723,7 @@ data "ibm_container_vpc_alb" "alb" {
   alb_id = "public-cr083d810e501d4c73b42184eab5a7ad56-alb"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-vpc-alb-input}
@@ -695,6 +772,7 @@ data "ibm_container_vpc_cluster" "cluster" {
   resource_group_id = data.ibm_resource_group.group.id
 }
 ```
+{: codeblock}
 
 The following example show how to retrieve name of the cluster.
 
@@ -784,6 +862,7 @@ data "ibm_container_cluster_worker" "worker_foo" {
   cluster_name_id = "mycluster"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-vpc-worker-input}
@@ -833,6 +912,7 @@ data "ibm_container_vpc_worker_pool" "testacc_ds_worker_pool" {
     worker_pool_name = i"worker_pool_name
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-vpc-workerpool-input}

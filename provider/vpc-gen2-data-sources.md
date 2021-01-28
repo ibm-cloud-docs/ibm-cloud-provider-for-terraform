@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-22"
+lastupdated: "2021-01-28"
 
 keywords: terraform provider plugin, terraform gen 2, terraform gen 2 compute
 
@@ -10,35 +10,95 @@ subcollection: ibm-cloud-provider-for-terraform
 
 ---
 
+{:DomainName: data-hd-keyref="APPDomain"}
+{:DomainName: data-hd-keyref="DomainName"}
+{:android: data-hd-operatingsystem="android"}
+{:api: .ph data-hd-interface='api'}
+{:apikey: data-credential-placeholder='apikey'}
+{:app_key: data-hd-keyref="app_key"}
+{:app_name: data-hd-keyref="app_name"}
+{:app_secret: data-hd-keyref="app_secret"}
+{:app_url: data-hd-keyref="app_url"}
+{:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: data-hd-programlang="c#"}
+{:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
+{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
+{:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
+{:generic: data-hd-operatingsystem="generic"}
+{:generic: data-hd-programlang="generic"}
 {:gif: data-image-type='gif'}
+{:go: .ph data-hd-programlang='go'}
 {:help: data-hd-content-type='help'}
+{:hide-dashboard: .hide-dashboard}
+{:hide-in-docs: .hide-in-docs}
 {:important: .important}
+{:ios: data-hd-operatingsystem="ios"}
+{:java: .ph data-hd-programlang='java'}
+{:java: data-hd-programlang="java"}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:javascript: data-hd-programlang="javascript"}
 {:new_window: target="_blank"}
+{:note .note}
 {:note: .note}
+{:objectc data-hd-programlang="objectc"}
+{:org_name: data-hd-keyref="org_name"}
+{:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
+{:python: .ph data-hd-programlang='python'}
+{:python: data-hd-programlang="python"}
+{:route: data-hd-keyref="route"}
+{:row-headers: .row-headers}
+{:ruby: .ph data-hd-programlang='ruby'}
+{:ruby: data-hd-programlang="ruby"}
+{:runtime: architecture="runtime"}
+{:runtimeIcon: .runtimeIcon}
+{:runtimeIconList: .runtimeIconList}
+{:runtimeLink: .runtimeLink}
+{:runtimeTitle: .runtimeTitle}
 {:screen: .screen}
+{:script: data-hd-video='script'}
+{:service: architecture="service"}
+{:service_instance_name: data-hd-keyref="service_instance_name"}
+{:service_name: data-hd-keyref="service_name"}
 {:shortdesc: .shortdesc}
+{:space_name: data-hd-keyref="space_name"}
+{:step: data-tutorial-type='step'}
+{:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift-ios: .ph data-hd-programlang='iOS Swift'}
+{:swift-server: .ph data-hd-programlang='server-side Swift'}
+{:swift: .ph data-hd-programlang='swift'}
+{:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
+{:term: .term}
 {:tip: .tip}
+{:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
-{:step: data-tutorial-type='step'}
+{:tutorial: data-hd-content-type='tutorial'}
+{:ui: .ph data-hd-interface='ui'}
+{:unity: .ph data-hd-programlang='unity'}
+{:url: data-credential-placeholder='url'}
+{:user_ID: data-hd-keyref="user_ID"}
+{:vbnet: .ph data-hd-programlang='vb.net'}
+{:video: .video}
+
 
 
 # VPC infrastructure data sources 
 {: #vpc-gen2-data-sources}
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}.
@@ -63,6 +123,7 @@ The following example retrieves information about the VPC floating IP.
  }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #floating-ip-g2-dsinput}
@@ -106,6 +167,7 @@ data "ibm_is_flow_logs" "ds_flow_logs" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #ibm-is-flowlogs-dsinput}
@@ -154,6 +216,7 @@ data "ibm_is_image" "ds_image" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-image-input}
@@ -197,6 +260,7 @@ data "ibm_is_images" "ds_images" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 { #vpc-images-input}
@@ -355,14 +419,23 @@ Retrieve the details for all Gen 2 {{site.data.keyword.vsi_is_short}} instances 
 ```
 data "ibm_is_instances" "ds_instances" {
 }
+
+data "ibm_is_instances" "ds_instances1" {
+  vpc_name = "testacc_vpc"
+}
 ```
 {: codeblock}
 
 ### Input parameters
 {: #instances-input}
 
-This data source does not support any input parameters.
+The input parameters that you need to specify for the data source. 
 {: shortdesc}
+
+| Input parameter | Data type |Required / optional | Description |
+| ------------- |-------------| --------------|-------------- |
+|`vpc_name`|String|Optional|The name of the VPC to filter the instances attached.|
+|`vpc`|String|Optional|The VPC ID to filter the instances attached.|
 
 ### Output parameters
 {: #instances-output}
@@ -614,6 +687,7 @@ data "ibm_is_instance_profile" "profile" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-instance-profile-input}
@@ -635,6 +709,7 @@ Review the output parameters that you can access after you retrieved your data s
 |Name|Data type|Description|
 |----|-----------|-------------|
 |`family`|String|The family of the virtual server instance profile.|
+|`architecture`|String|The default Operating System architecture for an instance of the profile.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 
@@ -652,6 +727,7 @@ data "ibm_is_instance_profiles" "ds_instance_profiles" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-instance-profiles-input}
@@ -670,6 +746,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`profiles`|List of objects|List of all server instance profiles in the region.  |
 |`profiles.name`|String|The name for this virtual server instance profile.  |
 |`profiles.family`|String|The family of the virtual server instance profile.|
+|`profiles.architecture`|String|The default Operating System architecture for an instance of the profile.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 
@@ -703,6 +780,7 @@ data "ibm_is_public_gateway" "testacc_dspgw"{
   name = ibm_is_public_gateway.testacc_public_gateway.name
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #public-gwy-g2-dsinput}
@@ -768,6 +846,7 @@ data "ibm_is_lb" "ds_lb" {
   name = ibm_is_lb.testacc_lb.name
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #ibm-is-lb-dsinput}
@@ -845,6 +924,7 @@ The following example shows how you can declare the data.
 data "ibm_is_lbs" "ds_lbs" {
  }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #ibm-is-lbs-dsinput}
@@ -911,6 +991,7 @@ data "ibm_is_lb_profiles" "ds_lb_profiles" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #ibm-is-lb-profiles-input}
@@ -951,6 +1032,7 @@ data "ibm_is_region" "ds_region" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-region-input}
@@ -1042,6 +1124,7 @@ data "ibm_is_security_group" "sg1_rule" {
   name = ibm_is_security_group.testacc_security_group.name
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #sec-group-ds-input}
@@ -1095,6 +1178,7 @@ data "ibm_is_ssh_key" "ds_key" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-ssh-key-input}
@@ -1147,6 +1231,7 @@ data "ibm_is_subnet" "ds_subnet" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-subnet-input}
@@ -1241,6 +1326,7 @@ The following example, you can fetch information of list of the instance templat
 data "ibm_is_instance_templates" "instancetemplates" {	   
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-instance-templates-input}
@@ -1308,6 +1394,7 @@ data "ibm_is_virtual_endpoint_gateway" "data_test" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-endpoint-gwyds-input}
@@ -1356,6 +1443,7 @@ data "ibm_is_virtual_endpoint_gateway_ips" "data_test1" {
   gateway     = ibm_is_virtual_endpoint_gateway.endpoint_gateway.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-endpoint-gwy-ipsds-input}
@@ -1403,6 +1491,7 @@ data "ibm_is_virtual_endpoint_gateways" "data_test" {
 
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-endpoint-gwysds-input}
@@ -1453,6 +1542,7 @@ data "ibm_is_vpc" "ds_vpc" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-input}
@@ -1510,6 +1600,7 @@ data "ibm_is_vpc_default_routing_table" "ds_default_routing_table" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-default-routing-table-dsinput}
@@ -1573,6 +1664,7 @@ data "ibm_is_vpc_routing_table_routes" "ds_routing_table_routes" {
 	routing_table = ibm_is_vpc_routing_tables.test_routing_table.routing_table
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-routing-table-dsinput}
@@ -1624,6 +1716,7 @@ data "ibm_is_vpc_routing_tables" "ds_routing_tables" {
 	vpc = ibm_is_vpc.test_vpc.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-routing-tables-dsinput}
@@ -1677,6 +1770,7 @@ data "ibm_is_vpn_gateways" "ds_vpn_gateways" {
   
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-gateways-dsinput}
@@ -1722,6 +1816,7 @@ data "ibm_is_vpn_gateway_connections" "ds_vpn_gateway_connections" {
   vpn_gateway = ibm_is_vpn_gateway.testacc_vpnGateway.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-gateways-connection-dsinput}
@@ -1780,6 +1875,7 @@ data "ibm_is_zone" "ds_zone" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-zone-input}
@@ -1821,6 +1917,7 @@ data "ibm_is_zones" "ds_zones" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-zones-input}

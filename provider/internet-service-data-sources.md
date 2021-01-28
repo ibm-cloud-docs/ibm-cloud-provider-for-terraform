@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-22"
+lastupdated: "2021-01-28"
 
 keywords: terraform internet services, terraform cis, terraform provider plugin
 
@@ -10,29 +10,89 @@ subcollection: ibm-cloud-provider-for-terraform
 
 ---
 
+{:DomainName: data-hd-keyref="APPDomain"}
+{:DomainName: data-hd-keyref="DomainName"}
+{:android: data-hd-operatingsystem="android"}
+{:api: .ph data-hd-interface='api'}
+{:apikey: data-credential-placeholder='apikey'}
+{:app_key: data-hd-keyref="app_key"}
+{:app_name: data-hd-keyref="app_name"}
+{:app_secret: data-hd-keyref="app_secret"}
+{:app_url: data-hd-keyref="app_url"}
+{:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: data-hd-programlang="c#"}
+{:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
+{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
+{:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
+{:generic: data-hd-operatingsystem="generic"}
+{:generic: data-hd-programlang="generic"}
 {:gif: data-image-type='gif'}
+{:go: .ph data-hd-programlang='go'}
 {:help: data-hd-content-type='help'}
+{:hide-dashboard: .hide-dashboard}
+{:hide-in-docs: .hide-in-docs}
 {:important: .important}
+{:ios: data-hd-operatingsystem="ios"}
+{:java: .ph data-hd-programlang='java'}
+{:java: data-hd-programlang="java"}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:javascript: data-hd-programlang="javascript"}
 {:new_window: target="_blank"}
+{:note .note}
 {:note: .note}
+{:objectc data-hd-programlang="objectc"}
+{:org_name: data-hd-keyref="org_name"}
+{:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
+{:python: .ph data-hd-programlang='python'}
+{:python: data-hd-programlang="python"}
+{:route: data-hd-keyref="route"}
+{:row-headers: .row-headers}
+{:ruby: .ph data-hd-programlang='ruby'}
+{:ruby: data-hd-programlang="ruby"}
+{:runtime: architecture="runtime"}
+{:runtimeIcon: .runtimeIcon}
+{:runtimeIconList: .runtimeIconList}
+{:runtimeLink: .runtimeLink}
+{:runtimeTitle: .runtimeTitle}
 {:screen: .screen}
+{:script: data-hd-video='script'}
+{:service: architecture="service"}
+{:service_instance_name: data-hd-keyref="service_instance_name"}
+{:service_name: data-hd-keyref="service_name"}
 {:shortdesc: .shortdesc}
+{:space_name: data-hd-keyref="space_name"}
+{:step: data-tutorial-type='step'}
+{:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift-ios: .ph data-hd-programlang='iOS Swift'}
+{:swift-server: .ph data-hd-programlang='server-side Swift'}
+{:swift: .ph data-hd-programlang='swift'}
+{:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
+{:term: .term}
 {:tip: .tip}
+{:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
-{:step: data-tutorial-type='step'}
+{:tutorial: data-hd-content-type='tutorial'}
+{:ui: .ph data-hd-interface='ui'}
+{:unity: .ph data-hd-programlang='unity'}
+{:url: data-credential-placeholder='url'}
+{:user_ID: data-hd-keyref="user_ID"}
+{:vbnet: .ph data-hd-programlang='vb.net'}
+{:video: .video}
+
 
 
 # Internet Services data sources
@@ -40,7 +100,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_cis`
@@ -60,6 +120,7 @@ data "ibm_cis" "cis_instance" {
   name              = "myinstance"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-input}
@@ -100,6 +161,8 @@ data "ibm_cis_certificates" "test" {
   domain_id = ibm_cis_domain.example.id
 }
 ```
+{: codeblock}
+
 ### Input parameters
 {: #cis-certificates-dsinput}
 
@@ -149,6 +212,8 @@ data "ibm_cis_custom_certificates" "custom_certificates" {
     domain_id = data.ibm_cis_domain.cis_domain.domain_id
 }
 ```
+{: codeblock}
+
 ### Input parameters
 {: #cis-custom-certificates-dsinput}
 
@@ -198,6 +263,7 @@ data "ibm_cis_custom_pages" "custom_pages" {
     domain_id = data.ibm_cis_domain.cis_domain.domain_id
 }
 ```
+{: codeblock}
 
 ### Output parameters
 {: #cis-custom-pages-output}
@@ -239,6 +305,7 @@ data "ibm_cis_dns_records" "test" {
   file      = "records.txt"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-dns-record-dsinput}
@@ -296,6 +363,7 @@ data "ibm_cis" "cis_instance" {
   name = "myinstance"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-domain-input}
@@ -340,6 +408,7 @@ data "ibm_cis_edge_functions_actions" "test_actions" {
     domain_id = data.ibm_cis_domain.cis_domain.domain_id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-edge-functions-actions-dsinput}
@@ -389,6 +458,7 @@ data "ibm_cis_edge_functions_triggers" "test_triggers" {
     domain_id = data.ibm_cis_domain.cis_domain.domain_id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-edge-functions-triggers-dsinput}
@@ -430,6 +500,8 @@ data "ibm_cis_firewall" "lockdown" {
   firewall_type = "lockdowns"
 }
 ```
+{: codeblock}
+
 IBM Terraform provider supports only lock down rules.
 {: note}
 
@@ -499,6 +571,7 @@ data "ibm_cis_global_load_balancers" "test" {
   domain_id = var.zone_id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-global-lb-dsinput}
@@ -554,6 +627,7 @@ data "ibm_cis_glb_health_checks" "test" {
   cis_id = var.cis_crn
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-healthchecks-input}
@@ -607,6 +681,7 @@ The following example retrieves information about IP addresses that {{site.data.
 data "ibm_cis_ip_addresses" "cisname" {
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-ip-input}
@@ -638,6 +713,7 @@ data "ibm_cis_origin_pools" "test" {
   cis_id = var.cis_crn
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #origin-pools-input}

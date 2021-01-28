@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-22" 
+lastupdated: "2021-01-28" 
 
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes
 
@@ -10,29 +10,89 @@ subcollection: ibm-cloud-provider-for-terraform
 
 ---
 
+{:DomainName: data-hd-keyref="APPDomain"}
+{:DomainName: data-hd-keyref="DomainName"}
+{:android: data-hd-operatingsystem="android"}
+{:api: .ph data-hd-interface='api'}
+{:apikey: data-credential-placeholder='apikey'}
+{:app_key: data-hd-keyref="app_key"}
+{:app_name: data-hd-keyref="app_name"}
+{:app_secret: data-hd-keyref="app_secret"}
+{:app_url: data-hd-keyref="app_url"}
+{:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: data-hd-programlang="c#"}
+{:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
+{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
+{:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
+{:generic: data-hd-operatingsystem="generic"}
+{:generic: data-hd-programlang="generic"}
 {:gif: data-image-type='gif'}
+{:go: .ph data-hd-programlang='go'}
 {:help: data-hd-content-type='help'}
+{:hide-dashboard: .hide-dashboard}
+{:hide-in-docs: .hide-in-docs}
 {:important: .important}
+{:ios: data-hd-operatingsystem="ios"}
+{:java: .ph data-hd-programlang='java'}
+{:java: data-hd-programlang="java"}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:javascript: data-hd-programlang="javascript"}
 {:new_window: target="_blank"}
+{:note .note}
 {:note: .note}
+{:objectc data-hd-programlang="objectc"}
+{:org_name: data-hd-keyref="org_name"}
+{:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
+{:python: .ph data-hd-programlang='python'}
+{:python: data-hd-programlang="python"}
+{:route: data-hd-keyref="route"}
+{:row-headers: .row-headers}
+{:ruby: .ph data-hd-programlang='ruby'}
+{:ruby: data-hd-programlang="ruby"}
+{:runtime: architecture="runtime"}
+{:runtimeIcon: .runtimeIcon}
+{:runtimeIconList: .runtimeIconList}
+{:runtimeLink: .runtimeLink}
+{:runtimeTitle: .runtimeTitle}
 {:screen: .screen}
+{:script: data-hd-video='script'}
+{:service: architecture="service"}
+{:service_instance_name: data-hd-keyref="service_instance_name"}
+{:service_name: data-hd-keyref="service_name"}
 {:shortdesc: .shortdesc}
+{:space_name: data-hd-keyref="space_name"}
+{:step: data-tutorial-type='step'}
+{:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift-ios: .ph data-hd-programlang='iOS Swift'}
+{:swift-server: .ph data-hd-programlang='server-side Swift'}
+{:swift: .ph data-hd-programlang='swift'}
+{:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
+{:term: .term}
 {:tip: .tip}
+{:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
-{:step: data-tutorial-type='step'}
+{:tutorial: data-hd-content-type='tutorial'}
+{:ui: .ph data-hd-interface='ui'}
+{:unity: .ph data-hd-programlang='unity'}
+{:url: data-credential-placeholder='url'}
+{:user_ID: data-hd-keyref="user_ID"}
+{:vbnet: .ph data-hd-programlang='vb.net'}
+{:video: .video}
+
 
 
 # Kubernetes Service resources
@@ -41,7 +101,7 @@ subcollection: ibm-cloud-provider-for-terraform
 Create, modify, or delete [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-iks-overview) resources. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 {: shortdesc}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_container_addons`
@@ -91,6 +151,7 @@ resource "ibm_container_addons" "addons" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-addons-input}
@@ -154,6 +215,7 @@ resource ibm_container_alb alb {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-alb-input}
@@ -210,6 +272,7 @@ resource ibm_container_alb_cert cert {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-alb-cert-input}
@@ -283,6 +346,7 @@ resource "ibm_container_api_key_reset" "reset" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-api-key-reset-input}
@@ -328,6 +392,7 @@ resource "ibm_container_bind_service" "bind_service" {
   namespace_id                = "default"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-bind-input}
@@ -377,7 +442,7 @@ Create, update, or delete an {{site.data.keyword.containerlong_notm}} or {{site.
 If you want to use this resource to update a cluster, make sure that you review the [version changelog](/docs/containers?topic=containers-changelog) for patch updates and the [version information and update information](/docs/containers?topic=containers-cs_versions) for major and minor changes. 
 {: important}
 
-If you want to create a VPC cluster, make sure to include the VPC infrastructure generation in the `provider` block of your Terraform configuration file. If you do not set this value, the generation is automatically set to 2. For more information, about how to configure the `provider` block, see [Overview of required input parameters for each resource category](/docs/terraform?topic=terraform-provider-reference#required-parameters). 
+If you want to create a VPC cluster, make sure to include the VPC infrastructure generation in the `provider` block of your Terraform configuration file. If you do not set this value, the generation is automatically set to 2. For more information, about how to configure the `provider` block, see [Overview of required input parameters for each resource category](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters). 
 {: important}
 
 You cannot create a free cluster in {{site.data.keyword.bpfull_notm}}.
@@ -386,7 +451,7 @@ You cannot create a free cluster in {{site.data.keyword.bpfull_notm}}.
 To create a worker pool or add worker nodes and zones to a worker pool, use the `ibm_container_worker_pool` and `ibm_container_worker_pool_zone` resources. 
 {: tip}
 
-For step-by-step instructions for how to create an {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.openshiftlong_notm}} cluster, see [Creating single and multizone Kubernetes and OpenShift clusters](/docs/terraform?topic=terraform-tutorial-tf-clusters). 
+For step-by-step instructions for how to create an {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.openshiftlong_notm}} cluster, see [Creating single and multizone Kubernetes and OpenShift clusters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters). 
 {: tip}
 
 ### Sample Terraform code
@@ -442,6 +507,8 @@ resource "ibm_container_cluster" "testacc_cluster" {
   }
 }
 ```
+{: codeblock}
+
 #### Create a gateway enabled Kubernetes cluster
 
 ```
@@ -456,13 +523,15 @@ resource "ibm_container_cluster" "testacc_cluster" {
   no_subnet = false
 }
 ```
+{: codeblock}
+
 #### Creating a KMS enabled Kubernetes cluster
 
 ```
 resource "ibm_container_cluster" "cluster" {
   name              = "myContainerClsuter"
   datacenter        = "dal10"
-  no_subnet         = true
+  no_subnet         = false
   default_pool_size = 2
   hardware          = "shared"
   resource_group_id = data.ibm_resource_group.testacc_ds_resource_group.id
@@ -476,6 +545,8 @@ resource "ibm_container_cluster" "cluster" {
   }
 }
 ```
+{: codeblock}
+
 #### Creating an {{site.data.keyword.openshiftlong_notm}} Cluster 
 
 Create the {{site.data.keyword.openshiftlong_notm}} cluster with default worker pool entitlement.
@@ -492,6 +563,7 @@ resource "ibm_container_cluster" "cluster" {
   entitlement = "cloud_pak"
 }
 ```
+{: codeblock}
 
 #### Classic {{site.data.keyword.openshiftlong_notm}} cluster
 ```
@@ -528,7 +600,7 @@ resource "ibm_container_cluster" "cluster" {
   entitlement = "cloud_pak"
 }
 ```
-{: pre}
+{: codeblock}
 
 #### VPC Gen 1 {{site.data.keyword.containerlong_notm}} cluster
 {: #gen1-cluster}
@@ -677,12 +749,15 @@ Review the input parameters that you can specify for your resource.
 | `machine_type` | String | Optional | The machine type for your worker node. The machine type determines the amount of memory, CPU, and disk space that is available to the worker node. For an overview of supported machine types, see [Planning your worker node setup](/docs/containers?topic=containers-planning_worker_nodes). | Yes |
 | `name` | String | Required | The name of the cluster. The name must start with a letter, can contain letters, numbers, and hyphen (-), and must be 35 characters or fewer. Use a name that is unique across regions. The cluster name and the region in which the cluster is deployed form the fully qualified domain name for the Ingress subdomain. To ensure that the Ingress subdomain is unique within a region, the cluster name might be truncated and appended with a random value within the Ingress domain name. | Yes |
 | `no_subnet` | Boolean | Optional | If set to **true**, no portable subnet is created during cluster creation. The portable subnet is used to provide portable IP addresses for the Ingress subdomain and Kubernetes load balancer services. If set to **false**, a portable subnet is created by default. The default is **false**. | Yes |
+|`patch_version`|String|Optional| Set to update the worker nodes with the required patch version. For more information, refer to [Kubernetes version](/docs/containers?topic=containers-cs_versions).| No |
 | `public_service_endpoint` | Boolean | Optional | If set to **true**, your cluster is set up with a public service endpoint. You can use the public service endpoint to access the Kubernetes master from the public network. To use service endpoints, your account must be enabled for [Virtual Routing and Forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint#vrf). For more information, see [Worker-to-master and user-to-master communication: Service endpoints](/docs/containers?topic=containers-plan_clusters#workeruser-master). If set to **false**, the public service endpoint is disabled for your cluster.  | Yes |
 | `public_vlan_id` | String | Optional | The ID of the public VLAN that you want to use for your worker nodes. You can retrieve the VLAN ID with the `ibmcloud ks vlans --zone <zone>` command. </br></br> * **Free clusters**: If you want to provision a free cluster, you do not need to enter a public VLAN ID. Your cluster is automatically connected to a public VLAN that is owned by IBM. </br> * **Standard clusters**: If you create a standard cluster and you have an existing public VLAN ID for the zone where you plan to set up worker nodes, you must enter the VLAN ID. To retrieve the ID, run `ibmcloud ks vlans --zone <zone>`. If you do not have an existing public VLAN ID, or you want to connect your cluster to a private VLAN only, do not specify this option. | Yes |
 | `private_service_endpoint` | Boolean | Optional | If set to **true**, your cluster is set up with a private service endpoint. When the private service endpoint is enabled, communication between the Kubernetes and the worker nodes is established over the private network. If you enable the private service endpoint, you cannot disable it later. To use service endpoints, your account must be enabled for [Virtual Routing and Forwarding (VRF)](/docs/account?topic=account-vrf-service-endpoint#vrf). For more information, see [Worker-to-master and user-to-master communication: Service endpoints](/docs/containers?topic=containers-plan_clusters#workeruser-master). If set to **false**, the private service endpoint is disabled and all communication to the Kubernetes master must go through the public network. | Yes |
 | `private_vlan_id` | String | Optional | The ID of the private VLAN that you want to use for your worker nodes. You can retrieve the VLAN ID with the `ibmcloud ks vlans --zone <zone>` command. </br></br> * **Free clusters**: If you want to provision a free cluster, you do not need to enter a private VLAN ID. Your cluster is automatically connected to a private VLAN that is owned by IBM. </br> * **Standard clusters**: If you create a standard cluster and you have an existing private VLAN ID for the zone where you plan to set up worker nodes, you must enter the VLAN ID. To retrieve the ID, run `ibmcloud ks vlans --zone <zone>`. If you do not have an existing private VLAN ID, do not specify this option. A private VLAN is created automatically for you. | Yes |
+|`pod_subnet`| String | Optional| Specify a custom subnet CIDR to provide private IP addresses for pods. The subnet must be at least `/23` or more. For more information, refer to [Pod subnet](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli#pod-subnet).|Yes|
 | `resource_group_id` | String | Optional | The ID of the resource group where you want to provision your cluster. To retrieve the ID, use the  `ibm_resource_group` data source. If no value is provided, the cluster is automatically provisioned into the `default` resource group. | No |
 | `subnet_id` | String | Optional | The ID of an existing subnet that you want to use for your worker nodes. To find existing subnets, run `ibmcloud ks subnets`.| No |
+|`service_subnet`| String | Optional| Specify a custom subnet CIDR to provide private IP addresses for services. The subnet should be at least `/24` or more. For more information, refer to [Subnet service](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli#service-subnet).|Yes|
 | `tags` | Array of strings | Optional | A list of tags that you want to add to your cluster. Tags can help find a cluster more quickly.  | No |
 | `update_all_workers` | Boolean | Optional | If set to **true**, the Kubernetes version of the worker nodes is updated along with the Kubernetes version of the cluster that you specify in `kube_version`. | No |
 | `webhook` | Array of objects | Optional | The webhook that you want to add to the cluster. For available options, see the [`webhook create` command](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli). | No |
@@ -773,6 +848,7 @@ resource ibm_container_cluster_feature feature {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-cluster-feature-input}
@@ -829,6 +905,7 @@ resource "ibm_cr_namespace" "test" {
   resource_group_id = "c34128405d5742549538xxx1237"
 }
 ```
+{: codeblock}
 
 ```
 data "ibm_resource_group" "rg" {
@@ -839,6 +916,7 @@ resource "ibm_cr_namespace" "rg_namespace" {
   resource_group_id = data.ibm_resource_group.rg.id
 }
 ```
+{: codeblock}
 
 ### Input parameter
 {: #cr-namespace-input}
@@ -914,6 +992,7 @@ resource "ibm_container_worker_pool" "testacc_workerpool" {
     }
 }
 ```
+{: codeblock}
 
 #### Create a worker pool with an existing OpenShift license
 ```
@@ -1027,6 +1106,7 @@ resource "ibm_container_worker_pool_zone_attachment" "test_zone" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameter
 {: #container-pool-zone-input}
@@ -1092,6 +1172,7 @@ resource "ibm_container_vpc_alb" "alb" {
   enable = true
 }
 ```
+{: codeblock}
 
 ### Import parameter
 {: #vpc-alb-import}
@@ -1139,7 +1220,7 @@ The following timeouts are defined for this resource.
 Create, update, or delete a VPC cluster. 
 {: shortdesc}
 
-To create a VPC cluster, make sure to include the VPC infrastructure generation in the `provider` block of your Terraform configuration file. If you do not set this value, the generation is automatically set to 2. For more information, about how to configure the `provider` block, see [Overview of required input parameters for each resource category](/docs/terraform?topic=terraform-provider-reference#required-parameters). 
+To create a VPC cluster, make sure to include the VPC infrastructure generation in the `provider` block of your Terraform configuration file. If you do not set this value, the generation is automatically set to 2. For more information, about how to configure the `provider` block, see [Overview of required input parameters for each resource category](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters). 
 {: important}
 
 You cannot create a free cluster in {{site.data.keyword.bpfull_notm}}.
@@ -1355,6 +1436,7 @@ Review the input parameters that you can specify for your resource.
 |`disable_public_service_endpoint`|Boolean|Optional|Disable the public service endpoint to prevent public access to the Kubernetes master. Default value is 'true’.| No |
 |`kube_version`|String|Optional| Specify the Kubernetes version, including the major.minor version. If you do not include this flag, the default version is used. To see available versions, run `ibmcloud ks versions`.| No |
 |`update_all_workers`|Boolean|Optional| Set to true, if you want to update workers Kubernetes version with the cluster kube_version.| No |
+|`patch_version`|String|Optional| Set to update the worker nodes with the required patch version. For more information, refer to [Kubernetes version](/docs/containers?topic=containers-cs_versions).| No |
 |`pod_subnet`|String|Optional|Specify a custom subnet CIDR to provide private IP addresses for pods. The subnet must have a CIDR of at least `/23` or larger. For more information, see the [documentation](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli#cs_subnets). Default value is `172.30.0.0/16`.| Yes |
 |`service_subnet`|String|Optional|Specify a custom subnet CIDR to provide private IP addresses for services. The subnet must be at least ’/24’ or larger. For more information, see the [documentation](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli#cs_messages). Default value is `172.21.0.0/16`.| Yes |
 |`worker_count`|Integer|Optional| The number of worker nodes per zone in the default worker pool. Default value `1`.| Yes |
@@ -1436,6 +1518,7 @@ resource "ibm_container_vpc_worker_pool" "test_pool" {
   }
 }
 ```
+{: codeblock}
 
 ### Input parameter
 {: #vpc-worker-pool-input}

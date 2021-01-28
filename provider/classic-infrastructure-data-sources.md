@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-22"
+lastupdated: "2021-01-28"
 
 keywords: terraform provider plugin, terraform classic infrastructure, terraform classic, terraform softlayer, terraform sl, terraform vsi, terraform Bare Metal server
 
@@ -10,29 +10,89 @@ subcollection: ibm-cloud-provider-for-terraform
 
 ---
 
+{:DomainName: data-hd-keyref="APPDomain"}
+{:DomainName: data-hd-keyref="DomainName"}
+{:android: data-hd-operatingsystem="android"}
+{:api: .ph data-hd-interface='api'}
+{:apikey: data-credential-placeholder='apikey'}
+{:app_key: data-hd-keyref="app_key"}
+{:app_name: data-hd-keyref="app_name"}
+{:app_secret: data-hd-keyref="app_secret"}
+{:app_url: data-hd-keyref="app_url"}
+{:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: data-hd-programlang="c#"}
+{:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
+{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
+{:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
+{:generic: data-hd-operatingsystem="generic"}
+{:generic: data-hd-programlang="generic"}
 {:gif: data-image-type='gif'}
+{:go: .ph data-hd-programlang='go'}
 {:help: data-hd-content-type='help'}
+{:hide-dashboard: .hide-dashboard}
+{:hide-in-docs: .hide-in-docs}
 {:important: .important}
+{:ios: data-hd-operatingsystem="ios"}
+{:java: .ph data-hd-programlang='java'}
+{:java: data-hd-programlang="java"}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:javascript: data-hd-programlang="javascript"}
 {:new_window: target="_blank"}
+{:note .note}
 {:note: .note}
+{:objectc data-hd-programlang="objectc"}
+{:org_name: data-hd-keyref="org_name"}
+{:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
+{:python: .ph data-hd-programlang='python'}
+{:python: data-hd-programlang="python"}
+{:route: data-hd-keyref="route"}
+{:row-headers: .row-headers}
+{:ruby: .ph data-hd-programlang='ruby'}
+{:ruby: data-hd-programlang="ruby"}
+{:runtime: architecture="runtime"}
+{:runtimeIcon: .runtimeIcon}
+{:runtimeIconList: .runtimeIconList}
+{:runtimeLink: .runtimeLink}
+{:runtimeTitle: .runtimeTitle}
 {:screen: .screen}
+{:script: data-hd-video='script'}
+{:service: architecture="service"}
+{:service_instance_name: data-hd-keyref="service_instance_name"}
+{:service_name: data-hd-keyref="service_name"}
 {:shortdesc: .shortdesc}
+{:space_name: data-hd-keyref="space_name"}
+{:step: data-tutorial-type='step'}
+{:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift-ios: .ph data-hd-programlang='iOS Swift'}
+{:swift-server: .ph data-hd-programlang='server-side Swift'}
+{:swift: .ph data-hd-programlang='swift'}
+{:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
+{:term: .term}
 {:tip: .tip}
+{:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
-{:step: data-tutorial-type='step'}
+{:tutorial: data-hd-content-type='tutorial'}
+{:ui: .ph data-hd-interface='ui'}
+{:unity: .ph data-hd-programlang='unity'}
+{:url: data-credential-placeholder='url'}
+{:user_ID: data-hd-keyref="user_ID"}
+{:vbnet: .ph data-hd-programlang='vb.net'}
+{:video: .video}
+
 
 
 # Classic infrastructure data sources
@@ -40,7 +100,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 Review the data sources that you can use to retrieve information about your classic {{site.data.keyword.cloud_notm}} infrastructure resources. All data sources are imported as read-only information. You can reference the output parameters for each data source by using Terraform interpolation syntax.
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_compute_bare_metal`
@@ -63,6 +123,7 @@ data "ibm_compute_bare_metal" "bare_metal" {
   global_identifier = "a111a1a1-11a1-11a1-aa1a-11aaa111a1aa"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-bare-metal-input}
@@ -139,6 +200,7 @@ resource "ibm_compute_vm_instance" "vm1" {
     ...
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-image-input}
@@ -176,6 +238,7 @@ data "ibm_compute_placement_group" "group" {
     name = "mygroup"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-placement-group-input}
@@ -219,6 +282,7 @@ data "ibm_compute_ssh_key" "public_key" {
     label = "mykey"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-ssh-key-input}
@@ -261,6 +325,7 @@ data "ibm_compute_vm_instance" "vm_instance" {
   most_recent = true
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-vm-input}
@@ -319,6 +384,7 @@ data "ibm_dns_domain" "domain_id" {
     name = "mydomain.com"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-domain-input}
@@ -354,6 +420,7 @@ data "ibm_dns_domain_registration" "dnstestdomain" {
     name = "mytestdomain.com"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: classic-domain-reg-input}
@@ -390,6 +457,7 @@ data "ibm_dns_secondary" "secondary_id" {
     name = "test-secondary.com"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-dns-secondary-input}
@@ -449,6 +517,7 @@ resource "ibm_lbaas" "lbaas" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-lbaas-input}
@@ -517,6 +586,7 @@ data "ibm_network_vlan" "vlan_foo" {
     name = "myvlan"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-vlan-input}
@@ -570,6 +640,7 @@ data "ibm_security_group" "allow_ssh" {
     name = "allow_ssh"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-security-group-input}

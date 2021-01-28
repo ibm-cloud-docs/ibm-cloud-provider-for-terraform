@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-22"
+lastupdated: "2021-01-28"
 
 keywords: terraform provider plugin, terraform classic infrastructure, terraform classic, terraform softlayer, terraform sl, terraform vsi, terraform Bare Metal server
 
@@ -10,29 +10,89 @@ subcollection: ibm-cloud-provider-for-terraform
 
 ---
 
+{:DomainName: data-hd-keyref="APPDomain"}
+{:DomainName: data-hd-keyref="DomainName"}
+{:android: data-hd-operatingsystem="android"}
+{:api: .ph data-hd-interface='api'}
+{:apikey: data-credential-placeholder='apikey'}
+{:app_key: data-hd-keyref="app_key"}
+{:app_name: data-hd-keyref="app_name"}
+{:app_secret: data-hd-keyref="app_secret"}
+{:app_url: data-hd-keyref="app_url"}
+{:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: data-hd-programlang="c#"}
+{:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
+{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
+{:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
+{:generic: data-hd-operatingsystem="generic"}
+{:generic: data-hd-programlang="generic"}
 {:gif: data-image-type='gif'}
+{:go: .ph data-hd-programlang='go'}
 {:help: data-hd-content-type='help'}
+{:hide-dashboard: .hide-dashboard}
+{:hide-in-docs: .hide-in-docs}
 {:important: .important}
+{:ios: data-hd-operatingsystem="ios"}
+{:java: .ph data-hd-programlang='java'}
+{:java: data-hd-programlang="java"}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:javascript: data-hd-programlang="javascript"}
 {:new_window: target="_blank"}
+{:note .note}
 {:note: .note}
+{:objectc data-hd-programlang="objectc"}
+{:org_name: data-hd-keyref="org_name"}
+{:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
+{:python: .ph data-hd-programlang='python'}
+{:python: data-hd-programlang="python"}
+{:route: data-hd-keyref="route"}
+{:row-headers: .row-headers}
+{:ruby: .ph data-hd-programlang='ruby'}
+{:ruby: data-hd-programlang="ruby"}
+{:runtime: architecture="runtime"}
+{:runtimeIcon: .runtimeIcon}
+{:runtimeIconList: .runtimeIconList}
+{:runtimeLink: .runtimeLink}
+{:runtimeTitle: .runtimeTitle}
 {:screen: .screen}
+{:script: data-hd-video='script'}
+{:service: architecture="service"}
+{:service_instance_name: data-hd-keyref="service_instance_name"}
+{:service_name: data-hd-keyref="service_name"}
 {:shortdesc: .shortdesc}
+{:space_name: data-hd-keyref="space_name"}
+{:step: data-tutorial-type='step'}
+{:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift-ios: .ph data-hd-programlang='iOS Swift'}
+{:swift-server: .ph data-hd-programlang='server-side Swift'}
+{:swift: .ph data-hd-programlang='swift'}
+{:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
+{:term: .term}
 {:tip: .tip}
+{:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
-{:step: data-tutorial-type='step'}
+{:tutorial: data-hd-content-type='tutorial'}
+{:ui: .ph data-hd-interface='ui'}
+{:unity: .ph data-hd-programlang='unity'}
+{:url: data-credential-placeholder='url'}
+{:user_ID: data-hd-keyref="user_ID"}
+{:vbnet: .ph data-hd-programlang='vb.net'}
+{:video: .video}
+
 
 
 # Classic infrastructure resources
@@ -41,7 +101,7 @@ subcollection: ibm-cloud-provider-for-terraform
 Review the Classic infrastructure resources that you can create, modify, or delete. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 {: shortdesc}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
  
 ## `ibm_cdn`
@@ -61,6 +121,7 @@ resource "ibm_cdn" "test_cdn1" {
   origin_type = "HOST_SERVER"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cdn-input}
@@ -152,6 +213,7 @@ resource "ibm_compute_autoscale_group" "test_scale_group" {
     network_vlan_ids = [1234567, 7654321]
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #autoscale-group-input}
@@ -225,6 +287,7 @@ resource "ibm_compute_autoscale_policy" "test_scale_policy" {
     }
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #autoscale-policy-input}
@@ -291,6 +354,7 @@ resource "ibm_compute_bare_metal" "hourly-bm1" {
     notes = "note test"
 }
 ```
+{: codeblock}
 
 #### Monthly Bare Metal server
 When the `fixed_config_preset` attribute is not configured, Terraform creates a monthly Bare Metal server resource. The monthly Bare Metal server resource provides options to configure process, memory, network, disk, and RAID. You can also assign VLANs and subnets for the target monthly Bare Metal server. To configure the monthly Bare Metal server, you must provide more attributes such as `package_key_name`, `proecss_key_name`, `disk_key_names`, and `os_key_name`. The following example shows you how to create a new monthly Bare Metal server.
@@ -338,6 +402,7 @@ resource "ibm_compute_bare_metal" "monthly_bm1" {
     }
 }
 ```
+{: codeblock}
 
 **Note**: Monthly Bare Metal servers do not support `immediate cancellation`. When Terraform deletes the monthly Bare Metal server, the `anniversary date cancellation` option is used.
 
@@ -367,6 +432,7 @@ resource "ibm_compute_bare_metal" "quote_test" {
     ]  
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #bm-input}
@@ -491,6 +557,7 @@ resource "ibm_compute_dedicated_host" "dedicatedhost" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #dedicated-host-input}
@@ -543,6 +610,7 @@ resource "ibm_compute_monitor" "test_monitor" {
     notified_users = [460547]
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #compute-monitor-input}
@@ -590,6 +658,7 @@ resource "ibm_compute_placement_group" "test_placement_group" {
     datacenter = "dal05"  
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #plmt-group-input}
@@ -643,6 +712,7 @@ resource "ibm_compute_provisioning_hook" "test_provisioning_hook" {
     uri  = "https://raw.githubusercontent.com/test/slvm/master/test-script.sh"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #provision-hook-input}
@@ -686,6 +756,7 @@ resource "ibm_compute_ssh_key" "test_ssh_key" {
     public_key = "ssh-rsa <rsa_public_key>"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #ssh-key-input}
@@ -732,6 +803,7 @@ resource "ibm_compute_ssl_certificate" "test_cert" {
   private_key = file("key.pem")
 }
 ```
+{: codeblock}
 
 You can also use an inline certificate:
 
@@ -749,6 +821,7 @@ resource "ibm_compute_ssl_certificate" "test_cert" {
     EOF
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #ssl-compute-cert-input}
@@ -824,6 +897,7 @@ resource "ibm_compute_user" "joe" {
     timezone     = "EST"
 }
 ```
+{: codeblock}
 
 ### IBMid Account
 You can use an IBMid instead of your SoftLayer credentials. An [IBMid](https://www.ibm.com/account/profile/us) is used as a consistent way to access IBM products. You can create an IBMid in advance.
@@ -948,6 +1022,7 @@ resource "ibm_compute_vm_instance" "twc_terraform_sample" {
     private_security_group_ids = [576973]
 }
 ```
+{: codeblock}
 
 In the following example, you can create a VM instance by using a block device template:
 
@@ -1168,6 +1243,7 @@ resource "ibm_dns_domain" "dns-domain-test" {
     target = "127.0.0.10"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #dns-domain-input}
@@ -1216,6 +1292,7 @@ resource "ibm_cis_domain" "dnstestdomain" {
    
 }
 ```
+{: codeblock}
 
 Or 
 
@@ -1271,6 +1348,7 @@ resource "ibm_dns_secondary" "dns-secondary-test" {
     transfer_frequency = 10
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #dns-second-input}
@@ -1315,7 +1393,9 @@ resource "ibm_dns_reverse_record" "testreverserecord" {
     hostname="www.example.com"
     ttl=900
 }
+
 ```
+{: codeblock}
 
 ### Input parameters
 {: #dns-rev-rec-input}
@@ -1372,6 +1452,7 @@ resource "ibm_dns_record" "www" {
     type = "a"
 }
 ```
+{: codeblock}
 
 #### `AAAA` Record
 
@@ -1387,6 +1468,7 @@ resource "ibm_dns_record" "aaaa" {
     type = "aaaa"
 }
 ```
+{: codeblock}
 
 #### `CNAME` Record
 
@@ -1402,6 +1484,7 @@ resource "ibm_dns_record" "cname" {
     type = "cname"
 }
 ```
+{: codeblock}
 
 #### `NS` Record
 
@@ -1417,6 +1500,7 @@ resource "ibm_dns_record" "recordNS" {
     type = "ns"
 }
 ```
+{: codeblock}
 
 #### `MX` Record
 
@@ -1433,6 +1517,7 @@ resource "sibm_dns_record" "recordMX-1" {
     type = "mx"
 }
 ```
+{: codeblock}
 
 #### `SOA` Record
 
@@ -1448,6 +1533,7 @@ resource "ibm_dns_record" "recordSOA" {
     type = "soa"
 }
 ```
+{: codeblock}
 
 #### `SPF` Record
 
@@ -1463,6 +1549,7 @@ resource "ibm_dns_record" "recordSPF" {
     type = "spf"
 }
 ```
+{: codeblock}
 
 #### `TXT` Record
 
@@ -1478,6 +1565,7 @@ resource "ibm_dns_record" "recordTXT" {
     type = "txt"
 }
 ```
+{: codeblock}
 
 #### `SRV` Record
 
@@ -1498,6 +1586,7 @@ resource "ibm_dns_record" "recordSRV" {
     service = "_mail"
 }
 ```
+{: codeblock}
 
 #### `PTR` Record
 
@@ -1515,6 +1604,7 @@ resource "ibm_dns_record" "recordPTR" {
     type = "ptr"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #dns-record-input}
@@ -1579,6 +1669,7 @@ resource "ibm_firewall" "testfw" {
    ]
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #firewall-input}
@@ -1631,6 +1722,7 @@ resource "ibm_multi_vlan_firewall" "firewall_first" {
 	addon_configuration = ["FortiGate Security Appliance - Web Filtering Add-on (High Availability)","FortiGate Security Appliance - NGFW Add-on (High Availability)","FortiGate Security Appliance - AV Add-on (High Availability)"]
 	}
 ```
+{: codeblock}
 
 
 ### Input parameters
@@ -1711,6 +1803,7 @@ resource "ibm_firewall_policy" "rules" {
   }
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #firewall-policy-input}
@@ -1754,6 +1847,7 @@ resource "ibm_hardware_firewall_shared" "test_firewall" {
     hardware_instance_id="12345678"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #shared-fw-input}
@@ -1799,6 +1893,7 @@ resource "ibm_ipsec_vpn" "ipsec" {
     remote_subnet = [{Remote_ip_adress = "10.0.0.0",Remote_IP_CIDR = 22}]
     }
  ```
+ {: codeblock}
  
 ### Input parameters
 {: #ipsec-vpn-input}
@@ -1855,6 +1950,7 @@ resource "ibm_lb" "test_lb_local" {
   }
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #lb-input}
@@ -1936,6 +2032,7 @@ resource "ibm_lbaas" "lbaas" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #lbaas-input}
@@ -2032,6 +2129,7 @@ resource "ibm_lbaas_health_monitor" "lbaas_hm" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #health-monitor-input}
@@ -2123,6 +2221,7 @@ resource "ibm_lbaas_server_instance_attachment" "lbaas_member" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #instance-attachment-input}
@@ -2173,6 +2272,7 @@ resource "ibm_lb_service" "test_lb_local_service" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #lb-service-input}
@@ -2214,6 +2314,7 @@ resource "ibm_lb_service_group" "test_service_group" {
     allocation = 100
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #service-group-input}
@@ -2276,6 +2377,7 @@ resource "ibm_lb_vpx" "test_vpx" {
     private_subnet = "10.107.180.0/26"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #lb-vpx-input}
@@ -2356,6 +2458,7 @@ resource "ibm_lb_vpx_ha" "test_ha" {
     stay_secondary = false
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #lb-vpx-ha-input}
@@ -2407,6 +2510,7 @@ resource "ibm_lb_vpx_service" "test_service" {
   usip = "NO"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpx-svc-input}
@@ -2461,6 +2565,7 @@ resource "ibm_lb_vpx_vip" "testacc_vip" {
     type = "HTTP"
 }
 ```
+{: codeblock}
 
 The following example configuration supports only Netscaler VPX 10.5. More options for the `load_balancing_method` and `persistence` arguments are shown. A private IP address can be used for the `virtual_ip_address` argument.
 
@@ -2475,6 +2580,7 @@ resource "ibm_lb_vpx_vip" "testacc_vip" {
     type = "HTTP"
 }
 ```
+{: codeblock}
 
 Netscaler VPX 10.5 also supports SSL offload. If you set the `type` argument to `SSL` and configure the `security_certificate_id` argument, then the `virtual_ip_address` argument provides the `HTTPS` protocol. The following example shows an SSL-offload configuration:
 
@@ -2515,6 +2621,7 @@ resource "ibm_lb_vpx_service" "testacc_service1" {
   health_check = "ICMP"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #lb-vpx-vip-input}
@@ -2587,6 +2694,8 @@ resource "ibm_network_gateway" "gateway" {
   ]
 }
 ```
+{: codeblock}
+
 #### HA configuration
 
 ```
@@ -2630,6 +2739,7 @@ resource "ibm_network_gateway" "gateway" {
   ]
 }
 ```
+{: codeblock}
 
 
 ### Input parameters
@@ -2743,6 +2853,7 @@ resource "ibm_network_gateway_vlan_association" "gateway_vlan_association" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #network-vlan-associate-input}
@@ -2796,6 +2907,7 @@ resource "ibm_network_interface_sg_attachment" "sg1" {
     }
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #network-sg-attachment-input}
@@ -2839,6 +2951,7 @@ resource "ibm_network_public_ip" "test_public_ip " {
     notes     = "public ip notes"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #public-ip-input}
@@ -2906,6 +3019,7 @@ resource "ibm_network_vlan" "test_vlan" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vlan-input}
@@ -2969,6 +3083,7 @@ resource "ibm_network_vlan_spanning" "spanning" {
    "vlan_spanning" = "on"
 }`
 ```
+{: codeblock}
 
 
 ### Input parameters
@@ -3008,6 +3123,7 @@ Do not use this resource for managing the lifecycle of an Object Storage instanc
 resource "ibm_object_storage_account" "foo" {
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #os-account-input}
@@ -3043,6 +3159,7 @@ resource "ibm_security_group" "sg1" {
     description = "allow my app traffic"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #sec-group-input}
@@ -3088,6 +3205,7 @@ resource "ibm_security_group_rule" "allow_port_8080" {
     security_group_id = 123456
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #sec-group-rule-input}
@@ -3143,6 +3261,7 @@ resource "ibm_storage_block" "test1" {
         hourly_billing = true
 }
 ```
+{: codeblock}
 
 In the following example, you can create 20G of Performance block storage and 100 IOPS.
 
@@ -3160,6 +3279,7 @@ resource "ibm_storage_block" "test2" {
         hourly_billing = true
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #storage-block-input}
@@ -3216,6 +3336,7 @@ resource "ibm_storage_evault" "test" {
   virtual_instance_id = "62870765"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #storage-evault-input}
@@ -3307,6 +3428,7 @@ resource "ibm_storage_file" "fs_endurance" {
 }
 
 ```
+{: codeblock}
 
 In the following example, you can create 20G of Performance file storage with 100 IOPS.
 
@@ -3399,6 +3521,7 @@ resource "ibm_subnet" "portable_subnet" {
   }
 }
 ```
+{: codeblock}
 
 Users can use Terraform built-in functions to get IP addresses from `portable subnet`. The following example returns the first usable IP address of the portable subnet `test`.:
 
@@ -3418,6 +3541,7 @@ output "first_ip_address" {
 }
 
 ```
+{: codeblock}
 
 ### Example Usage of static subnet
 The following example creates a public static subnet which has four available IPv4 addresses:
@@ -3432,6 +3556,7 @@ resource "ibm_subnet" "static_subnet" {
   notes = "static_subnet_updated"
 }
 ```
+{: codeblock}
 
 Users can use Terraform built-in functions to get IP addresses from `subnet`. The following example returns the first usable IP address in the static subnet `test`:
 
@@ -3451,6 +3576,7 @@ output "first_ip_address" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #subnet-input}
@@ -3584,6 +3710,7 @@ resource "ibm_ssl_certificate" "my_ssllllll" {
 	order_approver_email_address= "admin@pune.in"	
 }
 ```
+{: codeblock}
 
 
 ### Input parameters

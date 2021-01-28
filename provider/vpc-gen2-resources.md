@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-22" 
+lastupdated: "2021-01-28" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -10,35 +10,95 @@ subcollection: ibm-cloud-provider-for-terraform
 
 ---
 
+{:DomainName: data-hd-keyref="APPDomain"}
+{:DomainName: data-hd-keyref="DomainName"}
+{:android: data-hd-operatingsystem="android"}
+{:api: .ph data-hd-interface='api'}
+{:apikey: data-credential-placeholder='apikey'}
+{:app_key: data-hd-keyref="app_key"}
+{:app_name: data-hd-keyref="app_name"}
+{:app_secret: data-hd-keyref="app_secret"}
+{:app_url: data-hd-keyref="app_url"}
+{:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: data-hd-programlang="c#"}
+{:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
+{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
+{:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
+{:generic: data-hd-operatingsystem="generic"}
+{:generic: data-hd-programlang="generic"}
 {:gif: data-image-type='gif'}
+{:go: .ph data-hd-programlang='go'}
 {:help: data-hd-content-type='help'}
+{:hide-dashboard: .hide-dashboard}
+{:hide-in-docs: .hide-in-docs}
 {:important: .important}
+{:ios: data-hd-operatingsystem="ios"}
+{:java: .ph data-hd-programlang='java'}
+{:java: data-hd-programlang="java"}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:javascript: data-hd-programlang="javascript"}
 {:new_window: target="_blank"}
+{:note .note}
 {:note: .note}
+{:objectc data-hd-programlang="objectc"}
+{:org_name: data-hd-keyref="org_name"}
+{:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
+{:python: .ph data-hd-programlang='python'}
+{:python: data-hd-programlang="python"}
+{:route: data-hd-keyref="route"}
+{:row-headers: .row-headers}
+{:ruby: .ph data-hd-programlang='ruby'}
+{:ruby: data-hd-programlang="ruby"}
+{:runtime: architecture="runtime"}
+{:runtimeIcon: .runtimeIcon}
+{:runtimeIconList: .runtimeIconList}
+{:runtimeLink: .runtimeLink}
+{:runtimeTitle: .runtimeTitle}
 {:screen: .screen}
+{:script: data-hd-video='script'}
+{:service: architecture="service"}
+{:service_instance_name: data-hd-keyref="service_instance_name"}
+{:service_name: data-hd-keyref="service_name"}
 {:shortdesc: .shortdesc}
+{:space_name: data-hd-keyref="space_name"}
+{:step: data-tutorial-type='step'}
+{:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift-ios: .ph data-hd-programlang='iOS Swift'}
+{:swift-server: .ph data-hd-programlang='server-side Swift'}
+{:swift: .ph data-hd-programlang='swift'}
+{:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
+{:term: .term}
 {:tip: .tip}
+{:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
-{:step: data-tutorial-type='step'}
+{:tutorial: data-hd-content-type='tutorial'}
+{:ui: .ph data-hd-interface='ui'}
+{:unity: .ph data-hd-programlang='unity'}
+{:url: data-credential-placeholder='url'}
+{:user_ID: data-hd-keyref="user_ID"}
+{:vbnet: .ph data-hd-programlang='vb.net'}
+{:video: .video}
+
 
 
 # VPC infrastructure resources
 {: #vpc-gen2-resources}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_is_flow_log`
@@ -337,6 +397,7 @@ resource "ibm_is_instance" "testacc_instance" {
   }
 }
 ```
+{: codeblock}
 
 #### Example for creating an instance with custom security group rules
 {: #custom-sec-group-rules}
@@ -581,6 +642,7 @@ resource "ibm_is_instance_group" "instance_group" {
   }
 }
 ```
+{: codeblock}
 
 
 ### Input parameters
@@ -704,6 +766,7 @@ resource "ibm_is_instance_group_manager" "instance_group_manager" {
   min_membership_count = 1
 }
 ```
+{: codeblock}
 
 
 ### Input parameters
@@ -825,7 +888,7 @@ resource "ibm_is_instance_group_manager_policy" "cpuPolicy" {
   name                   = "testpolicy"
 }
 ```
-
+{: codeblock}
 
 
 ### Input parameters
@@ -918,6 +981,8 @@ resource "ibm_is_instance_template" "instancetemplate1" {
   }
 }
 ```
+{: codeblock}
+
 ### Input parameters
 {: #vpc-is-instance-template-input}
 
@@ -1044,6 +1109,7 @@ resource "ibm_is_image" "test_is_images" {
  encryption_key         = "crn:v1:bluemix:public:kms:us-south:a/6xxxxxxxxxxxxxxx:xxxxxxx-xxxx-xxxx-xxxxxxx:key:dxxxxxx-fxxx-4xxx-9xxx-7xxxxxxxx"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #image-input}
@@ -1117,6 +1183,8 @@ resource "ibm_is_lb" "lb" {
   profile = "network-fixed"
 }
 ```
+{: codeblock}
+
 ### Input parameters
 {: #lb-input}
 
@@ -1212,6 +1280,7 @@ resource "ibm_is_lb_pool_member" "webapptier-lb-pool-member-zone1" {
   depends_on     = [ibm_is_lb_listener.testacc_lb_listener]
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #lb-listener-input}
@@ -1502,6 +1571,7 @@ resource "ibm_is_lb_pool" "testacc_pool" {
   health_type    = "http"
 }
 ```
+{: codeblock}
 
 ### Sample Terraform code to create a Load Balancer pool with HTTPS protocol.
 {: #lb-pool-https-sample2}
@@ -1518,6 +1588,7 @@ resource "ibm_is_lb_pool" "testacc_pool" {
   health_type    = "https"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #lb-pool-input}
@@ -1590,6 +1661,8 @@ resource "ibm_is_lb_pool_member" "testacc_lb_mem" {
   weight         = 60
 }
 ```
+{: codeblock}
+
 In the following example, you can create a load balancer pool member for network load balancer:
 
 ```
@@ -1601,6 +1674,8 @@ resource "ibm_is_lb_pool_member" "testacc_lb_mem" {
   weight         = 60
 }
 ```
+{: codeblock}
+
 ### Input parameters
 {: #lb-pool-member-input}
 
@@ -1691,6 +1766,7 @@ resource "ibm_is_network_acl" "isExampleACL" {
   }
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #network-acl-input}
@@ -1845,6 +1921,7 @@ resource "ibm_is_security_group" "testacc_security_group" {
 	vpc = ibm_is_vpc.testacc_vpc.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #sec-group-input}
@@ -1952,6 +2029,7 @@ resource "ibm_is_security_group_rule" "testacc_security_group_rule_all" {
 	}
  }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #sec-group-rule-input}
@@ -2015,6 +2093,7 @@ resource "ibm_is_security_group_network_interface_attachment" "sgnic" {
   network_interface = "6d6128aa-badc-45c4-bb0e-7c2c1c47be55"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #sec-group-netint-input}
@@ -2082,6 +2161,7 @@ resource "ibm_is_ssh_key" "isExampleKey" {
 	public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCKVmnMOlHKcZK8tpt3MP1lqOLAcqcJzhsvJcjscgVERRN7/9484SOBJ3HSKxxNG5JN8owAjy5f9yYwcUg+JaUVuytn5Pv3aeYROHGGg+5G346xaq3DAwX6Y5ykr2fvjObgncQBnuU5KHWCECO/4h8uWuwh/kfniXPVjFToc+gnkqA+3RKpAecZhFXwfalQ9mMuYGFxn+fwn8cYEApsJbsEmb0iJwPiZ5hjFC8wREuiTlhPHDgkBLOiycd20op2nXzDbHfCHInquEe/gYxEitALONxm0swBOwJZwlTDOB7C6y2dzlrtxr1L59m7pCkWI4EtTRLvleehBoj3u7jB4usR"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #ssh-key-input}
@@ -2154,6 +2234,7 @@ resource "ibm_is_subnet" "testacc_subnet" {
   }
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #subnet-input}
@@ -2164,7 +2245,7 @@ Review the input parameters that you can specify for your resource.
 |Name|Data type|Required / optional|Description|Forces new resource |
 |----|-----------|-----------|---------------------|-------|
 |`ipv4_cidr_block`|String|Optional|The IPv4 range of the subnet.| Yes |
-|`total_ipv4_address_count`|String|Optional|The total number of IPv4 addresses. Either `ipv4_cid_block` or `total_pv4_address_count` input parameters must be provided in the resource.| Yes |
+|`total_ipv4_address_count`|String|Optional|The total number of IPv4 addresses. Either `ipv4_cidr_block` or `total_pv4_address_count` input parameters must be provided in the resource.| Yes |
 |`ip_version`|String|Optional|The IP Version. The default is `ipv4`.| Yes |
 |`name`|String|Required| The name of the subnet.| No |
 |`network_acl`|String|Optional|The ID of the network ACL for the subnet.| No |
@@ -2270,6 +2351,7 @@ resource "ibm_is_subnet_network_acl_attachment" attach {
   network_acl = ibm_is_network_acl.isExampleACL.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #subnet-network-input}
@@ -2392,6 +2474,7 @@ resource "ibm_is_virtual_endpoint_gateway" "endpoint_gateway3" {
 	resource_group = data.ibm_resource_group.test_acc.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #virtual-endpoint-gwy-input}
@@ -2463,6 +2546,7 @@ resource "ibm_is_virtual_endpoint_gateway_ip" "virtual_endpoint_gateway_ip" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #virtual-endpoint-gwyip-input}
@@ -2529,6 +2613,7 @@ resource "ibm_is_volume" "testacc_volume" {
 }
 
 ```
+{: codeblock}
 
 The following example creates a custom volume. 
 
@@ -2541,6 +2626,7 @@ resource "ibm_is_volume" "testacc_volume" {
   capacity = 200
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #volume-input}
@@ -2684,6 +2770,7 @@ resource "ibm_is_vpc_address_prefix" "testacc_vpc_address_prefix" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #address-prefix-input}
@@ -2744,6 +2831,7 @@ resource "ibm_is_vpc_route" "myroute" {
   next_hop    = "10.0.0.4"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-route-input}
@@ -2810,6 +2898,7 @@ resource "ibm_is_vpc_routing_table" "test_ibm_is_vpc_routing_table" {
         route_vpc_zone_ingress = false
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-routing-table-input}
@@ -2881,6 +2970,7 @@ resource "ibm_is_vpc_routing_table_route" "test_ibm_is_vpc_routing_table_route" 
   next_hop    = "10.0.0.4"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-routing-table-route-input}
@@ -2939,6 +3029,7 @@ resource "ibm_is_vpn_gateway" "testacc_vpn_gateway" {
   subnet = "a1aa111a-a11a-1111-11aa-111a1aa1aaa1"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpn-gateway-input}
@@ -3002,6 +3093,7 @@ resource "ibm_is_vpn_gateway_connection" "VPNGatewayConnection" {
   peer_cidrs = [ibm_is_subnet.testacc_subnet1.ipv4_cidr_block]
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpn-gateway-connection-input}
