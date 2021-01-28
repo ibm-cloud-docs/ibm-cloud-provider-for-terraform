@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-25"
+lastupdated: "2021-01-28"
 
 keywords: terraform provider, terraform provider private endpoint, private endpoint
 
@@ -10,29 +10,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 ---
 
-{:beta: .beta}
-{:codeblock: .codeblock}
-{:deprecated: .deprecated}
-{:download: .download}
-{:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
-{:gif: data-image-type='gif'}
-{:help: data-hd-content-type='help'}
-{:important: .important}
-{:new_window: target="_blank"}
-{:note: .note}
-{:pre: .pre}
-{:preview: .preview}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:support: data-reuse='support'}
-{:table: .aria-labeledby="caption"}
-{:tip: .tip}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:tsSymptoms: .tsSymptoms}
-{:step: data-tutorial-type='step'}
+{[METADATA_ATTRIBUTES]}
 
 
 # Configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform to use the Cloud Service Endpoint
@@ -66,12 +44,12 @@ terraform init
 |IAM|`IBMCLOUD_IAM_API_ENDPOINT`|N/A|
 |`IAMPAP`|`IBMCLOUD_IAMPAP_API_ENDPOINT`|N/A|
 |ICD|`IBMCLOUD_ICD_API_ENDPOINT`|[Docs](/docs/account?topic=account-vrf-service-endpoint)|
-|Key protect|`IBMCLOUD_KP_API_ENDPOINT`|`https://private.<region>.kms.cloud.ibm.com`|
+|Key protect|`IBMCLOUD_KP_API_ENDPOINT`|[Docs](/key-protect?topic=key-protect-private-endpoints)|
 |Private DNS|`IBMCLOUD_PRIVATE_DNS_API_ENDPOINT`| N/A|
 |Resource management|`IBMCLOUD_RESOURCE_MANAGEMENT_API_ENDPOINT`|N/A|
 |Resource controller|`IBMCLOUD_RESOURCE_CONTROLLER_API_ENDPOINT`|N/A|
 |Resource catalog|`IBMCLOUD_RESOURCE_CATALOG_API_ENDPOINT`|N/A|
-|Schematics|`IBMCLOUD_SCHEMATICS_API_ENDPOINT`|`https://private-us.schematics.cloud.ibm.com` <br> `https://private-eu.schematics.cloud.ibm.com`|
+|Schematics|`IBMCLOUD_SCHEMATICS_API_ENDPOINT`|[Docs](/docs/schematics?topic=schematics-private-endpoints)|
 |Transit Gateway|`IBMCLOUD_TG_API_ENDPOINT`| N/A|
 |UAA|`IBMCLOUD_UAA_ENDPOINT`|N/A|
 |User management|`IBMCLOUD_USER_MANAGEMENT_ENDPOINT`|N/A|

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-25"
+lastupdated: "2021-01-28"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -10,29 +10,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 ---
 
-{:beta: .beta}
-{:codeblock: .codeblock}
-{:deprecated: .deprecated}
-{:download: .download}
-{:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
-{:gif: data-image-type='gif'}
-{:help: data-hd-content-type='help'}
-{:important: .important}
-{:new_window: target="_blank"}
-{:note: .note}
-{:pre: .pre}
-{:preview: .preview}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:support: data-reuse='support'}
-{:table: .aria-labeledby="caption"}
-{:tip: .tip}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:tsSymptoms: .tsSymptoms}
-{:step: data-tutorial-type='step'}
+{[METADATA_ATTRIBUTES]}
 
 
 
@@ -174,10 +152,10 @@ Terraform uses the {{site.data.keyword.cloud_notm}} Provider plug-in to securely
 {: shortdesc}
 
 **What credentials do I need?**</br>
-The credentials that you need depend on the type of resource that you want to provision. For example, to provision classic infrastructure resources, you must provide your {{site.data.keyword.cloud_notm}} classic infrastructure user name and API key. To provision VPC infrastructure, you need an {{site.data.keyword.cloud_notm}} API key. For more information, about what credentials you need for a specific {{site.data.keyword.cloud_notm}} resource, see [Required input parameters for each resource category](/docs/terraform?topic=terraform-provider-reference#required-parameters).
+The credentials that you need depend on the type of resource that you want to provision. For example, to provision classic infrastructure resources, you must provide your {{site.data.keyword.cloud_notm}} classic infrastructure user name and API key. To provision VPC infrastructure, you need an {{site.data.keyword.cloud_notm}} API key. For more information, about what credentials you need for a specific {{site.data.keyword.cloud_notm}} resource, see [Required input parameters for each resource category](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters).
 
 **Where can I find an overview of available resources?**</br>
-To find a full list of {{site.data.keyword.cloud_notm}} resources that you can provision with the {{site.data.keyword.cloud_notm}} Provider plug-in, see the [Index of  resources and data sources](/docs/terraform?topic=terraform-index-of-ibm-cloud-provider-plug-in-for-terraform-resources-and-data-sources) supported by the {{site.data.keyword.cloud}} Provider plug-in for Terraform.
+To find a full list of {{site.data.keyword.cloud_notm}} resources that you can provision with the {{site.data.keyword.cloud_notm}} Provider plug-in, see the [Index of  resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-ibm-cloud-provider-plug-in-for-terraform-resources-and-data-sources) supported by the {{site.data.keyword.cloud}} Provider plug-in for Terraform.
 
 1. Create a folder on your local machine for your first Terraform project and navigate into the folder. This folder is used to store all configuration files and variable definitions. 
 
@@ -300,7 +278,7 @@ Keep in mind that a VPC virtual server instance is an {{site.data.keyword.cloud_
 
 Before you begin: 
 - [Install the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform](#install). 
-- [Retrieve your {{site.data.keyword.cloud_notm}} credentials, upload an SSH key, and configure the {{site.data.keyword.cloud_notm}} Provider plug-in forTerraform provider plug-in](/docs/terraform?topic=terraform-getting-started#cloud_provider_config). 
+- [Retrieve your {{site.data.keyword.cloud_notm}} credentials, upload an SSH key, and configure the {{site.data.keyword.cloud_notm}} Provider plug-in forTerraform provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#cloud_provider_config). 
 
 To create a VPC and a virtual server instance: 
 
@@ -308,7 +286,7 @@ To create a VPC and a virtual server instance:
 
 2. In the same directory where you stored the `terraform.tfvars` and `provider.tf` files, create an Terraform configuration file and name it `vpc.tf`. The configuration file includes the following definition blocks: 
    - **locals**: Use this block to specify variables that you want to use multiple times throughout this configuration file. 
-   - **resource**: Every resource block specifies the {{site.data.keyword.cloud_notm}} resource that you want to provision. To find more information about supported configurations for each resource, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/terraform?topic=terraform-setup_cli#configure_provider).
+   - **resource**: Every resource block specifies the {{site.data.keyword.cloud_notm}} resource that you want to provision. To find more information about supported configurations for each resource, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider).
    - **data**: Use this block to retrieve information for an existing resource in your {{site.data.keyword.cloud_notm}} account. 
    - **output**: This block specifies commands that you want to run after your resources are provisioned. 
    
@@ -808,7 +786,7 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
    <tbody>
    <tr>
    <td><code>resource</code></td>
-   <td>Required: The name of the {{site.data.keyword.cloud_notm}} resource that you want to provision. To provision a classic infrastructure virtual server instance, use <code>ibm_compute_vm_instance</code>. To find a list of other resources that you can provision, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/terraform?topic=terraform-setup_cli#configure_provider).  </td>
+   <td>Required: The name of the {{site.data.keyword.cloud_notm}} resource that you want to provision. To provision a classic infrastructure virtual server instance, use <code>ibm_compute_vm_instance</code>. To find a list of other resources that you can provision, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider).  </td>
    </tr>
    <tr>
    <td><code>vm1</code></td>
@@ -1060,4 +1038,4 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
 
 **What's next?** </br>
 
-[Explore other {{site.data.keyword.cloud_notm}} resources](/docs/terraform?topic=terraform-setup_cli#configure_provider) that you can provision with Terraform. 
+[Explore other {{site.data.keyword.cloud_notm}} resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider) that you can provision with Terraform. 

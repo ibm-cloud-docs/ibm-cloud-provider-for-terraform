@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-22" 
+lastupdated: "2021-01-28" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -10,35 +10,13 @@ subcollection: ibm-cloud-provider-for-terraform
 
 ---
 
-{:beta: .beta}
-{:codeblock: .codeblock}
-{:deprecated: .deprecated}
-{:download: .download}
-{:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
-{:gif: data-image-type='gif'}
-{:help: data-hd-content-type='help'}
-{:important: .important}
-{:new_window: target="_blank"}
-{:note: .note}
-{:pre: .pre}
-{:preview: .preview}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:support: data-reuse='support'}
-{:table: .aria-labeledby="caption"}
-{:tip: .tip}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:tsSymptoms: .tsSymptoms}
-{:step: data-tutorial-type='step'}
+{[METADATA_ATTRIBUTES]}
 
 
 # VPC infrastructure resources
 {: #vpc-gen2-resources}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_is_flow_log`

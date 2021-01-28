@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-22"
+lastupdated: "2021-01-28"
 
 keywords: terraform provider plugin, terraform gen 2, terraform gen 2 compute
 
@@ -10,35 +10,13 @@ subcollection: ibm-cloud-provider-for-terraform
 
 ---
 
-{:beta: .beta}
-{:codeblock: .codeblock}
-{:deprecated: .deprecated}
-{:download: .download}
-{:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
-{:gif: data-image-type='gif'}
-{:help: data-hd-content-type='help'}
-{:important: .important}
-{:new_window: target="_blank"}
-{:note: .note}
-{:pre: .pre}
-{:preview: .preview}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:support: data-reuse='support'}
-{:table: .aria-labeledby="caption"}
-{:tip: .tip}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:tsSymptoms: .tsSymptoms}
-{:step: data-tutorial-type='step'}
+{[METADATA_ATTRIBUTES]}
 
 
 # VPC infrastructure data sources 
 {: #vpc-gen2-data-sources}
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}.
@@ -355,14 +333,23 @@ Retrieve the details for all Gen 2 {{site.data.keyword.vsi_is_short}} instances 
 ```
 data "ibm_is_instances" "ds_instances" {
 }
+
+data "ibm_is_instances" "ds_instances1" {
+  vpc_name = "testacc_vpc"
+}
 ```
 {: codeblock}
 
 ### Input parameters
 {: #instances-input}
 
-This data source does not support any input parameters.
+The input parameters that you need to specify for the data source. 
 {: shortdesc}
+
+| Input parameter | Data type |Required / optional | Description |
+| ------------- |-------------| --------------|-------------- |
+|`vpc_name`|String|Optional|The name of the VPC to filter the instances attached.|
+|`vpc`|String|Optional|The VPC ID to filter the instances attached.|
 
 ### Output parameters
 {: #instances-output}
@@ -635,6 +622,7 @@ Review the output parameters that you can access after you retrieved your data s
 |Name|Data type|Description|
 |----|-----------|-------------|
 |`family`|String|The family of the virtual server instance profile.|
+|`architecture`|String|The default Operating System architecture for an instance of the profile.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 
@@ -670,6 +658,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`profiles`|List of objects|List of all server instance profiles in the region.  |
 |`profiles.name`|String|The name for this virtual server instance profile.  |
 |`profiles.family`|String|The family of the virtual server instance profile.|
+|`profiles.architecture`|String|The default Operating System architecture for an instance of the profile.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 

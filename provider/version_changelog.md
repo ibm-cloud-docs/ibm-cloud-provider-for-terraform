@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2021
-lastupdated: "2021-01-22"
+lastupdated: "2021-01-28"
 
 keywords: terraform, terraform provider release, terraform provider versions
 
@@ -10,29 +10,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 ---
 
-{:beta: .beta}
-{:codeblock: .codeblock}
-{:deprecated: .deprecated}
-{:download: .download}
-{:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
-{:gif: data-image-type='gif'}
-{:help: data-hd-content-type='help'}
-{:important: .important}
-{:new_window: target="_blank"}
-{:note: .note}
-{:pre: .pre}
-{:preview: .preview}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:support: data-reuse='support'}
-{:table: .aria-labeledby="caption"}
-{:tip: .tip}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:tsSymptoms: .tsSymptoms}
-{:step: data-tutorial-type='step'}
+{[METADATA_ATTRIBUTES]}
 
 
 # Version changelog
@@ -40,6 +18,29 @@ subcollection: ibm-cloud-provider-for-terraform
 
 View information for updates to the Terraform.
 {:shortdesc}
+
+## Changelog for 1.20.1, released 27 January 2021
+{: #changelog-v1201}
+
+The following table shows the changes that are included in version 1.20.1 of the Terraform.
+{: shortdesc}
+
+| Previous | Current | Description |
+| -------- | ------- | ----------- |
+| 1.20.0 | 1.20.1 |[See the release notes for the Terraform version 1.20.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.20.1){: external}.|
+{: caption="Terraform provider 1.20.1" caption-side="top"}
+
+## Changelog for 1.20.0, released 25 January 2021
+{: #changelog-v1200}
+
+The following table shows the changes that are included in version 1.20.0 of the Terraform.
+{: shortdesc}
+
+| Previous | Current | Description |
+| -------- | ------- | ----------- |
+| 1.19.0 | 1.20.0 |[See the release notes for the Terraform version 1.20.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.20.0){: external}.|
+{: caption="Terraform provider 1.20.0" caption-side="top"}
+
 
 ## Changelog for 1.19.0, released 9 January 2021
 {: #changelog-v1190}

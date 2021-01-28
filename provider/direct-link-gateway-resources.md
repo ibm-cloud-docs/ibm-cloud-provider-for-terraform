@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-22"
+lastupdated: "2021-01-28"
 
 keywords:  terraform provider plugin, direct link gateway, terraform direct link gateway, terraform direct link gateway data sources
 
@@ -11,29 +11,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 ---
 
-{:beta: .beta}
-{:codeblock: .codeblock}
-{:deprecated: .deprecated}
-{:download: .download}
-{:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
-{:gif: data-image-type='gif'}
-{:help: data-hd-content-type='help'}
-{:important: .important}
-{:new_window: target="_blank"}
-{:note: .note}
-{:pre: .pre}
-{:preview: .preview}
-{:screen: .screen}
-{:shortdesc: .shortdesc}
-{:support: data-reuse='support'}
-{:table: .aria-labeledby="caption"}
-{:tip: .tip}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:tsSymptoms: .tsSymptoms}
-{:step: data-tutorial-type='step'}
+{[METADATA_ATTRIBUTES]}
 
 
 # Direct Link Gateway resources
@@ -42,7 +20,7 @@ subcollection: ibm-cloud-provider-for-terraform
 Use {{site.data.keyword.cloud_notm}} [Direct Link](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl) to seamlessly connect your on-premises resources to your cloud resources. The speed and reliability of direct link extends your organization’s data center network. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}.
 {: shordesc}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/terraform?topic=terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 ## `ibm_dl_gateway`
@@ -167,6 +145,86 @@ The `ibm_dl_gateway` can be imported by using gateway ID.
 terraform import ibm_dl_gateway.example 5ffda12064634723b079acdb018ef308
 ```
 {: pre}
+
+## `ibm_dl_provider_gateway`
+{: #dl-provider-gwy}
+
+Create, update, or delete a direct link provider gateway by using the direct link gateway resource. For more information, refer to [about Direct Link](/docs/dl?topic=dl-dl-about#use-case-connect).
+{: shortdesc}
+
+### Sample Terraform code to create direct link of dedicated type
+{: #dl-gwy-sample}
+
+In the following example, you can create direct link provider gateway:
+
+```
+resource ibm_dl_provider_gateway test_dl_provider_gateway {
+  bgp_asn =  64999
+  bgp_ibm_cidr =  "169.254.0.29/30"
+  bgp_cer_cidr =  "169.254.0.30/30"
+  name = "Gateway1"
+  speed_mbps = 1000 
+  port = "434-c749-4f1d-b190-22"
+  customer_account_id = "0c474da-c749-4f1d-b190-2333"
+} 
+```
+{: pre}
+
+### Input parameters
+{: #dl-provider-gwy-input}
+
+Review the input parameters that you can specify for your resource. 
+{: shortdesc}
+
+|Input parameter |Data type|Required / optional|Description| Forces new resource |
+|----|-----------|-----------|---------------------| --------|
+|`bgp_asn`|Integer|Required|The BGP ASN of the gateway to be created. For example, `64999`.| Yes |
+|`bgp_cer_cidr`|String|Optional|The BGP customer edge router CIDR. Specify a value within bgp_base_cidr. If bgp_base_cidr is `169.254.0.0/16`, this parameter can exclude and a CIDR is selected automatically. For example, `10.254.30.78/30`.| Yes |
+|`bgp_ibm_cidr`|String|Optional|The {{site.data.keyword.IBM_notm}} BGP CIDR. Specify a value within bgp_base_cidr. If bgp_base_cidr is `169.254.0.0/16`, this parameter can exclude and a CIDR is selected automatically. For example, `10.254.30.77/30`.| Yes |
+|`customer_account_id`|String|Required|The customer {{site.data.keyword.cloud_notm}} account ID for the new gateway. A gateway object contains the pending create request to be available in the specified account.| Yes |
+|`name`|String|Required|The unique user-defined name for this gateway. Example: `myGateway`| No |
+|`port`|String|Required|The gateway port for type to connect gateways. | Yes |
+|`speed_mbps`|Integer|Required|The gateway speed in megabits per second. For example, `10.254.30.78/30`.| No |
+
+
+### Output parameters
+{: #dl-provider-gwy-output}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+|Output parameter|Data type|Description|
+|----|-----------|--------|
+|`id`|String|The unique ID of the gateway.|
+|`name`|String|The unique user-defined name for the gateway |
+|`crn`|String|The CRN of the gateway.|
+|`created_at`|String|The date and time resource created.|
+|`location_display_name`|String|The gateway location long name.|
+|`resource_group`|String|The resource group reference.|
+|`bgp_asn`|String|The IBM BGP ASN.|
+|`bgp_status`|String|The gateway BGP status.|
+customer_account_id - Customer IBM Cloud account ID for the new gateway. A gateway object containing the pending create request will become available in the specified account.
+|`customer_account_id`|String|The customer {{site.data.keyword.cloud_notm}} account ID for the new gateway. A gateway object contains the pending create request to be available in the specified account.|
+|`link_status`|String|The gateway link status. You can include only on `type=dedicated` gateways. For example, `down`, `up`.|
+|`port`|String|The gateway port for `type=connect` gateways.|
+|`vlan`|String|The VLAN allocated for the gateway. You can set only for `type=connect` gateways created directly through the {{site.data.keyword.IBM_notm}} portal.|
+|`provider_api_managed`|String|Indicates whether the gateway changes need to be made via a provider portal.|
+|`operational_status`|String|The gateway operational status. Supported values are`configuring`, `create_pending`, `create_rejected`, `delete_pending`, `provisioned`.|
+|`provider_api_managed`|String|Indicates whether the gateway changes must be made through a provider portal.|
+
+
+### Import
+{: #dl-provider-gwy-import}
+
+The `ibm_dl_provider_gateway` can be imported by using gateway ID. 
+
+**Example**
+
+```
+terraform import ibm_dl_provider_gateway.test_dl_provider_gateway 5ffda12064634723b079acdb018ef308
+```
+{: pre}
+
 
 ## `ibm_dl_virtual_connection`
 {: #dl-vc}
