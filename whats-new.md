@@ -28,6 +28,25 @@ subcollection: ibm-cloud-provider-for-terraform
 
 Learn about the latest changes to the Terraform service that are grouped by month.
 
+## 28 January 2021
+{: #28-january-2021}
+
+<table>
+    <thead>
+    <th style="width:80px">New resources</th>
+    <th style="width:80px">New data sources</th>
+    <th style="width:500px">Enhancements</th>
+    </thead>
+  <tbody>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[ibm_dl_provider_gateway](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-container-resources#container-api-key-reset)</li><li style="margin:0px; padding:0px">[ibm_cr_namespace](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-container-resources#cr-namespace)</li><li style="margin:0px; padding:0px">[ibm_iam_service_api_key](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-iam-resources#iam-service-api-key)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[ibm_dl_provider_gateways](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-container-data-sources#cr-namespaces-ds)</li><li style="margin:0px; padding:0px">[ibm_dl_provider_ports](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-container-data-sources#cr-namespaces-ds)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">Support `api_key_id`, `api_key_owner_name`, and `api_key_owner_email` attributes for [ibm_container_cluster resource](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-container-data-sources#container-cluster-output)</li><li style="margin:0px; padding:0px">Support `crn` in target attribute for VPC virtual endpoint for [ibm_is_virtual_endpoint_gateway](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-resources#virtual-endpoint-gwy-input)</li><li style="margin:0px; padding:0px">Updated an example for [ibm_container_addons resource](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-container-resources#container-addons)</li><li style="margin:0px; padding:0px">Updated next-hop attribute as required for [ibm_is_vpc_route](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-resources#vpc-route-input)</li><li style="margin:0px; padding:0px">Latest version change log for [IBM Cloud provider](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1190)</li></ul></td>
+    </tr>
+  </tbody>
+  </table>
+
+
 ## 13 January 2021
 {: #13-january-2021}
 
