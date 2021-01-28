@@ -109,7 +109,7 @@ The following table shows the changes that are included in version 1.20.1 of the
 
 | Previous | Current | Description |
 | -------- | ------- | ----------- |
-| 1.20.0 | 1.20.1 |[See the release notes for the Terraform version 1.20.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.20.1){: external}.|
+| 1.20.0 | 1.20.1 |[See the release notes for the Terraform version 1.20.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.20.1){: external}.|
 {: caption="Terraform provider 1.20.1" caption-side="top"}
 
 ## Changelog for 1.20.0, released 25 January 2021
