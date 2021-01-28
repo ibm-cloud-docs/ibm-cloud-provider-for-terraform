@@ -2093,6 +2093,7 @@ resource "ibm_is_security_group_network_interface_attachment" "sgnic" {
   network_interface = "6d6128aa-badc-45c4-bb0e-7c2c1c47be55"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #sec-group-netint-input}
@@ -2160,6 +2161,7 @@ resource "ibm_is_ssh_key" "isExampleKey" {
 	public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCKVmnMOlHKcZK8tpt3MP1lqOLAcqcJzhsvJcjscgVERRN7/9484SOBJ3HSKxxNG5JN8owAjy5f9yYwcUg+JaUVuytn5Pv3aeYROHGGg+5G346xaq3DAwX6Y5ykr2fvjObgncQBnuU5KHWCECO/4h8uWuwh/kfniXPVjFToc+gnkqA+3RKpAecZhFXwfalQ9mMuYGFxn+fwn8cYEApsJbsEmb0iJwPiZ5hjFC8wREuiTlhPHDgkBLOiycd20op2nXzDbHfCHInquEe/gYxEitALONxm0swBOwJZwlTDOB7C6y2dzlrtxr1L59m7pCkWI4EtTRLvleehBoj3u7jB4usR"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #ssh-key-input}
@@ -2232,6 +2234,7 @@ resource "ibm_is_subnet" "testacc_subnet" {
   }
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #subnet-input}
@@ -2348,6 +2351,7 @@ resource "ibm_is_subnet_network_acl_attachment" attach {
   network_acl = ibm_is_network_acl.isExampleACL.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #subnet-network-input}
@@ -2470,6 +2474,7 @@ resource "ibm_is_virtual_endpoint_gateway" "endpoint_gateway3" {
 	resource_group = data.ibm_resource_group.test_acc.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #virtual-endpoint-gwy-input}
@@ -2541,6 +2546,7 @@ resource "ibm_is_virtual_endpoint_gateway_ip" "virtual_endpoint_gateway_ip" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #virtual-endpoint-gwyip-input}
@@ -2607,6 +2613,7 @@ resource "ibm_is_volume" "testacc_volume" {
 }
 
 ```
+{: codeblock}
 
 The following example creates a custom volume. 
 
@@ -2619,6 +2626,7 @@ resource "ibm_is_volume" "testacc_volume" {
   capacity = 200
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #volume-input}
@@ -2762,6 +2770,7 @@ resource "ibm_is_vpc_address_prefix" "testacc_vpc_address_prefix" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #address-prefix-input}
@@ -2822,6 +2831,7 @@ resource "ibm_is_vpc_route" "myroute" {
   next_hop    = "10.0.0.4"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-route-input}
@@ -2888,6 +2898,7 @@ resource "ibm_is_vpc_routing_table" "test_ibm_is_vpc_routing_table" {
         route_vpc_zone_ingress = false
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-routing-table-input}
@@ -2959,6 +2970,7 @@ resource "ibm_is_vpc_routing_table_route" "test_ibm_is_vpc_routing_table_route" 
   next_hop    = "10.0.0.4"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-routing-table-route-input}
@@ -3017,6 +3029,7 @@ resource "ibm_is_vpn_gateway" "testacc_vpn_gateway" {
   subnet = "a1aa111a-a11a-1111-11aa-111a1aa1aaa1"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpn-gateway-input}
@@ -3080,6 +3093,7 @@ resource "ibm_is_vpn_gateway_connection" "VPNGatewayConnection" {
   peer_cidrs = [ibm_is_subnet.testacc_subnet1.ipv4_cidr_block]
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpn-gateway-connection-input}
