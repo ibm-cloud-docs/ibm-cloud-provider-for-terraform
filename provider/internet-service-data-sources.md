@@ -120,6 +120,7 @@ data "ibm_cis" "cis_instance" {
   name              = "myinstance"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-input}
@@ -160,6 +161,8 @@ data "ibm_cis_certificates" "test" {
   domain_id = ibm_cis_domain.example.id
 }
 ```
+{: codeblock}
+
 ### Input parameters
 {: #cis-certificates-dsinput}
 
@@ -209,6 +212,8 @@ data "ibm_cis_custom_certificates" "custom_certificates" {
     domain_id = data.ibm_cis_domain.cis_domain.domain_id
 }
 ```
+{: codeblock}
+
 ### Input parameters
 {: #cis-custom-certificates-dsinput}
 
@@ -258,6 +263,7 @@ data "ibm_cis_custom_pages" "custom_pages" {
     domain_id = data.ibm_cis_domain.cis_domain.domain_id
 }
 ```
+{: codeblock}
 
 ### Output parameters
 {: #cis-custom-pages-output}
@@ -299,6 +305,7 @@ data "ibm_cis_dns_records" "test" {
   file      = "records.txt"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-dns-record-dsinput}
@@ -356,6 +363,7 @@ data "ibm_cis" "cis_instance" {
   name = "myinstance"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-domain-input}
@@ -400,6 +408,7 @@ data "ibm_cis_edge_functions_actions" "test_actions" {
     domain_id = data.ibm_cis_domain.cis_domain.domain_id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-edge-functions-actions-dsinput}
@@ -449,6 +458,7 @@ data "ibm_cis_edge_functions_triggers" "test_triggers" {
     domain_id = data.ibm_cis_domain.cis_domain.domain_id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-edge-functions-triggers-dsinput}
@@ -490,6 +500,8 @@ data "ibm_cis_firewall" "lockdown" {
   firewall_type = "lockdowns"
 }
 ```
+{: codeblock}
+
 IBM Terraform provider supports only lock down rules.
 {: note}
 
@@ -559,6 +571,7 @@ data "ibm_cis_global_load_balancers" "test" {
   domain_id = var.zone_id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-global-lb-dsinput}
@@ -614,6 +627,7 @@ data "ibm_cis_glb_health_checks" "test" {
   cis_id = var.cis_crn
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-healthchecks-input}
@@ -667,6 +681,7 @@ The following example retrieves information about IP addresses that {{site.data.
 data "ibm_cis_ip_addresses" "cisname" {
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-ip-input}
@@ -698,6 +713,7 @@ data "ibm_cis_origin_pools" "test" {
   cis_id = var.cis_crn
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #origin-pools-input}

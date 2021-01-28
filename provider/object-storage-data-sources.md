@@ -138,6 +138,7 @@ output "bucket_private_endpoint" {
   value = data.ibm_cos_bucket.standard-ams03.s3_endpoint_private
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cos-bucket-input}

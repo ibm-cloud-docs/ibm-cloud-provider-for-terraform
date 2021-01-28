@@ -132,6 +132,7 @@ resource "ibm_cis" "cis_instance" {
   }
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-input}
@@ -205,6 +206,7 @@ resource "ibm_cis_cache_settings" "cache_settings" {
   purge_all          = true
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-cache-input}
@@ -280,6 +282,7 @@ resource "ibm_cis_certificate_order" "test" {
 	hosts     = ["example.com"]
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-certificate-order-input}
@@ -356,6 +359,7 @@ resource "ibm_cis_certificate_upload" "cert" {
     priority      = 20
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-certificate-upload-input}
@@ -438,6 +442,7 @@ resource "ibm_cis_custom_page" "custom_page" {
 	url       = "https://test.com/index.html"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-custom-input}
@@ -515,6 +520,7 @@ resource "ibm_cis_dns_records_import" "test" {
 	file      = "dns_records.txt"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-dns-records-import-input}
@@ -585,6 +591,7 @@ resource "ibm_cis" "instance" {
   plan = "standard"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-domain-input}
@@ -649,6 +656,7 @@ resource "ibm_cis_domain_settings" "test" {
   min_tls_version = "1.2"
 }
 ```
+{: codeblock}
 
 ```
 resource "ibm_cis_domain_settings" "test_domain_settings" {
@@ -700,6 +708,7 @@ resource "ibm_cis_domain_settings" "test_domain_settings" {
   }
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-domain-settings-input}
@@ -791,6 +800,7 @@ resource "ibm_cis_dns_record" "example" {
   type      = "A"
 }
 ```
+{: codeblock}
 
 **Example Usage 1** Create `A` record.
 
@@ -1108,6 +1118,7 @@ resource "ibm_cis_edge_functions_action" "test_action" {
   script      = file("./script.js")
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-edge-functions-action-input}
@@ -1179,7 +1190,7 @@ resource "ibm_cis_edge_functions_trigger" "test_trigger" {
   pattern_url = "example.com/*"
 }
 ```
-{: pre}
+{: codeblock}
 
 ### Input parameters
 {: #cis-edge-functions-trigger-input}
@@ -1287,6 +1298,7 @@ resource "ibm_cis_firewall" "ua_rules" {
   }
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-firewall-input}
@@ -1405,6 +1417,7 @@ resource "ibm_cis_origin_pool" "example" {
   }
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-global-lb-input}
@@ -1490,6 +1503,7 @@ resource "ibm_cis_healthcheck" "test" {
   description    = "example load balancer"
 }
 ```
+{: codeblock}
 
 ### Input parameter
 {: #cis-health-input}
@@ -1582,6 +1596,7 @@ resource "ibm_cis_origin_pool" "example" {
   check_regions      = ["WEU"]
 }
 ```
+{: codeblock}
 
 ### Input parameter 
 {: #cis-origin-pool-input}
@@ -1676,6 +1691,7 @@ resource "ibm_cis_page_rule" "page_rule" {
   }
 } 
 ```
+{: codeblock}
 
 ### Input parameter 
 {: #cis-page-rule-input}
@@ -2090,6 +2106,7 @@ resource "ibm_cis_tls_settings" "%[1]s" {
 	universal_ssl   = true
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cis-tls-input}

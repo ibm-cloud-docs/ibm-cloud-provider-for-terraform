@@ -397,6 +397,7 @@ resource "ibm_is_instance" "testacc_instance" {
   }
 }
 ```
+{: codeblock}
 
 #### Example for creating an instance with custom security group rules
 {: #custom-sec-group-rules}
@@ -641,6 +642,7 @@ resource "ibm_is_instance_group" "instance_group" {
   }
 }
 ```
+{: codeblock}
 
 
 ### Input parameters
@@ -764,6 +766,7 @@ resource "ibm_is_instance_group_manager" "instance_group_manager" {
   min_membership_count = 1
 }
 ```
+{: codeblock}
 
 
 ### Input parameters
@@ -885,7 +888,7 @@ resource "ibm_is_instance_group_manager_policy" "cpuPolicy" {
   name                   = "testpolicy"
 }
 ```
-
+{: codeblock}
 
 
 ### Input parameters
@@ -978,6 +981,8 @@ resource "ibm_is_instance_template" "instancetemplate1" {
   }
 }
 ```
+{: codeblock}
+
 ### Input parameters
 {: #vpc-is-instance-template-input}
 
@@ -1104,6 +1109,7 @@ resource "ibm_is_image" "test_is_images" {
  encryption_key         = "crn:v1:bluemix:public:kms:us-south:a/6xxxxxxxxxxxxxxx:xxxxxxx-xxxx-xxxx-xxxxxxx:key:dxxxxxx-fxxx-4xxx-9xxx-7xxxxxxxx"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #image-input}
@@ -1177,6 +1183,8 @@ resource "ibm_is_lb" "lb" {
   profile = "network-fixed"
 }
 ```
+{: codeblock}
+
 ### Input parameters
 {: #lb-input}
 
@@ -1272,6 +1280,7 @@ resource "ibm_is_lb_pool_member" "webapptier-lb-pool-member-zone1" {
   depends_on     = [ibm_is_lb_listener.testacc_lb_listener]
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #lb-listener-input}
@@ -1562,6 +1571,7 @@ resource "ibm_is_lb_pool" "testacc_pool" {
   health_type    = "http"
 }
 ```
+{: codeblock}
 
 ### Sample Terraform code to create a Load Balancer pool with HTTPS protocol.
 {: #lb-pool-https-sample2}
@@ -1578,6 +1588,7 @@ resource "ibm_is_lb_pool" "testacc_pool" {
   health_type    = "https"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #lb-pool-input}
@@ -1650,6 +1661,8 @@ resource "ibm_is_lb_pool_member" "testacc_lb_mem" {
   weight         = 60
 }
 ```
+{: codeblock}
+
 In the following example, you can create a load balancer pool member for network load balancer:
 
 ```
@@ -1661,6 +1674,8 @@ resource "ibm_is_lb_pool_member" "testacc_lb_mem" {
   weight         = 60
 }
 ```
+{: codeblock}
+
 ### Input parameters
 {: #lb-pool-member-input}
 
@@ -1751,6 +1766,7 @@ resource "ibm_is_network_acl" "isExampleACL" {
   }
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #network-acl-input}
@@ -1905,6 +1921,7 @@ resource "ibm_is_security_group" "testacc_security_group" {
 	vpc = ibm_is_vpc.testacc_vpc.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #sec-group-input}
@@ -2012,6 +2029,7 @@ resource "ibm_is_security_group_rule" "testacc_security_group_rule_all" {
 	}
  }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #sec-group-rule-input}

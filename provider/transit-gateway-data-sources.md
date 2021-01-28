@@ -127,6 +127,7 @@ data "ibm_tg_gateway" "ds_tggateway" {
     name=ibm_tg_gateway.new_tg_gw.name
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #tg-gateway-input}
@@ -183,6 +184,7 @@ The following example shows the details of transit gateways data source.
 data "ibm_tg_gateways" "ds_tggateways" {
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #tg-gateways-input}
@@ -233,6 +235,7 @@ data "ibm_tg_location" "ds_tg_location" {
   name = "us-south"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #tg-location-input}
@@ -280,6 +283,7 @@ The following example shows the details of transit locations data source.
 data "ibm_tg_locations" "ds_tg_locations" {
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #tg-locations-input}

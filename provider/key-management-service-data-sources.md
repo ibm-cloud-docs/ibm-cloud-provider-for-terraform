@@ -125,6 +125,7 @@ resource "ibm_cos_bucket" "flex-us-south" {
   key_protect          = data.ibm_kms_key.test.key.0.crn
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #kms-key-ds-input}
@@ -190,6 +191,7 @@ resource "ibm_cos_bucket" "flex-us-south" {
   key_protect          = data.ibm_kms_key.test.key.0.crn
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #kms-keys-ds-input}
@@ -255,6 +257,7 @@ data "ibm_kp_key" "test" {
   key_protect_id = "my-kp-id"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #kp-key-input}

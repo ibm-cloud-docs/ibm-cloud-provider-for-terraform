@@ -126,6 +126,7 @@ data "ibm_account" "accountData" {
   org_guid = data.ibm_org.orgData.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-account-input}
@@ -173,6 +174,7 @@ data "ibm_app" "testacc_ds_app" {
   space_guid = ibm_app.app.space_guid
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-app-input}
@@ -226,6 +228,7 @@ data "ibm_app_domain_private" "private_domain" {
   name = "example.com"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-private-domain-input}
@@ -267,6 +270,7 @@ data "ibm_app_domain_shared" "shared_domain" {
   name = "example.com"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-shared-domain-input}
@@ -311,6 +315,7 @@ data "ibm_app_route" "route" {
   path        = "/app"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-app-route-input}
@@ -355,6 +360,7 @@ data "ibm_org" "orgdata" {
   org = "myorg"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-org-input}
@@ -397,6 +403,7 @@ data "ibm_org_quota" "orgquotadata" {
   name = "quotaname"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-org-quota-input}
@@ -453,6 +460,7 @@ data "ibm_service_instance" "serviceInstance" {
   space_guid   = data.ibm_space.space.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-service-instance-input}
@@ -505,6 +513,7 @@ data "ibm_service_key" "serviceKeydata" {
   space_guid            = data.ibm_space.space.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-service-key-input}
@@ -549,6 +558,7 @@ data "ibm_service_plan" "service_plan" {
   plan    = "Lite"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-service-plan-input}
@@ -593,6 +603,8 @@ data "ibm_space" "spaceData" {
   org   = "myorg"
 }
 ```
+{: codeblock}
+
 The following example shows how you can use the data source to reference the space ID in the `ibm_service_instance` resource.
 
 ```
@@ -604,6 +616,7 @@ resource "ibm_service_instance" "service_instance" {
   tags       = ["cluster-service", "cluster-bind"]
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-space-input}

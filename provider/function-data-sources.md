@@ -121,6 +121,7 @@ data "ibm_function_action" "nodehello" {
     name = "myaction"		  
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #fn-action-input}
@@ -177,6 +178,7 @@ data "ibm_function_namespace" "test_namespace" {
 	name = var.namespace
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #fn-namespace-ds-input}
@@ -220,6 +222,7 @@ data "ibm_function_package" "package" {
   name = "mypackage"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #fn-package-input}
@@ -267,6 +270,7 @@ data "ibm_function_rule" "rule" {
 	name = "myrule"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #fn-rule-input}
@@ -315,6 +319,7 @@ data "ibm_function_trigger" "trigger" {
   name = "mytrigger"		  
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #fn-trigger-input}

@@ -131,6 +131,8 @@ resource "ibm_function_action" "nodehello" {
 }
 
 ```
+{: codeblock}
+
 #### Passing parameters to an action
 {: #parameter-action}
 
@@ -159,6 +161,7 @@ EOF
 
 }
 ```
+{: codeblock}
 
 #### Packaging an action as a Node.js module
 {: #action-package}
@@ -177,6 +180,7 @@ resource "ibm_function_action" "nodezip" {
   }
 }
 ```
+{: codeblock}
 
 #### Creating action sequences
 {: #action-sequence}
@@ -195,6 +199,7 @@ resource "ibm_function_action" "swifthello" {
   }
 }
 ```
+{: codeblock}
 
 ### Creating Docker actions
 {: #docker-action}
@@ -214,6 +219,7 @@ resource "ibm_function_action" "swifthello" {
   }
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #fn-action-input}
@@ -302,6 +308,7 @@ resource "ibm_function_package" "package" {
   namespace = ibm_function_namespace.namespace.name
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #fn-namespace-input}
@@ -396,6 +403,7 @@ resource "ibm_function_package" "package" {
 EOF
 }
 ```
+{: codeblock}
 
 #### Create a package by using a binding
 {: #package-service-binding}
@@ -515,6 +523,7 @@ resource "ibm_function_rule" "rule" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #fn-rule-input}
@@ -596,6 +605,7 @@ resource "ibm_function_trigger" "trigger" {
   EOF
 }
 ```
+{: codeblock}
 
 #### Creating a trigger feed
 {: #create-trigger-feed}
@@ -632,6 +642,7 @@ resource "ibm_function_trigger" "feedtrigger" {
                  EOF
 }
 ```
+{: codeblock}
 
 
 ### Input parameters

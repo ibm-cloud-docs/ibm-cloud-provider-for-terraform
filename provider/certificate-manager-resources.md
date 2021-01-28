@@ -128,6 +128,7 @@ resource "ibm_certificate_manager_import" "cert" {
   }
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cert-manager-input}
@@ -185,6 +186,7 @@ resource "ibm_certificate_manager_order" "cert" {
   dns_provider_instance_crn       = ibm_cis.instance.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #certmanager-order-input}

@@ -151,6 +151,7 @@ resource "ibm_container_addons" "addons" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-addons-input}
@@ -214,6 +215,7 @@ resource ibm_container_alb alb {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-alb-input}
@@ -270,6 +272,7 @@ resource ibm_container_alb_cert cert {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-alb-cert-input}
@@ -343,6 +346,7 @@ resource "ibm_container_api_key_reset" "reset" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-api-key-reset-input}
@@ -388,6 +392,7 @@ resource "ibm_container_bind_service" "bind_service" {
   namespace_id                = "default"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-bind-input}
@@ -502,6 +507,8 @@ resource "ibm_container_cluster" "testacc_cluster" {
   }
 }
 ```
+{: codeblock}
+
 #### Create a gateway enabled Kubernetes cluster
 
 ```
@@ -516,6 +523,8 @@ resource "ibm_container_cluster" "testacc_cluster" {
   no_subnet = false
 }
 ```
+{: codeblock}
+
 #### Creating a KMS enabled Kubernetes cluster
 
 ```
@@ -536,6 +545,8 @@ resource "ibm_container_cluster" "cluster" {
   }
 }
 ```
+{: codeblock}
+
 #### Creating an {{site.data.keyword.openshiftlong_notm}} Cluster 
 
 Create the {{site.data.keyword.openshiftlong_notm}} cluster with default worker pool entitlement.
@@ -552,6 +563,7 @@ resource "ibm_container_cluster" "cluster" {
   entitlement = "cloud_pak"
 }
 ```
+{: codeblock}
 
 #### Classic {{site.data.keyword.openshiftlong_notm}} cluster
 ```
@@ -588,7 +600,7 @@ resource "ibm_container_cluster" "cluster" {
   entitlement = "cloud_pak"
 }
 ```
-{: pre}
+{: codeblock}
 
 #### VPC Gen 1 {{site.data.keyword.containerlong_notm}} cluster
 {: #gen1-cluster}
@@ -836,6 +848,7 @@ resource ibm_container_cluster_feature feature {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-cluster-feature-input}
@@ -892,6 +905,7 @@ resource "ibm_cr_namespace" "test" {
   resource_group_id = "c34128405d5742549538xxx1237"
 }
 ```
+{: codeblock}
 
 ```
 data "ibm_resource_group" "rg" {
@@ -902,6 +916,7 @@ resource "ibm_cr_namespace" "rg_namespace" {
   resource_group_id = data.ibm_resource_group.rg.id
 }
 ```
+{: codeblock}
 
 ### Input parameter
 {: #cr-namespace-input}
@@ -977,6 +992,7 @@ resource "ibm_container_worker_pool" "testacc_workerpool" {
     }
 }
 ```
+{: codeblock}
 
 #### Create a worker pool with an existing OpenShift license
 ```
@@ -1090,6 +1106,7 @@ resource "ibm_container_worker_pool_zone_attachment" "test_zone" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameter
 {: #container-pool-zone-input}
@@ -1155,6 +1172,7 @@ resource "ibm_container_vpc_alb" "alb" {
   enable = true
 }
 ```
+{: codeblock}
 
 ### Import parameter
 {: #vpc-alb-import}
@@ -1500,6 +1518,7 @@ resource "ibm_container_vpc_worker_pool" "test_pool" {
   }
 }
 ```
+{: codeblock}
 
 ### Input parameter
 {: #vpc-worker-pool-input}

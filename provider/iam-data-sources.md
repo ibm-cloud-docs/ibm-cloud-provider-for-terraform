@@ -118,6 +118,7 @@ data "ibm_iam_access_group" "accgroup" {
   access_group_name = ibm_iam_access_group.accgroup.name
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #access-group-input}
@@ -164,6 +165,7 @@ Retrieve information about your IAM access token. You can use this token to auth
 ```
 data "ibm_iam_auth_token" "tokendata" {}
 ```
+{: codeblock}
 
 
 ### Input parameters
@@ -276,6 +278,7 @@ data "ibm_iam_service_id" "ds_serviceID" {
   name = "myservice"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #iam-service-input}
@@ -332,6 +335,7 @@ data "ibm_iam_service_policy" "testacc_ds_service_policy" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #iam-service-policy-input}
@@ -388,6 +392,7 @@ data "ibm_iam_user_policy" "testacc_ds_user_policy" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #iam-user-policy-input}
@@ -438,6 +443,7 @@ data "ibm_iam_user_profile" "user_profle" {
   iam_id = ibm_iam_user_settings.user_setting.iam_id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #iam-user-profile-input}
@@ -480,6 +486,7 @@ Retrieve information about an IAM user profile on IBM Cloud as a read-only data 
   
 	}
 ```
+{: codeblock}
 
 ### Output parameters
 {: #iam-users-output}

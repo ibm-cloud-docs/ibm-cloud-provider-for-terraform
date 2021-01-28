@@ -329,6 +329,7 @@ resource "ibm_cos_bucket" "flex-us-south" {
   key_protect          = ibm_kp_key.test.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #kp-key-input}

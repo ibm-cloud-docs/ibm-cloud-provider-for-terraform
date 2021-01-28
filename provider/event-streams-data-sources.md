@@ -126,6 +126,7 @@ data "ibm_event_streams_topic" "es_topic" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #event-streams-ds-input}

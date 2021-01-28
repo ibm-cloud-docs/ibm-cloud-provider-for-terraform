@@ -117,6 +117,7 @@ resource "ibm_resource_group" "resourceGroup" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #rg-input}
@@ -188,6 +189,7 @@ resource "ibm_resource_instance" "resource_instance" {
   }
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #resource-instance-input}
@@ -268,6 +270,7 @@ resource "ibm_resource_key" "resourceKey" {
   }
 }
 ```
+{: codeblock}
 
 #### Creating credentials for a service ID
 
@@ -298,6 +301,7 @@ resource "ibm_resource_key" "resourceKey" {
   }
 }
 ```
+{: codeblock}
 
 #### Creating credentials that use the private service endpoint
 {: #resource-key-sample-private}
@@ -339,6 +343,7 @@ resource "ibm_resource_key" "resourceKey" {
 }
 
 ```
+{: codeblock}
 
 
 ### Input parameters

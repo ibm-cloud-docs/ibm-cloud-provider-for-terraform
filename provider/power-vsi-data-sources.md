@@ -125,6 +125,7 @@ data "ibm_pi_image" "ds_image" {
   pi_cloud_instance_id = "11aaa1a1-11a1-11aa-1111-aaa111aa1a1a"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #power-image-input}
@@ -172,6 +173,7 @@ data "ibm_pi_images" "ds_images" {
   pi_cloud_instance_id = "11aaa1a1-11a1-11aa-1111-aaa111aa1a1a"
 }
 ```
+{: codeblock}
 
 ### Input parameter
 {: #power-images-input}
@@ -219,6 +221,7 @@ data "ibm_pi_instance" "ds_instance" {
   pi_cloud_instance_id = "11aaa1a1-11a1-11aa-1111-aaa111aa1a1a"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #power-instance-input}
@@ -286,6 +289,7 @@ data "ibm_pi_instance" "ds_instance" {
   pi_cloud_instance_id = "11aaa1a1-11a1-11aa-1111-aaa111aa1a1a"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #power-instance-ip-input}
@@ -334,6 +338,7 @@ data "ibm_pi_key" "ds_instance" {
   pi_cloud_instance_id = "11aaa1a1-11a1-11aa-1111-aaa111aa1a1a"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #power-ssh-key-input}
@@ -380,6 +385,7 @@ data "ibm_pi_network" "ds_network" {
   pi_cloud_instance_id = "49fba6c9-23f8-40bc-9899-aca322ee7d5b"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #power-network-input}
@@ -428,6 +434,7 @@ data "ibm_pi_public_network" "ds_public_network" {
   pi_cloud_instance_id = "11aaa1a1-11a1-11aa-1111-aaa111aa1a1a"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #power-public-network-input}
@@ -472,6 +479,7 @@ data "ibm_pi_tenant" "ds_tenant" {
   pi_cloud_instance_id = "11aaa1a1-11a1-11aa-1111-aaa111aa1a1a"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #power-tenant-input}
@@ -520,6 +528,7 @@ data "ibm_pi_volume" "ds_volume" {
   pi_cloud_instance_id = "`11aaa1a1-11a1-11aa-1111-aaa111aa1a1a`"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #power-volume-input}
@@ -568,6 +577,7 @@ data "ibm_pi_instance_volumes" "ds_volumes" {
   pi_cloud_instance_id = "11aaa1a1-11a1-11aa-1111-aaa111aa1a1a"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #power-instance-volumes-input}

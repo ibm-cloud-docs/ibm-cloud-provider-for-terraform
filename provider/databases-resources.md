@@ -148,6 +148,8 @@ value = ibm_database.<your_database>.connectionstrings.0.composed
 }
 
 ```
+{: codeblock}
+
 ### Sample2 Terraform code
 {: #db-time-recovery-sample}
 
@@ -169,6 +171,8 @@ resource "ibm_database" "test_acc" {
   point_in_time_recovery_deployment_id = "crn:v1:bluemix:public:databases-for-postgresql:us-south:a/4448261269a14562b839e0a3019ed980:0b8c37b0-0f01-421a-bb32-056c6565b461::"
 }
 ```
+{: codeblock}
+
 ### Sample3 Terraform code by using auto_scaling
 {: #auto-scaling}
 
@@ -210,6 +214,8 @@ resource "ibm_database" "autoscale" {
     }
 }
 ```
+{: codeblock}
+
 **provider.tf**
 
 ```
@@ -218,6 +224,8 @@ provider "ibm" {
   region           = "eu-gb"
 }
 ```
+{: codeblock}
+
 For more information, of an example that is related to a VSI configuration to connect to a PostgreSQL database, refer [VSI configured connection](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-database){: external}.
 {: note}
 

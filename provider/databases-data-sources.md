@@ -124,6 +124,7 @@ data "ibm_database" "database" {
   location = "us-east"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #database-input}

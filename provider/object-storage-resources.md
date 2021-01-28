@@ -255,6 +255,7 @@ resource "ibm_cos_bucket" "expire_rule_cos" {
   }
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #hpvs-cos-bucket-input}

@@ -117,12 +117,14 @@ data "ibm_resource_group" "group" {
   name = "default"
 }
 ```
+{: codeblock}
 
 ```
 data "ibm_resource_group" "group" {
   is_default = "true"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #resource-group-input}
@@ -168,6 +170,7 @@ data "ibm_resource_instance" "testacc_ds_resource_instance" {
   service           = "cloud-object-storage"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #resouce-instance-input}
@@ -215,6 +218,7 @@ data "ibm_resource_key" "resourceKeydata" {
   resource_instance_id  = ibm_resource_instance.resource.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #resource-key-input}
@@ -258,6 +262,7 @@ data "ibm_resource_quota" "rsquotadata" {
   name = "Trial Quota"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #resource-quota-input}

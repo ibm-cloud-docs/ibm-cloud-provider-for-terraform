@@ -123,6 +123,7 @@ The following example retrieves information about the VPC floating IP.
  }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #floating-ip-g2-dsinput}
@@ -166,6 +167,7 @@ data "ibm_is_flow_logs" "ds_flow_logs" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #ibm-is-flowlogs-dsinput}
@@ -214,6 +216,7 @@ data "ibm_is_image" "ds_image" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-image-input}
@@ -257,6 +260,7 @@ data "ibm_is_images" "ds_images" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 { #vpc-images-input}
@@ -683,6 +687,7 @@ data "ibm_is_instance_profile" "profile" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-instance-profile-input}
@@ -722,6 +727,7 @@ data "ibm_is_instance_profiles" "ds_instance_profiles" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-instance-profiles-input}
@@ -774,6 +780,7 @@ data "ibm_is_public_gateway" "testacc_dspgw"{
   name = ibm_is_public_gateway.testacc_public_gateway.name
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #public-gwy-g2-dsinput}
@@ -839,6 +846,7 @@ data "ibm_is_lb" "ds_lb" {
   name = ibm_is_lb.testacc_lb.name
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #ibm-is-lb-dsinput}
@@ -916,6 +924,7 @@ The following example shows how you can declare the data.
 data "ibm_is_lbs" "ds_lbs" {
  }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #ibm-is-lbs-dsinput}
@@ -982,6 +991,7 @@ data "ibm_is_lb_profiles" "ds_lb_profiles" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #ibm-is-lb-profiles-input}
@@ -1022,6 +1032,7 @@ data "ibm_is_region" "ds_region" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-region-input}
@@ -1113,6 +1124,7 @@ data "ibm_is_security_group" "sg1_rule" {
   name = ibm_is_security_group.testacc_security_group.name
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #sec-group-ds-input}
@@ -1166,6 +1178,7 @@ data "ibm_is_ssh_key" "ds_key" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-ssh-key-input}
@@ -1218,6 +1231,7 @@ data "ibm_is_subnet" "ds_subnet" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-subnet-input}
@@ -1312,6 +1326,7 @@ The following example, you can fetch information of list of the instance templat
 data "ibm_is_instance_templates" "instancetemplates" {	   
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-instance-templates-input}
@@ -1379,6 +1394,7 @@ data "ibm_is_virtual_endpoint_gateway" "data_test" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-endpoint-gwyds-input}
@@ -1427,6 +1443,7 @@ data "ibm_is_virtual_endpoint_gateway_ips" "data_test1" {
   gateway     = ibm_is_virtual_endpoint_gateway.endpoint_gateway.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-endpoint-gwy-ipsds-input}
@@ -1474,6 +1491,7 @@ data "ibm_is_virtual_endpoint_gateways" "data_test" {
 
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-endpoint-gwysds-input}
@@ -1524,6 +1542,7 @@ data "ibm_is_vpc" "ds_vpc" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-input}
@@ -1581,6 +1600,7 @@ data "ibm_is_vpc_default_routing_table" "ds_default_routing_table" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-default-routing-table-dsinput}
@@ -1644,6 +1664,7 @@ data "ibm_is_vpc_routing_table_routes" "ds_routing_table_routes" {
 	routing_table = ibm_is_vpc_routing_tables.test_routing_table.routing_table
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-routing-table-dsinput}
@@ -1695,6 +1716,7 @@ data "ibm_is_vpc_routing_tables" "ds_routing_tables" {
 	vpc = ibm_is_vpc.test_vpc.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-routing-tables-dsinput}
@@ -1748,6 +1770,7 @@ data "ibm_is_vpn_gateways" "ds_vpn_gateways" {
   
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-gateways-dsinput}
@@ -1793,6 +1816,7 @@ data "ibm_is_vpn_gateway_connections" "ds_vpn_gateway_connections" {
   vpn_gateway = ibm_is_vpn_gateway.testacc_vpnGateway.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-gateways-connection-dsinput}
@@ -1851,6 +1875,7 @@ data "ibm_is_zone" "ds_zone" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-zone-input}
@@ -1892,6 +1917,7 @@ data "ibm_is_zones" "ds_zones" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #vpc-zones-input}

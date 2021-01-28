@@ -120,6 +120,7 @@ data "ibm_container_addons" "addons" {
   cluster= ibm_container_addons.addons.cluster
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-addons-dsinput}
@@ -171,6 +172,7 @@ data "ibm_container_alb" "alb" {
   alb_id = "public-cr083d810e501d4c73b42184eab5a7ad56-alb"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-alb-dsinput}
@@ -216,6 +218,7 @@ data "ibm_container_alb_cert" "cert" {
   cluster_id  = "myCluster"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-albcert-dsinput}
@@ -262,6 +265,7 @@ data "ibm_container_bind_service" "bind_service" {
   namespace_id          = "default"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-bind-dsinput}
@@ -303,6 +307,8 @@ data "ibm_container_cluster" "cluster" {
   cluster_name_id = "mycluster"
 }
 ```
+{: codeblock}
+
 The following example retrieves the name of the cluster.
 
 ```
@@ -310,6 +316,7 @@ data "ibm_container_cluster" "cluster_foo" {
   name = "FOO"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-cluster-input}
@@ -397,6 +404,7 @@ data "ibm_container_cluster_config" "cluster_foo" {
   config_dir      = "/home/mycluster_config"
 }
 ```
+{: codeblock}
 
 ** Example for downloading the TLS certificates and permission files for the cluster administrator in a classic or VPC  {{site.data.keyword.containerlong_notm}} cluster **
 
@@ -420,6 +428,7 @@ resource "kubernetes_namespace" "example" {
   }
 }
 ```
+{: codeblock}
 
 ** Example for connecting to the cluster by using the cluster host and token in a classic or VPC  {{site.data.keyword.containerlong_notm}} cluster **
 
@@ -441,6 +450,7 @@ resource "kubernetes_namespace" "example" {
   }
 }
 ```
+{: codeblock}
 
 ** Example for downloading the TLS certificates and permission files for the cluster administrator in a classic {{site.data.keyword.openshiftlong_notm}} cluster **
 
@@ -463,6 +473,7 @@ resource "kubernetes_namespace" "example" {
   }
 }
 ```
+{: codeblock}
 
 ** Example for connecting to the cluster by using the cluster host and token in a classic {{site.data.keyword.openshiftlong_notm}} cluster **
 
@@ -483,6 +494,7 @@ resource "kubernetes_namespace" "example" {
   }
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-cluster-config-input}
@@ -534,6 +546,7 @@ data "ibm_container_cluster_worker" "cluster" {
   worker_id    = "dal10-1112222abd111222"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-worker-input}
@@ -579,6 +592,7 @@ data "ibm_container_cluster_versions" "cluster_versions" {
   resource_group_id          = "11222333111abc111"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-cluster-versions-input}
@@ -616,6 +630,7 @@ The following example shows how to configure an `ALB`.
 ```
 data "ibm_cr_namespace" "test" {}
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cr-namespaces-ds-input}
@@ -656,6 +671,7 @@ data "ibm_container_worker_pool" "testacc_ds_worker_pool"{
   cluster          = ibm_container_cluster.testacc_cluster.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-worker-pool-input}
@@ -707,6 +723,7 @@ data "ibm_container_vpc_alb" "alb" {
   alb_id = "public-cr083d810e501d4c73b42184eab5a7ad56-alb"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-vpc-alb-input}
@@ -755,6 +772,7 @@ data "ibm_container_vpc_cluster" "cluster" {
   resource_group_id = data.ibm_resource_group.group.id
 }
 ```
+{: codeblock}
 
 The following example show how to retrieve name of the cluster.
 
@@ -844,6 +862,7 @@ data "ibm_container_cluster_worker" "worker_foo" {
   cluster_name_id = "mycluster"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-vpc-worker-input}
@@ -893,6 +912,7 @@ data "ibm_container_vpc_worker_pool" "testacc_ds_worker_pool" {
     worker_pool_name = i"worker_pool_name
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #container-vpc-workerpool-input}

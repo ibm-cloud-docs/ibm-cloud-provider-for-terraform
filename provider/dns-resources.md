@@ -379,6 +379,7 @@ resource "ibm_dns_permitted_network" "test-pdns-permitted-network-nw" {
     type = "vpc"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #dns-permitted-network-input}

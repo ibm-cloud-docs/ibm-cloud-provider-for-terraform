@@ -121,6 +121,7 @@ resource "ibm_iam_access_group" "accgrp" {
   description = "New access group"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #iam-access-group-input}
@@ -182,6 +183,7 @@ resource "ibm_iam_access_group_members" "accgroupmem" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #iam-access-group-members-input}
@@ -246,6 +248,7 @@ resource "ibm_iam_access_group_policy" "policy" {
   roles        = ["Viewer"]
 }
 ```
+{: codeblock}
 
 #### Create a policy for all IAM-enabled services within a resource group
 {: #all-iam-services-resource-group}
@@ -545,6 +548,7 @@ resource "ibm_iam_authorization_policy" "policy" {
   roles               = ["Reader"]
 }
 ```
+{: codeblock}
 
 #### Authorization policy between two services with specific resource type
 
@@ -556,6 +560,7 @@ resource "ibm_iam_authorization_policy" "policy" {
   roles                = ["Reader"]
 }
 ```
+{: codeblock}
 
 #### Authorization policy between two specific instances
 
@@ -657,6 +662,7 @@ resource "ibm_iam_authorization_policy_detach" "policy" {
   authorization_policy_id = "11aa1a11-11a1-11aa-1111-11111a11a11a"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #iam-auth-policy-detach-input}
@@ -748,6 +754,7 @@ resource "ibm_iam_service_api_key" "testacc_apiKey" {
   iam_service_id = ibm_iam_service_id.serviceID.iam_id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #iam-service-api-key-input}
@@ -811,6 +818,7 @@ resource "ibm_iam_service_id" "serviceID" {
   description = "New ServiceID"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #iam-service-id-input}
@@ -863,6 +871,7 @@ resource "ibm_iam_service_policy" "policy" {
 }
 
 ```
+{: codeblock}
 
 #### Service Policy by using service with region
 
@@ -882,6 +891,8 @@ resource "ibm_iam_service_policy" "policy" {
 }
 
 ```
+{: codeblock}
+
 #### Service Policy by using resource instance 
 
 ```
@@ -907,6 +918,7 @@ resource "ibm_iam_service_policy" "policy" {
 }
 
 ```
+{: codeblock}
 
 #### Service Policy by using resource group
 
@@ -930,6 +942,7 @@ resource "ibm_iam_service_policy" "policy" {
 }
 
 ```
+{: codeblock}
 
 #### Service Policy by using resource and resource type 
 
@@ -953,6 +966,7 @@ resource "ibm_iam_service_policy" "policy" {
 }
 
 ```
+{: codeblock}
 
 #### Service Policy by using attributes 
 
@@ -980,6 +994,7 @@ resource "ibm_iam_service_policy" "policy" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #iam-service-policy-input}
@@ -1044,6 +1059,7 @@ resource "ibm_iam_user_policy" "policy" {
 }
 
 ```
+{: codeblock}
 
 #### User Policy by using service with region
 
@@ -1058,6 +1074,8 @@ resource "ibm_iam_user_policy" "policy" {
 }
 
 ```
+{: codeblock}
+
 #### User Policy by using resource instance 
 
 ```
@@ -1079,6 +1097,7 @@ resource "ibm_iam_user_policy" "policy" {
 }
 
 ```
+{: codeblock}
 
 #### User Policy by using resource group 
 
@@ -1098,6 +1117,7 @@ resource "ibm_iam_user_policy" "policy" {
 }
 
 ```
+{: codeblock}
 
 #### User Policy using resource and resource type
 
@@ -1117,6 +1137,7 @@ resource "ibm_iam_user_policy" "policy" {
 }
 
 ```
+{: codeblock}
 
 #### User Policy by using attributes 
 
@@ -1140,6 +1161,7 @@ resource "ibm_iam_user_policy" "policy" {
 }
 
 ```
+{: codeblock}
 
 
 ### Input parameters
@@ -1205,6 +1227,7 @@ Retrieve information about an IAM user settings. The IP addresses configured her
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #iam-user-settings-input}
@@ -1246,6 +1269,7 @@ resource "ibm_iam_user_invite" "invite_user" {
     users = ["test@in.ibm.com"]
 }
 ```
+{: codeblock}
 
 #### Inviting batch of users with access groups
 

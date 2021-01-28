@@ -123,6 +123,7 @@ resource "ibm_pi_image" "testacc_image  "{
   pi_cloud_instance_id = "<value of the cloud_instance_id>"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #power-image-input}
@@ -183,6 +184,7 @@ resource "ibm_pi_instance" "test-instance" {
     pi_health_status      = "WARNING"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #power-instance-input}
@@ -287,6 +289,7 @@ resource "ibm_pi_key" "testacc_sshkey" {
   pi_cloud_instance_id = "<value of the cloud_instance_id>"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #ssh-key-input}
@@ -358,6 +361,7 @@ resource "ibm_pi_network" "power_networks" {
   pi_dns               = [<"DNS Servers">]
 }
 ```
+{: codeblock}
 
 ### Input parameters 
 {: #power-network-input}
@@ -425,6 +429,7 @@ resource "ibm_pi_network_port" "test-network-port" {
     pi_network_port_description         = "IP Reserved for Oracle RAC "
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #pi-network-input}
@@ -489,6 +494,7 @@ resource "ibm_pi_snapshot" "testacc_snapshot"{
   pi_cloud_instance_id = "<value of the cloud_instance_id>"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #pi-snapshot-input}
@@ -557,6 +563,7 @@ resource "ibm_pi_volume" "testacc_volume"{
   pi_cloud_instance_id = "<value of the cloud_instance_id>"
 }
 ```
+{: codeblock}
 
 ### Input parameters 
 {: #power-volume-input}

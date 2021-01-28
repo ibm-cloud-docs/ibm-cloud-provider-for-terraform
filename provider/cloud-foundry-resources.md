@@ -130,6 +130,7 @@ resource "ibm_app" "app" {
   buildpack            = "sdk-for-nodejs"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-app-input}
@@ -195,6 +196,7 @@ resource "ibm_app_domain_private" "domain" {
   tags     = ["tag1", "tag2"]
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-private-domain-input}
@@ -242,6 +244,7 @@ resource "ibm_app_domain_shared" "domain" {
   tags              = ["tag1", "tag2"]
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-shared-domain-input}
@@ -297,6 +300,7 @@ resource "ibm_app_route" "route" {
   path        = "/app"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-route-input}
@@ -348,6 +352,7 @@ resource "ibm_org" "testacc_org" {
     billing_managers = ["billingmanager@in.ibm.com"]
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-org-input}
@@ -418,6 +423,7 @@ resource "ibm_service_instance" "service_instance" {
   tags       = ["cluster-service", "cluster-bind"]
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-service-input}
@@ -473,6 +479,7 @@ resource "ibm_service_key" "serviceKey" {
   service_instance_guid = data.ibm_service_instance.service_instance.id
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-service-key-input}
@@ -522,6 +529,7 @@ resource "ibm_space" "space" {
   developers  = ["developer@example.com"]
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #cf-space-input}

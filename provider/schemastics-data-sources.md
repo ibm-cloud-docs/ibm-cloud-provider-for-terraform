@@ -118,6 +118,7 @@ data "ibm_schematics_workspace" "test" {
   workspace_id = "my-workspace-id"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #schematics-workspace-input}
@@ -171,6 +172,7 @@ data "ibm_schematics_output" "test" {
   template_id= data.ibm_schematics_workspace.vpc.template_id.0
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #schematics-output-input}
@@ -215,6 +217,7 @@ data "ibm_schematics_state" "test" {
   template_id= "my-template-id"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #schematics-state-input}

@@ -123,6 +123,7 @@ data "ibm_compute_bare_metal" "bare_metal" {
   global_identifier = "a111a1a1-11a1-11a1-aa1a-11aaa111a1aa"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-bare-metal-input}
@@ -199,6 +200,7 @@ resource "ibm_compute_vm_instance" "vm1" {
     ...
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-image-input}
@@ -236,6 +238,7 @@ data "ibm_compute_placement_group" "group" {
     name = "mygroup"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-placement-group-input}
@@ -279,6 +282,7 @@ data "ibm_compute_ssh_key" "public_key" {
     label = "mykey"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-ssh-key-input}
@@ -321,6 +325,7 @@ data "ibm_compute_vm_instance" "vm_instance" {
   most_recent = true
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-vm-input}
@@ -379,6 +384,7 @@ data "ibm_dns_domain" "domain_id" {
     name = "mydomain.com"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-domain-input}
@@ -414,6 +420,7 @@ data "ibm_dns_domain_registration" "dnstestdomain" {
     name = "mytestdomain.com"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: classic-domain-reg-input}
@@ -450,6 +457,7 @@ data "ibm_dns_secondary" "secondary_id" {
     name = "test-secondary.com"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-dns-secondary-input}
@@ -509,6 +517,7 @@ resource "ibm_lbaas" "lbaas" {
 }
 
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-lbaas-input}
@@ -577,6 +586,7 @@ data "ibm_network_vlan" "vlan_foo" {
     name = "myvlan"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-vlan-input}
@@ -630,6 +640,7 @@ data "ibm_security_group" "allow_ssh" {
     name = "allow_ssh"
 }
 ```
+{: codeblock}
 
 ### Input parameters
 {: #classic-security-group-input}

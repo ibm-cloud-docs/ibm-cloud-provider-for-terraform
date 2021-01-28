@@ -140,7 +140,7 @@ resource ibm_dl_gateway test_dl_gateway {
 
 } 
 ```
-{: pre}
+{: codeblock}
 
 ### Sample Terraform code to create direct link of connect type
 {: #dl-gwy-sample2}
@@ -163,7 +163,7 @@ resource "ibm_dl_gateway" "test_dl_connect" {
   port =  data.ibm_dl_ports.test_ds_dl_ports.ports[0].port_id
 }
 ```
-{: pre}
+{: codeblock}
 
 ### Input parameters
 {: #dl-gwy-input}
@@ -250,7 +250,7 @@ resource ibm_dl_provider_gateway test_dl_provider_gateway {
   customer_account_id = "0c474da-c749-4f1d-b190-2333"
 } 
 ```
-{: pre}
+{: codeblock}
 
 ### Input parameters
 {: #dl-provider-gwy-input}
@@ -325,7 +325,7 @@ resource "ibm_dl_virtual_connection" "test_dl_gateway_vc"{
 		network_id = ibm_is_vpc.test_dl_vc_vpc.resource_crn   }  
 		
 ```
-{: pre}
+{: codeblock}
 
 ### Input parameters
 {: #dl-gwy-vc-input}
