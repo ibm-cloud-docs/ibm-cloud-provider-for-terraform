@@ -270,9 +270,8 @@ As Terraform supports multiple cloud providers, you must specify `ibm` as your {
    {: codeblock}
    
    <table>
-   <caption>Understanding the configuration file components</caption>
+   <caption>The configuration file parameters</caption>
    <thead>
-   <th colspan=2><img src="images/idea.png" alt="Idea icon"/> Understanding the configuration file components</th>
    </thead>
    <tbody>
    <tr>
