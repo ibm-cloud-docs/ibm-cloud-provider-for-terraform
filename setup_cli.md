@@ -171,7 +171,7 @@ IBM Cloud provider supports Terraform v0.12, v0.13, and v0.14. You can complete 
 
 
 ## Installing the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform
-{{: #install_provider}}
+{: #install_provider}
 
 After the Terraform installation is complete. You need to configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform to provision and expose the resources. {{site.data.keyword.cloud_notm}} provider supports plug-in to support Terraform v0.12.x, v0.13.x, and higher version.
 {: shortdesc}
