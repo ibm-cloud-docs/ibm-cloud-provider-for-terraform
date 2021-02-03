@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-03"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -302,7 +302,6 @@ To find a full list of {{site.data.keyword.cloud_notm}} resources that you can p
  
      provider "ibm" {
        ibmcloud_api_key   = var.ibmcloud_api_key
-       generation         = 1
        region             = "us-south"
        iaas_classic_username = var.iaas_classic_username
        iaas_classic_api_key  = var.iaas_classic_api_key
@@ -322,10 +321,6 @@ To find a full list of {{site.data.keyword.cloud_notm}} resources that you can p
    <tr>
    <td><code>ibmcloud_api_key</code></td>
    <td>Reference the {{site.data.keyword.cloud_notm}} API key that you stored in your <code>terraform.tfvars</code> file. This API key is required to provision {{site.data.keyword.cloud_notm}} platform and VPC infrastructure resources. You can remove this credential if you want to provision classic infrastructure resources only.  </td>
-   </tr>
-   <tr>
-   <td><code>generation</code></td>
-   <td>Enter <strong>1</strong> to configure the {{site.data.keyword.cloud_notm}} provider plug-in to provision generation 2 VPC on Classic infrastructure resources. This value is used for all VPC resources that you specify in your Terraform configuration files. You can remove this parameter if you are not working with the VPC resources.</td>
    </tr>
    <tr>
    <td><code>region</code></td>
