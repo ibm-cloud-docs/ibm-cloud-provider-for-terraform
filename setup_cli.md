@@ -117,7 +117,7 @@ IBM Cloud provider supports Terraform v0.12, v0.13, and v0.14. You can complete 
    ```
     mkdir terraform && cd terraform
    ```
-   {: pre}
+   {: codeblock}
 2. Download the specific [Terraform version](https://releases.hashicorp.com/terraform).
 3. Extract the Terraform `zip` file and copy the files to your `terraform` directory. 
 4. Set the environment `PATH` variable to your Terraform files.
@@ -125,12 +125,12 @@ IBM Cloud provider supports Terraform v0.12, v0.13, and v0.14. You can complete 
    ```
    export PATH=$PATH:$HOME/terraform
    ```
-   {: pre}
+   {: codeblock}
 5. Verify that the installation is successful by using a `terraform` command.
    ```
    terraform
    ```
-   {: pre}
+   {: codeblock}
 
    **Output:**
 
@@ -229,17 +229,17 @@ Complete the following steps to configure the {{site.data.keyword.cloud_notm}} p
    ```
     mkdir -p $HOME/.terraform.d/plugins
    ```
-   {: pre}
+   {: codeblock}
 4. Move the {{site.data.keyword.cloud_notm}} provider plug-in into your `plugins` folder.
    ```
    mv $HOME/<DOWNLOAD_FOLDER_NAME>/terraform-provider-ibm* $HOME/.terraform.d/plugins
    ```
-   {: pre}
+   {: codeblock}
 5. Navigate to your `plugin` hidden folder and verify that the installation is complete. 
    ```
    cd $HOME/.terraform.d/plugins && ./terraform-provider-ibm_*
    ```
-   {: pre}
+   {: codeblock}
 
 ## Configuring the {{site.data.keyword.cloud_notm}} provider plug-in
 {: #configure_provider}
@@ -253,7 +253,7 @@ As Terraform supports multiple cloud providers, you must specify `ibm` as your {
    ```
    mkdir myproject && cd myproject
    ```
-   {: pre}  
+   {: codeblock}  
    
 3. Create a local Terraform on {{site.data.keyword.cloud_notm}} variables file that is named `terraform.tfvars` to store the credentials and other input parameters that you retrieved earlier. When you initialize the Terraform on {{site.data.keyword.cloud_notm}} CLI, all variables that are defined in this file are automatically loaded by Terraform on {{site.data.keyword.cloud_notm}} and you can reference them in every Terraform on {{site.data.keyword.cloud_notm}} configuration file in the same directory. 
 
