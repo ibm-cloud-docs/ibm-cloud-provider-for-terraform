@@ -193,7 +193,7 @@ The following steps can used in IBM Terraform provider to support Terraform v0.1
   ```
   {: codeblock}
   
-3. If you are using Terraform modules, the shared Terraform block to be used in all the module folders that is been used. For more information, see [install Terraform v0.13.x]() and [install the {{site.data.keyword.cloud_notm] provider plug-in]().
+3. If you are using Terraform modules, the shared Terraform block should be used in all the module folders that is been used. For more information, see [installing Terraform v0.13.x](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_tf) and [installing the {{site.data.keyword.cloud_notm] provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
 
 ## Why I am getting an issue when trying to provision an `ibm_container_alb_cert`?
 {: #provision-ibm-container-alb-cert}
