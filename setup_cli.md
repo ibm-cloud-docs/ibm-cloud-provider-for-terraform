@@ -215,6 +215,9 @@ You need not explicitly download the `plugins` for Terraform v0.13.x and higher 
       ```
       {: pre}
 
+      If you are using Terraform modules, the shared Terraform block should be used in all the module folders.
+      {: note}
+
 ### Terraform v0.12.x
 {: #install-provider-v12}
 
