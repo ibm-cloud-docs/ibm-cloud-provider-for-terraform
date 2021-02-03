@@ -101,7 +101,7 @@ Before you automate and provision your {{site.data.keyword.cloud_notm}} resource
 {: shortdesc}
 
 ## Installing the Terraform on {{site.data.keyword.cloud_notm}}
-{: #install_terraform}
+{: #install_tf}
 
 You can use Terraform to manage {{site.data.keyword.cloud_notm}} resources. Terraform works with multi-cloud providers, a cloud provider is responsible to provision and expose the resources in the cloud.
 {: shortdesc}
@@ -238,7 +238,7 @@ Complete the following steps to configure the {{site.data.keyword.cloud_notm}} p
       ```
       {: pre}
 
-## Configuring the provider plug-in
+## Configuring the {{site.data.keyword.cloud_notm}} provider plug-in
 {: #configure_provider}
 
 As Terraform supports multiple cloud providers, you must specify `ibm` as your {{site.data.keyword.cloud_notm}} provider and configure the plug-in with all required parameters for the resource or data source category that you want to provision. 
