@@ -114,27 +114,27 @@ IBM Cloud provider supports Terraform v0.12, v0.13, and v0.14. You can complete 
 
 1. Create a folder `terraform` on your local machine, and navigate to your `terraform` folder. 
 
-      ```
-      mkdir terraform && cd terraform
-      ```
-      {: codeblock}
+   ```
+    mkdir terraform && cd terraform
+   ```
+   {: pre}
 2. Download the specific [Terraform version](https://releases.hashicorp.com/terraform).
 3. Extract the Terraform `zip` file and copy the files to your `terraform` directory. 
 4. Set the environment `PATH` variable to your Terraform files.
 
-      ```
-      export PATH=$PATH:$HOME/terraform
-      ```
-      {: codeblock}
+   ```
+   export PATH=$PATH:$HOME/terraform
+   ```
+   {: pre}
 5. Verify that the installation is successful by using a `terraform` command.
-      ```
-      terraform
-      ```
-      {: codeblock}
+   ```
+   terraform
+   ```
+   {: pre}
 
-      **Output:**
+   **Output:**
 
-      ```
+   ```
       Usage: terraform [-version] [-help] <command> [args]
 
       The available commands for execution are listed below.
@@ -182,15 +182,15 @@ After the Terraform installation is complete. You need to configure the {{site.d
 Complete the following steps to configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform v0.12 and Terraform v0.13.
 {: shortdesc}
 
-You need not explicitly download the `plugins` for Terraform v0.13.x and higher version installation.
+You need not explicitly download the `plugins` for Terraform v0.13.x and higher version.
 {: note}
 
-1. You can use the provided code block and specify the right Terraform version in `version` parameter to automatically provision the plug-ins for Terraform v0.13.x and higher version.
+1. You can use the Terraform block and specify the right Terraform provider version in `version` parameter to automatically provision the plug-ins for Terraform v0.13.x and higher version.
 
    **Syntax**
 
      ```
-     terraform {
+      terraform {
         required_providers {
          ibm = {
            source = "IBM-Cloud/ibm"
@@ -199,12 +199,12 @@ You need not explicitly download the `plugins` for Terraform v0.13.x and higher 
         }
      }
      ```
-     {: pre}
+     {: codeblock}
 
     **Example**
 
      ```
-     terraform {
+      terraform {
         required_providers {
            ibm = {
               source = "IBM-Cloud/ibm"
@@ -213,7 +213,7 @@ You need not explicitly download the `plugins` for Terraform v0.13.x and higher 
          }
       }
       ```
-      {: pre}
+      {: codeblock}
 
       If you are using Terraform modules, the shared Terraform block should be used in all the module folders.
       {: note}
@@ -226,20 +226,20 @@ Complete the following steps to configure the {{site.data.keyword.cloud_notm}} p
 1. Download the latest version of the [{{site.data.keyword.cloud_notm}} provider plug-in](https://github.com/IBM-Cloud/terraform-provider-ibm/releases).
 2. Extract the `zip` file and retrieve the files.
 3. Create a `plugins` hidden folder 
-      ```
-      mkdir -p $HOME/.terraform.d/plugins
-      ```
-      {: pre}
+   ```
+    mkdir -p $HOME/.terraform.d/plugins
+   ```
+   {: pre}
 4. Move the {{site.data.keyword.cloud_notm}} provider plug-in into your `plugins` folder.
-      ```
-      mv $HOME/<DOWNLOAD_FOLDER_NAME>/terraform-provider-ibm* $HOME/.terraform.d/plugins
-      ```
-      {: pre}
+   ```
+   mv $HOME/<DOWNLOAD_FOLDER_NAME>/terraform-provider-ibm* $HOME/.terraform.d/plugins
+   ```
+   {: pre}
 5. Navigate to your `plugin` hidden folder and verify that the installation is complete. 
-      ```
-      cd $HOME/.terraform.d/plugins && ./terraform-provider-ibm_*
-      ```
-      {: pre}
+   ```
+   cd $HOME/.terraform.d/plugins && ./terraform-provider-ibm_*
+   ```
+   {: pre}
 
 ## Configuring the {{site.data.keyword.cloud_notm}} provider plug-in
 {: #configure_provider}
@@ -319,7 +319,7 @@ As Terraform supports multiple cloud providers, you must specify `ibm` as your {
       {: shortdesc}
 
       ```
-       provider "ibm" {}
+      provider "ibm" {}
       ```
       {: pre}
 
