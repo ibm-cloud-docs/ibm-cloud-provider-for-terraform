@@ -159,41 +159,9 @@ If the Terraform operation does not complete due to a timeout, wait for the reso
 {: #ibm-terraform-provider-v13}
 {: faq}
 
-The following steps can used in IBM Terraform provider to support Terraform v0.13.x:
+See [install the Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_tf) and [install the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider). 
 
-1. From the HashiCorp site, [download version 0.13.x](https://releases.hashicorp.com/terraform/){: external}
-2. Find the [Terraform provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases) version.
-2. Include the shared Terraform block in the `providers.tf` file.
 
-  **Syntax**
-
-  ```
-  terraform {
-    required_providers {
-      ibm = {
-        source = "IBM-Cloud/ibm"
-        version = "<provider version>"
-       }
-     }
-   }
-  ```
-  {: codeblock}
-
-  **Example**
-
-  ```
-  terraform {
-    required_providers {
-      ibm = {
-        source = "IBM-Cloud/ibm"
-        version = "1.13.0"
-       }
-     }
-   }
-  ```
-  {: codeblock}
-  
-3. If you are using Terraform modules, the shared Terraform block should be used in all the module folders that is been used. For more information, see [installing Terraform v0.13.x](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_tf) and [installing the {{site.data.keyword.cloud_notm] provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
 
 ## Why I am getting an issue when trying to provision an `ibm_container_alb_cert`?
 {: #provision-ibm-container-alb-cert}

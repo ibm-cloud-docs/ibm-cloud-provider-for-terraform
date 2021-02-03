@@ -185,7 +185,7 @@ Complete the following steps to configure the {{site.data.keyword.cloud_notm}} p
 You need not explicitly download the `plugins` for Terraform v0.13.x and higher version.
 {: note}
 
-1. You can use the Terraform block and specify the right Terraform provider version in `version` parameter to automatically provision the plug-ins for Terraform v0.13.x and higher version.
+1. Create a `providers.tf` file, add the shared Terraform block by specifying the right Terraform provider version in `version` parameter to automatically provision the plug-ins for Terraform v0.13.x and higher version.
 
    **Syntax**
 
