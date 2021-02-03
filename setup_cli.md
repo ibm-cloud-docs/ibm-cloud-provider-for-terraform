@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-03"
 
 keywords: install Terraform cli, set up Terraform cli, ibm cloud provider plugin, Terraform
 
@@ -94,43 +94,46 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 
-# Setting up the CLI and preparing your environment
+# Setting up your environment
 {: #setup_cli}
 
-Before you can automate your {{site.data.keyword.cloud_notm}} resource provisioning, you must install the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in.
+Before you automate and provision your {{site.data.keyword.cloud_notm}} resource, you must install the Terraform and the {{site.data.keyword.cloud_notm}} Provider plug-in.
 {: shortdesc}
 
-## Installing the Terraform on {{site.data.keyword.cloud_notm}} CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in
-{: #install_cli}
+## Installing the Terraform on {{site.data.keyword.cloud_notm}}
+{: #install_terraform}
 
-To use Terraform on {{site.data.keyword.cloud_notm}} to manage {{site.data.keyword.cloud_notm}} resources, you must install the Terraform on {{site.data.keyword.cloud_notm}} CLI and the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform on {{site.data.keyword.cloud_notm}}. 
+You can use Terraform to manage {{site.data.keyword.cloud_notm}} resources. Terraform works with multi-cloud providers, a cloud provider is responsible to provision and expose the resources in the cloud.
 {: shortdesc}
 
-**What is the {{site.data.keyword.cloud_notm}} Provider plug-in and why do I need it?**</br>
-To support a multi-cloud approach, Terraform on {{site.data.keyword.cloud_notm}} works with cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To provision resources in {{site.data.keyword.cloud_notm}}, you must install the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on {{site.data.keyword.cloud_notm}}. The plug-in is aware of the {{site.data.keyword.cloud_notm}} resources that you can provision with Terraform on {{site.data.keyword.cloud_notm}} and the syntax to describe them.  
+### Terraform v0.12 and v0.13 installation
+{: #tf_installation}
 
-1. Install Terraform on {{site.data.keyword.cloud_notm}} on your local machine. 
-   1. Create a folder on your local system that is called `terraform` and navigate into your folder. 
+IBM Cloud provider supports Terraform v0.12, v0.13, and v0.14. You can complete the following steps to install Terraform v0.12 and Terraform v0.13 on your local machine.
+{: shortdesc}
+
+1. Create a folder `terraform` on your local machine, and navigate to your `terraform` folder. 
+
       ```
       mkdir terraform && cd terraform
       ```
-      {: pre}
+      {: codeblock}
+2. Download the specific [Terraform version](https://releases.hashicorp.com/terraform).
+3. Extract the Terraform `zip` file and copy the files to your `terraform` directory. 
+4. Set the environment `PATH` variable to your Terraform files.
 
-   2. [Download the Terraform on {{site.data.keyword.cloud_notm}} CLI version 0.12.x to your local machine ![External link icon](../icons/launch-glyph.svg "External link icon")](https://releases.hashicorp.com/terraform/). 
-   3. Extract the Terraform on {{site.data.keyword.cloud_notm}} package and copy the binary file into your `terraform` directory. 
-   4. Point the `$PATH` environment variable to your Terraform on {{site.data.keyword.cloud_notm}} binary file.
       ```
       export PATH=$PATH:$HOME/terraform
       ```
-      {: pre}
-      
-   5. Verify that the installation is successful by using a `terraform` command.
+      {: codeblock}
+5. Verify that the installation is successful by using a `terraform` command.
       ```
       terraform
       ```
-      {: pre}
-      
-      Example output: 
+      {: codeblock}
+
+      **Output:**
+
       ```
       Usage: terraform [-version] [-help] <command> [args]
 
@@ -164,15 +167,27 @@ To support a multi-cloud approach, Terraform on {{site.data.keyword.cloud_notm}}
           force-unlock       Manually unlock the Terraform on {{site.data.keyword.cloud_notm}} state
           state              Advanced state management
       ```
-      {: screen}  
+      {: screen}
 
-2. Install the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on {{site.data.keyword.cloud_notm}}.
 
-   **Install provider for Terraform on {{site.data.keyword.cloud_notm}} v0.13**
+## Installing the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform
+{{: #install_provider}}
 
-   You can use the provided function block to use the IBM Terraform on {{site.data.keyword.cloud_notm}} provider registry to support Terraform on {{site.data.keyword.cloud_notm}} version 0.13.0
+After the Terraform installation is complete. You need to configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform to provision and expose the resources. {{site.data.keyword.cloud_notm}} provider supports plug-in to support Terraform v0.12.x, v0.13.x, and higher version.
+{: shortdesc}
 
-    **Syntax**
+### Terraform v0.13.x and higher
+{: #install-provider-v13}
+
+Complete the following steps to configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform v0.12 and Terraform v0.13.
+{: shortdesc}
+
+You need not explicitly download the `plugins` for Terraform v0.13.x and higher version installation.
+{: note}
+
+1. You can use the provided code block and specify the right Terraform version in `version` parameter to automatically provision the plug-ins for Terraform v0.13.x and higher version.
+
+   **Syntax**
 
      ```
      terraform {
@@ -199,47 +214,39 @@ To support a multi-cloud approach, Terraform on {{site.data.keyword.cloud_notm}}
       }
       ```
       {: pre}
-   
-   If you want to explicitly place the provider in your system location. You need to follow the steps provided in the Terraform on {{site.data.keyword.cloud_notm}} provider, For more information about Terraform on {{site.data.keyword.cloud_notm}} v0.13 plug-in download, refer to [Explicit provider](https://www.terraform.io/upgrade-guides/0-13.html#explicit-provider-source-locations){: external}.
-   {: note}
 
-   **Install provider for Terraform on {{site.data.keyword.cloud_notm}} v0.12**
+### Terraform v0.12.x
+{: #install-provider-v12}
 
-    1. [Download the latest version of the {{site.data.keyword.cloud_notm}} Provider binary package ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Cloud/terraform-provider-ibm/releases). 
-    2. Extract the {{site.data.keyword.cloud_notm}} provider package to retrieve the binary file.
-    3. Create a hidden folder for your plug-in. The {{site.data.keyword.cloud_notm}} Provider plug-in is used only by the Terraform on {{site.data.keyword.cloud_notm}} CLI and is not meant to be accessed by the user.  
+Complete the following steps to configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform v0.12.
+
+1. Download the latest version of the [{{site.data.keyword.cloud_notm}} provider plug-in](https://github.com/IBM-Cloud/terraform-provider-ibm/releases).
+2. Extract the `zip` file and retrieve the files.
+3. Create a `plugins` hidden folder 
       ```
       mkdir -p $HOME/.terraform.d/plugins
       ```
       {: pre}
-    4. Move the {{site.data.keyword.cloud_notm}} Provider plug-in into your hidden folder. 
+4. Move the {{site.data.keyword.cloud_notm}} provider plug-in into your `plugins` folder.
       ```
-      mv $HOME/Downloads/terraform-provider-ibm* $HOME/.terraform.d/plugins
+      mv $HOME/<DOWNLOAD_FOLDER_NAME>/terraform-provider-ibm* $HOME/.terraform.d/plugins
       ```
       {: pre}
-    5. Navigate into your hidden directory and verify that the installation is complete. 
+5. Navigate to your `plugin` hidden folder and verify that the installation is complete. 
       ```
       cd $HOME/.terraform.d/plugins && ./terraform-provider-ibm_*
       ```
       {: pre}
-      
-      Example output: 
-      ```
-      2018/09/25 17:30:14 {{site.data.keyword.cloud_notm}} Provider version 0.11.3  fdc4aa0f0547177f3ea8b14c7a58a849e240f64a
-      This binary is a plugin. These are not meant to be executed directly.
-      Please execute the program that consumes these plugins, which loads any plugins automatically
-      ```
-      {: screen}
-      
+
 ## Configuring the provider plug-in
 {: #configure_provider}
 
-Because Terraform on {{site.data.keyword.cloud_notm}} supports multiple cloud providers, you must specify IBM as your cloud provider and configure the plug-in with all required parameters for the resource or data source category that you want to use. 
+As Terraform supports multiple cloud providers, you must specify `ibm` as your {{site.data.keyword.cloud_notm}} provider and configure the plug-in with all required parameters for the resource or data source category that you want to provision. 
 {: shortdesc}
 
 1. Review the required [input parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) for the resource or data source category that you want to use and retrieve these parameters by using the [Supported input parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-parameter-ov) documentation.
 
-2. Optional. Create a directory on your local machine for your Terraform on {{site.data.keyword.cloud_notm}} project and navigate into the directory. This directory is used to store all Terraform on {{site.data.keyword.cloud_notm}} configuration files, the provider configuration, and variable definitions. If you have an existing directory that you want to use, navigate into this directory. 
+2. Optional. Create a directory on your local machine for your Terraform on {{site.data.keyword.cloud_notm}} project and navigate into the directory. This directory is used to store all Terraform on {{site.data.keyword.cloud_notm}} configuration files, the provider configuration, and variable definitions. If you have an existing directory that you want to use, navigate into your existing directory. 
    ```
    mkdir myproject && cd myproject
    ```
@@ -247,7 +254,7 @@ Because Terraform on {{site.data.keyword.cloud_notm}} supports multiple cloud pr
    
 3. Create a local Terraform on {{site.data.keyword.cloud_notm}} variables file that is named `terraform.tfvars` to store the credentials and other input parameters that you retrieved earlier. When you initialize the Terraform on {{site.data.keyword.cloud_notm}} CLI, all variables that are defined in this file are automatically loaded by Terraform on {{site.data.keyword.cloud_notm}} and you can reference them in every Terraform on {{site.data.keyword.cloud_notm}} configuration file in the same directory. 
 
-   Because the `terraform.tfvars` file contains confidential information, do not push this file to your version control system where you store the Terraform on {{site.data.keyword.cloud_notm}} configuration files of the resources that you want to provision. The `terraform.tfvars` file is meant to be on your local system only. 
+   The `terraform.tfvars` file contains confidential information, do not push this file to your version control system where you store the Terraform on {{site.data.keyword.cloud_notm}} configuration files of the resources that you want to provision. The `terraform.tfvars` file is meant to be on your local system only. 
    {: important}
    
    Example `terraform.tfvars` file:
@@ -286,7 +293,7 @@ Because Terraform on {{site.data.keyword.cloud_notm}} supports multiple cloud pr
 
 4. create a Terraform on {{site.data.keyword.cloud_notm}} provider configuration file that is named `provider.tf`. Use this file to specify IBM as your cloud provider and to reference the credentials from your `terraform.tfvars` file. To reference a variable, declare the variable first, and then retrieve the value of the variable by using Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax.
 
-   The {{site.data.keyword.cloud_notm}} provider offers a flexible means of providing credentials for authentication. The following two methods are supported.
+   The {{site.data.keyword.cloud_notm}} provider offers a flexible methods of providing credentials for authentication. The following two methods are supported.
 
     - Static credentials
     - Environment variables
