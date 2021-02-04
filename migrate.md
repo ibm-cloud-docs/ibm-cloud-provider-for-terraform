@@ -159,8 +159,35 @@ Complete the following steps to upgrade your configuration files:
    then commit.
    ```
    {: screen}
-   
-4. Verify your Terraform configuration file is updated. 
+
+   Verify `versions.tf` file is generated as shown in the example.
+
+   **Example versions.tf:**
+
+   ```
+   terraform {
+      required_providers {
+        ibm = {
+          # TF-UPGRADE-TODO
+          #
+          # No source detected for this provider. You must add a source address
+          # in the following format:
+          #
+          # source = "your-registry.example.com/organization/ibm"
+          #
+          # For more information, see the provider source documentation:
+          #
+          # https://www.terraform.io/docs/configuration/providers.html#provider-source
+        }
+      }
+      required_version = ">= 0.13"
+    }
+   ```
+   {: codeblock}
+
+   Edit the `versions.tf` configuration. Comment out `source = "your-registry.example.com/organization/ibm"` parameter and provide source value as `source = "IBM-Cloud/ibm"`. For more information about the provider registry, see [IBM Cloud provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest){: external}.
+
+This completes your Terraform configuration file is upgrade.
 
 ## Version control 
 {: #versions}
