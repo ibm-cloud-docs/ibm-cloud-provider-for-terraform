@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-04"
 
 keywords: Terraform, ansible, red hat, openshift, automate, automation, iaas
 
@@ -78,8 +78,6 @@ completion-time: 3h
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -389,7 +387,7 @@ In this tutorial, you provision {{site.data.keyword.cloud_notm}} classic infrast
    </tr>
    <tr>
    <td><code>vlan_count</code></td>
-   <td>Enter <code>1</code> to automatically create a new private and public VLAN, or `0` if you want to use existing VLANs. To find existing VLANs, run <code>ibmcloud sl vlan list</code>. The zone where your existing VLAN routers are provisioned is included in the <strong>primary_router</strong> column of your CLI output. </td>
+   <td>Enter <code>1</code> to automatically create a new private and public VLAN, or `0` if you want to use existing VLANs. To find existing VLANs, run <code>ibmcloud sl vlan list</code>. The zone where your existing VLAN routers are provisioned is included in the <strong>primary_router</strong> column of your command line output. </td>
    <td>1</td>
    </tr>
    <tr>
@@ -917,7 +915,7 @@ With your OpenShift cluster up and running, you can now deploy your first app in
    {: pre}
    
 7. Access your `nginx` app from the internet.  
-   1. Get the public route that was assigned to your `nginx` app. You can find the route in the **HOST/PORT** column of your CLI output. 
+   1. Get the public route that was assigned to your `nginx` app. You can find the route in the **HOST/PORT** column of your command line output. 
       ```
       oc get routes
       ```

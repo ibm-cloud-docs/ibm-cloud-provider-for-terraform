@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28" 
+lastupdated: "2021-02-04" 
 
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -287,7 +285,7 @@ Review the input parameters that you can specify for your resource.
 | `region` | String | Optional | The {{site.data.keyword.cloud_notm}} region where your SSL certificate is stored. | No |
 | `secret_name` | String | Required | The name of the ALB certificate secret. | Yes |
 |`namespace`|String| Optional| The namespace in which the secret is created. Default value is `ibm-cert-store`.|
-|`persistence`|Bool | Optional | Persist the secret data in your cluster. If the secret is later deleted from the CLI or OpenShift web console, the secret is automatically re-created in your cluster. |
+|`persistence`|Bool | Optional | Persist the secret data in your cluster. If the secret is later deleted from the command line or OpenShift web console, the secret is automatically re-created in your cluster. |
 
 ### Output parameters
 {: #container-alb-cert-output}
@@ -610,7 +608,7 @@ The following example creates a VPC Gen 1 cluster that is spread across two zone
 
 ```
 provider "ibm" {
-  generation = 1
+  generation = 2
 }
 
 resource "ibm_is_vpc" "vpc1" {
@@ -1244,7 +1242,7 @@ The following example creates a VPC Gen 1 cluster that is spread across two zone
 
 ```
 provider "ibm" {
-  generation = 1
+  generation = 2
 }
 
 resource "ibm_is_vpc" "vpc1" {

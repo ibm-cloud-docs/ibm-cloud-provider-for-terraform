@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-04"
 
 keywords: terraform provider plugin, terraform gen 2, terraform gen 2 compute
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -1146,16 +1144,16 @@ Review the output parameters that are exported.
 |Name|Data type|Description|
 |----|-----------|--------|
 |`id`|String|The ID of the security group.|
-|`rules`|List of objects|A nested block describes the rules of the attributes. |
+|`rules`|List of objects|Rules associated with security group. Each rule has follwoing attributes. |
 |`rules.rule_id`| String|ID of the rule.  |
 |`rules.direction`|String|Direction of traffic to enforce, either inbound or outbound. |
 |`rules.ip_version`|String|IP version: IPv4 or IPv6.  |
 |`rules.protocol`|String|The type of the protocol `all`, `icmp`, `tcp`, `udp`.   |
-|`rules.type`|String|The ICMP traffic type to allow.  |
-|`rules.code`|String|The ICMP traffic code to allow.  |
+|`rules.type`|String|The traffic type to allow.  |
+|`rules.code`|String|The traffic code to allow.  |
 |`rules.port_max`|Integer|The TCP/UDP port range that includes the maximum bound. |
 |`rules.port_min`|Integer|The TCP/UDP port range that includes the minimum bound. |
-|`protocol`|Integer| The type of the protocol rules `ALL`, `ICMP`, `UDP`, `TCP` |
+|`rules.remote`|Integer| Security group ID, an IP address, a CIDR block, or a single security group identifier. |
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28" 
+lastupdated: "2021-02-04" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -591,7 +589,7 @@ Create, update, or delete an instance group on VPC.
 ### Sample Terraform code
 {: #vpc-is-instance-sample}
 
-The following example creates an instance in a VPC generation-2 infrastructure
+The following example creates an instance in a VPC generation 2 infrastructure
 
 ```
 provider "ibm" {

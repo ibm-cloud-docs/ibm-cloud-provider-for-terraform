@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-04"
 
 keywords: terraform provider, terraform resources internet service, terraform resources cis, tf provider plugin
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -246,7 +244,7 @@ Review the output parameters that you can access after your resource is created.
 
 The `ibm_cis_cache_settings` resource can be imported using the ID. The ID is formed from the domain ID of the domain and the CRN concatenated  using a `:` character.
 
-The domain ID and CRN will be located on the overview page of the {{site.data.keyword.cis_full_notm}} instance of the UI domain heading, or by using the `ibmcloud cis` CLI commands.
+The domain ID and CRN will be located on the overview page of the {{site.data.keyword.cis_full_notm}} instance of the UI domain heading, or by using the `ibmcloud cis` command line commands.
 
 Domain ID is a 32 digit character string of the form: `9caf68812ae9b3f0377fdf986751a78f`
 
@@ -314,7 +312,7 @@ Review the output parameters that you can access after your resource is created.
 
 The `ibm_cis_certificate_order` resource can be imported using the ID. The ID is formed from the certificate ID, the domain ID of the domain and the CRN  Concatenated  by using a `:` character.
 
-The domain ID and CRN is located on the **Overview** page of the {{site.data.keyword.cis_full_notm}} instance of the UI domain heading, or by using the `ibmcloud cis` CLI commands.
+The domain ID and CRN is located on the **Overview** page of the {{site.data.keyword.cis_full_notm}} instance of the UI domain heading, or by using the `ibmcloud cis` command line commands.
 
 **Domain ID** is a 32 digit character string of the form: `9caf68812ae9b3f0377fdf986751a78f`
 
@@ -400,7 +398,7 @@ Review the output parameters that you can access after your resource is created.
 
 The `ibm_cis_certificate_upload` resource can be imported using the ID. The ID is formed from the certificate upload ID, the domain ID of the domain and the CRN  Concatenated  by using a `:` character.
 
-The domain ID and CRN is located on the **Overview** page of the {{site.data.keyword.cis_full_notm}} instance of the UI domain heading, or by using the `ibmcloud cis` CLI commands.
+The domain ID and CRN is located on the **Overview** page of the {{site.data.keyword.cis_full_notm}} instance of the UI domain heading, or by using the `ibmcloud cis` command line commands.
 
 **Domain ID** is a 32 digit character string of the form: `9caf68812ae9b3f0377fdf986751a78f`
 
@@ -480,7 +478,7 @@ The following attributes are exported:
 
 The `ibm_cis_custom_page` resource can be imported using the ID. The ID is formed from the page_id, domain ID of the domain and the CRN concatenated  using a `:` character.
 
-The domain ID and CRN will be located on the overview page of the {{site.data.keyword.cis_full_notm}} instance of the UI domain heading, or by using the `ibmcloud cis` CLI commands.
+The domain ID and CRN will be located on the overview page of the {{site.data.keyword.cis_full_notm}} instance of the UI domain heading, or by using the `ibmcloud cis` command line commands.
 
 Page ID is a string of the form: `basic_challenge`
 
@@ -553,7 +551,7 @@ Review the output parameters that you can access after your resource is created.
 
 The `ibm_cis_dns_records_import` resource can be imported by using the ID. The ID is formed from the zone file, the domain ID of the domain and the CRN (Cloud Resource Name)  Concatenated  using a `:` character with the prefix of `0:0:`.
 
-The domain ID and CRN is located on the **Overview** page of the internet services instance under the domain heading of the UI, or via by using the `ibmcloud cis` CLI commands.
+The domain ID and CRN is located on the **Overview** page of the internet services instance under the domain heading of the UI, or via by using the `ibmcloud cis` command line commands.
 
 **File** is a string of the form: `records.txt`
 
@@ -624,7 +622,7 @@ Review the output parameters that you can access after your resource is created.
 {: #cis-domain-import}
 
 The {{site.data.keyword.cis_full_notm}} domain can be imported by using the domain ID and service instance CRN. The ID is formed from the Domain ID of the domain concatenated by using a `:` character with the CRN (Cloud Resource Name).
-The Domain ID and CRN will be located on the **Overview** page of the Internet Services instance under the Domain heading of the UI, or via the `ibmcloud cis` CLI commands.
+The Domain ID and CRN will be located on the **Overview** page of the Internet Services instance under the Domain heading of the UI, or via the `ibmcloud cis` command line commands.
 The domain ID is a 32 digit character string in the format `1aaa11111aa1a1a1111aaa111111a11a`. CRN is a 120 digit character string of the format `crn:v1:bluemix:public:internet-svcs:global:a/1aa1111a1a1111aa1a111111111111aa:11aa111a-11a1-1a11-111a-111aaa11a1a1::`.
 
 ```
@@ -1075,13 +1073,13 @@ Review the output parameters that you can access after your resource is created.
 
 The `ibm_cis_dns_record` resource can be imported by using the ID. The ID is formed from the DNS record ID, the domain ID, and the CRN (Cloud Resource Name). All values are  Concatenated  by using a `:` character. 
 
-The domain ID and CRN are located on the **Overview** page of the internet services instance in the **Domain** heading of the UI, or via using the `ibmcloud cis` CLI commands.
+The domain ID and CRN are located on the **Overview** page of the internet services instance in the **Domain** heading of the UI, or via using the `ibmcloud cis` command line commands.
 
 **Domain ID** is a 32 digit character string of the form: `9caf68812ae9b3f0377fdf986751a78f`
 
 **CRN** is a 120 digit character string of the form: `crn:v1:bluemix:public:internet-svcs:global:a/4ea1882a2d3401ed1e459979941966ea:31fa970d-51d0-4b05-893e-251cba75a7b3::`
 
-**DNS Record ID** is a 32 digit character string of the form: `489d96f0da6ed76251b475971b097205c`. The ID of an existing DNS record is not available via the UI. You can retrieve programmatically via the CIS API or via the CLI using the CIS command `ibmcloud cis dns-records <domain_id>` to list the defined DNS records.
+**DNS Record ID** is a 32 digit character string of the form: `489d96f0da6ed76251b475971b097205c`. The ID of an existing DNS record is not available via the UI. You can retrieve programmatically via the CIS API or via the command line using the CIS command `ibmcloud cis dns-records <domain_id>` to list the defined DNS records.
 
 
 ```
@@ -1150,7 +1148,7 @@ Review the output parameters that you can access after your resource is created.
 The `ibm_cis_edge_functions_action` resource can be imported by using the ID. The ID is composed from an edge functions action name or script name, the domain ID of the domain and the CRN (Cloud Resource Name) is concatenated with colon (`:`).
 {: shortdesc}
 
-The domain ID and CRN are located on the overview page of the Internet Services instance in the domain heading of the UI, or by using the {{site.data.keyword.cloud_notm}} CIS CLI commands.
+The domain ID and CRN are located on the overview page of the Internet Services instance in the domain heading of the UI, or by using the {{site.data.keyword.cloud_notm}} CIS command line commands.
 Domain ID is a 32 digit character string of the form: `9caf68812ae9b3f0377fdf986751a78f`.
 CRN is a 120 digit character string of the form: `crn:v1:bluemix:public:internet-svcs:global:a/4ea1882a2d3401ed1e459979941966ea:31fa970d-51d0-4b05-893e-251cba75a7b3::`.
 Edge functions action name or script name is a string: `sample_script`.
@@ -1225,7 +1223,7 @@ Review the output parameters that you can access after your resource is created.
 The `ibm_cis_edge_functions_trigger` resource can be imported by using the ID. The ID is composed from an edge functions trigger route ID, the domain ID of the domain and the CRN (Cloud Resource Name) is concatenated with colon (`:`).
 {: shortdesc}
 
-The domain ID and CRN are located on the overview page of the Internet Services instance in the domain heading of the UI, or by using the {{site.data.keyword.cloud_notm}} CIS CLI commands.
+The domain ID and CRN are located on the overview page of the Internet Services instance in the domain heading of the UI, or by using the {{site.data.keyword.cloud_notm}} CIS command line commands.
 Domain ID is a 32 digit character string of the form: `9caf68812ae9b3f0377fdf986751a78f`.
 CRN is a 120 digit character string of the form: `crn:v1:bluemix:public:internet-svcs:global:a/4ea1882a2d3401ed1e459979941966ea:31fa970d-51d0-4b05-893e-251cba75a7b3::`.
 Edge functions trigger route ID is a 32 digit character string of the form: `48996f0da6ed76251b475971b097205c`.
@@ -1355,7 +1353,7 @@ Review the output parameters that you can access after your resource is created.
 
 The `ibm_cis_firewall` resource is imported by using the ID. The ID is formed from the firewall type, the firewall ID, the domain ID of the domain and the CRN (Cloud Resource Name) concatenated  using a `:` character.
 
-The domain ID and CRN is located on the Overview page of the internet services instance of the domain heading of the UI, or by using the `ibm cis` CLI commands.
+The domain ID and CRN is located on the Overview page of the internet services instance of the domain heading of the UI, or by using the `ibm cis` command line commands.
 
 Domain ID is a 32 digit character string of the form: `9caf68812ae9b3f0377fdf986751a78f`.
 
@@ -1465,7 +1463,7 @@ The Domain ID and CRN are located on the **Overview** page of the Internet Servi
 
 - **Domain ID**: The domain ID is a 32 digit character string of the format `1aaa11111aa1a1a1111aaa111111a11a`.
 - **CRN**: The CRN is a 120 digit character string of the format `crn:v1:bluemix:public:internet-svcs:global:a/1aa1111a1a1111aa1a111111111111aa:11aa111a-11a1-1a11-111a-111aaa11a1a1::` 
-- **Global load balancer ID**: The global load balancer ID is a 32 digit character string in the format 11a11a1aa1aa11111a111111a111111a. The ID of the load balancer is not available via the UI. It can be retrieved via the CIS API or via the CLI by running `ibmcloud cis glbs <domain_id>`.
+- **Global load balancer ID**: The global load balancer ID is a 32 digit character string in the format 11a11a1aa1aa11111a111111a111111a. The ID of the load balancer is not available via the UI. It can be retrieved via the CIS API or via the command line by running `ibmcloud cis glbs <domain_id>`.
 
 ```
 terraform import ibm_cis_global_load_balancer.myorg <loadbalancer_ID>:<domain_ID>:<crn>
@@ -1550,7 +1548,7 @@ The health check can be imported by using the `id`. The ID is formed from the he
 The CRN can be located on the **Overview** page of the Internet Services instance under the **Domain** heading of the UI, or via using the `ibmcloud cis` CLI.
 
 - **CRN**: The CRN is a 120 digit character string of the format `crn:v1:bluemix:public:internet-svcs:global:a/1aa1111a1a1111aa1a111111111111aa:11aa111a-11a1-1a11-111a-111aaa11a1a1::` 
-- **`Healthcheck ID`**: The health check ID is a 32 digit character string in the format 1aaaa111111aa11111111111a1a11a1. The ID of a health check is not available via the UI. It can be retrieved programmatically via the CIS API or via the CLI by running `ibmcloud cis glb-monitors`.
+- **`Healthcheck ID`**: The health check ID is a 32 digit character string in the format 1aaaa111111aa11111111111a1a11a1. The ID of a health check is not available via the UI. It can be retrieved programmatically via the CIS API or via the command line by running `ibmcloud cis glb-monitors`.
 
 ```
 terraform import ibm_cis_healthcheck.myorg <healthcheck_ID>:<crn>
@@ -1642,7 +1640,7 @@ The origin pool can be imported by using the `id`. The ID is formed from the ori
 The CRN can be located on the **Overview** page of the Internet Services instance under the **Domain** heading of the UI, or via the `ibmcloud cis` CLI.
 
 - **CRN**: The CRN is a 120 digit character string of the format `crn:v1:bluemix:public:internet-svcs:global:a/1aa1111a1a1111aa1a111111111111aa:11aa111a-11a1-1a11-111a-111aaa11a1a1::` 
-- **Origin pool ID**: The origin pool ID is a 32 digit character string in the format 1aaaa111111aa11111111111a1a11a1. The ID of a origin pool is not available via the UI. It can be retrieved programmatically via the CIS API or via the CLI by running `ibmcloud cis glb-pools`.
+- **Origin pool ID**: The origin pool ID is a 32 digit character string in the format 1aaaa111111aa11111111111a1a11a1. The ID of a origin pool is not available via the UI. It can be retrieved programmatically via the CIS API or via the command line by running `ibmcloud cis glb-pools`.
 
 ```
 terraform import ibm_cis_origin_pool.myorg <origin_pool_ID>:<crn>
@@ -1991,7 +1989,7 @@ Review the output parameters that you can access after your resource is created.
 
 The `ibm_cis_range_app` resource can be imported using the ID. The ID is formed from the application ID, the Domain ID of the domain and the CRN (Cloud Resource Name)  Concatenated  by using a `:` character.
 
-The Domain ID and CRN will be located on the overview page of the Internet Services instance from the Domain heading of the UI, or by using the `ibm cis` CLI commands.
+The Domain ID and CRN will be located on the overview page of the Internet Services instance from the Domain heading of the UI, or by using the `ibm cis` command line commands.
 
 Domain ID is a 32 digit character string of the form: `9caf68812ae9b3f0377fdf986751a78f`
 
@@ -2065,7 +2063,7 @@ Review the output parameters that you can access after your resource is created.
 
 The `ibm_cis_routing` resource can be imported using the ID. The ID is formed from the domain ID of the domain and the CRN concatenated  using a `:` character.
 
-The domain ID and CRN will be located on the overview page of the {{site.data.keyword.cis_full_notm}} instance of the UI domain heading, or by using the `ibmcloud cis` CLI commands.
+The domain ID and CRN will be located on the overview page of the {{site.data.keyword.cis_full_notm}} instance of the UI domain heading, or by using the `ibmcloud cis` command line commands.
 
 Domain ID is a 32 digit character string of the form: `9caf68812ae9b3f0377fdf986751a78f`
 
@@ -2149,7 +2147,7 @@ The following timeouts are defined for this resource.
 The `ibm_cis_tls_settings` resource is imported using the ID. The ID is formed from the domain ID of the domain and the CRN (Cloud Resource Name) Concatenated using a `:` character.
 {: shortdesc}
 
- The domain ID and CRN will be located on the **Overview** page of the Internet Services instance in the domain heading of the UI, or through using the {{site.data.keyword.cis_full_notm}} CLI commands.
+ The domain ID and CRN will be located on the **Overview** page of the Internet Services instance in the domain heading of the UI, or through using the {{site.data.keyword.cis_full_notm}} command line commands.
 
  Domain ID is a 32 digit character string of the form: 9caf68812ae9b3f0377fdf986751a78f
 
@@ -2225,13 +2223,13 @@ Review the output parameters that you can access after your resource is created.
 
 The `ibm_cis_waf_group` resource can be imported by using the ID. The ID is formed from the WAF Rule Group ID, the WAF rule package ID, the domain ID of the domain and the CRN (Cloud Resource Name)  Concatenated  by using `:` character.
 
-The domain ID and CRN will be located on the **Overview** page of the Internet Services instance of the domain heading of the UI, or by using the `ibmcloud cis` CLI commands.
+The domain ID and CRN will be located on the **Overview** page of the Internet Services instance of the domain heading of the UI, or by using the `ibmcloud cis` command line commands.
 
 Domain ID is a 32 digit character string of the form: `9caf68812ae9b3f0377fdf986751a78f`
 
 CRN is a 120 digit character string of the form: `crn:v1:bluemix:public:internet-svcs:global:a/4ea1882a2d3401ed1e459979941966ea:31fa970d-51d0-4b05-893e-251cba75a7b3::`
 
-Group ID is a 32 digit character string of the form: `57d96f0da6ed76251b475971b097205c`. The ID of an existing WAF rule group is not available in the UI. It can be retrieved programmatically from the CIS API or the CLI by using the CIS command to list the defined WAF Groups `ibmcloud cis waf-groups <domain_id> <waf_package_id>`.
+Group ID is a 32 digit character string of the form: `57d96f0da6ed76251b475971b097205c`. The ID of an existing WAF rule group is not available in the UI. It can be retrieved programmatically from the CIS API or the command line by using the CIS command to list the defined WAF Groups `ibmcloud cis waf-groups <domain_id> <waf_package_id>`.
 
 **Syntax**
 
@@ -2302,7 +2300,7 @@ Review the output parameters that you can access after your resource is created.
 
 The `ibm_cis_waf_package` resource can be imported by using the ID. The ID is formed from the package ID, domain ID of the domain and the CRN (Cloud Resource Name)  Concatenated  by using a : character.
 
-The domain ID and CRN will be located on the **Overview** page of the Internet Services instance of the Domain heading of the UI, or by using the `ibmcloud cis` CLI commands.
+The domain ID and CRN will be located on the **Overview** page of the Internet Services instance of the Domain heading of the UI, or by using the `ibmcloud cis` command line commands.
 
 Domain ID is a 32 digit character string of the form: `9caf68812ae9b3f0377fdf986751a78f`
 
@@ -2380,7 +2378,7 @@ Review the output parameters that you can access after your resource is created.
 
 The `ibm_cis_waf_rule` resource can be imported by using the ID. The ID is formed from the rule_id, `<package_id>, <domain ID>, <package ID>` of the domain and the CRN (Cloud Resource Name)  Concatenated  by using a `:` character.
 
-The domain ID and CRN will be located on the **Overview** page of the Internet Services instance of the domain heading of the UI, or by using the `ibmcloud cis` CLI commands.
+The domain ID and CRN will be located on the **Overview** page of the Internet Services instance of the domain heading of the UI, or by using the `ibmcloud cis` command line commands.
 
 Rule ID is a digit character string of the form: `100000356`
 
