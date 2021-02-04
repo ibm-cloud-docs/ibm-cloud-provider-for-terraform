@@ -184,7 +184,7 @@ After the Terraform installation is complete. You need to configure the {{site.d
 Complete the following steps to configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform v0.12 and Terraform v0.13.
 {: shortdesc}
 
-You need not explicitly download the `plugins` for Terraform v0.13.x and higher version. You can refer the Terraform provider block from the [provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest).
+You need not explicitly download the `plugins` for Terraform v0.13.x and higher version.
 {: note}
 
 1. Create a `providers.tf` file, add the shared Terraform block by specifying the right Terraform provider version in `version` parameter to automatically provision the plug-ins for Terraform v0.13.x and higher version.  
@@ -217,7 +217,7 @@ You need not explicitly download the `plugins` for Terraform v0.13.x and higher 
       ```
       {: codeblock}
 
-      If you are using Terraform modules, the shared Terraform block should be used in all the module folders.
+      If you are using Terraform modules, the shared Terraform block should be used in all the module folders. You can refer the Terraform provider block from the [provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest).
       {: note}
 
 ### Terraform v0.12.x
