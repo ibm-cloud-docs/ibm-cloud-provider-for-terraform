@@ -608,7 +608,7 @@ The following example creates a VPC Gen 1 cluster that is spread across two zone
 
 ```
 provider "ibm" {
-  generation = 1
+  generation = 2
 }
 
 resource "ibm_is_vpc" "vpc1" {
@@ -1242,7 +1242,7 @@ The following example creates a VPC Gen 1 cluster that is spread across two zone
 
 ```
 provider "ibm" {
-  generation = 1
+  generation = 2
 }
 
 resource "ibm_is_vpc" "vpc1" {

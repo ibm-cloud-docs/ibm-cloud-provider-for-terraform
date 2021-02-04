@@ -134,7 +134,7 @@ To configure the `provider` block:
    Example for VPC infrastructure resources: 
    ```
    provider "ibm" {
-     generation = 1
+     generation = 2
      region = "<region_name>"
    }
    ```
