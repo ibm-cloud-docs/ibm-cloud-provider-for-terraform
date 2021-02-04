@@ -169,6 +169,8 @@ IBM Cloud provider supports Terraform v0.12, v0.13, and v0.14. You can complete 
       ```
       {: screen}
 
+      To migrate from the Terraform v0.12 to Terraform v0.13, see [Upgrading Terraform version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol#tf-0.1x-migration.
+
 
 ## Installing the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform
 {: #install_provider}
@@ -225,7 +227,7 @@ Complete the following steps to configure the {{site.data.keyword.cloud_notm}} p
 
 1. Download the latest version of the [{{site.data.keyword.cloud_notm}} provider plug-in](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
 2. Extract the `zip` file and retrieve the files.
-3. Create a `plugins` hidden folder 
+3. Create a `plugins` hidden folder.
    ```
     mkdir -p $HOME/.terraform.d/plugins
    ```
@@ -235,7 +237,7 @@ Complete the following steps to configure the {{site.data.keyword.cloud_notm}} p
    mv $HOME/<DOWNLOAD_FOLDER_NAME>/terraform-provider-ibm* $HOME/.terraform.d/plugins
    ```
    {: codeblock}
-5. Navigate to your `plugin` hidden folder and verify that the installation is complete. 
+5. Navigate to your `plugin` hidden folder and verify that the installation is complete.
    ```
    cd $HOME/.terraform.d/plugins && ./terraform-provider-ibm_*
    ```
@@ -244,17 +246,15 @@ Complete the following steps to configure the {{site.data.keyword.cloud_notm}} p
 ## Configuring the {{site.data.keyword.cloud_notm}} provider plug-in
 {: #configure_provider}
 
-As Terraform supports multiple cloud providers, you must specify `ibm` as your {{site.data.keyword.cloud_notm}} provider and configure the plug-in with all required parameters for the resource or data source category that you want to provision. 
+As Terraform supports multiple cloud providers, you must specify `ibm` as your {{site.data.keyword.cloud_notm}} provider and configure the plug-in with all required parameters for the resource or data source category that you want to provision.
 {: shortdesc}
 
 1. Review the required [input parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) for the resource or data source category that you want to use and retrieve these parameters by using the [Supported input parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-parameter-ov) documentation.
-
-2. Optional. Create a directory on your local machine for your Terraform on {{site.data.keyword.cloud_notm}} project and navigate into the directory. This directory is used to store all Terraform on {{site.data.keyword.cloud_notm}} configuration files, the provider configuration, and variable definitions. If you have an existing directory that you want to use, navigate into your existing directory. 
+2. Optional. Create a directory on your local machine for your Terraform on {{site.data.keyword.cloud_notm}} project and navigate into the directory. This directory is used to store all Terraform on {{site.data.keyword.cloud_notm}} configuration files, the provider configuration, and variable definitions. If you have an existing directory that you want to use, navigate into your existing directory.
    ```
    mkdir myproject && cd myproject
    ```
-   {: codeblock}  
-   
+   {: codeblock}
 3. Create a local Terraform on {{site.data.keyword.cloud_notm}} variables file that is named `terraform.tfvars` to store the credentials and other input parameters that you retrieved earlier. When you initialize the Terraform on {{site.data.keyword.cloud_notm}} CLI, all variables that are defined in this file are automatically loaded by Terraform on {{site.data.keyword.cloud_notm}} and you can reference them in every Terraform on {{site.data.keyword.cloud_notm}} configuration file in the same directory. 
 
    The `terraform.tfvars` file contains confidential information, do not push this file to your version control system where you store the Terraform on {{site.data.keyword.cloud_notm}} configuration files of the resources that you want to provision. The `terraform.tfvars` file is meant to be on your local system only. 

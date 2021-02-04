@@ -96,7 +96,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 
-# Migrating and version controling
+# Migrating and version controlling
 {: #migration-versioncontrol}
 
 IBM continually updates the Terraform provider to give you higher levels of performance and being up-to-date. Some of the instances aren't able to be upgraded, so they must be closed and you must migrate your resources with the right version.
@@ -104,7 +104,7 @@ IBM continually updates the Terraform provider to give you higher levels of perf
 View the versions that are associated in the Terraform and the {{site.data.keyword.cloud_notm}} provider plug-in.
 {: shortdesc}
 
-## Migrating your Terraform version
+## Upgrading your Terraform version
 {: #tf-0.1x-migration}
   
 Update your Terraform configuration files from version 0.1x to version 0.1x so that you can run your Terraform code with the Terraform version 0.1x. 
