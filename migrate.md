@@ -104,7 +104,7 @@ IBM continually updates the Terraform provider to give you higher levels of perf
 View the versions that are associated in the Terraform and the {{site.data.keyword.cloud_notm}} provider plug-in.
 {: shortdesc}
 
-## Upgrading your Terraform version
+## Upgrading the Terraform version
 {: #tf-0.1x-migration}
   
 You can upgrade your Terraform old version to new version, for example, `Terraform v0.12 to Terraform v0.13`. With the release of Terraform v0.13, the syntax for configuration files have changed.

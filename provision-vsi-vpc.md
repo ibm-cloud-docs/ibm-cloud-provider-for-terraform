@@ -95,10 +95,10 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 
-# Provisioning an {{site.data.keyword.cloud_notm}} Virtual Server for VPC
+# Provisioning an {{site.data.keyword.cloud_notm}} virtual server for VPC
 {: #sample_vpc_config}
 
-Use {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform to provision a VPC, and set up networking for your VPC, and provision a Virtual Server for VPC in your {{site.data.keyword.cloud_notm}} account. 
+Use {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform to provision a VPC, and set up networking for your VPC, and provision a virtual server for VPC in your {{site.data.keyword.cloud_notm}} account. 
 {: shortdesc}
 
 A VPC allows you to create your own space in {{site.data.keyword.cloud_notm}} so that you can run an isolated environment in the public cloud with custom network policies. The example in this topic provisions the following VPC infrastructure resources for you: 
@@ -112,22 +112,20 @@ Keep in mind that a VPC virtual server instance is an {{site.data.keyword.cloud_
 {: important}
 
 Before you begin: 
-- [Install the Terraform and the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform](#install). 
- - Install the [Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_cli) and the latest version of the {{site.data.keyword.cloud_notm}} Provider plug-in.
-- [Retrieve your {{site.data.keyword.cloud_notm}} credentials, upload an SSH key, and configure the {{site.data.keyword.cloud_notm}} Provider plug-in forTerraform provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#cloud_provider_config). 
+ - Install the [latest Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_cli) and the latest [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
+- [Retrieve your {{site.data.keyword.cloud_notm}} credentials, upload an SSH key, and configure the {{site.data.keyword.cloud_notm}} Provider plug-in forTerraform provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider). 
 
-To create a VPC and a virtual server instance: 
+To create a VPC and a VSI: 
 
 1. Make sure that you have the [required permissions](/docs/vpc-on-classic?topic=vpc-on-classic-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure. 
 
 2. In the same directory where you stored the `terraform.tfvars` and `provider.tf` files, create an Terraform configuration file and name it `vpc.tf`. The configuration file includes the following definition blocks: 
    - **locals**: Use this block to specify variables that you want to use multiple times throughout this configuration file. 
-   - **resource**: Every resource block specifies the {{site.data.keyword.cloud_notm}} resource that you want to provision. To find more information about supported configurations for each resource, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider).
+   - **resource**: Every resource block specifies the {{site.data.keyword.cloud_notm}} resource that you want to provision. To find more information about supported configurations for each resource, see the [{{site.data.keyword.cloud_notm}} provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider).
    - **data**: Use this block to retrieve information for an existing resource in your {{site.data.keyword.cloud_notm}} account. 
    - **output**: This block specifies commands that you want to run after your resources are provisioned. 
    
-   Example configuration file: 
-   
+   **Example configuration file:**   
    ```
    variable "ssh_key" {
    }
@@ -321,7 +319,8 @@ To create a VPC and a virtual server instance:
    ```
    {: pre}
    
-   Example output: 
+   **Example output:**
+
    ```
    Initializing provider plugins...
 
@@ -346,7 +345,7 @@ To create a VPC and a virtual server instance:
    ```
    {: pre}
 
-   Example output: 
+   **Example output:** 
 
    ```
    Refreshing Terraform state in-memory prior to plan...
@@ -436,14 +435,14 @@ To create a VPC and a virtual server instance:
    ```
    {: screen}
    
-5. Create the VPC infrastructure resources. Confirm the creation by entering **yes** when prompted.
+5. Create the VPC infrastructure resources. Confirm the creation by entering `yes` when prompted.
 
    ```
    terraform apply
    ```
    {: pre}
    
-   Example output:
+   **Example output:**
 
    ```
      ibm_is_vpc.vpc: Creating...
@@ -535,14 +534,14 @@ To create a VPC and a virtual server instance:
    ```
    {: screen}
    
-6. Log in to your VPC virtual server instance by using the `ssh` command that is listed at the end of your CLI output of the previous step.
+6. Log in to your VPC VSI by using the `ssh` command that is listed at the end of your CLI output of the previous step.
 
    ```
    ssh root@169.61.123.231
    ```
    {: pre}
    
-   Example output: 
+   **Example output:**
 
    ```
    The authenticity of host '169.61.123.231 (169.61.123.231)' can't be established.
@@ -583,295 +582,7 @@ To create a VPC and a virtual server instance:
    ```
    {: pre}
 
-## Provisioning an {{site.data.keyword.cloud_notm}} Virtual Server for Classic Infrastructure
-{: #sample_infrastructure_config}
+ **What's next?**
 
-You can provision your Virtual Server for Classic Infrastructure by using the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. Similar to the {{site.data.keyword.cloud_notm}} Virtual Server for VPC that you provisioned earlier, you create another configuration file with the specification for your virtual server instance. 
-{: shortdesc}
+Explore other [{{site.data.keyword.cloud_notm}} resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider) that you can provision with Terraform. 
 
-Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classic infrastructure resource that incurs costs. Be sure to review the [available plans ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/infrastructure/virtual-server-group) before you proceed.
-{: important}
-
-1. Create a configuration file that is named `classic-vsi.tf` with the following content. Store this file in the folder that you created earlier.
- 
-   ```
-   resource "ibm_compute_vm_instance" "vm1" {
-   hostname             = "vm1"
-   domain               = "example.com"
-   os_reference_code    = "DEBIAN_8_64"
-   datacenter           = "dal10"
-   network_speed        = 10
-   hourly_billing       = true
-   private_network_only = false
-   cores                = 1
-   memory               = 1024
-   disks                = [25]
-   local_disk           = false
-   }
-   ```
-   {: codeblock}
-   
-   <table>
-   <caption>Understanding the configuration file components</caption>
-   <col style="width:30%">
-	 <col style="width:70%">
-   <thead>
-     <th>Parameter</th>
-     <th>Description</th>
-   </thead>
-   <tbody>
-   <tr>
-   <td><code>resource</code></td>
-   <td>Required: The name of the {{site.data.keyword.cloud_notm}} resource that you want to provision. To provision a classic infrastructure virtual server instance, use <code>ibm_compute_vm_instance</code>. To find a list of other resources that you can provision, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider).  </td>
-   </tr>
-   <tr>
-   <td><code>vm1</code></td>
-   <td>Required: Enter a name for your classic infrastructure virtual server instance.  </td>
-   </tr>
-     <tr>
-       <td><code>hostname</code></td>
-       <td>Optional: Enter a host name for your classic infrastructure virtual server instance. This host name is used with the <code>domain</code> to create the full URL for your classic infrastructure virtual server instance.</td>
-     </tr>
-     <tr>
-       <td><code>domain</code></td>
-       <td>Optional: Enter the domain name that you want to assign to your classic infrastructure virtual server instance. This domain name is used with the <code>hostname</code> to create the full URL for your classic infrastructure virtual server instance.</td>
-     </tr>
-      <tr>
-       <td><code>os_reference_code</code></td>
-       <td>Optional: Enter the reference code of the operating system that you want to install on your classic infrastructure virtual server instance. To find available reference codes, log in to the [{{site.data.keyword.cloud_notm}} classic infrastructure API ![External link icon](../icons/launch-glyph.svg "External link icon")](https://api.softlayer.com/rest/v3/SoftLayer_Virtual_Guest_Block_Device_Template_Group/getVhdImportSoftwareDescriptions.json?objectMask=referenceCode).</td>
-     </tr>
-     <tr>
-       <td><code>datacenter</code></td>
-       <td>Required: Enter the location where you want to provision your classic infrastructure virtual server instance. For available locations, see the [{{site.data.keyword.cloud_notm}} classic infrastructure API ![External link icon](../icons/launch-glyph.svg "External link icon")](https://api.softlayer.com/rest/v3/SoftLayer_Location/getDatacenters.json?objectMask=name).</td>
-     </tr>
-     <tr>
-       <td><code>network_speed</code></td>
-       <td>Optional: Enter the network speed in Mbps for your classic infrastructure virtual server instance. Supported values are 10, 100, and 1000. If you do not specify this value, 100 Mbps is used by default. </td>
-     </tr>
-     <tr>
-       <td><code>hourly_billing</code></td>
-       <td>Optional: Specify how you want to get billed for your classic infrastructure virtual server instance. Enter <code>true</code> for hourly billing, and <code>false</code> for monthly billing. If you do not specify a billing type, hourly billing is used by default.</td>
-     </tr>
-      <tr>
-       <td><code>private_network_only</code></td>
-       <td>Optional: Decide if you want to connect your classic infrastructure virtual server instance to a private VLAN only. Enter <code>true</code> to connect it to a private VLAN only, and <code>false</code> to connect it to a public and a private VLAN. If you do not specify this option, your virtual server instance is automatically connected to a private and public VLAN by default. </td>
-     </tr>
-      <tr>
-       <td><code>cores</code></td>
-       <td>Optional: Enter the number of CPU cores that you want to allocate to your classic infrastructure virtual server instance.</td>
-     </tr>
-     <tr>
-       <td><code>memory</code></td>
-       <td>Optional: The amount of memory in megabytes that you want to allocate to your classic infrastructure virtual server instance.</td>
-     </tr>
-     <tr>
-       <td><code>[disks]</code></td>
-       <td>Optional: Enter the numeric disk sizes in gigabytes that you want to allocate to your classic infrastructure virtual server instance. To specify multiple disk sizes, separate each value with a comma {`,`). By default, the smallest disk size that is available for the type of virtual server is used.</td>
-     </tr>
-      <tr>
-       <td><code>local_disks</code></td>
-       <td>Optional: Specify the type of disk that you want to provision. Enter <code>true</code> to provision the disks on the host that the virtual server instance runs on, or <code>false</code> to provision SAN disks. If you do not specify this option, disks are provisioned on the host by default.</td>
-     </tr>
-   </tbody>
-   </table>
-   
-2. Initialize Terraform.
-
-    ```
-    terraform init
-    ```
-    {: pre}
-   
-   Example output: 
-   ```
-   Initializing provider plugins...
-
-   The following providers do not have any version constraints in configuration, so the latest version was installed.
-
-   To prevent automatic upgrades to new major versions that may contain breaking changes, it is recommended to add version = "..." constraints to the corresponding provider blocks in configuration, with the constraint strings suggested.
-
-   * provider.ibm: version = "~> 0.11"
-
-   Terraform has been successfully initialized!
-
-   You may now begin working with Terraform. Try running "terraform plan" to see any changes that are required for your infrastructure. All Terraform commands should now work.
-
-   If you ever set or change modules or backend configuration for Terraform, rerun this command to reinitialize your working directory. If you forget, other commands detects it and remind you to do so if necessary.
-   ```
-   {: screen}
-   
-3. Generate an Terraform execution plan. When you execute this command, Terraform validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in. 
-  
-   ```
-   terraform plan
-   ```
-   {: pre}
-
-   Example output:
-
-   ```
-   Refreshing Terraform state in-memory prior to plan...
-   The refreshed state be used to calculate this plan, but not be persisted to local or remote state storage.
-
-   An execution plan has been generated and is shown.
-   Resource actions are indicated with the following symbols:
-     + create
-
-   Terraform performs the following actions:
-
-     + ibm_compute_vm_instance.vm1
-         id:                           <computed>
-         block_storage_ids.#:          <computed>
-         cores:                        "1"
-         datacenter:                   "dal10"
-         disks.#:                      "1"
-         disks.0:                      "25"
-         domain:                       "example.com"
-         file_storage_ids.#:           <computed>
-         hostname:                     "vm1"
-         hourly_billing:               "true"
-         ip_address_id:                <computed>
-         ip_address_id_private:        <computed>
-         ipv4_address:                 <computed>
-         ipv4_address_private:         <computed>
-         ipv6_address:                 <computed>
-         ipv6_address_id:              <computed>
-         ipv6_enabled:                 "false"
-         ipv6_static_enabled:          "false"
-         local_disk:                   "false"
-         memory:                       "1024"
-         network_speed:                "10"
-         os_reference_code:            "DEBIAN_8_64"
-         private_interface_id:         <computed>
-         private_network_only:         "false"
-         private_security_group_ids.#: <computed>
-         private_subnet:               <computed>
-         private_subnet_id:            <computed>
-         private_vlan_id:              <computed>
-         public_bandwidth_limited:     <computed>
-         public_bandwidth_unlimited:   "false"
-         public_interface_id:          <computed>
-         public_ipv6_subnet:           <computed>
-         public_ipv6_subnet_id:        <computed>
-         public_security_group_ids.#:  <computed>
-         public_subnet:                <computed>
-         public_subnet_id:             <computed>
-         public_vlan_id:               <computed>
-         secondary_ip_addresses.#:     <computed>
-         wait_time_minutes:            "90"
-
-   Plan: 1 to add, 0 to change, 0 to destroy.
-   ------------------------------------------------------------------------
-   **Note** You didn't specify an "-out" parameter to save this plan, so Terraform can't guarantee that exactly these actions be performed if "terraform apply" is subsequently run.
-   ```
-   {: screen}
-   
-4. Review the execution plan to verify the type of resource that is planned to be provisioned by Terraform.
-
-5. Create your classic infrastructure virtual server. Confirm the creation by entering **yes** when prompted. 
-
-   ```
-   terraform apply
-   ```
-   {: pre} 
-   
-   Example output:
-
-   ```
-   Creating...
-     block_storage_ids.#:        "" => "<computed>"
-     cores:                      "" => "1"
-     datacenter:                 "" => "dal10"
-     disks.#:                    "" => "1"
-     disks.0:                    "" => "25"
-     domain:                     "" => "example.com"
-     file_storage_ids.#:         "" => "<computed>"
-     hostname:                   "" => "vm1"
-     hourly_billing:             "" => "true"
-     ip_address_id:              "" => "<computed>"
-     ip_address_id_private:      "" => "<computed>"
-     ipv4_address:               "" => "<computed>"
-     ipv4_address_private:       "" => "<computed>"
-     ipv6_address:               "" => "<computed>"
-     ipv6_address_id:            "" => "<computed>"
-     ipv6_enabled:               "" => "false"
-     local_disk:                 "" => "false"
-     memory:                     "" => "1024"
-     network_speed:              "" => "10"
-     os_reference_code:          "" => "DEBIAN_8_64"
-     private_network_only:       "" => "false"
-     private_subnet:             "" => "<computed>"
-     private_vlan_id:            "" => "<computed>"
-     public_bandwidth_limited:   "" => "<computed>"
-     public_bandwidth_unlimited: "" => "false"
-     public_ipv6_subnet:         "" => "<computed>"
-     public_subnet:              "" => "<computed>"
-     public_vlan_id:             "" => "<computed>"
-     secondary_ip_addresses.#:   "" => "<computed>"
-     wait_time_minutes:          "" => "90"
-   ibm_compute_vm_instance.vm1: Still creating... (10s elapsed)
-   ibm_compute_vm_instance.vm1: Still creating... (20s elapsed)
-   ibm_compute_vm_instance.vm1: Still creating... (30s elapsed)
-   ibm_compute_vm_instance.vm1: Still creating... (40s elapsed)
-   ibm_compute_vm_instance.vm1: Still creating... (50s elapsed)
-   ibm_compute_vm_instance.vm1: Still creating... (1m0s elapsed)
-   ibm_compute_vm_instance.vm1: Creation complete after 1m04s (ID: 62364997)
-   
-   Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
-   ```
-   {: screen}
-   
-6. List the classic infrastructure virtual server that is provisioned. 
-   
-   ```
-    terraform show
-   ```
-   {: pre}
-   
-   Example output: 
-   ```
-   ibm_compute_vm_instance.vm1:
-     id = 62364997
-     block_storage_ids.# = 0
-     cores = 1
-     datacenter = dal10
-     dedicated_acct_host_only = false
-     disks.# = 1
-     disks.0 = 25
-     domain = example.com
-     file_storage_ids.# = 0
-     hostname = vm1
-     hourly_billing = true
-     ip_address_id = 120354689
-     ip_address_id_private = 120356235
-     ipv4_address = 169.53.33.54
-     ipv4_address_private = 10.120.45.183
-     ipv6_enabled = false
-     local_disk = false
-     memory = 1024
-     network_speed = 10
-     notes = 
-     os_reference_code = DEBIAN_8_64
-     private_network_only = false
-     private_subnet = 10.120.45.128/26
-     private_vlan_id = 2451153
-     public_bandwidth_unlimited = false
-     public_subnet = 169.53.33.48/28
-     public_vlan_id = 2451151
-     secondary_ip_addresses.# = 0
-     wait_time_minutes = 90
-   ```
-   {: screen}
-
-7. Optional: Review your classic virtual server instance in the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/classic/devices). 
-
-8. Optional: Remove your classic infrastructure virtual server. 
-
-   ```
-   terraform destroy
-   ```
-   {: pre}
-
-**What's next?** </br>
-
-[Explore other {{site.data.keyword.cloud_notm}} resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider) that you can provision with Terraform. 
