@@ -112,7 +112,7 @@ You can use Terraform to manage {{site.data.keyword.cloud_notm}} resources. Terr
 IBM Cloud provider supports Terraform v0.12, and v0.13. You can complete the following steps to install Terraform v0.12 and Terraform v0.13 on your local machine.
 {: shortdesc}
 
-1. Create a folder `terraform` on your local machine, and navigate to your `terraform` folder. 
+1. Create a `terraform` folder on your local machine, and navigate to your `terraform` folder. 
 
    ```
     mkdir terraform && cd terraform
