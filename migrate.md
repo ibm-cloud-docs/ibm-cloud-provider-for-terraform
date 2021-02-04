@@ -117,7 +117,7 @@ Complete the following steps to upgrade your configuration files:
    ```
    mv <tf_config_file_path> $HOME/terraform
    ```
-   {: pre}
+   {: codeblock}
    
 3. Use the Terraform upgrade command to automatically apply the new syntax to your Terraform configuration files. 
   
@@ -125,13 +125,13 @@ Complete the following steps to upgrade your configuration files:
    ```
    terraform <0.xx>upgrade
    ```
-   {: pre}
+   {: codeblock}
 
    **Example to upgrade Terraform v0.12 to Terraform v0.13**
    ```
    terraform 0.13upgrade
    ```
-   {: pre}
+   {: codeblock}
    
    Example output: 
    ```
