@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-04"
 
 keywords: terraform provider plugin, terraform data source cos, terraform data source object storage, terraform get cloud object storage bucket, terraform get object storage resources
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -294,7 +292,7 @@ Review the input parameters that you can specify for your resource.
 | `expire_rule.prefix ` | String | Optional | Specifies a prefix filter to apply to only a subset of objects with names that match the prefix. |
 
 
-Both `archive_rule` and `expire_rule` must be managed by Terraform as they use the same lifecycle configuration. If user creates any of the rule outside of Terraform by using CLI or UI, you can see unexpected difference like removal of any of the rule or one rule overrides another. The policy cannot match as expected due to API limitations, as the lifecycle is a single API request for both archive and expire.
+Both `archive_rule` and `expire_rule` must be managed by Terraform as they use the same lifecycle configuration. If user creates any of the rule outside of Terraform by using command line or UI, you can see unexpected difference like removal of any of the rule or one rule overrides another. The policy cannot match as expected due to API limitations, as the lifecycle is a single API request for both archive and expire.
 {: note}
 
 ### Output parameters

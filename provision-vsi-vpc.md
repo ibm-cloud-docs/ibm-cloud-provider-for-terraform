@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -534,7 +532,7 @@ To create a VPC and a VSI:
    ```
    {: screen}
    
-6. Log in to your VPC VSI by using the `ssh` command that is listed at the end of your CLI output of the previous step.
+6. Log in to your VPC VSI by using the `ssh` command that is listed at the end of your command line output of the previous step.
 
    ```
    ssh root@169.61.123.231

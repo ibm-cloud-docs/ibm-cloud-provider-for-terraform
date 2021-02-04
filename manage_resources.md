@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -99,7 +97,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # Managing the IBM Cloud resources with Terraform
 {: #manage_resources}
 
-Use the Terraform CLI to create your platform and infrastructure resources in {{site.data.keyword.cloud_notm}}. 
+Use the Terraform command line to create your platform and infrastructure resources in {{site.data.keyword.cloud_notm}}. 
 {: shortdesc}
 
 ## Provisioning IBM Cloud resources
@@ -111,7 +109,7 @@ To provision {{site.data.keyword.cloud_notm}} resources, you must describe the s
 Terraform configuration files are written by using the [HashiCorp Configuration Language (HCL) ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.terraform.io/docs/configuration/syntax.html) or JSON syntax. When you create your configuration file, you must describe the type of resource that you want and the state that you want to achieve for your resource. Terraform reads this configuration and creates an execution plan with the steps that were identified to achieve the specified state. If existing resources are found, Terraform identifies the necessary steps to update them. 
 
 Before you begin: 
-- [Install the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#setup_cli).
+- [Install the Terraform command line and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#setup_cli).
 - [Configure the {{site.data.keyword.cloud_notm}} Provider plug-in to use your {{site.data.keyword.cloud_notm}} credentials](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider). 
 
 The following example shows how you can configure a virtual server in {{site.data.keyword.cloud_notm}} by using JSON syntax. A virtual server is an {{site.data.keyword.cloud_notm}} infrastructure resource that incurs costs. Be sure to review [available plans ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/infrastructure/virtual-server-group) before you proceed. 

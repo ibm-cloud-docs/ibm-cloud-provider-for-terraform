@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-04"
 
 keywords: terraform provider plugin, terraform power resources, terraform power systems resources, terraform power
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -101,7 +99,7 @@ subcollection: ibm-cloud-provider-for-terraform
 Review the [Power Systems resources](/docs/power-iaas?topic=power-iaas-about-virtual-server) that you can create. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 {: shortdesc}
 
-To find supported input parameter values, you can use the Power Systems CLI plug-in in {{site.data.keyword.cloud_notm}}. To install the plug-in, run `ibmcloud plugin install pi`. 
+To find supported input parameter values, you can use the Power Systems command line plug-in in {{site.data.keyword.cloud_notm}}. To install the plug-in, run `ibmcloud plugin install pi`. 
 {: tip}
 
 If you want to create, update, or delete Power System resources in a multizone-capable region, you must specify the `zone` in the `provider` block of your Terraform configuration file. For more information, see the [`provider` block configuration](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference).
