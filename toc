@@ -21,6 +21,8 @@ Terraform on IBM Cloud
     setup_cli.md
     migrate.md
     create-terraform-template.md
+    provision-vsi-vpc.md
+    provision-vsi-classic.md
     manage_resources.md
     autodeploy_template.md
     provider-endpoint.md

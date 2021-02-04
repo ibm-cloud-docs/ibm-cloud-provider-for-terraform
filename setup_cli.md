@@ -100,7 +100,7 @@ subcollection: ibm-cloud-provider-for-terraform
 Before you automate and provision your {{site.data.keyword.cloud_notm}} resource, you must install the Terraform and the {{site.data.keyword.cloud_notm}} Provider plug-in.
 {: shortdesc}
 
-## Installing the Terraform on {{site.data.keyword.cloud_notm}}
+## Installing the Terraform
 {: #install_tf}
 
 You can use Terraform to manage {{site.data.keyword.cloud_notm}} resources. Terraform works with multi-cloud providers, a cloud provider is responsible to provision and expose the resources in the cloud.
@@ -112,7 +112,7 @@ You can use Terraform to manage {{site.data.keyword.cloud_notm}} resources. Terr
 IBM Cloud provider supports Terraform v0.12, and v0.13. You can complete the following steps to install Terraform v0.12 and Terraform v0.13 on your local machine.
 {: shortdesc}
 
-1. Create a folder `terraform` on your local machine, and navigate to your `terraform` folder. 
+1. Create a `terraform` folder on your local machine, and navigate to your `terraform` folder. 
 
    ```
     mkdir terraform && cd terraform
@@ -187,7 +187,7 @@ Complete the following steps to configure the {{site.data.keyword.cloud_notm}} p
 You need not explicitly download the `plugins` for Terraform v0.13.x and higher version.
 {: note}
 
-1. Create a `providers.tf` file, add the shared Terraform block by specifying the right Terraform provider version in `version` parameter to automatically provision the plug-ins for Terraform v0.13.x and higher version.  
+1. Create a `versions.tf` file, and add the shared Terraform block by specifying the right Terraform provider version in `version` parameter to automatically provision the plug-ins for Terraform v0.13.x and higher version.  
 
    **Syntax**
 
@@ -217,7 +217,7 @@ You need not explicitly download the `plugins` for Terraform v0.13.x and higher 
       ```
       {: codeblock}
 
-      If you are using Terraform modules, the shared Terraform block should be used in all the module folders. You can refer the Terraform provider block from the [provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest).
+      If you are using Terraform modules, the shared Terraform block should be used in all the module folders. You can refer the Terraform provider block from the [provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest){: external}.
       {: note}
 
 ### Terraform v0.12.x
