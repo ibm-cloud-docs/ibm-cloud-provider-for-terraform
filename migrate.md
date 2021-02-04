@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-04"
 
 keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, Terraform, provision resources
 
@@ -109,7 +109,7 @@ View the versions that are associated in the Terraform and the {{site.data.keywo
   
 Update your Terraform configuration files from version 0.1x to version 0.1x so that you can run your Terraform code with the Terraform version 0.1x. 
 
-With the release of Terraform version 0.12, the syntax for configuration files changed. If you want to run your infrastructure code by using Terraform version 0.12, you must first update your configuration files to apply the new syntax. 
+With the release of Terraform v0.12, the syntax for configuration files changed. If you want to run your infrastructure code by using Terraform version 0.12, you must first update your configuration files to apply the new syntax. 
 {: important}
 
 1. Follow the [instructions](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_cli) to install Terraform version 0.1x and the latest release of the Terraform. 
@@ -135,8 +135,8 @@ With the release of Terraform version 0.12, the syntax for configuration files c
    
    Example output: 
    ```
-   This command rewrites the configuration files in the given directory so
-   that they use the new syntax features from Terraform v0.1x, and identify
+   This command rewrites the configuration files in the given directory to
+   use the new syntax features from Terraform v0.1x, and identify
    any constructs that may need to be adjusted for correct operation with
    Terraform v0.1x.
 
@@ -160,7 +160,7 @@ With the release of Terraform version 0.12, the syntax for configuration files c
    ```
    {: screen}
    
-4. Open your Terraform configuration file to verify the changes. 
+4. Verify your Terraform configuration file is updated. 
 
 ## Version control 
 {: #versions}
@@ -168,7 +168,7 @@ With the release of Terraform version 0.12, the syntax for configuration files c
 View the versions that are associated with the resources and data sources in the documentation:
 
 - **IBM Cloud Provider plug-in for Terraform version**: 1.14.0
-- **Terraform version**: 0.12 or more
+- **Terraform version**: 0.12 or higher
 
 With the release of Terraform version 0.12, the syntax for configuration files changed. If you want to run your infrastructure code by using Terraform version 0.12, you must first [update your configuration files](#tf-0.1x-migration) to apply the new syntax. 
 {: important}
