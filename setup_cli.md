@@ -109,7 +109,7 @@ You can use Terraform to manage {{site.data.keyword.cloud_notm}} resources. Terr
 ### Terraform v0.12 and v0.13 installation
 {: #tf_installation}
 
-IBM Cloud provider supports Terraform v0.12, v0.13, and v0.14. You can complete the following steps to install Terraform v0.12 and Terraform v0.13 on your local machine.
+IBM Cloud provider supports Terraform v0.12, and v0.13. You can complete the following steps to install Terraform v0.12 and Terraform v0.13 on your local machine.
 {: shortdesc}
 
 1. Create a folder `terraform` on your local machine, and navigate to your `terraform` folder. 
@@ -184,7 +184,7 @@ After the Terraform installation is complete. You need to configure the {{site.d
 Complete the following steps to configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform v0.12 and Terraform v0.13.
 {: shortdesc}
 
-You need not explicitly download the `plugins` for Terraform v0.13.x and higher version. You can refer the Terraform provider block from the [provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest).
+You need not explicitly download the `plugins` for Terraform v0.13.x and higher version.
 {: note}
 
 1. Create a `providers.tf` file, add the shared Terraform block by specifying the right Terraform provider version in `version` parameter to automatically provision the plug-ins for Terraform v0.13.x and higher version.  
@@ -210,14 +210,14 @@ You need not explicitly download the `plugins` for Terraform v0.13.x and higher 
         required_providers {
            ibm = {
               source = "IBM-Cloud/ibm"
-               version = "1.14.0"
+               version = "1.20.0"
               }
          }
       }
       ```
       {: codeblock}
 
-      If you are using Terraform modules, the shared Terraform block should be used in all the module folders.
+      If you are using Terraform modules, the shared Terraform block should be used in all the module folders. You can refer the Terraform provider block from the [provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest).
       {: note}
 
 ### Terraform v0.12.x
