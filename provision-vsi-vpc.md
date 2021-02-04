@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2021
 lastupdated: "2021-02-04"
 
-keywords: terraform quickstart, terraform getting started, terraform tutorial
+keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for vpc
 
 subcollection: ibm-cloud-provider-for-terraform
 
@@ -582,7 +582,8 @@ To create a VPC and a VSI:
    ```
    {: pre}
 
- **What's next?**
+
+**What's next?**
 
 Explore other [{{site.data.keyword.cloud_notm}} resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider) that you can provision with Terraform. 
 

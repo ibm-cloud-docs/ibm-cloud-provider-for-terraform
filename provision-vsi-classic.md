@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2021
 lastupdated: "2021-02-04"
 
-keywords: terraform quickstart, terraform getting started, terraform tutorial
+keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for classic infrastructure
 
 subcollection: ibm-cloud-provider-for-terraform
 

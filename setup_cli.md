@@ -169,7 +169,7 @@ IBM Cloud provider supports Terraform v0.12, and v0.13. You can complete the fol
       ```
       {: screen}
 
-      To migrate from the Terraform v0.12 to Terraform v0.13, see [Upgrading Terraform version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol#tf-0.1x-migration.
+      To migrate from the Terraform v0.12 to Terraform v0.13, see [Upgrading Terraform version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol#tf-0.1x-migration).
 
 
 ## Installing the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform
@@ -311,7 +311,7 @@ As Terraform supports multiple cloud providers, you must specify `ibm` as your {
           iaas_classic_api_key = ""
          }
        ```
-      {: pre}
+      {: codeblock}
 
      **Environment variables**
 
@@ -321,7 +321,7 @@ As Terraform supports multiple cloud providers, you must specify `ibm` as your {
       ```
       provider "ibm" {}
       ```
-      {: pre}
+      {: codeblock}
 
        **Usage**
 

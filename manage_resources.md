@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-04"
 
 keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, Terraform, provision resources
 
@@ -96,7 +96,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 
-# Managing IBM Cloud resources with Terraform
+# Managing the IBM Cloud resources with Terraform
 {: #manage_resources}
 
 Use the Terraform CLI to create your platform and infrastructure resources in {{site.data.keyword.cloud_notm}}. 
