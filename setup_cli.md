@@ -118,7 +118,7 @@ IBM Cloud provider supports Terraform v0.12, v0.13, and v0.14. You can complete 
     mkdir terraform && cd terraform
    ```
    {: codeblock}
-2. Download the specific [Terraform version](https://releases.hashicorp.com/terraform).
+2. Download the specific [Terraform version](https://releases.hashicorp.com/terraform){: external}.
 3. Extract the Terraform `zip` file and copy the files to your `terraform` directory. 
 4. Set the environment `PATH` variable to your Terraform files.
 
@@ -182,10 +182,10 @@ After the Terraform installation is complete. You need to configure the {{site.d
 Complete the following steps to configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform v0.12 and Terraform v0.13.
 {: shortdesc}
 
-You need not explicitly download the `plugins` for Terraform v0.13.x and higher version.
+You need not explicitly download the `plugins` for Terraform v0.13.x and higher version. You can use the Provider code block from the [latest provider block](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest).
 {: note}
 
-1. Create a `providers.tf` file, add the shared Terraform block by specifying the right Terraform provider version in `version` parameter to automatically provision the plug-ins for Terraform v0.13.x and higher version.
+1. Create a `providers.tf` file, add the shared Terraform block by specifying the right Terraform provider version in `version` parameter to automatically provision the plug-ins for Terraform v0.13.x and higher version.  
 
    **Syntax**
 
@@ -223,7 +223,7 @@ You need not explicitly download the `plugins` for Terraform v0.13.x and higher 
 
 Complete the following steps to configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform v0.12.
 
-1. Download the latest version of the [{{site.data.keyword.cloud_notm}} provider plug-in](https://github.com/IBM-Cloud/terraform-provider-ibm/releases).
+1. Download the latest version of the [{{site.data.keyword.cloud_notm}} provider plug-in](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
 2. Extract the `zip` file and retrieve the files.
 3. Create a `plugins` hidden folder 
    ```

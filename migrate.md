@@ -165,10 +165,10 @@ With the release of Terraform v0.12, the syntax for configuration files changed.
 ## Version control 
 {: #versions}
 
-View the versions that are associated with the resources and data sources in the documentation:
+The versions that are associated with the resources and data sources are
 
-- **IBM Cloud Provider plug-in for Terraform version**: 1.14.0
-- **Terraform version**: 0.12 or higher
+- IBM Cloud Provider plug-in for Terraform version: 1.20.1, for more information, see [provider version releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
+- Terraform version: 1.14.0, for more information, see [Terraform version](https://releases.hashicorp.com/terraform/){: external}.
 
 With the release of Terraform version 0.12, the syntax for configuration files changed. If you want to run your infrastructure code by using Terraform version 0.12, you must first [update your configuration files](#tf-0.1x-migration) to apply the new syntax. 
 {: important}
