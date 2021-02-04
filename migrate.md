@@ -107,19 +107,19 @@ View the versions that are associated in the Terraform and the {{site.data.keywo
 ## Upgrading your Terraform version
 {: #tf-0.1x-migration}
   
-Update your Terraform configuration files from version 0.1x to version 0.1x so that you can run your Terraform code with the Terraform version 0.1x. 
+You can upgrade your Terraform old version to new version, for example, `Terraform v0.12 to Terraform v0.13`. With the release of Terraform v0.13, the syntax for configuration files have changed.
+{: shortdesc}
 
-With the release of Terraform v0.12, the syntax for configuration files changed. If you want to run your infrastructure code by using Terraform version 0.12, you must first update your configuration files to apply the new syntax. 
-{: important}
+Complete the following steps to upgrade your configuration files: 
 
-1. Follow the [instructions](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_cli) to install Terraform version 0.1x and the latest release of the Terraform. 
-2. Copy your Terraform version 0.1x configuration files into your Terraform working directory. 
+1. Follow the [instructions](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_cli) to install existing Terraform and the latest version of the Terraform.
+2. Copy your existing Terraform version configuration files into your Terraform working directory. 
    ```
    mv <tf_config_file_path> $HOME/terraform
    ```
    {: pre}
    
-3. Use the Terraform version 0.1x CLI to automatically apply the new syntax to your Terraform configuration files. 
+3. Use the Terraform upgrade command to automatically apply the new syntax to your Terraform configuration files. 
   
    **Syntax**
    ```
@@ -136,9 +136,9 @@ With the release of Terraform v0.12, the syntax for configuration files changed.
    Example output: 
    ```
    This command rewrites the configuration files in the given directory to
-   use the new syntax features from Terraform v0.1x, and identify
+   use the new syntax features from Terraform v0.12, and identify
    any constructs that may need to be adjusted for correct operation with
-   Terraform v0.1x.
+   Terraform v0.13.
 
    We recommend to use this command in a clean version control work tree, so that
    you can easily see the proposed changes as a diff against the latest commit.
@@ -165,10 +165,10 @@ With the release of Terraform v0.12, the syntax for configuration files changed.
 ## Version control 
 {: #versions}
 
-The versions that are associated with the resources and data sources are
+The versions that are associated with the resources and data sources are:
 
-- IBM Cloud Provider plug-in for Terraform version: 1.20.1, for more information, see [provider version releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
-- Terraform version: 1.14.0, for more information, see [Terraform version](https://releases.hashicorp.com/terraform/){: external}.
+- IBM Cloud Provider plug-in for Terraform. For more information, see [provider version releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
+- Terraform. For more information, see [Terraform version](https://releases.hashicorp.com/terraform/){: external}.
 
 With the release of Terraform version 0.12, the syntax for configuration files changed. If you want to run your infrastructure code by using Terraform version 0.12, you must first [update your configuration files](#tf-0.1x-migration) to apply the new syntax. 
 {: important}
