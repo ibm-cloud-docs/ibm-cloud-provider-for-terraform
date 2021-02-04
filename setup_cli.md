@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-03"
+lastupdated: "2021-02-04"
 
 keywords: install Terraform cli, set up Terraform cli, ibm cloud provider plugin, Terraform
 
@@ -293,7 +293,7 @@ As Terraform supports multiple cloud providers, you must specify `ibm` as your {
    </tbody>
    </table>
 
-4. create a Terraform on {{site.data.keyword.cloud_notm}} provider configuration file that is named `provider.tf`. Use this file to specify IBM as your cloud provider and to reference the credentials from your `terraform.tfvars` file. To reference a variable, declare the variable first, and then retrieve the value of the variable by using Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax.
+4. Create a Terraform on {{site.data.keyword.cloud_notm}} provider configuration file named `provider.tf`. Use this file to specify `ibm` as your cloud provider to reference the credentials from your `terraform.tfvars` file. To reference a variable, declare the variable first, and then retrieve the value of the variable by using Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax.
 
    The {{site.data.keyword.cloud_notm}} provider offers a flexible methods of providing credentials for authentication. The following two methods are supported.
 
