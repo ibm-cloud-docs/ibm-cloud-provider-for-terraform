@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04" 
+lastupdated: "2021-02-05" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -2539,7 +2539,7 @@ The following example creates a VPN gateway IP.
 
 ```
 resource "ibm_is_virtual_endpoint_gateway_ip" "virtual_endpoint_gateway_ip" {
-	gateway_id = ibm_is_virtual_endpoint_gateway.endpoint_gateway.id
+	gateway = ibm_is_virtual_endpoint_gateway.endpoint_gateway.id
 	reserved_ip = "0737-5ab3c18e-6f6c-4a69-8f48-20e3456647b5"
 }
 
