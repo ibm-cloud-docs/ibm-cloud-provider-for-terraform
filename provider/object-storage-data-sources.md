@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-08"
 
 keywords: terraform provider plugin, terraform provider cos, terraform resources cos, terraform resources object storage, create bucket with terraform
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -128,10 +126,10 @@ data "ibm_resource_instance" "cos_instance" {
 }
 
 data "ibm_cos_bucket" "standard-ams03" {
-  bucket_name = "a-standard-bucket-at-ams"
+  bucket_name          = "a-standard-bucket-at-ams"
   resource_instance_id = data.ibm_resource_instance.cos_instance.id
-  bucket_type = "single_site_location"
-  region = "ams03"
+  bucket_type          = "single_site_location"
+  bucket_region        = "ams03"
 }
 
 output "bucket_private_endpoint" {
@@ -151,7 +149,11 @@ Review the input parameters that you can specify for your data source.
 | `bucket_name` | String | Required | The name of the bucket. |
 | `bucket_region` | String | Required | The region of the bucket. |
 | `bucket_type` | String | Required | The type of the bucket. Supported values are `single_site_location`, `region_location`, and `cross_region_location`.  |
+| `endpoint_type`|String | Optional| The type of the endpoint either public or private to be used for the buckets. Default value is `public`.|
 | `resource_instance_id` | String | Required | The ID of the {{site.data.keyword.cos_full_notm}} service instance for which you want to create a bucket. |
+| `storage_class`|String | Required | Storage class of the bucket. Supported values are `standard`, `vault`, `cold`, `flex`, `smart`.|
+
+
 
 ### Output parameters
 {: #cos-bucket-output}
@@ -161,11 +163,29 @@ Review the output parameters that you can access after you retrieved your data s
 
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
+|`allowed_ip`| String | List of `IPv4` or `IPv6` addresses in CIDR notation to be affected by firewall.|
+|`activity_tracking`|List| Nested block wth the following structure.|
+|`activity_tracking.read_data_events`|Array| Enables sending log data to Activity Tracker and LogDNA to provide visibility into an object read and write events.|
+|`activity_tracking.write_data_events`|Bool| If set to `true`, all object write events (that is `uploads`) is sent to Activity Tracker.|
+|`activity_tracking.activity_tracker_crn`|String| The first time activity_tracking is configured.|
+|`archive_rule`|List|Nested block with the following structure.|
+|`archive_rule.rule_id`|String| Unique identifier for the rule. Archive rules allow you to set a specific time frame after which objects transition to archive.|
+|`archive_rule.enable`|Bool|Specifies archive rule status either `enable` or `disable` for a bucket.|
+|`archive_rule.days`|String| Specifies the number of days when the specific rule action takes effect.|
+|`archive_rule.type`|String| Specifies the storage class or archive type to which you want the object to transition. Supported values are `Glacier` or `Accelerated`.|
 | `crn` | String | The CRN of the bucket. |
-| `cross_region_location` | String | The location if you created a cross-regional bucket. |
+| `cross_region_location` | String | The location to create a cross-regional bucket. |
+|`expire_rule`|List|Nested block with the following structure.|
+|`expire_rule.rule_id`|String| Unique identifier for the rule. Expire rules allow you to set a specific time frame after which objects are deleted.|
+|`expire_rule.enable`|Bool| Specifies expire rule status either `enable` or `disable` for a bucket.|
+|`expire_rule.days`|String| Specifies the number of days when the specific rule action takes effect.|
+|`expire_rule.prefix`|String| Specifies a prefix filter to apply to only a subset of objects with names that match the prefix.|
 | `id` | String | The ID of the bucket. | 
-| `key_protect` | String | The CRN of the {{site.data.keyword.keymanagementservicelong_notm}} instance that you use to encrypt your data in {{site.data.keyword.cos_full_notm}}. |
-| `region_location` | String | The location if you created a regional bucket. |
+| `key_protect` | String | The CRN of the {{site.data.keyword.keymanagementservicelong_notm}} instance where a root key is already provisioned. |
+|`metrics_monitoring`|List |Nested block with the following structure|
+|`metrics_monitoring.usage_metrics_enabled`|Bool| If set to `true`, all usage metrics (that is `bytes_used`) is sent to the monitoring service.
+|`metrics_monitoring.metrics_monitoring_crn`|String|The first time `metrics_monitoring` is configured. The instance of {{site.data.keyword.cloud_notm}} monitoring that will receive the bucket metrics.|
+| `region_location` | String | The location to create a regional bucket. |
 | `resource_instance_id` | String | The ID of {site.data.keyword.cos_full_notm}} instance. | 
-| `single_site_location` | String | The location if you created a single site bucket. |
+| `single_site_location` | String | The location to create a single site bucket. |
 | `storage_class` | String | The storage class of the bucket. |
