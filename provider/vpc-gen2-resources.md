@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-05" 
+lastupdated: "2021-02-08" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -2978,7 +2978,7 @@ Review the input parameters that you can specify for your resource.
 
 |Name|Data type|Required / optional|Description| Forces new resource |
 |----|-----------|-----------|---------------------| ------ |
-|`action`|String|Optional|The action to perform with a packet matching the route.| No |
+|`action`|String|Optional|The action to perform with a packet matching the route. The default value is `deliver`. The supported values are `delegate`, `deliver`, and `drop`| No |
 |`destination`|String|Required| The destination of the route. |  Yes |
 |`name`|String|Optional|The user-defined name of the route. If unspecified, the name will be a hyphenated list of randomly selected words. You need to provide unique name within the VPC routing table the route resides in.| No |
 |`next_hop`|String|Required| The next hop of the route. |  Yes |
