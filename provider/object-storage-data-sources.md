@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-08"
+lastupdated: "2021-02-09"
 
 keywords: terraform provider plugin, terraform provider cos, terraform resources cos, terraform resources object storage, create bucket with terraform
 
@@ -164,7 +164,7 @@ Review the output parameters that you can access after you retrieved your data s
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
 |`allowed_ip`| String | List of `IPv4` or `IPv6` addresses in CIDR notation to be affected by firewall.|
-|`activity_tracking`|List| Nested block wth the following structure.|
+|`activity_tracking`|List| Nested block with the following structure.|
 |`activity_tracking.read_data_events`|Array| Enables sending log data to Activity Tracker and LogDNA to provide visibility into an object read and write events.|
 |`activity_tracking.write_data_events`|Bool| If set to `true`, all object write events (that is `uploads`) is sent to Activity Tracker.|
 |`activity_tracking.activity_tracker_crn`|String| The first time activity_tracking is configured.|

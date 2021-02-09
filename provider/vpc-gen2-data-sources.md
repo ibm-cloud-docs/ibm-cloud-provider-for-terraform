@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04"
+lastupdated: "2021-02-09"
 
 keywords: terraform provider plugin, terraform gen 2, terraform gen 2 compute
 
@@ -347,7 +347,7 @@ Review the input parameters that you can specify for your data source.
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | -------------- |
 |`name`|String|Required|The name of the {{site.data.keyword.vsi_is_short}} instance that you want to retrieve. |
-|`private_key`|String|Optional|The private key of an SSH key that you want to add to your {{site.data.keyword.vsi_is_short}} instance during creation in PEM format. SSH keys are used by virtual servers to identify a user or device through public-key cryptography. For more information, about how to create SSH keys and upload them to {{site.data.keyword.cloud_notm}}, see [Locating or generating your SSH key](/docs/vpc?topic=vpc-ssh-keys#locating-ssh-keys). The SSH key is used to decrypt the default administrator password in Windows if Windows is installed as the operating system on your {{site.data.keyword.vsi_is_short}} instance.|
+|`private_key`|String|Optional|The private key of an SSH key that you want to add to your {{site.data.keyword.vsi_is_short}} instance during creation in PEM format. It is used to decrypt the default password of the Windows administrator for the virtual server instance if the image is used of type `windows`.|
 |`passphrase`|String|Optional|The passphrase that you used when you created your SSH key. If you did not enter a passphrase when you created the SSH key, do not provide this input parameter.|
 
 ### Output parameters
@@ -1144,7 +1144,7 @@ Review the output parameters that are exported.
 |Name|Data type|Description|
 |----|-----------|--------|
 |`id`|String|The ID of the security group.|
-|`rules`|List of objects|Rules associated with security group. Each rule has follwoing attributes. |
+|`rules`|List of objects|Rules associated with security group. Each rule has following attributes. |
 |`rules.rule_id`| String|ID of the rule.  |
 |`rules.direction`|String|Direction of traffic to enforce, either inbound or outbound. |
 |`rules.ip_version`|String|IP version: IPv4 or IPv6.  |
