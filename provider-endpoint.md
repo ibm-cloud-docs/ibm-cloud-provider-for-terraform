@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04"
+lastupdated: "2021-02-09"
 
 keywords: terraform provider, terraform provider private endpoint, private endpoint
 
@@ -98,7 +98,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 The steps involved in configuring your {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform to use the private Cloud Service Endpoint (CSE) of an {{site.data.keyword.cloud_notm}} service in  public CSE in [Production environment](https://cloud.ibm.com).
 
-You can configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform to communicate with an {{site.data.keyword.cloud_notm}} service by using the respective Cloud Service Endpoint or Private Service Endpoint.
+You can configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform to communicate with an {{site.data.keyword.cloud_notm}} service by using the Cloud Service Endpoint or Private Service Endpoint.
 {: shortdesc}
 
 1. Setup the Terraform engine and an {{site.data.keyword.cloud_notm}} Provider plug-in, in {{site.data.keyword.cloud_notm}} virtual machine by using private VLAN. And provision the enabled Virtual Routing and Forwarding (VRF) account.
