@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04"
+lastupdated: "2021-02-17"
 
 keywords: terraform provider plugin, terraform power resources, terraform power systems resources, terraform power
 
@@ -133,7 +133,7 @@ Review the input parameters that you can specify for your resource.
 | ------------- |-------------| ----- | -------------- |
 |`pi_image_name`|String|Required|The name of the image. |
 |`pi_image_id`|String|Required|The ID of the image. | 
-|`pi_cloud_instance_id`|String|Required|The cloud_instance_id for this account.|
+|`pi_cloud_instance_id`|String|Required|The GUID of the service instance associated with an account.|
 
 ### Output parameters
 {: #power-image-output}
@@ -192,7 +192,7 @@ Review the input parameters that you can specify for your resource.
 
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | -------------- |
-| `pi_cloud_instance_id` | String | Required | The cloud instance ID of your account. |
+| `pi_cloud_instance_id` | String | Required | The GUID of the service instance associated with an account.|
 | `pi_image_id` | String | Required | The ID of the image that you want to use for your Power Systems Virtual Server instance. The image determines the operating system that is installed in your instance. To list available images, run the `ibmcloud pi images` command. |
 | `pi_instance_name` | String | Required | The name of the Power Systems Virtual Server instance. | 
 | `pi_key_pair_name` | String | Required| The name of the SSH key that you want to use to access your Power Systems Virtual Server instance. The SSH key must be uploaded to {{site.data.keyword.cloud_notm}}. |
@@ -297,7 +297,7 @@ Review the input parameters that you can specify for your resource.
 
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | -------------- |
-| `pi_cloud_instance_id` | String | Required | The cloud instance ID for this account. | 
+| `pi_cloud_instance_id` | String | Required | The GUID of the service instance associated with an account. | 
 | `pi_key_name` | Integer | Required | The name of the SSH key that you uploaded to {{site.data.keyword.cloud_notm}}. 
 | `pi_ssh_key` | String | Required | The value of the public SSH key. | 
 | `pi_creation_date`|String|Optional|The date when the SSH key was created.|
@@ -369,7 +369,7 @@ Review the input parameters that you can specify for your resource.
 
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | -------------- |
-| `pi_cloud_instance_id` | String | Required | The cloud instance ID for this account. |
+| `pi_cloud_instance_id` | String | Required | The GUID of the service instance associated with an account. |
 | `pi_network_name` | String | Required | The name of the network. |
 | `pi_network_type` | String | Required | The type of network that you want to create, such as `pub-vlan` or `vlan`. |
 | `pi_dns`|List of strings|Optional|List of DNS entries for the network. Required for `vlan` network type.|
@@ -438,7 +438,7 @@ Review the input parameters that you can specify for your resource.
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | -------------- |
 |`pi_instance_name`|String|Required|The name of the VM. |
-|`pi_cloud_instance_id`|String|Required|The cloud_instance_id of the account. | 
+|`pi_cloud_instance_id`|String|Required|The GUID of the service instance associated with an account. | 
 |`pi_network_port_description`|String|Optional|The description for the Network Port.|
 
 ### Output parameters
@@ -506,7 +506,7 @@ Review the input parameters that you can specify for your resource.
 |`pi_snapshot_name`|String|Required|The unique name of the snapshot. |
 |`description`|String|Optional|The description for the snapshot.|
 |`pi_volume_ids`|String|Optional|The volume ID, if none provided then all volumes of the instance will be part of the snapshot.|
-|`pi_cloud_instance_id`|String|Required|The cloud instance ID for this account.|
+|`pi_cloud_instance_id`|String|Required|The GUID of the service instance associated with an account.|
 
 
 ### Output parameters
@@ -571,7 +571,7 @@ Review the input parameters that you can specify for your resource.
 
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | -------------- |
-| `pi_cloud_instance_id` | String | Required | The cloud instance ID for this account. |
+| `pi_cloud_instance_id` | String | Required | The GUID of the service instance associated with an account.|
 | `pi_volume_name` | String | Required |  The name of the volume. |
 | `pi_volume_shareable` | Boolean | Required | If set to **true**, the volume can be shared across Power Systems Virtual Server instances. If set to **false**, you can attach it only to one instance. | 
 | `pi_volume_size` | Integer | Required | The size of the volume in gigabytes. | 

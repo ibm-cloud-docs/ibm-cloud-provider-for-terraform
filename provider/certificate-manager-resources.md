@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-17"
 
 keywords: terraform provider plugin, terraform certificate manager, terraform cert manager, terraform certificate
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -107,24 +105,33 @@ Before you start working with your resource, make sure to review the [required p
 ## `ibm_certificate_manager_import`
 {: #cert-manager}
 
-Upload or delete a certificate in Certificate Manager.
+Upload or delete a certificate in Certificate Manager. For more information, about {{site.data.keyword.cloud_notm}} certificate manager, see [Managing certificates](/docs/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard).
 {: shortdesc}
 
 ### Sample Terraform code
 {: #cert-manager-sample}
 
+A sample code to create a certificate manager service instance that enables customer managed keys and imports a certificate.
+{: shortdesc}
+
 ```
-provider "ibm"
-{
+resource "ibm_resource_instance" "cm" {
+  name     = "test"
+  location = "us-south"
+  plan     = "free"
+  service  = "cloudcerts"
+  parameters = {
+    kms_info = "{\"id\":\"<GUID OF KMS/HPCS INSTANCE>\",\"url\":\"<KMS/HPCS ENDPOINT>\"}",
+    tek_id   = "CRN OF KMS/HPCS KEY",
+  }
 }
+
 resource "ibm_certificate_manager_import" "cert" {
   certificate_manager_instance_id = ibm_resource_instance.cm.id
   name                            = "test"
   description="string"
   data = {
     content = file(var.certfile_path)
-    priv_key = ""
-    intermediate = ""
   }
 }
 ```
@@ -169,13 +176,27 @@ Review the output parameters that you can access after your resource is created.
 ## `ibm_certificate_manager_order`
 {: #certmanager-order}
 
-Order, renew, update, or delete a certificate in Certificate Manager. For more information, see [Ordering certificates](/docs/certificate-manager?topic=certificate-manager-ordering-certificates).
+Order, renew, update, or delete a certificate in Certificate Manager. For more information, about  see [Ordering certificates](/docs/certificate-manager?topic=certificate-manager-ordering-certificates).
 {: shortdesc}
 
 ### Sample Terraform code
 {: #certmanager-order-sample}
 
+A sample code to create a certificate manager service instance that enables customer managed keys and orders a certificate.
+{: shortdesc}
+
 ```
+resource "ibm_resource_instance" "cm" {
+  name     = "test"
+  location = "us-south"
+  plan     = "free"
+  service  = "cloudcerts"
+  parameters = {
+    kms_info = "{\"id\":\"<GUID OF KMS/HPCS INSTANCE>\",\"url\":\"<KMS/HPCS ENDPOINT>\"}",
+    tek_id   = "CRN OF KMS/HPCS KEY",
+  }
+}
+
 resource "ibm_certificate_manager_order" "cert" {
   certificate_manager_instance_id = ibm_resource_instance.cm.id
   name                            = "test"

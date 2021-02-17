@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04"
+lastupdated: "2021-02-17"
 
 keywords: terraform provider plugin, terraform power resources, terraform power systems resources, terraform power
 
@@ -105,6 +105,82 @@ To find supported input parameter values, you can use the Power Systems command 
 Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
+## `ibm_pi_catalog_images`
+{: #pi-catalog-image}
+
+Retrieve the details of an image that you can use in your Power Systems Virtual Server instance for copying into {{site.data.keyword.cloud_notm}} instances. For more information, about catalog images, see [Provisioning a virtual server instance from a third-party image](/docs/virtual-servers?topic=virtual-servers-ordering-3P). 
+{: shortdesc}
+
+### Sample Terraform code
+{: #pi-catalog-sample}
+
+The following example shows how to retrieve information by using `ibm_pi_catalog_images`.
+{: shortdesc}
+
+```
+data "ibm_pi_catalog_images" "ds_images" {
+  pi_cloud_instance_id = "49fba6c9-23f8-40bc-9899-aca322ee7d5b"
+}
+```
+{: codeblock}
+
+For more information, about supported end point regions, see [end point URL](/apidocs/power-cloud#endpoint). If a power cloud instance is provisioned at `lon04`. Then region is specified as `lon` and zone as `lon04`. The provider level attributes should be as follows.
+
+```
+   provider "ibm" {
+    region    =   "lon"
+    zone      =   "lon04"
+  }
+```
+{: codeblock}
+{: note}
+
+### Input parameters
+{: #pi-catalog-input}
+
+Review the input parameters that you can specify for your data source. 
+{: shortdesc}
+
+| Input parameter | Data type | Required / optional | Description |
+| ------------- |-------------| ----- | -------------- |
+| `pi_cloud_instance_id` | String | Required | The GUID of the service instance associated with an account. | 
+
+
+### Output parameters
+{: #pi-catalog-output}
+
+Review the output parameters that you can access after you retrieved your data source. 
+{: shortdesc}
+
+| Output parameter | Data type | Description |
+| ------------- |-------------| -------------- |
+| `architecture` | String | The CPU architecture that the image is designed for. | 
+| `id` | String | The unique identifier of the image. |
+| `operatingsystem` | String | The operating system that is installed with the image. |
+| `size` | String | The size of the image in megabytes. |
+| `state` | String | The state for this image. | 
+
+|`images`|String |Lists all the images in the IBM Power Virtual Server Cloud.|
+|`images.image_id`|String| The unique identifier of an image.|
+|`images.name` | String | The name of the image.|
+|`images.state` | String | The state of an Operating System.|
+|`images.description` | String | The description of an image.|
+|`images.storage_type` | String |  The storage type of an image.|
+|`images.href` | String | The `href` of an image.|
+|`images.creation_date` | String | The creation date of an image.|
+|`images.last_update_date` | String | The last updated date of an image.|
+|`images.image_type` | String | The type of the format.|
+|`images.disk_format` | String | The disk format.|
+|`images.operating_system` | String |  Operating System.|
+|`images.hypervisor_type` | String | Hypervisor type.|
+|`images.architecture` | String | Architecture.|
+|`images.endianness` | String |  Endianness.|
+|`images.href` | String | Address of an Image.|
+
+
+
+
+
 ## `ibm_pi_image`
 {: #power-image}
 
@@ -133,7 +209,7 @@ Review the input parameters that you can specify for your data source.
 
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | -------------- |
-| `pi_cloud_instance_id` | String | Required | The cloud instance ID associated with the account. | 
+| `pi_cloud_instance_id` | String | Required | The GUID of the service instance associated with an account. | 
 | `pi_image_name` | String | Required | The ID of the image. To find supported images, run the `ibmcloud pi images` command. |
 
 ### Output parameters
@@ -181,7 +257,7 @@ Review the input parameters that you can specify for your data source.
 
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | -------------- |
-| `pi_cloud_instance_id` | String | Required | The cloud instance ID that is associated with the account. | 
+| `pi_cloud_instance_id` | String | Required | The GUID of the service instance associated with an account. | 
 
 ### Output parameters
 {: #power-images-output}
@@ -229,7 +305,7 @@ Review the input parameters that you can specify for your data source.
 
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | -------------- |
-| `pi_cloud_instance_id` | String | Required | The service instance associated with the account. |
+| `pi_cloud_instance_id` | String | Required | The GUID of the service instance associated with an account. |
 | `pi_instance_name` | String | Required | The name of the instance. |
 
 
@@ -297,7 +373,7 @@ Review the input parameters that you can specify for your data source.
 
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | -------------- |
-| `pi_cloud_instance_id` | String | Required | The service instance associated with the account. |
+| `pi_cloud_instance_id` | String | Required | The GUID of the service instance associated with an account. |
 | `pi_instance_name` | String | Required | The name of the instance. |
 | `pi_network_name`|String|Required| The subnet that the instance belongs to. 
 
@@ -346,7 +422,7 @@ Review the input parameters that you can specify for your data source.
 
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | -------------- |
-| `pi_cloud_instance_id` | String | Required | The service instance associated with the account. |
+| `pi_cloud_instance_id` | String | Required | The GUID of the service instance associated with an account. |
 | `pi_key_name` | String | Required | The name of the key.|
 
 
@@ -393,7 +469,7 @@ Review the input parameters that you can specify for your data source.
 
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | -------------- |
-| `pi_cloud_instance_id` | String | Required | The service instance associated with the account. |
+| `pi_cloud_instance_id` | String | Required | The GUID of the service instance associated with an account. |
 | `pi_network_name` | String | Required | The name of the network.|
 
 
@@ -442,7 +518,7 @@ Review the input parameters that you can specify for your data source.
 
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | -------------- |
-| `pi_cloud_instance_id` | String | Required | The service instance associated with the account. |
+| `pi_cloud_instance_id` | String | Required | The GUID of the service instance associated with an account. |
 
 ### Output parameters
 {: #power-public-network-output}
@@ -487,7 +563,7 @@ Review the input parameters that you can specify for your data source.
 
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | -------------- |
-| `pi_cloud_instance_id` | String | Required | The ID of the Power Systems Virtual Server instance for which you want to retrieve tenants. |
+| `pi_cloud_instance_id` | String | Required | The GUID of the service instance associated with an account. |
 
 ### Output parameters
 {: #power-tenant-output}
@@ -536,7 +612,7 @@ Review the input parameters that you can specify for your data source.
 
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | -------------- |
-| `pi_cloud_instance_id` | String | Required | The ID of the Power Systems Virtual Server instance for which you want to retrieve volume details. |
+| `pi_cloud_instance_id` | String | Required | The GUID of the service instance associated with an account.|
 | `pi_volume_name` | String | Required | The name of the volume for which you want to retrieve detailed information. |
 
 ### Output parameters
@@ -585,7 +661,7 @@ Review the input parameters that you can specify for your data source.
 
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | -------------- |
-| `pi_cloud_instance_id` | String | Required | The ID of the Power Systems Virtual Server instance for which you want to retrieve volume details. |
+| `pi_cloud_instance_id` | String | Required | The GUID of the service instance associated with an account.|
 | `pi_volume_name` | String | Required | The name of the volume for which you want to retrieve detailed information. |
 
 ### Output parameters
