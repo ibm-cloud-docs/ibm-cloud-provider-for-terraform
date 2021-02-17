@@ -1621,7 +1621,7 @@ Review the output parameters that you can access after you retrieved your data s
 ## `ibm_is_volume_profiles`
 {: #volume-profiles-ds}
 
-Retrieve information of an existing {{site.data.keyword.cloud_notm}} VSI. For more information, about the volumes and profiles, see [profiles](docs/vpc?topic=vpc-block-storage-profiles).
+Retrieve information of an existing {{site.data.keyword.cloud_notm}} VSI. For more information, about the volumes and profiles, see [profiles](/docs/vpc?topic=vpc-block-storage-profiles).
 {: shortdesc}
 
 ### Sample Terraform code

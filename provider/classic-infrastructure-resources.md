@@ -591,7 +591,8 @@ The following attributes are exported:
 ## `ibm_compute_monitor`
 {: #compute-monitor}
 
-Create, update, or delete a monitor for your virtual server instance. With monitors, you can verify the health of your virtual server instance by sending ping requests to the instance and checking the responsiveness of your instance. For more information, see [Viewing and managing monitors](/docs/virtual-servers?topic=virtual-servers-monitoring-intro).
+Create, update, or delete a monitor for your virtual server instance. With monitors, you can verify the health of your virtual server instance by sending ping requests to the instance and checking the responsiveness of your instance. For more information, see [Viewing and managing monitors](/docs/vpc?topic=vpc-managing-virtual-server-instances).
+{: shortdesc}
 
 ### Sample Terraform code
 {: #compute-monitor-sample}
