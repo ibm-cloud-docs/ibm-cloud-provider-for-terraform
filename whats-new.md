@@ -26,7 +26,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # What's new in Terraform?
 {: #new-in-terraform}
 
-Learn about the latest changes to the Terraform service that are grouped by month.
+Learn about the latest changes to the Terraform services that are grouped by month.
 
 
 
