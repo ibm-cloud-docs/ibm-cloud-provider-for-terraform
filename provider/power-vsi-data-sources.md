@@ -174,7 +174,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`images.operating_system` | String |  Operating System.|
 |`images.hypervisor_type` | String | Hypervisor type.|
 |`images.architecture` | String | Architecture.|
-|`images.endianness` | String |  Endianness.|
+|`images.endianness` | String |  The `Endianness` order.|
 |`images.href` | String | Address of an Image.|
 
 
