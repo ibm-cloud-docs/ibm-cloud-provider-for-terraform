@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-17"
 
 keywords: terraform provider plugin, terraform classic infrastructure, terraform classic, terraform softlayer, terraform sl, terraform vsi, terraform Bare Metal server
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -1994,8 +1992,6 @@ ibm_subnet provides the following [Timeouts](https://www.terraform.io/docs/confi
 {: caption="Table. Available timeout configuration options" caption-side="top"}
 
 
-
-
 ## `ibm_lbaas`
 {: #lbaas}
 
@@ -2054,6 +2050,7 @@ The following arguments are supported:
 |`protocols.session_stickiness`| String | Optional | The SOURCE_IP for session stickiness.  | No |
 |`protocols.max_conn`| Integer | Optional | The maximum number of connections the listener can accept. The number must be 1-64000.  | No |
 |`protocols.tls_certificate_id`| Integer | Optional | The ID of the SSL/TLS certificate used for a protocol. This ID should be specified when `front-end protocol` has a value of `HTTPS`.| No |
+|`session_stickiness`| String | Optional | The `SOURCE_IP` or `HTTP_COOKIE` for session stickiness.|No|
 |`ssl_ciphers`| List | Optional |The comma-separated list of SSL Ciphers. You can find list of supported ciphers [SSL_offload](/docs/loadbalancer-service?topic=loadbalancer-service-ssl-offload-with-ibm-cloud-load-balancer).| No |
 |`use_system_public_ip_pool`| Boolean | Optional | Applicable for public load balancer only. It specifies whether the public IP addresses are allocated from system public IP pool or public subnet from the account order of the load balancer. The default value is `true`.| No |
 |`wait_time_minutes`| Integer | Required | The duration, expressed in minutes, to wait for the LBaaS instance to become available before declaring it as created. It is also the same amount of time waited for deletion to finish. The default value is `90`.| No |
@@ -3281,6 +3278,7 @@ resource "ibm_storage_block" "test2" {
 ```
 {: codeblock}
 
+
 ### Input parameters
 {: #storage-block-input}
 
@@ -3307,14 +3305,15 @@ The following arguments are supported:
 
 The following attributes are exported:
 
-|Name|Description|
-|----|-----------|
-|`id`|The unique identifier of the storage.|
-|`hostname`|The fully qualified domain name of the storage.|
-|`volumename`|The name of the storage volume.|
-|`allowed_virtual_guest_info`|Deprecated please use `allowed_host_info` instead.|
-|`allowed_hardware_info`|Deprecated please use `allowed_host_info` instead.|
-|`allowed_host_info`|The user name, password, and host IQN of the hosts with access to the storage.|
+|Name|Data type |Description|
+|----|-----------| -------- |
+|`id`|String |The unique identifier of the storage.|
+|`hostname`|String|The fully qualified domain name of the storage.|
+|`allowed_virtual_guest_info`|String|Deprecated please use `allowed_host_info` instead.|
+|`allowed_hardware_info`|String|Deprecated please use `allowed_host_info` instead.|
+|`allowed_host_info`|String|The user name, password, and host IQN of the hosts with access to the storage.|
+|`lunid` | String| The `LUN` ID of the storage device. |
+|`volumename`|String|The name of the storage volume.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 

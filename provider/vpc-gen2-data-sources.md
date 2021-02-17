@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-09"
+lastupdated: "2021-02-17"
 
 keywords: terraform provider plugin, terraform gen 2, terraform gen 2 compute
 
@@ -1578,6 +1578,81 @@ Review the output parameters that you can access after you retrieved your data s
 |`status`|String|The status of the VPC.|
 |`tags`|Array|Tags associated with the instance.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
+
+## `ibm_is_volume_profile`
+{: #volume-profile-ds}
+
+Retrieve information of an existing {{site.data.keyword.cloud_notm}} VSI. For more information, about the volume concepts, see [expandable volume concepts for VPC](/docs/vpc?topic=vpc-expanding-block-storage-volumes#expandable-volume-concepts).
+{: shortdesc}
+
+### Sample Terraform code
+{: #volume-profile-dssample}
+
+```
+data "ibm_is_volume_profile" "volprofile"{
+  name = "general-purpose"
+}
+
+```
+{: codeblock}
+
+### Input parameters
+{: #volume-profile-dsinput}
+
+Review the input parameters that you can specify for your data source. 
+{: shortdesc}
+
+|Name|Data type| Required / optional|Description|
+|----|-----------|--------|----------------------|
+|`name`|String|Required|The name for the virtual server volume profile.|
+{: caption="Available input parameters" caption-side="top"}
+
+### Output parameters
+{: #volume-profile-dsoutput}
+
+Review the output parameters that you can access after you retrieved your data source. 
+{: shortdesc}
+
+|Name|Data type|Description|
+|----|-----------|-------------|
+|`href`|String| The family of the virtual server volume profile.|
+{: caption="Available output parameters" caption-side="top"}
+
+## `ibm_is_volume_profiles`
+{: #volume-profiles-ds}
+
+Retrieve information of an existing {{site.data.keyword.cloud_notm}} VSI. For more information, about the volumes and profiles, see [profiles](docs/vpc?topic=vpc-block-storage-profiles).
+{: shortdesc}
+
+### Sample Terraform code
+{: #volume-profiles-dssample}
+
+```
+data "ibm_is_volume_profiles" "volprofiles"{
+}
+
+```
+{: codeblock}
+
+### Input parameters
+{: #volume-profiles-dsinput}
+
+This data source do not support input parameters. 
+{: shortdesc}
+
+
+### Output parameters
+{: #volume-profiles-dsoutput}
+
+Review the output parameters that you can access after you retrieved your data source. 
+{: shortdesc}
+
+|Name|Data type|Description|
+|----|-----------|-------------|
+|`profiles`|String| Lists all server volume profiles in the region.|
+|`profiles.name`|String| The name of the virtual server volume profile.|
+|`profiles.family`|String| The family of the virtual server volume profile.|
+{: caption="Available output parameters" caption-side="top"}
 
 ## `ibm_is_vpc_default_routing_table`
 {: #vpc-default-routing-tableds}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-08" 
+lastupdated: "2021-02-17" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -486,6 +486,7 @@ Review the input parameters that you can specify for your resource.
 
 | Input parameter | Data type | Required / optional | Description | Forces new resource |
 | ------------- |-------------| ----- | -------------- | ------- |
+|`auto_delete_volume`|Bool|Optional|If set to `true`, automatically deletes the volumes that are attached to an instance. **Note** Setting this argument can bring some inconsistency in the volume resource, as the volumes is destroyed along with instances.|No|
 |`boot_volume`|List|Optional|A list of boot volumes for an instance.| No |
 |`boot_volume.name`|String|Optional|The name of the boot volume.| No |
 |`boot_volume.encryption`|String|Optional|The type of encryption to use for the boot volume.| No |
@@ -512,6 +513,7 @@ Review the input parameters that you can specify for your resource.
 |`volumes`|List|Optional|A comma separated list of volume IDs to attach to the instance.| No |
 |`vpc`|String|Required|The ID of the VPC where you want to create the instance.| Yes |
 |`zone`|String|Required|The name of the VPC zone where you want to create the instance.| Yes |
+
 
 ### Output parameters
 {: #instance-output}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04" 
+lastupdated: "2021-02-17" 
 
 keywords: terraform provider plugin, terraform resource group, terraform iam service, terraform resource management
 
@@ -176,10 +176,7 @@ resource "ibm_resource_instance" "resource_instance" {
   resource_group_id = data.ibm_resource_group.group.id
   tags              = ["tag1", "tag2"]
 
-  parameters = {
-    HMAC = true
-  }
-  //User can increase timeouts 
+  //User can increase timeouts
   timeouts {
     create = "15m"
     update = "15m"
@@ -236,7 +233,6 @@ Review the output parameters that you can access after your resource is created.
 
 
 
-
 ## `ibm_resource_key`
 {: #resource-key}
 
@@ -257,7 +253,7 @@ data "ibm_resource_instance" "resource_instance" {
 }
 
 resource "ibm_resource_key" "resourceKey" {
-  name                 = "mykey"
+  name                 = "myobjectkey"
   role                 = "Viewer"
   resource_instance_id = data.ibm_resource_instance.resource_instance.id
 
@@ -269,6 +265,9 @@ resource "ibm_resource_key" "resourceKey" {
 }
 ```
 {: codeblock}
+
+The current `ibm_resource_key` resource does not support `service_id` argument. However, you can pass `service_id` as one of the parameter to create credentials for service ID.
+{: note}
 
 #### Creating credentials for a service ID
 
@@ -340,6 +339,37 @@ resource "ibm_resource_key" "resourceKey" {
   }
 }
 
+```
+{: codeblock}
+
+#### Sample code by using HMAC
+{: #sample-code-hmac}
+
+```
+data "ibm_resource_group" "group" {
+    name ="Default"
+}
+resource "ibm_resource_instance" "resource_instance" {
+  name              = "test-21"
+  service           = "cloud-object-storage"
+  plan              = "lite"
+  location          = "global"
+  resource_group_id = data.ibm_resource_group.group.id
+  tags              = ["tag1", "tag2"]
+  
+  //User can increase timeouts
+  timeouts {
+    create = "15m"
+    update = "15m"
+    delete = "15m"
+  }
+}
+resource "ibm_resource_key" "resourceKey" {
+  name                 = "my-cos-bucket-xx-key"
+  resource_instance_id = ibm_resource_instance.resource_instance.id
+  parameters           = { "HMAC" = true }
+  role                 = "Manager"
+}
 ```
 {: codeblock}
 
