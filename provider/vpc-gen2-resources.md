@@ -2713,9 +2713,11 @@ Review the input parameters that you can specify for your resource.
 | ------------- |-------------| ----- | -------------- | ------- |
 | `classic_access` | Boolean | Optional | Specify if you want to create a VPC that can connect to classic infrastructure resources. Enter **true** to set up private network connectivity from your VPC to classic infrastructure resources that are created in the same {{site.data.keyword.cloud_notm}} account, and **false** to disable this access. If you choose to not set up this access, you cannot enable it after the VPC is created. Make sure to review the [prerequisites](/docs/vpc-on-classic-network?topic=vpc-on-classic-setting-up-access-to-your-classic-infrastructure-from-vpc#vpc-prerequisites) before you create a VPC with classic infrastructure access. Note that you can enable one VPC for classic infrastructure access per {{site.data.keyword.cloud_notm}} account only. | No |
 |`address_prefix_management`|String|Optional|Indicates whether a default address prefix should be created automatically (`auto`) or manually (`manual`) for each zone in this VPC. Default value `auto`.| No |
+|`default_network_acl`|String | Deprecated | The ID of the default network ACL.|No|
 | `name` | String | Required | Enter a name for your VPC. |  No |
 | `resource_group` | String | Optional | Enter the ID of the resource group where you want to create the VPC. To list available resource groups, run `ibmcloud resource groups`. If you do not specify a resource group, the VPC is created in the `default` resource group. |  Yes |
 | `tags` | Array of Strings | Optional | Enter any tags that you want to associate with your VPC. Tags might help you find your VPC more easily after it is created. Separate multiple tags with a comma (`,`). |  No |
+
 
 ### Output parameters
 {: #vpc-arguments}
@@ -2727,17 +2729,33 @@ Review the output parameters that you can access after your resource is created.
 | ------------- |-------------| -------------- |
 |`crn`|String|The CRN of the VPC.|
 | `default_security_group` | String | The unique identifier of the default security group that was created for your VPC. | 
+|`default_network_acl`| String| The unique identifier of the VPC default Network ACL.|
 | `id` | String | The unique identifier of the VPC that you created. |
 |`subnets`|List of subnets|A list of subnets that are attached to a VPC.|
 |`subnets.name`|String|The name of the subnet.|
 |`subnets.id`|String|The ID of the subnet.|
 |`subnets.status`|String|The status of the subnet.|
+|`subnets.zone`|String| The Zone of the subnet.|
+|`subnets.total_ipv4_address_count`|String| Total IPv4 addresses under the subnet.|
+|`subnets.available_ipv4_address_count`|String | Available IPv4 addresses available for the usage in the subnet.|
 |`subnets.total_ipv4_address_count`|Integer|The total number of IPv4 addresses in the subnet.|
 |`subnets.available_ipv4_address_count`|Integer|The number of IPv4 addresses in the subnet that are available for you to be used.|
 | `status` | String | The provisioning status of your VPC. | 
 | `cse_source_addresses`|List of Cloud Service Endpoints|A list of the cloud service endpoints that are associated with your VPC, including their source IP address and zone.|
 |`cse_source_addresses.address`|String|The IP address of the cloud service endpoint.|
 |`cse_source_addresses.zone_name`|String|The zone where the cloud service endpoint is located.|
+|`security_group`|String|  A list of security groups attached to VPC. The nested security group block has the following structure:|
+|`security_group.group_id`| String | The security group ID.|
+|`security_group.group_name`| String | The name of the security group.|
+|`security_group.rules`| String | Set of rules attached to a security group.|
+|`security_group.rules.rule_id`| String | The rule ID. |
+|`security_group.rules.direction`| String |  The direction of the traffic either inbound or outbound.|
+|`security_group.rules.ip_version`| String |  ip version either ipv4 or IPv6.|
+|`security_group.rules.remote`| String | Security group id, an IP address, a CIDR block, or a single security group identifier.|
+|`security_group.rules.type`| String | The ICMP traffic type to allow.|
+|`security_group.rules.code`| String | The ICMP traffic code to allow.|
+|`security_group.rules.port_min`| String | The inclusive lower bound of TCP port range.|
+|`security_group.rules.port_max`| String | The inclusive upper bound of TCP port range.|
 
 ### Timeouts
 {: #vpc-timeout}
@@ -2746,6 +2764,19 @@ The following timeouts are defined for the resource:
 
 - **create**: The creation of the VPC is considered `failed` when no response is received for 10 minutes. 
 - **delete**: The deletion of the VPC is considered `failed` when no response is received for 10 minutes. 
+
+
+### Import
+{: #vpc-import}
+
+The `ibm_is_vpc` resource can be imported by using the VPC ID.
+
+**Example**
+
+```
+terraform import ibm_is_vpc.example <vpc_ID>
+```
+{: pre}
 
 
 ## `ibm_is_vpc_address_prefix`
