@@ -2728,8 +2728,8 @@ Review the output parameters that you can access after your resource is created.
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
 |`crn`|String|The CRN of the VPC.|
-| `default_security_group` | String | The default security group ID of your VPC. | 
-|`default_network_acl`| String| The unique ID of the VPC default network ACL.|
+| `default_security_group` | String | The default security group ID created and attached to the VPC. | 
+|`default_network_acl`| String| The default network ACL ID created and attached to the VPC.|
 | `id` | String | The unique identifier of the VPC that you created. |
 |`subnets`|List of subnets|A list of subnets that are attached to a VPC.|
 |`subnets.name`|String|The name of the subnet.|
