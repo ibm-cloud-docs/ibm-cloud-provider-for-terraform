@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04"
+lastupdated: "2021-02-18"
 
 keywords: terraform provider, terraform resources internet service, terraform resources cis, tf provider plugin
 
@@ -1384,7 +1384,7 @@ terraform import ibm_cis_firewall.myorg lockdowns lockdowns:48996f0da6ed76251b47
 Create, update, or delete a global load balancer. 
 {: shortdesc}
 
-The IBM Cloud Terraform Provider plug-in does not support the setup of a region pool for a global load balancer. 
+The IBM Cloud Terraform Provider plug-in does not support the set up of a region pool for a global load balancer. 
 {: note}
 
 ### Sample Terraform code

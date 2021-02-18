@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-18"
 
-keywords: terraform provider plugin, terraform event streams, terraform event stream service, terraform event
+keywords: terraform provider plugin, terraform Event Streams, terraform event stream service, terraform event
 
 subcollection: ibm-cloud-provider-for-terraform
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -99,7 +97,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #event-streams-resources}
 
 
-Review the [Event Streams](/docs/EventStreams?topic=EventStreams-about) resource that you can connect, administer, developed with event streams and integrate with the other services. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration/resources.html){: external}.
+Review the [Event Streams](/docs/EventStreams?topic=EventStreams-about) resource that you can connect, administer, developed with Event Streams and integrate with the other services. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration/resources.html){: external}.
 {: shortdesc}
 
 Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
@@ -108,13 +106,13 @@ Before you start working with your resource, make sure to review the [required p
 ## ibm_event_streams_topic
 {: #event-streams}
 
-Create and update the event streams.
+Create and update the Event Streams.
 {: shortdesc}
 
-### Example 1 Create an event streams service instance and topic
+### Example 1 Create an Event Streams service instance and topic
 {: #event-stream-sample}
 
-Create an event streams service instance and topic.
+Create an Event Streams service instance and topic.
 {: shortdesc}
 
 ```
@@ -158,10 +156,10 @@ resource "ibm_event_streams_topic" "es_topic_1" {
 
 ```
 
-### Example 2 Create a topic on an existing event streams instance
+### Example 2 Create a topic on an existing Event Streams instance
 {: #event-stream-sample2}
 
-Create topic on an existing event streams instance.
+Create topic on an existing Event Streams instance.
 {: shortdesc}
 
 The owner of the `ibmcloud_api_key` has permission to create Event Streams instance in a specified resource group. However, you need the manager role to create the instance in order to create topic.
@@ -187,10 +185,10 @@ resource "ibm_event_streams_topic" "es_topic_2" {
 
 ```
 
-### Example 3 Create a Kafka consumer application connection to an event streams instance and its topics
+### Example 3 Create a Kafka consumer application connection to an Event Streams instance and its topics
 {: #event-stream-sample3}
 
-Create a Kafka consumer application connection to an existing event streams instance and its topics.
+Create a Kafka consumer application connection to an existing Event Streams instance and its topics.
 {: shortdesc}
 
 ```
@@ -223,7 +221,7 @@ Review the input parameters that you can specify for your resource.
 |`config`|Map|Optional|The configuration parameters of the topic. Supported configurations are: `cleanup.policy`, `retention.ms`, `retention.bytes`, `segment.bytes`, `segment.ms`, `segment.index.bytes`.|
 |`name`|String|Required|The name of the topic.|
 |`partitions`|Integer|Optional|The number of partitions of the topic. Default value is 1.|
-|`resource_instance_id`|String|Required|The ID/CRN of the event streams service instance.|
+|`resource_instance_id`|String|Required|The ID/CRN of the Event Streams service instance.|
 {: caption="Table. Available input parameters" caption-side="top"}
 
 ### Output parameters
@@ -236,7 +234,7 @@ Review the output parameters that you can access after your resource is created.
 |----|-----------|--------|
 |`id`|String|The ID of the topic in CRN format. For example, `crn:v1:bluemix:public:messagehub:us-south:a/6db1b0d0b5c54ee5c201552547febcd8:cb5a0252-8b8d-4390-b017-80b743d32839:topic:my-es-topic`|
 |`kafka_brokers_sasl`|Array of Strings|Kafka brokers use for interacting with Kafka native API.|
-|`kafka_http_url`|String|The API endpoint for interacting with event streams REST API.|
+|`kafka_http_url`|String|The API endpoint for interacting with Event Streams REST API.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 
@@ -266,6 +264,6 @@ Event Streams topic provides the following timeouts:
 
 |Name|Description|
 |----|-----------|
-|`create`| Defaults to 15 minutes. **Note**: Use `3h` when creating enterprise instance. Add more `1h` for each level of non-default through put and add extra `30m` for each level of non-default storage size.|
+|`create`| Defaults to 15 minutes. **Note**: Use `3h` to create enterprise instance. Add more `1h` for each level of non-default through put and add extra `30m` for each level of non-default storage size.|
 |`delete`| Defaults to 15 minutes. |
-|`update`| Defaults to 15 minutes. **Note**: Use `1h` when updating enterprise instance. Add more `1h` for each level of non-default through put and add extra `30m` for each level of non-default storage size.|
+|`update`| Defaults to 15 minutes. **Note**: Use `1h` to update enterprise instance. Add more `1h` for each level of non-default through put and add extra `30m` for each level of non-default storage size.|

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-18"
 
-keywords: terraform provider plugin, terraform event streams, terraform event stream service, terraform event streams topic
+keywords: terraform provider plugin, terraform Event Streams, terraform event stream service, terraform Event Streams topic
 
 subcollection: ibm-cloud-provider-for-terraform
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -99,7 +97,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #event-streams-ds}
 
 
-Review the [Event Streams](/docs/EventStreams?topic=EventStreams-about) resource that you can connect, administer, developed with event streams and integrate with the other services. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration/resources.html){: external}.
+Review the [Event Streams](/docs/EventStreams?topic=EventStreams-about) resource that you can connect, administer, developed with Event Streams and integrate with the other services. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration/resources.html){: external}.
 {: shortdesc}
 
 Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
@@ -108,7 +106,7 @@ Before you start working with your resource, make sure to review the [required p
 ## ibm_event_streams_topic
 {: #event-streams-topic}
 
-Import the name of an existing event streams topic as a read-only data source. Then, You can reference the fields of the data source in other resources within the same configuration by using interpolation syntax. 
+Import the name of an existing Event Streams topic as a read-only data source. Then, You can reference the fields of the data source in other resources within the same configuration by using interpolation syntax. 
 {: shortdesc}
 
 ### Sample Terraform code
@@ -136,7 +134,7 @@ Review the input parameters that you can specify for your resource.
 
 |Name|Data type|Required / optional|Description|
 |----|-----------|-----------|---------------------|
-|`resource_instance_id`|String|Required|The ID/CRN of the event streams service instance.|
+|`resource_instance_id`|String|Required|The ID/CRN of the Event Streams service instance.|
 |`name`|String|Required|The name of the topic.|
 {: caption="Table. Available input parameters" caption-side="top"}
 
@@ -149,6 +147,6 @@ Review the output parameters that you can access after your resource is created.
 |Name|Data type|Description|
 |----|-----------|--------|
 |`id`|String|The ID of the topic in CRN format. For example, `crn:v1:bluemix:public:messagehub:us-south:a/6db1b0d0b5c54ee5c201552547febcd8:cb5a0252-8b8d-4390-b017-80b743d32839:topic:my-es-topic`|
-|`kafka_http_url`|String|The API endpoint for interacting with event streams REST API.|
+|`kafka_http_url`|String|The API endpoint for interacting with Event Streams REST API.|
 |`kafka_brokers_sasl`|Array of Strings|Kafka brokers use for interacting with Kafka native API.|
 {: caption="Table 1. Available output parameters" caption-side="top"}

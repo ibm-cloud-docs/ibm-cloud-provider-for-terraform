@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-02-18"
 
 keywords: ibm cloud region, location, region, ibm cloud location
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -104,7 +102,7 @@ In the {{site.data.keyword.cloud_notm}} global network of location to host your 
 
 **What’s happening?**
 
-You have setup database in `us-east` and provisioning a database backup in `us-south`, the setup is working as expected. Whereas, when you provision a backup in `eu-de` region following error message is displayed.
+You have set up database in `us-east` and provisioning a database backup in `us-south`, the set up is working as expected. Whereas, when you provision a backup in `eu-de` region following error message is displayed.
 
 ```
 Error: Error creating database instance: Request failed with status code: 400, ServerErrorResponse: {"error_code":"RC-ServiceBrokerErrorResponse","message":"[500, Internal Server Error] We were unable to complete your request. Try again later or contact support if the issue persists.

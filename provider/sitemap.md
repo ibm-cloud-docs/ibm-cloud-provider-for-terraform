@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-17"
+lastupdated: "2021-02-18"
 
-keywords: terraform provider plugin, terraform functions, terraform openwhisk, terraform function action, terraform serverless
+keywords: terraform provider plugin, terraform functions, terraform open whisk, terraform function action, terraform serverless
 
 subcollection: ibm-cloud-provider-for-terraform
 
