@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-09"
+lastupdated: "2021-02-18"
 
 keywords: terraform provider, terraform provider private endpoint, private endpoint
 
@@ -96,12 +96,12 @@ subcollection: ibm-cloud-provider-for-terraform
 # Configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform to use the Cloud Service Endpoint
 {: #config-provider}
 
-The steps involved in configuring your {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform to use the private Cloud Service Endpoint (CSE) of an {{site.data.keyword.cloud_notm}} service in  public CSE in [Production environment](https://cloud.ibm.com).
+The steps that are involved in configuring your {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform to use the private Cloud Service Endpoint (CSE) of an {{site.data.keyword.cloud_notm}} service in  public CSE in [Production environment](https://cloud.ibm.com).
 
 You can configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform to communicate with an {{site.data.keyword.cloud_notm}} service by using the Cloud Service Endpoint or Private Service Endpoint.
 {: shortdesc}
 
-1. Setup the Terraform engine and an {{site.data.keyword.cloud_notm}} Provider plug-in, in {{site.data.keyword.cloud_notm}} virtual machine by using private VLAN. And provision the enabled Virtual Routing and Forwarding (VRF) account.
+1. Set upthe Terraform engine and an {{site.data.keyword.cloud_notm}} Provider plug-in, in {{site.data.keyword.cloud_notm}} virtual machine by using private VLAN. And provision the enabled Virtual Routing and Forwarding (VRF) account.
 2. Export the following environment variables on your local machine. For more information, about supported private Cloud Service Endpoints for each {{site.data.keyword.cloud_notm}} service to support in production, see [Use service endpoints](/docs/account?topic=account-vrf-service-endpoint).
 3. Initialize the Terraform command line to load the environment variables that you set.
 
@@ -124,7 +124,7 @@ terraform init
 |IAM|`IBMCLOUD_IAM_API_ENDPOINT`|N/A|
 |`IAMPAP`|`IBMCLOUD_IAMPAP_API_ENDPOINT`|N/A|
 |ICD|`IBMCLOUD_ICD_API_ENDPOINT`|[Docs](/docs/account?topic=account-vrf-service-endpoint)|
-|Key protect|`IBMCLOUD_KP_API_ENDPOINT`|[Docs](/key-protect?topic=key-protect-private-endpoints)|
+|Key protect|`IBMCLOUD_KP_API_ENDPOINT`|[Docs](/docs/key-protect?topic=key-protect-private-endpoints)|
 |Private DNS|`IBMCLOUD_PRIVATE_DNS_API_ENDPOINT`| N/A|
 |Resource management|`IBMCLOUD_RESOURCE_MANAGEMENT_API_ENDPOINT`|N/A|
 |Resource controller|`IBMCLOUD_RESOURCE_CONTROLLER_API_ENDPOINT`|N/A|

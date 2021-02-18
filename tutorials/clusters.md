@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04"
+lastupdated: "2021-02-18"
 
 keywords: terraform create kubernetes cluster, terraform create openshift cluster, terraform kubernetes cluster, terraform openshift cluster, schematics create kubernetes cluster, schematics create openshift cluster, schematics kubernetes cluster, schematics openshift cluster, terraform iks cluster, terraform roks cluster, schematics iks cluster, schematics roks cluster, terraform multizone cluster, schematics multizone cluster, terraform remove default worker pool, schematics remove default worker pool 
 
@@ -141,7 +141,7 @@ This tutorial is intended for system administrators that want to learn how to cr
 ## Lesson 1: Prepare your Terraform environment
 {: #prepare-tf}
 
-1. [Install the Terraform command line and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_cli).
+1. [Install the Terraform command line and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli).
 2. If you do not have one, [create an {{site.data.keyword.cloud_notm}} API key](/docs/account?topic=account-userapikey#create_user_key).
 3. Create an Terraform project directory. The directory will hold all your Terraform configuration files that you create as part of this tutorial. The directory in this tutorial is named `tf-cluster`, but you can use any name for the directory.
 
@@ -337,7 +337,7 @@ Create a classic {{site.data.keyword.containerlong_notm}} or {{site.data.keyword
    ```
    {: screen}
    
-4. Review the Terraform execution plan to verify that your cluster setup is correct.
+4. Review the Terraform execution plan to verify that your cluster set up is correct.
 5. Create your single zone cluster. Note that the creation of your cluster takes a few minutes to complete.
 
    ```

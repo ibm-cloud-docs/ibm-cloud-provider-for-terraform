@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-09"
+lastupdated: "2021-02-18"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -243,7 +243,7 @@ Creating multiple `provider` configurations is useful when you want to use diffe
 ## Configuring Terraform to apply service end point in staging and production
 {: #pvt-cse-env-vars}
 
-The steps involved in configuring your Terraform runtime to use the private Cloud Service Endpoint (CSE) of an {{site.data.keyword.cloud_notm}} service within  public CSE in [Production environment](https://cloud.ibm.com).
+The steps that are involved in configuring your Terraform runtime to use the private Cloud Service Endpoint (CSE) of an {{site.data.keyword.cloud_notm}} service within  public CSE in [Production environment](https://cloud.ibm.com).
 
 You can configure the Terraform to communicate with an {{site.data.keyword.cloud_notm}} service by using the service's private service endpoint. For more information, refer [Configure the provider to use private service endpoint](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-config-provider).
 {: shortdesc}

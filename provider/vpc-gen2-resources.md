@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-17" 
+lastupdated: "2021-02-18" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -2728,8 +2728,8 @@ Review the output parameters that you can access after your resource is created.
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
 |`crn`|String|The CRN of the VPC.|
-| `default_security_group` | String | The unique identifier of the default security group that was created for your VPC. | 
-|`default_network_acl`| String| The unique identifier of the VPC default Network ACL.|
+| `default_security_group` | String | The default security group ID of your VPC. | 
+|`default_network_acl`| String| The unique ID of the VPC default network ACL.|
 | `id` | String | The unique identifier of the VPC that you created. |
 |`subnets`|List of subnets|A list of subnets that are attached to a VPC.|
 |`subnets.name`|String|The name of the subnet.|
