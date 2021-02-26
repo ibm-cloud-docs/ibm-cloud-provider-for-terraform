@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04"
+lastupdated: "2021-02-26"
 
 keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, Terraform, provision resources
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -112,7 +110,7 @@ You can upgrade your Terraform, for example, `Terraform v0.12 to Terraform v0.13
 
 Complete the following steps to upgrade your configuration files: 
 
-1. Follow the [instructions](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_cli) to install existing Terraform and the latest version of the Terraform.
+1. Follow the [instructions](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli) to install existing Terraform and the latest version of the Terraform.
 2. Copy your existing Terraform version configuration files into your Terraform working directory. 
    ```
    mv <tf_config_file_path> $HOME/terraform
@@ -187,10 +185,10 @@ Complete the following steps to upgrade your configuration files:
 
 5. Edit the `versions.tf` configuration file. Comment out `source = "your-registry.example.com/organization/ibm"` parameter and provide source value as `source = "IBM-Cloud/ibm"` as shown in the example. For more information, about the provider registry, see [IBM Cloud provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest){: external}.
 
-     **Example versions.tf:**
+    **Example versions.tf:**
 
-   ```
-   terraform {
+    ```
+    terraform {
       required_providers {
         ibm = {
           # TF-UPGRADE-TODO
@@ -206,9 +204,9 @@ Complete the following steps to upgrade your configuration files:
         }
       }
       required_version = ">= 0.13"
-    }
-   ```
-   {: codeblock}
+     }
+    ```
+    {: codeblock}
 
 This completes your Terraform upgrade.
 
@@ -222,3 +220,5 @@ The versions that are associated with the resources and data sources are:
 
 With the release of Terraform version 0.12, the syntax for configuration files changed. If you want to run your infrastructure code by using Terraform version 0.12, you must first [update your configuration files](#tf-0.1x-migration) to apply the new syntax. 
 {: important}
+
+
