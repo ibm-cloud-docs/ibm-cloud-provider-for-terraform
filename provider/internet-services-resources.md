@@ -2168,7 +2168,7 @@ The `ibm_cis_tls_settings` resource is imported using the ID. The ID is formed f
  ```
  {: pre}
 
- ## `ibm_cis_waf_group`
+## `ibm_cis_waf_group`
 {: #cis-waf-grp}
 
 Provides an {{site.data.keyword.cis_full_notm}} WAF rule group resource. This resource is associated with an {{site.data.keyword.cis_full_notm}} instance and a CIS Domain resource. It allows to change WAF Groups mode of a domain of a CIS instance. It is also named as CIS rule set. Please find `OWASP` rule set set tab under WAF of your instance in UI. For more information, refer to [{{site.data.keyword.cis_full_notm}} rule sets](/docs/cis?topic=cis-waf-settings#cis-ruleset-for-waf).
