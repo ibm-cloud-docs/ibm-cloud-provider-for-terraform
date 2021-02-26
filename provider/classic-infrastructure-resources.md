@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-02-26"
 
 keywords: terraform provider plugin, terraform classic infrastructure, terraform classic, terraform softlayer, terraform sl, terraform vsi, terraform Bare Metal server
 
@@ -3235,7 +3235,7 @@ The following attributes are exported:
 ## `ibm_storage_block`
 {: #storage-block}
 
-Provides a block storage resource. This allows iSCSI-based Endurance and Performance block storage to be created, updated, and deleted. For more information, about Block storage, see [Learn about Block Storage](/docs/BlockStorage?topic=BlockStorage-About). 
+Provides a block storage resource. This allows iSCSI-based Endurance and Performance block storage to be created, updated, and deleted. For more information, about Block storage, see [Learn about Block Storage](/docs/BlockStorage?topic=BlockStorage-getting-started). 
 
 Block storage can be accessed and mounted through a Multipath Input/Output Internet Small Computer System Interface (iSCSI) connection.
 
@@ -3290,7 +3290,7 @@ The following arguments are supported:
 |`type`| String | Required | The type of the storage. Accepted values are `Endurance` and `Performance`.| Yes |
 |`datacenter`| String | Required |The data center where you want to provision the block storage instance.| Yes |
 |`capacity`| Integer | Required | The amount of storage capacity that you want to allocate, specified in gigabytes.|
-|`iops`| Float | Required | The IOPS value for the storage. For supported values, see [Provisioning](/docs/BlockStorage?topic=BlockStorage-About#provisioning).| No |
+|`iops`| Float | Required | The IOPS value for the storage. For supported values.| No |
 |`os_format_type`| String | Required | The OS type used to format the storage space. This OS type must match the OS type that connects to the LUN. [Log in to the IBM Cloud Classic Infrastructure API to see available OS format types](https://api.softlayer.com/rest/v3/SoftLayer_Network_Storage_Iscsi_OS_Type/getAllObjects/). Use your API as the password to log in. Log in and find the key called `name`.| Yes |
 |`snapshot_capacity`| Integer | Optional | The amount of snapshot capacity to allocate, specified in gigabytes.| Yes |
 |`allowed_virtual_guest_ids`| Array of integers | Optional | The virtual guests that you want to give access to this instance. Virtual guests must be in the same data center as the block storage. You can also use this field to import the list of virtual guests that have access to this storage from the `block_storage_ids` argument in the `ibm_compute_vm_instance` resource.| No |

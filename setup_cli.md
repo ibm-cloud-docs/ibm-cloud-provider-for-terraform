@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04"
+lastupdated: "2021-02-26"
 
 keywords: install Terraform cli, set up Terraform cli, ibm cloud provider plugin, Terraform
 
@@ -72,8 +72,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -101,7 +99,7 @@ Before you automate and provision your {{site.data.keyword.cloud_notm}} resource
 {: shortdesc}
 
 ## Installing the Terraform
-{: #install_tf}
+{: #install_cli}
 
 You can use Terraform to manage {{site.data.keyword.cloud_notm}} resources. Terraform works with multi-cloud providers, a cloud provider is responsible to provision and expose the resources in the cloud.
 {: shortdesc}
@@ -187,38 +185,48 @@ Complete the following steps to configure the {{site.data.keyword.cloud_notm}} p
 You need not explicitly download the `plugins` for Terraform v0.13.x and higher version.
 {: note}
 
-1. Create a `versions.tf` file, and add the shared Terraform block by specifying the right Terraform provider version in `version` parameter to automatically provision the plug-ins for Terraform v0.13.x and higher version.  
+Create a `versions.tf` file, and add the shared Terraform block by specifying the right Terraform provider version in `version` parameter to automatically provision the plug-ins for Terraform v0.13.x and higher version.
 
-   **Syntax**
+**Syntax**
 
-     ```
-      terraform {
-        required_providers {
-         ibm = {
-           source = "IBM-Cloud/ibm"
-           version = "<provider version>"
-         }
-        }
-     }
-     ```
-     {: codeblock}
-
-    **Example**
-
-     ```
-      terraform {
-        required_providers {
-           ibm = {
-              source = "IBM-Cloud/ibm"
-               version = "1.20.0"
-              }
-         }
+```
+ terraform {
+   required_providers {
+      ibm = {
+         source = "IBM-Cloud/ibm"
+         version = "<provider version>"
       }
-      ```
-      {: codeblock}
+    }
+  }
+```
+{: codeblock}
+   
+The table provides the Terraform block description that each parameter are mapped to.
 
-      If you are using Terraform modules, the shared Terraform block should be used in all the module folders. You can refer the Terraform provider block from the [provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest){: external}.
-      {: note}
+| Parameter | Description |
+|--------|--------|
+|`terraform{}`| The Terraform block that stores the provider information.|
+|`required_providers{}`| The respective cloud provider block.|
+|`ibm = {}`| The {{site.data.keyword.cloud_notm}} block that provides the source registry and provider version.|
+|`source`| The source registry provider name. The value should be `IBM-Cloud/ibm` for an {{site.data.keyword.cloud_notm}} provider.|
+|`version`| The {{site.data.keyword.cloud_notm}} provider version to install. The version syntax format is specified as `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. For example, use `1.20.1`, `1.21.0`, `>= 1.20.0 < 2.0.0` to compare between the greater than specified version and less than requested version, `~> 1.20.0` to allow new patch releases within a specific minor patch releases like `1.20.1, 1.20.2, 1.20.3`, but not `1.21.0` release. The `!=:1.19.0` operator excludes the specified version number. |
+
+**Example**
+
+```
+ terraform {
+   required_providers {
+      ibm = {
+         source = "IBM-Cloud/ibm"
+         version = "1.20.0"
+      }
+    }
+  }
+```
+{: codeblock}
+
+If you are using Terraform modules, the shared Terraform block should be used in all the module folders. You can refer the Terraform provider block from the [provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest){: external}.
+{: note}
 
 ### Terraform v0.12.x
 {: #install-provider-v12}

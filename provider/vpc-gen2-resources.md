@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18" 
+lastupdated: "2021-02-26" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -2728,8 +2728,8 @@ Review the output parameters that you can access after your resource is created.
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
 |`crn`|String|The CRN of the VPC.|
-| `default_security_group` | String | The default security group ID of your VPC. | 
-|`default_network_acl`| String| The unique ID of the VPC default network ACL.|
+| `default_security_group` | String | The default security group ID created and attached to the VPC. | 
+|`default_network_acl`| String| The default network ACL ID created and attached to the VPC.|
 | `id` | String | The unique identifier of the VPC that you created. |
 |`subnets`|List of subnets|A list of subnets that are attached to a VPC.|
 |`subnets.name`|String|The name of the subnet.|
@@ -3074,6 +3074,7 @@ Review the input parameters that you can specify for your resource.
 |`subnet`|String|Required|The unique identifier for this subnet.| Yes |
 |`resource_group`|String|Optional| The resource group where the VPN gateway to be created.| Yes |
 |`tags`|List of strings|Optional|A list of tags that you want to add to your VPN gateway. Tags can help you find your VPN gateway more easily later.| No |
+|`mode`|Optional|String| Mode in VPN gateway. Supported values are `route` or `policy`. The default value is `route`.|No|
 
 ### Output parameters
 {: #vpn-gateway-output}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-02-26"
 
 keywords: terraform provider, terraform resources internet service, terraform resources cis, tf provider plugin
 
@@ -2086,7 +2086,7 @@ terraform import ibm_cis_routing.routing 9caf68812ae9b3f0377fdf986751a78f:crn:v1
 ## `ibm_cis_tls_settings`
 {: #cis-tls}
 
-Create, update, or delete an {{site.data.keyword.cis_full_notm}} TLS settings resources. This resource is associated with an {{site.data.keyword.cis_full_notm}} instance and an {{site.data.keyword.cis_full_notm}}Domain resource.
+Create, update, or delete an {{site.data.keyword.cis_full_notm}} TLS settings resources. This resource is associated with an {{site.data.keyword.cis_full_notm}} instance and an {{site.data.keyword.cis_full_notm}} Domain resource.
 {: shortdesc}
 
 ### Sample Terraform code
@@ -2168,7 +2168,7 @@ The `ibm_cis_tls_settings` resource is imported using the ID. The ID is formed f
  ```
  {: pre}
 
- ## `ibm_cis_waf_group`
+## `ibm_cis_waf_group`
 {: #cis-waf-grp}
 
 Provides an {{site.data.keyword.cis_full_notm}} WAF rule group resource. This resource is associated with an {{site.data.keyword.cis_full_notm}} instance and a CIS Domain resource. It allows to change WAF Groups mode of a domain of a CIS instance. It is also named as CIS rule set. Please find `OWASP` rule set set tab under WAF of your instance in UI. For more information, refer to [{{site.data.keyword.cis_full_notm}} rule sets](/docs/cis?topic=cis-waf-settings#cis-ruleset-for-waf).
