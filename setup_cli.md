@@ -201,15 +201,15 @@ You need not explicitly download the `plugins` for Terraform v0.13.x and higher 
      ```
      {: codeblock}
    
-   The table provides the Terraform block description that each parameter are mapped to.
+The table provides the Terraform block description that each parameter are mapped to.
 
-   | Parameter | Description |
-   |--------|--------|
-   |`terraform{}`| The Terraform block that stores the provider information.|
-   |`required_providers{}`| The respective cloud provider block.|
-   |`ibm = {}`| The {{site.data.keyword.cloud_notm}} block that provides the source registry and provider version.|
-   |`source`| The source registry provider name. The value should be `"IBM-Cloud/ibm"` for an {{site.data.keyword.cloud_notm}} provider.|
-   |`version`| The {{site.data.keyword.cloud_notm}} provider version to install. The version syntax format is specified as `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. For example, use `1.20.1`, `1.21.0`, `>= 1.20.0 < 2.0.0` to compare between the greater than specified version and less than requested version, `~> 1.20.0` to allow new patch releases within a specific minor patch releases like `1.20.1, 1.20.2, 1.20.3`, but not `1.21.0` release. The `!=:1.19.0` operator excludes the specified version number. |
+| Parameter | Description |
+|--------|--------|
+|`terraform{}`| The Terraform block that stores the provider information.|
+|`required_providers{}`| The respective cloud provider block.|
+|`ibm = {}`| The {{site.data.keyword.cloud_notm}} block that provides the source registry and provider version.|
+|`source`| The source registry provider name. The value should be `"IBM-Cloud/ibm"` for an {{site.data.keyword.cloud_notm}} provider.|
+|`version`| The {{site.data.keyword.cloud_notm}} provider version to install. The version syntax format is specified as `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. For example, use `1.20.1`, `1.21.0`, `>= 1.20.0 < 2.0.0` to compare between the greater than specified version and less than requested version, `~> 1.20.0` to allow new patch releases within a specific minor patch releases like `1.20.1, 1.20.2, 1.20.3`, but not `1.21.0` release. The `!=:1.19.0` operator excludes the specified version number. |
 
     **Example**
 
