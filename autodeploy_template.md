@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-03-01"
 
 keywords: terraform provider deployment, automation, schematics workspace, ibm cloud terraform provider deployment, schematics workspace creation, auto deploy 
 
@@ -96,10 +96,10 @@ subcollection: ibm-cloud-provider-for-terraform
 # Creating a deployment to IBM Cloud Schematics link
 {: #create_deploy_to_schematics}
 
-The deployment to {{site.data.keyword.cloud_notm}} link is an efficient way to share your public Git repository so that other people can to create workspace by using Schematics without affecting your original code. The link requires minimal configuration and you can insert it anywhere that supports markup. If you click the hyper link, the configuration for the Schematic workspace is set up and you need to only click create button for workspace creation in Schematics.
-{: shortdesc}
+The deploy to {{site.data.keyword.cloud_notm}} URL is an efficient way for you to enable users to deploy solutions on {{site.data.keyword.cloud_notm}} from a public Git repository sample configuration. The URL requires minimal configuration and you can insert it anywhere in your documentation that supports markup. When the user clicks the hyper link, they are taken directly to the {{site.data.keyword.bpshort}} workspace setup page and only need to click the create button for workspace creation in {{site.data.keyword.bpshort}}.
 
-The following steps help to create a deployment to Terraform v0.12 provider template example in {{site.data.keyword.bplong_notm}}.
+The following steps show how to create a URL to deploy to Terraform v0.12 template example in {{site.data.keyword.bplong_notm}}.
+{: shortdesc}
 
 1. Create a template example by using Terraform provider and publish in the public Git repository. To create example, refer [Sample template example](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples){: external}.
 2. Copy the public Git repository URL, for example, `https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway`.
@@ -119,10 +119,10 @@ The following steps help to create a deployment to Terraform v0.12 provider temp
   ```
   {: pre}
 
-  The URL contains two parameters, first parameter is provided with the workspace name as `ibm-api-gateway` and second parameter is provided with the Terraform version as `terraform_v0.12`. For more information, about the parameters refer to this example, `https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/<ibm-api-gateway>.&<terraform_version=terraform_v0.12>`. If you do not provide any parameters of ignore one parameter, the `Deploy to {{site.data.keyword.cloud_notm}}` link defaults to the repository's master branch. You can provide the Terraform version parameter that you are using.
+  The URL contains two parameters, first parameter is provided with the workspace name as `ibm-api-gateway` and second parameter is provided with the Terraform version as `terraform_v0.12`. For more information, about the parameters refer to this example, `https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/<ibm-api-gateway>.&<terraform_version=terraform_v0.12>`. If you do not provide any parameters or ignore one parameter, the `Deploy to {{site.data.keyword.cloud_notm}}` link defaults to the repository's master branch. You can provide the Terraform version parameter that you are using.
   {: important}
 
-4. You can copy, and paste the example URL in the browser to view the {{site.data.keyword.cloud_notm}} Schematics workspace UI with the create button is display.
+4. You can copy, and paste the example URL in the browser to view the {{site.data.keyword.cloud_notm}} Schematics workspace UI with the create button is displayed.
 5. Cross-check the parameters in the workspace UI and click `Create` button.
 
 ## Adding an image on deployment to {{site.data.keyword.cloud_notm}} hyperlink

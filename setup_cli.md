@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-26"
+lastupdated: "2021-03-01"
 
 keywords: install Terraform cli, set up Terraform cli, ibm cloud provider plugin, Terraform
 
@@ -200,16 +200,18 @@ Create a `versions.tf` file, and add the shared Terraform block by specifying th
   }
 ```
 {: codeblock}
-   
-The table provides the Terraform block description that each parameter are mapped to.
 
-| Parameter | Description |
-|--------|--------|
-|`terraform{}`| The Terraform block that stores the provider information.|
-|`required_providers{}`| The respective cloud provider block.|
-|`ibm = {}`| The {{site.data.keyword.cloud_notm}} block that provides the source registry and provider version.|
-|`source`| The source registry provider name. The value should be `IBM-Cloud/ibm` for an {{site.data.keyword.cloud_notm}} provider.|
-|`version`| The {{site.data.keyword.cloud_notm}} provider version to install. The version syntax format is specified as `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. For example, use `1.20.1`, `1.21.0`, `>= 1.20.0 < 2.0.0` to compare between the greater than specified version and less than requested version, `~> 1.20.0` to allow new patch releases within a specific minor patch releases like `1.20.1, 1.20.2, 1.20.3`, but not `1.21.0` release. The `!=:1.19.0` operator excludes the specified version number. |
+Terraform supports `version` constraints to specify the range of acceptable versions to initialize. The version syntax format is specified as `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. You can use the following operators:
+
+|Operator|Description|
+|-------|---------|
+| `= (or no operator)`| Allows only extract version number. You cannot combine with other conditions. For example, `1.21.0`.|
+| `!=` | Excludes an exact version number. For example, `!=1.19.0`.|
+| `>, >=, <, <=` | Compares against a specified version, allows version for which the comparison is true. `Greater-than` requests newer version, and `less-than` requests older versions. For example, `>= 1.20.0 < 2.0.0`.|
+| `~>` | Allows only the rightmost version component to increment. For example, `~> 1.20.0` allows new patch releases within a specific minor patch releases like `1.20.1, 1.20.2, 1.20.3`, but not `1.21.0` release.|
+
+
+
 
 **Example**
 

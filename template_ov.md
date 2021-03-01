@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-03-01"
 
 keywords: terraform templates, schematics template
 
@@ -101,7 +101,7 @@ subcollection: ibm-cloud-provider-for-terraform
 All Terraform templates use the Terraform version 0.12 format.
 {: note}
 
-The sample Terraform templates and deploy to {{site.data.keyword.cloud_notm}} link is an efficient way to access the templates and experience the auto deploy to the {{site.data.keyword.cloud_notm}} to create workspace in Schematics.
+The deploy to {{site.data.keyword.cloud_notm}} URL is an efficient way for you to enable users to deploy solutions on {{site.data.keyword.cloud_notm}} from a public Git repository sample configuration. The URL requires minimal configuration and you can insert it anywhere in your documentation that supports markup. When the user clicks the hyper link, they are taken directly to the {{site.data.keyword.bpshort}} workspace setup page and only need to click the create button for workspace creation in {{site.data.keyword.bpshort}}.
 {: shortdesc}
 
 When you click the `Deploy to {{site.data.keyword.cloud_notm}}` following actions occur:
@@ -110,7 +110,7 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}` following action
 
   2. The user can select a region, resource group (available in the Dallas, Washington, London, Frankfurt, and Tokyo regions) or organization and space (available in the Dallas, London, and Frankfurt regions).
 
-  3. The auto deploy link creates a workspace in the {{site.data.keyword.bplong_notm}}.
+  3. The auto deploy link set up a create workspace in the {{site.data.keyword.bplong_notm}}.
 
   4. To execute `generate plan` successfully, you need to configure the required variables.
 
