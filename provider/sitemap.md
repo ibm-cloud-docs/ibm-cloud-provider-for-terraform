@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-03-01"
 
 keywords: terraform provider plugin, terraform functions, terraform open whisk, terraform function action, terraform serverless
 
@@ -122,7 +122,7 @@ subcollection: ibm-cloud-provider-for-terraform
   <tbody>
    <tr>
  <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[`ibm_certificate_manager_import`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cert-manager-resources#cert-manager)</li><li style="margin:0px; padding:0px">[`ibm_certificate_manager_order`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cert-manager-resources#certmanager-order)</li></ul></td>
-     <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[`ibm_certificate_manager_certificates`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cert-manager-data-sources#cert-manager-certificates)</li></ul></td>
+     <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[`ibm_certificate_manager_certificate`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cert-manager-data-sources#cert-manager-certificate)</li><li style="margin:0px; padding:0px">[`ibm_certificate_manager_certificates`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cert-manager-data-sources#cert-manager-certificates)</li></ul></td>
     </tr>
   </tbody>
   </table>
