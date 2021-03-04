@@ -46,8 +46,6 @@ Learn about the latest changes to the Terraform service that are grouped by mont
   </tbody>
   </table> 
 
-
-
 ## 17 February 2021
 {: #17-february-2021}
 
