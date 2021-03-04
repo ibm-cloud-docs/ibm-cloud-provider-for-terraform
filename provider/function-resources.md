@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-03-04"
 
 keywords: terraform provider plugin, terraform functions, terraform open whisk, terraform function action, terraform serverless, terraform namespace
 
@@ -173,8 +173,8 @@ resource "ibm_function_action" "nodezip" {
   namespace = "function-namespace-name"
 
   exec {
-    kind = "nodejs:6"
-    code = base64encode(file("nodeaction.zip"))
+    kind      = "nodejs:6"
+    code_path = "nodeaction.zip"
   }
 }
 ```
@@ -237,6 +237,7 @@ Review the input parameters that you can specify for your resource.
 |`exec.image`|String|Optional| When using the `blackbox` executable, the name of the container image name.        **NOTE**: Conflicts with `exec.components`, `exec.code`.    | No |
 |`exec.init`|String|Optional| When using `nodejs`, the optional archive reference.        **NOTE**: Conflicts with `exec.components`, `exec.image`.    | No |
 |`exec.code`|String|Optional| When not using the `blackbox` executable, the code to execute.       **NOTE**: Conflicts with `exec.components`, `exec.image`.    | No |
+|`exec.code_path`|String|Optional| When not using the `blackbox` executable, the file path of code to execute and supports only `.zip` extension to create the action.       **NOTE**: Conflicts with `exec.components`, `exec.image`, `exec.code`.    | No |
 |`exec.kind`|String|Required|The type of action. You can find supported kinds in the [IBM Cloud Functions Docs](/docs/openwhisk?topic=openwhisk-runtimes).    | No |
 |`exec.main`|String|Optional|The name of the action entry point (function or fully-qualified method name, when applicable).       **NOTE**: Conflicts with `exec.components`, `exec.image`.    | No |
 |`exec.components`|String|Optional|The list of fully qualified actions. **NOTE**: Conflicts with `exec.code`, `exec.image`.| No |

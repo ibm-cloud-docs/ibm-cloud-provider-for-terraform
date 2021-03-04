@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-02-17"
+lastupdated: "2021-03-04"
 
 keywords: terraform resources, terraform modules, terraform provider, terraform autodeploy, 
 
@@ -28,6 +28,23 @@ subcollection: ibm-cloud-provider-for-terraform
 
 Learn about the latest changes to the Terraform service that are grouped by month.
 
+## 04 March 2021
+{: #04-march-2021}
+
+<table>
+    <thead>
+    <th style="width:80px">New resources</th>
+    <th style="width:80px">New data sources</th>
+    <th style="width:500px">Enhancements</th>
+    </thead>
+  <tbody>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">NA</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">NA</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">Support `sort` argument for [ibm_iam_user_policy](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-iam-data-sources#iam-user-policy-input) and [ibm_iam_service_policy](docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-iam-data-sources#iam-service-policy-input) data sources</li><li style="margin:0px; padding:0px">Support `default_routing_table` attribute for [ibm_is_vpc](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-data-sources#vpc-output) data source and [ibm_is_vpc](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-resources#vpc-arguments) resources.</li><li style="margin:0px; padding:0px">Support `logging` argument for [ibm_is_lb](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-resources#lb-input)</li><li style="margin:0px; padding:0px">Updated `boot_volume` attributes for [ibm_is_instance_template](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-resources#vpc-is-instance-template) resources</li><li style="margin:0px; padding:0px">Support `auto_delete_volume`  argument for [vpc generation 2](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-container-resources#container-cluster-input)</li><li style="margin:0px; padding:0px">Support  `resource_group_id` argument for force new resource for [ibm_cis](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cis-resources#cis-input) and [ibm_database](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-databases-resources#db-input) resources</li><li style="margin:0px; padding:0px">Example update  and support `code_path` argument for [ibm_function_action](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-function-resources#fn-action-input) resources</li><li style="margin:0px; padding:0px">Latest [version change log](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.21.1)</li></ul></td>
+    </tr>
+  </tbody>
+  </table> 
 
 ## 17 February 2021
 {: #17-february-2021}

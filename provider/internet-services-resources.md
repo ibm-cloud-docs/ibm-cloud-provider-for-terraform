@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-26"
+lastupdated: "2021-03-04"
 
 keywords: terraform provider, terraform resources internet service, terraform resources cis, tf provider plugin
 
@@ -138,13 +138,13 @@ resource "ibm_cis" "cis_instance" {
 Review the input parameters that you can specify for your resource. 
 {: shortdesc}
 
-|Name|Data type|Required / optional|Description|
-|----|-----------|-----------|---------------------|
-|`name`|String|Required|A descriptive name for your {{site.data.keyword.cis_full_notm}} instance.|
-|`plan`|String|Required|The name of the plan for your instance. To retrieve this value, run `ibmcloud catalog service internet-svcs`. |
-|`location`|String|Required|The target location where you want to create your instance.|
-|`resource_group_id`|String|Optional|The ID of the resource group where you want to create the service. To retrieve this value, run `ibmcloud resource groups` or use the `ibm_resource_group` data source. If no value is specified, the `default` resource group is used. |
-|`tags`|Array|Optional|A list of tags that you want to associate with the instance.|
+|Name|Data type|Required / optional|Description| Forces new resource |
+|----|-----------|-----------|---------------------| ----------|
+|`name`|String|Required|A descriptive name for your {{site.data.keyword.cis_full_notm}} instance.| No|
+|`plan`|String|Required|The name of the plan for your instance. To retrieve this value, run `ibmcloud catalog service internet-svcs`. |No|
+|`location`|String|Required|The target location where you want to create your instance.|No|
+|`resource_group_id`|String|Optional|The ID of the resource group where you want to create the service. To retrieve this value, run `ibmcloud resource groups` or use the `ibm_resource_group` data source. If no value is specified, the `default` resource group is used. |Yes|
+|`tags`|Array|Optional|A list of tags that you want to associate with the instance.|No|
 
 ### Output parameters
 {: #cis-output}
@@ -270,7 +270,7 @@ terraform import ibm_cis_cache_settings.cache_settings 9caf68812ae9b3f0377fdf986
  Provides an {{site.data.keyword.cis_full_notm}} certificate order resource. This resource is associated with an {{site.data.keyword.cis_full_notm}} instance and a CIS domain resource. It allows to order and delete dedicated certificates of a domain of a CIS instance. For more information about CIS certificate order, refer to [managing origin certificates](/docs/cis?topic=cis-cis-origin-certificates).
  {: shortdesc}
 
- ### Sample Terraform code
+### Sample Terraform code
 {: #cis-certificate-order-sample}
 
 ```
@@ -342,7 +342,7 @@ terraform import ibm_cis_certificate_order.myorg certificate_order 48996f0da6ed7
  Provides an {{site.data.keyword.cis_full_notm}} certificate upload resource. This resource is associated with an {{site.data.keyword.cis_full_notm}} instance and a CIS domain resource. It allows to upload, update, and delete certificates of a domain of a CIS instance. For more information about CIS certificate upload, refer to [Installing an origin certificate on your server](/docs/cis?topic=cis-cis-origin-certificates#cis-origin-certificates-installing).
  {: shortdesc}
 
- ### Sample Terraform code
+### Sample Terraform code
 {: #cis-certificate-upload-sample}
 
 ```

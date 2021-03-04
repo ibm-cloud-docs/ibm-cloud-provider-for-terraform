@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-27" 
+lastupdated: "2021-03-04" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -991,7 +991,6 @@ Review the input parameters that you can specify for your resource.
 
 | Input parameter | Data type | Required / optional | Description | Forces new resource |
 | ------------- |-------------| ----- | -------------- | ------ |
-|`templates.id`|String|Required|The ID of the instance template. | No |
 |`name`|String|Required|The name of the instance template. | No |
 |`image`|String|Required|The ID of the image to create the template.| No |
 |`profile`|String|Required|The number of instances created in the instance group. | No |
@@ -1004,17 +1003,16 @@ Review the input parameters that you can specify for your resource.
 |`primary_network_interfaces.name`|String|Optional|The name of the interface. | No |
 |`primary_network_interfaces.security_groups`|List | Optional|List of security groups of the subnet. | No |
 |`primary_network_interfaces.primary_ipv4_address`|String|Optional|The IPv4 address assigned to the primary network interface. | No |
+|`primary_network_interfaces.allow_ip_spoofing`|Bool | Optional|Indicates whether IP spoofing is allowed on this interface. If set to `false` IP spoofing is prevented on the interface. If set to `true`, IP spoofing is allowed on the interface.. | No |
 |`network_interfaces`|List|Optional|A nested block describes the network interfaces for the template. | No |
 |`network_interfaces.subnet`|String|Required|The VPC subnet to assign to the interface. | Yes |
 |`network_interfaces.name`|String| Optional |The name of the interface. | No |
 |`network_interfaces.security_groups`|List|Optional|List of security groups of  the subnet. | No |
 |`network_interfaces.primary_ipv4_address`|String|Optional|The IPv4 address assigned to the network interface. | No |
+|`network_interfaces.allow_ip_spoofing`|Bool | Optional|Indicates whether IP spoofing is allowed on this interface. If set to `false` IP spoofing is prevented on the interface. If set to `true`, IP spoofing is allowed on the interface.. | No |
 |`boot_volume`|List|Optional|A nested block describes the boot volume configuration for the template. | No |
 |`boot_volume.encryption`|String|Optional|The encryption key CRN to encrypt the boot volume attached. | No |
 |`boot_volume.name`|String|Optional|The name of the boot volume. | No |
-|`boot_volume.size`|String|Optional|The boot volume size to configure in giga bytes. | No |
-|`boot_volume.iops`|String|Optional|The IOPS for the boot volume. | No |
-|`boot_volume.profile`|String|Optional|The profile for the boot volume configuration. | No |
 |`boot_volume.delete_volume_on_instance_delete`|Boolean|Optional|You can configure to delete the boot volume based on instance deletion. | No |
 |`volume_attachments`|List|Optional|A nested block describes the storage volume configuration for the template. | No |
 |`volume_attachments.name`|String|Required|The name of the boot volume. | No |
@@ -1193,6 +1191,7 @@ Review the input parameters that you can specify for your resource.
 
 |Name|Data type|Required / optional|Description| Forces new resource |
 |----|-----------|-----------|---------------------| ------- |
+|`logging`| Bool | Optional | Enable load balancer data logs for LogDNA. The data logs helps to troubleshoot connectivity issues.|
 |`name`|String|Required|The name of the VPC load balancer.| No |
 |`profile`|String|Required|The profile to use for this Load Balancer. Supported value is `network-fixed`.| Yes |
 |`resource_group`|String|Optional| The resource group where the load balancer to be created.| Yes |
@@ -2730,6 +2729,7 @@ Review the output parameters that you can access after your resource is created.
 |`crn`|String|The CRN of the VPC.|
 | `default_security_group` | String | The default security group ID created and attached to the VPC. | 
 |`default_network_acl`| String| The default network ACL ID created and attached to the VPC.|
+|`default_routing_table`| String | The unique identifier of the VPC default routing table.|
 | `id` | String | The unique identifier of the VPC that you created. |
 |`subnets`|List of subnets|A list of subnets that are attached to a VPC.|
 |`subnets.name`|String|The name of the subnet.|

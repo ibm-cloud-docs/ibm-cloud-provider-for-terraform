@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-04"
 
 keywords: terraform provider plugin, terraform cloud databases, terraform databases, terraform postgres, terraform mysql, terraform compose
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -241,7 +239,7 @@ Review the input parameters that you can specify for your resource.
 |`name`|String|Required|A descriptive name that is used to identify the database instance. The name must not include spaces.| No |
 |`plan`|String|Required|The name of the service plan that you choose for your instance. Supported values are `standard`. | No |
 |`location`|String|Required|The location where you want to deploy your instance. The location must match the `region` parameter that you specify in the `provider` block of your Terraform configuration file. The default value is `us-south`. Currently, supported regions are `us-south`, `us-east`, `eu-gb`, `eu-de`, `au-syd`, `jp-tok`, `oslo01`. | No |
-|`resource_group_id`|String|Optional| The ID of the resource group where you want to create the instance. To retrieve this value, run `ibmcloud resource groups` or use the `ibm_resource_group` data source. If no value is provided, the `default` resource group is used.| No |
+|`resource_group_id`|String|Optional| The ID of the resource group where you want to create the instance. To retrieve this value, run `ibmcloud resource groups` or use the `ibm_resource_group` data source. If no value is provided, the `default` resource group is used.| Yes |
 |`tags`|Array of strings|Optional|A list of tags that you want to add to your instance. | No |
 |`service`|String|Required| The type of {{site.data.keyword.databases-for}} that you want to create. Only the following services are currently accepted: `databases-for-etcd`, `databases-for-postgresql`, `databases-for-redis`, `databases-for-elasticsearch`, `messages-for-rabbitmq`, and `databases-for-mongodb`.| No |
 |`version`|String|Optional|The version of the database to be provisioned. If omitted, the database is created with the most recent major and minor version.| Yes |

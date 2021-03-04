@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-26" 
+lastupdated: "2021-03-04" 
 
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes
 
@@ -1442,7 +1442,7 @@ Review the input parameters that you can specify for your resource.
 |`kms_config.crk_id`|String|Optional|The ID of the customer root key (CRK).| No |
 |`kms_config.private_endpoint`|Boolean|Optional|Set `true` to configure the KMS private service endpoint. Default value is `false`.| No |
 |`kube_version`|String|Optional| Specify the Kubernetes version, including the major.minor version. If you do not include this flag, the default version is used. To see available versions, run `ibmcloud ks versions`.| No |
-| `patch_version` | String | Optional | Updates the worker nodes with the required patch version. The patch_version should be in the format:  `patch_version_fixpack_version`. For more information, about Kubernetes version information and update, see [Kubernetes version update](/docs/containers?topic=containers-cs_versions). **NOTE:** To update the patch or fix pack versions of the worker nodes, run the command `ibmcloud ks workers -c <cluster_name_or_id> --output json`. Fetch the required patch & fixpack versions from `kubeVersion.target` and set the `patch_version` parameter.|No|
+| `patch_version` | String | Optional | Updates the worker nodes with the required patch version. The patch_version should be in the format:  `patch_version_fixpack_version`. For more information, about Kubernetes version information and update, see [Kubernetes version update](/docs/containers?topic=containers-cs_versions). **NOTE:** To update the patch or fix pack versions of the worker nodes, run the command `ibmcloud ks workers -c <cluster_name_or_id> --output json`. Fetch the required patch & fix pack versions from `kubeVersion.target` and set the `patch_version` parameter.|No|
 |`pod_subnet`|String|Optional|Specify a custom subnet CIDR to provide private IP addresses for pods. The subnet must have a CIDR of at least `/23` or larger. For more information, see the [documentation](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli#cs_subnets). Default value is `172.30.0.0/16`.| Yes |
 |`service_subnet`|String|Optional|Specify a custom subnet CIDR to provide private IP addresses for services. The subnet must be at least ’/24’ or larger. For more information, see the [documentation](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli#cs_messages). Default value is `172.21.0.0/16`.| Yes |
 | `wait_for_worker_update` | Boolean | Optional | Set to `true` to wait and update the Kubernetes  version of worker nodes. **NOTE** Setting wait_for_worker_update to `false` is not recommended. Setting `false` results in upgrading all the worker nodes in the cluster at the same time causing the cluster downtime. | No |
