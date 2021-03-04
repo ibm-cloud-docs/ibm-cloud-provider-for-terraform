@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04"
+lastupdated: "2021-03-04"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -343,6 +343,7 @@ Review the input parameters that you can specify for your data source.
 |Name|Data type|Required / optional|Description|
 |----|-----------|---------|---------------------|
 |`iam_service_id`|String|Required| The UUID of the service ID.|
+|`sort`| Optional | String| The single field sort query for policies.|
 {: caption="Table. Available input parameters" caption-side="top"}
 
 ### Output parameters
@@ -353,7 +354,7 @@ Review the output parameters that you can access after you retrieved your data s
 |Name|Data type|Description|
 |----|-----------|-------------|
 |`policies`|List of objects|A nested block describes IAM service policies that are assigned to a service ID. |
-|`policies.id`|String|The unique identifier of the IAM service policy. The ID is composed of \<iam_service_id\>/\<service_policy_id\>  |
+|`policies.id`|String|The unique identifier of the IAM service policy. The ID is composed of `<iam_service_id>/<service_policy_id>`  |
 |`policies.roles`| String|The roles that are assigned to the policy.|
 |`policies.resources`| List of objects| A nested block describes the resources in the policy.|`policies.resources.service`|The service name of the policy definition. |
 |`policies.resources.resource_instance_id`|The ID of resource instance of the policy definition.|
@@ -399,7 +400,8 @@ Review the input parameters that you can specify for your data source.
 
 |Name|Data type|Required / optional|Description|
 |----|-----------|---------------|-------------------|
-|`ibm_id`|String|Required| The IBMid or email address of the user.|
+|`ibm_id`|String|Required| The IBM ID or email address of the user.|
+|`sort`| Optional | String| The single field sort query for policies.|
 {: caption="Table. Available input parameters" caption-side="top"}
 
 
@@ -411,7 +413,7 @@ The following attributes are exported:
 |Name|Data type|Description|
 |----|-----------|-------------|
 |`policies`|List|A nested block describes IAM Policies assigned to user. |
-|`policies.id`|String|The unique identifier of the IAM user policy. The ID is composed of \<ibm_id\>/\<user_policy_id\>.  |
+|`policies.id`|String|The unique identifier of the IAM user policy. The ID is composed of `<ibm_id>/<user_policy_id>`.  |
 |`policies.roles`| String|The roles that are assigned to the policy.	|
 |`policies.resources`| List of objects| A nested block describes the resources in the policy.|
 |`policies.resources.service`|String|The service name of the policy definition. 		|
@@ -450,7 +452,7 @@ Review the input parameters that you can specify for your data source.
 
 |Name|Data type|Required / optional|Description|
 |----|-----------|---------------|-------------------|
-|`id`|String|Required| The IBMid or email address of the user.|
+|`id`|String|Required| The IBM ID or email address of the user.|
 {: caption="Table. Available input parameters" caption-side="top"}
 
 

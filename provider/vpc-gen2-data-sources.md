@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-17"
+lastupdated: "2021-03-04"
 
 keywords: terraform provider plugin, terraform gen 2, terraform gen 2 compute
 
@@ -1567,6 +1567,8 @@ Review the output parameters that you can access after you retrieved your data s
 |`cse_source_addresses.address`|String|The IP address of the cloud service endpoint.|
 |`cse_source_addresses.zone_name`|String|The zone where the cloud service endpoint is located.|
 |`default_network_acl`|String| The ID of the default network ACL.|
+|`default_security_group`| String | The unique identifier of the VPC default security group.|
+|`default_routing_table`| String | The unique identifier of the VPC default routing table.|
 |`resource_group`|String|The resource group ID where the VPC created.|
 |`subnets`|List of subnets|A list of subnets that are attached to a VPC.|
 |`subnets.name`|String|The name of the subnet.|

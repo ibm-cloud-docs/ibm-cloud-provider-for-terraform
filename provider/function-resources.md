@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-03-04"
 
 keywords: terraform provider plugin, terraform functions, terraform open whisk, terraform function action, terraform serverless, terraform namespace
 
@@ -173,8 +173,8 @@ resource "ibm_function_action" "nodezip" {
   namespace = "function-namespace-name"
 
   exec {
-    kind = "nodejs:6"
-    code = base64encode(file("nodeaction.zip"))
+    kind      = "nodejs:6"
+    code_path = "nodeaction.zip"
   }
 }
 ```
