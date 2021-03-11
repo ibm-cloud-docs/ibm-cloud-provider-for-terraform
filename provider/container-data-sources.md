@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-11"
  
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -615,44 +613,6 @@ Review the output parameters that you can access after you retrieved your data s
 | `id` | String | The unique identifier of the cluster. | 
 | `valid_kube_versions` | String | The supported Kubernetes version in {{site.data.keyword.containerlong_notm}} clusters. | 
 | `valid_openshift_versions` | String | The supported OpenShift Container Platform version in {{site.data.keyword.openshiftlong_notm}} clusters.|
-
-## `ibm_cr_namespaces`
-{: #cr-namespaces-ds}
-
-Lists a container registry namespaces of an account. For more information, about container registry, see [About IBM Cloud Container Registry](/docs/Registry?topic=Registry-registry_overview).
-{: shortdesc}
-
-### Sample Terraform code
-{: #cr-namespaces-ds-sample}
-
-The following example shows how to configure an `ALB`.
-
-```
-data "ibm_cr_namespace" "test" {}
-```
-{: codeblock}
-
-### Input parameters
-{: #cr-namespaces-ds-input}
-
-The input parameters are not supported for this data source. 
-{: shortdesc}
-
-### Output parameters
-{: #cr-namespaces-ds-output}
-
-Review the output parameters that are exported.
-{: shortdesc}
-
-| Output parameter | Data type | Description |
-| ------------- |-------------| -------------- |
-| `id` | String | The unique identifier of the namespace datasource. | 
-| `namespaces` | String | List of namespaces available in the account. | 
-| `namespaces.name` | String | The name of the namespace to create. |
-| `namespaces.resource_group_id` | String | ID of the resource group to which the namespace is assigned. |
-| `namespaces.crn` | String | The `CRN` of the namespace.|
-| `namespaces.created_on` | String | The created time of the namespace.|
-| `namespaces.updated_on` | String | The updated time of the namespace.|
 
 ## `ibm_container_worker_pool`
 {: #container-worker-pool}
