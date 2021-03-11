@@ -43,6 +43,8 @@ Terraform on IBM Cloud
          provider/classic-infrastructure-data-sources.md
          provider/cloud-foundry-resources.md
          provider/cloud-foundry-data-sources.md
+         provider/container-registry-resources.md
+         provider/container-registry-data-source.md
          provider/databases-resources.md
          provider/databases-data-sources.md
          provider/direct-link-gateway-resources.md
