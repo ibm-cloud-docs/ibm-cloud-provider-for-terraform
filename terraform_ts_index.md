@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-15"
 
 keywords: Terraform on {{site.data.keyword.cloud_notm}} help, Terraform on {{site.data.keyword.cloud_notm}} troubleshooting, ansible help, ansible troubleshooting
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -111,6 +109,6 @@ If you run into an issue with the Terraform provider plug-in or want to ask ques
 </br>
 If you have general questions about Terraform or Ansible, you can use one of the following channels: 
 
-- **Reddit**:  Subscribe to the [Terraform channel on Reddit](https://www.reddit.com/r/terraform/){: external} and browse through this channel to read about user issues and how they resolved them. 
+- **Reddit**:  Subscribe to the [Terraform channel on Reddit](https://www.reddit.com/r/Terraform/){: external} and browse through this channel to read about user issues and how they resolved them. 
 - **Open source community**: Get help from the open source community by searching for information on the internet or by asking questions in forums and on websites that support these tools.
 
