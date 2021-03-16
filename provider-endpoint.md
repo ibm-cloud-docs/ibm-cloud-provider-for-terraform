@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-26"
+lastupdated: "2021-03-16"
 
 keywords: terraform provider, terraform provider private endpoint, private endpoint
 
@@ -119,19 +119,20 @@ terraform init
 |Containers|`IBMCLOUD_CS_API_ENDPOINT`|[Docs](/docs/containers?topic=containers-plan_clusters#workeruser-master)|
 |CIS|`IBMCLOUD_CIS_API_ENDPOINT`|N/A|
 |Direct Link|`IBMCLOUD_DL_API_ENDPOINT`|N/A|
-|GHoST / Tagging|`IBMCLOUD_GT_API_ENDPOINT`|N/A|
+|Global search |`IBMCLOUD_GT_API_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/search#endpoint-url) |
+|Global tagging |`IBMCLOUD_GT_API_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/tagging#endpoint-url) |
 |HPCS|`IBMCLOUD_HPCS_API_ENDPOINT`|N/A|
-|IAM|`IBMCLOUD_IAM_API_ENDPOINT`|N/A|
+|IAM|`IBMCLOUD_IAM_API_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/iam-access-groups#endpoint-urls) |
 |`IAMPAP`|`IBMCLOUD_IAMPAP_API_ENDPOINT`|N/A|
 |ICD|`IBMCLOUD_ICD_API_ENDPOINT`|[Docs](/docs/account?topic=account-vrf-service-endpoint)|
 |Key protect|`IBMCLOUD_KP_API_ENDPOINT`|[Docs](/docs/key-protect?topic=key-protect-private-endpoints)|
 |Private DNS|`IBMCLOUD_PRIVATE_DNS_API_ENDPOINT`| N/A|
-|Resource management|`IBMCLOUD_RESOURCE_MANAGEMENT_API_ENDPOINT`|N/A|
+|Resource management|`IBMCLOUD_RESOURCE_MANAGEMENT_API_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/resource-controller/resource-manager#endpoint-urls) |
 |Resource controller|`IBMCLOUD_RESOURCE_CONTROLLER_API_ENDPOINT`|N/A|
 |Resource catalog|`IBMCLOUD_RESOURCE_CATALOG_API_ENDPOINT`|N/A|
 |Schematics|`IBMCLOUD_SCHEMATICS_API_ENDPOINT`|[Docs](/docs/schematics?topic=schematics-private-endpoints)|
 |Transit Gateway|`IBMCLOUD_TG_API_ENDPOINT`| N/A|
 |UAA|`IBMCLOUD_UAA_ENDPOINT`|N/A|
-|User management|`IBMCLOUD_USER_MANAGEMENT_ENDPOINT`|N/A|
+|User management|`IBMCLOUD_USER_MANAGEMENT_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/user-management#endpoint-urls) |
 |VPC Gen2|`IBMCLOUD_IS_NG_API_ENDPOINT`|N/A|
 
