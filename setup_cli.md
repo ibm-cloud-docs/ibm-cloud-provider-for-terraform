@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-01"
+lastupdated: "2021-03-16"
 
 keywords: install Terraform cli, set up Terraform cli, ibm cloud provider plugin, Terraform
 
@@ -185,7 +185,7 @@ Complete the following steps to configure the {{site.data.keyword.cloud_notm}} p
 You need not explicitly download the `plugins` for Terraform v0.13.x and higher version.
 {: note}
 
-Create a `versions.tf` file, and add the shared Terraform block by specifying the right Terraform provider version in `version` parameter to automatically provision the plug-ins for Terraform v0.13.x and higher version.
+Create a `versions.tf` file in the Git repository or the folder where Terraform is setup, and add the shared Terraform block by specifying the right Terraform provider version in `version` parameter to automatically provision the plug-ins for Terraform v0.13.x and higher version.
 
 **Syntax**
 
