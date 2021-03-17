@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-15" 
+lastupdated: "2021-03-17" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -2607,10 +2607,7 @@ resource "ibm_is_volume" "testacc_volume" {
   name     = "test_volume"
   profile  = "10iops-tier"
   zone     = "us-south-1"
-  iops     = 10000
-  capacity = 100
 }
-
 ```
 {: codeblock}
 
@@ -2639,7 +2636,7 @@ Review the input parameters that you can specify for your resource.
 |`name`|String|Required|The user-defined name for this volume.| No |
 |`profile`|String|Required|The profile to use for this volume.| Yes |
 |`zone`|String|Required|The location of the volume.| Yes |
-|`iops`|Integer|Required for `custom` storage profiles only| The total input/ output operations per second (IOPS) for your storage. This value is required for `custom` storage profiles only. | Yes |
+|`iops`|Integer|Optional|The total input/ output operations per second (IOPS) for your storage. This value is required for `custom` storage profiles only. | Yes |
 |`capacity`|Integer|Optional|(The capacity of the volume in gigabytes. This defaults to `100`.| Yes |
 |`encryption_key`|String|Optional|The key to use for encrypting this volume.| Yes |
 |`resource_group`|String|Optional|The resource group ID for this volume.| Yes |
