@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-18"
 
 keywords: terraform provider plugin, terraform cloud foundry, terraform cf resources, terraform cf org, terraform cf space
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -156,7 +154,7 @@ Review the input parameters that you can specify for your resource.
 |`health_check_http_endpoint`|String|Optional|The endpoint that you want to use to determine if the app is healthy. |
 |`health_check_type`|String| Optional|The type of health check that you want to perform. Supported values are `port`, and `process`. The default values is `port`. |
 |`health_check_timeout`|Integer|Optional| The number of seconds to wait for the health check to respond during the start of your app before the health check is considered failed. |
-|`tags`|Array of strings| Optional| The tags that you want to add to your app instance. Tags can help you find your app more easily.  **NOTE**: `Tags` are managed locally and not stored on the IBM Cloud Service Endpoint at this moment.|
+|`tags`|Array of string| Optional| The tags that you want to add to your app instance. Tags can help you find your app more easily.  **NOTE**: `Tags` are managed locally and not stored on the IBM Cloud Service Endpoint at this moment.|
 {: caption="Table. Available input parameters" caption-side="top"}
 
 ### Output parameters
@@ -256,7 +254,7 @@ Review the input parameters that you can specify for your resource.
 |----|-----------|------------|------------------------|
 |`name`|String|Required|The name of the domain.|
 |`router_group_guid`|String|Optional|The GUID of the router group.|
-|`tags`|Array of strings|Optional|The tags that you want to add to the shared domain. Tags can help you find the domain more easily later.|
+|`tags`|Array of string|Optional|The tags that you want to add to the shared domain. Tags can help you find the domain more easily later.|
 {: caption="Table. Available input parameters" caption-side="top"}
 
 ### Output parameters
@@ -315,7 +313,7 @@ Review the input parameters that you can specify for your resource.
 |`host`|String|Optional|The hostname of the route. The hostname is required for shared domains.|
 |`port`|String|Optional|The port of the route. This option is supported for TCP router group domains only.|
 |`path`|String|Optional|The path for the route. Paths must be between 2-128 characters, must start with a forward slash (/), and cannot contain a question mark (?).|
-|`tags`|Array of strings|Optional|The tags that you want to add to the route. Tags can help you find the route more easily later. |
+|`tags`|Array of string|Optional|The tags that you want to add to the route. Tags can help you find the route more easily later. |
 {: caption="Table. Available input parameters" caption-side="top"}
 
 ### Output parameters
@@ -437,7 +435,7 @@ Review the input parameters that you can specify for your resource.
 |`space_guid`|String|Required|The GUID of the Cloud Foundry space where you want to create the service. You can retrieve the value from data source `ibm_space`.|
 |`service`|String|Required|The name of the service offering. You can retrieve the value by running the `ibmcloud service offerings` command in the {{site.data.keyword.cloud_notm}} CLI.|
 |`plan`|String|Required|The name of the service plan that you want. You can retrieve the value by running the `ibmcloud service offerings` command in the {{site.data.keyword.cloud_notm}} CLI.|
-|`tags`|Array of strings| Optional| The tags that you want to add to the service instance. Tags can help you to find the instance more easily later. |
+|`tags`|Array of string| Optional| The tags that you want to add to the service instance. Tags can help you to find the instance more easily later. |
 |`parameters`|Map|Optional| Arbitrary parameters to pass to the service broker. The value must be a JSON object.|
 |`wait_time_minutes`|Integer|Optional|The number of minutes to wait for the service instance to become available before declaring it as created. The same number of minutes is used for the deletion to finish. The default value is `10`.|
 {: caption="Table. Available input parameters" caption-side="top"}
@@ -492,7 +490,7 @@ Review the input parameters that you can specify for your resource.
 |`name`|String|Required|A descriptive name for the service key.|
 |`parameters`|Map|Optional|Arbitrary parameters to pass along to the service broker. Must be a JSON object.|
 |`service_instance_guid`|String|Required|The GUID of the service instance for which you create the service key.|
-|`tags`|Array of strings|Optional|The tags that you want to add to the service key instance. Tags can help you find the service keys more easily later. |
+|`tags`|Array of string|Optional|The tags that you want to add to the service key instance. Tags can help you find the service keys more easily later. |
 {: caption="Table. Available input parameters" caption-side="top"}
 
 ### Output parameters
@@ -545,7 +543,7 @@ Review the input parameters that you can specify for your resource.
 |`managers`|Set|Optional|The email addresses (associated with IBM IDs) of the users to whom you want to give a manager role in this space. Users with the manager role can invite users, manage users, and enable features for the given space.|
 |`developers`|Set|Optional|The email addresses (associated with IBM IDs) of the users to whom you want to give a developer role in this space. Users with the developer role can create apps and services, manage apps and services, and see logs and reports in the given space.|
 |`auditors`|Set|Optional| The email addresses (associated with IBM IDs) of the users to whom you want to give an auditor role in this space. Users with the auditor role can view logs, reports, and settings in the given space.  |
-|`tags`|Array of strings|Optional|The tags that you want to add to the space. Tags can help you find the space more easily later. |
+|`tags`|Array of string|Optional|The tags that you want to add to the space. Tags can help you find the space more easily later. |
 {: caption="Table. Available input parameters" caption-side="top"}
 
  By default, the newly created space has no user associated with it. Add your own email address to the `managers` or `developers` field in order to be able to use the space correctly for the first time.

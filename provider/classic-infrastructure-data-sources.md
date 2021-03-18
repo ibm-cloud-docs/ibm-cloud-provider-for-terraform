@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-18"
 
 keywords: terraform provider plugin, terraform classic infrastructure, terraform classic, terraform softlayer, terraform sl, terraform vsi, terraform Bare Metal server
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -167,9 +165,9 @@ Review the output parameters that you can access after you retrieved your data s
 |`redundant_network`|Boolean|When the value is `true`, two physical network interfaces are provided with a bonding configuration.|
 |`unbonded_network`|Boolean|When the value is `true`, two physical network interfaces are provided without a bonding configuration.|
 |`os_reference_code`|String|An operating system reference code that provisioned the computing server.| 
-|`tags`|List of Strings|Tags associated with this Bare Metal server.|
-|`block_storage_ids`|List of Strings|Block storage to which this computing server has access.|
-|`file_storage_ids`|List of Strings|File storage to which this computing server has access.|
+|`tags`|List of string|Tags associated with this Bare Metal server.|
+|`block_storage_ids`|List of string|Block storage to which this computing server has access.|
+|`file_storage_ids`|List of string|File storage to which this computing server has access.|
 |`ipv6_enabled`|Boolean|Indicates whether the public IPv6 address is enabled or not.|
 |`ipv6_address`|String|The public IPv6 address of the Bare Metal server.|
 |`ipv6_address_id`|String|The unique identifier for the public IPv6 address of the Bare Metal server.|

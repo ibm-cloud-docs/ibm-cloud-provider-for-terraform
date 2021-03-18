@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-04"
+lastupdated: "2021-03-18"
 
 keywords: terraform provider, terraform resources internet service, terraform resources cis, tf provider plugin
 
@@ -220,9 +220,9 @@ Review the input parameters that you can specify for your resource.
 |`domain_id`|String|Required|The ID of the domain to change cache settings. |
 |`development_mode`|String|Optional|The development mode enable or disable settings. Valid values are `on`, and `off`.|
 |`purge_all`|Boolean|Optional| Purge all cached files.|
-|`purge_by_urls`|List of String|Optional| Purge cached URLs.|
-|`purge_by_hosts`|List of String|Optional| Purge cached hosts.|
-|`purge_by_tags`|List of String|Optional| Purge cached item that matches the tags.|
+|`purge_by_urls`|List of string|Optional| Purge cached URLs.|
+|`purge_by_hosts`|List of string|Optional| Purge cached hosts.|
+|`purge_by_tags`|List of string|Optional| Purge cached item that matches the tags.|
 |`query_string_sort`|String|Optional|The query string sort settings. Valid values are `on`, and `off`.|
 
 - Among all the purge actions `purge_all`, `purge_by-urls`, `purge_by_hosts`, and `purge_by_tags`, only one is allowed to give inside a resource.
@@ -1963,7 +1963,7 @@ Review the input parameters that you can specify for your resource.
 |`protocol`|String|Required|The edge application protocol type. Valid values are `tcp`, `udp`. This attribute specified along with port number. For example, `tcp/22`. |
 |`dns`|String|Required|The name of DNS record for the range application. | 
 |`dns_type`|String|Required|The DNS record type. | 
-|`origin_direct`|List of Strings|Optional|A list of destination addresses to the origin. IP address and port of the origin for range application. If configuring a Load Balancer, use `origin_dns` and `origin_port`. This cannot be combined with `origin_dns` and `origin_port`. For example, `tcp://192.0.2.1:22`.|
+|`origin_direct`|List of string|Optional|A list of destination addresses to the origin. IP address and port of the origin for range application. If configuring a Load Balancer, use `origin_dns` and `origin_port`. This cannot be combined with `origin_dns` and `origin_port`. For example, `tcp://192.0.2.1:22`.|
 |`origin_dns`|String|Optional| DNS record pointing to the origin for the range application. This is used for configuring a Load Balancer. This requires `origin_port` and cannot be combined with `origin_direct`. When specifying an individual IP address, use `origin_direct`. For example, `origin.net`.|
 |`origin_port`|Integer|Optional|Port at the origin that listens to traffic from the range application. Requires `origin_dns` and cannot be combined with `origin_direct`. |
 |`ip_firewall`|Boolean|Optional|Enables the IP firewall for the application. Only available for TCP applications. |

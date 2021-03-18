@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04"
+lastupdated: "2021-03-18"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -131,7 +131,7 @@ Review the input parameters that you can specify for your resource.
 | ------------- |-------------| ----- | -------------- |
 | `description` | String | Optional | The description of the access group. |
 | `name` | String | Required | The name of the access group. |
-| `tags` | Array of strings | Optional|The list of tags that you want to associated with your access group. |
+| `tags` | Array of string | Optional|The list of tags that you want to associated with your access group. |
 
 `Tags` are managed locally and not stored on the IBM Cloud Service Endpoint at this moment.
 {: note}
@@ -192,8 +192,8 @@ Review the input parameters that you can specify for your resource.
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | -------------- |
 | `access_group_id` | String | Required | The ID of the access group. | 
-| `ibm_ids` | Array of strings | Optional | A list of IBM IDs that you want to add to or remove from the access group. | 
-| `iam_service_ids` | Array of strings | Optional | A list of service IDS that you want to add to or remove from the access group. |
+| `ibm_ids` | Array of string | Optional | A list of IBM IDs that you want to add to or remove from the access group. | 
+| `iam_service_ids` | Array of string | Optional | A list of service IDS that you want to add to or remove from the access group. |
 
 
 ### Output parameters
@@ -716,7 +716,7 @@ Review the input parameters that you can specify for your resource.
 |`display_name`|String|Required|The display name of the custom role.|
 |`description`|String|Optional|The description of the custom role. Make sure to include information about the level of access this role assignment gives a user. |
 |`service`|String|Required|The name of the service for which you want to create the custom role. To retrieve the name, run `ibmcloud catalog service-marketplace`.
-|`actions`|Array of strings|Required|A list of action IDs that you want to add to your custom role. The action IDs vary by service. To retrieve supported action IDs, follow the [documentation](/docs/account?topic=account-custom-roles) to create the custom role from the UI. |
+|`actions`|Array of string|Required|A list of action IDs that you want to add to your custom role. The action IDs vary by service. To retrieve supported action IDs, follow the [documentation](/docs/account?topic=account-custom-roles) to create the custom role from the UI. |
 
 ### Output parameters
 {: #iam-custom-role-output}
@@ -828,7 +828,7 @@ Review the input parameters that you can specify for your resource.
 |----|-----------|-----------|---------------------|
 |`name`|String|Required|The name of the service ID.|
 |`description` |String|Optional|The description of the service ID.|
-|`tags`|Array of strings|Optional| A list of tags that you want to add to the service ID. The tags are managed locally and not stored on the IBM Cloud Service Endpoint at this moment.|
+|`tags`|Array of string|Optional| A list of tags that you want to add to the service ID. The tags are managed locally and not stored on the IBM Cloud Service Endpoint at this moment.|
 
 ### Output parameters
 {: #iam-service-id-output}
@@ -1003,6 +1003,7 @@ Review the input parameters that you can specify for your resource.
 |Name|Data type|Required / optional|Description| Forces new resource |
 |----|-----------|-----------|---------------------| ------- |
 |`iam_service_id`|String|Required|The UUID of the service ID.| Yes |
+|`iam_id`| String |Optional | IAM ID of the service ID. Used to assign cross account service ID policy. Either `iam_service_id` or `iam_id` is required.| Yes |
 |`roles`|List|Required|A comma separated list of roles. Valid roles are `Writer`, `Reader`, `Manager`, `Administrator`, `Operator`, `Viewer`, and `Editor`.| No |
 |`resources`|List of objects|Optional| A nested block describes the resource of this policy.| No |
 |`resources.service` |String|Optional|The service name of the policy definition. You can retrieve the value by running the `ibmcloud catalog service-marketplace` or `ibmcloud catalog search`.| No |
@@ -1013,7 +1014,7 @@ Review the input parameters that you can specify for your resource.
 |`resources.resource_group_id`|String|Optional| The ID of the resource group. To retrieve the value, run `ibmcloud resource groups` or use the `ibm_resource_group` data source. | No |
 |`resources.attributes`|Map|Optional| A set of resource attributes in the format `name=value,name=value`. If you set this option, do not specify `account_management` at the same time.| No |
 |`account_management`|Boolean|Optional|Gives access to all account management services if set to `true`. Default value `false`. If you set this option, do not set `resources` at the same time. | No |
-|`tags` |Array of strings|Optional| A list of tags that are associated with the service policy instance.  Tags are managed locally and not stored on the IBM Cloud Service Endpoint at this moment.| No |
+|`tags` |List of string|Optional| A list of tags with the service policy instance. **Note** Tags are managed locally and not stored in the {{site.data.keyword.cloud_notm}} service endpoint at this moment. | No|
 
 ### Output parameters
 {: #iam-service-policy-output}
@@ -1181,7 +1182,7 @@ Review the input parameters that you can specify for your resource.
 |`resources.resource_group_id`|String|Optional| The ID of the resource group. To retrieve the value, run `ibmcloud resource groups` or use the `ibm_resource_group` data source. | No |
 |`resources.attributes`|Map|Optional| A set of resource attributes in the format `name=value,name=value`. If you set this option, do not specify `account_management` at the same time.| No |
 |`account_management`|Boolean|Optional|Gives access to all account management services if set to `true`. Default value `false`. If you set this option, do not set `resources` at the same time. | No |
-|`tags` |Array of strings|Optional| A list of tags that are associated with the service policy instance.  Tags are managed locally and not stored on the IBM Cloud Service Endpoint at this moment.| No |
+|`tags` |Array of string|Optional| A list of tags that are associated with the service policy instance.  Tags are managed locally and not stored on the IBM Cloud Service Endpoint at this moment.| No |
 
 
 ### Output parameters

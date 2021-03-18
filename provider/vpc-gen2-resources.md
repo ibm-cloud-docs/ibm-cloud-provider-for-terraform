@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-17" 
+lastupdated: "2021-03-18" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -243,7 +243,7 @@ Review the input parameters that you can specify for your resource.
 | `target` | String | Optional | Enter the ID of the network interface that you want to use to allocate the IP address. If you specify this option, do not specify `zone` at the same time. | 
 | `zone` | String | Optional | Enter the name of the zone where you want to create the floating IP address. To list available zones, run `ibmcloud is zones`. If you specify this option, do not specify `target` at the same time. | 
 | `resource_group`|String|Optional| The resource group ID where you want to create the floating IP.|
-| `tags`|Array of strings|Optional|Enter any tags that you want to associate with your VPC. Tags might help you find your VPC more easily after it is created. Separate multiple tags with a comma (`,`). |
+| `tags`|Array of string|Optional|Enter any tags that you want to associate with your VPC. Tags might help you find your VPC more easily after it is created. Separate multiple tags with a comma (`,`). |
 
 ### Output parameters
 {: #floating-ip-output}
@@ -508,7 +508,7 @@ Review the input parameters that you can specify for your resource.
 |`primary_network_interface. allow_ip_spoofing`|Bool|Optional|Indicates whether IP spoofing is allowed on the interface. If `false`, IP spoofing is prevented on the interface. If `true`, IP spoofing is allowed on the interface.| No |
 |`profile`|String|Required|The name of the profile that you want to use for your instance. To list supported profiles, run `ibmcloud is instance-profiles`.| Yes |
 |`resource_group`|String|Optional|The ID of the resource group where you want to create the instance.| Yes |
-|`tags`|Array of strings|Optional|A list of tags that you want to add to your instance. Tags can help you find your instance more easily later.| No |
+|`tags`|Array of string|Optional|A list of tags that you want to add to your instance. Tags can help you find your instance more easily later.| No |
 |`user_data`|String|Optional|User data to transfer to the instance.| No |
 |`volumes`|List|Optional|A comma separated list of volume IDs to attach to the instance.| No |
 |`vpc`|String|Required|The ID of the VPC where you want to create the instance.| Yes |
@@ -1123,7 +1123,7 @@ Review the input parameters that you can specify for your resource.
 |`name`|String|Required|The descriptive name used to identify an image.| No |
 |`operating_system`|String|Required|Description of underlying OS of an image.| No |
 |`resource_group`|String|Optional|The resource group ID for this image.| Yes |
-|`tags`|Array of strings|Optional|A list of tags that you want to your image. Tags can help you find the image more easily later.| No |
+|`tags`|Array of string|Optional|A list of tags that you want to your image. Tags can help you find the image more easily later.| No |
 
 ### Output parameters
 {: #image-output}
@@ -1135,7 +1135,8 @@ Review the output parameters that you can access after your resource is created.
 |----|-----------|--------|
 |`id`|String|The unique identifier of the image.|
 |`architecture`|String|The processor architecture that this image is based on.|
-|`crn`|String| The CRN for the image.|
+|`crn`|String| The CRN of the image.|
+|`checksum`| The `SHA256` checksum of the image.|
 |`file`|String| The file.|
 |`format`|String| The format of an image.|
 |`resourceGroup`|String| The resource group to which the image belongs to.|
@@ -1196,8 +1197,9 @@ Review the input parameters that you can specify for your resource.
 |`profile`|String|Required|The profile to use for this Load Balancer. Supported value is `network-fixed`.| Yes |
 |`resource_group`|String|Optional| The resource group where the load balancer to be created.| Yes |
 |`subnets`|Array|Required|List of the subnets IDs to connect to the load balancer.| No |
-|`tags`|Array of strings|Optional|A list of tags that you want to add to your load balancer. Tags can help you find the load balancer more easily later. | No |
+|`tags`|Array of string|Optional|A list of tags that you want to add to your load balancer. Tags can help you find the load balancer more easily later. | No |
 |`type`|String|Optional|The type of the load balancer. Default value `public`. Supported values `public` and `private`.| Yes |
+|`logging`| Bool| Optional | Enable or disable datapath logging for the load balancer. If unspecified, datapath logging is disabled. This is applicable only for application load balancer. Supported values are `true` or `false`.|No|
 
 ### Output parameters
 {: #lb-output}
@@ -1289,6 +1291,7 @@ Review the input parameters that you can specify for your resource.
 
 |Name|Data type|Required / optional|Description| Forces new resource |
 |----|-----------|-----------|---------------------| ------- |
+|`accept_proxy_protocol`|Bool|Optional| If set to `true`, listener forwards proxy protocol information that are supported by load balancers in the application family. Default value is `false`.|
 |`lb`|String|Required|The load balancer unique identifier.| Yes |
 |`port`|Integer|Required|The listener port number. Valid range 1 to 65535.| No |
 |`protocol`|String|Required|The listener protocol. Enumeration type are `http`, `tcp`, and `https`. Network Load Balancer supports only `tcp` protocol.| No |
@@ -1608,8 +1611,10 @@ Review the input parameters that you can specify for your resource.
 |`health_type`|String|Required|The pool protocol. Enumeration type: `http`, `https`, `tcp` are supported.| No |
 |`health_monitor_url`|String|Optional|The health check URL. This option is applicable only to the HTTP `health-type`.| No |
 |`health_monitor_port`|Integer|Optional|The health check port number.|  No |
+|`proxy_protocol`|String|Optional| The proxy protocol setting for the pool that is supported by the load balancers in the application family. Valid values are `disabled`, `v1`, and `v2`. Default value is `disabled`.|
 |`session_persistence_type`|String|Optional|The persistence session type.  Enumeration type: `source_ip`, `http_cookie`, and `app_cookie` are supported.| No |
 |`session_persistence_cookie_name`|String|Optional|The session  cookie session name. This option is applicable only to `--session-persistence-type`.| No |
+
 
 ### Output parameters
 {: #lb-pool-output}
@@ -1797,6 +1802,7 @@ Review the input parameters that you can specify for your resource.
 |`rules.udp.port_min`|Integer|Optional|The lowest port in the range of ports to be matched; if unspecified, 1 is used.| No |
 |`rules.udp.source_port_max`|Integer|Optional|The highest port in the range of ports to be matched; if unspecified, 65535 is used.| No |
 |`rules.udp.source_port_min`|Integer|Optional|The lowest port in the range of ports to be matched; if unspecified, 1 is used.| No |
+|`tags`| List of string| Optional | Tags associated with the network ACL.|
 
 ### Output parameters
 {: #network-acl-output}
@@ -1807,6 +1813,7 @@ Review the output parameters that you can access after your resource is created.
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
 |`id`|String|The ID of the network ACL.|
+|`crn`|String|The CRN of the network ACL.|
 |`rules`|List of rules |The rules for a network ACL.| 
 |`rules.id`|String|The rule ID.|
 |`rules.ip_version`|String|The IP version of the rule.|
@@ -1867,7 +1874,7 @@ Review the input parameters that you can specify for your resource.
 | `name` | String| Required | Enter a name for your public gateway. | No |
 | `vpc` | String | Required | Enter the ID of the VPC, for which you want to create a public gateway. To list available VPCs, run `ibmcloud is vpcs`.  | Yes |
 | `zone` | String | Required | Enter the zone where you want to create the public gateway. To list available zones, run `ibmcloud is zones`. | Yes |
-| `tags`|Array of strings|Optional|Enter any tags that you want to associate with your VPC. Tags might help you find your VPC more easily after it is created. Separate multiple tags with a comma (`,`). | No |
+| `tags`|Array of string|Optional|Enter any tags that you want to associate with your VPC. Tags might help you find your VPC more easily after it is created. Separate multiple tags with a comma (`,`). | No |
 | `resource_group`|String|Optional|Enter the ID of the resource group where you want to create the public gateway. To list available resource groups, run `ibmcloud resource groups`. If you do not specify a resource group, the public gateway is created in the `default` resource group. | Yes |
 | `floating_ip` | List | Optional | A list of floating IP addresses that you want to assign to the public gateway. | No |
 | `floating_ip.id`|String| Optional | The unique identifier of the floating IP address. If you specify this parameter, do not specify `floating_ip.address` at the same time. | No | 
@@ -2250,9 +2257,10 @@ Review the input parameters that you can specify for your resource.
 |`network_acl`|String|Optional|The ID of the network ACL for the subnet.| No |
 |`public_gateway`|String|Optional|The ID of the public gateway for the subnet that you want to attach to the subnet. You create the public gateway with the [`ibm_is_public_gateway` resource](#provider-public-gateway).| No |
 |`resource_group`|String|Optional|The ID of the resource group where you want to create the subnet.| Yes |
+|`routing_table`|String|Optional| The routing table ID associated with the subnet.|
+|`tags` |List of string|Optional| A list of tags with the service policy instance. **Note** Tags are managed locally and not stored in the {{site.data.keyword.cloud_notm}} service endpoint at this moment. | No|
 |`vpc`|String|Required|The VPC ID.| Yes |
 |`zone`|String|Required|The subnet zone name.| Yes |
-|`routing_table`|String|Optional| The routing table ID associated with the subnet.|
 {: caption="Table. Available input parameters" caption-side="top"}
 
 ### Output parameters

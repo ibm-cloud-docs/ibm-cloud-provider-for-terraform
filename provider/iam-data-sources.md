@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-04"
+lastupdated: "2021-03-18"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -138,8 +138,8 @@ Review the output parameters that you can access after you retrieved your data s
 |`groups.id`|String|The ID of the IAM access group.|
 |`groups.name`|String|The name of the IAM access group.|
 |`groups.description`|String|The description of the IAM access group.|
-|`groups.ibm_ids`|Array of strings|A list of IBM ID that belong to the access group.|
-|`groups.iam_service_ids`|Array of strings|A list of service IDs that belong to the access group.|
+|`groups.ibm_ids`|Array of string|A list of IBM ID that belong to the access group.|
+|`groups.iam_service_ids`|Array of string|A list of service IDs that belong to the access group.|
 |`groups.rules`|List of access group rules|A list of dynamic rules that are applied to the IAM access group.|
 |`groups.rules.name`|String|The name of the dynamic rule. |
 |`groups.rules.expiration`|Integer|The number of hours that authenticated users can work in IBM Cloud before they must refresh their access.|
