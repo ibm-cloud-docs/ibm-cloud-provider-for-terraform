@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-18"
 
 keywords: terraform provider plugin, terraform api gateway
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -145,7 +143,7 @@ Review the output parameters that you can access after your resource is created.
 |`endpoints.managed`|Boolean|If set to **true**, the endpoint is online. If set to **false**, the endpoint is offline.|
 |`endpoints.shared`|String|The shared status of the endpoint.|
 |`endpoints.base_path`|String|The base path of the endpoint.|
-|`endpoints.routes`|Array of strings|A list of routes that can be invoked for the endpoint.|
+|`endpoints.routes`|Array of string|A list of routes that can be invoked for the endpoint.|
 |`endpoints.provider_id`|String|The provider ID of the endpoint.|
 |`endpoints.managed_url`|String|The managed URL of an endpoint.|
 |`endpoints.alias_url`|String|The alias URL of an endpoint.|

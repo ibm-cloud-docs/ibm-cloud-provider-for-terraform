@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-15" 
+lastupdated: "2021-03-18" 
 
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes
 
@@ -407,7 +407,7 @@ Review the input parameters that you can specify for your resource.
 | `role` | String | Optional | The IAM service access role that you want to use to create the service credentials for the {{site.data.keyword.cloud_notm}} service instance. If you specified existing service credentials in the `key` parameter, settings for the `role` parameter are ignored. | Yes |
 | `service_instance_id` | String | Optional | The ID of the service that you want to bind to the cluster. If you specify this parameter, do not specify `service_instance_name` at the same time. | Yes |
 | `service_instance_name` | String | Optional | The name of the service that you want to bind to the cluster. If you specify this parameter, do not specify `service_instance_id` at the same time. | Yes |
-| `tags` | Array of strings | Optional | A list of tags that you want to associate with the {{site.data.keyword.cloud_notm}} service instance that you bind to the cluster. </br>**NOTE**: `Tags` are managed locally and are not stored on the {{site.data.keyword.cloud_notm}} service endpoint. | No |
+| `tags` | Array of string | Optional | A list of tags that you want to associate with the {{site.data.keyword.cloud_notm}} service instance that you bind to the cluster. </br>**NOTE**: `Tags` are managed locally and are not stored on the {{site.data.keyword.cloud_notm}} service endpoint. | No |
 
 ### Output parameters
 {: #container-bind-output}
@@ -756,7 +756,7 @@ Review the input parameters that you can specify for your resource.
 | `resource_group_id` | String | Optional | The ID of the resource group where you want to provision your cluster. To retrieve the ID, use the  `ibm_resource_group` data source. If no value is provided, the cluster is automatically provisioned into the `default` resource group. | No |
 | `subnet_id` | String | Optional | The ID of an existing subnet that you want to use for your worker nodes. To find existing subnets, run `ibmcloud ks subnets`.| No |
 |`service_subnet`| String | Optional| Specify a custom subnet CIDR to provide private IP addresses for services. The subnet should be at least `/24` or more. For more information, refer to [Subnet service](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli#service-subnet).|Yes|
-| `tags` | Array of strings | Optional | A list of tags that you want to add to your cluster. Tags can help find a cluster more quickly.  | No |
+| `tags` | Array of string | Optional | A list of tags that you want to add to your cluster. Tags can help find a cluster more quickly.  | No |
 | `update_all_workers` | Boolean | Optional | If set to **true**, the Kubernetes version of the worker nodes is updated along with the Kubernetes version of the cluster that you specify in `kube_version`. | No |
 | `webhook` | Array of objects | Optional | The webhook that you want to add to the cluster. For available options, see the [`webhook create` command](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli). | No |
 | `webhook.level` | String | Optional| Notification level, such as `Normal` or `Warning`. | Yes |
@@ -1378,7 +1378,7 @@ Review the input parameters that you can specify for your resource.
 |`worker_count`|Integer|Optional| The number of worker nodes per zone in the default worker pool. Default value `1`.| Yes |
 |`worker_labels`|Map|Optional| Labels on all the workers in the default worker pool.| No |
 |`resource_group_id`|String|Optional|The ID of the resource group. You can retrieve the value by running `ibmcloud resource groups` or by using the `ibm_resource_group` data source. If no value is provided, the `default` resource group is used. | Yes |
-|`tags`|Array of strings|Optional|A list of tags that you want to associate with your VPC cluster. **Note**: For users on account to add tags to a resource, they must be assigned the [appropriate permissions]/docs/account?topic=account-access). | No |
+|`tags`|Array of string|Optional|A list of tags that you want to associate with your VPC cluster. **Note**: For users on account to add tags to a resource, they must be assigned the [appropriate permissions]/docs/account?topic=account-access). | No |
 |`update_all_workers`|Boolean|Optional| Set to true, if you want to update workers Kubernetes version with the cluster kube_version.| No |
 |`vpc_id`|String|Required|The ID of the VPC that you want to use for your cluster. To list available VPCs, run `ibmcloud is vpcs`. | Yes |
 |`zones`|List|Required|A nested block describes the zones of this VPC cluster. | No |

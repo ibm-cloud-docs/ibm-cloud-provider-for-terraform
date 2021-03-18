@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-03-18"
 
 keywords: terraform provider plugin, terraform dns, terraform vpc dns, terraform private dns
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -144,8 +142,8 @@ Review the input parameters that you can specify for your resource.
 |----|-----------|-----------|---------------------| ------- |
 | `az_pools` | Set | Optional | Map availability zones to pool ID's.| No |
 |`az_pools.availability_zone`|String|Required | Availability of the zone. | No |
-|`az_pools.pools`|List of String|Required |List of Load Balancer pools.| No |
-|`default_pools`|list of Strings|Required |TA list of pool IDs ordered by their failover priority.| No |
+|`az_pools.pools`|List of string|Required |List of Load Balancer pools.| No |
+|`default_pools`|List of string|Required |TA list of pool IDs ordered by their failover priority.| No |
 |`description`|String|Optional| Descriptive text of the Load Balancer.| No |
 |`fallback_pool`|Integer|Required |The pool ID to use when all other pools are detected as unhealthy.| No |
 |`instance_id`|String|Required|The GUID of the private DNS.| Yes |
@@ -229,7 +227,7 @@ Review the input parameters that you can specify for your resource.
 |`description`|String|Optional| Descriptive text of the Load Balancer monitor.| No |
 |`headers`|Set|Optional |The HTTP request headers to send in the health check. It is recommended you set a host header by default. The `User-Agent` header cannot be overridden. This parameter is only valid for HTTP and HTTPS monitors.| No |
 |`headers.name`|String|Required|The name of the HTTP request header.| No |
-|`headers.value`|list of Strings|Required |The value of HTTP request header.| No |
+|`headers.value`|List of string|Required |The value of HTTP request header.| No |
 |`interval`|Integer|Optional | The interval between each health check.| No |
 |`instance_id`|String|Required|The GUID of the private DNS.| Yes |
 |`method`|String|Optional | The method to use for the health check applicable to HTTP or HTTPS based checks, the default value is `GET`.| No |

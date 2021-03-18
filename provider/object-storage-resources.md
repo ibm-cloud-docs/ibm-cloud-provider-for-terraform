@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04"
+lastupdated: "2021-03-18"
 
 keywords: terraform provider plugin, terraform data source cos, terraform data source object storage, terraform get cloud object storage bucket, terraform get object storage resources
 
@@ -267,7 +267,7 @@ Review the input parameters that you can specify for your resource.
 |`activity_tracking.read_data_events`| Boolean| Required | If set to **true**, all read events against a bucket are sent to your {{site.data.keyword.cloudaccesstrailfull_notm}} service instance.|
 |`activity_tracking.write_data_events`| Boolean| Required| If set to **true**, all write events against a bucket are sent to your {{site.data.keyword.cloudaccesstrailfull_notm}} service instance.|
 |`activity_tracking.activity_tracker_crn`| String| Required | The CRN of your {{site.data.keyword.cloudaccesstrailfull_notm}} service instance that you want to send your events to. This value is required only when you configure your instance for the first time.|
-| `allowed_ip` | Array of strings | Optional | A list of IPv4 or IPv6 addresses in CIDR notation that you want to allow access to your {{site.data.keyword.cos_full_notm}} bucket.|
+| `allowed_ip` | Array of string | Optional | A list of IPv4 or IPv6 addresses in CIDR notation that you want to allow access to your {{site.data.keyword.cos_full_notm}} bucket.|
 | `bucket_name` | String | Required | The name of the bucket. |
 | `cross_region_location` | String | Optional | Specify the cross-regional bucket location. Supported values are `us`, `eu`, and `ap`. If you use this parameter, do not set `single_site_location` or `region_location` at the same time. |
 |`endpoint_type`| String | Optional | The type of the endpoint either public or private to be used for buckets. Default value is `public`.|

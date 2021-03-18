@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-04"
+lastupdated: "2021-03-18"
 
 keywords: terraform provider plugin, terraform gen 2, terraform gen 2 compute
 
@@ -236,11 +236,14 @@ Review the output parameters that you can access after you retrieved your data s
 
 |Name|Data type|Description|
 |----|-----------|-------------|
-|`id`|String|The unique identifier for this image.|
+|`architecture`|String|The architecture of the image.|
+|`checksum`| The `SHA256` checksum of the image.|
 |`crn`|String|The CRN for this image.|
+|`id`|String|The unique identifier of the image.|
 |`os`|String|The name of the operating system.|
 |`status`|String|The status of this image.|
-|`architecture`|String|The architecture for this image.|
+|`encryption`|String|The type of encryption used of the image.|
+|`encryption_key`| String|The CRN of the Key Protect or Hyper Protect Crypto Service root key for this resource.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 ## `ibm_is_images`
@@ -275,12 +278,15 @@ Review the output parameters that you can access after you retrieved your data s
 |Name|Data type|Description|
 |----|-----------|-------------|
 |`images`|List of objects|List of all supported images.  |
-|`images.name`|String|The name for this image.  |
-|`images.id`|String|The unique identifier for this image.  |
-|`images.crn`|String|The CRN for this image.  |
-|`images.os`|String|The name of the operating system.  |
-|`images.status`|String|The status of this image.  |
 |`images.architecture`|String|The architecture for this image.  |
+|`images.crn`|String|The CRN for this image.  |
+|`images.checksum`| The `SHA256` checksum of the image.|
+|`images.encryption`|String|The type of encryption used of the image.|
+|`images.encryption_key`| String|The CRN of the Key Protect or Hyper Protect Crypto Service root key for this resource.|
+|`images.id`|String|The unique identifier for this image.  |
+|`images.os`|String|The name of the operating system.  |
+|`images.name`|String|The name for this image.  |
+|`images.status`|String|The status of this image.  |
 |`images.visibility`|String|The visibility of the image public or private.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
@@ -563,7 +569,7 @@ Review the output parameters that you can access after you retrieved your data s
 
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
-| `instance_group_managers` | List of String | Nested block with list of instance manager properties. |
+| `instance_group_managers` | List of string | Nested block with list of instance manager properties. |
 |`instance_group_managers.id`|Object|This ID is the combination of instance group ID, and instance group manager ID. |
 |`instance_group_managers.manager_type`|String| The type of an instance group manager. |
 |`instance_group_managers.aggregation_window`|String|The time window in seconds to aggregate metrics prior to evaluation. |
@@ -1259,6 +1265,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`network_acl`|String|The ID of the network ACL for the subnet.|
 |`public_gateway`|String|The ID of the public gateway for the subnet.|
 |`status`|String|The status of the subnet.|
+|`tags` |String| Tags associated of the instance.|
 |`vpc`|String|The ID of the VPC that the subnet belongs to.|
 |`zone`|String|The subnet zone name.|
 |`available_ipv4_address_count`|Integer|The total number of available IPv4 addresses.|
