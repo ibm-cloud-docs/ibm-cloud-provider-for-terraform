@@ -1192,14 +1192,13 @@ Review the input parameters that you can specify for your resource.
 
 |Name|Data type|Required / optional|Description| Forces new resource |
 |----|-----------|-----------|---------------------| ------- |
-|`logging`| Bool | Optional | Enable load balancer data logs for LogDNA. The data logs helps to troubleshoot connectivity issues.|
 |`name`|String|Required|The name of the VPC load balancer.| No |
 |`profile`|String|Required|The profile to use for this Load Balancer. Supported value is `network-fixed`.| Yes |
 |`resource_group`|String|Optional| The resource group where the load balancer to be created.| Yes |
 |`subnets`|Array|Required|List of the subnets IDs to connect to the load balancer.| No |
 |`tags`|Array of string|Optional|A list of tags that you want to add to your load balancer. Tags can help you find the load balancer more easily later. | No |
 |`type`|String|Optional|The type of the load balancer. Default value `public`. Supported values `public` and `private`.| Yes |
-|`logging`| Bool| Optional | Enable or disable datapath logging for the load balancer. If unspecified, datapath logging is disabled. This is applicable only for application load balancer. Supported values are `true` or `false`.|No|
+|`logging`| Bool| Optional | Enable or disable datapath logging for the load balancer. This is applicable only for application load balancer. Supported values are `true` or `false`. Default value is `false`.|No|
 
 ### Output parameters
 {: #lb-output}

@@ -308,7 +308,7 @@ Review the output parameters that you can access after your resource is created.
 | `id` | String | The ID of the bucket. | 
 | `key_protect` | String | The CRN of the {{site.data.keyword.keymanagementservicelong_notm}} instance that you use to encrypt your data in {{site.data.keyword.cos_full_notm}}. |
 | `region_location` | String | The location if you created a regional bucket. |
-| `resource_instance_id` | String | The ID of {site.data.keyword.cos_full_notm}} instance. | 
+| `resource_instance_id` | String | The ID of {{site.data.keyword.cos_full_notm}} instance. | 
 | `single_site_location` | String | The location if you created a single site bucket. |
 | `storage_class` | String | The storage class of the bucket. |
 
