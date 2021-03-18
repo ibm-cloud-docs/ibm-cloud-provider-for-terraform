@@ -237,7 +237,7 @@ Review the output parameters that you can access after you retrieved your data s
 |Name|Data type|Description|
 |----|-----------|-------------|
 |`architecture`|String|The architecture of the image.|
-|`checksum`| The `SHA256` checksum of the image.|
+|`checksum`| String| The `SHA256` checksum of the image.|
 |`crn`|String|The CRN for this image.|
 |`id`|String|The unique identifier of the image.|
 |`os`|String|The name of the operating system.|
@@ -280,7 +280,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`images`|List of objects|List of all supported images.  |
 |`images.architecture`|String|The architecture for this image.  |
 |`images.crn`|String|The CRN for this image.  |
-|`images.checksum`| The `SHA256` checksum of the image.|
+|`images.checksum`| String | The `SHA256` checksum of the image.|
 |`images.encryption`|String|The type of encryption used of the image.|
 |`images.encryption_key`| String|The CRN of the Key Protect or Hyper Protect Crypto Service root key for this resource.|
 |`images.id`|String|The unique identifier for this image.  |
@@ -1265,7 +1265,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`network_acl`|String|The ID of the network ACL for the subnet.|
 |`public_gateway`|String|The ID of the public gateway for the subnet.|
 |`status`|String|The status of the subnet.|
-|`tags` |String| Tags associated of the instance.|
+|`tags` |String| Tags associated for the instance.|
 |`vpc`|String|The ID of the VPC that the subnet belongs to.|
 |`zone`|String|The subnet zone name.|
 |`available_ipv4_address_count`|Integer|The total number of available IPv4 addresses.|
