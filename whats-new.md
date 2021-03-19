@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-03-11"
+lastupdated: "2021-03-18"
 
 keywords: terraform resources, terraform modules, terraform provider, terraform autodeploy, 
 
@@ -27,6 +27,26 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #new-in-terraform}
 
 Learn about the latest changes to the Terraform service that are grouped by month.
+
+
+## 16 March 2021
+{: #16-march-2021}
+
+<table>
+    <thead>
+    <th style="width:80px">New resources</th>
+    <th style="width:80px">New data sources</th>
+    <th style="width:500px">Enhancements</th>
+    </thead>
+  <tbody>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">NA</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">NA</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">Support `logging` argument description for [ibm_is_lb](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-resources#lb)</li><li style="margin:0px; padding:0px">Support `proxy_protocol` argument for [ibm_is_lb_pool](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-resources#lb-pool)</li><li style="margin:0px; padding:0px">Support `accept_proxy_protocol` argument for [ibm_is_lb_listener](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-resources#lb-listener-input)</li><li style="margin:0px; padding:0px">Added resources timeouts and depreciated wait_time_minutes argument for [ibm_compute_vm_instance](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-infrastructure-resources#vm)</li><li style="margin:0px; padding:0px">Support `tags` argument for [ibm_is_subnet](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-resources#subnet-input), [ibm_is_network_acl](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-resources#network-acl-input)resource and [ibm_is_subnet](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-data-sources#vpc-subnet-input) data source</li><li style="margin:0px; padding:0px">Support `iam_id` argument for [iam_service_id](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-iam-resources#iam-service-id-output) resource</li><li style="margin:0px; padding:0px">Added `checksum` attribute for [ibm_is_image](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-data-sources#vpc-image-output), [ibm_is_images](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-data-sources#output-parameters) data sources and for [ibm_is_image](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-resources#image-output) resource</li><li style="margin:0px; padding:0px">Latest [version change log](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.21.2)</li></ul></td>
+    </tr>
+  </tbody>
+  </table> 
+
 
 ## 04 March 2021
 {: #04-march-2021}

@@ -1136,7 +1136,7 @@ Review the output parameters that you can access after your resource is created.
 |`id`|String|The unique identifier of the image.|
 |`architecture`|String|The processor architecture that this image is based on.|
 |`crn`|String| The CRN of the image.|
-|`checksum`| The `SHA256` checksum of the image.|
+|`checksum`| String| The `SHA256` checksum of the image.|
 |`file`|String| The file.|
 |`format`|String| The format of an image.|
 |`resourceGroup`|String| The resource group to which the image belongs to.|
