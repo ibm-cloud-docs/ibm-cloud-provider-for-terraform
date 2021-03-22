@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-11" 
+lastupdated: "2021-03-22" 
 
 keywords: terraform provider plugin, terraform container registry, container registry, container registry namespaces 
 
@@ -110,10 +110,10 @@ Lists a container registry namespaces of an account. For more information, about
 ### Sample Terraform code
 {: #cr-namespaces-ds-sample}
 
-The following example shows how to configure an `ALB`.
+The following example shows how you can configure a `namespace`.
 
 ```
-data "ibm_cr_namespace" "test" {}
+data "ibm_cr_namespaces" "test" {}
 ```
 {: codeblock}
 
