@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-11" 
+lastupdated: "2021-03-22" 
 
 keywords: terraform provider plugin, terraform container registry, container registry, container registry namespaces 
 
@@ -106,7 +106,7 @@ Create, update, or delete a container registry namespace. For more information, 
 ### Sample Terraform code
 {: #cr-namespace-sample}
 
-The following example shows how to configure an `ALB`.
+The following example shows how you can configure a `namespace`.
 {: shortdesc}
 
 ```
