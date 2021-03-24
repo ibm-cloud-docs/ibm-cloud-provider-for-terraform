@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18" 
+lastupdated: "2021-03-24" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -1611,7 +1611,7 @@ Review the input parameters that you can specify for your resource.
 |`health_monitor_url`|String|Optional|The health check URL. This option is applicable only to the HTTP `health-type`.| No |
 |`health_monitor_port`|Integer|Optional|The health check port number.|  No |
 |`proxy_protocol`|String|Optional| The proxy protocol setting for the pool that is supported by the load balancers in the application family. Valid values are `disabled`, `v1`, and `v2`. Default value is `disabled`.|
-|`session_persistence_type`|String|Optional|The persistence session type.  Enumeration type: `source_ip`, `http_cookie`, and `app_cookie` are supported.| No |
+|`session_persistence_type`|String|Optional|The persistence session type.  Supported enumeration type is `source_ip`. | No |
 |`session_persistence_cookie_name`|String|Optional|The session  cookie session name. This option is applicable only to `--session-persistence-type`.| No |
 
 
