@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-24" 
+lastupdated: "2021-03-25" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -1570,6 +1570,7 @@ resource "ibm_is_lb_pool" "testacc_pool" {
   health_retries = 5
   health_timeout = 30
   health_type    = "http"
+  proxy_protocol = "v1"
 }
 ```
 {: codeblock}
@@ -1587,6 +1588,8 @@ resource "ibm_is_lb_pool" "testacc_pool" {
   health_retries = 5
   health_timeout = 30
   health_type    = "https"
+  proxy_protocol = "v1"
+}
 }
 ```
 {: codeblock}
@@ -1610,10 +1613,8 @@ Review the input parameters that you can specify for your resource.
 |`health_type`|String|Required|The pool protocol. Enumeration type: `http`, `https`, `tcp` are supported.| No |
 |`health_monitor_url`|String|Optional|The health check URL. This option is applicable only to the HTTP `health-type`.| No |
 |`health_monitor_port`|Integer|Optional|The health check port number.|  No |
-|`proxy_protocol`|String|Optional| The proxy protocol setting for the pool that is supported by the load balancers in the application family. Valid values are `disabled`, `v1`, and `v2`. Default value is `disabled`.|
+|`proxy_protocol`|String|Optional| The proxy protocol setting for the pool that is supported by the load balancers in the application family. Valid values are `disabled`, `v1`, and `v2`. Default value is `disabled`.| No|
 |`session_persistence_type`|String|Optional|The persistence session type.  Supported enumeration type is `source_ip`. | No |
-|`session_persistence_cookie_name`|String|Optional|The session  cookie session name. This option is applicable only to `--session-persistence-type`.| No |
-
 
 ### Output parameters
 {: #lb-pool-output}
@@ -1625,6 +1626,8 @@ Review the output parameters that you can access after your resource is created.
 |----|-----------|--------|
 |`id`|String|The unique identifier of the load balancer pool. The ID is composed of `<lb_id>/<pool_id>`.|
 |`provisioning_status`|String| The status of load balancer pool.|
+|`pool_id`|String|ID of the load balancer pool.|
+|`related_crn`|String|The CRN of the load balancer resource.|
 
 ### Import
 {: #lb-pool-import}
