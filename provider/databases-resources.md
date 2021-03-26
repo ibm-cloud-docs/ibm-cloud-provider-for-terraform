@@ -311,7 +311,7 @@ The following timeouts are defined for this resource.
 - **Update** The update of the instance is considered failed when no response is received for 20 minutes.
 - **Delete** The deletion of the instance is considered failed when no response is received for 10 minutes.
 
-ICD create instance approximately takes around 30-45 minutes. Delete and update takes a minute. Provisioning time is unpredictable. If the apply fails due to a timeout, import the database resource once the create is completed.
+ICD create instance typically takes between 30-45 minutes. Delete and update takes a minute. Provisioning time is unpredictable. If the apply fails due to a timeout, import the database resource once the create is completed.
 {: note}
 
 
