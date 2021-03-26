@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-03-26"
 
 keywords: terraform provider plugin, terraform cloud databases, terraform databases, terraform postgres, terraform mysql, terraform compose
 
@@ -311,7 +311,7 @@ The following timeouts are defined for this resource.
 - **Update** The update of the instance is considered failed when no response is received for 20 minutes.
 - **Delete** The deletion of the instance is considered failed when no response is received for 10 minutes.
 
-ICD create instance typically takes between 10 - 20 minutes. Delete and update takes a minute. Provisioning time is unpredictable. If the apply fails due to a timeout, import the database resource once the create is completed.
+ICD create instance approximately takes around 30-45 minutes. Delete and update takes a minute. Provisioning time is unpredictable. If the apply fails due to a timeout, import the database resource once the create is completed.
 {: note}
 
 
