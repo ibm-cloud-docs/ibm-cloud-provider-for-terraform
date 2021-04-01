@@ -1199,6 +1199,7 @@ Review the input parameters that you can specify for your resource.
 |`tags`|Array of string|Optional|A list of tags that you want to add to your load balancer. Tags can help you find the load balancer more easily later. | No |
 |`type`|String|Optional|The type of the load balancer. Default value `public`. Supported values `public` and `private`.| Yes |
 |`logging`| Bool| Optional | Enable or disable datapath logging for the load balancer. This is applicable only for application load balancer. Supported values are `true` or `false`. Default value is `false`.|No|
+|`security_groups`|List|Optional|A list of security groups to use for this load balancer. This option is supported only for application load balancers.|No|
 
 ### Output parameters
 {: #lb-output}
@@ -1214,6 +1215,7 @@ Review the output parameters that you can access after your resource is created.
 |`public_ips`|String|The public IP addresses assigned to this load balancer.|
 |`private_ips`|String|The private IP addresses assigned to this load balancer.|
 |`status`|String|The status of the load balancer.|
+|`security_groups_supported`|Boolean|Indicates if this load balancer supports security groups.|
 
 ### Import
 {: #lb-import}
