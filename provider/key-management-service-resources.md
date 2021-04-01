@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04"
+lastupdated: "2021-04-01"
 
 keywords: terraform provider plugin, terraform key management service, terraform key management, terraform kms, kms, terraform key protect, terraform kp, terraform root key, hyper protect crypto service, HPCS
 
@@ -240,6 +240,7 @@ Review the input parameters that you can specify for your resource.
 |`instance_id`|String|Required|The HPCS or key-protect instance ID.| Yes |
 |`iv_value`|String|Optional| Used with import tokens. The initialization vector (IV) that is generated when you encrypt a nonce. The IV value is required to decrypt the encrypted nonce value that you provide when you make a key import request to the service. To generate an IV, encrypt the nonce by running `ibmcloud kp import-token encrypt-nonce`. Only for imported root key.|  Yes |
 |`key_name`|String|Required|The name of the key.| Yes |
+|`key_ring_id`|String|Optional|The ID of the key ring where you want to add your Key Protect key. The default value is `default`. |Yes|
 |`payload`|String|Optional| The base64 encoded key that you want to store and manage in the service. To import an existing key, provide a 256-bit key. To generate a new key, omit this parameter.| Yes |
 |`standard_key`|Bool|Optional|Set flag `true` for standard key, and `false` for root key. Default value is **false**.| Yes |
 |`policies`|List|Optional|Set policies for a key, for an automatic rotation policy or a dual authorization policy to protect against the accidental deletion of keys. Policies follow the following structure.| No |
@@ -261,6 +262,7 @@ Review the output parameters that you can access after your resource is created.
 |`crn`|String|The CRN of the key.|
 |`status`|String|The status of the key.|
 |`key_id`|String|The ID of the key.|
+|`key_ring_id`|String|The ID of the key ring that your Key Protect key belongs to.|
 |`type`|String|The type of the key KMS or HPCS.|
 |`policy`|String|The policies associated with the key.|
 |`policy.rotation`|String|The key rotation time interval in months, with a minimum of 1, and a maximum of 12.|
