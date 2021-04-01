@@ -874,6 +874,7 @@ Review the output parameters that you can access after you retrieve your data so
 | `hostname` | String | Fully qualified domain name assigned to this load balancer.|
 | `id` | String | The ID of the load balancer. |
 | `listeners` | String | The ID of the listeners attached to this load balancer. |
+| `logging`| Boolean| Enable (`true`) or disable (`false`) datapath logging for this load balancer. If unspecified, datapath logging is disabled. This option is supported only for application load balancers. |
 | `operating_status` | String | The operating status of this load balancer.|
 | `pools` | String | List all the Pools attached to this load balancer. |
 | `pools.algorithm` | String | The load balancing algorithm. |
@@ -903,6 +904,8 @@ Review the output parameters that you can access after you retrieve your data so
 | `public_ips` | String | The public IP addresses assigned to this load balancer.|
 | `private_ips` | String | The private IP addresses assigned to this load balancer.|
 | `resource_group` | String | The resource group where the load balancer is created. |
+| `security_groups`| List| A list of security groups that are used with this load balancer. This option is supported only for application load balancers.|
+| `security_groups_supported`|Boolean|Indicates if this load balancer supports security groups.|
 | `subnets` | String | The ID of the subnets to provision this load balancer. |
 | `status` | String | The status of load balancer.|
 | `tags` | String | The tags associated with the load balancer. |
