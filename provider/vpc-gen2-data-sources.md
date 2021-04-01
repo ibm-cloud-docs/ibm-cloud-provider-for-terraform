@@ -102,7 +102,361 @@ Before you start working with your data source, make sure to review the [require
 You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}.
 {: note}
 
-## ibm_is_floating_ip
+
+## `ibm_is_dedicated_host`
+{: #dedicated-host-ds}
+
+Retrieve the dedicated host data sources. For more information, about dedicated host in your {{site.data.keyword.cloud_notm}} VPC, see [Dedicated hosts](/docs/vpc?topic=vpc-creating-dedicated-hosts-instances).
+{: shortdesc}
+
+### Sample Terraform code
+{: #dedicated-host-dssample}
+
+The following example retrieves information about the dedicated host data sources.
+{: shortdesc}
+
+```
+data "ibm_is_dedicated_host" "is_dedicated_host" {
+	host_group = "1e09281b-f177-46fb-baf1-bc152b2e391a"
+	name = "my-dedicated-host"
+}
+```
+{: codeblock}
+
+### Input parameters
+{: #dedicated-host-dsinput}
+
+Review the input parameters that you can specify for your data source. 
+{: shortdesc}
+
+|Name|Data type| Required / optional|Description|
+|----|-----------|--------|----------------------|
+|`host_group`|String|Required| The unique identifier of the dedicated host group.|
+|`name`|String|Required| The unique name of this dedicated host.|
+|`resource_group`|String|Optional| The unique identifier of the resource group.|
+{: caption="Table. Available input parameters" caption-side="top"}
+
+### Output parameters
+{: #dedicated-host-dsoutput}
+
+Review the output parameters that you can access after you retrieved your data source. 
+{: shortdesc}
+
+|Name|Data type|Description|
+|----|-----------|-------------|
+|`id`| String | The unique identifier of the dedicated host.|
+|`available_memory`| String | The amount of memory in `GB` that is currently available for instances.|
+|`available_vcpu`| String | The available `VCPU` for the dedicated host. Nested `available_vcpu` blocks have the following structure.|
+|`available_vcpu.architecture`| String | The `VCPU` architecture.|
+|`available_vcpu.count`| String | The number of `VCPUs` assigned.|
+|`created_at`| String | The date and time that the dedicated host was created.|
+|`crn`| String | The CRN for this dedicated host.|
+|`host_group`| String | The unique identifier of the dedicated host group this dedicated host is in.|
+|`href`| String | The URL for this dedicated host.|
+|`instance_placement_enabled`| String | If set to `true`, instances can be placed on this dedicated host.|
+|`instances`| String | Array of instances that are allocated to this dedicated host. Nested instances blocks have the following structure.|
+|`instances.crn`| String | The CRN for this virtual server instance.|
+|`instances.deleted`| String | If present, this property indicates the referenced resource has been deleted and provides supplementary information. Nested deleted blocks have the following structure.|
+|`instances.more_info`| String | Link to documentation about deleted resources.
+|`instances.href`| String | The URL for this virtual server instance.|
+|`instances.id`| String | The unique identifier for this virtual server instance.
+|`instances.name`| String | The user defined name for this virtual server instance (and default system hostname).|
+|`lifecycle_state`| String | The lifecycle state of the dedicated host resource.|
+|`memory`| String | The total amount of memory in `GB`` for this host.|
+|`name`| String | The unique user defined name for this dedicated host. If unspecified, the name will be a hyphenated list of randomly-selected words.|
+|`profile`| String | The profile this dedicated host uses. Nested profile blocks have the following structure.|
+|`profile.href`| String | The URL for this dedicated host.|
+|`profile.name`| String | The globally unique name for this dedicated host profile.|
+|`provisionable`| String | Indicates whether this dedicated host is available for instance creation.|
+|`resource_group`| String | The unique identifier of the resource group.|
+|`resource_type`| String | The type of resource referenced.|
+|`socket_count`| String | The total number of sockets for this host.|
+|`state`| String | The administrative state of the dedicated host.|
+|`supported_instance_profiles`| String | Array of instance profiles that can be used by instances placed on this dedicated host. Nested **supported_instance_profiles** blocks have the following structure.|
+|`supported_instance_profiles.href`| String | The URL for this virtual server instance profile.|
+|`supported_instance_profiles.name`| String | The globally unique name for this virtual server instance profile.|
+|`vcpu`| String | The total `VCPU` of the dedicated host. Nested vcpu blocks have the following structure.|
+|`vcpu.architecture`| String | The `VCPU` architecture.|
+|`vcpu.count`| String | The number of `VCPUs` assigned.|
+|`zone`| String | The globally unique name of the zone this dedicated host resides in.|
+{: caption="Table 1. Available output parameters" caption-side="top"}
+
+## `ibm_is_dedicated_hosts`
+{: #dedicated-hosts-ds}
+
+Retrieve the dedicated host collection. For more information, about dedicated host in your {{site.data.keyword.cloud_notm}} VPC, see [Dedicated hosts](/docs/vpc?topic=vpc-creating-dedicated-hosts-instances).
+{: shortdesc}
+
+### Sample Terraform code
+{: #dedicated-hosts-dssample}
+
+The following example retrieves information about the dedicated host data sources.
+{: shortdesc}
+
+```
+data "ibm_is_dedicated_hosts" "is_dedicated_hosts" {
+	host_group = "1e09281b-f177-46fb-baf1-bc152b2e391a"
+}
+```
+{: codeblock}
+
+### Input parameters
+{: #dedicated-hosts-dsinput}
+
+Review the input parameters that you can specify for your data source. 
+{: shortdesc}
+
+|Name|Data type| Required / optional|Description|
+|----|-----------|--------|----------------------|
+|`host_group`|String|Optional| The unique identifier of the dedicated host group.|
+{: caption="Table. Available input parameters" caption-side="top"}
+
+### Output parameters
+{: #dedicated-hosts-dsoutput}
+
+Review the output parameters that you can access after you retrieved your data source. 
+{: shortdesc}
+
+|Name|Data type|Description|
+|----|-----------|-------------|
+|`id`| String | The unique identifier of the dedicated host collection.|
+|`dedicated_hosts`| String | Collection of dedicated hosts. Nested dedicated_hosts blocks have the following structure.|
+|`dedicated_hosts.available_memory`| String | The amount of memory in gibibytes that is currently available for instances.|
+|`dedicated_hosts.available_vcpu`| String | The available `VCPU` for the dedicated host. Nested available_vcpu blocks have the following structure.|
+|`dedicated_hosts.available_vcpu.architecture`| String | The `VCPU` architecture.|
+|`dedicated_hosts.available_vcpu.count`| String | The number of `VCPUs` assigned.|
+|`dedicated_hosts.created_at`| String | The date and time that the dedicated host was created.|
+|`dedicated_hosts.crn`| String | The CRN for this dedicated host.|
+|`dedicated_hosts.host_group`| String | The unique identifier of the dedicated host group this dedicated host is in.|
+|`dedicated_hosts.href`| String | The URL for this dedicated host.|
+|`dedicated_hosts.id`| String | The unique identifier for this dedicated host.|
+|`dedicated_hosts.instance_placement_enabled`| String | If set to `true`, instances can be placed on this dedicated host.|
+|`dedicated_hosts.instances`| String | Array of instances that are allocated to this dedicated host. Nested instances blocks have the following structure.|
+|`dedicated_hosts.instances.crn`| String | The CRN for this virtual server instance.|
+|`dedicated_hosts.instances.deleted`| String | If present, this property indicates the referenced resource has been deleted and providessome supplementary information. Nested deleted blocks have the following structure.|
+|`dedicated_hosts.instances.deleted.more_info`| String | Link to documentation about deleted resources.|
+|`dedicated_hosts.instances.href`| String | The URL for this virtual server instance.|
+|`dedicated_hosts.instances.id`| String | The unique identifier for this virtual server instance.|
+|`dedicated_hosts.instances.name`| String | The user-defined name for this virtual server instance (and default system hostname).|
+|`dedicated_hosts.lifecycle_state`| String | The lifecycle state of the dedicated host resource.|
+|`dedicated_hosts.memory`| String | The total amount of memory in gibibytes for this host.|
+|`dedicated_hosts.name`| String | The unique user defined name for this dedicated host. If unspecified, the name will be a hyphenated list of randomly-selected words.|
+|`dedicated_hosts.profile`| String | The profile this dedicated host uses. Nested profile blocks have the following structure.|
+|`dedicated_hosts.profile.href`| String | The URL for this dedicated host.|
+|`dedicated_hosts.profile.name`| String | The globally unique name for this dedicated host profile.|
+|`dedicated_hosts.provisionable`| String | Indicates whether this dedicated host is available for instance creation.|
+|`dedicated_hosts.resource_group`| String | The resource group for this dedicated host. Nested resource group blocks have the following structure.|
+|`dedicated_hosts.resource_group.href`| String | The URL for this resource group.|
+|`dedicated_hosts.resource_group.id`| String | The unique identifier for this resource group.|
+|`dedicated_hosts.resource_group.name`| String | The user defined name for this resource group.|
+|`dedicated_hosts.resource_type`| String | The type of resource referenced.|
+|`dedicated_hosts.socket_count`| String | The total number of sockets for this host.|
+|`dedicated_hosts.state`| String | The administrative state of the dedicated host. The enumerated values for this property are expected to expand in the future. When processing this property, check for and log unknown values. Optionally, halt processing and surface the error, or bypass the dedicated host on which the unexpected property value was encountered.|
+|`dedicated_hosts.supported_instance_profiles`| String | Array of instance profiles that can be used by instances placed on this dedicated host. Nested supported_instance_profiles blocks have the following structure.|
+|`dedicated_hosts.supported_instance_profiles.href`| String | The URL for this virtual server instance profile.|
+|`dedicated_hosts.supported_instance_profiles.name`| String | The globally unique name for this virtual server instance profile.
+|`dedicated_hosts.vcpu`| String | The total VCPU of the dedicated host. Nested vcpu blocks have the following structure.|
+|`dedicated_hosts.vcpu.architecture`| String | The VCPU architecture.|
+|`dedicated_hosts.vcpu.count`| String | The number of VCPUs assigned.|
+|`dedicated_hosts.zone`| String | The globally unique name of the zone this dedicated host resides in.|
+|`total_count`| String | The total number of resources across all pages.|
+{: caption="Table 1. Available output parameters" caption-side="top"}
+
+## `ibm_is_dedicated_host_group`
+{: #dedicated-host-grp-ds}
+
+Retrieve the dedicated host group data sources. For more information, about dedicated host group in your {{site.data.keyword.cloud_notm}} VPC, see [Dedicated hosts groups](/docs/vpc?topic=vpc-creating-dedicated-hosts-instances).
+{: shortdesc}
+
+### Sample Terraform code
+{: #dedicated-host-grp-dssample}
+
+The following example retrieves information about the dedicated host data sources.
+{: shortdesc}
+
+```
+data "ibm_is_dedicated_host_group" "is_dedicated_host_group" {
+	name = "my-host-group"
+}
+```
+{: codeblock}
+
+### Input parameters
+{: #dedicated-host-grp-dsinput}
+
+Review the input parameters that you can specify for your data source. 
+{: shortdesc}
+
+|Name|Data type| Required / optional|Description|
+|----|-----------|--------|----------------------|
+|`name`|String|Required| The unique user defined name of this dedicated host group.|
+{: caption="Table. Available input parameters" caption-side="top"}
+
+### Output parameters
+{: #dedicated-host-grp-dsoutput}
+
+Review the output parameters that you can access after you retrieved your data source. 
+{: shortdesc}
+
+|Name|Data type|Description|
+|----|-----------|-------------|
+|`id`| String | The unique identifier of the dedicated host group.|
+|`class`| String | The dedicated host profile class for hosts in this group.|
+|`created_at`| String | The date and time that the dedicated host group was created.|
+|`crn`| String | The CRN for this dedicated host group.|
+|`dedicated_hosts`| String | The dedicated hosts that are in this dedicated host group. Nested dedicated_hosts blocks have the following structure.|
+|`dedicated_hosts.crn`| String | The CRN for this dedicated host.|
+|`dedicated_hosts.deleted`| String | If present, this property indicates the referenced resource has been deleted and provides supplementary information. Nested deleted blocks have the following structure.|
+|`dedicated_hosts.deleted.more_info`| String | Link to documentation about deleted resources.|
+|`dedicated_hosts.href`| String | The URL for this dedicated host.|
+|`dedicated_hosts.id`| String | The unique identifier for this dedicated host.|
+|`dedicated_hosts.name`| String | The unique user-defined name for this dedicated host. If unspecified, the name will be a hyphenated list of randomly-selected words.|
+|`dedicated_hosts.resource_type`| String | The type of resource referenced.|
+|`family`| String | The dedicated host profile family for hosts in this group.|
+|`href`| String | The URL for this dedicated host group.|
+|`resource_group`| String | The unique identifier of the resource group for this dedicated host.|
+|`resource_type`| String | The type of resource referenced.|
+|`supported_instance_profiles`| String | Array of instance profiles that can be used by instances placed on this dedicated host group. |Nested **supported_instance_profiles** blocks have the following structure.|
+|`supported_instance_profiles.href`| String | The URL for this virtual server instance profile.|
+|`supported_instance_profiles.name`| String | The unique name for this virtual server instance profile.|
+|`zone`| String | The zone this dedicated host group resides in.|
+{: caption="Table 1. Available output parameters" caption-side="top"}
+
+## `ibm_is_dedicated_host_groups`
+{: #dedicated-host-grps-ds}
+
+Retrieve the dedicated host groups collection. For more information, about dedicated host groups in your {{site.data.keyword.cloud_notm}} VPC, see [Dedicated hosts groups](/docs/vpc?topic=vpc-creating-dedicated-hosts-instances).
+{: shortdesc}
+
+### Sample Terraform code
+{: #dedicated-host-grps-dssample}
+
+The following example retrieves information about the dedicated host data sources.
+{: shortdesc}
+
+```
+data "ibm_is_dedicated_host_groups" "is_dedicated_host_groups" {
+}
+}
+```
+{: codeblock}
+
+### Input parameters
+{: #dedicated-host-grps-dsinput}
+
+The input parameter is not supported for this data source.
+{: shortdesc}
+
+### Output parameters
+{: #dedicated-host-grps-dsoutput}
+
+Review the output parameters that you can access after you retrieved your data source. 
+{: shortdesc}
+
+|Name|Data type|Description|
+|----|-----------|-------------|
+|`id`| String | The unique identifier of the dedicated host group collection.|
+|`host_groups`| String | Collection of dedicated host groups. Nested groups blocks have the following structure.|
+|`host_groups.class`| String | The dedicated host profile class for hosts in this group.|
+|`host_groups.created_at`| String | The date and time that the dedicated host group was created.|
+|`host_groups.crn`| String | The CRN for this dedicated host group.|
+|`host_groups.dedicated_hosts`| String | The dedicated hosts that are in this dedicated host group. Nested dedicated_hosts blocks have the following structure.|
+|`host_groups.dedicated_hosts.crn`| String | The CRN for this dedicated host.|
+|`host_groups.dedicated_hosts.deleted`| String | If present, this property indicates the referenced resource has been deleted and provides supplementary information. Nested deleted blocks have the following structure.|
+|`host_groups.dedicated_hosts.deleted.more_info`| String | Link to documentation about deleted resources.|
+|`host_groups.dedicated_hosts.href`| String | The URL for this dedicated host.|
+|`host_groups.dedicated_hosts.id`| String | The unique identifier for this dedicated host.|
+|`host_groups.dedicated_hosts.name`| String | The unique user defined name for this dedicated host. If unspecified, the name will be a hyphenated list of randomly-selected words.|
+|`host_groups.dedicated_hosts.resource_type`| String | The type of resource referenced.|
+|`family`| String | The dedicated host profile family for hosts in this group.|
+|`href`| String | The URL for this dedicated host group.|
+|`id` | String | The unique identifier for this dedicated host group.
+|`name`| String | The unique user defined name for this dedicated host group. If unspecified, the name will be a hyphenated list of randomly-selected words.
+|`resource_group`| String | The unique identifier of the resource group for this dedicated host.|
+|`resource_type`| String | The type of resource referenced.|
+|`supported_instance_profiles`| String | Array of instance profiles that can be used by instances placed on this dedicated host group. |Nested **supported_instance_profiles** blocks have the following structure.|
+|`supported_instance_profiles.href`| String | The URL for this virtual server instance profile.|
+|`supported_instance_profiles.name`| String | The unique name for this virtual server instance profile.|
+|`zone`| String | The zone this dedicated host group resides in.|
+|`total_count`| String | The total number of resources across all pages.|
+{: caption="Table 1. Available output parameters" caption-side="top"}
+
+
+## `ibm_is_dedicated_host_profile`
+{: #dedicated-host-profile-ds}
+
+Retrieve the dedicated host profile. For more information, about dedicated host groups in your {{site.data.keyword.cloud_notm}} VPC, see [Dedicated host profiles](/docs/vpc?topic=vpc-dh-profiles).
+{: shortdesc}
+
+### Sample Terraform code
+{: #dedicated-host-profile-dssample}
+
+The following example retrieves information about the dedicated host data sources.
+{: shortdesc}
+
+```
+data "ibm_is_dedicated_host_profile" "is_dedicated_host_profile" {
+	name = "dh2-56x464"
+}
+```
+{: codeblock}
+
+### Input parameters
+{: #dedicated-host-profile-dsinput}
+
+Review the input parameters that you can specify for your data source. 
+{: shortdesc}
+
+|Name|Data type| Required / optional|Description|
+|----|-----------|--------|----------------------|
+|`name`|String|Required| The globally unique user defined name for this VSI profile.|
+{: caption="Table. Available input parameters" caption-side="top"}
+
+### Output parameters
+{: #dedicated-host-profile-dsoutput}
+
+Review the output parameters that you can access after you retrieved your data source. 
+{: shortdesc}
+
+|Name|Data type|Description|
+|----|-----------|-------------|
+|`id`| String | The unique identifier of the DedicatedHostProfile.|
+|`class`| String | The product class this dedicated host profile belongs to.|
+|`family`| String | The product family this dedicated host profile belongs to.|
+|`href`| String | The URL for this dedicated host.|
+|`memory`| String | Nested memory blocks have the following structure.|
+|`memory.type`| String | The type for this profile field.|
+|`memory.value`| String | The value for this profile field.|
+|`memory.default`| String | The default value for this profile field.|
+|`memory.max`| String | The maximum value for this profile field.|
+|`memory.min`| String | The minimum value for this profile field.|
+|`memory.step`| String | The increment step value for this profile field.|
+|`memory.values`| String | The permitted values for this profile field.|
+|`socket_count` | String | Nested socket_count blocks have the following structure.|
+|`socket_count.type`| String | The type for this profile field.|
+|`socket_count.value`| String | The value for this profile field.|
+|`socket_count.default`| String | The default value for this profile field.|
+|`socket_count.max`| String | The maximum value for this profile field.|
+|`socket_count.min`| String | The minimum value for this profile field.|
+|`socket_count.step`| String | The increment step value for this profile field.|
+|`socket_count.values`| String | The permitted values for this profile field.|
+|`supported_instance_profiles`| String | Array of instance profiles that can be used by instances placed on dedicated hosts with this profile Nested `supported_instance_profiles` blocks have the following structure.|
+|`supported_instance_profiles.href`| String | The URL for this virtual server instance profile.|
+|`supported_instance_profiles.name`| String | The globally unique name for this virtual server instance profile.|
+|`vcpu_architecture`| String | Nested v`cpu_architecture` blocks have the following structure.|
+|`vcpu_architecture.type`| String | The type for this profile field.
+|`vcpu_architecture.value`| String | The `VCPU` architecture for a dedicated host with this profile.|
+|`vcpu_count` |String | Nested `vcpu_count` blocks have the following structure.|
+|`vcpu_count.type`| String | The type for this profile field.|
+|`vcpu_count.value`| String | The value for this profile field.|
+|`vcpu_count.default`| String | The default value for this profile field.|
+|`vcpu_count.max`| String | The maximum value for this profile field.|
+|`vcpu_count.min`| String | The minimum value for this profile field.|
+|`vcpu_count.step`| String | The increment step value for this profile field.|
+|`vcpu_count.values`| String | The permitted values for this profile field.|
+{: caption="Table 1. Available output parameters" caption-side="top"}
+
+## `ibm_is_floating_ip`
 {: #floating-ip-g2-ds}
 
 Retrieve the information about VPC floating IP. 
@@ -1318,6 +1672,108 @@ Review the output parameters that you can access after you retrieved your data s
 |`subnets.resource_group`|String|The resource group that the subnet belongs to.|
 |`subnets.vpc`|String|The ID of the VPC that this subnet belongs to.|
 |`subnets.zone`|String|The zone where the subnet was created.|
+
+
+## `ibm_is_subnet_reserved_ip`
+{: #vpc-subnet-reserved-ipds}
+
+Retrieve information about a reserved IP in a subnet. For more information, about associated reserved IP subnet, see [reserved IP subnet](/docs/vpc?topic=vpc-troubleshoot-reserved-ip).
+{: shortdesc}
+
+### Sample Terraform code
+{: #pc-subnet-reserved-ip-dssample}
+
+```
+data "ibm_is_subnet_reserved_ip" "data_reserved_ip" {
+  subnet = ibm_is_subnet.test_subnet.id
+  reserved_ip = ibm_is_subnet_reserved_ip.resource_res_ip.reserved_ip
+}
+
+```
+{: codeblock}
+
+### Input parameters
+{: #pc-subnet-reserved-ip-dsinput}
+
+Review the input parameters that you can specify for your data source. 
+{: shortdesc}
+
+|Name|Data type| Required / optional|Description|
+|----|-----------|--------|----------------------|
+|`subnet`| String | Required | The ID for the subnet.|
+|`reserved_ip`| String | Required | The ID for the reserved IP.|
+{: caption="Table. Available input parameters" caption-side="top"}
+
+### Output parameters
+{: #pc-subnet-reserved-ip-dsoutput}
+
+Review the output parameters that you can access after you retrieved your data source. 
+{: shortdesc}
+
+|Name|Data type|Description|
+|----|-----------|-------------|
+|`auto_delete`| String | The auto_delete boolean for reserved IP.|
+|`created_at`| String | The creation timestamp for the reserved IP.|
+|`href`| String | The unique reference for the reserved IP.|
+|`id`| String | The ID for the reserved IP.|
+|`name`| String | The name for the reserved IP.|
+|`owner`| String | The owner of the reserved IP.|
+|`reserved_ip`| String | The ID for the reserved IP.|
+|`resource_type`| String | The resource type.|
+|`subnet`| String | The ID for the subnet for the reserved IP.|
+{: caption="Table 1. Available output parameters" caption-side="top"}
+
+## `ibm_is_subnet_reserved_ips`
+{: #vpc-subnet-reserved-ipsds}
+
+Retrieve information about a reserved IP in a subnet. For more information, about associated reserved IP subnet, see [reserved IP subnet](/docs/vpc?topic=vpc-troubleshoot-reserved-ip).
+{: shortdesc}
+
+### Sample Terraform code
+{: #pc-subnet-reserved-ips-dssample}
+
+```
+data "ibm_is_subnet_reserved_ips" "data_reserved_ips" {
+  subnet = ibm_is_subnet.test_subnet.id
+}
+
+```
+{: codeblock}
+
+### Input parameters
+{: #pc-subnet-reserved-ips-dsinput}
+
+Review the input parameters that you can specify for your data source. 
+{: shortdesc}
+
+|Name|Data type| Required / optional|Description|
+|----|-----------|--------|----------------------|
+|`subnet`| String | Required | The ID for the subnet.|
+{: caption="Table. Available input parameters" caption-side="top"}
+
+### Output parameters
+{: #pc-subnet-reserved-ips-dsoutput}
+
+Review the output parameters that you can access after you retrieved your data source. 
+{: shortdesc}
+
+|Name|Data type|Description|
+|----|-----------|-------------|
+|`id`| String | The ID for the all the reserved ID in current timestamp format.|
+|`limit`| String | The number of reserved IPs to list.|
+|`reserved_ips`| String | The collection of all the reserved IPs in the subnet.|
+|`reserved_ips.address`| String | The IP bound for the reserved IP.|
+|`reserved_ips.auto_delete`| String | If reserved IP shall be deleted automatically.|
+|`reserved_ips.created_at`| String | The date and time that the reserved IP was created.|
+|`reserved_ips.href`| String | The URL for this reserved IP.|
+|`reserved_ips.reserved_ip`| String | The unique identifier for this reserved IP.|
+|`reserved_ips.name`| String | The user defined or system provided name for this reserved IP.|
+|`reserved_ips.owner`| String | The owner of a reserved IP, defining whether it is managed by the user or the provider.|
+|`reserved_ips.resource_type`| String | The resource type.|
+|`sort`| String | The keyword on which all the reserved IPs are sorted.|
+|`subnet`| String | The ID for the subnet for the reserved IP.|
+|`total_count`| String | The number of reserved IP in the subnet.|
+{: caption="Table 1. Available output parameters" caption-side="top"}
 
 ## `ibm_is_instance_templates`
 {: #vpc-instance-templates}

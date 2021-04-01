@@ -99,6 +99,165 @@ subcollection: ibm-cloud-provider-for-terraform
 Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
+
+## `ibm_is_dedicated_host`
+{: #is-dedicatedhost}
+
+Create, update, delete and suspend the dedicated host resource. For more information, about dedicated host in your {{site.data.keyword.cloud_notm}} VPC, see [Dedicated hosts](/docs/vpc?topic=vpc-creating-dedicated-hosts-instances).
+{: shortdesc}
+
+### Sample Terraform code
+{: #is_dedicatedhost-sample}
+
+```
+resource "ibm_is_dedicated_host_group" "dh_group01" {
+  family = "memory"
+  class = "beta"
+  zone = "us-south-1"
+}
+data "ibm_is_dedicated_host_group" "dgroup" {
+  name = ibm_is_dedicated_host_group.dh_group01.name
+}
+resource "ibm_is_dedicated_host" "is_dedicated_host" {
+  profile = "dh2-56x464"
+  host_group = "1e09281b-f177-46fb-baf1-bc152b2e391a"
+  name = "testdh02"
+}
+```
+{: codeblock}
+
+### Input parameters
+{: #is-dedicatedhost-input}
+
+Review the input parameters that you can specify for your resource. 
+{: shortdesc}
+
+
+| Input parameter | Data type | Required / optional | Description | 
+| ------------- |-------------| ----- | -------------- | 
+|`instance_placement_enabled`| Bool | Optional | If set to `true` instances can be placed on the dedicated host.|
+|`name` | String | Optional | The unique user-defined name for the dedicated host. If unspecified, the name will be a hyphenated list of randomly selected words.|
+|`profile`| String| Required | The globally unique name of the dedicated host profile to use for the dedicated host.|
+|`resource_group`| String | Optional | The unique ID of the resource group to use. If unspecified, the account's [default resource group](https://cloud.ibm.com/apidocs/resource-manager#introduction) is used.|
+|`host_group`| String | Required | The unique ID of the dedicated host group for this dedicated host.|
+{: caption="Table 1. Available input parameters" caption-side="top"}
+
+### Output parameters
+{: #is-dedicatedhost-output}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+| Output parameter | Data type | Description |
+| ------------- |-------------| -------------- |
+|`id`| String | The unique ID of the dedicated host.|
+|`available_memory`| String | The amount of memory in `GB` that is currently available for instances.|
+|`available_vcpu`| String | The available `VCPU` for the dedicated host.|
+|`created_at`| String| The date and time that the dedicated host was created.|
+|`crn`| String | The CRN for this dedicated host.|
+|`host_group`| String | The unique ID of the dedicated host group this dedicated host is in.|
+|`href`| String |  The URL for this dedicated host.|
+|`instance_placement_enabled`| String | If set to `true`, instances can be placed on this dedicated host.|
+|`instances`| String |  Array of instances that are allocated to this dedicated host. |
+|`instances.crn`| String | The CRN for the VSI.|
+|`instances.crn.deleted`| String | If present, this property indicates the referenced resource has been deleted and provides supplementary information. Nested deleted blocks have the following structure.|
+|`instances.crn.deleted.more_info`| String | Link to documentation about deleted resources.|
+|`instances.crn.href`| String | The URL for this VSI.|
+|`instances.crn.id`| String | The unique ID for this virtual server instance.|
+|`instances.crn.name`| String | The user defined name for the VSI and is the default system hostname.|
+|`lifecycle_state`| String | The lifecycle state of the dedicated host resource.|
+|`memory`| String | The total amount of memory in `GB` for this host.|
+|`name`| String | The unique user defined name for this dedicated host.|
+|`profile`| String |  The profile this dedicated host uses.|
+|`provisionable`| String | Indicates whether this dedicated host is available for instance creation.|
+|`resource_group`| String | The unique identifier of the resource group for this dedicated host.|
+|`resource_type`| String | The type of resource referenced.|
+|`socket_count`| String | The total number of sockets for this host.|
+|`state`| String |  The administrative state of the dedicated host. The enumerated values for this property are expected to expand in the future. When processing this property, check for and log unknown values. Optionally, halt processing and surface the error, or bypass the dedicated host on which the unexpected property value was encountered.|
+|`supported_instance_profiles`| String | Array of instance profiles that can be used by instances placed on this dedicated host.|
+|`vcpu`| String | The total `VCPU` of the dedicated host.|
+|`zone`| String | The zone this dedicated host resides in.|
+{: caption="Table 1. Available output parameters" caption-side="top"}
+
+### Import
+{: #is-dedicatedhost-import}
+
+`ibm_is_dedicated_host` can be imported by using dedicated host ID.
+
+**Example**
+
+```
+terraform import ibm_is_dedicated_host.example 0716-1c372bb2-decc-4555-b1a6-1010101
+```
+
+## `ibm_is_dedicated_host_group`
+{: #is-dedicatedhost-group}
+
+Create, update, delete and suspend the dedicated host resource. For more information, about dedicated host groups in your {{site.data.keyword.cloud_notm}} VPC, see [Dedicated hosts](/docs/vpc?topic=vpc-creating-dedicated-hosts-instances).
+{: shortdesc}
+
+### Sample Terraform code
+{: #is-dedicatedhost-group-sample}
+
+```
+resource "ibm_is_dedicated_host_group" "is_dedicated_host_group" {
+  class = "mx2"
+  family = "balanced"
+  zone = "us-south-1"
+  name = "dh-group-name"
+}
+```
+{: codeblock}
+
+### Input parameters
+{: #is_dedicatedhost-group_input}
+
+Review the input parameters that you can specify for your resource. 
+{: shortdesc}
+
+
+| Input parameter | Data type | Required / optional | Description | 
+| ------------- |-------------| ----- | -------------- | 
+|`class` | String | Required | The dedicated host profile class for hosts in this group.|
+|`family` | String | Required | The dedicated host profile family for hosts in this group.|
+|`name` | String | Optional | The unique user defined name for this dedicated host group. If unspecified, the name will be a hyphenated list of randomly selected words.|
+|`resource_group` | String | Optional | The unique ID of the resource group to use. If unspecified, the account's default resource group is used.|
+|`zone` | String | Required | The globally unique name of the zone this dedicated host group will reside in.|
+{: caption="Table 1. Available input parameters" caption-side="top"}
+
+### Output parameters
+{: #is-dedicatedhost-group-output}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+| Output parameter | Data type | Description |
+| ------------- |-------------| -------------- |
+|`class`| String | The dedicated host profile class for hosts in this group.|
+|`family`| String | The dedicated host profile family for hosts in this group.|
+|`id`| String | The unique ID of the dedicated host group.|
+|`href`| String | The URL for this dedicated host group.|
+|`crn`| String | The CRN for this dedicated host group.|
+created_at`| String | The date and time that the dedicated host group was created.|
+|`dedicated_hosts`| String | The dedicated hosts that are in this dedicated host group.|
+|`name`| String | The unique user defined name for this dedicated host group.|
+|`resource_type`| String | The type of resource referenced.|
+|`resource_group`| String | The unique ID of the resource group for this dedicated host.|
+|`supported_instance_profiles`| String | Array of instance profiles that can be used by instances placed on this dedicated host group.
+zone`| String | The zone this dedicated host resides in.|
+{: caption="Table 1. Available output parameters" caption-side="top"}
+
+### Import
+{: #is-dedicatedhost-group-import}
+
+`ibm_is_dedicated_host_group` can be imported by using dedicated host group ID.
+
+**Example**
+
+```
+terraform import ibm_is_dedicated_host_group.example 0716-5fa4a9c4-a194-4915-854b-10101010
+```
+
 ## `ibm_is_flow_log`
 {: #ibm_is_flow_log}
 
@@ -169,6 +328,7 @@ Review the input parameters that you can specify for your resource.
 | `active` | String | Optional | Indicates whether the collector is active. If `false`, this collector is created in inactive mode. Default value is true. | No |
 | `resource_group` | String | Optional | The resource group ID where the flow log is created. | Yes |
 | `tags` | Array of Strings | Optional | The tags associated with the flow log. | No |
+{: caption="Table 1. Available input parameters" caption-side="top"}
 
 ### Output parameters
 {: #ibm-is-flow-output}
@@ -185,6 +345,7 @@ Review the output parameters that you can access after your resource is created.
 | `lifecycle_state` | String | The lifecycle state of the flow log collector. |
 | `name`| String | The user-defined name of the flow log collector. |
 | `vpc` | String | The VPC of the flow log collector that is associated. |
+{: caption="Table 1. Available output parameters" caption-side="top"}
 
 ### Import
 {: #ibm-is-flow-import}
@@ -244,6 +405,7 @@ Review the input parameters that you can specify for your resource.
 | `zone` | String | Optional | Enter the name of the zone where you want to create the floating IP address. To list available zones, run `ibmcloud is zones`. If you specify this option, do not specify `target` at the same time. | 
 | `resource_group`|String|Optional| The resource group ID where you want to create the floating IP.|
 | `tags`|Array of string|Optional|Enter any tags that you want to associate with your VPC. Tags might help you find your VPC more easily after it is created. Separate multiple tags with a comma (`,`). |
+{: caption="Table 1. Available input parameters" caption-side="top"}
 
 ### Output parameters
 {: #floating-ip-output}
@@ -256,6 +418,7 @@ Review the output parameters that you can access after your resource is created.
 | `address` | String | The floating IP address that was created. | 
 | `id` | String | The unique identifier of the floating IP address. | 
 | `status` | String | The provisioning status of the floating IP address. |
+{: caption="Table 1. Available output parameters" caption-side="top"}
 
 ### Timeouts
 {: #floating-ip-timeout}
@@ -2434,6 +2597,103 @@ terraform import ibm_is_subnet_network_acl_attachment.example d7bec597-4726-451f
 ```
 {: pre}
 
+
+## `ibm_is_subnet_reserved_ip`
+{: #subnet-reserved-ip}
+
+Create, update, or delete a subnet. For more information, about associated reserved IP subnet, see [reserved IP subnet](/docs/vpc?topic=vpc-troubleshoot-reserved-ip).
+{: shortdesc}
+{: shortdesc}
+
+### Sample Terraform code
+{: #subnet-reserved-ip-sample}
+
+```
+ // Create a VPC
+    resource "ibm_is_vpc" "vpc1" {
+        name = "my-vpc"
+    }
+
+    // Create a subnet
+    resource "ibm_is_subnet" "subnet1" {
+        name                     = "my-subnet"
+        vpc                      = ibm_is_vpc.vpc1.id
+        zone                     = "us-south-1"
+        total_ipv4_address_count = 256
+    }
+
+    // Create the resrved IP in the following ways
+
+    // Only with Subnet ID
+    resource "ibm_is_subnet_reserved_ip" "res_ip" {
+        subnet = ibm_is_subnet.subnet1.id
+    }
+
+    // Subnet ID with a given name
+    resource "ibm_is_subnet_reserved_ip" "res_ip_name" {
+        subnet = ibm_is_subnet.subnet1.id
+        name = "my-subnet"
+    }
+
+    // Subnet ID with auto_delete
+    resource "ibm_is_subnet_reserved_ip" "res_ip_auto_delete" {
+        subnet = ibm_is_subnet.subnet1.id
+        auto_delete = true
+    }
+
+    // Subnet ID with both name and auto_delete
+    resource "ibm_is_subnet_reserved_ip" "res_ip_auto_delete_name" {
+        subnet = ibm_is_subnet.subnet1.id
+        name = "my-subnet"
+        auto_delete = true
+    }
+```
+{: codeblock}
+
+### Input parameters
+{: #subnet-reserved-ip-input}
+
+Review the input parameters that you can specify for your resource. 
+{: shortdesc}
+
+|Name|Data type|Required / optional|Description|Forces new resource |
+|----|-----------|-----------|---------------------|-------|
+|`subnet`|String|Required| The subnet ID for the reserved IP.| Yes |
+|`name`|String|Optional| The name of the reserved IP. **NOTE** raise  error if name is given with a prefix `ibm-`.| No |
+|`auto_delete`|Bool|Optional| If reserved IP is auto deleted.| No |
+{: caption="Table. Available input parameters" caption-side="top"}
+
+### Output parameters
+{: #subnet-reserved-ip-output}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+|Name|Data type|Description|
+|----|-----------|--------|
+|`id`|String|The combination of the subnet ID and reserved IP ID seperated by **/**.|
+|`reserved_ip`|String|The reserved IP.|
+{: caption="Table 1. Available output parameters" caption-side="top"}
+
+### Import
+{: #subnet-reserved-ip-import}
+
+The `ibm_is_subnet` can be imported by using the ID. 
+The `ibm_is_subnet_reserved_ip` can be imported by using subnet ID and reserved IP ID seperated by **/**.
+
+**Syntax**
+
+```
+terraform import ibm_is_subnet.example <reserved_subnet_IP>
+```
+{: pre}
+
+**Example**
+
+```
+terraform import ibm_is_subnet_reserved_ip.example 0716-13315ad8-d355-4041-bb60-623423423/0716-617de4d8-5e2f-4d4a-b0d6-123123
+```
+{: pre}
 
 ## `ibm_is_virtual_endpoint_gateway`
 {: #virtual-endpoint-gwy}
