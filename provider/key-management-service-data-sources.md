@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-01"
 
 keywords: terraform provider plugin, terraform key management service, terraform key management, terraform kms, kms, terraform key protect, terraform kp, terraform root key, hyper protect crypto service, hpcs
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -106,16 +104,17 @@ Before you start working with your data source, make sure to review the [require
 ## `ibm_kms_key`
 {: #kms-key-ds}
 
-Retrieves the list of keys from the Hyper Protect Crypto Services (HPCS) and Key Protect services for the given key name. The region parameter in the `provider.tf` file must be set. If region parameter is not specified, `us-south` is used by default. If the region in the `provider.tf` file is different from the Key Protect instance, the instance cannot be retrieved by Terraform and the Terraform action fails. 
+Retrieves the list of keys from the Hyper Protect Crypto Services (HPCS) and Key Protect services by using the key name or alias. The region parameter in the `provider.tf` file must be set. If region parameter is not specified, `us-south` is used by default. If the region in the `provider.tf` file is different from the Key Protect instance, the instance cannot be retrieved by Terraform and the Terraform action fails. 
 {: shortdesc}
 
 ### Sample Terraform code
 {: #kms-key-ds-sample}
 
+**Example to retrieve the key by using the name of the key**: 
 ```
 data "ibm_kms_key" "test" {
-  instance_id = "guid-of-keyprotect-or hs-crypto-instance"
-  key_name = "name-of-key"
+  instance_id = "<guid-of-keyprotect-or hs-crypto-instance>"
+  key_name = "<key_name>"
 }
 resource "ibm_cos_bucket" "flex-us-south" {
   bucket_name          = "atest-bucket"
@@ -123,6 +122,15 @@ resource "ibm_cos_bucket" "flex-us-south" {
   region_location      = "us-south"
   storage_class        = "flex"
   key_protect          = data.ibm_kms_key.test.key.0.crn
+}
+```
+{: codeblock}
+
+**Example to retrieve the key by using the key alias**: 
+```
+data "ibm_kms_key" "test" {
+  instance_id = "<guid-of-keyprotect-or hs-crypto-instance>"
+  alias = "<alias_name>"
 }
 ```
 {: codeblock}
@@ -136,7 +144,8 @@ Review the input parameters that you can specify for your resource.
 |Name|Data type|Required / optional|Description|
 |----|-----------|-----------|---------------------|
 |`instance_id`|String|Required|The key-protect instance ID.|
-|`key_name`|String|Required|The name of the key. Only matching name of the keys are retrieved |
+|`key_name`|String|Optional|The name of the key. If you want to retrieve the key using the key alias, use the `alias` option.  You must provide either the `key_name` or `alias`. |
+|`alias`|String|Optional|The alias of the key. If you want to retrieve the key using the key name, use the `key_name` option.You must provide either the `key_name` or `alias`.|
 |`endpoint_type`|String|Optional|The type of the public or private endpoint to be used for fetching keys. |
 
 ### Output parameters
@@ -148,6 +157,7 @@ Review the output parameters that are exported.
 |Name|Data type|Description|
 |----|-----------|--------|
 |`keys`|String|Lists the Keys of HPCS or Key-protect instance. |
+|`keys.aliases`|String|A list of alias names that are assigned to the key.|
 |`keys.name`|String|The name for the key. |
 |`keys.id`|String|The unique ID for the key. |
 |`keys.crn`|String|The CRN of the key. |
@@ -203,6 +213,7 @@ Review the input parameters that you can specify for your resource.
 |----|-----------|-----------|---------------------|
 |`instance_id`|String|Required|The key-protect instance ID.|
 |`key_name`|String|Optional|The name of the key. Only matching name of the keys are retrieved |
+|`alias`|String|Optional|The alias of the key.|
 |`endpoint_type`|String|Optional|The type of the public or private endpoint to be used for fetching keys. |
 
 ### Output parameters
@@ -214,6 +225,7 @@ Review the output parameters that are exported.
 |Name|Data type|Description|
 |----|-----------|--------|
 |`keys`|String|Lists the Keys of HPCS or Key-protect instance. |
+|`keys.aliases`|String|A list of alias names that are assigned to the key.|
 |`keys.name`|String|The name for the key. |
 |`keys.id`|String|The unique ID for the key. |
 |`keys.crn`|String|The CRN of the key. |
