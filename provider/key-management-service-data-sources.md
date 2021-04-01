@@ -157,9 +157,10 @@ Review the output parameters that are exported.
 |Name|Data type|Description|
 |----|-----------|--------|
 |`keys`|String|Lists the Keys of HPCS or Key-protect instance. |
-|`keys.aliases`|String|A list of alias names that are assigned to the key.|
 |`keys.name`|String|The name for the key. |
+|`keys.aliases`|String|A list of alias names that are assigned to the key.|
 |`keys.id`|String|The unique ID for the key. |
+|`keys.key_ring_id`|String|The ID of the key ring that the key belongs to.|
 |`keys.crn`|String|The CRN of the key. |
 |`keys.standard_key`|String|Set the flag `true` for standard key, and `false` for root key. Default value is **false**.|
 |`keys.policy`|String|The policies associated with the key.|
@@ -225,9 +226,10 @@ Review the output parameters that are exported.
 |Name|Data type|Description|
 |----|-----------|--------|
 |`keys`|String|Lists the Keys of HPCS or Key-protect instance. |
-|`keys.aliases`|String|A list of alias names that are assigned to the key.|
 |`keys.name`|String|The name for the key. |
+|`keys.aliases`|String|A list of alias names that are assigned to the key.|
 |`keys.id`|String|The unique ID for the key. |
+|`keys.key_ring_id`|String|The ID of the key ring that the key belongs to.|
 |`keys.crn`|String|The CRN of the key. |
 |`keys.standard_key`|String|Set the flag `true` for standard key, and `false` for root key. Default value is **false**.|
 |`keys.policy`|String|The policies associated with the key.|
