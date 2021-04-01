@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-25" 
+lastupdated: "2021-04-01" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -2723,6 +2723,9 @@ Review the input parameters that you can specify for your resource.
 | `name` | String | Required | Enter a name for your VPC. |  No |
 | `resource_group` | String | Optional | Enter the ID of the resource group where you want to create the VPC. To list available resource groups, run `ibmcloud resource groups`. If you do not specify a resource group, the VPC is created in the `default` resource group. |  Yes |
 | `tags` | Array of Strings | Optional | Enter any tags that you want to associate with your VPC. Tags might help you find your VPC more easily after it is created. Separate multiple tags with a comma (`,`). |  No |
+|`default_network_acl_name`|String|Optional|Enter the name of the default network access control list (ACL).|No|
+|`default_security_group_name`|String|Optional|Enter the name of the default security group.|No|
+|`default_routing_table_name`|String|Optional|Enter the name of the default routing table.|No|
 
 
 ### Output parameters
