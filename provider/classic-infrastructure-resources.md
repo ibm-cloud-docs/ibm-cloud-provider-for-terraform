@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-04-01"
 
 keywords: terraform provider plugin, terraform classic infrastructure, terraform classic, terraform softlayer, terraform sl, terraform vsi, terraform Bare Metal server
 
@@ -1042,6 +1042,7 @@ resource "ibm_compute_vm_instance" "terraform-sample-BDTGroup" {
    private_subnet = "10.56.109.128/26"
 }
 ```
+{: codeblock}
 
 In the following example, you can create a VM instance by using a flavor:
 
@@ -1067,6 +1068,8 @@ resource "ibm_compute_vm_instance" "terraform-sample-flavor" {
     notes = "VM notes"
 }
 ```
+{: codeblock}
+
 In the following example, you can create multiple virtual machines.
 
 ```
@@ -1094,6 +1097,7 @@ resource "ibm_compute_vm_instance" "terraform-bulk-vms" {
   local_disk           = false
 }
 ```
+{: codeblock}
 
 In the following example, you can retry to create a VM instance by using a datacenter_choice. If VM fails to place order on first datacenter or VLANs it retries to place order on subsequent data centers and VLANs until place order is successful:
 
@@ -1140,6 +1144,27 @@ resource "ibm_compute_vm_instance" "terraform-retry" {
 }
 
 ```
+{: codeblock}
+
+In the following example, you create a VM instance by using a quote ID: 
+```
+resource "ibm_compute_vm_instance" "vm1" {
+  # Mandatory fields
+  hostname             = "terraformquote"
+  domain               = "IBM.cloud"
+  quote_id             = "2877000"
+
+  # Optional fields
+  os_reference_code    = "DEBIAN_9_64"
+  datacenter           = "dal06"
+  network_speed        = 100
+  hourly_billing       = false
+  private_network_only = false
+  flavor_key_name      = "B1_2X8X100"
+  local_disk           = true
+}
+```
+{: codeblock}
 
 
 ### Input parameters
@@ -1197,6 +1222,7 @@ Review the input parameters that you can specify for your resource.
 |`datacenter_choice.datacenter`|String|Required|The datacenter in which you want to provision the instance.    | No |
 |`datacenter_choice.public_vlan_id`|String|Optional|The public VLAN ID for the public network interface of the instance. Accepted values are in the [VLAN doc](https://cloud.ibm.com/classic/network/vlans). Click the VLAN that you want to use and note the ID number in the browser URL. You can also refer to a VLAN name by using a data source.    | No |
 |`datacenter_choice.private_vlan_id`|String|Optional|The private VLAN ID for the private network interface of the instance. You can find accepted values in the [VLAN doc](https://cloud.ibm.com/classic/network/vlans). Click the VLAN that you want to use and note the ID number in the browser URL. You can also refer to a VLAN name by using a data source.  **NOTE**: Conflicts with `datacenter`, `private_vlan_id`, `public_vlan_id`, `placement_group_name` and `placement_group_id`.| Yes |
+|`quote_id`|String|Optional|When you define the `quote_id`, Terraform uses the specification in the quote to create a virtual server. You can find the quote ID in the IBM Cloud portal.|Yes|
 {: caption="Table. Available input parameters" caption-side="top"}
 
 ### Output parameters
