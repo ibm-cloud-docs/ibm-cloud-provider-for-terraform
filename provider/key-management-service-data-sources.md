@@ -144,8 +144,8 @@ Review the input parameters that you can specify for your resource.
 |Name|Data type|Required / optional|Description|
 |----|-----------|-----------|---------------------|
 |`instance_id`|String|Required|The key-protect instance ID.|
-|`key_name`|String|Optional|The name of the key. If you want to retrieve the key using the key alias, use the `alias` option.  You must provide either the `key_name` or `alias`. |
-|`alias`|String|Optional|The alias of the key. If you want to retrieve the key using the key name, use the `key_name` option.You must provide either the `key_name` or `alias`.|
+|`key_name`|String|Optional|The name of the key. If you want to retrieve the key by using the key alias, use the `alias` option. You must provide either the `key_name` or `alias`. |
+|`alias`|String|Optional|The alias of the key. If you want to retrieve the key by using the key name, use the `key_name` option. You must provide either the `key_name` or `alias`.|
 |`endpoint_type`|String|Optional|The type of the public or private endpoint to be used for fetching keys. |
 
 ### Output parameters
