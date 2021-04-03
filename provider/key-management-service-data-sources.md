@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-01"
+lastupdated: "2021-04-03"
 
-keywords: terraform provider plugin, terraform key management service, terraform key management, terraform kms, kms, terraform key protect, terraform kp, terraform root key, hyper protect crypto service, hpcs
+keywords: terraform provider plugin, terraform key management service, terraform key management, terraform kms, kms, terraform key protect, terraform kp, terraform root key, hyper protect crypto service, hpcs, kms alias, kms key rings
 
 subcollection: ibm-cloud-provider-for-terraform
 
@@ -299,3 +299,50 @@ Review the output parameters that you can access after you retrieved your data s
 | `keys.id`|String| The unique identifier of the key.|
 | `keys.crn`|String| The CRN of the key.|
 | `keys.standard_key` |Boolean|Set the flag `true` for standard key, and `false` for root key. Default value is **false**. |
+
+
+## `ibm_kms_key_rings`
+{: #kp-key-rings}
+
+Retrieve a list of key rings from the hs-crypto or key protect instance. For more information, about retrieving key and key rings, see [Retrieving a key](/docs/key-protect?topic=key-protect-retrieve-key).
+{: shortdesc}
+
+
+### Sample Terraform code
+{: #kp-key-rings-sample}
+
+
+```
+data "ibm_kms_key_rings" "test" {
+  instance_id = "guid-of-keyprotect-or hs-crypto-instance"
+}
+```
+{: codeblock}
+
+### Input parameters
+{: #kp-key-rings-input}
+
+Review the input parameters that you can specify for your data source. 
+{: shortdesc}
+
+|Name|Data type|Required/optional|Description|
+|----|-----------|------|--------|
+| `instance_id`|String|Required|The key protect instance GUID.|
+| `key_name`| String|Optional| The name of the key. Only the keys with matching name will be retrieved.|
+|`endpoint_type`|String|Optional| The type of the public endpoint, or private endpoint to be used for creating keys.|
+{: caption="Table. Available input parameters" caption-side="top"}
+
+
+### Output parameters
+{: #kp-key-rings-output}
+
+Review the output parameters that you can access after you retrieved your data source. 
+{: shortdesc}
+
+|Name|Data type|Description|
+|----|-----------|----------|
+| `key_rings` | List of objects | Alist of all key rings in the hs-crypto or key protect instance.|
+| `key_rings.id`|String| The unique identifier of the key ring.|
+| `key_rings.creation_date`|Timestamp| The date the key ring created. The date format follows `RFC 3339` format.|
+| `key_rings.created_by` |String |The unique identifier for the resource that created the key ring. |
+{: caption="Table. Available outputput parameters" caption-side="top"}
