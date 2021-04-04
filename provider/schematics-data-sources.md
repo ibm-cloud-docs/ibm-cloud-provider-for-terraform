@@ -534,7 +534,6 @@ Review the output parameters that you can access after you retrieved your data s
 |----|-----------|-------------|
 |`id`| String | The unique identifier of the Schematics output.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
-0000
 
 ## `ibm_schematics_workspace`
 {: #schematics-workspace}
@@ -630,8 +629,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`template_data.variablestore.description` | String | The description of your input variable.|
 |`template_data.variablestore.name` | String | The name of your variable.|
 |`template_data.variablestore.secure` | String | If set to `true`, the value of your input variable is protected and not returned in your API response.|
-|`template_data.variablestore.type` | String | Terraform v0.11 supports string, list, map data type. For more information, about the syntax, see [Configuring input variables]((/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).
-Terraform v0.12 additionally, supports bool, number and complex data types such as list(type), map(type), object({attribute name=type,..}), set(type), tuple([type]). For more information, about the syntax to use the complex data type, see [Configuring variables](/docs/schematics?topic=schematics-create-tf-config#configure-variables).|
+|`template_data.variablestore.type` | String | Terraform v0.11 supports string, list, map data type. For more information, about the syntax, see [Configuring input variables]((/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new). Terraform v0.12 additionally, supports bool, number and complex data types such as list(type), map(type), object({attribute name=type,..}), set(type), tuple([type]). For more information, about the syntax to use the complex data type, see [Configuring variables](/docs/schematics?topic=schematics-create-tf-config#configure-variables).|
 |`template_data.variablestore.value` | String |  Enter the value as a string for the primitive types such as bool, number, string, and HCL format for the complex variables, as you provide in a `.tfvars` file. You need to enter escaped string of HCL format for the complex variable value. For more information, about how to declare variables in a terraform configuration file and provide value to schematics, see [Providing values for the declared variables](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).|
 |`template_ref` | String |  The workspace template reference.|
 |`template_repo` | List | The input parameter to specify the source repository where your {{site.data.keyword.bpshort}} template is stored.|
