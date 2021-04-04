@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-04-04"
 
 keywords: terraform, terraform provider release, terraform provider versions
 
@@ -98,6 +98,28 @@ subcollection: ibm-cloud-provider-for-terraform
 
 View information for updates to the Terraform.
 {:shortdesc}
+
+## Changelog for 1.23.0, released 4 April 2021
+{: #changelog-v1230}
+
+The following table shows the changes that are included in version 1.23.0 of the Terraform.
+{: shortdesc}
+
+| Previous | Current | Description |
+| -------- | ------- | ----------- |
+| 1.22.0 | 1.23.0 |[See the release notes for the Terraform version 1.23.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.23.0){: external}.|
+{: caption="Terraform provider 1.23.0" caption-side="top"}
+
+## Changelog for 1.22.0, released 31 March 2021
+{: #changelog-v1220}
+
+The following table shows the changes that are included in version 1.22.0 of the Terraform.
+{: shortdesc}
+
+| Previous | Current | Description |
+| -------- | ------- | ----------- |
+| 1.21.2 | 1.22.0 |[See the release notes for the Terraform version 1.22.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.22.0){: external}.|
+{: caption="Terraform provider 1.22.0" caption-side="top"}
 
 ## Changelog for 1.21.2, released 16 March 2021
 {: #changelog-v1212}
