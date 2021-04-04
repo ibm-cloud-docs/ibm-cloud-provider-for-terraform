@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-01" 
+lastupdated: "2021-04-04" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -454,11 +454,11 @@ IKE is an IPSec (Internet Protocol Security) standard protocol that is used to e
 
 ```
 resource "ibm_is_ike_policy" "example" {
-    name = "test"
-    authentication_algorithm = "md5"
-    encryption_algorithm = "triple_des"
-    dh_group = 2
-    ike_version = 1
+  name                     = "test"
+  authentication_algorithm = "md5"
+  encryption_algorithm     = "triple_des"
+  dh_group                 = 2
+  ike_version              = 1
 }
 ```
 {: codeblock}
@@ -473,10 +473,10 @@ Review the input parameters that you can specify for your resource.
 | Input parameter | Data type | Required / optional | Description | Forces new resource |
 | ------------- |-------------| ----- | -------------- | ------- |
 | `authentication_algorithm` | String | Required | Enter the algorithm that you want to use to authenticate `IPSec` peers. Available options are `md5`, `sha1`, or `sha256`. | No |
-| `dh_group` | Integer | Required | Enter the Diffie-Hellman group that you want to use for the encryption key. Available options are `2`, `5`, or `14`. | No |
+| `dh_group` | Integer | Required | Enter the Diffie-Hellman group that you want to use for the encryption key. Available enumeration type are `2`, `5`, `14`, or `19`. | No |
 | `encryption_algorithm` | String | Required | Enter the algorithm that you want to use to encrypt data. Available options are: `triple_des`, `aes128`, or `aes256`. | No |
 | `ike_version` | Integer | Optional | Enter the IKE protocol version that you want to use. Available options are `1`, or `2`. | No |
-| `key_lifetime` | Integer | Optional | Enter the time in seconds that your encryption key can be used before it expires. You must enter a number between 300 and 86400. If you do not specify this option, 28800 seconds is used. | No | 
+| `key_lifetime` | Integer | Optional | The key lifetime in seconds. `Maximum: 86400`, `Minimum: 1800`. Default is `28800`. | No | 
 | `name` | String | Required | Enter a name for your IKE policy. |  No |
 | `resource_group` | String | Optional | Enter the ID of the resource group where you want to create the IKE policy. To list available resource groups, run `ibmcloud resource groups`. If you do not specify a resource group, the IKE policy is created in the `default` resource group. | Yes |
 
@@ -490,8 +490,11 @@ Review the output parameters that you can access after your resource is created.
 | ------------- |-------------| -------------- |
 | `href`| String| The canonical URL that was assigned to your IKE policy. | 
 | `id` | String | The unique identifier of the IKE policy that you created. |
-| `negotiation_mode` | String | The negotiation mode that was set for your IKE policy. Only `main` is supported. | 
-| `vpn_connections`| List | A collection of VPN connections that use the IKE policy. Every connection is listed with a VPC connection `name`, `id`, and `canonical URL`. |
+| `negotiation_mode` | String | The IKE negotiation mode that was set for your IKE policy. Only `main` is supported. | 
+| `vpn_connections`| List | A collection of VPN connections that use the IKE policy. |
+| `vpn_connections.name`|String | The name given to the VPN connection. |
+| `vpn_connections.id`| String | The unique identifier of a VPN connection. |
+| `vpn_connections.href` | String | The VPN connection's canonical URL. |
 
 ### Import
 {: #provider-ike-policy-import}
@@ -2107,6 +2110,7 @@ Review the input parameters that you can specify for your resource.
 |`name`|String|Optional|The security group name.| No |
 |`vpc`|String|Required|The VPC ID. | Yes |
 |`resource_group`|String|Optional|The resource group ID where the security group to be created.| No |
+|`tags`| List of strings| Optional | The tags associated with an instance.| No |
 {: caption="Table. Available input parameters" caption-side="top"}
 
 ### Output parameters
@@ -2118,15 +2122,16 @@ Review the output parameters that you can access after your resource is created.
 |Name|Data type|Description|
 |----|-----------|--------|
 |`id`|String|The ID of the security group.|
-|`rules`|List of objects|A nested block describes the rules of this security group. |
+|`rules`|List of objects|A nested block describes the rules of this security group. Nested `rules` blocks have the following structure.|
 |`rules.direction`| String|The direction of the traffic either `inbound` or `outbound`.  |
 |`rules.ip_version`|String|IP version either `ipv4` or `ipv6`.  |
-|`rules.remote`|String|Security group id, an IP address, a CIDR block, or a single security group identifier.  |
+|`rules.remote`|String|Security group id, an IP address, a `CIDR` block, or a single security group identifier.  |
 |`rules.protocol`|String|The type of the protocol `all`, `icmp`, `tcp`, `udp`.   |
-|`rules.type`|String|The ICMP traffic type to allow.  |
-|`rules.code`|String|The ICMP traffic code to allow.  |
-|`rules.port_max`|Integer|The TCP/UDP port range that includes the maximum bound. |
-|`rules.port_min`|Integer|The TCP/UDP port range that includes the minimum bound. |
+|`rules.type`|String|The `ICMP` traffic type to allow.  |
+|`rules.code`|String|The `ICMP `traffic code to allow.  |
+|`rules.port_max`|Integer|The `TCP/UDP` port range that includes the maximum bound. |
+|`rules.port_min`|Integer|The `TCP/UDP` port range that includes the minimum bound. |
+|`crn`|String| the CRN of the security group.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 
@@ -3275,6 +3280,19 @@ resource "ibm_is_vpc_routing_table_route" "test_ibm_is_vpc_routing_table_route" 
 ```
 {: codeblock}
 
+```
+resource "ibm_is_vpc_routing_table_route" "test_ibm_is_vpc_routing_table_route" {
+  vpc = ""
+  routing_table = ""
+  zone = "us-south-1"
+  name = "custom-route-2"
+  destination = "192.168.4.0/24"
+  action = "deliver"
+  next_hop = vpnConnectinID
+}
+```
+{: codeblock}
+
 ### Input parameters
 {: #vpc-routing-table-route-input}
 
@@ -3283,13 +3301,14 @@ Review the input parameters that you can specify for your resource.
 
 |Name|Data type|Required / optional|Description| Forces new resource |
 |----|-----------|-----------|---------------------| ------ |
-|`action`|String|Optional|The action to perform with a packet matching the route. | No |
+|`action`|String|Optional|The action to perform with a packet matching the route `delegate`, `delegate_vpc`, `deliver`, `drop`. | No |
 |`destination`|String|Required| The destination of the route. |  Yes |
 |`name`|String|Optional|The user-defined name of the route. If unspecified, the name will be a hyphenated list of randomly selected words. You need to provide unique name within the VPC routing table the route resides in.| No |
-|`next_hop`|String|Required| The next hop of the route. |  Yes |
+|`next_hop`|String|Required| The next hop of the route. It accepts IP address or a VPN connection ID. For `action` other than `deliver`, you must specify `0.0.0.0`. |  Yes |
 |`routing_table`|String|Required|The routing table ID.| No |
 |`vpc`|String|Required| The VPC ID.| Yes |
 |`zone`|String|Required| Name of the zone. |  Yes |
+{: caption="Table 1. Available input parameters" caption-side="top"}
 
 ### Output parameters
 {: #vpc-routing-table-route-output}
