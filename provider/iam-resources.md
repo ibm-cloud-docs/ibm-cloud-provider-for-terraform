@@ -93,7 +93,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 
-# Identity & Access (IAM) resources 
+# Identity & Access Management (IAM) resources 
 {: #iam-resources}
 
 Create, modify, or delete [{{site.data.keyword.cloud_notm}} Identity and Access Management (IAM)](/docs/account?topic=account-iamoverview) resources. 

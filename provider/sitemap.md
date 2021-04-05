@@ -290,7 +290,7 @@ subcollection: ibm-cloud-provider-for-terraform
   </tbody>
   </table>
   
- ## Identity & Access (IAM)
+ ## Identity & Access Management (IAM)
   {: #ibm-iam-resource}
   
   <table>
