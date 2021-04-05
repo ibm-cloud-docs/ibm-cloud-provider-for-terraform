@@ -155,7 +155,7 @@ Review the output parameters that you can access after your resource is created.
 | `mfa` | String | Defines the session expiration in seconds for the account.|
 | `session_expiration_in_seconds` | String | Defines the session expiration in seconds for the account.|
 | `session_invalidation_in_seconds` | String | Defines the period of time in seconds in which a session is invalid due to inactivity.|
-| `account_id` | String | Unique ID of an account.
+| `account_id` | String | Unique ID of an account.|
 | `id` | String | Unique ID of an account settings instance.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
@@ -1303,7 +1303,7 @@ The following attributes are exported:
 
 |Name|Data type|Description|
 |----|-----------|-------------|
-|`id`|String|The unique identifier of the IAM user setting as `account_id`/`iam_id`.|
+|`id`|String|The unique identifier of the IAM user setting as `account_id/iam_id`.|
 
 
 
