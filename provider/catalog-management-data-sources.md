@@ -198,7 +198,7 @@ Review the output parameters that you can access after your data source is creat
 | `offering_support_url` | String | The URL to be displayed in the consumption UI for getting support on the offering.|
 | `short_description` | String | The short description in the requested language.|
 | `long_description` | String | The long description in the requested language.|
-| `permit_request_ibm_public_publish` | String | Is it permitted to request publishing to {{site.data.keyword.ibm_notm}} or public.|
+| `permit_request_ibm_public_publish` | String | Is it permitted to request publishing to {{site.data.keyword.IBM_notm}} or public.|
 | `ibm_publish_approved` | String | Indicates if the offering has been approved for use by all IBMers.|
 | `public_publish_approved` | String | Indicates if the offering has been approved to all {{site.data.keyword.cloud_notm}} users.|
 | `public_original_crn` | String | The original offering CRN that is published.|

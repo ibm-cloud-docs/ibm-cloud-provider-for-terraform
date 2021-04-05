@@ -143,7 +143,7 @@ Review the output parameters that you can access after your resource is created.
 
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
-| `id` | String | The unique identifier of the cm_catalog.|
+| `id` | String | The unique identifier of the `cm_catalog`.|
 | `url` | String | The URL for this specific catalog.|
 | `crn` | String | The CRN associated with the catalog.|
 | `offerings_url` | String | The URL path to offerings.|
@@ -179,7 +179,7 @@ Review the input parameters that you can specify for your resource.
 | ------------- |-------------| ----- | --------| 
 | `catalog_identifier` | String | Required | Catalog identifier.|
 | `label` | String | Optional | Display the name in the requested language.|
-| `tags` | List | Optional |  List of tags associated with the catalog.|
+| `tags` | List | Optional |  The list of tags associated with the catalog.|
 {: caption="Table: Available input parameters" caption-side="top"}
 
 ### Output parameters
@@ -190,23 +190,23 @@ Review the output parameters that you can access after your resource is created.
 
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
-| `id` | String | The unique identifier of the cm_offering.|
+| `id` | String | The unique identifier of the `cm_offering`.|
 | `url` | String | The URL for the specific offering.|
 | `crn` | String | The CRN for the specific offering.|
 | `name` | String | The programmatic name of the offering.|
 | `short_description` | String | The short description in the requested language.|
 | `long_description` | String | The long description in the requested language.|
-| `permit_request_ibm_public_publish` | String | Is it permitted to request publishing to {{site.data.keyword.ibm_notm}} or public.|
+| `permit_request_ibm_public_publish` | String | Is it permitted to request publishing to {{site.data.keyword.IBM_notm}} or public.|
 | `ibm_publish_approved` | String | Indicates if the offering has been approved for use by all IBMers.|
 | `public_publish_approved` | String | Indicates if the offering has been approved for use by all {{site.data.keyword.cloud_notm}} users.|
 | `public_original_crn` | String | The original offering CRN has published.|
-| `publish_public_crn` | String | The CRN of the public catalog entry of the offering.|
+| `publish_public_crn` | String | The CRN of the public catalog entry of an offering.|
 | `portal_approval_record` | String | The portal's approval record ID.|
 | `portal_ui_url` | String | The portal UI URL.|
 | `catalog_id` | String | The ID of the catalog containing this offering.|
 | `catalog_name` | String | The name of the catalog.|
 | `disclaimer` | String | A disclaimer for the offering.|
-| `repo_info` | String | Repository information for the offerings.|
+| `repo_info` | String | Repository information for an offerings.|
 | `repo_info.token` | String | Token for the private repository.|
 | `repo_info.type` | String | The public or enterprise GitHub.|
 {: caption="Table: Available output parameters" caption-side="top"}
@@ -248,7 +248,7 @@ Review the input parameters that you can specify for your resource.
 | `label` | String | Required | The label for this instance.|
 | `catalog_id` | String | Required | The catalog ID an instance  is created.|
 | `offering_id` | String | Required | The offering ID an instance is created .|
-| `kind_format` | String | Required | The format an instance such as `Helm`, `operator`.|
+| `kind_format` | String | Required | The format an instance such as `helm`, `operator`.|
 | `version` | String | Required | The version an instance was installed from (but not from the version ID).|
 | `cluster_id` | String | Required | The cluster ID.|
 | `cluster_region` | String | Required | The cluster region for example, `us-south`.|
@@ -264,7 +264,7 @@ Review the output parameters that you can access after your resource is created.
 
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
-| `id` | String | The unique identifier of the cm_offering_instance.|
+| `id` | String | The unique identifier of the `cm_offering_instance`.|
 | `url` | String | The URL reference to an object.|
 | `crn` | String | The platform CRN for an instance.|
 {: caption="Table: Available output parameters" caption-side="top"}

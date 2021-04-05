@@ -240,6 +240,23 @@ subcollection: ibm-cloud-provider-for-terraform
     </tr>
   </tbody>
   </table>
+
+
+## Enterprise Management
+{: #ibm-enterprise-management}
+  
+  <table>
+    <thead>
+    <th style="width:180px">Resources</th>
+    <th style="width:150px">Data sources</th>
+  </thead>
+  <tbody>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[`ibm_enterprise`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cm-resources#cm-catalog)</li><li style="margin:0px; padding:0px">[`ibm_enterprise_account`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cm-resources#cm-offering)</li><li style="margin:0px; padding:0px">[`ibm_enterprise_account_group`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cm-resources#cm-offering-instance)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[`ibm_enterprises`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cm-data-sources#cm-catalog-ds)</li><li style="margin:0px; padding:0px">[`ibm_enterprise_accounts`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cm-data-sources#cm-offering-ds)</li><li style="margin:0px; padding:0px">[`ibm_enterprise_account_groups`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cm-data-sources#cm-offering-instanceds)</li></ul></td>
+    </tr>
+  </tbody>
+  </table>
   
   ## Event Streams
   {: #ibm-event-streams}
