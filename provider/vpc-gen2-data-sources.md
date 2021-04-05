@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-01"
+lastupdated: "2021-04-05"
 
 keywords: terraform provider plugin, terraform gen 2, terraform gen 2 compute
 
@@ -316,7 +316,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`href`| String | The URL for this dedicated host group.|
 |`resource_group`| String | The unique identifier of the resource group for this dedicated host.|
 |`resource_type`| String | The type of resource referenced.|
-|`supported_instance_profiles`| String | Array of instance profiles that can be used by instances placed on this dedicated host group. |Nested **supported_instance_profiles** blocks have the following structure.|
+|`supported_instance_profiles`| String | Array of instance profiles that can be used by instances placed on this dedicated host group. Nested **supported_instance_profiles** blocks have the following structure.|
 |`supported_instance_profiles.href`| String | The URL for this virtual server instance profile.|
 |`supported_instance_profiles.name`| String | The unique name for this virtual server instance profile.|
 |`zone`| String | The zone this dedicated host group resides in.|
@@ -374,7 +374,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`name`| String | The unique user defined name for this dedicated host group. If unspecified, the name will be a hyphenated list of randomly-selected words.
 |`resource_group`| String | The unique identifier of the resource group for this dedicated host.|
 |`resource_type`| String | The type of resource referenced.|
-|`supported_instance_profiles`| String | Array of instance profiles that can be used by instances placed on this dedicated host group. |Nested **supported_instance_profiles** blocks have the following structure.|
+|`supported_instance_profiles`| String | Array of instance profiles that can be used by instances placed on this dedicated host group. Nested **supported_instance_profiles** blocks have the following structure.|
 |`supported_instance_profiles.href`| String | The URL for this virtual server instance profile.|
 |`supported_instance_profiles.name`| String | The unique name for this virtual server instance profile.|
 |`zone`| String | The zone this dedicated host group resides in.|

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-04" 
+lastupdated: "2021-04-05" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -238,13 +238,13 @@ Review the output parameters that you can access after your resource is created.
 |`id`| String | The unique ID of the dedicated host group.|
 |`href`| String | The URL for this dedicated host group.|
 |`crn`| String | The CRN for this dedicated host group.|
-created_at`| String | The date and time that the dedicated host group was created.|
+| `created_at`| String | The date and time that the dedicated host group was created.|
 |`dedicated_hosts`| String | The dedicated hosts that are in this dedicated host group.|
 |`name`| String | The unique user defined name for this dedicated host group.|
 |`resource_type`| String | The type of resource referenced.|
 |`resource_group`| String | The unique ID of the resource group for this dedicated host.|
 |`supported_instance_profiles`| String | Array of instance profiles that can be used by instances placed on this dedicated host group.
-zone`| String | The zone this dedicated host resides in.|
+| `zone`| String | The zone this dedicated host resides in.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 ### Import

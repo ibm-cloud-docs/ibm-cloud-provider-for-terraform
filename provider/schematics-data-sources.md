@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-04"
+lastupdated: "2021-04-05"
 
 keywords: terraform provider plugin, terraform schematics data source, terraform schematics workspace 
 
@@ -483,57 +483,6 @@ Review the output parameters that you can access after you retrieved your data s
 | `results_url` | String |The job results store URL.|
 | `updated_at` | String | The job status updation timestamp.|
 
-
-## `ibm_schematics_output`
-{: #schematics-output}
-
-Retrieve state information for a Schematics workspace. For detailed information about how to use this data source, see [Accessing Terraform state information across workspaces](/docs/schematics?topic=schematics-remote-state). 
-{: shortdesc}
-
-### Sample Terraform code
-{: #schematics-output-sample}
-
-The following example retrieves information about the `my-workspace-id` workspace.  
-{: shortdesc}
-
-```
-data "ibm_schematics_workspace" "vpc" {
-  workspace_id = "<schematics_workspace_id>"
-}
-
-data "ibm_schematics_output" "test" {
-  workspace_id = "<schematics_workspace_id>"
-  template_id= data.ibm_schematics_workspace.vpc.template_id.0
-}
-
-data "ibm_schematics_output" "schematics_output" {
-	workspace_id = "workspace_id"
-  template_id = "template_id"
-}
-```
-{: codeblock}
-
-### Input parameters
-{: #schematics-output-input}
-
-Review the input parameters that you can specify for your data source. 
-{: shortdesc}
-
-|Name|Data type| Required / optional|Description|
-|----|-----------|--------|----------------------|
-|`workspace_id`|String|Required|The ID of the workspace for which you want to retrieve output values. To find the workspace ID, use the `GET /workspaces` API. |
-{: caption="Table. Available input parameters" caption-side="top"}
-
-### Output parameters
-{: #schematics-output-output}
-
-Review the output parameters that you can access after you retrieved your data source. 
-{: shortdesc}
-
-|Name|Data type|Description|
-|----|-----------|-------------|
-|`id`| String | The unique identifier of the Schematics output.|
-{: caption="Table 1. Available output parameters" caption-side="top"}
 
 ## `ibm_schematics_workspace`
 {: #schematics-workspace}
