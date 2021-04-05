@@ -94,7 +94,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 }
 
-# Identity & Access (IAM) data sources
+# Identity & Access Management (IAM) data sources
 {: #iam-data-sources}
 
 Review the data sources that you can use to retrieve information about your Identity and Access Management (IAM) resources. All data sources are imported as read-only information. You can reference the output parameters for each data source by using Terraform interpolation syntax.

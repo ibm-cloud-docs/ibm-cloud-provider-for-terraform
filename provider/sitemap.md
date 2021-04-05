@@ -111,6 +111,22 @@ subcollection: ibm-cloud-provider-for-terraform
   </tbody>
   </table>
 
+## Catalog Management
+{: #ibm-catalog-management}
+  
+  <table>
+    <thead>
+    <th style="width:180px">Resources</th>
+    <th style="width:150px">Data sources</th>
+  </thead>
+  <tbody>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[`ibm_cm_catalog`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cm-resources#cm-catalog)</li><li style="margin:0px; padding:0px">[`ibm_cm_offering`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cm-resources#cm-offering)</li><li style="margin:0px; padding:0px">[`ibm_cm_offering_instance`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cm-resources#cm-offering-instance)</li><li style="margin:0px; padding:0px">[`ibm_cm_version`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cm-resources#cm-version)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[`ibm_cm_catalog`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cm-data-sources#cm-catalog-ds)</li><li style="margin:0px; padding:0px">[`ibm_cm_offering`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cm-data-sources#cm-offering-ds)</li><li style="margin:0px; padding:0px">[`ibm_cm_offering_instance`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cm-data-sources#cm-offering-instanceds)</li><li style="margin:0px; padding:0px">[`ibm_cm_version`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-cm-data-sources#cm-versionds)</li></ul></td>
+    </tr>
+  </tbody>
+  </table>
+
 ## Certificate Manager
 {: #ibm-certificate-manager}
   
@@ -224,6 +240,23 @@ subcollection: ibm-cloud-provider-for-terraform
     </tr>
   </tbody>
   </table>
+
+
+## Enterprise Management
+{: #ibm-enterprise-management}
+  
+  <table>
+    <thead>
+    <th style="width:180px">Resources</th>
+    <th style="width:150px">Data sources</th>
+  </thead>
+  <tbody>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[`ibm_enterprise`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-enterprise-mgt-resources#enterprise)</li><li style="margin:0px; padding:0px">[`ibm_enterprise_account`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-enterprise-mgt-resources#enterprise-account)</li><li style="margin:0px; padding:0px">[`ibm_enterprise_account_group`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-enterprise-mgt-resources#enterprise-account-grp)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[`ibm_enterprises`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-enterprise-mgt-ds#enterprises-ds)</li><li style="margin:0px; padding:0px">[`ibm_enterprise_accounts`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-enterprise-mgt-ds#enterprise-accounts)</li><li style="margin:0px; padding:0px">[`ibm_enterprise_account_groups`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-enterprise-mgt-ds#enterprise-account-grps-ds)</li></ul></td>
+    </tr>
+  </tbody>
+  </table>
   
   ## Event Streams
   {: #ibm-event-streams}
@@ -257,7 +290,7 @@ subcollection: ibm-cloud-provider-for-terraform
   </tbody>
   </table>
   
- ## Identity & Access (IAM)
+ ## Identity & Access Management (IAM)
   {: #ibm-iam-resource}
   
   <table>
