@@ -111,6 +111,22 @@ subcollection: ibm-cloud-provider-for-terraform
   </tbody>
   </table>
 
+## Catalog Management
+{: #ibm-catalog-management}
+  
+  <table>
+    <thead>
+    <th style="width:180px">Resources</th>
+    <th style="width:150px">Data sources</th>
+  </thead>
+  <tbody>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[`ibm_cm_catalog`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-api-gateway-resources#api-gw-endpoint)</li><li style="margin:0px; padding:0px">[`ibm_cm_offering`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-api-gateway-resources#api-gw-endpoint-subscript)</li><li style="margin:0px; padding:0px">[`ibm_cm_offering_instance`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-api-gateway-resources#api-gw-endpoint-subscript)</li><li style="margin:0px; padding:0px">[`ibm_cm_version`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-api-gateway-resources#api-gw-endpoint-subscript)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[`ibm_cm_catalog`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-api-gateway-resources#api-gw-endpoint)</li><li style="margin:0px; padding:0px">[`ibm_cm_offering`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-api-gateway-resources#api-gw-endpoint-subscript)</li><li style="margin:0px; padding:0px">[`ibm_cm_offering_instance`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-api-gateway-resources#api-gw-endpoint-subscript)</li><li style="margin:0px; padding:0px">[`ibm_cm_version`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-api-gateway-resources#api-gw-endpoint-subscript)</li></ul></td>
+    </tr>
+  </tbody>
+  </table>
+
 ## Certificate Manager
 {: #ibm-certificate-manager}
   

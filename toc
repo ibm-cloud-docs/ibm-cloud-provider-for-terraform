@@ -37,7 +37,7 @@ Terraform on IBM Cloud
          provider/provider-ref.md
          provider/api-gateway-resources.md
          provider/api-gateway-data-source.md
-         provider/catalog-management-resourced.md
+         provider/catalog-management-resources.md
          provider/catalog-management-data-sources.md
          provider/certificate-manager-resources.md
          provider/certificate-manager-data-sources.md
