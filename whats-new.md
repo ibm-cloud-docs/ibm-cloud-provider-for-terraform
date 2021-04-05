@@ -29,6 +29,24 @@ subcollection: ibm-cloud-provider-for-terraform
 Learn about the latest changes to the Terraform service that are grouped by month.
 
 
+## 4 April 2021
+{: #4-april-2021}
+
+<table>
+    <thead>
+    <th style="width:80px">New resources</th>
+    <th style="width:80px">New data sources</th>
+    <th style="width:500px">Enhancements</th>
+    </thead>
+  <tbody>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[`ibm_iam_account_settings`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-iam-resources#iam-account-settings)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[`ibm_iam_account_settings`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-iam-data-sources#iam-account-settings-ds)</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">Latest [version change log](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.23.0)</li></ul></td>
+    </tr>
+  </tbody>
+  </table> 
+
 
 ## 1 April 2021
 {: #1-april-2021}
