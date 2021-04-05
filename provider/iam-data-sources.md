@@ -102,7 +102,7 @@ Review the data sources that you can use to retrieve information about your Iden
 Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
-## `iibm_iam_account_settings`
+## `ibm_iam_account_settings`
 {: #iam-account-settings-ds}
 
 Create, modify, or delete an iam_account_settings data sources. For more information, about IAM account settings, refer to [setting up your {{site.data.keyword.cloud}}](/docs/account?topic=account-account-getting-started).
@@ -136,23 +136,11 @@ Review the output parameters that you can access after your data source is creat
 | ------------- |-------------| -------------- |
 | `id` | String | The unique identifier of an iam_account_settings.|
 | `account_id` | String | The unique ID of an account.|
-| `restrict_create_service_id` | String | Defines whether  creating a service ID is access controlled. Valid values are
-* **RESTRICTED** to apply access control.
-* **NOT_RESTRICTED** to remove access control.
-* **NOT_SET** to `unset` a previous set value.|
-| `restrict_create_platform_apikey` | String | Defines whether creating platform API keys is access controlled. Valid values are
-* **RESTRICTED** to apply access control.
-* **NOT_RESTRICTED** to remove access control.
-* **NOT_SET** to `unset` a previous set value.|
+| `restrict_create_service_id` | String | Defines whether  creating a service ID is access controlled. Valid values are  **RESTRICTED** to apply access control. **NOT_RESTRICTED** to remove access control. **NOT_SET** to `unset` a previous set value.|
+| `restrict_create_platform_apikey` | String | Defines whether creating platform API keys is access controlled. Valid values are **RESTRICTED** to apply access control. **NOT_RESTRICTED** to remove access control. **NOT_SET** to `unset` a previous set value.|
 | `allowed_ip_addresses` | String | Defines the IP addresses and subnets from which IAM tokens is created for an account.|
 | `entity_tag` | String | The version of an account settings.|
-| `mfa` | String | Defines the MFA trait for an account. Valid values are
-* **NONE** No MFA trait set.
-* **TOTP** For all non-federated IBMId users.
-* **TOTP4ALL** For all users.
-* **LEVEL1** The Email based MFA for all users.
-* **LEVEL2** TOTP based MFA for all users.
-* **LEVEL3** U2F MFA for all users.|
+| `mfa` | String | Defines the MFA trait for an account. Valid values are **NONE** No MFA trait set. **TOTP** For all non-federated IBMId users **TOTP4ALL** For all users. **LEVEL1** The Email based MFA for all users. **LEVEL2** TOTP based MFA for all users. **LEVEL3** U2F MFA for all users.|
 | `history` | String | The history of an account settings. Nested history blocks have the following structure.|
 | `history.timestamp` | String | The timestamp when an action is triggered.|
 | `history.iam_id` | String | The IAM ID of the identity that triggered an action.|
@@ -160,12 +148,8 @@ Review the output parameters that you can access after your data source is creat
 | `history.action` | String | The action of the history entry.|
 | `history.params` | String | The params of the history entry.|
 | `history.message` | String | The message that summarizes the executed action.|
-| `session_expiration_in_seconds` | String | Defines the session expiration in seconds for the account. Valid values are
-* Any whole number between between `900` and `86400`. 
-* NOT_SET to unset account setting and use the service default.|
-| `session_invalidation_in_seconds` | String | Defines the period of time in seconds in which a session is invalid due to inactivity. Valid values are 
-* Any whole number between `900` and `7200`. 
-* NOT_SET to unset account setting and use the service default.|
+| `session_expiration_in_seconds` | String | Defines the session expiration in seconds for the account. Valid values are Any whole number between between `900` and `86400`, and **NOT_SET** to unset account setting and use the service default.|
+| `session_invalidation_in_seconds` | String | Defines the period of time in seconds in which a session is invalid due to inactivity. Valid values are Any whole number between `900` and `7200`, and **NOT_SET** to unset account setting and use the service default.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 
