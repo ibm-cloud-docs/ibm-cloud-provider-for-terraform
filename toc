@@ -67,9 +67,15 @@ Terraform on IBM Cloud
          provider/object-storage-data-sources.md
          provider/power-vsi-resources.md
          provider/power-vsi-data-sources.md
+         provider/push-notifications-resources.md
+         provider/push-notifications-data-sources.md
          provider/resource-management-resources.md
          provider/resource-management-data-sources.md
-         provider/schemastics-data-sources.md
+         provider/satellite-resources.md
+         provider/satellite-data-sources.md
+         provider/schematics-resources.md
+         provider/schematics-data-sources.md
+         provider/secrets-manager-data-sources.md
          provider/transit-gateway-resources.md
          provider/transit-gateway-data-sources.md
          provider/vpc-infrastructure-resources.md

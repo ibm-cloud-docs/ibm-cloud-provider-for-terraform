@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-25" 
+lastupdated: "2021-04-05" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -99,6 +99,165 @@ subcollection: ibm-cloud-provider-for-terraform
 Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
+
+## `ibm_is_dedicated_host`
+{: #is-dedicatedhost}
+
+Create, update, delete and suspend the dedicated host resource. For more information, about dedicated host in your {{site.data.keyword.cloud_notm}} VPC, see [Dedicated hosts](/docs/vpc?topic=vpc-creating-dedicated-hosts-instances).
+{: shortdesc}
+
+### Sample Terraform code
+{: #is_dedicatedhost-sample}
+
+```
+resource "ibm_is_dedicated_host_group" "dh_group01" {
+  family = "memory"
+  class = "beta"
+  zone = "us-south-1"
+}
+data "ibm_is_dedicated_host_group" "dgroup" {
+  name = ibm_is_dedicated_host_group.dh_group01.name
+}
+resource "ibm_is_dedicated_host" "is_dedicated_host" {
+  profile = "dh2-56x464"
+  host_group = "1e09281b-f177-46fb-baf1-bc152b2e391a"
+  name = "testdh02"
+}
+```
+{: codeblock}
+
+### Input parameters
+{: #is-dedicatedhost-input}
+
+Review the input parameters that you can specify for your resource. 
+{: shortdesc}
+
+
+| Input parameter | Data type | Required / optional | Description | 
+| ------------- |-------------| ----- | -------------- | 
+|`instance_placement_enabled`| Bool | Optional | If set to `true` instances can be placed on the dedicated host.|
+|`name` | String | Optional | The unique user-defined name for the dedicated host. If unspecified, the name will be a hyphenated list of randomly selected words.|
+|`profile`| String| Required | The globally unique name of the dedicated host profile to use for the dedicated host.|
+|`resource_group`| String | Optional | The unique ID of the resource group to use. If unspecified, the account's [default resource group](https://cloud.ibm.com/apidocs/resource-manager#introduction) is used.|
+|`host_group`| String | Required | The unique ID of the dedicated host group for this dedicated host.|
+{: caption="Table 1. Available input parameters" caption-side="top"}
+
+### Output parameters
+{: #is-dedicatedhost-output}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+| Output parameter | Data type | Description |
+| ------------- |-------------| -------------- |
+|`id`| String | The unique ID of the dedicated host.|
+|`available_memory`| String | The amount of memory in `GB` that is currently available for instances.|
+|`available_vcpu`| String | The available `VCPU` for the dedicated host.|
+|`created_at`| String| The date and time that the dedicated host was created.|
+|`crn`| String | The CRN for this dedicated host.|
+|`host_group`| String | The unique ID of the dedicated host group this dedicated host is in.|
+|`href`| String |  The URL for this dedicated host.|
+|`instance_placement_enabled`| String | If set to `true`, instances can be placed on this dedicated host.|
+|`instances`| String |  Array of instances that are allocated to this dedicated host. |
+|`instances.crn`| String | The CRN for the VSI.|
+|`instances.crn.deleted`| String | If present, this property indicates the referenced resource has been deleted and provides supplementary information. Nested deleted blocks have the following structure.|
+|`instances.crn.deleted.more_info`| String | Link to documentation about deleted resources.|
+|`instances.crn.href`| String | The URL for this VSI.|
+|`instances.crn.id`| String | The unique ID for this virtual server instance.|
+|`instances.crn.name`| String | The user defined name for the VSI and is the default system hostname.|
+|`lifecycle_state`| String | The lifecycle state of the dedicated host resource.|
+|`memory`| String | The total amount of memory in `GB` for this host.|
+|`name`| String | The unique user defined name for this dedicated host.|
+|`profile`| String |  The profile this dedicated host uses.|
+|`provisionable`| String | Indicates whether this dedicated host is available for instance creation.|
+|`resource_group`| String | The unique identifier of the resource group for this dedicated host.|
+|`resource_type`| String | The type of resource referenced.|
+|`socket_count`| String | The total number of sockets for this host.|
+|`state`| String |  The administrative state of the dedicated host. The enumerated values for this property are expected to expand in the future. When processing this property, check for and log unknown values. Optionally, halt processing and surface the error, or bypass the dedicated host on which the unexpected property value was encountered.|
+|`supported_instance_profiles`| String | Array of instance profiles that can be used by instances placed on this dedicated host.|
+|`vcpu`| String | The total `VCPU` of the dedicated host.|
+|`zone`| String | The zone this dedicated host resides in.|
+{: caption="Table 1. Available output parameters" caption-side="top"}
+
+### Import
+{: #is-dedicatedhost-import}
+
+`ibm_is_dedicated_host` can be imported by using dedicated host ID.
+
+**Example**
+
+```
+terraform import ibm_is_dedicated_host.example 0716-1c372bb2-decc-4555-b1a6-1010101
+```
+
+## `ibm_is_dedicated_host_group`
+{: #is-dedicatedhost-group}
+
+Create, update, delete and suspend the dedicated host resource. For more information, about dedicated host groups in your {{site.data.keyword.cloud_notm}} VPC, see [Dedicated hosts](/docs/vpc?topic=vpc-creating-dedicated-hosts-instances).
+{: shortdesc}
+
+### Sample Terraform code
+{: #is-dedicatedhost-group-sample}
+
+```
+resource "ibm_is_dedicated_host_group" "is_dedicated_host_group" {
+  class = "mx2"
+  family = "balanced"
+  zone = "us-south-1"
+  name = "dh-group-name"
+}
+```
+{: codeblock}
+
+### Input parameters
+{: #is_dedicatedhost-group_input}
+
+Review the input parameters that you can specify for your resource. 
+{: shortdesc}
+
+
+| Input parameter | Data type | Required / optional | Description | 
+| ------------- |-------------| ----- | -------------- | 
+|`class` | String | Required | The dedicated host profile class for hosts in this group.|
+|`family` | String | Required | The dedicated host profile family for hosts in this group.|
+|`name` | String | Optional | The unique user defined name for this dedicated host group. If unspecified, the name will be a hyphenated list of randomly selected words.|
+|`resource_group` | String | Optional | The unique ID of the resource group to use. If unspecified, the account's default resource group is used.|
+|`zone` | String | Required | The globally unique name of the zone this dedicated host group will reside in.|
+{: caption="Table 1. Available input parameters" caption-side="top"}
+
+### Output parameters
+{: #is-dedicatedhost-group-output}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+| Output parameter | Data type | Description |
+| ------------- |-------------| -------------- |
+|`class`| String | The dedicated host profile class for hosts in this group.|
+|`family`| String | The dedicated host profile family for hosts in this group.|
+|`id`| String | The unique ID of the dedicated host group.|
+|`href`| String | The URL for this dedicated host group.|
+|`crn`| String | The CRN for this dedicated host group.|
+| `created_at`| String | The date and time that the dedicated host group was created.|
+|`dedicated_hosts`| String | The dedicated hosts that are in this dedicated host group.|
+|`name`| String | The unique user defined name for this dedicated host group.|
+|`resource_type`| String | The type of resource referenced.|
+|`resource_group`| String | The unique ID of the resource group for this dedicated host.|
+|`supported_instance_profiles`| String | Array of instance profiles that can be used by instances placed on this dedicated host group.
+| `zone`| String | The zone this dedicated host resides in.|
+{: caption="Table 1. Available output parameters" caption-side="top"}
+
+### Import
+{: #is-dedicatedhost-group-import}
+
+`ibm_is_dedicated_host_group` can be imported by using dedicated host group ID.
+
+**Example**
+
+```
+terraform import ibm_is_dedicated_host_group.example 0716-5fa4a9c4-a194-4915-854b-10101010
+```
+
 ## `ibm_is_flow_log`
 {: #ibm_is_flow_log}
 
@@ -169,6 +328,7 @@ Review the input parameters that you can specify for your resource.
 | `active` | String | Optional | Indicates whether the collector is active. If `false`, this collector is created in inactive mode. Default value is true. | No |
 | `resource_group` | String | Optional | The resource group ID where the flow log is created. | Yes |
 | `tags` | Array of Strings | Optional | The tags associated with the flow log. | No |
+{: caption="Table 1. Available input parameters" caption-side="top"}
 
 ### Output parameters
 {: #ibm-is-flow-output}
@@ -185,6 +345,7 @@ Review the output parameters that you can access after your resource is created.
 | `lifecycle_state` | String | The lifecycle state of the flow log collector. |
 | `name`| String | The user-defined name of the flow log collector. |
 | `vpc` | String | The VPC of the flow log collector that is associated. |
+{: caption="Table 1. Available output parameters" caption-side="top"}
 
 ### Import
 {: #ibm-is-flow-import}
@@ -244,6 +405,7 @@ Review the input parameters that you can specify for your resource.
 | `zone` | String | Optional | Enter the name of the zone where you want to create the floating IP address. To list available zones, run `ibmcloud is zones`. If you specify this option, do not specify `target` at the same time. | 
 | `resource_group`|String|Optional| The resource group ID where you want to create the floating IP.|
 | `tags`|Array of string|Optional|Enter any tags that you want to associate with your VPC. Tags might help you find your VPC more easily after it is created. Separate multiple tags with a comma (`,`). |
+{: caption="Table 1. Available input parameters" caption-side="top"}
 
 ### Output parameters
 {: #floating-ip-output}
@@ -256,6 +418,7 @@ Review the output parameters that you can access after your resource is created.
 | `address` | String | The floating IP address that was created. | 
 | `id` | String | The unique identifier of the floating IP address. | 
 | `status` | String | The provisioning status of the floating IP address. |
+{: caption="Table 1. Available output parameters" caption-side="top"}
 
 ### Timeouts
 {: #floating-ip-timeout}
@@ -291,11 +454,11 @@ IKE is an IPSec (Internet Protocol Security) standard protocol that is used to e
 
 ```
 resource "ibm_is_ike_policy" "example" {
-    name = "test"
-    authentication_algorithm = "md5"
-    encryption_algorithm = "triple_des"
-    dh_group = 2
-    ike_version = 1
+  name                     = "test"
+  authentication_algorithm = "md5"
+  encryption_algorithm     = "triple_des"
+  dh_group                 = 2
+  ike_version              = 1
 }
 ```
 {: codeblock}
@@ -310,10 +473,10 @@ Review the input parameters that you can specify for your resource.
 | Input parameter | Data type | Required / optional | Description | Forces new resource |
 | ------------- |-------------| ----- | -------------- | ------- |
 | `authentication_algorithm` | String | Required | Enter the algorithm that you want to use to authenticate `IPSec` peers. Available options are `md5`, `sha1`, or `sha256`. | No |
-| `dh_group` | Integer | Required | Enter the Diffie-Hellman group that you want to use for the encryption key. Available options are `2`, `5`, or `14`. | No |
+| `dh_group` | Integer | Required | Enter the Diffie-Hellman group that you want to use for the encryption key. Available enumeration type are `2`, `5`, `14`, or `19`. | No |
 | `encryption_algorithm` | String | Required | Enter the algorithm that you want to use to encrypt data. Available options are: `triple_des`, `aes128`, or `aes256`. | No |
 | `ike_version` | Integer | Optional | Enter the IKE protocol version that you want to use. Available options are `1`, or `2`. | No |
-| `key_lifetime` | Integer | Optional | Enter the time in seconds that your encryption key can be used before it expires. You must enter a number between 300 and 86400. If you do not specify this option, 28800 seconds is used. | No | 
+| `key_lifetime` | Integer | Optional | The key lifetime in seconds. `Maximum: 86400`, `Minimum: 1800`. Default is `28800`. | No | 
 | `name` | String | Required | Enter a name for your IKE policy. |  No |
 | `resource_group` | String | Optional | Enter the ID of the resource group where you want to create the IKE policy. To list available resource groups, run `ibmcloud resource groups`. If you do not specify a resource group, the IKE policy is created in the `default` resource group. | Yes |
 
@@ -327,8 +490,11 @@ Review the output parameters that you can access after your resource is created.
 | ------------- |-------------| -------------- |
 | `href`| String| The canonical URL that was assigned to your IKE policy. | 
 | `id` | String | The unique identifier of the IKE policy that you created. |
-| `negotiation_mode` | String | The negotiation mode that was set for your IKE policy. Only `main` is supported. | 
-| `vpn_connections`| List | A collection of VPN connections that use the IKE policy. Every connection is listed with a VPC connection `name`, `id`, and `canonical URL`. |
+| `negotiation_mode` | String | The IKE negotiation mode that was set for your IKE policy. Only `main` is supported. | 
+| `vpn_connections`| List | A collection of VPN connections that use the IKE policy. |
+| `vpn_connections.name`|String | The name given to the VPN connection. |
+| `vpn_connections.id`| String | The unique identifier of a VPN connection. |
+| `vpn_connections.href` | String | The VPN connection's canonical URL. |
 
 ### Import
 {: #provider-ike-policy-import}
@@ -1199,6 +1365,7 @@ Review the input parameters that you can specify for your resource.
 |`tags`|Array of string|Optional|A list of tags that you want to add to your load balancer. Tags can help you find the load balancer more easily later. | No |
 |`type`|String|Optional|The type of the load balancer. Default value `public`. Supported values `public` and `private`.| Yes |
 |`logging`| Bool| Optional | Enable or disable datapath logging for the load balancer. This is applicable only for application load balancer. Supported values are `true` or `false`. Default value is `false`.|No|
+|`security_groups`|List|Optional|A list of security groups to use for this load balancer. This option is supported only for application load balancers.|No|
 
 ### Output parameters
 {: #lb-output}
@@ -1214,6 +1381,7 @@ Review the output parameters that you can access after your resource is created.
 |`public_ips`|String|The public IP addresses assigned to this load balancer.|
 |`private_ips`|String|The private IP addresses assigned to this load balancer.|
 |`status`|String|The status of the load balancer.|
+|`security_groups_supported`|Boolean|Indicates if this load balancer supports security groups.|
 
 ### Import
 {: #lb-import}
@@ -1942,6 +2110,7 @@ Review the input parameters that you can specify for your resource.
 |`name`|String|Optional|The security group name.| No |
 |`vpc`|String|Required|The VPC ID. | Yes |
 |`resource_group`|String|Optional|The resource group ID where the security group to be created.| No |
+|`tags`| List of strings| Optional | The tags associated with an instance.| No |
 {: caption="Table. Available input parameters" caption-side="top"}
 
 ### Output parameters
@@ -1953,15 +2122,16 @@ Review the output parameters that you can access after your resource is created.
 |Name|Data type|Description|
 |----|-----------|--------|
 |`id`|String|The ID of the security group.|
-|`rules`|List of objects|A nested block describes the rules of this security group. |
+|`rules`|List of objects|A nested block describes the rules of this security group. Nested `rules` blocks have the following structure.|
 |`rules.direction`| String|The direction of the traffic either `inbound` or `outbound`.  |
 |`rules.ip_version`|String|IP version either `ipv4` or `ipv6`.  |
-|`rules.remote`|String|Security group id, an IP address, a CIDR block, or a single security group identifier.  |
+|`rules.remote`|String|Security group id, an IP address, a `CIDR` block, or a single security group identifier.  |
 |`rules.protocol`|String|The type of the protocol `all`, `icmp`, `tcp`, `udp`.   |
-|`rules.type`|String|The ICMP traffic type to allow.  |
-|`rules.code`|String|The ICMP traffic code to allow.  |
-|`rules.port_max`|Integer|The TCP/UDP port range that includes the maximum bound. |
-|`rules.port_min`|Integer|The TCP/UDP port range that includes the minimum bound. |
+|`rules.type`|String|The `ICMP` traffic type to allow.  |
+|`rules.code`|String|The `ICMP `traffic code to allow.  |
+|`rules.port_max`|Integer|The `TCP/UDP` port range that includes the maximum bound. |
+|`rules.port_min`|Integer|The `TCP/UDP` port range that includes the minimum bound. |
+|`crn`|String| the CRN of the security group.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 
@@ -2433,6 +2603,103 @@ terraform import ibm_is_subnet_network_acl_attachment.example d7bec597-4726-451f
 {: pre}
 
 
+## `ibm_is_subnet_reserved_ip`
+{: #subnet-reserved-ip}
+
+Create, update, or delete a subnet. For more information, about associated reserved IP subnet, see [reserved IP subnet](/docs/vpc?topic=vpc-troubleshoot-reserved-ip).
+{: shortdesc}
+{: shortdesc}
+
+### Sample Terraform code
+{: #subnet-reserved-ip-sample}
+
+```
+ // Create a VPC
+    resource "ibm_is_vpc" "vpc1" {
+        name = "my-vpc"
+    }
+
+    // Create a subnet
+    resource "ibm_is_subnet" "subnet1" {
+        name                     = "my-subnet"
+        vpc                      = ibm_is_vpc.vpc1.id
+        zone                     = "us-south-1"
+        total_ipv4_address_count = 256
+    }
+
+    // Create the resrved IP in the following ways
+
+    // Only with Subnet ID
+    resource "ibm_is_subnet_reserved_ip" "res_ip" {
+        subnet = ibm_is_subnet.subnet1.id
+    }
+
+    // Subnet ID with a given name
+    resource "ibm_is_subnet_reserved_ip" "res_ip_name" {
+        subnet = ibm_is_subnet.subnet1.id
+        name = "my-subnet"
+    }
+
+    // Subnet ID with auto_delete
+    resource "ibm_is_subnet_reserved_ip" "res_ip_auto_delete" {
+        subnet = ibm_is_subnet.subnet1.id
+        auto_delete = true
+    }
+
+    // Subnet ID with both name and auto_delete
+    resource "ibm_is_subnet_reserved_ip" "res_ip_auto_delete_name" {
+        subnet = ibm_is_subnet.subnet1.id
+        name = "my-subnet"
+        auto_delete = true
+    }
+```
+{: codeblock}
+
+### Input parameters
+{: #subnet-reserved-ip-input}
+
+Review the input parameters that you can specify for your resource. 
+{: shortdesc}
+
+|Name|Data type|Required / optional|Description|Forces new resource |
+|----|-----------|-----------|---------------------|-------|
+|`subnet`|String|Required| The subnet ID for the reserved IP.| Yes |
+|`name`|String|Optional| The name of the reserved IP. **NOTE** raise  error if name is given with a prefix `ibm-`.| No |
+|`auto_delete`|Bool|Optional| If reserved IP is auto deleted.| No |
+{: caption="Table. Available input parameters" caption-side="top"}
+
+### Output parameters
+{: #subnet-reserved-ip-output}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+|Name|Data type|Description|
+|----|-----------|--------|
+|`id`|String|The combination of the subnet ID and reserved IP ID seperated by **/**.|
+|`reserved_ip`|String|The reserved IP.|
+{: caption="Table 1. Available output parameters" caption-side="top"}
+
+### Import
+{: #subnet-reserved-ip-import}
+
+The `ibm_is_subnet` can be imported by using the ID. 
+The `ibm_is_subnet_reserved_ip` can be imported by using subnet ID and reserved IP ID seperated by **/**.
+
+**Syntax**
+
+```
+terraform import ibm_is_subnet.example <reserved_subnet_IP>
+```
+{: pre}
+
+**Example**
+
+```
+terraform import ibm_is_subnet_reserved_ip.example 0716-13315ad8-d355-4041-bb60-623423423/0716-617de4d8-5e2f-4d4a-b0d6-123123
+```
+{: pre}
+
 ## `ibm_is_virtual_endpoint_gateway`
 {: #virtual-endpoint-gwy}
 
@@ -2723,6 +2990,9 @@ Review the input parameters that you can specify for your resource.
 | `name` | String | Required | Enter a name for your VPC. |  No |
 | `resource_group` | String | Optional | Enter the ID of the resource group where you want to create the VPC. To list available resource groups, run `ibmcloud resource groups`. If you do not specify a resource group, the VPC is created in the `default` resource group. |  Yes |
 | `tags` | Array of Strings | Optional | Enter any tags that you want to associate with your VPC. Tags might help you find your VPC more easily after it is created. Separate multiple tags with a comma (`,`). |  No |
+|`default_network_acl_name`|String|Optional|Enter the name of the default network access control list (ACL).|No|
+|`default_security_group_name`|String|Optional|Enter the name of the default security group.|No|
+|`default_routing_table_name`|String|Optional|Enter the name of the default routing table.|No|
 
 
 ### Output parameters
@@ -3010,6 +3280,19 @@ resource "ibm_is_vpc_routing_table_route" "test_ibm_is_vpc_routing_table_route" 
 ```
 {: codeblock}
 
+```
+resource "ibm_is_vpc_routing_table_route" "test_ibm_is_vpc_routing_table_route" {
+  vpc = ""
+  routing_table = ""
+  zone = "us-south-1"
+  name = "custom-route-2"
+  destination = "192.168.4.0/24"
+  action = "deliver"
+  next_hop = vpnConnectinID
+}
+```
+{: codeblock}
+
 ### Input parameters
 {: #vpc-routing-table-route-input}
 
@@ -3018,13 +3301,14 @@ Review the input parameters that you can specify for your resource.
 
 |Name|Data type|Required / optional|Description| Forces new resource |
 |----|-----------|-----------|---------------------| ------ |
-|`action`|String|Optional|The action to perform with a packet matching the route. | No |
+|`action`|String|Optional|The action to perform with a packet matching the route `delegate`, `delegate_vpc`, `deliver`, `drop`. | No |
 |`destination`|String|Required| The destination of the route. |  Yes |
 |`name`|String|Optional|The user-defined name of the route. If unspecified, the name will be a hyphenated list of randomly selected words. You need to provide unique name within the VPC routing table the route resides in.| No |
-|`next_hop`|String|Required| The next hop of the route. |  Yes |
+|`next_hop`|String|Required| The next hop of the route. It accepts IP address or a VPN connection ID. For `action` other than `deliver`, you must specify `0.0.0.0`. |  Yes |
 |`routing_table`|String|Required|The routing table ID.| No |
 |`vpc`|String|Required| The VPC ID.| Yes |
 |`zone`|String|Required| Name of the zone. |  Yes |
+{: caption="Table 1. Available input parameters" caption-side="top"}
 
 ### Output parameters
 {: #vpc-routing-table-route-output}

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04"
+lastupdated: "2021-04-03"
 
-keywords: terraform provider plugin, terraform key management service, terraform key management, terraform kms, kms, terraform key protect, terraform kp, terraform root key, hyper protect crypto service, HPCS
+keywords: terraform provider plugin, terraform key management service, terraform key management, terraform kms, kms, terraform key protect, terraform kp, terraform root key, hyper protect crypto service, HPCS, 
 
 subcollection: ibm-cloud-provider-for-terraform
 
@@ -99,8 +99,10 @@ subcollection: ibm-cloud-provider-for-terraform
 Create, modify, or delete [{{site.data.keyword.cloud_notm}} Key Protect](/docs/key-protect?topic=key-protect-about) resources.
 {: shortdesc}
 
+
 Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
+
 
 ## `ibm_kms_key`
 {: #kms-key}
@@ -240,6 +242,7 @@ Review the input parameters that you can specify for your resource.
 |`instance_id`|String|Required|The HPCS or key-protect instance ID.| Yes |
 |`iv_value`|String|Optional| Used with import tokens. The initialization vector (IV) that is generated when you encrypt a nonce. The IV value is required to decrypt the encrypted nonce value that you provide when you make a key import request to the service. To generate an IV, encrypt the nonce by running `ibmcloud kp import-token encrypt-nonce`. Only for imported root key.|  Yes |
 |`key_name`|String|Required|The name of the key.| Yes |
+|`key_ring_id`|String|Optional|The ID of the key ring where you want to add your Key Protect key. The default value is `default`. |Yes|
 |`payload`|String|Optional| The base64 encoded key that you want to store and manage in the service. To import an existing key, provide a 256-bit key. To generate a new key, omit this parameter.| Yes |
 |`standard_key`|Bool|Optional|Set flag `true` for standard key, and `false` for root key. Default value is **false**.| Yes |
 |`policies`|List|Optional|Set policies for a key, for an automatic rotation policy or a dual authorization policy to protect against the accidental deletion of keys. Policies follow the following structure.| No |
@@ -261,6 +264,7 @@ Review the output parameters that you can access after your resource is created.
 |`crn`|String|The CRN of the key.|
 |`status`|String|The status of the key.|
 |`key_id`|String|The ID of the key.|
+|`key_ring_id`|String|The ID of the key ring that your Key Protect key belongs to.|
 |`type`|String|The type of the key KMS or HPCS.|
 |`policy`|String|The policies associated with the key.|
 |`policy.rotation`|String|The key rotation time interval in months, with a minimum of 1, and a maximum of 12.|
@@ -291,6 +295,143 @@ Review the output parameters that you can access after your resource is created.
 terraform import ibm_kms_key.crn crn:v1:bluemix:public:kms:us-south:a/faf6addbf6bf4768hhhhe342a5bdd702:05f5bf91-ec66-462f-80eb-8yyui138a315:key:52448f62-9272-4d29-a515-15019e3e5asd
 ```
 {: pre}
+
+## `ibm_kms_key_alias`
+{: #kms-key-alias}
+
+Create, modify, or delete a key management resource for hs-crypto and key protect services by using aliases. For more information, about key management aliases, see [creating key aliases](/docs/key-protect?topic=key-protect-create-key-alias).
+{: shortdesc}
+
+
+### Sample Terraform code
+{: #kms-key-alias-sample}
+
+Sample example to provision key protect service and key management with alias.
+{: shortdesc}
+
+An alias that identifies a key is unique only within the given instance and is not reserved across the key protect service. Each key can have up to five aliases. There is a limit of 1000 aliases per instance. Alias must be alphanumeric and cannot contain spaces or special characters other than `-` or `_`.
+{: note}
+
+```
+resource "ibm_resource_instance" "kms_instance" {
+  name     = "instance-name"
+  service  = "kms"
+  plan     = "tiered-pricing"
+  location = "us-south"
+}
+resource "ibm_kms_key" "test" {
+  instance_id  = ibm_resource_instance.kms_instance.guid
+  key_name     = "key-name"
+  standard_key = false
+  force_delete =true
+}
+resource "ibm_kms_key_alias" "key_alias" {
+    instance_id = ibm_kms_key.test.instance_id
+    alias  = "alias"
+    key_id = "ibm_kms_key.test.key_id"
+}
+resource "ibm_cos_bucket" "flex-us-south" {
+  bucket_name          = "atest-bucket"
+  resource_instance_id = "cos-instance-id"
+  region_location      = "us-south"
+  storage_class        = "flex"
+  key_protect          = ibm_kms_key.test.id
+}
+```
+{: codeblock}
+
+
+
+### Input parameters
+{: #kms-key-alias-input}
+
+Review the input parameters that you can specify for your resource. 
+{: shortdesc}
+
+|Name|Data type|Required / optional|Description| Forces new resource |
+|----|-----------|-----------|---------------------| ------- |
+|`instance_id`|String|Required| The hs-crypto or key protect instance GUID.|Yes|
+|`alia`|String|Required| The alias name of the key.|Yes|
+|`key_id`|String|Required| The key ID for which alias has to be created.|No|
+|`endpoint_type`|String|Optional| The type of the public endpoint, or private endpoint to be used for creating keys.|Yes|
+{: caption="Table 1. Available input parameters" caption-side="top"}
+
+### Output parameters
+{: #kms-key-alias-output}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+|Name|Data type|Description|
+|----|-----------|--------|
+|`id`|String|The CRN of the key.|
+|`alias`|String|The alias of the key. |
+|`key_id`|String|The ID of the key.|
+|`instance_id`|String|The instance ID.|
+|`endpoint_type`|String|The type of endpoint.|
+{: caption="Table 1. Available output parameters" caption-side="top"}
+
+## `ibm_kms_key_rings`
+{: #kms-key-rings}
+
+Create, modify, or delete a key rings for hs-crypto and key protect services. Key rings created through this resource can be used to associate to kms key resource when a standard or a root key gets created or imported. For more information, about key management rings, see [creating key rings](/docs/key-protect?topic=key-protect-grouping-keys#create-key-ring-api).
+{: shortdesc}
+
+### Sample Terraform code
+{: #kms-key-rings-sample}
+
+Sample example to provision key ring and associate a key management service key.
+{: shortdesc}
+
+
+```
+resource "ibm_resource_instance" "kms_instance" {
+  name     = "instance-name"
+  service  = "kms"
+  plan     = "tiered-pricing"
+  location = "us-south"
+}
+resource "ibm_kms_key_rings" "keyRing" {
+  instance_id = ibm_resource_instance.kms_instance.guid
+  key_ring_id = "key-ring-id"
+}
+resource "ibm_kms_key" "key" {
+  instance_id = ibm_resource_instance.kp_instance.guid
+  key_name       = "key"
+  key_ring_id = ibm_kms_key_rings.keyRing.key_ring_id
+  standard_key   = false
+  payload = "aW1wb3J0ZWQucGF5bG9hZA=="
+}
+```
+{: codeblock}
+
+
+### Input parameters
+{: #kms-key-rings-input}
+
+Review the input parameters that you can specify for your resource. 
+{: shortdesc}
+
+|Name|Data type|Required / optional|Description| Forces new resource |
+|----|-----------|-----------|---------------------| ------- |
+|`instance_id`|String|Required| The hs-crypto or key protect instance GUID.|Yes|
+|`key_ring_id`|String|Required| The ID that identifies the key ring. Each ID is unique within the given instance and is not reserved across the key protect service. **Constraints** `2 ≤ length ≤ 100`. Value must match regular expression of `^[a-zA-Z0-9-]*$`. |Yes|
+|`key_id`|String|Required| The key ID for which alias has to be created.|No|
+|`endpoint_type`|String|Optional| The type of the public endpoint, or private endpoint to be used for creating keys.|Yes|
+{: caption="Table 1. Available input parameters" caption-side="top"}
+
+### Output parameters
+{: #kms-key-rings-output}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+|Name|Data type|Description|
+|----|-----------|--------|
+|`id`|String|The unique ID for the Terraform resource.|
+|`key_ring_id`|String|The key ring ID.|
+{: caption="Table 1. Available output parameters" caption-side="top"}
+
 
 ## `ibm_kp_key`
 {: #kp-key}

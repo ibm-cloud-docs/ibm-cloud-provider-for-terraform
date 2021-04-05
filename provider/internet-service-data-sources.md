@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-05"
 
 keywords: terraform internet services, terraform cis, terraform provider plugin
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -145,6 +143,71 @@ Review the output parameters that you can access after you retrieved your data s
 | `plan` | String | The service plan for the instance. |
 | `location` | String | The location of your instance. |
 | `status` | String | The status of your instance. |
+
+
+## `ibm_cis_cache_settings`
+{: #cis-cache-settings}
+
+Retrieve an information of an existing internet services cache settings. For more information, about understanding CIS cache settings, see [caching concepts](/docs/cis?topic=cis-caching-concepts).
+{: shortdesc}
+
+### Sample Terraform code
+{: #cis-cache-settings-dssample}
+
+```
+data "ibm_cis_cache_settings" "test" {
+  cis_id    = data.ibm_cis_cache_settings.test.cis_id
+  domain_id = data.ibm_cis_cache_settings.test.domain_id
+}
+```
+{: codeblock}
+
+### Input parameters
+{: #cis-cache-settings-dsinput}
+
+Review the input parameters that you can specify for your data source. 
+{: shortdesc}
+
+|Name|Data type|Required/optional|Description|
+|----|-----------|------|--------|
+|`cis_id`|String|Required| The resource CIS ID of the CIS on which zones were created. |
+|`domain_id`|String|Required|The resource domain ID of the DNS on which zones were created. |
+{: caption="Table 1. Available input parameters" caption-side="top"}
+
+
+### Output parameters
+{: #cis-cache-settings-dsoutput}
+
+Review the output parameters that you can access after you retrieved your data source. 
+{: shortdesc}
+
+|Name|Data type|Description|
+|----|-----------|----------|
+| `caching_level` | String | The cache level setting of a specific zone.|
+| `caching_level.id` | String | The cache level ID.|
+| `caching_level.value` | String | The cache level value `basic`, `simplified`, or `aggressive`.|
+| `caching_level.editable` | String | The cache level editable value.|
+| `caching_level.modified_on` | String | The cache level modified date.|
+| `browser_expiration` | String | The browser cache TTL (in seconds) specifies how long `CDN` edge servers cached resources will remain on your visitors' computers.|
+| `browser_expiration.id` | String | The browser expiration TTL type id.|
+| `browser_expiration.value` | String | The browser expiration TTL value.|
+| `browser_expiration.editable` | String | The browser expiration editable value.|
+| `browser_expiration.modified_on` | String | The browser expiration modified date.|
+| `development_mode` | String | The development mode settings of a specific zone.|
+| `development_mode.id` | String | The development mode object ID.|
+| `development_mode.value` | String | The development mode value. on and off.|
+| `development_mode.editable` | String | The development mode editable value.|
+| `development_mode.modified_on` | String | The development mode modified date.|
+| `query_string_sort` | String | Enables query string sort settings.|
+| `query_string_sortid` | String | The query string sort cache ID.|
+| `query_string_sort.value` | String | The query string sort value.on and off.|
+| `query_string_sort.editable` | String | The query string sort editable propery.|
+| `query_string_sort.modified_on` | String | The query string sort modified date.|
+| `serve_stale_content` | String | The serve stale content will serve pages from `CDN` edge servers cache if your server is offline.|
+| `serve_stale_content.id` | String | The serve stale content cache ID.|
+| `serve_stale_content.value` | String | The serve stale content value.on and off.|
+| `serve_stale_content.editable` | String | The serve stale content editable value.|
+| `serve_stale_content.modified_on` | String | The serve stale content modified date.|
 
 ## `ibm_cis_certificates`
 {: #cis-certificates}
@@ -819,6 +882,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`bypass`|List of bypass criteria|A list of key-value pairs that, when matched, allow the rate limiting rule to be ignored.  |
 |`bypass.name`|String|The name of the key that you want to apply. Supported values are `url`. |
 |`bypass.value`|String|The value of the key that you want to match. When `bypass.name` is set to `url`, `bypass.value` contains the URL that you want to exclude from the rate limiting rule. |
+
 
 ## `ibm_cis_page_rules`
 {: #cis-page-rules}

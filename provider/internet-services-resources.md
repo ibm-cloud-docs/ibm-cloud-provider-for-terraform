@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-04-01"
 
 keywords: terraform provider, terraform resources internet service, terraform resources cis, tf provider plugin
 
@@ -202,6 +202,7 @@ resource "ibm_cis_cache_settings" "cache_settings" {
   development_mode   = "off"
   query_string_sort  = "off"
   purge_all          = true
+  serve_stale_content = "off"
 }
 ```
 {: codeblock}
@@ -224,6 +225,7 @@ Review the input parameters that you can specify for your resource.
 |`purge_by_hosts`|List of string|Optional| Purge cached hosts.|
 |`purge_by_tags`|List of string|Optional| Purge cached item that matches the tags.|
 |`query_string_sort`|String|Optional|The query string sort settings. Valid values are `on`, and `off`.|
+|`serve_stale_content`|String|Optional|Enable (`on`) or disable (`off`) the serve stale content setting.|
 
 - Among all the purge actions `purge_all`, `purge_by-urls`, `purge_by_hosts`, and `purge_by_tags`, only one is allowed to give inside a resource.
 - `serve_stale_content` is not supported yet.

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18" 
+lastupdated: "2021-04-04" 
 
-keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes
+keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes, observability logging, observability monitoring
 
 subcollection: ibm-cloud-provider-for-terraform
 
@@ -890,6 +890,222 @@ The following timeouts are defined for this resource.
 
 * **create**: The enablement of the feature is considered `failed` if no response is received for 90 minutes.
 * **update**: The update of the feature is considered `failed` if no response is received for 90 minutes. 
+
+
+## `ibm_ob_logging`
+{: #observability-logging}
+
+
+Create, update, or delete a logging instance. This resource creates a logging configuration for your cluster to automatically collect pod logs and send them to {{site.data.keyword.loganalysislong_notm}. For more information, about Observability plug-in, see [managing  Observability logging commands](/docs/containers?topic=containers-observability_cli).
+{: shortdesc}
+
+### Sample Terraform code
+{: #observability-logging-sample}
+
+The following example enables you to create a logging configuration. 
+
+```
+data "ibm_resource_group" "testacc_ds_resource_group" {
+  name = "Default"
+}
+
+resource "ibm_container_cluster" "testacc_cluster" {
+  name              = "TestCluster"
+  datacenter        = "dal10"
+  resource_group_id = data.ibm_resource_group.testacc_ds_resource_group.id
+  default_pool_size = 1
+  wait_till         = "MasterNodeReady"
+  hardware          = "shared"
+  machine_type      = "%s"
+  timeouts {
+    create = "720m"
+    update = "720m"
+  }
+}
+
+resource "ibm_resource_instance" "instance" {
+  name     = "TestLogging"
+  service  = "logdna"
+  plan     = "7-day"
+  location = "us-south"
+}
+
+resource "ibm_resource_key" "resourceKey" {
+  name                 = "TestKey"
+  resource_instance_id = ibm_resource_instance.instance.id
+  role                 = "Manager"
+}
+
+resource "ibm_ob_logging" "test2" {
+  depends_on  = [ibm_resource_key.resourceKey]
+  cluster     = ibm_container_cluster.testacc_cluster.id
+  instance_id = ibm_resource_instance.instance.guid
+}
+
+```
+{: codeblock}
+
+### Input parameters
+{: #observability-logging-input}
+
+Review the input parameters that you can specify for your resource. 
+{: shortdesc}
+
+| Input parameter | Data type | Required / optional | Description | 
+| ------------- |-------------| ----- | -------------- | 
+| `cluster` | String | Required | The name or ID of the cluster.|
+| `instance_id` | String | Required |  The GUID of the monitoring instance.|
+| `logdna_ingestion_key` | String | Optional | The LogDNA ingestion key that you want to use for your configuration.|
+| `private_endpoint` | String | Optional | Add this option to connect to your logging service instance through the private service endpoint.|
+{: caption="Table. Available input parameters" caption-side="top"}
+
+### Output parameters
+{: #observability-logging-output}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+| Output parameter | Data type | Description |
+| ------------ |-------------| -------------- |
+| `id` | String | The ID of the cluster feature. | 
+| `public_service_endpoint_url` | String | The URL to the public service endpoint of your cluster. | 
+| `private_service_endpoint_url` | String | The URL to the private service endpoint of your cluster. | 
+| `id` | String | The unique identifier of the logging instance attach to cluster. The ID is composed of `<cluster_name_id>/< logging_instance_id>`.|
+| `instance_name` | String | Name of the logging instance.|
+| `agent_key` | String | The {{site.data.keyword.at_full_notm}} agent key.|
+| `agent_namespace` | String | The {{site.data.keyword.at_full_notm}} agent namespace.|
+| `daemonset_name` | String | The name of the deamon set.|
+| `namespace` | String | The name of namespace.|
+| `crn` | String | The CRN of the {{site.data.keyword.at_full_notm}} instance attach.|
+{: caption="Table. Available output parameters" caption-side="top"}
+
+### Import
+{: #observability-logging-import}
+
+`ibm_ob_logging` can be imported by using `cluster_name_id`, `logging_instance_id`.
+
+```
+terraform import ibm_ob_logging.example mycluster/5c4f4d06e0dc402084922dea70850e3b-7cafe35
+```
+{: codeblock}
+
+### Timeouts
+{: #observability-logging-timeout}
+
+The following timeouts are defined for this resource. 
+{: shortdesc}
+
+* **create**: The enablement of the feature is considered `failed` if no response is received for 10 minutes.
+* **delete**: The delete of the feature is considered `failed` if no response is received for 10 minutes. 
+* **update**: The update of the feature is considered `failed` if no response is received for 10 minutes. 
+
+
+
+## `ibm_ob_monitoring`
+{: #observability-monitoring}
+
+
+Create, update, or delete a monitoring instance. This resource creates a monitoring configuration for your {{site.data.keyword.containerlong_notm}} cluster to automatically collect pod metrics, and send these metrics to your monitoring service instance. For more information, about Observability monitoring, see [setting up loggin with {{site.data.keyword.loganalysislong_notm}}](docs/containers?topic=containers-istio-health).
+{: shortdesc}
+
+### Sample Terraform code
+{: #observability-monitoring-sample}
+
+The following example enables you to create a monitoring configuration. 
+
+```
+data "ibm_resource_group" "testacc_ds_resource_group" {
+  name = "Default"
+}
+
+resource "ibm_container_cluster" "testacc_cluster" {
+  name              = "TestCluster"
+  datacenter        = "dal10"
+  resource_group_id = data.ibm_resource_group.testacc_ds_resource_group.id
+  default_pool_size = 1
+  wait_till         = "MasterNodeReady"
+  hardware          = "shared"
+  machine_type      = "%s"
+  timeouts {
+    create = "720m"
+    update = "720m"
+  }
+}
+
+resource "ibm_resource_instance" "instance" {
+  name     = "TestMonitoring"
+  service  = "sysdig-monitor"
+  plan     = "graduated-tier"
+  location = "us-south"
+}
+
+resource "ibm_resource_key" "resourceKey" {
+  name                 = "TestKey"
+  resource_instance_id = ibm_resource_instance.instance.id
+  role                 = "Manager"
+}
+
+resource "ibm_ob_monitoring" "test2" {
+  depends_on  = [ibm_resource_key.resourceKey]
+  cluster     = ibm_container_cluster.testacc_cluster.id
+  instance_id = ibm_resource_instance.instance.guid
+}
+```
+{: codeblock}
+
+### Input parameters
+{: #observability-monitoring-input}
+
+Review the input parameters that you can specify for your resource. 
+{: shortdesc}
+
+| Input parameter | Data type | Required / optional | Description | 
+| ------------- |-------------| ----- | -------------- | 
+| `cluster` | String | Required | The name or ID of the cluster.|
+| `instance_id` | String | Required |  The GUID of the monitoring instance.|
+| `logdna_ingestion_key` | String | Optional | The LogDNA ingestion key that you want to use for your configuration.|
+| `private_endpoint` | String | Optional | Add this option to connect to your logging service instance through the private service endpoint.|
+| `sysdig_access_key` | String | Optional | The monitoring ingestion key that you want to use for your configuration.|
+| `private_endpoint`| String | Optional |  Add this option to connect to your monitoring service instance through the private service endpoint.|
+{: caption="Table. Available input parameters" caption-side="top"}
+
+### Output parameters
+{: #observability-monitoring-output}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+| Output parameter | Data type | Description |
+| ------------ |-------------| -------------- |
+| `id` | String | The unique identifier of the logging instance attach to cluster. The ID is composed of `<cluster_name_id>/< logging_instance_id>`.|
+| `instance_name` | String | The name of the logging instance.|
+| `agent_key` | String | The {{site.data.keyword.at_full_notm}} agent key.|
+| `agent_namespace` | String | The {{site.data.keyword.at_full_notm}} agent namespace.|
+| `discovered_agent` | String | The name of the discovered agent.|
+| `namespace` | String | The name of namespace.|
+| `crn` | String | The CRN of the instance attach.|
+{: caption="Table. Available output parameters" caption-side="top"}
+
+### Import
+{: #observability-monitoring-import}
+
+`ibm_ob_monitoring` can be imported by using `cluster_name_id`, `monitoring_instance_id`.
+
+```
+terraform import ibm_ob_monitoring.example mycluster/5c4f4d06e0dc402084922dea70850e3b-7cafe35
+```
+{: codeblock}
+
+### Timeouts
+{: #observability-monitoring-timeout}
+
+The following timeouts are defined for this resource. 
+{: shortdesc}
+
+* **create**: The enablement of the feature is considered `failed` if no response is received for 10 minutes.
+* **delete**: The delete of the feature is considered `failed` if no response is received for 10 minutes. 
+* **update**: The update of the feature is considered `failed` if no response is received for 10 minutes. 
+
 
 ## `ibm_container_worker_pool`
 {: #container-pool}
