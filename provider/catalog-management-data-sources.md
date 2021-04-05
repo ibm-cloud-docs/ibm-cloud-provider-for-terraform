@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2021
 lastupdated: "2021-04-05"
 
-keywords: terraform catalog management resources, terraform catalog offering instance, catalog management, catalog management offering instance, catalog management offering, catalog management version
+keywords:  terraform catalog management data sources, terraform catalog offering instance, catalog management, catalog management offering instance, catalog management offering, catalog management version
 
 subcollection: ibm-cloud-provider-for-terraform
 
@@ -93,198 +93,194 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 
-# Catalog Management resources 
-{: #cm-resources}
+# Catalog Management data sources 
+{: #cm-data-sources}
 
-Create, modify, or delete [{{site.data.keyword.cloud_notm}} catalog management](/docs/cli?topic=cli-manage-catalogs-plugin) resources. 
+Review the data sources that you can use to retrieve information about your [{{site.data.keyword.cloud_notm}} catalog management](/docs/cli?topic=cli-manage-catalogs-plugin). All data sources are imported as read-only information. You can reference the output parameters for each data source by using Terraform interpolation syntax.
 {: shortdesc}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
 
 
-
 ## `ibm_cm_catalog`
-{: #cm-catalog}
+{: #cm-catalog-ds}
 
 Create, modify, or delete an `cm_catalog` resources. You can manage the settings for all catalogs across your account. For more information, about managing catalog, refer to [catalog management settings](/docs/account?topic=account-account-getting-started).
 {: shortdesc}
 
 
 ### Sample Terraform code
-{: #cm-catalog-sample}
+{: #cm-catalog-dssample}
 
 
 ```
-resource "ibm_cm_catalog" "cm_catalog" {
-  label = "placeholder"
-  short_description = "placeholder"
+data "cm_catalog" "cm_catalog" {
+	catalog_identifier = "catalog_identifier"
 }
 ```
 {: codeblock}
 
 ### Input parameters
-{: #cm-catalog-input}
+{: #cm-catalog-dsinput}
 
-Review the input parameters that you can specify for your resource. 
+Review the input parameters that you can specify for your data source. 
 {: shortdesc}
 
-| Input parameter | Data type | Required / optional | Description | Forces new resource |
-| ------------- |-------------| ----- | ------ | -------- |
-| `label` | String | Required | The display name in the requested language.| Yes |
-| `short_description` | String | Optional | The short description in the requested language.| Yes |
+| Input parameter | Data type | Required / optional | Description |
+| ------------- |-------------| ----- | ------ |
+| `catalog_identifier` | String | Required | The catalog identifier.|
 {: caption="Table: Available input parameters" caption-side="top"}
 
 ### Output parameters
-{: #cm-catalog-output}
+{: #cm-catalog-dsoutput}
 
-Review the output parameters that you can access after your resource is created. 
+Review the output parameters that you can access after your data source is created. 
 {: shortdesc}
 
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
-| `id` | String | The unique identifier of the cm_catalog.|
-| `url` | String | The URL for this specific catalog.|
+| `id` | String | The unique identifier of the `cm_catalog`.|
+| `label` | String | Display the name in the requested language.|
+| `short_description` | String | The description in the requested language.|
+| `catalog_icon_url` | String | The URL for an icon associated with the catalog.|
+| `tags` | String | The list of tags associated with this catalog.|
+| `url` | String | The URL for the specific catalog.|
 | `crn` | String | The CRN associated with the catalog.|
-| `offerings_url` | String | The URL path to offerings.|
 {: caption="Table: Available output parameters" caption-side="top"}
 
 
 ## `ibm_cm_offering`
-{: #cm-offering}
+{: #cm-offering-ds}
 
-Create, modify, or delete an `cm_offering` resources. You can manage the settings for all catalogs across your account. For more information, about managing catalog, refer to [catalog management settings](/docs/account?topic=account-account-getting-started).
+Create, modify, or delete an `cm_offering` data source. You can manage the settings for all catalogs across your account. For more information, about managing catalog, refer to [catalog management settings](/docs/account?topic=account-account-getting-started).
 {: shortdesc}
 
 ### Sample Terraform code
-{: #cm-offering-sample}
+{: #cm-offering-dssample}
 
 
 ```
-resource "ibm_cm_offering" "cm_offering" {
-  catalog_id = "catalog_id"
-  label = "placeholder"
-  tags = [ "placeholder" ]
+data "cm_offering" "cm_offering" {
+	catalog_identifier = "catalog_identifier"
+	offering_id = "offering_id"
 }
 ```
 {: codeblock}
 
 ### Input parameters
-{: #cm-offering-input}
+{: #cm-offering-dsinput}
 
-Review the input parameters that you can specify for your resource. 
+Review the input parameters that you can specify for your data source. 
 {: shortdesc}
 
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | --------| 
-| `catalog_identifier` | String | Required | Catalog identifier.|
-| `label` | String | Optional | Display the name in the requested language.|
-| `tags` | List | Optional |  List of tags associated with the catalog.|
+| `catalog_identifier` | String | Required | The catalog identifier.|
+| `offering_id` | String | Required | The offering identification.|
 {: caption="Table: Available input parameters" caption-side="top"}
 
 ### Output parameters
-{: #cm-offering-output}
+{: #cm-offering-dsoutput}
 
-Review the output parameters that you can access after your resource is created. 
+Review the output parameters that you can access after your data source is created. 
 {: shortdesc}
 
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
-| `id` | String | The unique identifier of the cm_offering.|
+| `id` | String | The unique identifier of the `cm_offering`.|
 | `url` | String | The URL for the specific offering.|
 | `crn` | String | The CRN for the specific offering.|
+| `label` | String | Display the name in the requested language.|
 | `name` | String | The programmatic name of the offering.|
+| `offering_icon_url` | String | The URL for an icon associated with the offering.|
+| `offering_docs_url` | String | The URL for an extra documentation with the offering.|
+| `offering_support_url` | String | The URL to be displayed in the consumption UI for getting support on the offering.|
 | `short_description` | String | The short description in the requested language.|
 | `long_description` | String | The long description in the requested language.|
 | `permit_request_ibm_public_publish` | String | Is it permitted to request publishing to {{site.data.keyword.ibm_notm}} or public.|
 | `ibm_publish_approved` | String | Indicates if the offering has been approved for use by all IBMers.|
-| `public_publish_approved` | String | Indicates if the offering has been approved for use by all {{site.data.keyword.cloud_notm}} users.|
-| `public_original_crn` | String | The original offering CRN has published.|
+| `public_publish_approved` | String | Indicates if the offering has been approved to all {{site.data.keyword.cloud_notm}} users.|
+| `public_original_crn` | String | The original offering CRN that is published.|
 | `publish_public_crn` | String | The CRN of the public catalog entry of the offering.|
 | `portal_approval_record` | String | The portal's approval record ID.|
 | `portal_ui_url` | String | The portal UI URL.|
 | `catalog_id` | String | The ID of the catalog containing this offering.|
 | `catalog_name` | String | The name of the catalog.|
 | `disclaimer` | String | A disclaimer for the offering.|
-| `repo_info` | String | Repository information for the offerings.|
-| `repo_info.token` | String | Token for the private repository.|
+| `hidden` | String | Determine if the offering should be displayed in the consumption UI.|
+| `provider` | String | Provider of this offering.|
+| `repo_info` | String | Repository information for offerings. Nested `repo_info` blocks have the following structure.|
+| `repo_info.token` | String | The token for the private repository.|
 | `repo_info.type` | String | The public or enterprise GitHub.|
 {: caption="Table: Available output parameters" caption-side="top"}
 
 
 ## `ibm_cm_offering_instance`
-{: #cm-offering-instance}
+{: #cm-offering-instanceds}
 
-Create, modify, or delete an `ibm_cm_offering_instance` resources. You can manage the settings for all catalogs across your account. Management tasks include setting the visibility of the {{site.data.keyword.cloud_notm}} catalog and controlling access to products in the public catalog and private catalogs for users in your account. For more information, about managing catalog, refer to [catalog management settings](/docs/account?topic=account-account-getting-started).
+Create, modify, or delete an `ibm_cm_offering_instance` data source.  For more information, about managing catalog, refer to [catalog management settings](/docs/account?topic=account-account-getting-started).
 {: shortdesc}
 
 
 ### Sample Terraform code
-{: #cm-offering-instance-sample}
+{: #cm-offering-instance-dssample}
 
 
 ```
-resource "ibm_cm_offering_instance" "cm_offering_instance" {
-  catalog_id = "catalog_id"
-  label = "placeholder"
-  kind_format = "operator"
-  version = "placeholder"
-  cluster_id = "placeholder"
-  cluster_region = "placeholder"
-  cluster_namespaces = [ "placeholder", "placeholder2" ]
-  cluster_all_namespaces = false
+data "cm_offering_instance" "cm_offering_instance" {
+	instance_identifier = "instance_identifier"
 }
 ```
 {: codeblock}
 
 ### Input parameters
-{: #cm-offering-instance-input}
+{: #cm-offering-instance-dsinput}
 
-Review the input parameters that you can specify for your resource. 
+Review the input parameters that you can specify for your data source. 
 {: shortdesc}
 
 | Input parameter | Data type | Required / optional | Description |
 | ------------- |-------------| ----- | -------------- |
-| `label` | String | Required | The label for this instance.|
-| `catalog_id` | String | Required | The catalog ID an instance  is created.|
-| `offering_id` | String | Required | The offering ID an instance is created .|
-| `kind_format` | String | Required | The format an instance such as `Helm`, `operator`.|
-| `version` | String | Required | The version an instance was installed from (but not from the version ID).|
-| `cluster_id` | String | Required | The cluster ID.|
-| `cluster_region` | String | Required | The cluster region for example, `us-south`.|
-| `cluster_namespaces`| List | Required | The list of target namespaces to install into.|
-| `cluster_all_namespaces`| Bool | Required | Designate to install into all namespaces.|
+| `instance_identifier` | String | Required | The version instance identifier.|
 {: caption="Table: Available input parameters" caption-side="top"}
 
 ### Output parameters
-{: #cm-offering-instance-output}
+{: #cm-offering-instance-dsoutput}
 
-Review the output parameters that you can access after your resource is created. 
+Review the output parameters that you can access after your data source is created. 
 {: shortdesc}
 
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
-| `id` | String | The unique identifier of the cm_offering_instance.|
+| `id` | String | The unique identifier of the `cm_offering_instance`.|
 | `url` | String | The URL reference to an object.|
 | `crn` | String | The platform CRN for an instance.|
+| `label` | String | The label for an instance.|
+| `catalog_id` | String | The catalog ID the instance that is created from.|
+| `offering_id` | String | The offering ID the instance that is created from.|
+| `kind_format` | String | The format this instance has such as `helm`, `operator`.|
+| `version` | String | The version an instance is installed from (but not from the version ID).|
+| `cluster_id` | String | The cluster ID.|
+| `cluster_region` | String | The cluster region for example, `us-south`.|
+| `cluster_namespaces` | String | The list of target namespaces to install.|
+| `cluster_all_namespaces` | String | Designate to install into all namespaces.|
 {: caption="Table: Available output parameters" caption-side="top"}
 
 
 ## `ibm_cm_version`
-{: #cm-version}
+{: #cm-versionds}
 
-Create, modify, or delete an `cm_version` resources. For more information, about managing catalog version, refer to [updating your software](/docs/account?topic=account-update-private).
+Create, modify, or delete an `cm_version` data source. For more information, about managing catalog version, refer to [updating your software](/docs/account?topic=account-update-private).
 {: shortdesc}
 
 ### Sample Terraform code
-{: #cm-version-sample}
+{: #cm-version-dssample}
 
 
 ```
-resource "cm_version" "cm_version" {
-  catalog_identifier = "catalog_identifier"
-  offering_id = "offering_id"
-  zipurl = "placeholder"
+data "cm_version" "cm_version" {
+	version_loc_id = "version_loc_id"
 }
 ```
 {: codeblock}
@@ -292,35 +288,28 @@ resource "cm_version" "cm_version" {
 ### Input parameters
 {: #cm-version-input}
 
-Review the input parameters that you can specify for your resource. 
+Review the input parameters that you can specify for your data source. 
 {: shortdesc}
 
-| Input parameter | Data type | Required / optional | Description | Forces new resource  |
-| ------------- |-------------| ----- | --------| ------ |
-| `catalog_identifier` | String | Required | Catalog identifier.| Yes |
-| `offering_id` | String | Required | Offering identification.|
-| `tags` | List | Optional |  The tags array.| Yes |
-|  `target_kinds` | List | Optional | The target kinds. Current supported values are `iks`, `roks`, `vcenter`, and `terraform`.| Yes |
-| `content` | TypeString | Optional | The byte array representing the content to import. Currently supports only `OVA` images.| Yes |
-| `zipurl` | String | Optional | The URL path to `.zip` location. If not specified, must provide content in the body of the call.| Yes |
-| `target_version` | String | Optional | The version value for the new version, if not found in the `zip` URL package content.| Yes |
+| Input parameter | Data type | Required / optional | Description | 
+| ------------- |-------------| ----- | --------| 
+| `version_loc_id` | String | Required | A dotted value of `catalogID.versionID`.| 
 {: caption="Table: Available input parameters" caption-side="top"}
 
 ### Output parameters
 {: #cm-version-output}
 
-Review the output parameters that you can access after your resource is created. 
+Review the output parameters that you can access after your data source is created. 
 {: shortdesc}
 
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
-| `id` | String | The unique identifier and version locator of the version.|
+| `id` | String | The unique identifier of the `cm_version`.|
 | `crn` | String | The CRN version.|
-| `url` | String | The URL for the specific offering.|
 | `version` | String | Version of the content type.|
 | `sha` | String | The hash of the content.|
+| `offering_id` | String | The offering ID.|
 | `catalog_id` | String | The catalog ID.|
-| `kind_id` | String | The kind ID.|
 | `repo_url` | String | The URL of the content repository.|
 | `source_url` | String | The source URL of the content repository, for example, Git repository.|
 | `tgz_url` | String | File used to onboard the version.|
