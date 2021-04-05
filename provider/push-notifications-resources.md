@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-03" 
+lastupdated: "2021-04-05" 
 
 keywords: terraform provider plugin, terraform push notifications, ibm cloud provider notifications, push notifications resource
 
@@ -107,7 +107,7 @@ Configure push notifications resource for Chrome web platform. For more informat
 {: shortdesc}
 
 ### Sample Terraform code
-{: #is-pn-appln-chrome}-sample}
+{: #is-pn-appln-chrome-sample}
 
 ```
 resource "ibm_pn_application_chrome" "application_chrome" {

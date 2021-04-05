@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-04"
+lastupdated: "2021-04-05"
 
 keywords: terraform provider plugin, terraform secrets manager secret, terraform secrets manager secrets, secrets manager secrets, secrets manager secret
 
@@ -151,7 +151,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`name` | String | A human readable alias to assign to your secret. To protect your privacy, do not use personal data, such as your name or location, as an alias for your secret.|
 |`description` | String | An extended description of your secret. To protect your privacy, do not use personal data, such as your name or location, as a description for your secret.|
 |`secret_group_id` | String | The `v4` UUID that uniquely identifies the secret group to assign to this secret. If you omit this parameter, your secret is assigned to the default secret group.|
-|`labels` | String | Labels that you can use to filter for secrets in your instance. Upto 30 labels can be created. Labels can be between `2-30` characters, including spaces. Special characters are not permitted include the angled bracket, comma, colon, ampersand, and vertical pipe character `(|)`. To protect your privacy, do not use personal data, such as your name or location, as a label for your secret.|
+|`labels` | String | Labels that you can use to filter for secrets in your instance. Upto 30 labels can be created. Labels can be between `2-30` characters, including spaces. Special characters are not permitted include the angled bracket, comma, colon, ampersand, and vertical pipe character `(\|)`. To protect your privacy, do not use personal data, such as your name or location, as a label for your secret.|
 |`state` | String | The secret state based on `NIST SP 800-57`. States are integers and correspond to the `Pre-activation = 0`, `Active = 1`, `Suspended = 2`, `Deactivated = 3`, and `Destroyed = 5` values.|
 |`state_description` | String | A text representation of the secret state.|
 |`crn` | String | The Cloud Resource Name (CRN) that uniquely identifies your secrets manager resource.|
