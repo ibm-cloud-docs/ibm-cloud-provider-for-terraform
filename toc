@@ -53,6 +53,8 @@ Terraform on IBM Cloud
          provider/direct-link-gateway-data-sources.md
          provider/dns-resources.md
          provider/dns-datasources.md
+         provider/enterprise-management-resources.md
+         provider/enterprise-management-data-sources.md
          provider/event-streams-data-sources.md
          provider/event-streams-resources.md
          provider/function-resources.md
