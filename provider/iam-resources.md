@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-04-05"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -101,6 +101,64 @@ Create, modify, or delete [{{site.data.keyword.cloud_notm}} Identity and Access 
 
 Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
 {: important}
+
+## `iibm_iam_account_settings`
+{: #iam-account-settings}
+
+Create, modify, or delete an iam_account_settings resources. Access groups can be used to define a set of permissions that you want to grant to a group of users. For more information, about IAM account settings, refer to [setting up your {{site.data.keyword.cloud}}](/docs/account?topic=account-account-getting-started).
+{: shortdesc}
+
+
+### Sample Terraform code
+{: #iam-account-settings-sample}
+
+
+```
+resource "ibm_iam_account_settings" "iam_account_settings_instance" {
+  mfa = "LEVEL3"
+  session_expiration_in_seconds = "40000"
+}
+```
+{: codeblock}
+
+### Input parameters
+{: #iam-account-settings-input}
+
+Review the input parameters that you can specify for your resource. 
+{: shortdesc}
+
+| Input parameter | Data type | Required / optional | Description |
+| ------------- |-------------| ----- | -------------- |
+| `include_history` | Bool | Optional | Defines if the entity history is included in the response.|
+| `if_match` | String | Optional |Version of the account settings to update, if no value is supplied then the default value `*` is used to indicate to update any version available. This might result in stale updates.|
+| `restrict_create_service_id` | String | Optional | Defines whether or not creating a service ID is access controlled.|
+| `restrict_create_platform_apikey` | String | Optional | Defines whether or not creating platform API keys is access controlled.|
+| `allowed_ip_addresses` | String | Optional | Defines the IP addresses and subnets from which IAM tokens can be created for the account. **Note** value should be a comma separated string.|
+| `mfa` | String | Optional | Defines the session expiration in seconds for the account.|
+| `session_expiration_in_seconds` | String | Optional | Defines the session expiration in seconds for the account.|
+| `session_invalidation_in_seconds` | String | Optional | Defines the period of time in seconds in which a session is invalid due to inactivity.|
+{: caption="Table 1. Available input parameters" caption-side="top"}
+
+### Output parameters
+{: #iam-account-settings-output}
+
+Review the output parameters that you can access after your resource is created. 
+{: shortdesc}
+
+| Output parameter | Data type | Description |
+| ------------- |-------------| -------------- |
+| `history` | String | The update history of the settings instance.|
+entity_tag` | String | The version of the account settings object. You need to specify this value when updating the account settings to avoid stale updates.|
+| `restrict_create_service_id` | String | Defines whether or not creating a service ID is access controlled.|
+| `restrict_create_platform_apikey` | String | Defines whether or not creating platform API keys is access controlled.|
+| `allowed_ip_addresses` | String | Defines the IP addresses and subnets from which IAM tokens can be created for the account. **Note** value should be a comma separated string.|
+| `mfa` | String | Defines the session expiration in seconds for the account.|
+| `session_expiration_in_seconds` | String | Defines the session expiration in seconds for the account.|
+| `session_invalidation_in_seconds` | String | Defines the period of time in seconds in which a session is invalid due to inactivity.|
+| `account_id` | String | Unique ID of an account.
+| `id` | String | Unique ID of an account settings instance.|
+{: caption="Table 1. Available output parameters" caption-side="top"}
+
 
 ## `ibm_iam_access_group`
 {: #iam-access-group}
