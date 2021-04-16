@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04"
+lastupdated: "2021-04-16"
 
 keywords: Terraform, ansible, red hat, openshift, automate, automation, iaas
 
@@ -98,7 +98,7 @@ completion-time: 3h
 
 
 
-# Tutorial: Using Terraform to manage your own Red Hat OpenShift Container Platform on IBM Cloud classic infrastructure
+# Using Terraform to manage your own Red Hat OpenShift Container Platform on IBM Cloud classic infrastructure
 {: #redhat}
 {: toc-content-type="tutorial"}
 {: toc-services="terraform, openshift"}
