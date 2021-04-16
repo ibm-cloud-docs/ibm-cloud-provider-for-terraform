@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-03"
+lastupdated: "2021-04-16"
 
 keywords: terraform provider plugin, terraform key management service, terraform key management, terraform kms, kms, terraform key protect, terraform kp, terraform root key, hyper protect crypto service, HPCS, 
 
@@ -374,7 +374,7 @@ Review the output parameters that you can access after your resource is created.
 ## `ibm_kms_key_rings`
 {: #kms-key-rings}
 
-Create, modify, or delete a key rings for hs-crypto and key protect services. Key rings created through this resource can be used to associate to kms key resource when a standard or a root key gets created or imported. For more information, about key management rings, see [creating key rings](/docs/key-protect?topic=key-protect-grouping-keys#create-key-ring-api).
+Create, modify, or delete a key rings for hs-crypto and key protect services. Key rings created through this resource can be used to associate to KMS key resource when a standard or a root key gets created or imported. For more information, about key management rings, see [creating key rings](/docs/key-protect?topic=key-protect-grouping-keys#create-key-ring-api).
 {: shortdesc}
 
 ### Sample Terraform code

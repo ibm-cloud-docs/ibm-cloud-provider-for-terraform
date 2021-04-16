@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-05"
+lastupdated: "2021-04-16"
 
 keywords: terraform provider plugin, terraform gen 2, terraform gen 2 compute
 
@@ -175,7 +175,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`supported_instance_profiles`| String | Array of instance profiles that can be used by instances placed on this dedicated host. Nested **supported_instance_profiles** blocks have the following structure.|
 |`supported_instance_profiles.href`| String | The URL for this virtual server instance profile.|
 |`supported_instance_profiles.name`| String | The globally unique name for this virtual server instance profile.|
-|`vcpu`| String | The total `VCPU` of the dedicated host. Nested vcpu blocks have the following structure.|
+|`vcpu`| String | The total `VCPU` of the dedicated host. Nested `VCPU` blocks have the following structure.|
 |`vcpu.architecture`| String | The `VCPU` architecture.|
 |`vcpu.count`| String | The number of `VCPUs` assigned.|
 |`zone`| String | The globally unique name of the zone this dedicated host resides in.|
@@ -221,7 +221,7 @@ Review the output parameters that you can access after you retrieved your data s
 |----|-----------|-------------|
 |`id`| String | The unique identifier of the dedicated host collection.|
 |`dedicated_hosts`| String | Collection of dedicated hosts. Nested dedicated_hosts blocks have the following structure.|
-|`dedicated_hosts.available_memory`| String | The amount of memory in gibibytes that is currently available for instances.|
+|`dedicated_hosts.available_memory`| String | The amount of memory in GB that is currently available for instances.|
 |`dedicated_hosts.available_vcpu`| String | The available `VCPU` for the dedicated host. Nested available_vcpu blocks have the following structure.|
 |`dedicated_hosts.available_vcpu.architecture`| String | The `VCPU` architecture.|
 |`dedicated_hosts.available_vcpu.count`| String | The number of `VCPUs` assigned.|
@@ -233,13 +233,13 @@ Review the output parameters that you can access after you retrieved your data s
 |`dedicated_hosts.instance_placement_enabled`| String | If set to `true`, instances can be placed on this dedicated host.|
 |`dedicated_hosts.instances`| String | Array of instances that are allocated to this dedicated host. Nested instances blocks have the following structure.|
 |`dedicated_hosts.instances.crn`| String | The CRN for this virtual server instance.|
-|`dedicated_hosts.instances.deleted`| String | If present, this property indicates the referenced resource has been deleted and providessome supplementary information. Nested deleted blocks have the following structure.|
+|`dedicated_hosts.instances.deleted`| String | If present, this property indicates the referenced resource has been deleted and provides some supplementary information. Nested deleted blocks have the following structure.|
 |`dedicated_hosts.instances.deleted.more_info`| String | Link to documentation about deleted resources.|
 |`dedicated_hosts.instances.href`| String | The URL for this virtual server instance.|
 |`dedicated_hosts.instances.id`| String | The unique identifier for this virtual server instance.|
 |`dedicated_hosts.instances.name`| String | The user-defined name for this virtual server instance (and default system hostname).|
 |`dedicated_hosts.lifecycle_state`| String | The lifecycle state of the dedicated host resource.|
-|`dedicated_hosts.memory`| String | The total amount of memory in gibibytes for this host.|
+|`dedicated_hosts.memory`| String | The total amount of memory in GB for this host.|
 |`dedicated_hosts.name`| String | The unique user defined name for this dedicated host. If unspecified, the name will be a hyphenated list of randomly-selected words.|
 |`dedicated_hosts.profile`| String | The profile this dedicated host uses. Nested profile blocks have the following structure.|
 |`dedicated_hosts.profile.href`| String | The URL for this dedicated host.|
@@ -255,9 +255,9 @@ Review the output parameters that you can access after you retrieved your data s
 |`dedicated_hosts.supported_instance_profiles`| String | Array of instance profiles that can be used by instances placed on this dedicated host. Nested supported_instance_profiles blocks have the following structure.|
 |`dedicated_hosts.supported_instance_profiles.href`| String | The URL for this virtual server instance profile.|
 |`dedicated_hosts.supported_instance_profiles.name`| String | The globally unique name for this virtual server instance profile.
-|`dedicated_hosts.vcpu`| String | The total VCPU of the dedicated host. Nested vcpu blocks have the following structure.|
-|`dedicated_hosts.vcpu.architecture`| String | The VCPU architecture.|
-|`dedicated_hosts.vcpu.count`| String | The number of VCPUs assigned.|
+|`dedicated_hosts.vcpu`| String | The total `VCPU` of the dedicated host. Nested `VCPU` blocks have the following structure.|
+|`dedicated_hosts.vcpu.architecture`| String | The `VCPU` architecture.|
+|`dedicated_hosts.vcpu.count`| String | The number of `VCPUs` assigned.|
 |`dedicated_hosts.zone`| String | The globally unique name of the zone this dedicated host resides in.|
 |`total_count`| String | The total number of resources across all pages.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
@@ -409,7 +409,7 @@ Review the input parameters that you can specify for your data source.
 
 |Name|Data type| Required / optional|Description|
 |----|-----------|--------|----------------------|
-|`name`|String|Required| The globally unique user defined name for this VSI profile.|
+|`name`|String|Required| The globally unique user defined name for this `VSI` profile.|
 {: caption="Table. Available input parameters" caption-side="top"}
 
 ### Output parameters
@@ -420,7 +420,7 @@ Review the output parameters that you can access after you retrieved your data s
 
 |Name|Data type|Description|
 |----|-----------|-------------|
-|`id`| String | The unique identifier of the DedicatedHostProfile.|
+|`id`| String | The unique identifier of the dedicated host profile.|
 |`class`| String | The product class this dedicated host profile belongs to.|
 |`family`| String | The product family this dedicated host profile belongs to.|
 |`href`| String | The URL for this dedicated host.|
@@ -443,7 +443,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`supported_instance_profiles`| String | Array of instance profiles that can be used by instances placed on dedicated hosts with this profile Nested `supported_instance_profiles` blocks have the following structure.|
 |`supported_instance_profiles.href`| String | The URL for this virtual server instance profile.|
 |`supported_instance_profiles.name`| String | The globally unique name for this virtual server instance profile.|
-|`vcpu_architecture`| String | Nested v`cpu_architecture` blocks have the following structure.|
+|`vcpu_architecture`| String | Nested `vcpu_architecture` blocks have the following structure.|
 |`vcpu_architecture.type`| String | The type for this profile field.
 |`vcpu_architecture.value`| String | The `VCPU` architecture for a dedicated host with this profile.|
 |`vcpu_count` |String | Nested `vcpu_count` blocks have the following structure.|
@@ -459,13 +459,13 @@ Review the output parameters that you can access after you retrieved your data s
 ## `ibm_is_floating_ip`
 {: #floating-ip-g2-ds}
 
-Retrieve the information about VPC floating IP. 
+Retrieve the information about `VPC` floating IP. 
 {: shortdesc}
 
 ### Sample Terraform code
 {: #floating-ip-g2-dssample}
 
-The following example retrieves information about the VPC floating IP.
+The following example retrieves information about the `VPC` floating IP.
 {: shortdesc}
 
 ```

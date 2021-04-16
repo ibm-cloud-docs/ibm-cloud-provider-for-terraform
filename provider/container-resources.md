@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-04" 
+lastupdated: "2021-04-16" 
 
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes, observability logging, observability monitoring
 
@@ -974,7 +974,7 @@ Review the output parameters that you can access after your resource is created.
 | `instance_name` | String | Name of the logging instance.|
 | `agent_key` | String | The {{site.data.keyword.at_full_notm}} agent key.|
 | `agent_namespace` | String | The {{site.data.keyword.at_full_notm}} agent namespace.|
-| `daemonset_name` | String | The name of the deamon set.|
+| `daemonset_name` | String | The name of the `daemon` set.|
 | `namespace` | String | The name of namespace.|
 | `crn` | String | The CRN of the {{site.data.keyword.at_full_notm}} instance attach.|
 {: caption="Table. Available output parameters" caption-side="top"}

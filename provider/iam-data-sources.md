@@ -146,7 +146,7 @@ Review the output parameters that you can access after your data source is creat
 | `history.iam_id` | String | The IAM ID of the identity that triggered an action.|
 | `history.iam_id_account` | String | The account of an identity that trigger an action.|
 | `history.action` | String | The action of the history entry.|
-| `history.params` | String | The params of the history entry.|
+| `history.params` | String | The parameters of the history entry.|
 | `history.message` | String | The message that summarizes the executed action.|
 | `session_expiration_in_seconds` | String | Defines the session expiration in seconds for the account. Valid values are Any whole number between between `900` and `86400`, and **NOT_SET** to unset account setting and use the service default.|
 | `session_invalidation_in_seconds` | String | Defines the period of time in seconds in which a session is invalid due to inactivity. Valid values are Any whole number between `900` and `7200`, and **NOT_SET** to unset account setting and use the service default.|

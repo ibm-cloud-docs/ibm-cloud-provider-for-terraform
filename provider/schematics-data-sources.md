@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-05"
+lastupdated: "2021-04-16"
 
 keywords: terraform provider plugin, terraform schematics data source, terraform schematics workspace 
 
@@ -165,7 +165,7 @@ Review the output parameters that you can access after you retrieved your data s
 | `bastion.id` | String | The target ID.|
 | `bastion.created_at` | String | The targets creation time.|
 | `bastion.created_by` | String | The Email address of the user who created the targets.|
-| `bastion.updated_at` | String | The targets updation time.|
+| `bastion.updated_at` | String | The targets update time.|
 | `bastion.updated_by` | String | The Email address of user who updated the targets.|
 | `bastion.sys_lock` | String | The system lock status. |Nested sys_lock blocks have the following structure.|
 | `bastion.sys_lock.sys_locked` | String | Is the workspace locked by the {{site.data.keyword.bpshort}} action?|
@@ -178,12 +178,12 @@ Review the output parameters that you can access after you retrieved your data s
 | `credentials.value` | String | The value for the variable or reference to the value.|
 | `credentials.metadata` | String | User editable metadata for the variables. Nested `metadata` blocks have the following structure.|
 | `credentials.metadata.type` | String | The type of the variable.|
-aliases` | String | The list of an aliases for the variable name.|
+| `aliases` | String | The list of an aliases for the variable name.|
 | `credentials.metadata.description` | String | The description of the metadata.|
 | `credentials.metadata.default_value` | String | The default value for the variable, if the override value is not specified.|
 | `credentials.metadata.secure` | String | Is the variable secure or sensitive?|
-| `credentials.metadata.immutable` | String | Is the variable readonly?|
-| `credentials.metadata.hidden` | String | If set `true`, the variable will not be displayed on UI or CLI.
+| `credentials.metadata.immutable` | String | Is the variable read only?|
+| `credentials.metadata.hidden` | String | If set `true`, the variable will not be displayed on console or command-line.|
 | `credentials.metadata.options` | String | The list of possible values for this variable. If type is integer or date, then the array of string will be converted to array of integers or date during runtime.|
 | `credentials.metadata.min_value` | String | Minimum value of the variable. Applicable for integer type.|
 | `credentials.metadata.max_value` | String | Maximum value of the variable. Applicable for integer type.|
@@ -203,8 +203,8 @@ aliases` | String | The list of an aliases for the variable name.|
 | `inputs.metadata.description` | String | The description of the metadata.|
 | `inputs.metadata.default_value` | String | The default value for the variable, if the override value is not specified.|
 | `inputs.metadata.secure` | String | Is the variable secure or sensitive?|
-| `inputs.metadata.immutable` | String | Is the variable readonly?|
-| `inputs.metadata.hidden` | String | If set to `true`, the variable will not be displayed on UI or CLI.|
+| `inputs.metadata.immutable` | String | Is the variable read only?|
+| `inputs.metadata.hidden` | String | If set to `true`, the variable will not be displayed on console or command-line.|
 | `inputs.metadata.options` | String | The list of possible values for this variable. If type is integer or date, then the array of string will be converted to array of integers or date during runtime.|
 | `inputs.metadata.min_value` | String | Minimum value of the variable. Applicable for integer type.|
 | `inputs.metadata.max_value` | String | Maximum value of the variable. Applicable for integer type.|
@@ -224,8 +224,8 @@ aliases` | String | The list of an aliases for the variable name.|
 | `outputs.metadata.description` | String | Description of the meta data.|
 | `outputs.metadata.default_value` | String | Default value for the variable, if the override value is not specified.|
 | `outputs.metadata.secure` | String | Is the variable secure or sensitive?|
-| `outputs.metadata.immutable` | String | Is the variable readonly ?|
-| `outputs.metadata.hidden` | String | If true, the variable will not be displayed on UI or CLI.|
+| `outputs.metadata.immutable` | String | Is the variable read only ?|
+| `outputs.metadata.hidden` | String | If `true`, the variable will not be displayed on console or command-line.|
 | `outputs.metadata.options` | String | List of possible values for this variable. If type is integer or date, then the array of string will be converted to array of integers or date during runtime.|
 | `outputs.metadata.min_value` | String | Minimum value of the variable. Applicable for integer type.|
 | `outputs.metadata.max_value` | String | Maximum value of the variable. Applicable for integer type.|
@@ -245,8 +245,8 @@ aliases` | String | The list of an aliases for the variable name.|
 | `settings.metadata.description` | String | Description of the meta data.|
 | `settings.metadata.default_value` | String | Default value for the variable, if the override value is not specified.|
 | `settings.metadata.secure` | String | Is the variable secure or sensitive?|
-| `settings.metadata.immutable` | String | Is the variable readonly ?.|
-| `settings.metadata.hidden` | String | If true, the variable will not be displayed on UI or CLI.|
+| `settings.metadata.immutable` | String | Is the variable read only ?.|
+| `settings.metadata.hidden` | String | If true, the variable will not be displayed on console or command-line.|
 | `settings.metadata.options` | String | List of possible values for this variable. If type is integer or date, then the array of string will be converted to array of integers or date during runtime.|
 | `settings.metadata.min_value` | String | Minimum value of the variable. Applicable for integer type.|
 | `settings.metadata.max_value` | String | Maximum value of the variable. Applicable for integer type.|
@@ -263,11 +263,11 @@ aliases` | String | The list of an aliases for the variable name.|
 | `account` | String | The action account ID.|
 | `source_created_at` | String | The Ansible playbook cource creation time.|
 | `source_created_by` | String | The Email address of user who created the Ansible playbook Source.|
-| `source_updated_at` | String | The Ansible playbook updation time.|
+| `source_updated_at` | String | The Ansible playbook update time.|
 | `source_updated_by` | String | The Email address of user who updated the Ansible playbook source.|
 | `created_at` | String | The action creation time.|
 | `created_by` | String | The Email address of the user who created an action.|
-| `updated_at` | String | The action updation time.|
+| `updated_at` | String | The action update time.|
 | `updated_by` | String | The Email address of the user who updated an action.|
 | `namespace` | String | The name of the namespace.|
 | `state` | String | Computed state of an action. Nested `state` blocks have the following structure.|
@@ -320,10 +320,9 @@ Review the output parameters that you can access after you retrieved your data s
 | `id` | String | The unique ID of the {{site.data.keyword.bpshort}} job.|
 | `command_object` | String | The name of the {{site.data.keyword.bpshort}} automation resource.|
 | `command_object_id` | String | The job command object ID such as `workspace-id`, `action-id`, or `control-id`.|
-| `command_name` | String | The {{site.data.keyword.bpshort}}job command name.|
+| `command_name` | String | The {{site.data.keyword.bpshort}} job command name.|
 | `command_parameter` | String |  The {{site.data.keyword.bpshort}} job command parameter  such as `playbook-name`, `capsule-name`, or `flow-name`.|
 | `command_options` | String | The command line options for the command.|
-
 | `settings` | String | Environment variables for an action. Nested settings blocks have the following structure.|
 | `settings.name` | String | Name of the variable.|
 | `settings.value` | String | Value for the variable or reference to the value.|
@@ -333,8 +332,8 @@ Review the output parameters that you can access after you retrieved your data s
 | `settings.metadata.description` | String | Description of the meta data.|
 | `settings.metadata.default_value` | String | Default value for the variable, if the override value is not specified.|
 | `settings.metadata.secure` | String | Is the variable secure or sensitive?|
-| `settings.metadata.immutable` | String | Is the variable readonly ?.|
-| `settings.metadata.hidden` | String | If true, the variable will not be displayed on UI or CLI.|
+| `settings.metadata.immutable` | String | Is the variable read only ?.|
+| `settings.metadata.hidden` | String | If set `true`, the variable will not be displayed on console or command-line.|
 | `settings.metadata.options` | String | List of possible values for this variable. If type is integer or date, then the array of string will be converted to array of integers or date during runtime.|
 | `settings.metadata.min_value` | String | Minimum value of the variable. Applicable for integer type.|
 | `settings.metadata.max_value` | String | Maximum value of the variable. Applicable for integer type.|
@@ -366,7 +365,7 @@ Review the output parameters that you can access after you retrieved your data s
 | `status.action_job_status.bastion_status_message` | String |Bastion status message to be displayed along with the bastion_status_code.|
 | `status.action_job_status.targets_status_code` | String |Status of the resources.|
 | `status.action_job_status.targets_status_message` | String |Aggregated status message for all target resources, to be displayed along with the targets_status_code.|
-| `status.action_job_status.updated_at` | String |Job status updation timestamp.|
+| `status.action_job_status.updated_at` | String |Job status update timestamp.|
 | `data| String | The Job data. Nested data blocks have the following structure.|
 | `data.job_type` | String | Type of the job.|
 | `data.action_job_data`| String | The action job data. Nested `action_job_data` blocks have the following structure.|
@@ -380,8 +379,8 @@ Review the output parameters that you can access after you retrieved your data s
 | `data.action_job_data.inputs.metadata.description` | String | The description of the metadata.|
 | `data.action_job_data.inputs.metadata.default_value` | String | The default value for the variable, if the override value is not specified.|
 | `data.action_job_data.inputs.metadata.secure` | String | Is the variable secure or sensitive?|
-| `data.action_job_data.inputs.metadata.immutable` | String | Is the variable readonly?|
-| `data.action_job_data.inputs.metadata.hidden` | String | If set to `true`, the variable will not be displayed on UI or CLI.|
+| `data.action_job_data.inputs.metadata.immutable` | String | Is the variable read only?|
+| `data.action_job_data.inputs.metadata.hidden` | String | If set to `true`, the variable will not be displayed on console or command-line.|
 | `data.action_job_data.inputs.metadata.options` | String | The list of possible values for this variable. If type is integer or date, then the array of string will be converted to array of integers or date during runtime.|
 | `data.action_job_data.inputs.metadata.min_value` | String | Minimum value of the variable. Applicable for integer type.|
 | `data.action_job_data.inputs.metadata.max_value` | String | Maximum value of the variable. Applicable for integer type.|
@@ -401,8 +400,8 @@ Review the output parameters that you can access after you retrieved your data s
 | `outputs.metadata.description` | String | Description of the meta data.|
 | `outputs.metadata.default_value` | String | Default value for the variable, if the override value is not specified.|
 | `outputs.metadata.secure` | String | Is the variable secure or sensitive?|
-| `outputs.metadata.immutable` | String | Is the variable readonly ?|
-| `outputs.metadata.hidden` | String | If true, the variable will not be displayed on UI or CLI.|
+| `outputs.metadata.immutable` | String | Is the variable read only ?|
+| `outputs.metadata.hidden` | String | If set `true`, the variable will not be displayed on console or command-line.|
 | `outputs.metadata.options` | String | List of possible values for this variable. If type is integer or date, then the array of string will be converted to array of integers or date during runtime.|
 | `outputs.metadata.min_value` | String | Minimum value of the variable. Applicable for integer type.|
 | `outputs.metadata.max_value` | String | Maximum value of the variable. Applicable for integer type.|
@@ -422,8 +421,8 @@ Review the output parameters that you can access after you retrieved your data s
 | `settings.metadata.description` | String | Description of the meta data.|
 | `settings.metadata.default_value` | String | Default value for the variable, if the override value is not specified.|
 | `settings.metadata.secure` | String | Is the variable secure or sensitive?|
-| `settings.metadata.immutable` | String | Is the variable readonly ?|
-| `settings.metadata.hidden` | String | If true, the variable will not be displayed on UI or CLI.|
+| `settings.metadata.immutable` | String | Is the variable read only ?|
+| `settings.metadata.hidden` | String | If set `true`, the variable will not be displayed on console or command-line.|
 | `settings.metadata.options` | String | List of possible values for this variable. If type is integer or date, then the array of string will be converted to array of integers or date during runtime.|
 | `settings.metadata.min_value` | String | Minimum value of the variable. Applicable for integer type.|
 | `settings.metadata.max_value` | String | Maximum value of the variable. Applicable for integer type.|
@@ -444,7 +443,7 @@ Review the output parameters that you can access after you retrieved your data s
 | `bastion.id` | String | The target ID.|
 | `bastion.created_at` | String | The targets creation time.|
 | `bastion.created_by` | String | The Email address of the user who created the targets.|
-| `bastion.updated_at` | String | The targets updation time.|
+| `bastion.updated_at` | String | The targets update time.|
 | `bastion.updated_by` | String | The Email address of user who updated the targets.|
 | `bastion.sys_lock` | String | The system lock status. |Nested sys_lock blocks have the following structure.|
 | `bastion.sys_lock.sys_locked` | String | Is the workspace locked by the {{site.data.keyword.bpshort}} action?|
@@ -481,7 +480,7 @@ Review the output parameters that you can access after you retrieved your data s
 | `log_store_url` | String | The job log store URL.|
 | `state_store_url` | String |The job state store URL.|
 | `results_url` | String |The job results store URL.|
-| `updated_at` | String | The job status updation timestamp.|
+| `updated_at` | String | The job status update timestamp.|
 
 
 ## `ibm_schematics_workspace`
@@ -523,7 +522,7 @@ Review the output parameters that you can access after you retrieved your data s
 |Name|Data type|Description|
 |----|-----------|-------------|
 | `id` | String | The unique ID of the Schematics workspace.|
-| `applied_shareddata_ids` | String | List of applied shared dataset ID.|
+| `applied_shareddata_ids` | String | List of applied shared data set ID.|
 |`catalog_ref`| String | Information about the software template that you select from the {{site.data.keyword.cloud_notm}} catalog. This information is returned for {{site.data.keyword.cloud_notm}} catalog offerings only. Nested `catalog_ref` blocks have the following structure:|
 |`catalog_ref.dry_run`| Bool | Dry run. |
 |`catalog_ref.item_icon_url`| String | Optional | The icon URL of the software template in the {{site.data.keyword.cloud_notm}} catalog.|
@@ -555,7 +554,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`shared_data.cluster_id` | String | The ID of the cluster where you want to provision the resources of all {{site.data.keyword.cloud_notm}} catalog templates that are included in the catalog offering.|
 |`shared_data.cluster_name` | String |  The target cluster name.|
 |`shared_data.entitlement_keys` | `String` | The entitlement key that you want to use to install {{site.data.keyword.cloud_notm}} entitled software.|
-|`shared_data.namespace` | String |  The {site.data.keyword.containershort}} namespace or {{site.data.keyword.openshiftshort}} project where the resources of all {{site.data.keyword.cloud_notm}} catalog templates that are included in the catalog offering are deployed into.|
+|`shared_data.namespace` | String |  The {{site.data.keyword.containershort}} namespace or {{site.data.keyword.openshiftshort}} project where the resources of all {{site.data.keyword.cloud_notm}} catalog templates that are included in the catalog offering are deployed into.|
 |`shared_data.region` | String |  The {{site.data.keyword.cloud_notm}} region that you want to use for the resources of all {{site.data.keyword.cloud_notm}} catalog templates that are included in the catalog offering.|
 |`shared_data.resource_group_id` | String |  The ID of the resource group that you want to use for the resources of all {{site.data.keyword.cloud_notm}} catalog templates that are included in the catalog offering.|
 |`status` | String | The status of the workspace. For more information, about the Schematics workspace status, see [workspace states](/docs/schematics?topic=schematics-workspace-setup#wks-state).|
@@ -574,17 +573,17 @@ Review the output parameters that you can access after you retrieved your data s
 |`template_data.values` | String | A list of variable values that you want to apply during the Helm chart installation. The list must be provided in JSON format, such as `autoscaling: enabled: true minReplicas: 2`. The values that you define here overrides the default Helm chart values. This field is supported only for {{site.data.keyword.cloud_notm}} catalog offerings that are provisioned by using the Terraform Helm provider.|
 |`template_data.values_metadata` | String | A list of input variables that are associated with the workspace.|
 |`template_data.values_url` | String | The API endpoint to access the input variables that you defined for your template.|
-|`template_data.variablestore` | String | Information about the input variables that your template uses. Nested variablestore blocks have the following structure. |
+|`template_data.variablestore` | String | Information about the input variables that your template uses. Nested variable store blocks have the following structure. |
 |`template_data.variablestore.description` | String | The description of your input variable.|
 |`template_data.variablestore.name` | String | The name of your variable.|
 |`template_data.variablestore.secure` | String | If set to `true`, the value of your input variable is protected and not returned in your API response.|
 |`template_data.variablestore.type` | String | Terraform v0.11 supports string, list, map data type. For more information, about the syntax, see [Configuring input variables]((/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new). Terraform v0.12 additionally, supports bool, number and complex data types such as list(type), map(type), object({attribute name=type,..}), set(type), tuple([type]). For more information, about the syntax to use the complex data type, see [Configuring variables](/docs/schematics?topic=schematics-create-tf-config#configure-variables).|
-|`template_data.variablestore.value` | String |  Enter the value as a string for the primitive types such as bool, number, string, and HCL format for the complex variables, as you provide in a `.tfvars` file. You need to enter escaped string of HCL format for the complex variable value. For more information, about how to declare variables in a terraform configuration file and provide value to schematics, see [Providing values for the declared variables](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).|
+|`template_data.variablestore.value` | String |  Enter the value as a string for the primitive types such as bool, number, string, and HCL format for the complex variables, as you provide in a `.tfvars` file. You need to enter escaped string of HCL format for the complex variable value. For more information, about how to declare variables in a Terraform configuration file and provide value to schematics, see [Providing values for the declared variables](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).|
 |`template_ref` | String |  The workspace template reference.|
 |`template_repo` | List | The input parameter to specify the source repository where your {{site.data.keyword.bpshort}} template is stored.|
 |`template_repo.branch` | String |  The branch in GitHub where your Terraform template is stored.|
 |`template_repo.full_url` | String |  The full URL repository.|
-|`template_repo.has_uploadedgitrepotar` | String |  Has uploaded Git repository tar.|
+|`template_repo.has_uploadedgitrepotar` | String |  Has uploaded Git repository tap archive file.|
 |`template_repo.release` | String |  The release tag in GitHub of your Terraform template.|
 |`template_repo.repo_sha_value` | String | The SHA value from the repository.|
 |`template_repo.repo_url` | String | The URL to the repository where the {{site.data.keyword.cloud_notm}} catalog software template is stored.|

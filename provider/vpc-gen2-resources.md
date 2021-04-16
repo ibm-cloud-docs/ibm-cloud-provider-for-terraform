@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-05" 
+lastupdated: "2021-04-16" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -2676,7 +2676,7 @@ Review the output parameters that you can access after your resource is created.
 
 |Name|Data type|Description|
 |----|-----------|--------|
-|`id`|String|The combination of the subnet ID and reserved IP ID seperated by **/**.|
+|`id`|String|The combination of the subnet ID and reserved IP ID separated by **/**.|
 |`reserved_ip`|String|The reserved IP.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
@@ -2684,7 +2684,7 @@ Review the output parameters that you can access after your resource is created.
 {: #subnet-reserved-ip-import}
 
 The `ibm_is_subnet` can be imported by using the ID. 
-The `ibm_is_subnet_reserved_ip` can be imported by using subnet ID and reserved IP ID seperated by **/**.
+The `ibm_is_subnet_reserved_ip` can be imported by using subnet ID and reserved IP ID separated by **/**.
 
 **Syntax**
 

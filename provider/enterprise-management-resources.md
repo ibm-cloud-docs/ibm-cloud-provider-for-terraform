@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-05"
+lastupdated: "2021-04-16"
 
 keywords: terraform provider plugin, terraform enterprise management, terraform enterprise account, terraform enterprise accounts, enterprise management
 
@@ -201,7 +201,7 @@ Review the input parameters that you can specify to import a new account in an e
 |----|-----------|-----------|----------------|
 |`parent`|String|Required|The CRN of the parent in which the account is created. The parent can be an existing account group or an enterprise itself.|
 |`enterprise_id`|String|Required| The enterprise ID where the account is imported.|
-|`account_id`|String|Required| The standalone account ID that needs to be imported, such as `521ac39afd1b40aaad96fde2c6ad97xx`.|
+|`account_id`|String|Required| The stand-alone account ID that needs to be imported, such as `521ac39afd1b40aaad96fde2c6ad97xx`.|
 {: caption="Table. Available input parameters" caption-side="top"}
 
 ### Output parameters
