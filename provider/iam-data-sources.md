@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-05"
+lastupdated: "2021-04-16"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -194,7 +194,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`groups.rules`|List of access group rules|A list of dynamic rules that are applied to the IAM access group.|
 |`groups.rules.name`|String|The name of the dynamic rule. |
 |`groups.rules.expiration`|Integer|The number of hours that authenticated users can work in IBM Cloud before they must refresh their access.|
-|`groups.rules.identity_provider`|String|The URI of your identity provider. This is the SAML "entity ID" field, which is sometimes referred to as the issuer ID, for the identity provider as part of the federation configuration for onboarding with IBMid. |
+|`groups.rules.identity_provider`|String|The URI of your identity provider. This is the SAML "entity ID" field, which is sometimes referred to as the issuer ID, for the identity provider as part of the federation configuration for onboarding with IBMId. |
 |`groups.rules.conditions`|List of rule conditions|A list of conditions that the rule must satisfy.|
 |`groups.rules.conditions.claim`|String|The key value to evaluate the condition against. The key depends on what key-value pairs your identity provider provides. For example, your identity provider might include a key that is named `blueGroups` and that holds all the user groups that have access. To apply a condition for a specific user group within the `blueGroups` key, you specify `blueGroups` as your claim and add the value that you are looking for in `conditions.value`. |
 |`groups.rules.conditions.operator`|String|The operation to perform on the claim. Supported values are `EQUALS`, `QUALS_IGNORE_CASE`, `IN`, `NOT_EQUALS_IGNORE_CASE`, `NOT_EQUALS`, and `CONTAINS`.|
