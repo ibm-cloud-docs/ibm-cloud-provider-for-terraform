@@ -1005,7 +1005,7 @@ The following timeouts are defined for this resource.
 {: #observability-monitoring}
 
 
-Create, update, or delete a monitoring instance. This resource creates a monitoring configuration for your {{site.data.keyword.containerlong_notm}} cluster to automatically collect pod metrics, and send these metrics to your monitoring service instance. For more information, about Observability monitoring, see [setting up loggin with {{site.data.keyword.loganalysislong_notm}}](docs/containers?topic=containers-istio-health).
+Create, update, or delete a monitoring instance. This resource creates a monitoring configuration for your {{site.data.keyword.containerlong_notm}} cluster to automatically collect pod metrics, and send these metrics to your monitoring service instance. For more information, about Observability monitoring, see [setting up loggin with {{site.data.keyword.loganalysislong_notm}}](/docs/containers?topic=containers-istio-health).
 {: shortdesc}
 
 ### Sample Terraform code
