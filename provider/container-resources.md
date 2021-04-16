@@ -896,7 +896,7 @@ The following timeouts are defined for this resource.
 {: #observability-logging}
 
 
-Create, update, or delete a logging instance. This resource creates a logging configuration for your cluster to automatically collect pod logs and send them to {{site.data.keyword.loganalysislong_notm}. For more information, about Observability plug-in, see [managing  Observability logging commands](/docs/containers?topic=containers-observability_cli).
+Create, update, or delete a logging instance. This resource creates a logging configuration for your cluster to automatically collect pod logs and send them to {{site.data.keyword.loganalysislong_notm}}. For more information, about Observability plug-in, see [managing  Observability logging commands](/docs/containers?topic=containers-observability_cli).
 {: shortdesc}
 
 ### Sample Terraform code

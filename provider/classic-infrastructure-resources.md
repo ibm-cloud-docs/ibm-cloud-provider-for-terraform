@@ -198,7 +198,7 @@ resource "ibm_compute_autoscale_group" "test_scale_group" {
       hourly_billing = true
       os_reference_code = "DEBIAN_8_64"
 
-## Optional fields for virtual guest template ({{site.data.keyword.cloud}} defaults apply):
+## Optional fields for virtual guest template ({{site.data.keyword.cloud_notm}} defaults apply):
       local_disk = false
       disks = [25]
       datacenter = "sng01"
