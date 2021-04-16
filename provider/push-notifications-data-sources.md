@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-03"
+lastupdated: "2021-04-16"
 
 keywords: terraform provider plugin, terraform push notifications, ibm cloud provider notifications, push notifications resource
 
@@ -99,7 +99,7 @@ Before you start working with your data source, make sure to review the [require
 {: important}
 
 
-Review the data sources that you can use to retrieve information about the [push notifications](/docs/mobilepush?topic=mobilepush-gettingstartedtemplate. All data sources are imported as read-only information. You can reference the output parameters for each data source by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+Review the data sources that you can use to retrieve information about the [push notifications](/docs/mobilepush?topic=mobilepush-gettingstartedtemplate). All data sources are imported as read-only information. You can reference the output parameters for each data source by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 {: shortdesc}
 
 
