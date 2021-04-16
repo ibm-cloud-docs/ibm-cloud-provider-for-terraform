@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-01"
+lastupdated: "2021-04-16"
 
 keywords: terraform templates, schematics template
 
@@ -95,7 +95,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 
-# Sample Terraform templates and deploy to {{site.data.keyword.cloud_notm}}
+# Sample Terraform templates for {{site.data.keyword.cloud_notm}}
 {: #sample_terraformtemplates}
 
 All Terraform templates use the Terraform version 0.12 format.
@@ -330,6 +330,7 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}` following action
   </tr>
   </tbody>
   </table>
+
 
 
 
