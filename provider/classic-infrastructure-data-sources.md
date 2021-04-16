@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-04-16"
 
 keywords: terraform provider plugin, terraform classic infrastructure, terraform classic, terraform softlayer, terraform sl, terraform vsi, terraform Bare Metal server
 
@@ -408,7 +408,7 @@ Review the output parameters that you can access after you retrieved your data s
 ## `ibm_dns_domain_registration`
 {: classic-domain-reg}
 
-Retrieve information about a domain registration from the IBM DNS Domain Registration Service. The domain must initially be registered via the UI of the IBM Cloud DNS Registration Service. Typically the Domain Registration data source is used in configuration with global load-balancing services, , for example, Cloudflare, Akamai or {{site.data.keyword.cis_full_notm}} (Cloudflare). For more information, see the resource `ibm_dns_domain_registration_nameservers`. 
+Retrieve information about a domain registration from the IBM DNS Domain Registration Service. The domain must initially be registered via the console of the IBM Cloud DNS Registration Service. Typically the Domain Registration data source is used in configuration with global load-balancing services, , for example, Cloudflare, Akamai or {{site.data.keyword.cis_full_notm}} (Cloudflare). For more information, see the resource `ibm_dns_domain_registration_nameservers`. 
 
 ### Sample Terraform code
 {: classic-domain-reg-sample}

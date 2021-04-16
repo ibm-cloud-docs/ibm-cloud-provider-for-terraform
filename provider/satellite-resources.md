@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-04"
+lastupdated: "2021-04-16"
 
 keywords: terraform provider plugin, terraform satellite host, terraform satellite location
 
@@ -148,7 +148,7 @@ resource "ibm_satellite_host" "assign_host" {
 ```
 {: codeblock}
 
-Sample example to assign {{site.data.keyword.satelliteshort}} host to {site.data.keyword.openshiftshort}} {{site.data.keyword.satelliteshort}} cluster.
+Sample example to assign {{site.data.keyword.satelliteshort}} host to {{site.data.keyword.openshiftshort}} {{site.data.keyword.satelliteshort}} cluster.
 {: shortdesc}
 
 
@@ -267,7 +267,7 @@ Review the input parameters that you can specify for your resource.
 |----|-----------|-----------|---------------------|
 | `location`|String|Required| The name of the location to be created or pass existing location name.|
 | `is_location_exist`| Bool | Optional | Determines the location has to be created or not.|
-| `managed_from`|String|Required| The {{site.data.keyword.cloud_notm}}metro from which the {{site.data.keyword.satelliteshort}} location is managed. To list available multizone regions, run `ibmcloud ks locations`, such as `wdc04`, `wdc06`, or `lon04`.|
+| `managed_from`|String|Required| The {{site.data.keyword.cloud_notm}} metro from which the {{site.data.keyword.satelliteshort}} location is managed. To list available multizone regions, run `ibmcloud ks locations`, such as `wdc04`, `wdc06`, or `lon04`.|
 | `description` | String | Optional |  A description of the new Satellite location.|
 | `logging_account_id` | String | Optional | The account ID for IBM Log Analysis with LogDNA log forwarding.|
 | `cos_config` | List | Optional | The {{site.data.keyword.cos_full_notm}} bucket configuration details. Nested cos_config blocks have the following structure.|

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-05"
+lastupdated: "2021-04-16"
 
 keywords: terraform catalog management resources, terraform catalog offering instance, catalog management, catalog management offering instance, catalog management offering, catalog management version
 
@@ -202,7 +202,7 @@ Review the output parameters that you can access after your resource is created.
 | `public_original_crn` | String | The original offering CRN has published.|
 | `publish_public_crn` | String | The CRN of the public catalog entry of an offering.|
 | `portal_approval_record` | String | The portal's approval record ID.|
-| `portal_ui_url` | String | The portal UI URL.|
+| `portal_ui_url` | String | The portal console URL.|
 | `catalog_id` | String | The ID of the catalog containing this offering.|
 | `catalog_name` | String | The name of the catalog.|
 | `disclaimer` | String | A disclaimer for the offering.|

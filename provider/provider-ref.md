@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-05"
+lastupdated: "2021-04-16"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -139,7 +139,7 @@ Review what parameters you can set in the `provider` block of your Terraform con
  * If visibility is set to **public**, use the regional public endpoint or global public endpoint. The regional public endpoints has higher precedence.
  * If visibility is set to **private**, use the regional private endpoint or global private endpoint. The regional private endpoint is given higher precedence. In order to use the private endpoint from an {{site.data.keyword.cloud_notm}} resource (such as, a classic VM instance), one must have VRF-enabled account. If the {{site.data.keyword.cloud_notm}} service does not support private endpoint, the Terraform resource or datasource will log an error.
  * If visibility is set to **public-and-private**, use regional private endpoints or global private endpoint. If service does not support regional or global private endpoints it uses the regional or global public endpoint.
- * This can also be sourced from the `IC_VISIBILITY` higher precedence or `IBMCLOUD_VISIBILITY` environment variable.|
+ * This can be retrieved from the `IC_VISIBILITY` higher precedence or `IBMCLOUD_VISIBILITY` environment variable.|
 
 
 ## Example usage

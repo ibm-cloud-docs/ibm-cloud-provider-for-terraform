@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-05"
+lastupdated: "2021-04-16"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -264,7 +264,7 @@ Review the output parameters that you can access after your resource is created.
 | ------------- |-------------| -------------- |
 | `id` | String | The unique identifier of the access group members. The ID is returned in the format `<iam_access_group_ID>/<random_ID>`. | 
 | `members` | Array of objects | A list of members that are included in the access group. |
-| `members.iam_id` | String | The IBMid or service ID of the member. |
+| `members.iam_id` | String | The IBMId or service ID of the member. |
 | `members.type` | String | The type of member. Supported values are `user` or `service`. 
 
 ### Import
@@ -555,7 +555,7 @@ Review the input parameters that you can specify for your resource.
 |`name`|String|Required|The name of the dynamic rule for the IAM access group.|
 |`access_group_id`|String|Required|The ID of the access group.|
 |`expiration`|Integer|Required|The number of hours that authenticated users can work in IBM Cloud before they must refresh their access. This value must be between 1 and 24. |
-|`identity_provider`|String|Required|Enter the URI for your identity provider. This is the SAML `entity ID` field, which is sometimes referred to as the issuer ID, for the identity provider as part of the federation configuration for onboarding with IBMid. For example, `https://idp.example.org/SAML2`.|
+|`identity_provider`|String|Required|Enter the URI for your identity provider. This is the SAML `entity ID` field, which is sometimes referred to as the issuer ID, for the identity provider as part of the federation configuration for onboarding with IBMId. For example, `https://idp.example.org/SAML2`.|
 |`conditions`|List of rule conditions|Required|A list of conditions that the rule must satisfy.|
 |`conditions.claim`|String|Required|The key value to evaluate the condition against. The key that you enter depends on what key-value pairs your identity provider provides. For example, your identity provider might include a key that is named `blueGroups` and that holds all the user groups that have access. To apply a condition for a specific user group within the `blueGroups` key, you specify `blueGroups` as your claim and add the value that you are looking for in `conditions.value`. |
 |`conditions.operator`|String|Required|The operation to perform on the claim. Supported values are `EQUALS`, `EQUALS_IGNORE_CASE`, `IN`, `NOT_EQUALS_IGNORE_CASE`, `NOT_EQUALS`, and `CONTAINS`.|
@@ -1229,7 +1229,7 @@ Review the input parameters that you can specify for your resource.
 
 |Name|Data type|Required / optional|Description| Forces new resource |
 |----|-----------|-----------|---------------------| --------- |
-|`ibm_id`|String|Required| The IBMid or email address of the user.| Yes |
+|`ibm_id`|String|Required| The IBMId or email address of the user.| Yes |
 |`roles`|List|Required| A comma separated list of roles. Valid roles are `Writer`, `Reader`, `Manager`, `Administrator`, `Operator`, `Viewer`, and `Editor`.| No |
 |`resources`|List of objects|Optional| A nested block describes the resource of this policy.| No |
 |`resources.service` |String|Optional|The service name of the policy definition. You can retrieve the value by running the `ibmcloud catalog service-marketplace` or `ibmcloud catalog search`.| No |
@@ -1258,7 +1258,7 @@ Review the output parameters that you can access after your resource is created.
 ### Import
 {: #iam-user-policy-import}
 
-The user policy can be imported by using the IBMid and user policy ID.
+The user policy can be imported by using the IBMId and user policy ID.
 
 ```
 $ terraform import ibm_iam_user_policy.example <ibm_id>/<user_policy_ID>

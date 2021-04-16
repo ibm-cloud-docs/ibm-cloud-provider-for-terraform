@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-17"
+lastupdated: "2021-04-16"
 
 keywords: terraform provider plugin, terraform certificate manager, terraform cert manager, terraform certificate
 
@@ -250,7 +250,7 @@ Review the output parameters that you can access after your resource is created.
 ### Import
 {: #certmanager-import}
 
-This resource can be imported by using CRN ID of the certificate. The ID is available in the UI as `Certificate CRN` in the certificate details section.
+This resource can be imported by using CRN ID of the certificate. The ID is available in the console as `Certificate CRN` in the certificate details section.
 {: shortdesc}
 
 **Syntax**: 

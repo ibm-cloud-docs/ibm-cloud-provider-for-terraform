@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-01"
+lastupdated: "2021-04-16"
 
 keywords: terraform provider, terraform resources internet service, terraform resources cis, tf provider plugin
 
@@ -246,7 +246,7 @@ Review the output parameters that you can access after your resource is created.
 
 The `ibm_cis_cache_settings` resource can be imported using the ID. The ID is formed from the domain ID of the domain and the CRN concatenated  using a `:` character.
 
-The domain ID and CRN will be located on the overview page of the {{site.data.keyword.cis_full_notm}} instance of the UI domain heading, or by using the `ibmcloud cis` command line commands.
+The domain ID and CRN will be located on the overview page of the {{site.data.keyword.cis_full_notm}} instance of the console domain heading, or by using the `ibmcloud cis` command line commands.
 
 Domain ID is a 32 digit character string of the form: `9caf68812ae9b3f0377fdf986751a78f`
 
@@ -314,7 +314,7 @@ Review the output parameters that you can access after your resource is created.
 
 The `ibm_cis_certificate_order` resource can be imported using the ID. The ID is formed from the certificate ID, the domain ID of the domain and the CRN  Concatenated  by using a `:` character.
 
-The domain ID and CRN is located on the **Overview** page of the {{site.data.keyword.cis_full_notm}} instance of the UI domain heading, or by using the `ibmcloud cis` command line commands.
+The domain ID and CRN is located on the **Overview** page of the {{site.data.keyword.cis_full_notm}} instance of the console domain heading, or by using the `ibmcloud cis` command line commands.
 
 **Domain ID** is a 32 digit character string of the form: `9caf68812ae9b3f0377fdf986751a78f`
 
@@ -400,7 +400,7 @@ Review the output parameters that you can access after your resource is created.
 
 The `ibm_cis_certificate_upload` resource can be imported using the ID. The ID is formed from the certificate upload ID, the domain ID of the domain and the CRN  Concatenated  by using a `:` character.
 
-The domain ID and CRN is located on the **Overview** page of the {{site.data.keyword.cis_full_notm}} instance of the UI domain heading, or by using the `ibmcloud cis` command line commands.
+The domain ID and CRN is located on the **Overview** page of the {{site.data.keyword.cis_full_notm}} instance of the console domain heading, or by using the `ibmcloud cis` command line commands.
 
 **Domain ID** is a 32 digit character string of the form: `9caf68812ae9b3f0377fdf986751a78f`
 
@@ -480,7 +480,7 @@ The following attributes are exported:
 
 The `ibm_cis_custom_page` resource can be imported using the ID. The ID is formed from the page_id, domain ID of the domain and the CRN concatenated  using a `:` character.
 
-The domain ID and CRN will be located on the overview page of the {{site.data.keyword.cis_full_notm}} instance of the UI domain heading, or by using the `ibmcloud cis` command line commands.
+The domain ID and CRN will be located on the overview page of the {{site.data.keyword.cis_full_notm}} instance of the console domain heading, or by using the `ibmcloud cis` command line commands.
 
 Page ID is a string of the form: `basic_challenge`
 
@@ -2065,7 +2065,7 @@ Review the output parameters that you can access after your resource is created.
 
 The `ibm_cis_routing` resource can be imported using the ID. The ID is formed from the domain ID of the domain and the CRN concatenated  using a `:` character.
 
-The domain ID and CRN will be located on the overview page of the {{site.data.keyword.cis_full_notm}} instance of the UI domain heading, or by using the `ibmcloud cis` command line commands.
+The domain ID and CRN will be located on the overview page of the {{site.data.keyword.cis_full_notm}} instance of the console domain heading, or by using the `ibmcloud cis` command line commands.
 
 Domain ID is a 32 digit character string of the form: `9caf68812ae9b3f0377fdf986751a78f`
 

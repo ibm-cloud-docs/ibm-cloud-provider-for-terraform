@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-05"
+lastupdated: "2021-04-16"
 
 keywords:  terraform catalog management data sources, terraform catalog offering instance, catalog management, catalog management offering instance, catalog management offering, catalog management version
 
@@ -195,7 +195,7 @@ Review the output parameters that you can access after your data source is creat
 | `name` | String | The programmatic name of the offering.|
 | `offering_icon_url` | String | The URL for an icon associated with the offering.|
 | `offering_docs_url` | String | The URL for an extra documentation with the offering.|
-| `offering_support_url` | String | The URL to be displayed in the consumption UI for getting support on the offering.|
+| `offering_support_url` | String | The URL to be displayed in the consumption console for getting support on the offering.|
 | `short_description` | String | The short description in the requested language.|
 | `long_description` | String | The long description in the requested language.|
 | `permit_request_ibm_public_publish` | String | Is it permitted to request publishing to {{site.data.keyword.IBM_notm}} or public.|
@@ -204,7 +204,7 @@ Review the output parameters that you can access after your data source is creat
 | `public_original_crn` | String | The original offering CRN that is published.|
 | `publish_public_crn` | String | The CRN of the public catalog entry of the offering.|
 | `portal_approval_record` | String | The portal's approval record ID.|
-| `portal_ui_url` | String | The portal UI URL.|
+| `portal_ui_url` | String | The portal console URL.|
 | `catalog_id` | String | The ID of the catalog containing this offering.|
 | `catalog_name` | String | The name of the catalog.|
 | `disclaimer` | String | A disclaimer for the offering.|

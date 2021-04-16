@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-05"
+lastupdated: "2021-04-16"
 
 keywords: terraform internet services, terraform cis, terraform provider plugin
 
@@ -201,7 +201,7 @@ Review the output parameters that you can access after you retrieved your data s
 | `query_string_sort` | String | Enables query string sort settings.|
 | `query_string_sortid` | String | The query string sort cache ID.|
 | `query_string_sort.value` | String | The query string sort value.on and off.|
-| `query_string_sort.editable` | String | The query string sort editable propery.|
+| `query_string_sort.editable` | String | The query string sort editable property.|
 | `query_string_sort.modified_on` | String | The query string sort modified date.|
 | `serve_stale_content` | String | The serve stale content will serve pages from `CDN` edge servers cache if your server is offline.|
 | `serve_stale_content.id` | String | The serve stale content cache ID.|
