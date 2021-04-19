@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-19"
 
 keywords: terraform provider plugin, terraform transit gateway resource, terraform transit gateway, transit gateway resource, transit gateway
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -98,9 +96,9 @@ subcollection: ibm-cloud-provider-for-terraform
 # Transit Gateway resources
 {: #tg-resource}
 
-The {{site.data.keyword.cloud_notm}} [Transit Gateway](/docs/transit-gateway?topic=transit-gateway-getting-started) provides to create,  manage gateways and connections and list available locations for gateways. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}.
+The {{site.data.keyword.cloud_notm}} [Transit Gateway](/docs/transit-gateway?topic=transit-gateway-getting-started) provides to create,  manage gateways and connections and list available locations for gateways. You can reference the output parameters for each resource in other resources or data sources by using [Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}.
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 ## `ibm_tg_connection`
@@ -109,7 +107,7 @@ Before you start working with your resource, make sure to review the [required p
 Create, update and delete for the transit gateway's connection resource. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #tg-connection-sample}
 
 The following example shows how to create, update and delete a transit gateway connection by using a transit gateway resource.
@@ -170,7 +168,7 @@ terraform import ibm_tg_connection.example 5ffda12064634723b079acdb018ef308/cea6
 Create, update and delete for the transit gateway resource. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #tg-gatewy-sample}
 
 The following example shows how to create, update and delete a transit gateway by using a transit gateway resource.

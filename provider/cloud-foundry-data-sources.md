@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-16"
+lastupdated: "2021-04-19"
 
 keywords: terraform provider plugin, terraform cloud foundry, terraform cf resources, terraform cf org, terraform cf space
 
@@ -96,9 +96,9 @@ subcollection: ibm-cloud-provider-for-terraform
 # Cloud Foundry data sources
 {: #cloud-foundry-data-sources}
 
-You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+You can reference the output parameters for each resource in other resources or data sources by using [Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 
@@ -109,7 +109,7 @@ Retrieve information about an existing {{site.data.keyword.cloud_notm}} account.
 {: shortdesc}
 
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cf-account-sample}
 
 The following example retrieves information about an {{site.data.keyword.cloud_notm}} account that belongs to the `myorg` Cloud Foundry organization. 
@@ -160,7 +160,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an existing Cloud Foundry app. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cf-app-sample}
 
 The following example retrieves information about the `my-app` Cloud Foundry app.  
@@ -215,7 +215,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an existing private domain for an app. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cf-private-domain-sample}
 
 The following example retrieves information about the `example.com` domain. 
@@ -257,7 +257,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an existing shared domain for an app. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cf-shared-domain-sample}
 
 The following example retrieves information about the `example.com` domain. 
@@ -299,7 +299,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an existing app route. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cf-app-route-sample}
 
 The following example retrieves information about an app route. 
@@ -347,7 +347,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an existing Cloud Foundry organization. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {; #cf-org-sample}
 
 The following example retrieves information about the `myorg` Cloud Foundry organization. 
@@ -390,7 +390,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about a quota for a Cloud Foundry organization. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cf-org-quota-sample}
 
 The following example retrieves information for an existing quota plan. 
@@ -441,7 +441,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about a Cloud Foundry service instance. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cf-service-instance-sample}
 
 The following example retrieves information about the `mycloudantdb` instance. 
@@ -493,7 +493,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about existing service credentials that a Cloud Foundry service instance uses. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cf-service-key-sample}
 
 The following example retrieves service key information for the `mycloudantdb` service instance. 
@@ -545,7 +545,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about a service plan for a Cloud Foundry service. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cf-service-plan-sample}
 
 The following example retrieves information about the `Lite` service plan for the `CloudantNOSQLDB` service. 
@@ -589,7 +589,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an existing Cloud Foundry space.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cf-space-sample}
 
 The following example retrieves information about the `prod` Cloud Foundry space.
@@ -638,8 +638,8 @@ Review the output parameters that you can access after you retrieved your data s
 
 |Name|Data type|Description|
 |----|-----------|--------------------|
-|`auditors`|String|The email addresses (associated with IBMId) of the users who have an auditor role in this space.|
-|`developers`|String|The email addresses (associated with IBMId) of the users who have a developer role in this space.|
+|`auditors`|String|The email addresses (associated with IBMID) of the users who have an auditor role in this space.|
+|`developers`|String|The email addresses (associated with IBMID) of the users who have a developer role in this space.|
 |`id`|String|The unique identifier of the space.  |
-|`managers`|String|The email addresses (associated with IBMId) of the users who have a manager role in this space.|
+|`managers`|String|The email addresses (associated with IBMID) of the users who have a manager role in this space.|
 {: caption="Table 1. Available output parameters" caption-side="top"}

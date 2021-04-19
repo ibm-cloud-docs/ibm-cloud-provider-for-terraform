@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-16"
+lastupdated: "2021-04-19"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -97,9 +97,9 @@ subcollection: ibm-cloud-provider-for-terraform
 # Identity & Access Management (IAM) data sources
 {: #iam-data-sources}
 
-Review the data sources that you can use to retrieve information about your Identity and Access Management (IAM) resources. All data sources are imported as read-only information. You can reference the output parameters for each data source by using Terraform interpolation syntax.
+Review the data sources that you can use to retrieve information about your Identity and Access Management (IAM) resources. All data sources are imported as read-only information. You can reference the output parameters for each data source by using Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax.
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 ## `ibm_iam_account_settings`
@@ -109,7 +109,7 @@ Create, modify, or delete an iam_account_settings data sources. For more informa
 {: shortdesc}
 
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #iam-account-settings-dssample}
 
 
@@ -140,7 +140,7 @@ Review the output parameters that you can access after your data source is creat
 | `restrict_create_platform_apikey` | String | Defines whether creating platform API keys is access controlled. Valid values are **RESTRICTED** to apply access control. **NOT_RESTRICTED** to remove access control. **NOT_SET** to `unset` a previous set value.|
 | `allowed_ip_addresses` | String | Defines the IP addresses and subnets from which IAM tokens is created for an account.|
 | `entity_tag` | String | The version of an account settings.|
-| `mfa` | String | Defines the MFA trait for an account. Valid values are **NONE** No MFA trait set. **TOTP** For all non-federated IBMId users **TOTP4ALL** For all users. **LEVEL1** The Email based MFA for all users. **LEVEL2** TOTP based MFA for all users. **LEVEL3** U2F MFA for all users.|
+| `mfa` | String | Defines the MFA trait for an account. Valid values are **NONE** No MFA trait set. **TOTP** For all non-federated IBMID users **TOTP4ALL** For all users. **LEVEL1** The Email based MFA for all users. **LEVEL2** TOTP based MFA for all users. **LEVEL3** U2F MFA for all users.|
 | `history` | String | The history of an account settings. Nested history blocks have the following structure.|
 | `history.timestamp` | String | The timestamp when an action is triggered.|
 | `history.iam_id` | String | The IAM ID of the identity that triggered an action.|
@@ -159,7 +159,7 @@ Review the output parameters that you can access after your data source is creat
 Retrieve information about an IAM access group. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #access-group-sample}
 
 ```
@@ -194,7 +194,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`groups.rules`|List of access group rules|A list of dynamic rules that are applied to the IAM access group.|
 |`groups.rules.name`|String|The name of the dynamic rule. |
 |`groups.rules.expiration`|Integer|The number of hours that authenticated users can work in IBM Cloud before they must refresh their access.|
-|`groups.rules.identity_provider`|String|The URI of your identity provider. This is the SAML "entity ID" field, which is sometimes referred to as the issuer ID, for the identity provider as part of the federation configuration for onboarding with IBMId. |
+|`groups.rules.identity_provider`|String|The URI of your identity provider. This is the SAML "entity ID" field, which is sometimes referred to as the issuer ID, for the identity provider as part of the federation configuration for onboarding with IBMID. |
 |`groups.rules.conditions`|List of rule conditions|A list of conditions that the rule must satisfy.|
 |`groups.rules.conditions.claim`|String|The key value to evaluate the condition against. The key depends on what key-value pairs your identity provider provides. For example, your identity provider might include a key that is named `blueGroups` and that holds all the user groups that have access. To apply a condition for a specific user group within the `blueGroups` key, you specify `blueGroups` as your claim and add the value that you are looking for in `conditions.value`. |
 |`groups.rules.conditions.operator`|String|The operation to perform on the claim. Supported values are `EQUALS`, `QUALS_IGNORE_CASE`, `IN`, `NOT_EQUALS_IGNORE_CASE`, `NOT_EQUALS`, and `CONTAINS`.|
@@ -208,7 +208,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about your IAM access token. You can use this token to authenticate with the {{site.data.keyword.cloud_notm}} platform.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #iam-token-sample}
 
 ```
@@ -240,7 +240,7 @@ Review the output parameters that you can access after you retrieved your data s
 
 Retrieve a list of actions for an {{site.data.keyword.cloud_notm}} service that are included in an IAM service access role. 
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #iam-role-actions-sample}
 
 ```
@@ -278,7 +278,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about supported IAM roles for an {{site.data.keyword.cloud_notm}} service. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #iam-roles-sample}
 
 ```
@@ -317,7 +317,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an IAM service ID. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #iam-service-sample}
 
 The following example retrieves information about the `myservice` service. 
@@ -363,7 +363,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an IAM service policy. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #iam-service-policy-sample}
 
 ```
@@ -422,7 +422,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an IAM user policy. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #iam-user-policy-sample}
 
 ```
@@ -481,7 +481,7 @@ The following attributes are exported:
 Retrieve information about an IAM user profile. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #iam-user-profile-sample}
 
 ```
@@ -529,7 +529,7 @@ The following attributes are exported:
 Retrieve information about an IAM user profile on IBM Cloud as a read-only data source.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #iam-users-sample}
 
 ```

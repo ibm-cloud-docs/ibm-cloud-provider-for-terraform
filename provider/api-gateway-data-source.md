@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-04-19"
 
 keywords: terraform provider plugin, terraform api gateway
 
@@ -96,9 +96,9 @@ subcollection: ibm-cloud-provider-for-terraform
 # API Gateway data sources
 {: #api-gw-data-sources}
 
-Review the data sources that you can use to retrieve information about your API Gateway resources. All data sources are imported as read-only information. You can reference the output parameters for each data source by using Terraform interpolation syntax.
+Review the data sources that you can use to retrieve information about your API Gateway resources. All data sources are imported as read-only information. You can reference the output parameters for each data source by using Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax.
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 ## `ibm_api_gateway`
@@ -107,7 +107,7 @@ Before you start working with your data source, make sure to review the [require
 Retrieve information about an existing API Gateway instance. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #api-gw-sample}
 
 ```

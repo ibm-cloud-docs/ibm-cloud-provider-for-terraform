@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-16"
+lastupdated: "2021-04-19"
 
 keywords: terraform provider plugin, terraform satellite host, terraform satellite location
 
@@ -99,9 +99,9 @@ subcollection: ibm-cloud-provider-for-terraform
 With {{site.data.keyword.satellitelong_notm}}, you can bring your own infrastructure that is in your on-premises data center, in other cloud providers, or in edge environments to {{site.data.keyword.cloud_notm}} by creating a {{site.data.keyword.satelliteshort}} host and location.
 {: shortdesc}
 
-You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+You can reference the output parameters for each resource in other resources or data sources by using [Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 ## `ibm_satellite_host`
@@ -110,7 +110,7 @@ Before you start working with your resource, make sure to review the [required p
 Create, update, or delete [{{site.data.keyword.satellitelong_notm}} Host](/docs/satellite?topic=satellite-hosts). Assign a host to an {{site.data.keyword.satellitelong_notm}} location or cluster. Before you can assign hosts to clusters, first assign at least three hosts to the {{site.data.keyword.satelliteshort}} location, to run control plane operations. Then, when you have {{site.data.keyword.satelliteshort}} clusters, you can assign hosts as needed to provide compute resources for your workloads. You can assign hosts by specifying a host ID or by providing labels to match hosts to your request.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #satellite-host-sample}
 
 Sample example to assign {{site.data.keyword.satelliteshort}} host to satellite control plane using {{site.data.keyword.vpc_short}}.
@@ -223,7 +223,7 @@ terraform import ibm_satellite_host.host satellite-ibm/c0kinbr12312312
 Create, update, or delete [{{site.data.keyword.satellitelong_notm}} Host](/docs/satellite?topic=satellite-locations). Set up an IBM Cloud™ Satellite location to represent a data center that you fill with your own infrastructure resources, and start running IBM Cloud services on your own infrastructure.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #satellite-location-sample}
 
 Sample example to create {{site.data.keyword.satelliteshort}} location.

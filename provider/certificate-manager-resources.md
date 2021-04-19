@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-16"
+lastupdated: "2021-04-19"
 
 keywords: terraform provider plugin, terraform certificate manager, terraform cert manager, terraform certificate
 
@@ -96,10 +96,10 @@ subcollection: ibm-cloud-provider-for-terraform
 # Certificate Manager resources
 {: #cert-manager-resources}
 
-Review the [Certificate Manager](/docs/certificate-manager?topic=certificate-manager-about-certificate-manager) resources that you can create, modify, or delete. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+Review the [Certificate Manager](/docs/certificate-manager?topic=certificate-manager-about-certificate-manager) resources that you can create, modify, or delete. You can reference the output parameters for each resource in other resources or data sources by using [Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 {: shortdesc}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 ## `ibm_certificate_manager_import`
@@ -108,7 +108,7 @@ Before you start working with your resource, make sure to review the [required p
 Upload or delete a certificate in Certificate Manager. For more information, about {{site.data.keyword.cloud_notm}} certificate manager, see [Managing certificates](/docs/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cert-manager-sample}
 
 A sample code to create a certificate manager service instance that enables customer managed keys and imports a certificate.
@@ -179,7 +179,7 @@ Review the output parameters that you can access after your resource is created.
 Order, renew, update, or delete a certificate in Certificate Manager. For more information, about  see [Ordering certificates](/docs/certificate-manager?topic=certificate-manager-ordering-certificates).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #certmanager-order-sample}
 
 A sample code to create a certificate manager service instance that enables customer managed keys and orders a certificate.

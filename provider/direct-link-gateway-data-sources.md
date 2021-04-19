@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-19"
 
 keywords:  terraform provider plugin, direct link gateway, terraform direct link gateway, terraform direct link gateway data sources
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -98,10 +96,10 @@ subcollection: ibm-cloud-provider-for-terraform
 # Direct Link Gateway data sources
 {: #dl-gateway-ds}
 
-Use {{site.data.keyword.cloud_notm}} [Direct Link](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl) to seamlessly connect your on-premises resources to your cloud resources. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}.
+Use {{site.data.keyword.cloud_notm}} [Direct Link](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl) to seamlessly connect your on-premises resources to your cloud resources. You can reference the output parameters for each resource in other resources or data sources by using [Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}.
 {: shordesc}
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 ## ibm_dl_gateway
@@ -110,7 +108,7 @@ Before you start working with your data source, make sure to review the [require
 Import the details of an existing {{site.data.keyword.cloud_notm}} infrastructure direct link gateway and its virtual connections.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #dl-gw-dssample}
 
 ```
@@ -178,7 +176,7 @@ Review the output parameters that you can access after your resource is created.
 Import the details of an existing {{site.data.keyword.cloud_notm}} infrastructure direct link gateways.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #dl-gws-dssample}
 
 ```
@@ -234,7 +232,7 @@ Review the output parameters that you can access after your resource is created.
 Import the details of valid locations for the specified direct link offering.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #dl-loc-dssample}
 
 ```
@@ -280,7 +278,7 @@ Review the output parameters that you can access after your resource is created.
 Import the details of an existing {{site.data.keyword.cloud_notm}} infrastructure direct link offering speed options.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #dl-off-spd-dssample}
 
 ```
@@ -317,7 +315,7 @@ Review the output parameters that you can access after your resource is created.
 Import the details of an existing {{site.data.keyword.cloud_notm}} infrastructure direct link offering port.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #dl-port-dssample}
 
 ```
@@ -358,7 +356,7 @@ Review the output parameters that you can access after your resource is created.
 Import the details of an existing {{site.data.keyword.cloud_notm}} infrastructure direct link  ports.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #dl-ports-dssample}
 
 ```
@@ -396,7 +394,7 @@ Review the output parameters that you can access after your resource is created.
 Import the details of an existing IBM Cloud Infrastructure direct link provider gateway as a read-only data source.  For more information, refer to [about Direct Link](/docs/dl?topic=dl-dl-about#use-case-connect).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #dl-provider-gwy-dssample}
 
 ```
@@ -444,7 +442,7 @@ Review the output parameters that you can access after your resource is created.
 Import the details of an existing {{site.data.keyword.cloud_notm}} infrastructure direct link provider ports.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #dl-provider-ports-dssample}
 
 ```
@@ -481,7 +479,7 @@ Review the output parameters that you can access after your resource is created.
 Import the details of an existing {{site.data.keyword.cloud_notm}} infrastructure direct link  location specific cross connect router information.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #dl-routers-dssample}
 
 ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-19"
 
 keywords: Terraform on {{site.data.keyword.cloud_notm}}, configuration files, resources, what is Terraform on {{site.data.keyword.cloud_notm}}, automation, automate
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -101,18 +99,18 @@ subcollection: ibm-cloud-provider-for-terraform
 With {{site.data.keyword.terraform-provider_full_notm}}, you can automate the {{site.data.keyword.cloud_notm}} resource provisioning to build, change, and version complex, multi-tier cloud environments. 
 {: shortdesc} 
 
-Terraform is an open source software that enables predictable and consistent provisioning of cloud resources by using a high-level scripting language. Supported resources include Infrastructure-as-a-Service (IaaS), Platform-as-a-Service (PaaS), and Function-as-a-Service (FaaS). By working with different cloud providers, you can use Terraform to configure and automate your cloud resource provisioning across cloud providers. 
+Terraform on {{site.data.keyword.cloud_notm}} is an open source software that enables predictable and consistent provisioning of cloud resources by using a high-level scripting language. Supported resources include Infrastructure-as-a-Service (IaaS), Platform-as-a-Service (PaaS), and Function-as-a-Service (FaaS). By working with different cloud providers, you can use Terraform on {{site.data.keyword.cloud_notm}} to configure and automate your cloud resource provisioning across cloud providers. 
 
 ## Key terms
 {: #terms}
 
-Learn the basics about Terraform by reviewing the following key terms.
+Learn the basics about Terraform on {{site.data.keyword.cloud_notm}} by reviewing the following key terms.
 
 <dl>
 <dt>Resources</dt>
-<dd>Resources are infrastructure components or services that you can provision in a cloud environment. Typical examples are Bare Metal servers, virtual servers, auto-scaling groups, load balancers, or software-defined networking components. Every cloud provider supports different types of resources that you can provision with Terraform. </dd>
-<dt>Terraform configuration</dt>
-<dd>An Terraform configuration is a set of files that define which resources you want to provision with a specific cloud provider. You can write Terraform configurations in HashiCorp Configuration Language(HCL) or JSON syntax.</dd>
+<dd>Resources are infrastructure components or services that you can provision in a cloud environment. Typical examples are Bare Metal servers, virtual servers, auto-scaling groups, load balancers, or software-defined networking components. Every cloud provider supports different types of resources that you can provision with Terraform on {{site.data.keyword.cloud_notm}}. </dd>
+<dt>Terraform on {{site.data.keyword.cloud_notm}} configuration</dt>
+<dd>An Terraform on {{site.data.keyword.cloud_notm}} configuration is a set of files that define which resources you want to provision with a specific cloud provider. You can write Terraform on {{site.data.keyword.cloud_notm}} configurations in HashiCorp Configuration Language(HCL) or JSON syntax.</dd>
 </dl>
 
 

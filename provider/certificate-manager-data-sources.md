@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-19"
 
 keywords: terraform provider plugin, terraform api gateway
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -98,9 +96,9 @@ subcollection: ibm-cloud-provider-for-terraform
 # Certificate Manager data sources
 {: #cert-manager-data-sources}
 
-Review the data sources that you can use to retrieve information about the certificates that your manage in Certificate Manager. All data sources are imported as read-only information. You can reference the output parameters for each data source by using Terraform interpolation syntax.
+Review the data sources that you can use to retrieve information about the certificates that your manage in Certificate Manager. All data sources are imported as read-only information. You can reference the output parameters for each data source by using Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax.
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 
@@ -110,7 +108,7 @@ Before you start working with your data source, make sure to review the [require
 Retrieve the details of an existing certificate instance resource and lists all the certificates.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cert-manager-certificate-sample}
 
 ```
@@ -176,7 +174,7 @@ Review the output parameters that you can access after your resource is created.
 Retrieve the details of one or lists all certificates that are managed by your Certificate Manager service instance resource. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cert-manager-certificates-sample}
 
 ```

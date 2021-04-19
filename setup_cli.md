@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-16"
+lastupdated: "2021-04-19"
 
-keywords: install Terraform cli, set up Terraform cli, ibm cloud provider plugin, Terraform
+keywords: install Terraform on {{site.data.keyword.cloud_notm}} cli, set up Terraform on {{site.data.keyword.cloud_notm}} cli, ibm cloud provider plugin, Terraform on {{site.data.keyword.cloud_notm}}
 
 subcollection: ibm-cloud-provider-for-terraform
 
@@ -91,261 +91,120 @@ subcollection: ibm-cloud-provider-for-terraform
 {:video: .video}
 
 
-
-# Setting up your environment
+# Installing the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in
 {: #setup_cli}
 
-Before you automate and provision your {{site.data.keyword.cloud_notm}} resource, you must install the Terraform and the {{site.data.keyword.cloud_notm}} Provider plug-in.
+Install the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform to start automating infrastructure deployments and cloud resource management with Terraform. 
 {: shortdesc}
 
-## Installing the Terraform
-{: #install_cli}
-
-You can use Terraform to manage {{site.data.keyword.cloud_notm}} resources. Terraform works with multi-cloud providers, a cloud provider is responsible to provision and expose the resources in the cloud.
-{: shortdesc}
-
-### Terraform v0.12 and v0.13 installation
+## Installing the Terraform CLI
 {: #tf_installation}
 
-IBM Cloud provider supports Terraform v0.12, and v0.13. You can complete the following steps to install Terraform v0.12 and Terraform v0.13 on your local machine.
+Use these steps to install the Terraform CLI. 
 {: shortdesc}
 
-1. Create a `terraform` folder on your local machine, and navigate to your `terraform` folder. 
+The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform currently supports Terraform version 0.12.x and 0.13.x only. Make sure to select a supported Terraform version. 
+{: note}
 
+1. Create a `terraform` folder on your local machine, and navigate to your `terraform` folder. 
    ```
-    mkdir terraform && cd terraform
+   mkdir terraform && cd terraform
    ```
-   {: codeblock}
-2. Download the specific [Terraform version](https://releases.hashicorp.com/terraform){: external}.
+   {: pre}
+   
+2. Download the [Terraform version](https://releases.hashicorp.com/terraform){: external} that you want. 
 3. Extract the Terraform `zip` file and copy the files to your `terraform` directory. 
 4. Set the environment `PATH` variable to your Terraform files.
-
    ```
    export PATH=$PATH:$HOME/terraform
    ```
-   {: codeblock}
+   {: pre}
+   
 5. Verify that the installation is successful by using a `terraform` command.
    ```
    terraform
    ```
-   {: codeblock}
+   {: pre}
 
-   **Output:**
+   Example output:
+   ```
+   Usage: terraform [-version] [-help] <command> [args]
+
+   The available commands for execution are listed below.
+   The most common, useful commands are shown first, followed by
+   less common or more advanced commands. If you're just getting
+   started with Terraform, stick with the common commands. For the
+   other commands, please read the help and docs before usage.
+
+   Common commands:
+    apply              Builds or changes infrastructure
+    console            Interactive console for Terraform interpolations
+    destroy            Destroy Terraform-managed infrastructure
+    env                Workspace management
+    fmt                Rewrites config files to canonical format
+    get                Download and install modules for the configuration
+    graph              Create a visual graph of Terraform resources
+    import             Import existing infrastructure into Terraform
+    init               Initialize a Terraform working directory
+    login              Obtain and save credentials for a remote host
+    logout             Remove locally-stored credentials for a remote host
+    output             Read an output from a state file
+    plan               Generate and show an execution plan
+    providers          Prints a tree of the providers used in the configuration
+    refresh            Update local state file against real resources
+    show               Inspect Terraform state or plan
+    taint              Manually mark a resource for recreation
+    untaint            Manually unmark a resource as tainted
+    validate           Validates the Terraform files
+    version            Prints the Terraform version
+    workspace          Workspace management
+
+   All other commands:
+    0.12upgrade        Rewrites pre-0.12 module source code for v0.12
+    debug              Debug output management (experimental)
+    force-unlock       Manually unlock the terraform state
+    push               Obsolete command for Terraform Enterprise legacy (v1)
+    state              Advanced state management
 
    ```
-      Usage: terraform [-version] [-help] <command> [args]
+   {: screen}
 
-      The available commands for execution are listed below.
-      The most common, useful commands are shown first, followed by less common or more advanced commands. If you're just getting started with Terraform on {{site.data.keyword.cloud_notm}}, stick with the common commands. For the other commands, please read the help and Docs  before usage.
+   To upgrade your Terraform templates from Terraform version 0.12 to 0.13, see [Upgrading your Terraform version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol#tf-0.1x-migration).
+   {: tip}
+   
+6. [Install the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform](#install_provider).
 
-      Common commands:
-          apply              Builds or changes infrastructure
-          console            Interactive console for Terraform on {{site.data.keyword.cloud_notm}} interpolations
-          destroy            Destroy Terraform on {{site.data.keyword.cloud_notm}}-managed infrastructure
-          env                Workspace management
-          fmt                Rewrites config files to canonical format
-          get                Download and install modules for the configuration
-          graph              Create a visual graph of Terraform on {{site.data.keyword.cloud_notm}} resources
-          import             Import existing infrastructure into Terraform on {{site.data.keyword.cloud_notm}}
-          init               Initialize a Terraform on {{site.data.keyword.cloud_notm}} working directory
-          output             Read an output from a state file
-          plan               Generate and show an execution plan
-          providers          Prints a tree of the providers used in the configuration
-          push               Upload this Terraform on {{site.data.keyword.cloud_notm}} module to Atlas to run
-          refresh            Update local state file against real resources
-          show               Inspect Terraform on {{site.data.keyword.cloud_notm}} state or plan
-          taint              Manually mark a resource for recreation
-          untaint            Manually unmark a resource as tainted
-          validate           Validates the Terraform on {{site.data.keyword.cloud_notm}} files
-          version            Prints the Terraform on {{site.data.keyword.cloud_notm}} version
-          workspace          Workspace management
-
-      All other commands:
-          debug              Debug output management (experimental)
-          force-unlock       Manually unlock the Terraform on {{site.data.keyword.cloud_notm}} state
-          state              Advanced state management
-      ```
-      {: screen}
-
-      To migrate from the Terraform v0.12 to Terraform v0.13, see [Upgrading Terraform version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol#tf-0.1x-migration).
-
-
-## Installing the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform
+## Installing the {{site.data.keyword.cloud_notm}} Provider plug-in
 {: #install_provider}
 
-After the Terraform installation is complete. You need to configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform to provision and expose the resources. {{site.data.keyword.cloud_notm}} provider supports plug-in to support Terraform v0.12.x, v0.13.x, and higher version.
+After the Terraform CLI installation is complete, you must install the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform so that you can start working with resources and services in {{site.data.keyword.cloud_notm}}. 
 {: shortdesc}
-
-### Terraform v0.13.x and higher
-{: #install-provider-v13}
-
-Complete the following steps to configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform v0.12 and Terraform v0.13.
-{: shortdesc}
-
-You need not explicitly download the `plugins` for Terraform v0.13.x and higher version.
-{: note}
-
-Create a `versions.tf` file in the Git repository or the folder where Terraform is setup, and add the shared Terraform block by specifying the right Terraform provider version in `version` parameter to automatically provision the plug-ins for Terraform v0.13.x and higher version.
-
-**Syntax**
-
-```
- terraform {
-   required_providers {
-      ibm = {
-         source = "IBM-Cloud/ibm"
-         version = "<provider version>"
-      }
-    }
-  }
-```
-{: codeblock}
-
-Terraform supports `version` constraints to specify the range of acceptable versions to initialize. The version syntax format is specified as `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. You can use the following operators:
-
-|Operator|Description|
-|-------|---------|
-| `= (or no operator)`| Allows only extract version number. You cannot combine with other conditions. For example, `1.21.0`.|
-| `!=` | Excludes an exact version number. For example, `!=1.19.0`.|
-| `>, >=, <, <=` | Compares against a specified version, allows version for which the comparison is true. `Greater-than` requests newer version, and `less-than` requests older versions. For example, `>= 1.20.0 < 2.0.0`.|
-| `~>` | Allows only the rightmost version component to increment. For example, `~> 1.20.0` allows new patch releases within a specific minor patch releases like `1.20.1, 1.20.2, 1.20.3`, but not `1.21.0` release.|
-
-
-
-
-**Example**
-
-```
- terraform {
-   required_providers {
-      ibm = {
-         source = "IBM-Cloud/ibm"
-         version = "1.20.0"
-      }
-    }
-  }
-```
-{: codeblock}
-
-If you are using Terraform modules, the shared Terraform block should be used in all the module folders. You can refer the Terraform provider block from the [provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest){: external}.
-{: note}
-
-### Terraform v0.12.x
-{: #install-provider-v12}
-
-Complete the following steps to configure the {{site.data.keyword.cloud_notm}} provider plug-in for Terraform v0.12.
 
 1. Download the latest version of the [{{site.data.keyword.cloud_notm}} provider plug-in](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
 2. Extract the `zip` file and retrieve the files.
-3. Create a `plugins` hidden folder.
+3. Create a hidden `plugins` folder on your local machine.
    ```
-    mkdir -p $HOME/.terraform.d/plugins
+   mkdir -p $HOME/.terraform.d/plugins
    ```
-   {: codeblock}
-4. Move the {{site.data.keyword.cloud_notm}} provider plug-in into your `plugins` folder.
+   {: pre}
+   
+4. Move the {{site.data.keyword.cloud_notm}} Provider plug-in into your `plugins` folder.
    ```
    mv $HOME/<DOWNLOAD_FOLDER_NAME>/terraform-provider-ibm* $HOME/.terraform.d/plugins
    ```
-   {: codeblock}
-5. Navigate to your `plugin` hidden folder and verify that the installation is complete.
+   {: pre}
+   
+5. Navigate to your `plugins` folder and verify that the installation is complete.
    ```
    cd $HOME/.terraform.d/plugins && ./terraform-provider-ibm_*
    ```
-   {: codeblock}
-
-## Configuring the {{site.data.keyword.cloud_notm}} provider plug-in
-{: #configure_provider}
-
-As Terraform supports multiple cloud providers, you must specify `ibm` as your {{site.data.keyword.cloud_notm}} provider and configure the plug-in with all required parameters for the resource or data source category that you want to provision.
-{: shortdesc}
-
-1. Review the required [input parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) for the resource or data source category that you want to use and retrieve these parameters by using the [Supported input parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-parameter-ov) documentation.
-2. Optional. Create a directory on your local machine for your Terraform on {{site.data.keyword.cloud_notm}} project and navigate into the directory. This directory is used to store all Terraform on {{site.data.keyword.cloud_notm}} configuration files, the provider configuration, and variable definitions. If you have an existing directory that you want to use, navigate into your existing directory.
-   ```
-   mkdir myproject && cd myproject
-   ```
-   {: codeblock}
-3. Create a local Terraform on {{site.data.keyword.cloud_notm}} variables file that is named `terraform.tfvars` to store the credentials and other input parameters that you retrieved earlier. When you initialize the Terraform on {{site.data.keyword.cloud_notm}} CLI, all variables that are defined in this file are automatically loaded by Terraform on {{site.data.keyword.cloud_notm}} and you can reference them in every Terraform on {{site.data.keyword.cloud_notm}} configuration file in the same directory. 
-
-   The `terraform.tfvars` file contains confidential information, do not push this file to your version control system where you store the Terraform on {{site.data.keyword.cloud_notm}} configuration files of the resources that you want to provision. The `terraform.tfvars` file is meant to be on your local system only. 
-   {: important}
+   {: pre}
    
-   Example `terraform.tfvars` file:
+   Example output: 
    ```
-   ibmcloud_api_key = "<ibmcloud_api_key>"
-   iaas_classic_username = "<classic_infrastructure_username>"
-   iaas_classic_api_key = "<classic_infrasturcture_apikey>"
-   region = "<region>"
+   2021/04/16 17:00:39 IBM Cloud Provider version 1.23.1  
+   This binary is a plugin. These are not meant to be executed directly.
+   Please execute the program that consumes these plugins, which will load any plugins automatically
    ```
-   {: codeblock}
-   
-   <table>
-   <caption>The configuration file parameters</caption>
-   <thead>
-   </thead>
-   <tbody>
-   <tr>
-   <td><code>ibmcloud_api_key</code></td>
-   <td>Enter your {{site.data.keyword.cloud_notm}} API key. </td>
-   </tr>
-   <tr>
-   <td><code>iaas_classic_username</code></td>
-   <td>Enter your {{site.data.keyword.cloud_notm}} classic infrastructure user name.  </td>
-   </tr>
-   <tr>
-   <td><code>iaas_classic_api_key</code></td>
-   <td>Enter your {{site.data.keyword.cloud_notm}} classic infrastructure API key. </td>
-   </tr>
-   <tr>
-   <td><code>region</code></td>
-   <td>Enter the {{site.data.keyword.cloud_notm}} region where you want to provision your resources. </td>
-   </tr>
-   </tbody>
-   </table>
-
-4. Create a Terraform on {{site.data.keyword.cloud_notm}} provider configuration file named `provider.tf`. Use this file to specify `ibm` as your cloud provider to reference the credentials from your `terraform.tfvars` file. To reference a variable, declare the variable first, and then retrieve the value of the variable by using Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax.
-
-   The {{site.data.keyword.cloud_notm}} provider offers a flexible methods of providing credentials for authentication. The following two methods are supported.
-
-    - Static credentials
-    - Environment variables
-
-     **Static credentials**
-
-      You can provide your static credentials by adding the `ibmcloud_api_key`, `iaas_classic_username`, and `iaas_classic_api_key` arguments in the {{site.data.keyword.cloud_notm}} provider block.
-
-      ```
-      provider "ibm" {
-          ibmcloud_api_key = ""
-          iaas_classic_username = ""
-          iaas_classic_api_key = ""
-         }
-       ```
-      {: codeblock}
-
-     **Environment variables**
-
-      You can provide your credentials by exporting the `IC_API_KEY`, `IAAS_CLASSIC_USERNAME`, and `IAAS_CLASSIC_API_KEY` environment variables, representing your {{site.data.keyword.cloud_notm}} platform API key, {{site.data.keyword.cloud_notm}} Classic Infrastructure (SoftLayer) user name, and {{site.data.keyword.cloud_notm}} infrastructure API key. The provider block with the empty definition overrides the credentials set through the environment variables.
-      {: shortdesc}
-
-      ```
-      provider "ibm" {}
-      ```
-      {: codeblock}
-
-       **Usage**
-
-      ```
-       $ export IC_API_KEY="ibmcloud_api_key"
-       $ export IAAS_CLASSIC_USERNAME="iaas_classic_username"
-       $ export IAAS_CLASSIC_API_KEY="iaas_classic_api_key"
-       $ terraform plan
-      ```
-      {: pre}
-
-   To create or find your `ibmcloud_api_key`, refer to [API key](/docs/account?topic=account-userapikey#create_user_key). 
-   To create or find your `iaas_classic_username` with the VPN credentials, refer to [VPN credentials](/docs/account?topic=account-vpnpassword).
-   {: note}
-
-5. After you configured the provider with all required input parameters, you can now start [provisioning {{site.data.keyword.cloud_notm}} resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-manage_resources#provision_resources). 
+   {: screen}
 

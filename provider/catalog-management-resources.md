@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-16"
+lastupdated: "2021-04-19"
 
 keywords: terraform catalog management resources, terraform catalog offering instance, catalog management, catalog management offering instance, catalog management offering, catalog management version
 
@@ -99,7 +99,7 @@ subcollection: ibm-cloud-provider-for-terraform
 Create, modify, or delete [{{site.data.keyword.cloud_notm}} catalog management](/docs/cli?topic=cli-manage-catalogs-plugin) resources. 
 {: shortdesc}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 
@@ -111,7 +111,7 @@ Create, modify, or delete an `cm_catalog` resources. You can manage the settings
 {: shortdesc}
 
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cm-catalog-sample}
 
 
@@ -156,7 +156,7 @@ Review the output parameters that you can access after your resource is created.
 Create, modify, or delete an `cm_offering` resources. You can manage the settings for all catalogs across your account. For more information, about managing catalog, refer to [catalog management settings](/docs/account?topic=account-account-getting-started).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cm-offering-sample}
 
 
@@ -219,7 +219,7 @@ Create, modify, or delete an `ibm_cm_offering_instance` resources. You can manag
 {: shortdesc}
 
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cm-offering-instance-sample}
 
 
@@ -276,7 +276,7 @@ Review the output parameters that you can access after your resource is created.
 Create, modify, or delete an `cm_version` resources. For more information, about managing catalog version, refer to [updating your software](/docs/account?topic=account-update-private).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cm-version-sample}
 
 
@@ -301,7 +301,7 @@ Review the input parameters that you can specify for your resource.
 | `offering_id` | String | Required | Offering identification.|
 | `tags` | List | Optional |  The tags array.| Yes |
 |  `target_kinds` | List | Optional | The target kinds. Current supported values are `iks`, `roks`, `vcenter`, and `terraform`.| Yes |
-| `content` | TypeString | Optional | The byte array representing the content to import. Currently supports only `OVA` images.| Yes |
+| `content` | `TypeString` | Optional | The byte array representing the content to import. Currently supports only `OVA` images.| Yes |
 | `zipurl` | String | Optional | The URL path to `.zip` location. If not specified, must provide content in the body of the call.| Yes |
 | `target_version` | String | Optional | The version value for the new version, if not found in the `zip` URL package content.| Yes |
 {: caption="Table: Available input parameters" caption-side="top"}

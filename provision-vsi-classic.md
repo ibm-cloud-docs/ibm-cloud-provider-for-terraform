@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04"
+lastupdated: "2021-04-19"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for classic infrastructure
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -97,7 +95,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # Provisioning an {{site.data.keyword.cloud_notm}} virtual server for classic infrastructure
 {: #sample_infrastructure_config}
 
-You can provision your virtual server for classic infrastructure by using the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. Similar to the [{{site.data.keyword.cloud_notm}} virtual server for VPC provision](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started). that you provisioned. You need to create another configuration file with the specification for your virtual server instance. 
+You can provision your virtual server for classic infrastructure by using the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on {{site.data.keyword.cloud_notm}}. Similar to the [{{site.data.keyword.cloud_notm}} virtual server for VPC provision](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started). that you provisioned. You need to create another configuration file with the specification for your virtual server instance. 
 {: shortdesc}
 
 Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classic infrastructure resource that incurs costs. Be sure to review the [available plans ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/infrastructure/virtual-server-group) before you proceed.
@@ -186,7 +184,7 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
    </tbody>
    </table>
    
-2. Initialize Terraform.
+2. Initialize Terraform on {{site.data.keyword.cloud_notm}}.
 
     ```
     terraform init
@@ -204,15 +202,15 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
 
    * provider.ibm: version = "~> 0.11"
 
-   Terraform has been successfully initialized!
+   Terraform on {{site.data.keyword.cloud_notm}} has been successfully initialized!
 
-   You may now begin working with Terraform. Try running "terraform plan" to see any changes that are required for your infrastructure. All Terraform commands should now work.
+   You may now begin working with Terraform on {{site.data.keyword.cloud_notm}}. Try running "terraform plan" to see any changes that are required for your infrastructure. All Terraform on {{site.data.keyword.cloud_notm}} commands should now work.
 
-   If you ever set or change modules or backend configuration for Terraform, rerun this command to reinitialize your working directory. If you forget, other commands detects it and remind you to do so if necessary.
+   If you ever set or change modules or backend configuration for Terraform on {{site.data.keyword.cloud_notm}}, rerun this command to reinitialize your working directory. If you forget, other commands detects it and remind you to do so if necessary.
    ```
    {: screen}
    
-3. Generate an Terraform execution plan. When you execute this command, Terraform validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in. 
+3. Generate an Terraform on {{site.data.keyword.cloud_notm}} execution plan. When you execute this command, Terraform on {{site.data.keyword.cloud_notm}} validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in. 
   
    ```
    terraform plan
@@ -222,14 +220,14 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
    **Example output:**
 
    ```
-   Refreshing Terraform state in-memory prior to plan...
+   Refreshing Terraform on {{site.data.keyword.cloud_notm}} state in-memory prior to plan...
    The refreshed state be used to calculate this plan, but not be persisted to local or remote state storage.
 
    An execution plan has been generated and is shown.
    Resource actions are indicated with the following symbols:
      + create
 
-   Terraform performs the following actions:
+   Terraform on {{site.data.keyword.cloud_notm}} performs the following actions:
 
      + ibm_compute_vm_instance.vm1
          id:                           <computed>
@@ -274,11 +272,11 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
 
    Plan: 1 to add, 0 to change, 0 to destroy.
    ------------------------------------------------------------------------
-   **Note** You didn't specify an "-out" parameter to save this plan, so Terraform can't guarantee that exactly these actions be performed if "terraform apply" is subsequently run.
+   **Note** You didn't specify an "-out" parameter to save this plan, so Terraform on {{site.data.keyword.cloud_notm}} can't guarantee that exactly these actions be performed if "terraform apply" is subsequently run.
    ```
    {: screen}
    
-4. Review the execution plan to verify the type of resource that is planned to be provisioned by Terraform.
+4. Review the execution plan to verify the type of resource that is planned to be provisioned by Terraform on {{site.data.keyword.cloud_notm}}.
 
 5. Create your classic infrastructure virtual server. Confirm the creation by entering `yes` when prompted. 
 
@@ -387,4 +385,4 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
 
 **What's next?** 
 
-Explore other [{{site.data.keyword.cloud_notm}} resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider) that you can provision with Terraform. 
+Explore other [{{site.data.keyword.cloud_notm}} resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider) that you can provision with Terraform on {{site.data.keyword.cloud_notm}}. 
