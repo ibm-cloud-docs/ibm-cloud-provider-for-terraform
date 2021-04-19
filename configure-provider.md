@@ -1,5 +1,5 @@
 # Configuring the {{site.data.keyword.cloud_notm}} provider plug-in
-{: #configure_provider}
+{: #configuring_provider}
 
 As Terraform supports multiple cloud providers, you must specify `ibm` as your {{site.data.keyword.cloud_notm}} provider and configure the plug-in with all required parameters for the resource or data source category that you want to provision.
 {: shortdesc}
