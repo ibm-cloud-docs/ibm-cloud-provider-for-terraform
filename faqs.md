@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-04-19"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -100,7 +100,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #vsi_config}
 {: faq}
 
-The Terraform `ibm_compute_vm_instance` resource includes optional and mandatory configuration parameters. To find an overview of how you can configure your virtual server, use the {{site.data.keyword.Bluemix_notm}} CLI.  
+The Terraform on {{site.data.keyword.cloud_notm}} `ibm_compute_vm_instance` resource includes optional and mandatory configuration parameters. To find an overview of how you can configure your virtual server, use the {{site.data.keyword.Bluemix_notm}} CLI.  
 
 1. Install the [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli). 
 
@@ -119,7 +119,7 @@ Most {{site.data.keyword.Bluemix_notm}} platform resources provision within a fe
 
 Use the `terraform apply` and `terraform destroy` times in the following table as a reference for when you can expect your commands to complete. 
 
-If the Terraform operation does not complete due to a timeout, wait for the resource state change to complete and retry the operation. 
+If the Terraform on {{site.data.keyword.cloud_notm}} operation does not complete due to a timeout, wait for the resource state change to complete and retry the operation. 
 {: tip}
 
 <table>
@@ -153,11 +153,11 @@ If the Terraform operation does not complete due to a timeout, wait for the reso
 </tbody>
 </table>
 
-## How do I set up Terraform v0.13.0?
+## How do I set up Terraform on {{site.data.keyword.cloud_notm}} v0.13.0?
 {: #ibm-terraform-provider-v13}
 {: faq}
 
-For detailed steps, see how to [install the Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_cli) and [install the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
+For detailed steps, see how to [install the Terraform on {{site.data.keyword.cloud_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_cli) and [install the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
 
 
 
@@ -177,5 +177,5 @@ Error: Error waiting for create resource alb cert (buvlsclf0qcur3hjcrng/ingress-
 
 **Solution**
 
-You need to update the Terraform provider to use `version 1.16.1` and above.
+You need to update the Terraform on {{site.data.keyword.cloud_notm}} provider to use `version 1.16.1` and above.
 

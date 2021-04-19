@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-04"
+lastupdated: "2021-04-19"
  
 keywords: terraform provider plugin, terraform satellite host, terraform satellite location
 
@@ -99,9 +99,9 @@ subcollection: ibm-cloud-provider-for-terraform
 With {{site.data.keyword.satellitelong_notm}}, you can bring your own infrastructure that is in your on-premises data center, in other cloud providers, or in edge environments to {{site.data.keyword.cloud_notm}} by creating a {{site.data.keyword.satelliteshort}} host and location.
 {: shortdesc}
 
-You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+You can reference the output parameters for each resource in other resources or data sources by using [Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 
@@ -113,7 +113,7 @@ Retrieve information about all the add-ons that are enables on a cluster. For mo
 
 Import the details of an existing {{site.data.keyword.satellitelong_notm}} location registration script as a data source. Creates a script to run on a Red Hat Enterprise Linux 7 or AWS EC2 host in your on-premises infrastructure. The script attaches the host to your {{site.data.keyword.satellitelong_notm}} location. The host must have access to the public network in order for the script to complete.
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #satellite-host-dssample}
 
 The example to create {{site.data.keyword.satelliteshort}} host script to attach {{site.data.keyword.IBM_notm}} host to {{site.data.keyword.satelliteshort}} control plane.
@@ -173,7 +173,7 @@ Review the output parameters that you can access after your resource is created.
 Retrieve information of an existing {{site.data.keyword.satelliteshort}} location. You can then reference the fields of the data source in other resources within the same configuration by using interpolation syntax. For more information, about {{site.data.keyword.cloud_notm}} regions for {{site.data.keyword.satelliteshort}} see [{{site.data.keyword.satelliteshort}} regions](/docs/satellite?topic=satellite-sat-regions).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #satellite-location-dssample}
 
 

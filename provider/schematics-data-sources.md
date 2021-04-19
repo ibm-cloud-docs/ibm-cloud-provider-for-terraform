@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-16"
+lastupdated: "2021-04-19"
 
 keywords: terraform provider plugin, terraform schematics data source, terraform schematics workspace 
 
@@ -96,7 +96,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # Schematics data sources
 {: #schematics-data-sources}
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 ## `ibm_schematics_action`
@@ -105,7 +105,7 @@ Before you start working with your data source, make sure to review the [require
 Retrieve information about a {{site.data.keyword.bpshort}} action. For more details about the Schematics and Schematics actions, see [Setting up an action](/docs/schematics?topic=schematics-action-setup).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #schematics-action-dssample}
 
 
@@ -287,7 +287,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about a {{site.data.keyword.bpshort}} job. For more details about the Schematics and Schematics job, see [setting up jobs](/docs/schematics?topic=schematics-action-setup#action-jobs).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #schematics-job-dssample}
 
 
@@ -489,7 +489,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about a Schematics workspace. For more details about the Schematics and Schematics workspace, see [Setting up workspaces](/docs/schematics?topic=schematics-getting-started).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #schematics-workspace-sample}
 
 The following example retrieves information about the `my-workspace-id` workspace.  
@@ -606,10 +606,10 @@ Review the output parameters that you can access after you retrieved your data s
 ## `ibm_schematics_output`
 {: #schematics-output}
 
-Retrieve state information for a Schematics workspace. For detailed information about how to use this data source, see [Accessing Terraform state information across workspaces](/docs/schematics?topic=schematics-remote-state). 
+Retrieve state information for a Schematics workspace. For detailed information about how to use this data source, see [Accessing Terraform on {{site.data.keyword.cloud_notm}} state information across workspaces](/docs/schematics?topic=schematics-remote-state). 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #schematics-output-sample}
 
 The following example retrieves information about the `my-workspace-id` workspace.  
@@ -657,10 +657,10 @@ Review the output parameters that you can access after you retrieved your data s
 ## `ibm_schematics_state`
 {: #schematics-state}
 
-Retrieve information about the Terraform state file for a Schematics workspace.
+Retrieve information about the Terraform on {{site.data.keyword.cloud_notm}} state file for a Schematics workspace.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #schematics-state-sample}
 
 The following example retrieves information about the `my-workspace-id` workspace.  

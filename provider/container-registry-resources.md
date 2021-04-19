@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-22" 
+lastupdated: "2021-04-19" 
 
 keywords: terraform provider plugin, terraform container registry, container registry, container registry namespaces 
 
@@ -103,7 +103,7 @@ subcollection: ibm-cloud-provider-for-terraform
 Create, update, or delete a container registry namespace. For more information, about container registry, see [About IBM Cloud Container Registry](/docs/Registry?topic=Registry-registry_overview).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cr-namespace-sample}
 
 The following example shows how you can configure a `namespace`.

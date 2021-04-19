@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-17"
+lastupdated: "2021-04-19"
 
 keywords: terraform provider plugin, terraform power resources, terraform power systems resources, terraform power
 
@@ -96,13 +96,13 @@ subcollection: ibm-cloud-provider-for-terraform
 # Power Systems data sources
 {: #power-data-sources}
 
-Review the data sources that you can use to retrieve information about the [Provisioning a virtual server](/docs/hp-virtual-servers?topic=hp-virtual-servers-provision). All data sources are imported as read-only information. You can reference the output parameters for each data source by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+Review the data sources that you can use to retrieve information about the [Provisioning a virtual server](/docs/hp-virtual-servers?topic=hp-virtual-servers-provision). All data sources are imported as read-only information. You can reference the output parameters for each data source by using [Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 {: shortdesc}
 
 To find supported input parameter values, you can use the Power Systems command line plug-in in {{site.data.keyword.cloud_notm}}. To install the plug-in, run `ibmcloud plugin install pi`. 
 {: tip}
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 ## `ibm_pi_catalog_images`
@@ -111,7 +111,7 @@ Before you start working with your data source, make sure to review the [require
 Retrieve the details of an image that you can use in your Power Systems Virtual Server instance for copying into {{site.data.keyword.cloud_notm}} instances. For more information, about catalog images, see [Provisioning a virtual server instance from a third-party image](/docs/virtual-servers?topic=virtual-servers-ordering-3P). 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #pi-catalog-sample}
 
 The following example shows how to retrieve information by using `ibm_pi_catalog_images`.
@@ -187,7 +187,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve the details of an image that you can use in your Power Systems Virtual Server instance. The image represents the version of the operation system that is installed in your Power Systems Virtual Server instance.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #power-image-sample}
 
 The following example shows how to retrieve information about the `7200-03-03` image ID. 
@@ -236,7 +236,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve a list of supported images that you can use in your Power Systems Virtual Server instance. The image represents the version of the operation system that is installed in your Power Systems Virtual Server instance.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #power-images-sample}
 
 The following example retrieves all images for a cloud instance ID. 
@@ -284,7 +284,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about a Power Systems Virtual Server instance. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #power-instance-sample}
 
 The following example shows how to retrieve information about an instance that is named `myinstance`. 
@@ -351,7 +351,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about a Power Systems Virtual Server instance IP address. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #power-instance-ip-sample}
 
 The following example shows how to retrieve information about an instance IP for an instance that is named `myinstance`. 
@@ -403,7 +403,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about the SSH key that is used for your Power Systems Virtual Server instance. The SSH key is used to access the instance after it is created.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #power-ssh-key-sample}
 
 ```
@@ -448,7 +448,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about the network that your Power Systems Virtual Server instance is connected to. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #power-network-sample}
 
 The following example retrieves information about a network that is named `mynetwork`.
@@ -500,7 +500,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve the details about a public network that is used for your Power Systems Virtual Server instance. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #power-public-network-sample}
 
 ```
@@ -543,7 +543,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about the tenants that are configured for your Power Systems Virtual Server instance. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #power-tenant-sample}
 
 The following example retrieves all tenants for the Power Systems Virtual Server instance with the ID `11aaa1a1-11a1-11aa-1111-aaa111aa1a1a`. 
@@ -591,7 +591,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieves information about a persistent storage volume that is mounted to a Power Systems Virtual Server instance. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #power-volume-sample}
 
 The following example retrieves information about the `volume_1` volume that is mounted to the Power Systems Virtual Server instance with the ID `11aaa1a1-11a1-11aa-1111-aaa111aa1a1a`. 
@@ -640,7 +640,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieves information about a persistent storage volume that is mounted to a Power Systems Virtual Server instance. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #power-instance-volumes-sample}
 
 The following example retrieves information about the `volume_1` volume that is mounted to the Power Systems Virtual Server instance with the ID `11aaa1a1-11a1-11aa-1111-aaa111aa1a1a`. 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-16"
+lastupdated: "2021-04-19"
 
 keywords: terraform provider plugin, terraform secrets manager secret, terraform secrets manager secrets, secrets manager secrets, secrets manager secret
 
@@ -96,9 +96,9 @@ subcollection: ibm-cloud-provider-for-terraform
 # Secrets Manager data sources
 {: #secrets-mgr-data-sources}
 
-You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+You can reference the output parameters for each resource in other resources or data sources by using [Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 ## `ibm_secrets_manager_secret`
@@ -108,7 +108,7 @@ Before you start working with your data source, make sure to review the [require
 Retrieve information about the secrets manager secret data sources.  For more information, about getting started with secrets manager, see [about secrets manager](/docs/secrets-manager?topic=secrets-manager-getting-started).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #secrets-mgr-secret-sample}
 
 
@@ -184,7 +184,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about the secrets manager secret data sources. For more information, about getting started with secrets manager, see [about secrets manager](/docs/secrets-manager?topic=secrets-manager-getting-started).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #secrets-mgr-secrets-sample}
 
 

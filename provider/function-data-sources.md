@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-18"
+lastupdated: "2021-04-19"
 
 keywords: terraform provider plugin, terraform functions, terraform open whisk, terraform function action
 
@@ -96,10 +96,10 @@ subcollection: ibm-cloud-provider-for-terraform
 # Functions data sources
 {: #function-data-sources}
 
-Review the data sources that you can use to retrieve information about your {{site.data.keyword.cos_full_notm}} instance. All data sources are imported as read-only information. You can reference the output parameters for each data source by using Terraform interpolation syntax. 
+Review the data sources that you can use to retrieve information about your {{site.data.keyword.cos_full_notm}} instance. All data sources are imported as read-only information. You can reference the output parameters for each data source by using Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax. 
 {: shortdesc}
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 ## `ibm_function_action`
@@ -108,7 +108,7 @@ Before you start working with your data source, make sure to review the [require
 Retrieve information about an action. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #fn-action-sample}
 
 The following example retrieves information about the `myaction` action. 
@@ -166,7 +166,7 @@ Review the output parameters that you can access after you retrieved your data s
 
 Import the details of an existing IBM Cloud Functions namespace. For more information, about managing namespace, see [Managing namespace](/docs/openwhisk?topic=openwhisk-namespaces). 
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #fn-namespace-ds-sample}
 
 The following example creates the namespace and package at a specific location.
@@ -209,7 +209,7 @@ Review the output parameters that you can access after your resource is created.
 Retrieve information about an existing IBM Cloud Functions OpenWhisk package. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #fn-package-sample}
 
 The following example retrieves information about the `mypackage` package. 
@@ -258,7 +258,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an IBM Cloud Functions rule.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #fn-rule-sample}
 
 The following example retrieves information about the `myrule` rule. 
@@ -307,7 +307,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an IBM Cloud Functions trigger. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #fn-trigger-sample}
 
 The following example retrieves information about the `mytrigger` trigger. 

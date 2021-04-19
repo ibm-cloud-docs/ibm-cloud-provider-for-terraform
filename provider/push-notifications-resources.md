@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-05" 
+lastupdated: "2021-04-19" 
 
 keywords: terraform provider plugin, terraform push notifications, ibm cloud provider notifications, push notifications resource
 
@@ -96,7 +96,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # Push notifications resources
 {: #pn-resources}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 
@@ -106,7 +106,7 @@ Before you start working with your resource, make sure to review the [required p
 Configure push notifications resource for Chrome web platform. For more information, about push notifications for Chrome, see [for Chrome applications](/docs/mobilepush?topic=mobilepush-push_step_2#push_step_2_chrome-apps).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #is-pn-appln-chrome-sample}
 
 ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-16"
+lastupdated: "2021-04-19"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -97,9 +97,9 @@ subcollection: ibm-cloud-provider-for-terraform
 # Identity & Access Management (IAM) data sources
 {: #iam-data-sources}
 
-Review the data sources that you can use to retrieve information about your Identity and Access Management (IAM) resources. All data sources are imported as read-only information. You can reference the output parameters for each data source by using Terraform interpolation syntax.
+Review the data sources that you can use to retrieve information about your Identity and Access Management (IAM) resources. All data sources are imported as read-only information. You can reference the output parameters for each data source by using Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax.
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 ## `ibm_iam_account_settings`
@@ -109,7 +109,7 @@ Create, modify, or delete an iam_account_settings data sources. For more informa
 {: shortdesc}
 
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #iam-account-settings-dssample}
 
 
@@ -159,7 +159,7 @@ Review the output parameters that you can access after your data source is creat
 Retrieve information about an IAM access group. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #access-group-sample}
 
 ```
@@ -208,7 +208,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about your IAM access token. You can use this token to authenticate with the {{site.data.keyword.cloud_notm}} platform.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #iam-token-sample}
 
 ```
@@ -240,7 +240,7 @@ Review the output parameters that you can access after you retrieved your data s
 
 Retrieve a list of actions for an {{site.data.keyword.cloud_notm}} service that are included in an IAM service access role. 
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #iam-role-actions-sample}
 
 ```
@@ -278,7 +278,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about supported IAM roles for an {{site.data.keyword.cloud_notm}} service. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #iam-roles-sample}
 
 ```
@@ -317,7 +317,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an IAM service ID. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #iam-service-sample}
 
 The following example retrieves information about the `myservice` service. 
@@ -363,7 +363,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an IAM service policy. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #iam-service-policy-sample}
 
 ```
@@ -422,7 +422,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an IAM user policy. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #iam-user-policy-sample}
 
 ```
@@ -481,7 +481,7 @@ The following attributes are exported:
 Retrieve information about an IAM user profile. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #iam-user-profile-sample}
 
 ```
@@ -529,7 +529,7 @@ The following attributes are exported:
 Retrieve information about an IAM user profile on IBM Cloud as a read-only data source.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #iam-users-sample}
 
 ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-04"
+lastupdated: "2021-04-19"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for vpc
 
@@ -96,7 +96,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # Provisioning an {{site.data.keyword.cloud_notm}} virtual server for VPC
 {: #sample_vpc_config}
 
-Use {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform to provision a VPC, and set up networking for your VPC, and provision a virtual server for VPC in your {{site.data.keyword.cloud_notm}} account. 
+Use {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on {{site.data.keyword.cloud_notm}} to provision a VPC, and set up networking for your VPC, and provision a virtual server for VPC in your {{site.data.keyword.cloud_notm}} account. 
 {: shortdesc}
 
 A VPC allows you to create your own space in {{site.data.keyword.cloud_notm}} so that you can run an isolated environment in the public cloud with custom network policies. The example in this topic provisions the following VPC infrastructure resources for you: 
@@ -110,14 +110,14 @@ Keep in mind that a VPC virtual server instance is an {{site.data.keyword.cloud_
 {: important}
 
 Before you begin: 
- - Install the [latest Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_cli) and the latest [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
-- [Retrieve your {{site.data.keyword.cloud_notm}} credentials, upload an SSH key, and configure the {{site.data.keyword.cloud_notm}} Provider plug-in forTerraform provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider). 
+ - Install the [latest Terraform on {{site.data.keyword.cloud_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli) and the latest [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on {{site.data.keyword.cloud_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
+- [Retrieve your {{site.data.keyword.cloud_notm}} credentials, upload an SSH key, and configure the {{site.data.keyword.cloud_notm}} Provider plug-in forTerraform on {{site.data.keyword.cloud_notm}} provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider). 
 
 To create a VPC and a VSI: 
 
 1. Make sure that you have the [required permissions](/docs/vpc-on-classic?topic=vpc-on-classic-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure. 
 
-2. In the same directory where you stored the `terraform.tfvars` and `provider.tf` files, create an Terraform configuration file and name it `vpc.tf`. The configuration file includes the following definition blocks: 
+2. In the same directory where you stored the `terraform.tfvars` and `provider.tf` files, create an Terraform on {{site.data.keyword.cloud_notm}} configuration file and name it `vpc.tf`. The configuration file includes the following definition blocks: 
    - **locals**: Use this block to specify variables that you want to use multiple times throughout this configuration file. 
    - **resource**: Every resource block specifies the {{site.data.keyword.cloud_notm}} resource that you want to provision. To find more information about supported configurations for each resource, see the [{{site.data.keyword.cloud_notm}} provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider).
    - **data**: Use this block to retrieve information for an existing resource in your {{site.data.keyword.cloud_notm}} account. 
@@ -277,11 +277,11 @@ To create a VPC and a VSI:
      </tr>
      <tr>
        <td><code>resource.ibm_is_instance.keys</code></td>
-       <td>Enter the UUID of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account. In this example, you retrieve the UUID from the <code>ibm_is_ssh_key</code> data source of this configuration file. Terraform uses the name of the SSH key that you define in your data source object to look up information about the SSH key in your {{site.data.keyword.cloud_notm}} account.</td>
+       <td>Enter the UUID of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account. In this example, you retrieve the UUID from the <code>ibm_is_ssh_key</code> data source of this configuration file. Terraform on {{site.data.keyword.cloud_notm}} uses the name of the SSH key that you define in your data source object to look up information about the SSH key in your {{site.data.keyword.cloud_notm}} account.</td>
      </tr>
      <tr>
        <td><code>resource.ibm_is_instance.image</code></td>
-       <td>Enter the ID of the image that represents the Operating System that you want to install on your VPC virtual server instance. In this example, you retrieve the ID from the <code>ibm_is_image</code> data source of this configuration file. Terraform uses the name of the image that you define in your data source object to look up information about the image in the {{site.data.keyword.cloud_notm}} infrastructure portfolio. </td>
+       <td>Enter the ID of the image that represents the Operating System that you want to install on your VPC virtual server instance. In this example, you retrieve the ID from the <code>ibm_is_image</code> data source of this configuration file. Terraform on {{site.data.keyword.cloud_notm}} uses the name of the image that you define in your data source object to look up information about the image in the {{site.data.keyword.cloud_notm}} infrastructure portfolio. </td>
      </tr>
      <tr>
        <td><code>resource.ibm_is_instance.profile</code></td>
@@ -310,7 +310,7 @@ To create a VPC and a VSI:
    </tbody>
    </table>
 
-3. Initialize Terraform. 
+3. Initialize Terraform on {{site.data.keyword.cloud_notm}}. 
 
    ```
    terraform init
@@ -328,15 +328,15 @@ To create a VPC and a VSI:
 
    * provider.ibm: version = "~> 0.11"
 
-   Terraform has been successfully initialized!
+   Terraform on {{site.data.keyword.cloud_notm}} has been successfully initialized!
 
-   You may now begin working with Terraform. Try running "terraform plan" to see any changes that are required for your infrastructure. All Terraform commands should now work.
+   You may now begin working with Terraform on {{site.data.keyword.cloud_notm}}. Try running "terraform plan" to see any changes that are required for your infrastructure. All Terraform on {{site.data.keyword.cloud_notm}} commands should now work.
 
-   If you ever set or change modules or backend configuration for Terraform, rerun this command to reinitialize your working directory. If you forget, other commands detect it and remind you to do so if necessary.
+   If you ever set or change modules or backend configuration for Terraform on {{site.data.keyword.cloud_notm}}, rerun this command to reinitialize your working directory. If you forget, other commands detect it and remind you to do so if necessary.
    ```
    {: screen}
    
-4. Generate an Terraform execution plan. When you execute this command, Terraform validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in.
+4. Generate an Terraform on {{site.data.keyword.cloud_notm}} execution plan. When you execute this command, Terraform on {{site.data.keyword.cloud_notm}} validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in.
 
    ```
    terraform plan
@@ -346,7 +346,7 @@ To create a VPC and a VSI:
    **Example output:** 
 
    ```
-   Refreshing Terraform state in-memory prior to plan...
+   Refreshing Terraform on {{site.data.keyword.cloud_notm}} state in-memory prior to plan...
    The refreshed state be used to calculate this plan, but not be
    persisted to local or remote state storage.
 
@@ -354,7 +354,7 @@ To create a VPC and a VSI:
    Resource actions are indicated with the following symbols:
      + create
 
-   Terraform performs the following actions:
+   Terraform on {{site.data.keyword.cloud_notm}} performs the following actions:
 
      + ibm_is_floating_ip.fip1
          id:                                               <computed>
@@ -429,7 +429,7 @@ To create a VPC and a VSI:
 
    Plan: 6 to add, 0 to change, 0 to destroy.
 
-   **Note** You didn't specify an "-out" parameter to save this plan, so Terraform can't guarantee that exactly these actions be performed if "terraform apply" is subsequently run.
+   **Note** You didn't specify an "-out" parameter to save this plan, so Terraform on {{site.data.keyword.cloud_notm}} can't guarantee that exactly these actions be performed if "terraform apply" is subsequently run.
    ```
    {: screen}
    
@@ -583,5 +583,5 @@ To create a VPC and a VSI:
 
 **What's next?**
 
-Explore other [{{site.data.keyword.cloud_notm}} resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider) that you can provision with Terraform. 
+Explore other [{{site.data.keyword.cloud_notm}} resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider) that you can provision with Terraform on {{site.data.keyword.cloud_notm}}. 
 

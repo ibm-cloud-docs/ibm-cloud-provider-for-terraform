@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-02-26"
+lastupdated: "2021-04-19"
 
-keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, Terraform, provision resources
+keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, Terraform on {{site.data.keyword.cloud_notm}}, provision resources
 
 subcollection: ibm-cloud-provider-for-terraform
 
@@ -97,27 +97,27 @@ subcollection: ibm-cloud-provider-for-terraform
 # Migrating and version controlling
 {: #migration-versioncontrol}
 
-IBM continually updates the Terraform provider to give you higher levels of performance and being up-to-date. Some of the instances aren't able to be upgraded, so they must be closed and you must migrate your resources with the right version.
+IBM continually updates the Terraform on {{site.data.keyword.cloud_notm}} provider to give you higher levels of performance and being up-to-date. Some of the instances aren't able to be upgraded, so they must be closed and you must migrate your resources with the right version.
 
-View the versions that are associated in the Terraform and the {{site.data.keyword.cloud_notm}} provider plug-in.
+View the versions that are associated in the Terraform on {{site.data.keyword.cloud_notm}} and the {{site.data.keyword.cloud_notm}} provider plug-in.
 {: shortdesc}
 
-## Upgrading the Terraform version
+## Upgrading the Terraform on {{site.data.keyword.cloud_notm}} version
 {: #tf-0.1x-migration}
   
-You can upgrade your Terraform, for example, `Terraform v0.12 to Terraform v0.13`. With the release of Terraform v0.13, the syntax for configuration files have changed.
+You can upgrade your Terraform on {{site.data.keyword.cloud_notm}}, for example, `Terraform v0.12 to Terraform v0.13`. With the release of Terraform on {{site.data.keyword.cloud_notm}} v0.13, the syntax for configuration files have changed.
 {: shortdesc}
 
 Complete the following steps to upgrade your configuration files: 
 
-1. Follow the [instructions](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli) to install existing Terraform and the latest version of the Terraform.
-2. Copy your existing Terraform version configuration files into your Terraform working directory. 
+1. Follow the [instructions](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli) to install existing Terraform on {{site.data.keyword.cloud_notm}} and the latest version of the Terraform on {{site.data.keyword.cloud_notm}}.
+2. Copy your existing Terraform on {{site.data.keyword.cloud_notm}} version configuration files into your Terraform on {{site.data.keyword.cloud_notm}} working directory. 
    ```
    mv <tf_config_file_path> $HOME/terraform
    ```
    {: codeblock}
    
-3. Use the Terraform upgrade command to automatically apply the new syntax to your Terraform configuration files. 
+3. Use the Terraform on {{site.data.keyword.cloud_notm}} upgrade command to automatically apply the new syntax to your Terraform on {{site.data.keyword.cloud_notm}} configuration files. 
   
    **Syntax**
    ```
@@ -125,7 +125,7 @@ Complete the following steps to upgrade your configuration files:
    ```
    {: codeblock}
 
-   **Example to upgrade Terraform v0.12 to Terraform v0.13**
+   **Example to upgrade Terraform on {{site.data.keyword.cloud_notm}} v0.12 to Terraform on {{site.data.keyword.cloud_notm}} v0.13**
    ```
    terraform 0.13upgrade
    ```
@@ -134,9 +134,9 @@ Complete the following steps to upgrade your configuration files:
    Example output: 
    ```
    This command rewrites the configuration files in the given directory to
-   use the new syntax features from Terraform v0.12, and identify
+   use the new syntax features from Terraform on {{site.data.keyword.cloud_notm}} v0.12, and identify
    any constructs that may need to be adjusted for correct operation with
-   Terraform v0.13.
+   Terraform on {{site.data.keyword.cloud_notm}} v0.13.
 
    We recommend to use this command in a clean version control work tree, so that
    you can easily see the proposed changes as a diff against the latest commit.
@@ -208,17 +208,17 @@ Complete the following steps to upgrade your configuration files:
     ```
     {: codeblock}
 
-This completes your Terraform upgrade.
+This completes your Terraform on {{site.data.keyword.cloud_notm}} upgrade.
 
 ## Version control 
 {: #versions}
 
 The versions that are associated with the resources and data sources are:
 
-- IBM Cloud Provider plug-in for Terraform. For more information, see [provider version releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
-- Terraform. For more information, see [Terraform version](https://releases.hashicorp.com/terraform/){: external}.
+- IBM Cloud Provider plug-in for Terraform on {{site.data.keyword.cloud_notm}}. For more information, see [provider version releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
+- Terraform on {{site.data.keyword.cloud_notm}}. For more information, see [Terraform version](https://releases.hashicorp.com/terraform/){: external}.
 
-With the release of Terraform version 0.12, the syntax for configuration files changed. If you want to run your infrastructure code by using Terraform version 0.12, you must first [update your configuration files](#tf-0.1x-migration) to apply the new syntax. 
+With the release of Terraform on {{site.data.keyword.cloud_notm}} version 0.12, the syntax for configuration files changed. If you want to run your infrastructure code by using Terraform on {{site.data.keyword.cloud_notm}} version 0.12, you must first [update your configuration files](#tf-0.1x-migration) to apply the new syntax. 
 {: important}
 
 

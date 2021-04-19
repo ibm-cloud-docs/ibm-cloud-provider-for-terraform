@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-16"
+lastupdated: "2021-04-19"
 
 keywords: terraform provider plugin, terraform push notifications, ibm cloud provider notifications, push notifications resource
 
@@ -95,11 +95,11 @@ subcollection: ibm-cloud-provider-for-terraform
 # Push notifications data sources
 {: #pn-data-sources}
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 
-Review the data sources that you can use to retrieve information about the [push notifications](/docs/mobilepush?topic=mobilepush-gettingstartedtemplate). All data sources are imported as read-only information. You can reference the output parameters for each data source by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+Review the data sources that you can use to retrieve information about the [push notifications](/docs/mobilepush?topic=mobilepush-gettingstartedtemplate). All data sources are imported as read-only information. You can reference the output parameters for each data source by using [Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 {: shortdesc}
 
 
@@ -109,7 +109,7 @@ Review the data sources that you can use to retrieve information about the [push
 Configure push notifications resource for Chrome web platform. For more information, about push notifications for Chrome, see [Chrome applications](/docs/mobilepush?topic=mobilepush-push_step_2#push_step_2_chrome-apps).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #is-pn-appln-chrome-dssample}
 
 ```

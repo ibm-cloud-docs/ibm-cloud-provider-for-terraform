@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-16"
+lastupdated: "2021-04-19"
 
 keywords:  terraform catalog management data sources, terraform catalog offering instance, catalog management, catalog management offering instance, catalog management offering, catalog management version
 
@@ -96,10 +96,10 @@ subcollection: ibm-cloud-provider-for-terraform
 # Catalog Management data sources 
 {: #cm-data-sources}
 
-Review the data sources that you can use to retrieve information about your [{{site.data.keyword.cloud_notm}} catalog management](/docs/cli?topic=cli-manage-catalogs-plugin). All data sources are imported as read-only information. You can reference the output parameters for each data source by using Terraform interpolation syntax.
+Review the data sources that you can use to retrieve information about your [{{site.data.keyword.cloud_notm}} catalog management](/docs/cli?topic=cli-manage-catalogs-plugin). All data sources are imported as read-only information. You can reference the output parameters for each data source by using Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax.
 {: shortdesc}
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 
@@ -110,7 +110,7 @@ Create, modify, or delete an `cm_catalog` resources. You can manage the settings
 {: shortdesc}
 
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cm-catalog-dssample}
 
 
@@ -156,7 +156,7 @@ Review the output parameters that you can access after your data source is creat
 Create, modify, or delete an `cm_offering` data source. You can manage the settings for all catalogs across your account. For more information, about managing catalog, refer to [catalog management settings](/docs/account?topic=account-account-getting-started).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cm-offering-dssample}
 
 
@@ -223,7 +223,7 @@ Create, modify, or delete an `ibm_cm_offering_instance` data source.  For more i
 {: shortdesc}
 
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cm-offering-instance-dssample}
 
 
@@ -274,7 +274,7 @@ Review the output parameters that you can access after your data source is creat
 Create, modify, or delete an `cm_version` data source. For more information, about managing catalog version, refer to [updating your software](/docs/account?topic=account-update-private).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #cm-version-dssample}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-16"
+lastupdated: "2021-04-19"
 
 keywords: terraform provider plugin, terraform key management service, terraform key management, terraform kms, kms, terraform key protect, terraform kp, terraform root key, hyper protect crypto service, HPCS, 
 
@@ -100,14 +100,14 @@ Create, modify, or delete [{{site.data.keyword.cloud_notm}} Key Protect](/docs/k
 {: shortdesc}
 
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 
 ## `ibm_kms_key`
 {: #kms-key}
 
-This resource can be used for management of keys in both Key Protect and Hyper Protect Crypto Service (HPCS). It allows standard and root keys to be created and deleted. The region parameter in the `provider.tf` file must be set. If region parameter is not specified, `us-south` is used as default. If the region in the `provider.tf` file is different from the Key Protect instance, the instance cannot be retrieved by Terraform and the Terraform action fails. 
+This resource can be used for management of keys in both Key Protect and Hyper Protect Crypto Service (HPCS). It allows standard and root keys to be created and deleted. The region parameter in the `provider.tf` file must be set. If region parameter is not specified, `us-south` is used as default. If the region in the `provider.tf` file is different from the Key Protect instance, the instance cannot be retrieved by Terraform on {{site.data.keyword.cloud_notm}} and the Terraform on {{site.data.keyword.cloud_notm}} action fails. 
 {: shortdesc}
 
 After creating an  Hyper Protect Crypto Service instance you need to initialize the instance properly with the crypto units, in order to create, or manage Hyper Protect Crypto Service keys. For more information, about how to initialize the Hyper Protect Crypto Service instance, see [Initialize Hyper Protect Crypto](/docs/hs-crypto?topic=hs-crypto-initialize-hsm) only for HPCS instance. 
@@ -247,9 +247,9 @@ Review the input parameters that you can specify for your resource.
 |`standard_key`|Bool|Optional|Set flag `true` for standard key, and `false` for root key. Default value is **false**.| Yes |
 |`policies`|List|Optional|Set policies for a key, for an automatic rotation policy or a dual authorization policy to protect against the accidental deletion of keys. Policies follow the following structure.| No |
 |`policies.rotation`|List|Optional|Specifies the key rotation time interval in months, with a minimum of 1, and a maximum of 12. | No |
-|`policies.rotation.interval_month`|Integer|Required|Specifies the key rotation time interval in months. CONSTRAINTS: 1 ≤ value ≤ 12 **NOTE:** Rotation policy cannot be set for standard key and imported key. Once the rotation policy is set, it cannot be unset or removed by using Terraform. | No |
+|`policies.rotation.interval_month`|Integer|Required|Specifies the key rotation time interval in months. CONSTRAINTS: 1 ≤ value ≤ 12 **NOTE:** Rotation policy cannot be set for standard key and imported key. Once the rotation policy is set, it cannot be unset or removed by using Terraform on {{site.data.keyword.cloud_notm}}. | No |
 |`policies.dual_auth_delete`|List|Required|Data associated with the dual authorization delete policy.| No |
-|`policies.dual_auth_delete.enabled`|Bool|Required|If set to `true`, Key Protect enables a dual authorization policy on a single key. **NOTE:** Once the dual authorization policy is set on the key, it cannot be reverted. A key with dual authorization policy enabled cannot be destroyed by using Terraform.| No |
+|`policies.dual_auth_delete.enabled`|Bool|Required|If set to `true`, Key Protect enables a dual authorization policy on a single key. **NOTE:** Once the dual authorization policy is set on the key, it cannot be reverted. A key with dual authorization policy enabled cannot be destroyed by using Terraform on {{site.data.keyword.cloud_notm}}.| No |
 
 
 ### Output parameters
@@ -303,7 +303,7 @@ Create, modify, or delete a key management resource for hs-crypto and key protec
 {: shortdesc}
 
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #kms-key-alias-sample}
 
 Sample example to provision key protect service and key management with alias.
@@ -377,7 +377,7 @@ Review the output parameters that you can access after your resource is created.
 Create, modify, or delete a key rings for hs-crypto and key protect services. Key rings created through this resource can be used to associate to KMS key resource when a standard or a root key gets created or imported. For more information, about key management rings, see [creating key rings](/docs/key-protect?topic=key-protect-grouping-keys#create-key-ring-api).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #kms-key-rings-sample}
 
 Sample example to provision key ring and associate a key management service key.
@@ -439,13 +439,13 @@ Review the output parameters that you can access after your resource is created.
 Create, or delete a Key Protect standard or root key.  
 {: shortdesc}
 
-To use the `ibm_kp_key` resource, the region parameter in the `provider.tf` file must be set to the same region that your Key Protect service instance. If region parameter is not specified, `us-south` is used as default. If the region in the `provider.tf` file is different from the Key Protect instance, the instance cannot be retrieved by Terraform and the Terraform action fails. 
+To use the `ibm_kp_key` resource, the region parameter in the `provider.tf` file must be set to the same region that your Key Protect service instance. If region parameter is not specified, `us-south` is used as default. If the region in the `provider.tf` file is different from the Key Protect instance, the instance cannot be retrieved by Terraform on {{site.data.keyword.cloud_notm}} and the Terraform on {{site.data.keyword.cloud_notm}} action fails. 
 {: note}
 
 `ibm_kp_key` resource will be deprecated shortly, as a replacement, you can use `ibm_kms_key` resource.
 {: important}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #kp-key-sample}
 
 ```

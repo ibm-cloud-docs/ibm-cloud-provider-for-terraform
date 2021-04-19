@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-16"
+lastupdated: "2021-04-19"
 
 keywords: terraform provider, terraform provider private endpoint, private endpoint
 
@@ -93,17 +93,17 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 
-# Configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform to use the Cloud Service Endpoint
+# Configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on {{site.data.keyword.cloud_notm}} to use the Cloud Service Endpoint
 {: #config-provider}
 
-The steps that are involved in configuring your {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform to use the private Cloud Service Endpoint (CSE) of an {{site.data.keyword.cloud_notm}} service in  public CSE in [Production environment](https://cloud.ibm.com).
+The steps that are involved in configuring your {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on {{site.data.keyword.cloud_notm}} to use the private Cloud Service Endpoint (CSE) of an {{site.data.keyword.cloud_notm}} service in  public CSE in [Production environment](https://cloud.ibm.com).
 
-You can configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform to communicate with an {{site.data.keyword.cloud_notm}} service by using the Cloud Service Endpoint or Private Service Endpoint.
+You can configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on {{site.data.keyword.cloud_notm}} to communicate with an {{site.data.keyword.cloud_notm}} service by using the Cloud Service Endpoint or Private Service Endpoint.
 {: shortdesc}
 
-1. Set up the Terraform engine and an {{site.data.keyword.cloud_notm}} Provider plug-in, in {{site.data.keyword.cloud_notm}} virtual machine by using private VLAN. And provision the enabled Virtual Routing and Forwarding (VRF) account.
+1. Set up the Terraform on {{site.data.keyword.cloud_notm}} engine and an {{site.data.keyword.cloud_notm}} Provider plug-in, in {{site.data.keyword.cloud_notm}} virtual machine by using private VLAN. And provision the enabled Virtual Routing and Forwarding (VRF) account.
 2. Export the following environment variables on your local machine. For more information, about supported private Cloud Service Endpoints for each {{site.data.keyword.cloud_notm}} service to support in production, see [Use service endpoints](/docs/account?topic=account-vrf-service-endpoint).
-3. Initialize the Terraform command line to load the environment variables that you set.
+3. Initialize the Terraform on {{site.data.keyword.cloud_notm}} command line to load the environment variables that you set.
 
 ```
 terraform init

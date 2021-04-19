@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-16"
+lastupdated: "2021-04-19"
 
 keywords: terraform provider plugin, terraform enterprise management, terraform enterprise account, terraform enterprise accounts, enterprise management
 
@@ -97,10 +97,10 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #enterprise-mgt-resources}
 
 
-Review the [Enterprise Management](/docs/account?topic=account-what-is-enterprise) resource that you can connect, administer, developed with Enterprise Management and integrate with the other services. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration/resources.html){: external}.
+Review the [Enterprise Management](/docs/account?topic=account-what-is-enterprise) resource that you can connect, administer, developed with Enterprise Management and integrate with the other services. You can reference the output parameters for each resource in other resources or data sources by using [Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax](https://www.terraform.io/docs/configuration/resources.html){: external}.
 {: shortdesc}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 
@@ -110,7 +110,7 @@ Before you start working with your resource, make sure to review the [required p
 Create and update an enterprise. Delete operation is not supported. For more information, about enterprise management, refer to [setting up an enterprise](/docs/account?topic=account-create-enterprise).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #enterprise-sample}
 
 ```
@@ -163,7 +163,7 @@ Review the output parameters that you can access after your resource is created.
 Create and update an `enterprise_account`resource. Delete operation is not supported. For more information, about enterprise account, refer to [setting up accounts to an enterprise](/docs/account?topic=account-enterprise-add).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #enterprise-account-sample}
 
 ```
@@ -236,7 +236,7 @@ Review the output parameters that you can access after your resource is created.
 Create and update an `enterprise_account_group`resource. Delete operation is not supported. For more information, about enterprise account group, refer to [setting up access groups](/docs/account?topic=account-groups).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #enterprise-account-grp-sample}
 
 ```

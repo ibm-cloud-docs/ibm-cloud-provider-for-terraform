@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-05"
+lastupdated: "2021-04-19"
 
 keywords: terraform provider plugin, terraform enterprise management, terraform enterprise account, terraform enterprise accounts, enterprise management
 
@@ -96,10 +96,10 @@ subcollection: ibm-cloud-provider-for-terraform
 # Enterprise Management data sources
 {: #enterprise-mgt-ds}
 
-Review the [Enterprise Management](/docs/account?topic=account-what-is-enterprise) data source that you can connect, administer, developed with Enterprise Management and integrate with the other services. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration/resources.html){: external}.
+Review the [Enterprise Management](/docs/account?topic=account-what-is-enterprise) data source that you can connect, administer, developed with Enterprise Management and integrate with the other services. You can reference the output parameters for each resource in other resources or data sources by using [Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax](https://www.terraform.io/docs/configuration/resources.html){: external}.
 {: shortdesc}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 ## ibm_enterprises
@@ -108,7 +108,7 @@ Before you start working with your resource, make sure to review the [required p
 Retrieve an information from an `ibm_enterprise` data source. For more information, about enterprise management, refer to [setting up an enterprise](/docs/account?topic=account-create-enterprise).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #enterprises-ds-sample}
 
 ```
@@ -160,7 +160,7 @@ Review the output parameters that you can access after your data source is creat
 Retrieve an information from an `enterprise_accounts` data source. For more information, about enterprise account, refer to [setting up accounts to an enterprise](/docs/account?topic=account-enterprise-add).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #enterprise-accounts-dssample}
 
 ```
@@ -217,7 +217,7 @@ Review the output parameters that you can access after your data source is creat
 Retrieve an information from an `account_groups` data source.  For more information, about enterprise account groups, refer to [setting up access groups](/docs/account?topic=account-groups).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #enterprise-account-grps-dssample}
 
 ```

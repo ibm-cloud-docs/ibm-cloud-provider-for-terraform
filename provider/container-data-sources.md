@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-04"
+lastupdated: "2021-04-19"
  
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes, observability logging, observability monitoring
 
@@ -96,9 +96,9 @@ subcollection: ibm-cloud-provider-for-terraform
 # Kubernetes Service data sources
 {: #container-data-sources}
 
-You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+You can reference the output parameters for each resource in other resources or data sources by using [Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 
@@ -108,7 +108,7 @@ Before you start working with your data source, make sure to review the [require
 Retrieve information about all the add-ons that are enables on a cluster.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-addons-sample}
 
 The following example retrieves information of an add-ons.
@@ -160,7 +160,7 @@ Review the output parameters that you can access after your resource is created.
 Retrieve information about all the Kubernetes cluster ALB on {{site.data.keyword.cloud_notm}} as a read-only data source.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-alb-dssample}
 
 The following example retrieves information of an ALB.
@@ -205,7 +205,7 @@ Review the output parameters that you can access after your resource is created.
 Retrieve information about all the Kubernetes cluster ALB certificate on {{site.data.keyword.cloud_notm}} as a read-only data source.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-albcert-dssample}
 
 The following example retrieves information of an ALB cert.
@@ -251,7 +251,7 @@ Review the output parameters that you can access after your resource is created.
 Retrieve information of a service attached to {{site.data.keyword.cloud_notm}} cluster.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-bind-dssample}
 
 The following example retrieves service information attached to a cluster.
@@ -295,7 +295,7 @@ Review the output parameters that you can access after your resource is created.
 Retrieve information about an existing {{site.data.keyword.containerlong_notm}} cluster. For more information, about container cluster, see [About Kubernetes](/docs/containers?topic=containers-getting-started).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-cluster-sample}
 
 The following example retrieves information about a cluster that is named `mycluster`. 
@@ -393,7 +393,7 @@ Review the output parameters that you can access after you retrieved your data s
 Download the Kubernetes configuration files and certificates to access your cluster. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-cluster-config-sample}
 
 ```
@@ -534,7 +534,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about the worker nodes of your {{site.data.keyword.containerlong_notm}} cluster. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-worker-sample}
 
 The following example retrieves information about a worker node with the ID `dal10-1112222abd111222`. 
@@ -580,7 +580,7 @@ Retrieve information about supported Kubernetes versions in {{site.data.keyword.
 
 To find a list of supported Kubernetes versions, see the [{{site.data.keyword.containerlong_notm}} documentation](/docs/containers?topic=containers-cs_versions).
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-cluster-versions-sample}
 
 The following example shows how to retrieve information about supported Kubernetes versions for the resource group `11222333111abc111`. 
@@ -620,7 +620,7 @@ Review the output parameters that you can access after you retrieved your data s
 Import information about Kubernetes cluster on an {{site.data.keyword.cloud_notm}} as a read only data source.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-worker-pool-sample}
 
 The following example shows how to import information about Kubernetes clusters.
@@ -673,7 +673,7 @@ Review the output parameters that are exported.
 Import the details of a Kubernetes cluster ALB on an {{site.data.keyword.cloud_notm}} as a read only data source.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-vpc-alb-sample1}
 
 In the following example you can configure an ALB.
@@ -721,7 +721,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about a VPC cluster in {{site.data.keyword.containerlong_notm}}. For more information, about VPC cluster, see [about {{site.data.keyword.containerlong_notm}}] (/docs/containers?topic=containers-getting-started).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-vpc-cluster-sample}
 
 The following example shows how to retrieve information about a VPC cluster that is named `mycluster`. 
@@ -811,7 +811,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about the worker nodes of your {{site.data.keyword.containerlong_notm}} VPC cluster. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-vpc-worker-sample}
 
 The following example retrieves information about a worker node with the ID `dal10-1112222abd111222` in the `mycluster` cluster. 
@@ -861,7 +861,7 @@ Review the output parameters that you can access after you retrieved your data s
 Import the details of a Kubernetes cluster worker pool on an {{site.data.keyword.cloud_notm}} as a read only data source.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-vpc-alb-sample2}
 
 In the following example, you can create a worker pool for a VPC cluster.

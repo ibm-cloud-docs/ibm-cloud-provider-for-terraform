@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-19"
 
 keywords: terraform provider plugin, terraform resource group, terraform resource management, terraform iam services
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -98,7 +96,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # Resource management data sources
 {: #resource-management-data-sources}
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 ## `ibm_resource_group`
@@ -107,7 +105,7 @@ Before you start working with your data source, make sure to review the [require
 Retrieve information about an {{site.data.keyword.cloud_notm}} resource group. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #resource-group-sample}
 
 The following two examples retrieve information about the `default` resource group. 
@@ -155,7 +153,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about an IAM-enabled service instance.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #resouce-instance-sample}
 
 ```
@@ -207,7 +205,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about existing access keys for an IAM-enabled service instance.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #resource-key-sample}
 
 The following example retrieves information about the `myobjectKey` access key. 
@@ -254,7 +252,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve information about the quota for an IAM-enabled service instance. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #resource-quota-sample}
 
 ```

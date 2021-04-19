@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-16"
+lastupdated: "2021-04-19"
 
 keywords: terraform templates, schematics template
 
@@ -95,10 +95,10 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 
-# Sample Terraform templates for {{site.data.keyword.cloud_notm}}
+# Sample Terraform on {{site.data.keyword.cloud_notm}} templates for {{site.data.keyword.cloud_notm}}
 {: #sample_terraformtemplates}
 
-All Terraform templates use the Terraform version 0.12 format.
+All Terraform on {{site.data.keyword.cloud_notm}} templates use the Terraform on {{site.data.keyword.cloud_notm}} version 0.12 format.
 {: note}
 
 The deploy to {{site.data.keyword.cloud_notm}} URL is an efficient way for you to enable users to deploy solutions on {{site.data.keyword.cloud_notm}} from a public Git repository sample configuration. The URL requires minimal configuration and you can insert it anywhere in your documentation that supports markup. When the user clicks the hyper link, they are taken directly to the {{site.data.keyword.bpshort}} workspace setup page and only need to click the create button for workspace creation in {{site.data.keyword.bpshort}}.

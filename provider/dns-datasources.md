@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-28"
+lastupdated: "2021-04-19"
 
 keywords: terraform provider plugin, terraform dns service, terraform dns, terraform private dns
 
@@ -73,8 +73,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {:step: data-tutorial-type='step'}
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
-{:swift-ios: .ph data-hd-programlang='iOS Swift'}
-{:swift-server: .ph data-hd-programlang='server-side Swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -98,9 +96,9 @@ subcollection: ibm-cloud-provider-for-terraform
 # DNS Services data sources 
 {: #dns-data-sources}
 
-You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+You can reference the output parameters for each resource in other resources or data sources by using [Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 ## `ibm_dns_glbs`
@@ -109,7 +107,7 @@ Before you start working with your data source, make sure to review the [require
 Retrieve the details of an existing {{site.data.keyword.cloud_notm}} infrastructure private DNS Global Load Balancers as a read-only data source. For more information, see [Working with global Load Balancers](/docs/dns-svcs?topic=dns-svcs-global-load-balancers).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #dns-glbs-ds-sample}
 
 ```
@@ -159,7 +157,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve the details of an existing {{site.data.keyword.cloud_notm}} infrastructure private DNS Global Load Balancers monitors as a read-only data source. For more information, see [Viewing Global Load Balancer events](/docs/dns-svcs?topic=dns-svcs-health-check-events).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #dns-glb-monitors-ds-sample}
 
 ```
@@ -211,7 +209,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve the details of an existing {{site.data.keyword.cloud_notm}} infrastructure private DNS Global Load Balancers pools as a read-only data source. For more information, see [Viewing Global Load Balancer events](/docs/dns-svcs?topic=dns-svcs-health-check-events).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #dns-glb-pools-ds-sample}
 
 ```
@@ -266,7 +264,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve details about permitted networks for a zone that is associated with the private DNS service instance. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #dns-permitted-network-sample}
 
 ```
@@ -344,7 +342,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve details about existing IBM Cloud private domain name service records. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #dns-record-template}
 
 ```
@@ -387,7 +385,7 @@ Review the output parameters that you can access after you retrieved your data s
 Retrieve details about a zone that you added to your private DNS service instance.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #dns-zones-sample}
 
 ```

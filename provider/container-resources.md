@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-16" 
+lastupdated: "2021-04-19" 
 
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes, observability logging, observability monitoring
 
@@ -96,10 +96,10 @@ subcollection: ibm-cloud-provider-for-terraform
 # Kubernetes Service resources
 {: #container-resources}
 
-Create, modify, or delete [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-iks-overview) resources. You can reference the output parameters for each resource in other resources or data sources by using [Terraform interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+Create, modify, or delete [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-iks-overview) resources. You can reference the output parameters for each resource in other resources or data sources by using [Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
 {: shortdesc}
 
-Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform configuration file. 
+Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
 ## `ibm_container_addons`
@@ -108,7 +108,7 @@ Before you start working with your resource, make sure to review the [required p
 Enable, update or disable a single add-on or a set of add-ons. For more information, see [Cluster addons](/docs/containers?topic=containers-api-at-iam#ks-cluster).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-addon-sample}
 
 ```
@@ -203,7 +203,7 @@ Enable or disable an Ingres application load balancer (ALB) that is set up in yo
 
 For more information, about Ingress ALBs, see [About Ingress ALBs](/docs/containers?topic=containers-ingress-about). 
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-alb-sample}
 
 ```
@@ -257,7 +257,7 @@ The following timeouts are defined for this resource.
 Create, update, or delete an SSL certificate that you store in {{site.data.keyword.cloudcerts_long_notm}} for an Ingress application load balancer (ALB). 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-alb-cert-sample}
 
 The following example adds an SSL certificate that is stored in {{site.data.keyword.cloudcerts_long_notm}} to an Ingress ALB that is set up in a cluster that is named `myCluster`. 
@@ -330,7 +330,7 @@ The following timeouts are defined for this resource.
 Create, update, or delete Kubernetes API key. For more information, about Kubernetes API key, see [Assigning cluster access](/docs/containers?topic=containers-users#access-checklist).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-api-key-reset-sample}
 
 The following example reset Kubernetes API key.
@@ -378,7 +378,7 @@ To bind a service to your cluster, you must provision an instance of the service
 
 For more information, about service binding, see [Adding services by using {{site.data.keyword.cloud_notm}} service binding](/docs/containers?topic=containers-service-binding). 
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-bind-sample}
 
 The following example binds a service with the name `myservice` to a cluster with the name `mycluster`. 
@@ -440,7 +440,7 @@ Create, update, or delete an {{site.data.keyword.containerlong_notm}} or {{site.
 If you want to use this resource to update a cluster, make sure that you review the [version changelog](/docs/containers?topic=containers-changelog) for patch updates and the [version information and update information](/docs/containers?topic=containers-cs_versions) for major and minor changes. 
 {: important}
 
-If you want to create a VPC cluster, make sure to include the VPC infrastructure generation in the `provider` block of your Terraform configuration file. If you do not set this value, the generation is automatically set to 2. For more information, about how to configure the `provider` block, see [Overview of required input parameters for each resource category](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters). 
+If you want to create a VPC cluster, make sure to include the VPC infrastructure generation in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. If you do not set this value, the generation is automatically set to 2. For more information, about how to configure the `provider` block, see [Overview of required input parameters for each resource category](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters). 
 {: important}
 
 You cannot create a free cluster in {{site.data.keyword.bpfull_notm}}.
@@ -452,7 +452,7 @@ To create a worker pool or add worker nodes and zones to a worker pool, use the 
 For step-by-step instructions for how to create an {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.openshiftlong_notm}} cluster, see [Creating single and multizone Kubernetes and OpenShift clusters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters). 
 {: tip}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-cluster-sample}
 
 #### Classic {{site.data.keyword.containerlong_notm}} cluster
@@ -840,7 +840,7 @@ Supported features include:
 - Public service endpoint
 - Private service endpoint
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-cluster-feature-sample}
 
 The following example enables the private service endpoint feature for a cluster that is named `mycluster`. 
@@ -899,7 +899,7 @@ The following timeouts are defined for this resource.
 Create, update, or delete a logging instance. This resource creates a logging configuration for your cluster to automatically collect pod logs and send them to {{site.data.keyword.loganalysislong_notm}}. For more information, about Observability plug-in, see [managing  Observability logging commands](/docs/containers?topic=containers-observability_cli).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #observability-logging-sample}
 
 The following example enables you to create a logging configuration. 
@@ -1008,7 +1008,7 @@ The following timeouts are defined for this resource.
 Create, update, or delete a monitoring instance. This resource creates a monitoring configuration for your {{site.data.keyword.containerlong_notm}} cluster to automatically collect pod metrics, and send these metrics to your monitoring service instance. For more information, about Observability monitoring, see [setting up loggin with {{site.data.keyword.loganalysislong_notm}}](/docs/containers?topic=containers-istio-health).
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #observability-monitoring-sample}
 
 The following example enables you to create a monitoring configuration. 
@@ -1113,7 +1113,7 @@ The following timeouts are defined for this resource.
 Create, update, or delete a worker pool.
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-pool-sample}
 
 The following example creates the worker pool `mypool` for the cluster that is named `mycluster`. 
@@ -1218,7 +1218,7 @@ The following timeouts are defined for this resource.
 Create, update, or delete a zone from a worker pool. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #container-pool-zone-sample}
 
 The following example adds zone dal12 to a worker pool that is named `mypool` in the `mycluster` cluster. 
@@ -1268,7 +1268,7 @@ Review the input parameters that you can specify for your resource.
 | `private_vlan_id` | String | Optional | The ID of the private VLAN that you want to use for the zone. To find available zones, run `ibmcloud ks vlans <zone>`. If you do not have a private VLAN for that zone, do not specify this option. A private VLAN is automatically created for you. |  No |
 | `public_vlan_id` | String | Optional | The ID of the public VLAN that you want to use for the zone. To find available zones, run `ibmcloud ks vlans <zone>`.  If you do not have a public VLAN for that zone, do not specify this option. A public VLAN is automatically created for you.| No |
 | `resource_group_id` | String | Optional | The ID of the resource group where your cluster is provisioned into. To list resource groups, run `ibmcloud resource groups` or use the `ibm_resource_group` data source. | Yes |
-|`wait_till_albs`|Boolean|Optional|When you add a zone to a worker pool, worker nodes are provisioned in that zone with the configuration that you defined in your worker pool. This process and enabling the ALBs on those worker nodes can take a few minutes to complete. To avoid long wait times when you run your Terraform code, you can specify the stage when you want Terraform to mark the zone attachment complete. Set to **true** to wait until all worker nodes are successfully provisioned in the zone that you added to your worker pool and all ALBs are available and healthy. If you want the worker node creation and ALB enablement to continue in the background, set this option to **false**. | No |
+|`wait_till_albs`|Boolean|Optional|When you add a zone to a worker pool, worker nodes are provisioned in that zone with the configuration that you defined in your worker pool. This process and enabling the ALBs on those worker nodes can take a few minutes to complete. To avoid long wait times when you run your Terraform on {{site.data.keyword.cloud_notm}} code, you can specify the stage when you want Terraform on {{site.data.keyword.cloud_notm}} to mark the zone attachment complete. Set to **true** to wait until all worker nodes are successfully provisioned in the zone that you added to your worker pool and all ALBs are available and healthy. If you want the worker node creation and ALB enablement to continue in the background, set this option to **false**. | No |
 | `worker_pool` | String | Required | The name or ID of the worker pool to which you want to add a zone. | Yes |
 | `zone` | String | Required | The name of the zone that you want to attach to the worker pool. To list available zones, run `ibmcloud ks zones`. | Yes |
 
@@ -1308,7 +1308,7 @@ The following timeouts are defined for this resource.
 Enable or disable an Application Load Balancer (ALB) for a VPC cluster. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #vpc-alb-sample}
 
 The following example adds zone dal12 to a worker pool that is named `mypool` in the `mycluster` cluster. 
@@ -1368,7 +1368,7 @@ The following timeouts are defined for this resource.
 Create, update, or delete a VPC cluster. 
 {: shortdesc}
 
-To create a VPC cluster, make sure to include the VPC infrastructure generation in the `provider` block of your Terraform configuration file. If you do not set this value, the generation is automatically set to 2. For more information, about how to configure the `provider` block, see [Overview of required input parameters for each resource category](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters). 
+To create a VPC cluster, make sure to include the VPC infrastructure generation in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. If you do not set this value, the generation is automatically set to 2. For more information, about how to configure the `provider` block, see [Overview of required input parameters for each resource category](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters). 
 {: important}
 
 You cannot create a free cluster in {{site.data.keyword.bpfull_notm}}.
@@ -1380,7 +1380,7 @@ If you want to delete a VPC cluster and their associated load balancer. The foll
 3. Verifies for the load balancer that is associated with the cluster and waits for the associated load balancer to delete successfully.
 {: important}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #vpc-cluster-sample}
 
 
@@ -1590,7 +1590,7 @@ Review the input parameters that you can specify for your resource.
 |`pod_subnet`|String|Optional|Specify a custom subnet CIDR to provide private IP addresses for pods. The subnet must have a CIDR of at least `/23` or larger. For more information, see the [documentation](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli#cs_subnets). Default value is `172.30.0.0/16`.| Yes |
 |`service_subnet`|String|Optional|Specify a custom subnet CIDR to provide private IP addresses for services. The subnet must be at least ’/24’ or larger. For more information, see the [documentation](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli#cs_messages). Default value is `172.21.0.0/16`.| Yes |
 | `wait_for_worker_update` | Boolean | Optional | Set to `true` to wait and update the Kubernetes  version of worker nodes. **NOTE** Setting wait_for_worker_update to `false` is not recommended. Setting `false` results in upgrading all the worker nodes in the cluster at the same time causing the cluster downtime. | No |
-|`wait_till`|String|Optional|The creation of a cluster can take a few minutes (for virtual servers) or even hours (for Bare Metal servers) to complete. To avoid long wait times when you run your Terraform code, you can specify the stage when you want Terraform to mark the cluster resource creation as completed. Depending on what stage you choose, the cluster creation might not be fully completed and continues to run in the background. However, your Terraform code can continue to run without waiting for the cluster to be fully created. Supported stages are: <ul><li><strong>`MasterNodeReady`</strong>: Terraform marks the creation of your cluster complete when the cluster master is in a <code>ready</code> state.</li><li><strong>`OneWorkerNodeReady`</strong>: Terraform marks the creation of your cluster complete when the master and at least one worker node are in a <code>ready</code> state.</li><li><strong>`IngressReady`</strong>: Terraform marks the creation of your cluster complete when the cluster master and all worker nodes are in a <code>ready</code> state, and the Ingress subdomain is fully set up.</li></ul> If you do not specify this option, <code>`IngressReady`</code> is used by default. You can set this option only when the cluster is created. If this option is set during a cluster update or deletion, the parameter is ignored by the Terraform provider. | No |
+|`wait_till`|String|Optional|The creation of a cluster can take a few minutes (for virtual servers) or even hours (for Bare Metal servers) to complete. To avoid long wait times when you run your Terraform on {{site.data.keyword.cloud_notm}} code, you can specify the stage when you want Terraform on {{site.data.keyword.cloud_notm}} to mark the cluster resource creation as completed. Depending on what stage you choose, the cluster creation might not be fully completed and continues to run in the background. However, your Terraform on {{site.data.keyword.cloud_notm}} code can continue to run without waiting for the cluster to be fully created. Supported stages are: <ul><li><strong>`MasterNodeReady`</strong>: Terraform on {{site.data.keyword.cloud_notm}} marks the creation of your cluster complete when the cluster master is in a <code>ready</code> state.</li><li><strong>`OneWorkerNodeReady`</strong>: Terraform on {{site.data.keyword.cloud_notm}} marks the creation of your cluster complete when the master and at least one worker node are in a <code>ready</code> state.</li><li><strong>`IngressReady`</strong>: Terraform on {{site.data.keyword.cloud_notm}} marks the creation of your cluster complete when the cluster master and all worker nodes are in a <code>ready</code> state, and the Ingress subdomain is fully set up.</li></ul> If you do not specify this option, <code>`IngressReady`</code> is used by default. You can set this option only when the cluster is created. If this option is set during a cluster update or deletion, the parameter is ignored by the Terraform on {{site.data.keyword.cloud_notm}} provider. | No |
 |`worker_count`|Integer|Optional| The number of worker nodes per zone in the default worker pool. Default value `1`.| Yes |
 |`worker_labels`|Map|Optional| Labels on all the workers in the default worker pool.| No |
 |`resource_group_id`|String|Optional|The ID of the resource group. You can retrieve the value by running `ibmcloud resource groups` or by using the `ibm_resource_group` data source. If no value is provided, the `default` resource group is used. | Yes |
@@ -1649,7 +1649,7 @@ terraform import ibm_container_vpc_cluster.cluster aaaaaaaaa1a1a1a1aaa1a
 Create or delete a worker pool for a VPC cluster. 
 {: shortdesc}
 
-### Sample Terraform code
+### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #vpc-worker-pool-sample}
 
 ```
