@@ -301,7 +301,7 @@ Review the input parameters that you can specify for your resource.
 | `offering_id` | String | Required | Offering identification.|
 | `tags` | List | Optional |  The tags array.| Yes |
 |  `target_kinds` | List | Optional | The target kinds. Current supported values are `iks`, `roks`, `vcenter`, and `terraform`.| Yes |
-| `content` | TypeString | Optional | The byte array representing the content to import. Currently supports only `OVA` images.| Yes |
+| `content` | `TypeString` | Optional | The byte array representing the content to import. Currently supports only `OVA` images.| Yes |
 | `zipurl` | String | Optional | The URL path to `.zip` location. If not specified, must provide content in the body of the call.| Yes |
 | `target_version` | String | Optional | The version value for the new version, if not found in the `zip` URL package content.| Yes |
 {: caption="Table: Available input parameters" caption-side="top"}

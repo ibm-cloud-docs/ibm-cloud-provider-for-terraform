@@ -261,7 +261,7 @@ Review the output parameters that you can access after you retrieved your data s
 | `id` | String | The action ID.|
 | `crn` | String | The action Cloud Resource Name.|
 | `account` | String | The action account ID.|
-| `source_created_at` | String | The Ansible playbook cource creation time.|
+| `source_created_at` | String | The Ansible playbook source creation time.|
 | `source_created_by` | String | The Email address of user who created the Ansible playbook Source.|
 | `source_updated_at` | String | The Ansible playbook update time.|
 | `source_updated_by` | String | The Email address of user who updated the Ansible playbook source.|
@@ -273,7 +273,7 @@ Review the output parameters that you can access after you retrieved your data s
 | `state` | String | Computed state of an action. Nested `state` blocks have the following structure.|
 | `state.status_code` | String | The status of automation such as `workdspace`, or `action`.|
 | `state.status_message` | String | Automation status message to be displayed along with the status code.|
-| `playbook_names` | String | Playbook names retrieved from the respository.|
+| `playbook_names` | String | Playbook names retrieved from the repository.|
 | `sys_lock` | String | System lock status. Nested sys_lock blocks have the following structure.|
 | `sys_lock.sys_locked` | String | Is the Workspace locked by the Schematic action?|
 | `sys_lock.sys_locked_by` | String | Name of the user who performed the action, that lead to lock the Workspace.|

@@ -638,8 +638,8 @@ Review the output parameters that you can access after you retrieved your data s
 
 |Name|Data type|Description|
 |----|-----------|--------------------|
-|`auditors`|String|The email addresses (associated with IBMId) of the users who have an auditor role in this space.|
-|`developers`|String|The email addresses (associated with IBMId) of the users who have a developer role in this space.|
+|`auditors`|String|The email addresses (associated with IBMID) of the users who have an auditor role in this space.|
+|`developers`|String|The email addresses (associated with IBMID) of the users who have a developer role in this space.|
 |`id`|String|The unique identifier of the space.  |
-|`managers`|String|The email addresses (associated with IBMId) of the users who have a manager role in this space.|
+|`managers`|String|The email addresses (associated with IBMID) of the users who have a manager role in this space.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
