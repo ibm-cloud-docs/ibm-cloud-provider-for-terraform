@@ -123,7 +123,7 @@ In this getting started tutorial, you provision a [classic infrastructure virtua
 Both virtual server instances incur costs. Be sure to review the available plans for [classic infrastructure virtual servers ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/infrastructure/virtual-server-group) and [VPC virtual server instances](https://cloud.ibm.com/vpc/provision/vs) before you proceed.
 {: note}
 
-Sounds great? Get started by [installing the Terraform on {{site.data.keyword.cloud_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_cli) and [installing the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider). You can then configure the {{site.data.keyword.cloud_notm}} resources that you want and watch Terraform on {{site.data.keyword.cloud_notm}} spin them up. 
+Sounds great? Get started by [installing the Terraform on {{site.data.keyword.cloud_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#tf_installation) and [installing the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider). You can then configure the {{site.data.keyword.cloud_notm}} resources that you want and watch Terraform on {{site.data.keyword.cloud_notm}} spin them up. 
 
 ## What credentials do I need?
 {: #req-credentials}
