@@ -93,15 +93,13 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 
-
 # Getting started with Terraform on {{site.data.keyword.cloud_notm}}
 {: #getting-started}
 
 Terraform on {{site.data.keyword.cloud_notm}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} platform, classic infrastructure, and VPC infrastructure resources so that you can rapidly build complex, multi-tier cloud environments, and enable Infrastructure as Code (IaC). 
 {: shortdesc}
 
-
-Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Try out [{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform on {{site.data.keyword.cloud_notm}} scripting language that you are familiar with, but you don't have to worry about setting up and maintaining the Terraform on {{site.data.keyword.cloud_notm}} command line and {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides pre-defined Terraform on {{site.data.keyword.cloud_notm}} templates that you can easily install from the {{site.data.keyword.cloud_notm}} catalog.
+Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Try out [{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform scripting language that you are familiar with, but you don't have to worry about setting up and maintaining the Terraform command line and the {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides pre-defined Terraform templates that you can easily install from the {{site.data.keyword.cloud_notm}} catalog.
 {: tip}
 
 ## How does it work?
