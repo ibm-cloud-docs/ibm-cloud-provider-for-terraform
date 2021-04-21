@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-04-21"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -93,52 +93,153 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 
-
 # Getting started with Terraform on {{site.data.keyword.cloud_notm}}
 {: #getting-started}
 
-{{site.data.keyword.cloud}} Provider plug-in for Terraform on {{site.data.keyword.cloud_notm}} is an Open Source software that enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} platform, classic infrastructure, and VPC infrastructure resources by using a high-level scripting language. You can use Terraform on {{site.data.keyword.cloud_notm}} to automate your {{site.data.keyword.cloud_notm}} resource provisioning, rapidly build complex, multi-tier cloud environments, and enable Infrastructure as Code (IaC).  
+Terraform on {{site.data.keyword.cloud_notm}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} platform, classic infrastructure, and VPC infrastructure resources so that you can rapidly build complex, multi-tier cloud environments, and enable Infrastructure as Code (IaC). 
 {: shortdesc}
 
-Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Try out [{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform on {{site.data.keyword.cloud_notm}} scripting language that you are familiar with, but you don't have to worry about setting up and maintaining the Terraform on {{site.data.keyword.cloud_notm}} command line and {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides pre-defined Terraform on {{site.data.keyword.cloud_notm}} templates that you can easily install from the {{site.data.keyword.cloud_notm}} catalog.
+Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Try out [{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform scripting language that you are familiar with, but you don't have to worry about setting up and maintaining the Terraform command line and the {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides pre-defined Terraform templates that you can easily install from the {{site.data.keyword.cloud_notm}} catalog.
 {: tip}
 
-## How does it work?
-{: #it-works}
+In this tutorial, you use Terraform on {{site.data.keyword.cloud_notm}} to create an {{site.data.keyword.keymanagementservicelong}} instance. With {{site.data.keyword.keymanagementserviceshort}}, you can create encrypted keys that you can use to secure apps and services in 
+{{site.data.keyword.cloud_notm}}. For more information, see the [{{site.data.keyword.keymanagementserviceshort}} documentation](/docs/key-protect?topic=key-protect-about). 
 
-Let's say you want to spin up multiple copies of your service that uses a cluster of virtual servers, a load balancer, and a database server on the {{site.data.keyword.cloud}}. You could learn how to create each resource, review the API or the commands that you need, and write a bash script to spin up these components. But it's easier, faster, and more orderly to specify the type of resource that you want and let Terraform on {{site.data.keyword.cloud_notm}} do it all for you. 
 
-The Terraform on {{site.data.keyword.cloud_notm}} configuration files describe the resources that you need and how you want to configure them. Based on your configuration, Terraform on {{site.data.keyword.cloud_notm}} creates an execution plan and describes the actions that need to be executed to get to the required state. You can review the execution plan, change it, or simply execute the plan. When you change your configuration, Terraform on {{site.data.keyword.cloud_notm}} can determine what changed and create incremental execution plans that you can apply to your existing {{site.data.keyword.cloud_notm}} resources. 
+Before you begin, make sure that you have the permissions to create an [{{site.data.keyword.keymanagementservicelong}} instance](/docs/key-protect?topic=key-protect-manage-access). 
 
-## What do I need to get started?
-{: #prerequisite}
 
-To provision {{site.data.keyword.cloud_notm}} infrastructure and platform resources, you must have a [Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/registration).  
+1. [Install the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli). 
+2. [Create or retrieve an {{site.data.keyword.cloud_notm}} API key](/docs/account?topic=account-userapikey#create_user_key). The API key is used to authenticate with the {{site.data.keyword.cloud_notm}} platform and to determine your permissions for {{site.data.keyword.cloud_notm}} services.
+3. In your Terraform installation directory, create a folder for your first Terraform on {{site.data.keyword.cloud_notm}} project and navigate into the folder. This folder is used to store all configuration files and variable definitions. 
+   ```
+   mkdir myproject && cd myproject
+   ```
+   {: pre}
 
-## What do I provision as part of this tutorial?
-{: #get-start-tut}
+4. Create a variables file that is named `terraform.tfvars` and specify the {{site.data.keyword.cloud_notm}} API key that you retrieved. Variables that are defined in the `terraform.tfvars` file are automatically loaded by Terraform when the {{site.data.keyword.cloud_notm}} Provider plug-in is initialized and you can reference them in every Terraform configuration file that you use. 
 
-In this getting started tutorial, you provision a [classic infrastructure virtual server](/docs/virtual-servers?topic=virtual-servers-about-public-virtual-servers) and a [VPC virtual server instance](/docs/vpc-on-classic-vsi?topic=vpc-on-classic-vsi-getting-started). 
+   Because the `terraform.tfvars` file contains confidential information, do not push this file to a version control system. This file is meant to be on your local system only. 
+   {: important}
+   
+   ```
+   ibmcloud_api_key = "<ibmcloud_api_key>"
+   ```
+   {: codeblock}
+   
+5. Create a provider configuration file that is named `provider.tf`. Use this file to configure the {{site.data.keyword.cloud_notm}} Provider plug-in with the {{site.data.keyword.cloud_notm}} API key from your `terraform.tfvars` file. The plug-in uses this key to access {{site.data.keyword.cloud_notm}} and to provision your {{site.data.keyword.keymanagementserviceshort}} instance. To access a variable value from the `terraform.tfvars` file, you must first declare the variable in the `provider.tf` file and then reference the variable by using the `var.<variable_name>` syntax . 
 
-Both virtual server instances incur costs. Be sure to review the available plans for [classic infrastructure virtual servers ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/infrastructure/virtual-server-group) and [VPC virtual server instances](https://cloud.ibm.com/vpc/provision/vs) before you proceed.
-{: note}
+   ```
+   variable "ibmcloud_api_key" {}
+ 
+   provider "ibm" {
+       ibmcloud_api_key   = var.ibmcloud_api_key
+      }
+   ```
+   {: codeblock}
 
-Sounds great? Get started by [installing the Terraform on {{site.data.keyword.cloud_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#tf_installation) and [installing the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider). You can then configure the {{site.data.keyword.cloud_notm}} resources that you want and watch Terraform on {{site.data.keyword.cloud_notm}} spin them up. 
+6. Create a Terraform configuration file that is named `main.tf`. In this file, you declare the {{site.data.keyword.keymanagementserviceshort}} instance that you want to provision. The following example creates a {{site.data.keyword.keymanagementserviceshort}} instance that is named `my_kp` in the `us-south` region. For other options that you can declare for this resource, see the [`ibm_resource_instance` documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_instance){: external}. 
+   
+   ```
+   resource "ibm_resource_instance" "kms_instance" {
+     name     = "my_kp"
+     service  = "kms"
+     plan     = "tiered-pricing"
+     location = "us-south"
+   }
+   ```
+   {: codeblock}
+   
+7. Initialize the Terraform CLI. 
+   ```
+   terraform init
+   ```
+   {: pre}
+   
+8. Create a Terraform execution plan. The Terraform execution plan summarizes all the actions that need to be run to create the {{site.data.keyword.keymanagementserviceshort}} instance in your account.
+   ```
+   terraform plan
+   ```
+   {: pre}
+   
+   Example output: 
+   ```
+   Terraform will perform the following actions:
 
-## What credentials do I need?
-{: #req-credentials}
+   # ibm_resource_instance.kms_instance will be created
+   + resource "ibm_resource_instance" "kms_instance" {
+      + account_id              = (known after apply)
+      + allow_cleanup           = (known after apply)
+      + created_at              = (known after apply)
+      + created_by              = (known after apply)
+      + crn                     = (known after apply)
+      + dashboard_url           = (known after apply)
+      + deleted_at              = (known after apply)
+      + deleted_by              = (known after apply)
+      + extensions              = (known after apply)
+      + guid                    = (known after apply)
+      + id                      = (known after apply)
+      + location                = "us-south"
+      + locked                  = (known after apply)
+      + name                    = "my_kp"
+      + plan                    = "tiered-pricing"
+      + plan_history            = (known after apply)
+      + resource_aliases_url    = (known after apply)
+      + resource_bindings_url   = (known after apply)
+      + resource_controller_url = (known after apply)
+      + resource_crn            = (known after apply)
+      + resource_group_crn      = (known after apply)
+      + resource_group_id       = (known after apply)
+      + resource_group_name     = (known after apply)
+      + resource_id             = (known after apply)
+      + resource_keys_url       = (known after apply)
+      + resource_name           = (known after apply)
+      + resource_plan_id        = (known after apply)
+      + resource_status         = (known after apply)
+      + restored_at             = (known after apply)
+      + restored_by             = (known after apply)
+      + scheduled_reclaim_at    = (known after apply)
+      + scheduled_reclaim_by    = (known after apply)
+      + service                 = "kms"
+      + service_endpoints       = (known after apply)
+      + state                   = (known after apply)
+      + status                  = (known after apply)
+      + sub_type                = (known after apply)
+      + tags                    = (known after apply)
+      + target_crn              = (known after apply)
+      + type                    = (known after apply)
+      + update_at               = (known after apply)
+      + update_by               = (known after apply)
+    }
 
-The credentials that you need depend on the type of resource that you want to provision. For example: 
-- To provision classic infrastructure resources, you must provide your {{site.data.keyword.cloud_notm}} classic infrastructure user name and API key. 
-- To provision VPC infrastructure, you need an {{site.data.keyword.cloud_notm}} API key. 
+   Plan: 1 to add, 0 to change, 0 to destroy.
+   ```
+   {: screen}
+   
+9. Create the {{site.data.keyword.keymanagementserviceshort}} instance in {{site.data.keyword.cloud_notm}}.
+   ```
+   terraform apply
+   ```
+   {: pre}
+   
+   Example output: 
+   ```
+   ibm_resource_instance.kms_instance: Creating...
+   ibm_resource_instance.kms_instance: Still creating... [10s elapsed]
+   ibm_resource_instance.kms_instance: Still creating... [20s elapsed]
+   ibm_resource_instance.kms_instance: Creation complete after 24s [id=crn:v1:bluemix:public:kms:us-   south:a/6ef045fd2b43266cfe8e6388dd2ec098:3ce1162f-baef-4fe7-beb3-a78d697cf981::]
+   ```
+   {: screen}
+   
+10. From the [{{site.data.keyword.cloud_notm}} resource dashboard](https://cloud.ibm.com/resources){: external}, find the {{site.data.keyword.keymanagementserviceshort}} instance that you created.
 
-For more information, about what credentials you need for a specific {{site.data.keyword.cloud_notm}} resource, see [Required input parameters for each resource category](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters).
+Congratulations! You used Terraform on {{site.data.keyword.cloud_notm}} to automatically provision your first resource in {{site.data.keyword.cloud_notm}}. 
 
-## Where can I find an overview of available resources?
-{: #resource-availablity}
+## What's next? 
+{: #whats-next}
 
-To find a full list of {{site.data.keyword.cloud_notm}} resources that you can provision with the {{site.data.keyword.cloud_notm}} Provider plug-in, see the [Index of  resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-resources-and-data-sources).
-
-To configure the {{site.data.keyword.cloud_notm}} provider plug-in with all the required parameters for the resource or data source category that you want to provision, see [configuring {{site.data.keyword.cloud_notm}} provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider).
-
+- Explore the [`ibm_kp_key`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-resources#kp-key) resource to create your first key in your {{site.data.keyword.keymanagementserviceshort}} instance with Terraform on {{site.data.keyword.cloud_notm}}.
+- Browse other [supported {{site.data.keyword.cloud_notm}} resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-resources-and-data-sources) that you can use in Terraform on {{site.data.keyword.cloud_notm}}.
+- Learn more about how to [configure the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) when you want to automate other {{site.data.keyword.cloud_notm}} resources. 
+- Explore [sample Terraform templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_terraformtemplates) that you can use to work with services in {{site.data.keyword.cloud_notm}}.
 
