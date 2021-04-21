@@ -138,7 +138,7 @@ Before you begin, make sure that you have the permissions to create an [{{site.d
    ```
    {: codeblock}
 
-6. Create a Terraform configuration file that is named `main.tf`. In this file, you declare the {{site.data.keyword.keymanagementserviceshort}} instance that you want to provision. The following example creates an {{site.data.keyword.keymanagementserviceshort}} instance that is named `my_kp` in the `us-south` region. For other options that you can declare for this resource, see the [`ibm_resource_instance` documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_instance){: external}. 
+6. Create a Terraform configuration file that is named `main.tf`. In this file, you declare the {{site.data.keyword.keymanagementserviceshort}} instance that you want to provision. The following example creates a {{site.data.keyword.keymanagementserviceshort}} instance that is named `my_kp` in the `us-south` region. For other options that you can declare for this resource, see the [`ibm_resource_instance` documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_instance){: external}. 
    
    ```
    resource "ibm_resource_instance" "kms_instance" {
