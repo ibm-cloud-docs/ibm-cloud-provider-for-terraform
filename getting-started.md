@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-20"
+lastupdated: "2021-04-21"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -105,10 +105,9 @@ Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Tr
 In this tutorial, you use Terraform on {{site.data.keyword.cloud_notm}} to create an {{site.data.keyword.keymanagementservicelong}} instance. With {{site.data.keyword.keymanagementserviceshort}}, you can create encrypted keys that you can use to secure apps and services in 
 {{site.data.keyword.cloud_notm}}. For more information, see the [{{site.data.keyword.keymanagementserviceshort}} documentation](/docs/key-protect?topic=key-protect-about). 
 
-## Prerequisites
-{: #prereq}
 
-- Make sure that you have the permissions to create an [{{site.data.keyword.keymanagementservicelong}} instance](/docs/key-protect?topic=key-protect-manage-access) resources. 
+Before you begin, make sure that you have the permissions to create an [{{site.data.keyword.keymanagementservicelong}} instance](/docs/key-protect?topic=key-protect-manage-access) resources. 
+
 
 1. [Install the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli). 
 2. [Create or retrieve an {{site.data.keyword.cloud_notm}} API key](/docs/account?topic=account-userapikey#create_user_key). The API key is used to authenticate with the {{site.data.keyword.cloud_notm}} platform and to determine your permissions for {{site.data.keyword.cloud_notm}} services.
