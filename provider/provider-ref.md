@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-04-23"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -93,7 +93,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 
-# Terraform on {{site.data.keyword.cloud_notm}} provider block configuration
+# Configuring the {{site.data.keyword.cloud_notm}} Provider plug-in
 {: #provider-reference}
 
 Review what credentials and information you need to provide to work with {{site.data.keyword.cloud_notm}} resources and data sources with the Terraform on {{site.data.keyword.cloud_notm}}.
