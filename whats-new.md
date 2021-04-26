@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-04-26"
 
 keywords: terraform resources, terraform modules, terraform provider, terraform autodeploy, 
 
@@ -28,6 +28,23 @@ subcollection: ibm-cloud-provider-for-terraform
 
 Learn about the latest changes to the Terraform on {{site.data.keyword.cloud_notm}} service that are grouped by month.
 
+## 26 April 2021
+{: #26-april-2021}
+
+<table>
+    <thead>
+    <th style="width:80px">New resources</th>
+    <th style="width:80px">New data sources</th>
+    <th style="width:500px">Enhancements</th>
+    </thead>
+  <tbody>
+    <tr>
+ <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">NA</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">NA</li></ul></td>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">Support `gateway_connection` attribute [ibm_is_vpn_gateway_connection](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-resources#vpn-gateway-connection-output) resource</li><li style="margin:0px; padding:0px">Support additional attributes for [ibm_is_subnet_reserved_ip](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-resources#subnet-reserved-ip-output) resource</li><li style="margin:0px; padding:0px">Added [ibm_iam_account_settings](docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-iam-data-sources#iam-account-settings-dssample) data source example</li><li style="margin:0px; padding:0px">Support `resource_group_id` argument in [ibm_satellite_location](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-satellite-resources#satellite-location-input) resources and attribute in [ibm_satellite_location](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-satellite-data-sources#satellite-location-dsoutput) data source</li><li style="margin:0px; padding:0px">Support `ca-tor` region in [ibm_cos_bucket](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-object-storage-resources#hpvs-cos-bucket-input) resource.</li><li style="margin:0px; padding:0px">Support `private_address` attributes for [ibm_is_vpn_gateway](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-resources#vpn-gateway-output) resource and [ibm_is_vpn_gateway](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-vpc-gen2-resources#vpn-gateway-output) data source</li><li style="margin:0px; padding:0px">Support for `retention policy` argument in [ibm_cos_bucket](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-object-storage-resources#hpvs-cos-bucket-input) bucket and attribute in [`ibm_cos_bucket`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-object-storage-data-sources#cos-bucket-output) bucket</li><li style="margin:0px; padding:0px">Latest [version1.23.2 change log](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1232) and [version1.23.1 change log](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1231)</li></ul></td>
+    </tr>
+  </tbody>
+  </table> 
 
 ## 4 April 2021
 {: #4-april-2021}
