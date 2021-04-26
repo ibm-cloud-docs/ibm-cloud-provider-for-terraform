@@ -104,6 +104,19 @@ Before you can start working with Terraform on {{site.data.keyword.cloud_notm}},
 
 The configuration of the {{site.data.keyword.cloud_notm}} Provider plug-in varies depending on the resource or data source category that you want to work with as shown in the following table. The values in this table are required. To retrieve the values or view more parameters that you can specify, see the [Supported input parameters](#provider-parameter-ov). 
 
+By default, the {{site.data.keyword.cloud_notm}} Provider plug-in is configured to create resources in the `us-south` region. If you want to create your resources in a different region, specify this region by adding the `region` parameter to your `provider` configuration. 
+{: note}
+
+|Input parameter|`ibmcloud_api_key`|`iaas_classic_username`|`iaas_classic_api_key`|`generation`|`function_namespace`|
+|--|--|--|--|--|--|
+|Classic infrastructure|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
+|Functions|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
+|Kubernetes Service|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
+|Power Systems|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
+|VPC infrastructure|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
+|Other IAM-enabled services|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
+|Cloud Foundry|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
+
 |Resource/ data source category|Required input parameters|
 |-------------|---------------------|
 |Classic infrastructure|`iaas_classic_username`: The user name to access classic {{site.data.keyword.cloud_notm}} infrastructure.</br>`iaas_classic_api_key`: The API key to access classic {{site.data.keyword.cloud_notm}} infrastructure.</br>`region`: The {{site.data.keyword.cloud_notm}} region where you want to create classic infrastructure resources.</br>`ibmcloud_api_key`: The {{site.data.keyword.cloud_notm}} API key to authenticate with the {{site.data.keyword.cloud_notm}} platform.|
