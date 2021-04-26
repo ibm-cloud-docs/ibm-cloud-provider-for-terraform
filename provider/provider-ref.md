@@ -268,6 +268,55 @@ Creating multiple `provider` configurations is useful when you want to use diffe
    ```
    {: codeblock}
    
+# Configuring non-default cloud service endpoints
+{: #config-provider}
+
+The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform can be configured to use non-default {{site.data.keyword.cloud_notm}} service endpoints. 
+{: shortdesc}
+
+Support for using non-default {{site.data.keyword.cloud_notm}} service endpoints is offered as best effort. Individual Terraform resources might require compatibility updates to support the declaration of custom service endpoints. 
+{: important}
+
+The steps that are involved in configuring your {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on {{site.data.keyword.cloud_notm}} to use the private Cloud Service Endpoint (CSE) of an {{site.data.keyword.cloud_notm}} service in  public CSE in [Production environment](https://cloud.ibm.com).
+
+You can configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on {{site.data.keyword.cloud_notm}} to communicate with an {{site.data.keyword.cloud_notm}} service by using the Cloud Service Endpoint or Private Service Endpoint.
+{: shortdesc}
+
+1. Set up the Terraform on {{site.data.keyword.cloud_notm}} engine and an {{site.data.keyword.cloud_notm}} Provider plug-in, in {{site.data.keyword.cloud_notm}} virtual machine by using private VLAN. And provision the enabled Virtual Routing and Forwarding (VRF) account.
+2. Export the following environment variables on your local machine. For more information, about supported private Cloud Service Endpoints for each {{site.data.keyword.cloud_notm}} service to support in production, see [Use service endpoints](/docs/account?topic=account-vrf-service-endpoint).
+3. Initialize the Terraform on {{site.data.keyword.cloud_notm}} command line to load the environment variables that you set.
+
+```
+terraform init
+```
+{: pre}
+
+|Service|Environment variable key|Private service endpoint|
+|-------------|--------|----------------|
+|Account management|`IBMCLOUD_ACCOUNT_MANAGEMENT_API_ENDPOINT`|N/A|
+|Certificate manager|`IBMCLOUD_CERTIFICATE_MANAGER_API_ENDPOINT`|N/A|
+|Cloud Foundry|`IBMCLOUD_MCCP_API_ENDPOINT`|N/A|
+|Cloud functions|`IBMCLOUD_NAMESPACE_API_ENDPOINT`|N/A|
+|Containers|`IBMCLOUD_CS_API_ENDPOINT`|[Docs](/docs/containers?topic=containers-plan_clusters#workeruser-master)|
+|CIS|`IBMCLOUD_CIS_API_ENDPOINT`|N/A|
+|Direct Link|`IBMCLOUD_DL_API_ENDPOINT`|N/A|
+|Global search |`IBMCLOUD_GT_API_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/search#endpoint-url) |
+|Global tagging |`IBMCLOUD_GT_API_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/tagging#endpoint-url) |
+|HPCS|`IBMCLOUD_HPCS_API_ENDPOINT`|N/A|
+|IAM|`IBMCLOUD_IAM_API_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/iam-access-groups#endpoint-urls) |
+|`IAMPAP`|`IBMCLOUD_IAMPAP_API_ENDPOINT`|N/A|
+|ICD|`IBMCLOUD_ICD_API_ENDPOINT`|[Docs](/docs/account?topic=account-vrf-service-endpoint)|
+|Key protect|`IBMCLOUD_KP_API_ENDPOINT`|[Docs](/docs/key-protect?topic=key-protect-private-endpoints)|
+|Private DNS|`IBMCLOUD_PRIVATE_DNS_API_ENDPOINT`| N/A|
+|Resource management|`IBMCLOUD_RESOURCE_MANAGEMENT_API_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/resource-controller/resource-manager#endpoint-urls) |
+|Resource controller|`IBMCLOUD_RESOURCE_CONTROLLER_API_ENDPOINT`|N/A|
+|Resource catalog|`IBMCLOUD_RESOURCE_CATALOG_API_ENDPOINT`|N/A|
+|Schematics|`IBMCLOUD_SCHEMATICS_API_ENDPOINT`|[Docs](/docs/schematics?topic=schematics-private-endpoints)|
+|Transit Gateway|`IBMCLOUD_TG_API_ENDPOINT`| N/A|
+|UAA|`IBMCLOUD_UAA_ENDPOINT`|N/A|
+|User management|`IBMCLOUD_USER_MANAGEMENT_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/user-management#endpoint-urls) |
+|VPC Gen2|`IBMCLOUD_IS_NG_API_ENDPOINT`|N/A|
+
 
 ## Configuring Terraform on {{site.data.keyword.cloud_notm}} to apply service end point in staging and production
 {: #pvt-cse-env-vars}
