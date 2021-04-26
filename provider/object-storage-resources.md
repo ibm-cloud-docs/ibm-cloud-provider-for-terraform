@@ -296,13 +296,12 @@ Review the input parameters that you can specify for your resource.
 | `retention_rule.minimum` | Integer | Required | Specifies minimum duration of time an object must be kept unmodified in the bucket.|
 | `retention_rule.permanent` |Bool | Optional | Specifies a permanent retention status either enable or disable for a bucket.
 
-**Note about retention period**
 * Retention policies cannot be removed. For a new bucket, make sure that you create the bucket in a supported region. For more details, see [integrated services](https://cloud.ibm.com/docs/cloud-object-storage/basics?topic=cloud-object-storage-service-availability).
 * The minimum retention period must be less than or equal to the default retention period, which in turn must be less than or equal to the maximum retention period.
 * Permanent retention can be enabled at a {{site.data.keyword.cos_full_notm}} bucket level with retention policy enabled and users are able to select the permanent retention period option when the object uploads. Once enabled, this process cannot be reversed and objects uploaded that use a permanent retention period cannot be deleted. You are responsibility to validate if there is a legitimate need to permanently store objects by using {{site.data.keyword.cos_full_notm}} buckets with a retention policy.
 * Force delete the bucket do not work if objects uploaded use a permanent retention period. As objects cannot be deleted or overwritten until the retention period has expired and all the legal holds is removed.
+{: note}
 
-**Note about archive_rule**
 
 Both `archive_rule` and `expire_rule` must be managed by Terraform on {{site.data.keyword.cloud_notm}} as they use the same lifecycle configuration. If user creates any of the rule outside of Terraform on {{site.data.keyword.cloud_notm}} by using command line or UI, you can see unexpected difference like removal of any of the rule or one rule overrides another. The policy cannot match as expected due to API limitations, as the lifecycle is a single API request for both archive and expire.
 {: note}
