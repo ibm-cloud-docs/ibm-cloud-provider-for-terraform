@@ -104,11 +104,6 @@ Before you can start working with Terraform on {{site.data.keyword.cloud_notm}},
 
 The configuration of the {{site.data.keyword.cloud_notm}} Provider plug-in varies depending on the resource or data source category that you want to work with as shown in the following table. The values in this table are required. To retrieve the values or view more parameters that you can specify, see the [Supported input parameters](#provider-parameter-ov). 
 
-|Resouce/ data source category|Provider plug-in parameters|
-|--|--|
-|IAM-enabled services|
-
-
 |Resource/ data source category|Required input parameters|
 |-------------|---------------------|
 |Classic infrastructure|`iaas_classic_username`: The user name to access classic {{site.data.keyword.cloud_notm}} infrastructure.</br>`iaas_classic_api_key`: The API key to access classic {{site.data.keyword.cloud_notm}} infrastructure.</br>`region`: The {{site.data.keyword.cloud_notm}} region where you want to create classic infrastructure resources.</br>`ibmcloud_api_key`: The {{site.data.keyword.cloud_notm}} API key to authenticate with the {{site.data.keyword.cloud_notm}} platform.|
