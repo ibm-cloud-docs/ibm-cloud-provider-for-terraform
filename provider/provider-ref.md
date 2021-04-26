@@ -107,13 +107,16 @@ The configuration of the {{site.data.keyword.cloud_notm}} Provider plug-in varie
 By default, the {{site.data.keyword.cloud_notm}} Provider plug-in is configured to create resources in the `us-south` region. If you want to create your resources in a different region, specify this region by adding the `region` parameter to your `provider` configuration. 
 {: note}
 
-|Resource category|`ibmcloud_api_key`|`iaas_classic_username`|`iaas_classic_api_key`|`function_namespace`|`zone`|
-|--|:--:|:--:|:--:|:--:|:--:|
-|Classic infrastructure|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||
-|Functions|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||
-|Power Systems|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/></br>For multi-zone regions only|
-|Other IAM-enabled services|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||||
-|Cloud Foundry|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||||
+|Resource category|`ibmcloud_api_key`|`iaas_classic_username`</br>`iaas_classic_api_key`|`function_namespace`|`zone`|
+|--|:--:|:--:|:--:|:--:|=
+|Classic infrastructure|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||
+|Functions|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||
+|Power Systems|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/></br>For multi-zone regions only|
+|Other IAM-enabled services|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||||
+|Cloud Foundry|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||||
+
+
+
 
 |Resource/ data source category|Required input parameters|
 |-------------|---------------------|
@@ -145,14 +148,10 @@ Review what parameters you can set in the `provider` block of your Terraform on 
 |`region`|Optional|The {{site.data.keyword.cloud_notm}} region where you want to create your resources. If this value is not specified, `us-south` is used by default. You can specify the region in the `provider` block or retrieve the value from the `IBMCLOUD_REGION` or `IC_REGION` environment variables. If both environment variables are specified, `IC_REGION` takes precedence.|
 |`resource_group`|Optional|The ID of the resource group that you want to use for your {{site.data.keyword.cloud_notm}} resources. To retrieve the ID, run `ibmcloud resource groups`. You can specify the resource group in the `provider` block or retrieve the value from the `IC_RESOURCE_GROUP` or `IBMCLOUD_RESOURCE_GROUP` environment variables. If both environment variables are defined, `IC_RESOURCE_GROUP` takes precedence. |
 |`zone`|Required for Power Systems|The zone of an {{site.data.keyword.cloud_notm}} region where you want to create Power System resources. This value is required if you want to work with resources in a multizone-capable region. For example, if you want to work in the `eu-de` region, you must enter `eu-de-1` or `eu-de-2`. You can specify the zone in the `provider` block or retrieve the value from the `IC_ZONE` or `IBMCLOUD_ZONE` environment variables. If both environment variables are specified, `IC_ZONE` takes precedence.|
-|`visibility` |Optional| The visibility to {{site.data.keyword.cloud_notm}} endpoint. Allowable values are`public`, `private`, `public-and-private`. Default value is `public`.
- * If visibility is set to **public**, use the regional public endpoint or global public endpoint. The regional public endpoints has higher precedence.
- * If visibility is set to **private**, use the regional private endpoint or global private endpoint. The regional private endpoint is given higher precedence. In order to use the private endpoint from an {{site.data.keyword.cloud_notm}} resource (such as, a classic VM instance), one must have VRF-enabled account. If the {{site.data.keyword.cloud_notm}} service does not support private endpoint, the Terraform resource or datasource will log an error.
- * If visibility is set to **public-and-private**, use regional private endpoints or global private endpoint. If service does not support regional or global private endpoints it uses the regional or global public endpoint.
- * This can be retrieved from the `IC_VISIBILITY` higher precedence or `IBMCLOUD_VISIBILITY` environment variable.|
+|`visibility` |Optional| The visibility to {{site.data.keyword.cloud_notm}} endpoint. Allowable values are`public`, `private`, `public-and-private`. Default value is `public`. <ul><li>If visibility is set to **public**, use the regional public endpoint or global public endpoint. The regional public endpoints has higher precedence.</li><li>If visibility is set to **private**, use the regional private endpoint or global private endpoint. The regional private endpoint is given higher precedence. In order to use the private endpoint from an {{site.data.keyword.cloud_notm}} resource (such as, a classic VM instance), one must have VRF-enabled account. If the {{site.data.keyword.cloud_notm}} service does not support private endpoint, the Terraform resource or datasource will log an error.</li><li>If visibility is set to **public-and-private**, use regional private endpoints or global private endpoint. If service does not support regional or global private endpoints it uses the regional or global public endpoint.</li><li>This can be retrieved from the `IC_VISIBILITY` higher precedence or `IBMCLOUD_VISIBILITY` environment variable.</li></ul>|
 
 
-## Example usage
+## Specifying the `provider` block
 {: #provider-example}
 
 You can choose if you want to provide the input parameters as static values in the `provider` block or if you want to retrieve the values from Terraform on {{site.data.keyword.cloud_notm}} variables or environment variables that you set. 
