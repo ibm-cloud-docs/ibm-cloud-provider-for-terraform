@@ -107,7 +107,7 @@ The configuration of the {{site.data.keyword.cloud_notm}} Provider plug-in varie
 By default, the {{site.data.keyword.cloud_notm}} Provider plug-in is configured to create resources in the `us-south` region. If you want to create your resources in a different region, specify this region by adding the `region` parameter to your `provider` configuration. 
 {: note}
 
-|Resource category|`ibmcloud_api_key`|`iaas_classic_username`</br>`iaas_classic_api_key`|`function_namespace`|`zone`|
+|Resource category|ibmcloud_api_key|iaas_classic_username</br>iaas_classic_api_key|function_namespace|zone|
 |--|:--:|:--:|:--:|:--:|
 |Classic infrastructure|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||
 |Functions|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||
