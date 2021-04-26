@@ -108,7 +108,7 @@ By default, the {{site.data.keyword.cloud_notm}} Provider plug-in is configured 
 {: note}
 
 |Required parameters|Classic infrastructure|Functions|Power Systems|Other IAM-enabled services|Cloud Foundry|
-|--|--|--|--|--|--|
+|--|:--:|:--:|:--:|:--:|:--:|
 |`ibmcloud_api_key`|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
 |`iaas_classic_username`|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||||
 |`iaas_classic_api_key`|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||||
