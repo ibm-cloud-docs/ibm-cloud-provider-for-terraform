@@ -268,7 +268,7 @@ Creating multiple `provider` configurations is useful when you want to use diffe
    ```
    {: codeblock}
    
-# Configuring non-default cloud service endpoints
+## Configuring non-default cloud service endpoints
 {: #config-provider}
 
 The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform can be configured to use non-default {{site.data.keyword.cloud_notm}} service endpoints. 
@@ -278,9 +278,6 @@ Support for using non-default {{site.data.keyword.cloud_notm}} service endpoints
 {: important}
 
 The steps that are involved in configuring your {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on {{site.data.keyword.cloud_notm}} to use the private Cloud Service Endpoint (CSE) of an {{site.data.keyword.cloud_notm}} service in  public CSE in [Production environment](https://cloud.ibm.com).
-
-You can configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on {{site.data.keyword.cloud_notm}} to communicate with an {{site.data.keyword.cloud_notm}} service by using the Cloud Service Endpoint or Private Service Endpoint.
-{: shortdesc}
 
 1. Set up the Terraform on {{site.data.keyword.cloud_notm}} engine and an {{site.data.keyword.cloud_notm}} Provider plug-in, in {{site.data.keyword.cloud_notm}} virtual machine by using private VLAN. And provision the enabled Virtual Routing and Forwarding (VRF) account.
 2. Export the following environment variables on your local machine. For more information, about supported private Cloud Service Endpoints for each {{site.data.keyword.cloud_notm}} service to support in production, see [Use service endpoints](/docs/account?topic=account-vrf-service-endpoint).
