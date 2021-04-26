@@ -107,13 +107,11 @@ The configuration of the {{site.data.keyword.cloud_notm}} Provider plug-in varie
 By default, the {{site.data.keyword.cloud_notm}} Provider plug-in is configured to create resources in the `us-south` region. If you want to create your resources in a different region, specify this region by adding the `region` parameter to your `provider` configuration. 
 {: note}
 
-|Resource category|`ibmcloud_api_key`|`iaas_classic_username`|`iaas_classic_api_key`|`generation`|`function_namespace`|`zone`|
+|Resource category|`ibmcloud_api_key`|`iaas_classic_username`|`iaas_classic_api_key`|`function_namespace`|`zone`|
 |--|:--:|:--:|:--:|:--:|:--:|:--:|
 |Classic infrastructure|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||||
 |Functions|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||
-|Kubernetes Service|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/> </br>For VPC clusters only|||
 |Power Systems|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/></br>For multi-zone regions only|
-|VPC infrastructure|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||
 |Other IAM-enabled services|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
 |Cloud Foundry|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
 
