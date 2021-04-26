@@ -111,21 +111,11 @@ By default, the {{site.data.keyword.cloud_notm}} Provider plug-in is configured 
 |--|:--:|:--:|:--:|:--:|
 |Classic infrastructure|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||
 |Functions|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||
-|Power Systems|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/></br>For multi-zone regions only|
+|Power Systems|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/> - For multi-zone regions only|
 |Other IAM-enabled services|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||||
 |Cloud Foundry|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||||
 
 
-
-
-|Resource/ data source category|Required input parameters|
-|-------------|---------------------|
-|Classic infrastructure|`iaas_classic_username`: The user name to access classic {{site.data.keyword.cloud_notm}} infrastructure.</br>`iaas_classic_api_key`: The API key to access classic {{site.data.keyword.cloud_notm}} infrastructure.</br>`region`: The {{site.data.keyword.cloud_notm}} region where you want to create classic infrastructure resources.</br>`ibmcloud_api_key`: The {{site.data.keyword.cloud_notm}} API key to authenticate with the {{site.data.keyword.cloud_notm}} platform.|
-|Cloud Foundry and all other IAM-enabled services|<ul><li><code>region</code>: The {{site.data.keyword.cloud_notm}} region where you want to create Cloud Foundry or IAM services.</li><li><code>ibmcloud_api_key</code>: The {{site.data.keyword.cloud_notm}} API key to authenticate with the {{site.data.keyword.cloud_notm}} platform.</li></ul>|
-|Functions|<ul><li><code>function_namespace</code>: The namespace in {{site.data.keyword.openwhisk}} where you want to create your resources.</li><li><code>ibmcloud_api_key</code>: The {{site.data.keyword.cloud_notm}} API key to authenticate with the {{site.data.keyword.cloud_notm}} platform.</li></ul>
-|Kubernetes Service|<ul><li><code>ibmcloud_api_key</code>: The {{site.data.keyword.cloud_notm}} API key to authenticate with the {{site.data.keyword.cloud_notm}} platform.</li><li><code>generation</code>: If you want to create a VPC cluster, specify the generation of {{site.data.keyword.cloud_notm}} VPC infrastructure.</li></ul>|
-|Power Systems|<ul><li><code>zone</code>: The {{site.data.keyword.cloud_notm}} zone where you want to create Power System resources. This value is required only when you want to work with a resource in a multizone-capable region.</li><li><code>region</code>: The {{site.data.keyword.cloud_notm}} region where you want to create Power System resources.</li><li><code>ibmcloud_api_key</code>: The {{site.data.keyword.cloud_notm}} API key to authenticate with the {{site.data.keyword.cloud_notm}} platform.</li></ul>|
-|VPC infrastructure for Generation 2 compute|<ul><li><code>generation</code>: The generation of {{site.data.keyword.cloud_notm}} VPC infrastructure.</li><li><code>region</code>: The {{site.data.keyword.cloud_notm}} region where you want to create VPC resources.</li><li><code>ibmcloud_api_key</code>: The {{site.data.keyword.cloud_notm}} API key to authenticate with the {{site.data.keyword.cloud_notm}} platform.</li></ul>|
 
 
 ## Supported input parameters
@@ -153,6 +143,8 @@ Review what parameters you can set in the `provider` block of your Terraform on 
 
 ## Specifying the `provider` block
 {: #provider-example}
+
+After you retrieved the required parameters to work with a Terraform resource or data source, you 
 
 You can choose if you want to provide the input parameters as static values in the `provider` block or if you want to retrieve the values from Terraform on {{site.data.keyword.cloud_notm}} variables or environment variables that you set. 
 {: shortdesc}
