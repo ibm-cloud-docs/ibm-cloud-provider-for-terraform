@@ -113,7 +113,7 @@ By default, the {{site.data.keyword.cloud_notm}} Provider plug-in is configured 
 |`iaas_classic_username`|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||||
 |`iaas_classic_api_key`|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||||
 |`function_namespace`||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||||
-|`zone`|||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||
+|`zone`|||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/> </br>For multi-zone regions only|||
 
 
 
