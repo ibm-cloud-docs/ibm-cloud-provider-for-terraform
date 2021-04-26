@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-23"
+lastupdated: "2021-04-26"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -96,18 +96,22 @@ subcollection: ibm-cloud-provider-for-terraform
 # Configuring the {{site.data.keyword.cloud_notm}} Provider plug-in
 {: #provider-reference}
 
-Review what credentials and information you need to provide to work with {{site.data.keyword.cloud_notm}} resources and data sources with the Terraform on {{site.data.keyword.cloud_notm}}.
+Before you can start working with Terraform on {{site.data.keyword.cloud_notm}}, you must retrieve the credentials and parameters that are required for a Terraform resource or data source, and specify them in the `provider` configuration. This configuration is used by the {{site.data.keyword.cloud_notm}} Provider plug-in to authenticate with the {{site.data.keyword.cloud_notm}} platform and to view, create, update, or delete {{site.data.keyword.cloud_notm}} resources and services. 
 {: shortdesc}
 
 ## Required input parameters for each resource category
 {: #required-parameters}
 
-Review what information you must provide in the `provider` block to work with a specific resource category. The values in this table are required values. To retrieve the values or view more parameters that you can specify, see the [Supported input parameters](#provider-parameter-ov). 
-{: shortdesc}
+The configuration of the {{site.data.keyword.cloud_notm}} Provider plug-in varies depending on the resource or data source category that you want to work with as shown in the following table. The values in this table are required. To retrieve the values or view more parameters that you can specify, see the [Supported input parameters](#provider-parameter-ov). 
 
-|Resource|Required input parameters|
+|Resouce/ data source category|Provider plug-in parameters|
+|--|--|
+|IAM-enabled services|
+
+
+|Resource/ data source category|Required input parameters|
 |-------------|---------------------|
-|Classic infrastructure|<ul><li><code>iaas_classic_username</code>: The user name to access classic {{site.data.keyword.cloud_notm}} infrastructure.</li><li><code>iaas_classic_api_key</code>: The API key to access classic {{site.data.keyword.cloud_notm}} infrastructure.</li><li><code>region</code>: The {{site.data.keyword.cloud_notm}} region where you want to create classic infrastructure resources.</li><li><code>ibmcloud_api_key</code>: The {{site.data.keyword.cloud_notm}} API key to authenticate with the {{site.data.keyword.cloud_notm}} platform.</li></ul>|
+|Classic infrastructure|`iaas_classic_username`: The user name to access classic {{site.data.keyword.cloud_notm}} infrastructure.</br>`iaas_classic_api_key`: The API key to access classic {{site.data.keyword.cloud_notm}} infrastructure.</br>`region`: The {{site.data.keyword.cloud_notm}} region where you want to create classic infrastructure resources.</br>`ibmcloud_api_key`: The {{site.data.keyword.cloud_notm}} API key to authenticate with the {{site.data.keyword.cloud_notm}} platform.|
 |Cloud Foundry and all other IAM-enabled services|<ul><li><code>region</code>: The {{site.data.keyword.cloud_notm}} region where you want to create Cloud Foundry or IAM services.</li><li><code>ibmcloud_api_key</code>: The {{site.data.keyword.cloud_notm}} API key to authenticate with the {{site.data.keyword.cloud_notm}} platform.</li></ul>|
 |Functions|<ul><li><code>function_namespace</code>: The namespace in {{site.data.keyword.openwhisk}} where you want to create your resources.</li><li><code>ibmcloud_api_key</code>: The {{site.data.keyword.cloud_notm}} API key to authenticate with the {{site.data.keyword.cloud_notm}} platform.</li></ul>
 |Kubernetes Service|<ul><li><code>ibmcloud_api_key</code>: The {{site.data.keyword.cloud_notm}} API key to authenticate with the {{site.data.keyword.cloud_notm}} platform.</li><li><code>generation</code>: If you want to create a VPC cluster, specify the generation of {{site.data.keyword.cloud_notm}} VPC infrastructure.</li></ul>|
