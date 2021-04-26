@@ -109,13 +109,13 @@ By default, the {{site.data.keyword.cloud_notm}} Provider plug-in is configured 
 
 |Input parameter|`ibmcloud_api_key`|`iaas_classic_username`|`iaas_classic_api_key`|`generation`|`function_namespace`|
 |--|--|--|--|--|--|
-|Classic infrastructure|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
-|Functions|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
-|Kubernetes Service|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
-|Power Systems|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
-|VPC infrastructure|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
-|Other IAM-enabled services|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
-|Cloud Foundry|<img src="images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
+|Classic infrastructure|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
+|Functions|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
+|Kubernetes Service|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
+|Power Systems|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
+|VPC infrastructure|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
+|Other IAM-enabled services|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
+|Cloud Foundry|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
 
 |Resource/ data source category|Required input parameters|
 |-------------|---------------------|
