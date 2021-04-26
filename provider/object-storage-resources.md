@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-04-26"
 
 keywords: terraform provider plugin, terraform data source cos, terraform data source object storage, terraform get cloud object storage bucket, terraform get object storage resources
 
@@ -277,7 +277,7 @@ Review the input parameters that you can specify for your resource.
 |`metrics_monitoring.usage_metrics_enabled`|Boolean|Optional|If set to **true**, all metrics are sent to your {{site.data.keyword.mon_full_notm}} service instance.|
 |`metrics_monitoring.metrics_monitoring_crn`|String|Required| The CRN of the {{site.data.keyword.mon_full_notm}} service instance that you want to send metrics to. This value is required only when you configure your instance for the first time.|
 | `resource_instance_id` | String | Required | The ID of the {{site.data.keyword.cos_full_notm}} service instance for which you want to create a bucket. |
-| `region_location` | String | Optional | The location of a regional bucket. Supported values are `au-syd`, `eu-de`, `eu-gb`, `jp-tok`, `us-east`, `us-south`. If you set this parameter, do not set `single_site_location` or `cross_region_location` at the same time.|
+| `region_location` | String | Optional | The location of a regional bucket. Supported values are `au-syd`, `eu-de`, `eu-gb`, `ca-tor`, `jp-tok`, `us-east`, `us-south`. If you set this parameter, do not set `single_site_location` or `cross_region_location` at the same time.|
 | `single_site_location` | String | Optional | The location for a single site bucket. Supported values are: `ams03`, `che01`, `hkg02`, `mel01`, `mex01`, `mil01`, `mon01`, `osl01`, `par01`, `sjc04`, `sao01`, `seo01`, `sng01`, and `tor01`. If you set this parameter, do not set `region_location` or `cross_region_location` at the same time.|
 | `storage_class` | String | Required | The storage class that you want to use for the bucket. Supported values are `standard`, `vault`, `cold`, `flex`, and `smart`. For more information, about storage classes, see [Use storage classes](/docs/cloud-object-storage?topic=cloud-object-storage-classes).|
 | `archive_rule` | List | Required | Nested archive_rule block has following structure. |
@@ -290,7 +290,19 @@ Review the input parameters that you can specify for your resource.
 | `expire_rule.enable` | Bool | Required | Specifies expire rule status either `enable` or `disable` for a bucket. |
 | `expire_rule.days` | String | Required | Specifies the number of days when the specific rule action takes effect. |
 | `expire_rule.prefix ` | String | Optional | Specifies a prefix filter to apply to only a subset of objects with names that match the prefix. |
+| `retention_rule` | List | The nested retention rule contains the following structure.|
+| `retention_rule.default` | Integer | Required | The default retention period are defined by this policy and apply to all objects in the bucket.|
+| `retention_rule.maximum` | Integer | Required | Specifies maximum duration of time an object can be kept unmodified in the bucket.|
+| `retention_rule.minimum` | Integer | Required | Specifies minimum duration of time an object must be kept unmodified in the bucket.|
+| `retention_rule.permanent` |Bool | Optional | Specifies a permanent retention status either enable or disable for a bucket.
 
+**Note about retention period**
+* Retention policies cannot be removed. For a new bucket, make sure that you create the bucket in a supported region. For more details, see [integrated services](https://cloud.ibm.com/docs/cloud-object-storage/basics?topic=cloud-object-storage-service-availability).
+* The minimum retention period must be less than or equal to the default retention period, which in turn must be less than or equal to the maximum retention period.
+* Permanent retention can be enabled at a {{site.data.keyword.cos_full_notm}} bucket level with retention policy enabled and users are able to select the permanent retention period option when the object uploads. Once enabled, this process cannot be reversed and objects uploaded that use a permanent retention period cannot be deleted. You are responsibility to validate if there is a legitimate need to permanently store objects by using {{site.data.keyword.cos_full_notm}} buckets with a retention policy.
+* Force delete the bucket do not work if objects uploaded use a permanent retention period. As objects cannot be deleted or overwritten until the retention period has expired and all the legal holds is removed.
+
+**Note about archive_rule**
 
 Both `archive_rule` and `expire_rule` must be managed by Terraform on {{site.data.keyword.cloud_notm}} as they use the same lifecycle configuration. If user creates any of the rule outside of Terraform on {{site.data.keyword.cloud_notm}} by using command line or UI, you can see unexpected difference like removal of any of the rule or one rule overrides another. The policy cannot match as expected due to API limitations, as the lifecycle is a single API request for both archive and expire.
 {: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-04-26"
 
 keywords: terraform provider plugin, terraform satellite host, terraform satellite location
 
@@ -176,8 +176,8 @@ Review the input parameters that you can specify for your resource.
 
 |Name|Data type|Required / optional|Description| 
 |----|-----------|-----------|---------------------|
-| `location`|String|Required| The name or ID of the {{site.data.keyword.satelliteshort}}  location.|
-| `cluster`|String|Optional|  The name or ID of a {{site.data.keyword.satelliteshort}}  location or cluster to assign the host to.|
+| `location`|String|Required| The name or ID of the {{site.data.keyword.satelliteshort}} location.|
+| `cluster`|String|Optional|  The name or ID of a {{site.data.keyword.satelliteshort}} location or cluster to assign the host to.|
 | `host_id`|String|Required|  The specific host ID to assign to a {{site.data.keyword.satelliteshort}}  location or cluster.|
 | `labels`|Array of strings|Optional|  The key value pairs to label the host, such as `cpu=4` to describe the host capabilities.|
 | `worker_pool`|String|Optional| The name or ID of the worker pool within the cluster to assign the host to.|
@@ -276,7 +276,8 @@ Review the input parameters that you can specify for your resource.
 | `cos_config.region`| String | Optional | The name of a region, such as `us-south` or `eu-gb`.|
 | `cos_credentials`| List | Optional | The {{site.data.keyword.cos_full_notm}} authorization keys. Nested `cos_credentials` blocks have the following structure.|
 | `cos_credentials.access_key-id`| String | Required | The `HMAC` secret access key ID.|
-| `cos_credentials.secret_access_key`| String | Optional |The `HMAC` secret access key.|
+| `cos_credentials.secret_access_key`| String | Optional | The `HMAC` secret access key.|
+| `resource_group_id`| String | Optional | The ID of the resource group. You can retrieve the value from data source `ibm_resource_group`.|
 | `zones`| Array of strings | Optional| The names for the host zones. For high availability, allocate your hosts across these three zones based on your infrastructure provider zones. For example, `us-east-1`, `us-east-2`, `us-east-3` .|
 {: caption="Table 1. Available input parameters" caption-side="top"}
 

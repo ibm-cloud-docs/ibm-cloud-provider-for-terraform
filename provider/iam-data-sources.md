@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-04-26"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -114,7 +114,7 @@ Create, modify, or delete an iam_account_settings data sources. For more informa
 
 
 ```
-data "iam_account_settings" "iam_account_settings" {
+data "ibm_iam_account_settings" "iam_account_settings" {
 }
 ```
 {: codeblock}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19" 
+lastupdated: "2021-04-26" 
 
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes, observability logging, observability monitoring
 
@@ -157,8 +157,8 @@ resource "ibm_container_addons" "addons" {
 Review the input parameters that you can specify for your resource. 
 {: shortdesc}
 
-| Input parameter | Data type | Required / optional | Description |
-| ------------- |-------------| ----- | -------------- |
+| Input parameter | Data type | Required / optional | Description | Forces new resource |
+| ------------- |-------------| ----- | -------------- |  ----- |
 | `addons` | Set | Required | Set of add-ons that needs to be enabled. |No|
 | `addons.name` | String | Optional | The add-on name such as `istio`. Supported add-ons are `kube-terminal`, `alb-oauth-proxy`, `debug-tool`, `istio`, `knative`, `static-route`,`vpc-block-csi-driver`.| No |
 | `addons.version`| String | Optional | The add-on version. Omit the version that you want to use as the default version.This is required when you want to update the add-on to specified version. |No|
