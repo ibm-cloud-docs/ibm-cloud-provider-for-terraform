@@ -166,8 +166,6 @@ resource "ibm_satellite_host" "assign_host" {
 ```
 {: codeblock}
 
-
-
 ### Input parameters
 {: #satellite-host-input}
 

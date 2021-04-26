@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-04-26"
 
 keywords: terraform, terraform provider release, terraform provider versions
 
@@ -98,6 +98,28 @@ subcollection: ibm-cloud-provider-for-terraform
 
 View information for updates to the Terraform on {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
+
+## Changelog for 1.23.2, released 20 April 2021
+{: #changelog-v1232}
+
+The following table shows the changes that are included in version 1.23.2 of the Terraform on {{site.data.keyword.cloud_notm}}.
+{: shortdesc}
+
+| Previous | Current | Description |
+| -------- | ------- | ----------- |
+| 1.23.1 | 1.23.2 |[See the release notes for the Terraform on {{site.data.keyword.cloud_notm}} version 1.23.2](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.23.2){: external}.|
+{: caption="Terraform on {{site.data.keyword.cloud_notm}} provider 1.23.2" caption-side="top"}
+
+## Changelog for 1.23.1, released 9 April 2021
+{: #changelog-v1231}
+
+The following table shows the changes that are included in version 1.23.1 of the Terraform on {{site.data.keyword.cloud_notm}}.
+{: shortdesc}
+
+| Previous | Current | Description |
+| -------- | ------- | ----------- |
+| 1.23.0 | 1.23.1 |[See the release notes for the Terraform on {{site.data.keyword.cloud_notm}} version 1.23.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.23.1){: external}.|
+{: caption="Terraform on {{site.data.keyword.cloud_notm}} provider 1.23.1" caption-side="top"}
 
 ## Changelog for 1.23.0, released 4 April 2021
 {: #changelog-v1230}

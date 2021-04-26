@@ -186,7 +186,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`metrics_monitoring.usage_metrics_enabled`|Bool| If set to `true`, all usage metrics (that is `bytes_used`) is sent to the monitoring service.
 |`metrics_monitoring.metrics_monitoring_crn`|String|The first time `metrics_monitoring` is configured. The instance of {{site.data.keyword.cloud_notm}} monitoring that will receive the bucket metrics.|
 | `region_location` | String | The location to create a regional bucket. |
-| `resource_instance_id` | String | The ID of {site.data.keyword.cos_full_notm}} instance. | 
+| `resource_instance_id` | String | The ID of {{site.data.keyword.cos_full_notm}} instance. | 
 | `single_site_location` | String | The location to create a single site bucket. |
 | `storage_class` | String | The storage class of the bucket. |
 | `retention_rule`| List | Nested retention rule contains the following structure.|
