@@ -108,7 +108,7 @@ By default, the {{site.data.keyword.cloud_notm}} Provider plug-in is configured 
 {: note}
 
 |Input parameter|`ibmcloud_api_key`|`iaas_classic_username`|`iaas_classic_api_key`|`generation`|`function_namespace`|
-|--|--|--|--|--|--|
+|--|:--:|:--:|:--:|:--:|:--:|
 |Classic infrastructure|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
 |Functions|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
 |Kubernetes Service|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
