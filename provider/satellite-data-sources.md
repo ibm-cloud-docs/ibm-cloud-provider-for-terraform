@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-04-26"
  
 keywords: terraform provider plugin, terraform satellite host, terraform satellite location
 
@@ -208,5 +208,6 @@ Review the output parameters that you can access after your resource is created.
 | `managed_from` | String | The {{site.data.keyword.cloud_notm}} metro from which the {{site.data.keyword.satelliteshort}} location is managed. To list available multizone regions, run `ibmcloud ks locations`. such as `wdc04`, `wdc06`, or `lon04`.|
 | `description` | String | Description of the new Satellite location.
 | `logging_account_id` | String |  The account ID for {{site.data.keyword.loganalysislong_notm}} with {{site.data.keyword.loganalysislong_notm}} log forwarding.|
+| `resource_group_id` | String | The ID of the resource group.|
 | `zone` | String | The names for the host zones. For high availability, allocate your hosts across these three zones based on your infrastructure provider zones. For example, `us-east-1`, `us-east-2`, `us-east-3`.|
 {: caption="Table. Available output parameters" caption-side="top"}

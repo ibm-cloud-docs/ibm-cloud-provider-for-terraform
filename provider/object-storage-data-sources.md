@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-04-26"
 
 keywords: terraform provider plugin, terraform provider cos, terraform resources cos, terraform resources object storage, create bucket with terraform
 
@@ -186,6 +186,11 @@ Review the output parameters that you can access after you retrieved your data s
 |`metrics_monitoring.usage_metrics_enabled`|Bool| If set to `true`, all usage metrics (that is `bytes_used`) is sent to the monitoring service.
 |`metrics_monitoring.metrics_monitoring_crn`|String|The first time `metrics_monitoring` is configured. The instance of {{site.data.keyword.cloud_notm}} monitoring that will receive the bucket metrics.|
 | `region_location` | String | The location to create a regional bucket. |
-| `resource_instance_id` | String | The ID of {site.data.keyword.cos_full_notm}} instance. | 
+| `resource_instance_id` | String | The ID of {{site.data.keyword.cos_full_notm}} instance. | 
 | `single_site_location` | String | The location to create a single site bucket. |
 | `storage_class` | String | The storage class of the bucket. |
+| `retention_rule`| List | Nested retention rule contains the following structure.|
+| `retention_rule.default`| Integer | Required | The default retention period are defined by this policy and apply to all objects in the bucket.|
+| `retention_rule.maximum`| Integer | Required |  Specifies maximum duration of time an object can be kept unmodified in the bucket.|
+| `retention_rule.minimum`| Integer | Required | Specifies minimum duration of time an object must be kept unmodified in the bucket.|
+| `retention_rule.permanent`| Bool | Optional |  Specifies a permanent retention status either enable or disable for a bucket.|

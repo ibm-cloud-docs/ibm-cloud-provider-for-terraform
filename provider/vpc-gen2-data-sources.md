@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-04-26"
 
 keywords: terraform provider plugin, terraform gen 2, terraform gen 2 compute
 
@@ -2333,8 +2333,9 @@ Review the output parameters that you can access after you retrieved your data s
 |`name`| String |The VPN gateway instance name.|
 |`created_at`|timestamp| The date and time the VPN gateway was created.|
 |`crn`|String| The VPN gateway's CRN.|
-|`members`|String|Collection of VPN gateway members.|
+|`members`|String|The nested collection of the VPN gateway members.|
 |`members.address`|String| The public IP address assigned to the VPN gateway member.|
+|`members.private_address` |String | The private IP address assigned to the VPN gateway member.|
 |`members.role`| String | The high availability role assigned to the VPN gateway member.|
 |`members.status`|String| The status of the VPN gateway member.|
 |`resource_type`|String| The resource type, supported value is `vpn_gateway`.|

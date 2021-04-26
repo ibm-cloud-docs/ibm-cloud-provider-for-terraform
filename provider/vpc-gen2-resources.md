@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19" 
+lastupdated: "2021-04-26" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -2676,8 +2676,13 @@ Review the output parameters that you can access after your resource is created.
 
 |Name|Data type|Description|
 |----|-----------|--------|
-|`id`|String|The combination of the subnet ID and reserved IP ID separated by **/**.|
-|`reserved_ip`|String|The reserved IP.|
+| `id` | String | The combination of the subnet ID and reserved IP ID separated by **/**.|
+| `reserved_ip` | String | The reserved IP.|
+| `created_at` | String | The date and time that the reserved IP was created.|
+| `href` | String | The URL for this reserved IP.|
+| `owner` | String | The owner of a reserved IP, defining whether, it is managed by an user or the provider.|
+| `resource_type` | String | The resource type.|
+| `address` | String | The IP address.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 ### Import
@@ -3377,7 +3382,17 @@ Review the output parameters that you can access after your resource is created.
 |----|-----------|--------|
 |`id`|String|The unique identifier of the VPN gateway.|
 |`status`|String|The status of VPN gateway.|
-|`public_ip_address`|String|The IP address assigned to this VPN gateway.|
+|`public_ip_address`| String | The public IP address assigned to this VPN gateway member.|
+|`public_ip_address2`| String | The second public IP address assigned to this VPN gateway member.|
+|`private_ip_address`| String |The private IP address assigned to this VPN gateway member.|
+|`private_ip_address2`| String |The second private IP address assigned to this VPN gateway.|
+|`status`| String |The status of the VPN gateway. Allowed values are `available`, `deleting`, `failed`, `pending`.|
+|`created_at`| String | The second IP address assigned to this VPN gateway.|
+|`members`| String | The collection of the VPN gateway members.|
+|`members.address`| String | The public IP address assigned to the VPN gateway member.|
+|`members.private_address`| String | The private IP address assigned to the VPN gateway member.|
+|`members.role`| String | The high availability role assigned to the VPN gateway member.|
+|`members.status`| String | The status of the VPN gateway member.|
 
 ### Import
 {: #vpn-gateway-import}
@@ -3450,12 +3465,13 @@ Review the output parameters that you can access after your resource is created.
 |`id`|String|The unique identifier of the VPN gateway connection. The ID is composed of `<vpn_gateway_id>/<vpn_gateway_connection_id>`.|
 |`authentication_mode`|String|The authentication mode, only `psk` is supported now.|
 |`created_at`| String | The date and time that VPN gateway connection was created.|
+| `gateway_connection` | String | The unique identifier for this VPN gateway connection.|
 |`resource_type`| String | The resource type (vpn_gateway_connection). |
 |`status`| String | The status of a VPN gateway connection either `down` or `up`.|
 |`tunnels`| String | The VPN tunnel configuration for the VPN gateway connection (in static route mode).|
 |`tunnels.address`| String | The IP address of the VPN gateway member in which the tunnel resides.|
 |`tunnels.resource_type`| String | The status of the VPN tunnel.|
-|`crn` |String| The `VPN Gateway info(ID)`.|
+|`crn` |String| The `VPN Gateway info (ID)`.|
 |`mode`| String |The mode of the `VPN gateway(policy,route)`.|
 
 

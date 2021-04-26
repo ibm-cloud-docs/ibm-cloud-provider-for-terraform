@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-04-26"
 
 keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, Terraform on {{site.data.keyword.cloud_notm}}, provision resources
 
@@ -94,10 +94,10 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 
-# Managing the IBM Cloud resources with Terraform on {{site.data.keyword.cloud_notm}}
+# Managing {{site.data.keyword.cloud_notm}} resources with Terraform on {{site.data.keyword.cloud_notm}}
 {: #manage_resources}
 
-Use the Terraform on {{site.data.keyword.cloud_notm}} command line to create your platform and infrastructure resources in {{site.data.keyword.cloud_notm}}. 
+Use the Terraform CLI to create, update, and delete platform and infrastructure services in {{site.data.keyword.cloud_notm}}. 
 {: shortdesc}
 
 ## Provisioning IBM Cloud resources
@@ -110,12 +110,12 @@ Terraform on {{site.data.keyword.cloud_notm}} configuration files are written by
 
 Before you begin: 
 - [Install the Terraform on {{site.data.keyword.cloud_notm}} command line and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#setup_cli).
-- [Configure the {{site.data.keyword.cloud_notm}} Provider plug-in to use your {{site.data.keyword.cloud_notm}} credentials](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider). 
+- [Configure the {{site.data.keyword.cloud_notm}} Provider plug-in to use your {{site.data.keyword.cloud_notm}} credentials](//docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider). 
 
 The following example shows how you can configure a virtual server in {{site.data.keyword.cloud_notm}} by using JSON syntax. A virtual server is an {{site.data.keyword.cloud_notm}} infrastructure resource that incurs costs. Be sure to review [available plans ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog/infrastructure/virtual-server-group) before you proceed. 
 {: important} 
 
-Looking for other resource types? Find a complete list of supported resource types in the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider). 
+Looking for other resource types? Find a complete list of supported resource types in the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](//docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider). 
 {: tip}
 
 1. Create a configuration file that is named `sample.tf` with the following content. Configuration file names must have the `.tf` extension to be found by Terraform on {{site.data.keyword.cloud_notm}}. Store this file in the same folder that you used to store your {{site.data.keyword.cloud_notm}} credentials.
@@ -342,7 +342,7 @@ You can update your resources by changing your Terraform on {{site.data.keyword.
    ```
    {: screen}
    
-2. Open your `sample.tf` configuration file and change a value. For example, you can change the **network_speed** to **100**. To find an overview of parameters that you can change, see the [{{site.data.keyword.cloud_notm}} resource reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#configure_provider).
+2. Open your `sample.tf` configuration file and change a value. For example, you can change the **network_speed** to **100**. To find an overview of parameters that you can change, see the [{{site.data.keyword.cloud_notm}} resource reference](//docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
    
 3. Create an Terraform on {{site.data.keyword.cloud_notm}} execution plan.
  
