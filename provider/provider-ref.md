@@ -113,7 +113,7 @@ By default, the {{site.data.keyword.cloud_notm}} Provider plug-in is configured 
 |`iaas_classic_username`|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||||
 |`iaas_classic_api_key`|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||||
 |`function_namespace`|||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||
-|`zone`||||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/> </br>For multi-zone regions only||
+|`zone`||||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/> </br>For multi-zone regions only ||
 
 
 
@@ -314,14 +314,6 @@ terraform init
 |User management|`IBMCLOUD_USER_MANAGEMENT_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/user-management#endpoint-urls) |
 |VPC Gen2|`IBMCLOUD_IS_NG_API_ENDPOINT`|N/A|
 
-
-## Configuring Terraform on {{site.data.keyword.cloud_notm}} to apply service end point in staging and production
-{: #pvt-cse-env-vars}
-
-The steps that are involved in configuring your Terraform on {{site.data.keyword.cloud_notm}} runtime to use the private Cloud Service Endpoint (CSE) of an {{site.data.keyword.cloud_notm}} service within  public CSE in [Production environment](https://cloud.ibm.com).
-
-You can configure the Terraform on {{site.data.keyword.cloud_notm}} to communicate with an {{site.data.keyword.cloud_notm}} service by using the service's private service endpoint. For more information, refer [Configure the provider to use private service endpoint](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-config-provider).
-{: shortdesc}
 
 
 
