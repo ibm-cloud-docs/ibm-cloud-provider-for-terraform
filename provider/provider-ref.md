@@ -107,13 +107,13 @@ The configuration of the {{site.data.keyword.cloud_notm}} Provider plug-in varie
 By default, the {{site.data.keyword.cloud_notm}} Provider plug-in is configured to create resources in the `us-south` region. If you want to create your resources in a different region, specify this region by adding the `region` parameter to your `provider` configuration. 
 {: note}
 
-|Required parameters|Classic infrastructure|Functions|Power Systems|Other IAM-enabled services|Cloud Foundry|
+|Required parameters|Classic infrastructure|Cloud Foundry|Functions|Power Systems|Other IAM-enabled services|
 |--|:--:|:--:|:--:|:--:|:--:|
 |`ibmcloud_api_key`|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
 |`iaas_classic_username`|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||||
 |`iaas_classic_api_key`|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||||
-|`function_namespace`||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>||||
-|`zone`|||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/> </br>For multi-zone regions only|||
+|`function_namespace`|||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||
+|`zone`||||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/> </br>For multi-zone regions only||
 
 
 
@@ -143,32 +143,43 @@ Review what parameters you can set in the `provider` block of your Terraform on 
 ## Specifying the `provider` block
 {: #provider-example}
 
-After you retrieved the required parameters to work with a Terraform resource or data source, you 
+After you [retrieved the required parameters](#required-parameters) to work with a Terraform resource or data source, you can now specify your provider block. 
 
-You can choose if you want to provide the input parameters as static values in the `provider` block or if you want to retrieve the values from Terraform on {{site.data.keyword.cloud_notm}} variables or environment variables that you set. 
+### Creating a static `provider.tf` file
+{: static}
+
+You can declare the input parameters in the `provider` block directly. 
 {: shortdesc}
 
-### Static values
-{: #static}
+Because the `provider` block includes sensitive information, do not commit this file into a public source repository. To add version control to your provider configuration, use a local [`terraform.tfvars` file](#tf-variables). 
+{: important}
 
-You can provide the values for your provider input parameters as static values in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
-{: shortdesc}
+1. Create a `provider.tf` file and specify the input parameters that are required for your resource or data source.
+   ```
+   provider "ibm" {
+       ibmcloud_api_key = "<api_key>"
+       iaas_classic_username = "<classic_username>"
+       iaas_classic_api_key = "<classic_api_key>"
+   }
+   ```
+   {: codeblock}
 
-```
-provider "ibm" {
-    ibmcloud_api_key = "<api_key>"
-    iaas_classic_username = "<classic_username>"
-    iaas_classic_api_key = "<classic_api_key>"
-}
-```
+2. Initialize the Terraform CLI. 
+   ```
+   terraform init
+   ```
+   {: pre}
 
-### Terraform on {{site.data.keyword.cloud_notm}} variables file
+### Referencing credentials from a `terraform.tfvars` file
 {: #tf-variables}
 
-You can retrieve the values for the provider input parameters from an Terraform on {{site.data.keyword.cloud_notm}} variables file (`terraform.tfvars`) that you created on your local machine.
+You can store sensitive information, such as credentials, in a local `terraform.tfvars` file and reference these credentials in your `provider` block.
 {: shortdesc}
 
-1. Create the Terraform on {{site.data.keyword.cloud_notm}} variables file `terraform.tfvars` on your local machine. 
+Do not commit the `terraform.tfvars` into a public source repository. This file is meant to be stored in your local machine only. 
+{: important}
+
+1. Create a `terraform.tfvars` file on your local machine and add the input parameters that are required for your resource or data source. 
    ```
    ibmcloud_api_key = "<ibmcloud_api_key>"
    iaas_classic_username = "<classic_infrastructure_username>"
@@ -176,28 +187,41 @@ You can retrieve the values for the provider input parameters from an Terraform 
    ```
    {: codeblock}
    
-2. Use Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax to reference the variables in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
+2. Create a `provider.tf` file and use Terraform interpolation syntax to reference the variables from the `terraform.tfvars`. 
    ```
+   variable "ibmcloud_api_key" {}
+   variable "iaas_classic_username" {}
+   variable "iaas_classic_api_key" {}
+   
    provider "ibm" {
      ibmcloud_api_key    = var.ibmcloud_api_key
      iaas_classic_username = var.iaas_classic_username
      iaas_classic_api_key  = var.iaas_classic_api_key
    }
    ```
-   {: codeblocK}
+   {: codeblock}
+   
+3. Initialize the Terraform CLI. 
+   ```
+   terraform init
+   ```
+   {: pre}
 
-### Environment variables
+
+### Using environment variables
 {: #env-vars}
 
-You can retrieve the values for the provider input parameters from environment variables that you set on your local machine. Make sure that you use the [correct name for an environment variable](#provider-parameter-ov) so that Terraform on {{site.data.keyword.cloud_notm}} can automatically read these when you run a `terraform apply`, `plan`, or `destroy` action. For example, to specify a classic infrastructure user name, use `IAAS_CLASSIC_USERNAME`. 
+You can configure the {{site.data.keyword.cloud_notm}} Provider plug-in by exporting required parameters as environment variables on your local machine. Environment variables are automatically loaded when you initialize the Terraform CLI. 
+{: shortdesc}
 
-1. Add an empty `provider` block to your Terraform on {{site.data.keyword.cloud_notm}} configuration file.
+1. [Retrieve the environment variable names](#provider-parameter-ov) for the provider parameters that you want to export. For example, to specify a classic infrastructure username, use `IAAS_CLASSIC_USERNAME`. 
+2. Create a `provider.tf` file and add an empty provider block.
    ```
    provider "ibm" {}
    ```
    {: codeblock}
 
-2. Set the environment variables on your local machine. 
+3. Set the environment variables on your local machine. 
    ```
    export IC_API_KEY="<ibmcloud_api_key>"
    export IAAS_CLASSIC_USERNAME="<classic_username>"
@@ -205,13 +229,13 @@ You can retrieve the values for the provider input parameters from environment v
    ```
    {: codeblock}
    
-3. Create an Terraform on {{site.data.keyword.cloud_notm}} execution plan. 
+4. Initialize the Terraform CLI.
    ```
-   terraform plan
+   terraform init
    ```
    {: pre} 
    
-
+   
 ## Creating multiple `provider` configurations
 {: #multiple-providers}
 
