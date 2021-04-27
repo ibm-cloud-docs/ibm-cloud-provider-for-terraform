@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-23"
+lastupdated: "2021-04-27"
 
 keywords: Terraform on {{site.data.keyword.cloud_notm}}, configuration files, resources, what is Terraform on {{site.data.keyword.cloud_notm}}, automation, automate
 
@@ -123,7 +123,7 @@ To use Terraform on {{site.data.keyword.cloud_notm}}, you must create a Terrafor
 |Benefit|Description|
 |--|--|
 |Codify your {{site.data.keyword.cloud_notm}} environment|Use a high-level scripting language to declare all the {{site.data.keyword.cloud_notm}} resources and services that you want. Instead of learning the API or command-line to work with a specific resource, you use  Terraform configuration files to specify the required state and resource configuration. Then, you use Terraform on {{site.data.keyword.cloud_notm}} to rapidly build, configure, and replicate the resources in your cloud environments.|
-|Automate cloud resource lifecycles|By using Terraform templates to build your cloud environment, you can orchestrate the provisioning, update, and deletion of your {{site.data.keyword.cloud_notm}} resources, and easily replicate your configuration across environments. |
+|Automate cloud resource lifecycle|By using Terraform templates to build your cloud environment, you can orchestrate the provisioning, update, and deletion of your {{site.data.keyword.cloud_notm}} resources, and easily replicate your configuration across environments. |
 |Enable Infrastructure as Code|By codifying your cloud environment, you can treat your Terraform templates the same way as you treat your app code. You can author your templates in any code editor, check them into a version control system such as GitHub, and let your team review and monitor updates before you apply these changes in your cloud environment. By applying these DevOps core practices, you can enable Infrastructure as Code (IaC) for your cloud environments.|
 
 ## Key terms

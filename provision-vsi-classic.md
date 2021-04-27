@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-04-27"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for classic infrastructure
 
@@ -131,7 +131,7 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
    <tbody>
    <tr>
    <td><code>resource</code></td>
-   <td>Required: The name of the {{site.data.keyword.cloud_notm}} resource that you want to provision. To provision a classic infrastructure virtual server instance, use <code>ibm_compute_vm_instance</code>. To find a list of other resources that you can provision, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](//docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).  </td>
+   <td>Required: The name of the {{site.data.keyword.cloud_notm}} resource that you want to provision. To provision a classic infrastructure virtual server instance, use <code>ibm_compute_vm_instance</code>. To find a list of other resources that you can provision, see the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).  </td>
    </tr>
    <tr>
    <td><code>vm1</code></td>
@@ -385,4 +385,4 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
 
 **What's next?** 
 
-Explore other [{{site.data.keyword.cloud_notm}} resources](//docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider) that you can provision with Terraform on {{site.data.keyword.cloud_notm}}. 
+Explore other [{{site.data.keyword.cloud_notm}} resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider) that you can provision with Terraform on {{site.data.keyword.cloud_notm}}. 

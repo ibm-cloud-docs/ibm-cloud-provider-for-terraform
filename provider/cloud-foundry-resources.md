@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-04-27"
 
 keywords: terraform provider plugin, terraform cloud foundry, terraform cf resources, terraform cf org, terraform cf space
 
@@ -362,10 +362,10 @@ Review the input parameters that you can specify for your resource.
 |----|-----------|------------|------------------------|
 |`name`|String|Required|The descriptive name used of the Cloud Foundry organization. The name must be unique in {{site.data.keyword.cloud_notm}}. |
 |`org_quota_definition_guid`|String|Optional|The GUID for the quota that is assigned to organization. The quota sets memory, service, and instance limits for the organization.|
-|`managers`|Set|Optional|The email addresses of the users that you want to assign Cloud Foundry **Manager** access to. The email address needs to be associated with an IBMID. Managers have the following permissions within the org: <ul><li>Create, view, edit, or delete spaces.</li><li>View usage and quota information.</li><li>Invite users and manage user access. </li><li> Assign roles to users.</li><li>Manage custom domains.</li></ul>|
-|`users`|Set|Optional|The email addresses of the users that you want to grant org-level access to. The email address needs to be associated with an IBMID. |
-|`auditors`|Set|Optional|The email addresses of the users that you want to assign Cloud Foundry **Auditor** access to. The email address needs to be associated with an IBMID. Auditors have the following permissions within the org: <ul><li>View users and their assigned roles.</li><li>View quota information.</li></ul>|
-|`billing_managers`|Set|Optional|The email addresses of the users that you want to assign the **Billing manager** access to. The email address needs to be associated with an IBMID. Billing managers have the following permissions within the org: <ul><li>View runtime and service usage information on the usage dashboard.</li></ul>|
+|`managers`|Set|Optional|The email addresses of the users that you want to assign Cloud Foundry **Manager** access to. The email address needs to be associated with an IBM ID. Managers have the following permissions within the org: <ul><li>Create, view, edit, or delete spaces.</li><li>View usage and quota information.</li><li>Invite users and manage user access. </li><li> Assign roles to users.</li><li>Manage custom domains.</li></ul>|
+|`users`|Set|Optional|The email addresses of the users that you want to grant org-level access to. The email address needs to be associated with an IBM ID. |
+|`auditors`|Set|Optional|The email addresses of the users that you want to assign Cloud Foundry **Auditor** access to. The email address needs to be associated with an IBM ID. Auditors have the following permissions within the org: <ul><li>View users and their assigned roles.</li><li>View quota information.</li></ul>|
+|`billing_managers`|Set|Optional|The email addresses of the users that you want to assign the **Billing manager** access to. The email address needs to be associated with an IBM ID. Billing managers have the following permissions within the org: <ul><li>View runtime and service usage information on the usage dashboard.</li></ul>|
 |`tags`|(Optional, array of strings) Tags associated with the org.     **NOTE**: Tags are managed locally and not stored on the IBM Cloud service endpoint.|
 {: caption="Table. Available input parameters" caption-side="top"}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-04-27"
 
 keywords: terraform provider plugin, terraform gen 2, terraform gen 2 compute
 
@@ -1603,8 +1603,8 @@ Review the input parameters that you can specify for your data source.
 
 |Name|Data type| Required / optional|Description|
 |----|-----------|--------|----------------------|
-|`identifier`|String|Optional|The ID of the subnet.|
-|`name`|String|Optional|The name of the subnet.|
+|`identifier`|String|Required|The ID of the subnet is optional when the name is provided.|
+|`name`|String|Optional|The name of the subnet is required when the identifier is not provided.|
 {: caption="Table. Available input parameters" caption-side="top"}
 
 ### Output parameters
