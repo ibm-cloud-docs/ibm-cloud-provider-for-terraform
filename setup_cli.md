@@ -172,12 +172,70 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform currently su
    To upgrade your Terraform templates from Terraform version 0.12 to 0.13, see [Upgrading your Terraform version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol#tf-0.1x-migration).
    {: tip}
    
-6. [Install the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform](#install_provider).
+6. [Set up the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform](#install_provider).
 
-## Installing the {{site.data.keyword.cloud_notm}} Provider plug-in
+## Setting up the {{site.data.keyword.cloud_notm}} Provider plug-in
 {: #install_provider}
 
-After the Terraform CLI installation is complete, you must install the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform so that you can start working with resources and services in {{site.data.keyword.cloud_notm}}. 
+After the Terraform CLI installation is complete, you must set up the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform so that you can start working with resources and services in {{site.data.keyword.cloud_notm}}. 
+{: shortdesc}
+
+The setup of the {{site.data.keyword.cloud_notm}} Provider plug-in varies depending on the Terraform version that you want to use. 
+
+### Terraform v0.13.x and higher
+{: #install-provider-v13}
+
+To run your Terraform configuration files with Terraform version 0.13.x or higher, no installation of the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform is required. Instead, you create a `versions.tf` file and specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use. 
+{: shortdesc}
+
+1. Create a `versions.tf` file with the following content and store it in your Git repository or the folder where Terraform is set up. In this file, specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use with the `version` parameter. 
+
+   **Syntax**:
+   ```
+   terraform {
+      required_providers {
+         ibm = {
+            source = "IBM-Cloud/ibm"
+            version = "<provider version>"
+         }
+       }
+   }
+   ```
+   {: codeblock}
+   
+   **Example**:
+   ```
+    terraform {
+      required_providers {
+         ibm = {
+            source = "IBM-Cloud/ibm"
+            version = "1.20.0"
+         }
+       }
+     }
+   ```
+   {: codeblock}
+
+   Terraform supports `version` constraints to specify the range of acceptable versions to initialize. The version syntax format is specified as `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. The following operators are supported: 
+   - `= (or no operator)`: Allows only extract version number. You cannot combine with other conditions. For example, `1.21.0`.
+   - `!=`: Excludes an exact version number. For example, `!=1.19.0`.
+   - `>, >=, <, <=`: Compares against a specified version, allows version for which the comparison is true. `Greater-than` requests newer version, and `less-than` requests older versions. For example, `>= 1.20.0 < 2.0.0`.
+   - `~>`: Allows only the rightmost version component to increment. For example, `~> 1.20.0` allows new patch releases within a specific minor patch releases like `1.20.1, 1.20.2, 1.20.3`, but not `1.21.0` release.
+   
+   If you are using Terraform on {{site.data.keyword.cloud_notm}} modules, you must add a `versions.tf` file to all the module folders. You can refer the Terraform provider block from the [provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest){: external}.
+   {: note}
+   
+2. [Configure the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference). 
+
+
+
+
+
+
+### Terraform v0.12.x and earlier
+{: #install-provider-v12}
+
+Complete the following steps to install the {{site.data.keyword.cloud_notm}} provider plug-in on your local machine.
 {: shortdesc}
 
 1. Download the latest version of the [{{site.data.keyword.cloud_notm}} provider plug-in](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
@@ -207,5 +265,7 @@ After the Terraform CLI installation is complete, you must install the {{site.da
    Please execute the program that consumes these plugins, which will load any plugins automatically
    ```
    {: screen}
+   
+6. [Configure the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference). 
 
 
