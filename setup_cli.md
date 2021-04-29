@@ -212,7 +212,7 @@ terraform {
          version = "1.20.0"
       }
     }
-  }
+}
 ```
 {: codeblock} </br>
 
