@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-27"
+lastupdated: "2021-04-29"
 
 keywords: terraform provider plugin, terraform data source cos, terraform data source object storage, terraform get cloud object storage bucket, terraform get object storage resources
 
@@ -296,7 +296,7 @@ Review the input parameters that you can specify for your resource.
 | `retention_rule.minimum` | Integer | Required | Specifies minimum duration of time an object must be kept unmodified in the bucket.|
 | `retention_rule.permanent` |Bool | Optional | Specifies a permanent retention status either enable or disable for a bucket.
 
-* Retention policies cannot be removed. For a new bucket, make sure that you create the bucket in a supported region. For more details, see [integrated services](https://cloud.ibm.com/docs/cloud-object-storage/basics?topic=cloud-object-storage-service-availability).
+* Retention policies cannot be removed. For a new bucket, make sure that you create the bucket in a supported region. For more details, see [integrated services](/docs/cloud-object-storage/basics?topic=cloud-object-storage-service-availability).
 * The minimum retention period must be less than or equal to the default retention period, which in turn must be less than or equal to the maximum retention period.
 * Permanent retention can be enabled at the {{site.data.keyword.cos_full_notm}} bucket level with retention policy enabled and users are able to select the permanent retention period option when the object uploads. Once enabled, this process cannot be reversed and objects uploaded that use a permanent retention period cannot be deleted. You are responsibility to validate if there is a legitimate need to permanently store objects by using {{site.data.keyword.cos_full_notm}} buckets with a retention policy.
 * Force delete the bucket do not work if objects uploaded use a permanent retention period. As objects cannot be deleted or overwritten until the retention period has expired and all the legal holds is removed.
