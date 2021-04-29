@@ -228,7 +228,7 @@ Terraform supports `version` constraints to specify the range of acceptable vers
 If you are using Terraform on {{site.data.keyword.cloud_notm}} modules, you must add a `versions.tf` file to all the module folders. You can refer the Terraform provider block from the [provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest){: external}.
 {: note}
    
-**What's next?**
+**What's next?**</br>
 After you created the `versions.tf` file, you must [configure the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference). 
 
 
