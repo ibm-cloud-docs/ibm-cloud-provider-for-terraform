@@ -214,7 +214,7 @@ To run your Terraform configuration files with Terraform version 0.13.x or highe
        }
      }
    ```
-   {: codeblock}
+   {: codeblock} </br>
 
    Terraform supports `version` constraints to specify the range of acceptable versions to initialize. The version syntax format is specified as `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. The following operators are supported: 
    
