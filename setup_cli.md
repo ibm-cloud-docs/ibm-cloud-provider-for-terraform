@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-04-29"
 
 keywords: install Terraform on {{site.data.keyword.cloud_notm}} cli, set up Terraform on {{site.data.keyword.cloud_notm}} cli, ibm cloud provider plugin, Terraform on {{site.data.keyword.cloud_notm}}
 
@@ -207,4 +207,5 @@ After the Terraform CLI installation is complete, you must install the {{site.da
    Please execute the program that consumes these plugins, which will load any plugins automatically
    ```
    {: screen}
+
 
