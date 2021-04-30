@@ -21,6 +21,7 @@ Terraform on IBM Cloud
     
     {: .navgroup id="howto"}
     setup_cli.md
+    provider/provider-ref.md
     migrate.md
     create-terraform-template.md
     manage_resources.md
@@ -34,7 +35,6 @@ Terraform on IBM Cloud
          provider/sitemap.md
          provider/version_changelog.md
          
-         provider/provider-ref.md
          provider/api-gateway-resources.md
          provider/api-gateway-data-source.md
          provider/catalog-management-resources.md
