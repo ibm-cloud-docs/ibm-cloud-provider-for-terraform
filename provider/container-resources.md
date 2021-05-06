@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-26" 
+lastupdated: "2021-05-06" 
 
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes, observability logging, observability monitoring
 
@@ -1063,8 +1063,6 @@ Review the input parameters that you can specify for your resource.
 | ------------- |-------------| ----- | -------------- | 
 | `cluster` | String | Required | The name or ID of the cluster.|
 | `instance_id` | String | Required |  The GUID of the monitoring instance.|
-| `logdna_ingestion_key` | String | Optional | The LogDNA ingestion key that you want to use for your configuration.|
-| `private_endpoint` | String | Optional | Add this option to connect to your logging service instance through the private service endpoint.|
 | `sysdig_access_key` | String | Optional | The monitoring ingestion key that you want to use for your configuration.|
 | `private_endpoint`| String | Optional |  Add this option to connect to your monitoring service instance through the private service endpoint.|
 {: caption="Table. Available input parameters" caption-side="top"}
