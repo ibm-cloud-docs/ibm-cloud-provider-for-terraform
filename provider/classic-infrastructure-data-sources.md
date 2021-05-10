@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-05-10"
 
 keywords: terraform provider plugin, terraform classic infrastructure, terraform classic, terraform softlayer, terraform sl, terraform vsi, terraform Bare Metal server
 
@@ -441,7 +441,7 @@ Review the output parameters that you can access after you retrieved your data s
 |`id`|String|The unique identifier of the domain.|
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
-## ibm_dns_secondary
+## `ibm_dns_secondary`
 {: #classic-dns-secondary}
 
 Retrieve information about a DNS secondary zone. 

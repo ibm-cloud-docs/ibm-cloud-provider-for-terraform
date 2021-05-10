@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-05-10"
 
 keywords: terraform provider plugin, terraform enterprise management, terraform enterprise account, terraform enterprise accounts, enterprise management
 
@@ -102,7 +102,7 @@ Review the [Enterprise Management](/docs/account?topic=account-what-is-enterpris
 Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
-## ibm_enterprises
+## `ibm_enterprises`
 {: #enterprises-ds}
 
 Retrieve an information from an `ibm_enterprise` data source. For more information, about enterprise management, refer to [setting up an enterprise](/docs/account?topic=account-create-enterprise).
@@ -154,7 +154,7 @@ Review the output parameters that you can access after your data source is creat
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 
-## ibm_enterprise_accounts
+## `ibm_enterprise_accounts`
 {: #enterprise-accounts}
 
 Retrieve an information from an `enterprise_accounts` data source. For more information, about enterprise account, refer to [setting up accounts to an enterprise](/docs/account?topic=account-enterprise-add).
@@ -211,7 +211,7 @@ Review the output parameters that you can access after your data source is creat
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 
-## ibm_enterprise_account_groups
+## `ibm_enterprise_account_groups`
 {: #enterprise-account-grps-ds}
 
 Retrieve an information from an `account_groups` data source.  For more information, about enterprise account groups, refer to [setting up access groups](/docs/account?topic=account-groups).

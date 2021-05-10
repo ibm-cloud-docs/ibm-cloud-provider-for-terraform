@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-05-10"
  
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes, observability logging, observability monitoring
 
@@ -667,7 +667,7 @@ Review the output parameters that are exported.
 |`labels` | String | Labels on all the workers in the worker pool.|
 |`resource_group_id` | String | The ID of the worker pool resource group. |
 
-## ibm_container_vpc_alb
+## `ibm_container_vpc_alb`
 {: #container-vpc-alb}
 
 Import the details of a Kubernetes cluster ALB on an {{site.data.keyword.cloud_notm}} as a read only data source.
@@ -855,7 +855,7 @@ Review the output parameters that you can access after you retrieved your data s
 | `subnet_id` | String | The ID of the worker pool subnet that the worker node is attached to. |
 
 
-## ibm_container_vpc_worker_pool
+## `ibm_container_vpc_worker_pool`
 {: #container-vpc-workerpool}
 
 Import the details of a Kubernetes cluster worker pool on an {{site.data.keyword.cloud_notm}} as a read only data source.
