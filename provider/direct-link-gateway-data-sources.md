@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-05-10"
 
 keywords:  terraform provider plugin, direct link gateway, terraform direct link gateway, terraform direct link gateway data sources
 
@@ -102,7 +102,7 @@ Use {{site.data.keyword.cloud_notm}} [Direct Link](/docs/dl?topic=dl-get-started
 Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
-## ibm_dl_gateway
+## `ibm_dl_gateway`
 {: #dl_gateway_ds}
 
 Import the details of an existing {{site.data.keyword.cloud_notm}} infrastructure direct link gateway and its virtual connections.
@@ -170,7 +170,7 @@ Review the output parameters that you can access after your resource is created.
 |`virtual_connections.network_account`|String|For virtual connections across two different {{site.data.keyword.cloud_notm}} accounts. Network_account indicates the account you own the target network. For example, `00aa14a2e0fb102c8995ebefhhhf8655556`
 |`virtual_connections.network_id`|String| The unique identifier of the target network. For type `vpc`, virtual connections is the CRN of the target VPC. This field do not apply for type `classic` connections. For example, `crn:v1:bluemix:public:is:us-east:a/28e4d90ac7504be69447111122223333::vpc:aaa81ac8-5e96-42a0-a4b7-6c2e2dbb`|
 
-## ibm_dl_gateways
+## `ibm_dl_gateways`
 {: #dl_gateways_ds}
 
 Import the details of an existing {{site.data.keyword.cloud_notm}} infrastructure direct link gateways.
@@ -226,7 +226,7 @@ Review the output parameters that you can access after your resource is created.
 |`gateways.provider_api_managed`|Boolean|Indicates the gateway is created through a provider portal. If set `true`, gateway can only be changed. If set `false`, gateway is deleted through the corresponding provider portal.|
 |`gateways.vlan`|String| The VLAN allocated for the gateway. Only set for connect gateways type created directly through the {{site.data.keyword.IBM_notm}} portal.|
 
-## ibm_dl_locations
+## `ibm_dl_locations`
 {: #dl_loc_ds}
 
 Import the details of valid locations for the specified direct link offering.
@@ -272,7 +272,7 @@ Review the output parameters that you can access after your resource is created.
 |`locations.mzr`|Boolean|Is location a multi-zone region.|
 |`locations.vpc_region`|String| The location VPC region.|
 
-## ibm_dl_offering_speeds
+## `ibm_dl_offering_speeds`
 {: #dl_offering_spd_ds}
 
 Import the details of an existing {{site.data.keyword.cloud_notm}} infrastructure direct link offering speed options.
@@ -309,7 +309,7 @@ Review the output parameters that you can access after your resource is created.
 |`offering_speeds`|String|List of all the direct link offering speeds in the {{site.data.keyword.cloud_notm}} infrastructure.|
 |`offering_speeds.link_speed`|String|The link speed in megabits per second.|
 
-## ibm_dl_port
+## `ibm_dl_port`
 {: #dl_port_ds}
 
 Import the details of an existing {{site.data.keyword.cloud_notm}} infrastructure direct link offering port.
@@ -350,7 +350,7 @@ Review the output parameters that you can access after your resource is created.
 |`provider_name`|String|The port's provider name.|
 |`supported_link_speeds`|String|The port supported speeds in megabits per second.|
 
-## ibm_dl_ports
+## `ibm_dl_ports`
 {: #dl_ports_ds}
 
 Import the details of an existing {{site.data.keyword.cloud_notm}} infrastructure direct link  ports.
@@ -388,7 +388,7 @@ Review the output parameters that you can access after your resource is created.
 |`ports.provider_name`|String|The port's provider name.|
 |`ports.supported_link_speeds`|String|The port supported speeds in megabits per second.|
 
-## ibm_dl_provider_gateways
+## `ibm_dl_provider_gateways`
 {: #dl-provider-gwy-ds}
 
 Import the details of an existing IBM Cloud Infrastructure direct link provider gateway as a read-only data source.  For more information, refer to [about Direct Link](/docs/dl?topic=dl-dl-about#use-case-connect).
@@ -436,7 +436,7 @@ Review the output parameters that you can access after your resource is created.
 |`gateways.provider_api_managed`|String| Indicates whether gateway was created through a provider portal. If set `true`, gateway can only be changed or deleted through the corresponding provider portal.|
 |`gateways.vlan`|String| The VLAN allocated for the gateway. Only set for `type=connect` gateways created directly through the IBM portal.|
 
-## ibm_dl_provider_ports
+## `ibm_dl_provider_ports`
 {: #dl-provider-ports-ds}
 
 Import the details of an existing {{site.data.keyword.cloud_notm}} infrastructure direct link provider ports.
@@ -473,7 +473,7 @@ Review the output parameters that you can access after your resource is created.
 |`ports.provider_name`|String|The port's provider name.|
 |`ports.supported_link_speeds`|String|The port supported speeds in megabits per second.|
 
-## ibm_dl_routers
+## `ibm_dl_routers`
 {: #dl_routers_ds}
 
 Import the details of an existing {{site.data.keyword.cloud_notm}} infrastructure direct link  location specific cross connect router information.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-05-10"
 
 keywords: terraform provider plugin, terraform event streams, terraform event stream service, terraform event streams topic
 
@@ -103,7 +103,7 @@ Review the [Event Streams](/docs/EventStreams?topic=EventStreams-about) resource
 Before you start working with your resource, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 {: important}
 
-## ibm_event_streams_topic
+## `ibm_event_streams_topic`
 {: #event-streams-topic}
 
 Import the name of an existing Event Streams topic as a read-only data source. Then, You can reference the fields of the data source in other resources within the same configuration by using interpolation syntax. 

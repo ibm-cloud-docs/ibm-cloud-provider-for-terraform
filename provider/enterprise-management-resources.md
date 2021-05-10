@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-05-10"
 
 keywords: terraform provider plugin, terraform enterprise management, terraform enterprise account, terraform enterprise accounts, enterprise management
 
@@ -104,7 +104,7 @@ Before you start working with your resource, make sure to review the [required p
 {: important}
 
 
-## ibm_enterprise
+## `ibm_enterprise`
 {: #enterprise}
 
 Create and update an enterprise. Delete operation is not supported. For more information, about enterprise management, refer to [setting up an enterprise](/docs/account?topic=account-create-enterprise).
@@ -157,7 +157,7 @@ Review the output parameters that you can access after your resource is created.
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 
-## ibm_enterprise_account
+## `ibm_enterprise_account`
 {: #enterprise-account}
 
 Create and update an `enterprise_account`resource. Delete operation is not supported. For more information, about enterprise account, refer to [setting up accounts to an enterprise](/docs/account?topic=account-enterprise-add).
@@ -230,7 +230,7 @@ Review the output parameters that you can access after your resource is created.
 {: caption="Table 1. Available output parameters" caption-side="top"}
 
 
-## ibm_enterprise_account_group
+## `ibm_enterprise_account_group`
 {: #enterprise-account-grp}
 
 Create and update an `enterprise_account_group`resource. Delete operation is not supported. For more information, about enterprise account group, refer to [setting up access groups](/docs/account?topic=account-groups).
