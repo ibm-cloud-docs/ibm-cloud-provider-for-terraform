@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-26" 
+lastupdated: "2021-05-20" 
 
 keywords: terraform provider plugin, terraform gen 2 resources, terraform generation 2, terraform generation 2 compute
 
@@ -447,7 +447,7 @@ terraform import ibm_is_floating_ip.example d7bec597-4726-451f-8a63-e62e6f19c32c
 Create, update, or cancel an Internet Key Exchange (IKE) policy. 
 {: shortdesc}
 
-IKE is an IPSec (Internet Protocol Security) standard protocol that is used to ensure secure communication over the VPC VPN service. For more information, see [Using VPC with your VPC](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-vpn-with-your-vpc). 
+IKE is an IPSec (Internet Protocol Security) standard protocol that is used to ensure secure communication over the VPC VPN service. For more information, see [creating and IKE policy](/docs/vpc?topic=vpc-creating-ike-policy). 
 
 ### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #ike-sample}
@@ -2005,7 +2005,7 @@ terraform import ibm_is_network_acl.example <network_acl_id>
 Create, update, or delete a public gateway for a VPC subnet. 
 {: shortdesc}
 
-Public gateways enable a VPC subnet and all the instances that are connected to the subnet to connect to the internet. For more information, see [Use a Public Gateway for external connectivity of a subnet](/docs/vpc-on-classic-network?topic=vpc-on-classic-network-about-networking-for-vpc#use-a-public-gateway). 
+Public gateways enable a VPC subnet and all the instances that are connected to the subnet to connect to the internet. For more information, see [about networking](/docs/vpc?topic=vpc-about-networking-for-vpc). 
 
 To attach a public gateway that you created to a subnet, use the `public_gateway` input parameter in the [`ibm_is_subnet` resource](#subnet).
 {: note}
@@ -2969,7 +2969,7 @@ terraform import ibm_is_volume.example d7bec597-4726-451f-8a63-e62e6f19c32c
 Create, update, or delete a Virtual Private Cloud (VPC). VPCs allow you to create your own space in {{site.data.keyword.cloud_notm}} to run an isolated environment within the public cloud. VPC gives you the security of a private cloud, with the agility and ease of a public cloud.
 {: shortdesc}
 
-For more information, see [About Virtual Private Cloud](/docs/vpc-on-classic?topic=vpc-on-classic-about). 
+For more information, see [About Virtual Private Cloud](/docs/vpc?topic=vpc-getting-started). 
 
 ### Sample Terraform on {{site.data.keyword.cloud_notm}} code
 {: #vpc-sample}
@@ -2989,7 +2989,7 @@ Review the input parameters that you can specify for your resource.
 
 | Input parameter | Data type | Required / optional | Description | Forces new resource |
 | ------------- |-------------| ----- | -------------- | ------- |
-| `classic_access` | Boolean | Optional | Specify if you want to create a VPC that can connect to classic infrastructure resources. Enter **true** to set up private network connectivity from your VPC to classic infrastructure resources that are created in the same {{site.data.keyword.cloud_notm}} account, and **false** to disable this access. If you choose to not set up this access, you cannot enable it after the VPC is created. Make sure to review the [prerequisites](/docs/vpc-on-classic-network?topic=vpc-on-classic-setting-up-access-to-your-classic-infrastructure-from-vpc#vpc-prerequisites) before you create a VPC with classic infrastructure access. Note that you can enable one VPC for classic infrastructure access per {{site.data.keyword.cloud_notm}} account only. | No |
+| `classic_access` | Boolean | Optional | Specify if you want to create a VPC that can connect to classic infrastructure resources. Enter **true** to set up private network connectivity from your VPC to classic infrastructure resources that are created in the same {{site.data.keyword.cloud_notm}} account, and **false** to disable this access. If you choose to not set up this access, you cannot enable it after the VPC is created. Make sure to review the [prerequisites](/docs/vpc?topic=vpc-setting-up-access-to-classic-infrastructure#vpc-prerequisites) before you create a VPC with classic infrastructure access. Note that you can enable one VPC for classic infrastructure access per {{site.data.keyword.cloud_notm}} account only. | No |
 |`address_prefix_management`|String|Optional|Indicates whether a default address prefix should be created automatically (`auto`) or manually (`manual`) for each zone in this VPC. Default value `auto`.| No |
 |`default_network_acl`|String | Deprecated | The ID of the default network ACL.|No|
 | `name` | String | Required | Enter a name for your VPC. |  No |
