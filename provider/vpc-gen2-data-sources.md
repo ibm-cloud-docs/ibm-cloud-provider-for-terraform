@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-27"
+lastupdated: "2021-05-24"
 
 keywords: terraform provider plugin, terraform gen 2, terraform gen 2 compute
 
@@ -77,6 +77,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
@@ -2301,7 +2302,7 @@ Review the output parameters that you can access after you retrieved your data s
 ## `ibm_is_vpn_gateways`
 {: #vpc-gateways-ds}
 
-Retrieve information of an existing VPN gateways. For more information, see [use a VPC/VPN gateway for secure and private on-premises access](/docs/vpc-on-classic?topic=solution-tutorials-vpc-site2site-vpn).
+Retrieve information of an existing VPN gateways. For more information, see [use a VPC/VPN gateway for secure and private on-premises access](/docs/vpc?topic=vpc-using-vpn).
 {: shortdesc}
 
 ### Sample Terraform on {{site.data.keyword.cloud_notm}} code
