@@ -113,7 +113,7 @@ Retrieve information about the secrets manager secret data sources.  For more in
 
 
 ```
-data "secrets_manager_secret" "secrets_manager_secret" {
+data "ibm_secrets_manager_secret" "secrets_manager_secret" {
 	instance_id = "36401ffc-6280-459a-ba98-456aba10d0c7"
 	secret_type = "arbitrary"
 	secret_id = "7dd2022c-5f54-f96d-4c32-87309e887e5"
@@ -189,7 +189,7 @@ Retrieve information about the secrets manager secret data sources. For more inf
 
 
 ```
-data "secrets_manager_secrets" "secrets_manager_secrets" {
+data "ibm_secrets_manager_secrets" "secrets_manager_secrets" {
   instance_id = "36401ffc-6280-459a-ba98-456aba10d0c7"
 }
 ```
