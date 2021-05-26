@@ -307,6 +307,7 @@ Review the output parameters that you can access after your resource is created.
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
 |`offering_speeds`|String|List of all the direct link offering speeds in the {{site.data.keyword.cloud_notm}} infrastructure.|
+|`offering_speeds.capabilities`|Array of Strings|The list of capabilities for billing option.|
 |`offering_speeds.link_speed`|String|The link speed in megabits per second.|
 
 ## `ibm_dl_port`
@@ -510,5 +511,6 @@ Review the output parameters that you can access after your resource is created.
 | Output parameter | Data type | Description |
 | ------------- |-------------| -------------- |
 |`cross_connect_routers`|String|List of all the cross connect router details.|
+|`cross_connect_routers.capabilities`|Array of Strings|The list of capabilities for this router.|
 |`cross_connect_routers.router_name`|String|The name of the router.|
 |`cross_connect_routers.total_connections`|String|Count of existing direct link dedicated gateways on this router account.|
