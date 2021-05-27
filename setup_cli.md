@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-06"
+lastupdated: "2021-05-26"
 
 keywords: install Terraform on {{site.data.keyword.cloud_notm}} cli, set up Terraform on {{site.data.keyword.cloud_notm}} cli, ibm cloud provider plugin, Terraform on {{site.data.keyword.cloud_notm}}
 
@@ -76,6 +76,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
@@ -185,7 +186,7 @@ The setup of the {{site.data.keyword.cloud_notm}} Provider plug-in varies depend
 ### Terraform v0.13.x and higher
 {: #install-provider-v13}
 
-To run your Terraform configuration files with Terraform version 0.13.x or higher, no installation of the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform is required. Instead, you create a `versions.tf` file and specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use. 
+To run your Terraform configuration files with Terraform version 0.13.x or higher, installation of the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform is not required. Instead, you create a `versions.tf` file and specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use. 
 {: shortdesc}
 
 Create a `versions.tf` file with the following content and store it in your Git repository or the folder where Terraform is set up. In this file, specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use with the `version` parameter. 
