@@ -1,7 +1,7 @@
 {
     "title": "Terraform on IBM Cloud docs",
     "lastupdated": "2021-06-01",
-    "introduction": "Explore the capabilities of the IBM Cloud Provider plug-in for Terraform. You can get started by installing the Terraform CLI and configure the IBM Cloud Provider plug-in  deploying platform services by using Schematics workspaces, and automating cloud operations with Schematics actions. Learn more about how Schematics works and the benefits of using the service. ",
+    "introduction": "Explore the capabilities of the IBM Cloud Provider plug-in for Terraform. You can get started by installing the Terraform CLI and configure the IBM Cloud Provider plug-in. Then, you can try out a tutorial to create an IBM Cloud Kubernetes Service or Red Hat OpenShift on IBM Cloud cluster by using Terraform. You can also choose one of the IBM-provided Terraform templates to get started with the provisioning of other IBM Cloud services with Terraform, such as IBM Cloud Object Storage or IBM Key Protect. ",
     "section_devtools": {
       "cli": "https://www.terraform.io/docs/cli/index.html", 
       "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs"
