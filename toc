@@ -34,6 +34,7 @@ Terraform on IBM Cloud
     IBM Cloud Provider plug-in for Terraform
          provider/sitemap.md
          [IBM Cloud Provider release and updates](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
+         provider/version_changelog.md
          
          provider/api-gateway-resources.md
          provider/api-gateway-data-source.md
