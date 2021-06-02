@@ -26,7 +26,6 @@ Terraform on IBM Cloud
     create-terraform-template.md
     manage_resources.md
     autodeploy_template.md
-    provider-endpoint.md
     {: .navgroup-end}
     
     {: .navgroup id="reference"}
