@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-06-01"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -77,6 +77,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
@@ -113,8 +114,7 @@ By default, the {{site.data.keyword.cloud_notm}} Provider plug-in is configured 
 |`iaas_classic_username`|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||||
 |`iaas_classic_api_key`|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||||
 |`function_namespace`|||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||
-|`zone`||||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/> </br>For multi-zone regions only ||
-
+|`zone`||||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/> <br>For multi-zone regions only||
 
 
 ## Supported input parameters

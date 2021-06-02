@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="ibm-cloud-provider-for-terraform" category="dev_ops" audience="compute" href="/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started" path="ibm-cloud-provider-for-terraform"}
+{: .toc subcollection="ibm-cloud-provider-for-terraform" category="dev_ops" audience="compute" href="/docs/ibm-cloud-provider-for-terraform" path="ibm-cloud-provider-for-terraform"}
 Terraform on IBM Cloud
 
     {: .navgroup id="learn"}
@@ -33,6 +33,7 @@ Terraform on IBM Cloud
     {: .topicgroup}
     IBM Cloud Provider plug-in for Terraform
          provider/sitemap.md
+         [IBM Cloud Provider release and updates](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
          provider/version_changelog.md
          
          provider/api-gateway-resources.md
