@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-06-02"
 
 keywords: terraform provider plugin, terraform power resources, terraform power systems resources, terraform power
 
@@ -77,6 +77,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
@@ -223,7 +224,7 @@ Review the output parameters that you can access after your resource is created.
 | `addresses.networkid`|String| The network ID of the instance.|
 | `addresses.network_name`|String|The network name of the instance.|
 | `addresses.type`|String|The type of network.|
-| `addresses.externalip`|String|The external IP address of the instance.|
+| `addresses.external_ip`|String|The external IP address of the instance.|
 | `id`|String|The unique identifier of the instance. The ID is composed of `<power_instance_id>/<instance_id>`.|
 | `instance_id` | String | The unique identifier of the instance. | 
 | `pin_policy` |String|The pinning policy of the instance. |
