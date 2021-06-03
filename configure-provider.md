@@ -27,6 +27,8 @@ As Terraform supports multiple cloud providers, you must specify `ibm` as your {
    <table>
    <caption>The configuration file parameters</caption>
    <thead>
+      <th>Parameters</th>
+     <th >Description</th>
    </thead>
    <tbody>
    <tr>
