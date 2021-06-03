@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-27"
+lastupdated: "2021-06-03"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for classic infrastructure
 
@@ -77,6 +77,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
@@ -218,6 +219,12 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
    {: pre}
 
    **Example output:**
+
+   ```
+      
+
+   ```
+   {: screen}
 
    ```
    Refreshing Terraform on {{site.data.keyword.cloud_notm}} state in-memory prior to plan...

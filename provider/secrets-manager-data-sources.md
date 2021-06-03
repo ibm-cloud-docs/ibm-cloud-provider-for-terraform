@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-06-03"
 
 keywords: terraform provider plugin, terraform secrets manager secret, terraform secrets manager secrets, secrets manager secrets, secrets manager secret
 
@@ -77,6 +77,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
@@ -113,7 +114,7 @@ Retrieve information about the secrets manager secret data sources.  For more in
 
 
 ```
-data "secrets_manager_secret" "secrets_manager_secret" {
+data "ibm_secrets_manager_secret" "secrets_manager_secret" {
 	instance_id = "36401ffc-6280-459a-ba98-456aba10d0c7"
 	secret_type = "arbitrary"
 	secret_id = "7dd2022c-5f54-f96d-4c32-87309e887e5"
@@ -189,7 +190,7 @@ Retrieve information about the secrets manager secret data sources. For more inf
 
 
 ```
-data "secrets_manager_secrets" "secrets_manager_secrets" {
+data "ibm_secrets_manager_secrets" "secrets_manager_secrets" {
   instance_id = "36401ffc-6280-459a-ba98-456aba10d0c7"
 }
 ```
