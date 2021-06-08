@@ -33,59 +33,6 @@ Terraform on IBM Cloud
     IBM Cloud Provider plug-in for Terraform
          provider/sitemap.md
          [IBM Cloud Provider release and updates](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
-         provider/version_changelog.md
-         
-         provider/api-gateway-resources.md
-         provider/api-gateway-data-source.md
-         provider/catalog-management-resources.md
-         provider/catalog-management-data-sources.md
-         provider/certificate-manager-resources.md
-         provider/certificate-manager-data-sources.md
-         provider/classic-infrastructure-resources.md
-         provider/classic-infrastructure-data-sources.md
-         provider/cloud-foundry-resources.md
-         provider/cloud-foundry-data-sources.md
-         provider/container-registry-resources.md
-         provider/container-registry-data-source.md
-         provider/databases-resources.md
-         provider/databases-data-sources.md
-         provider/direct-link-gateway-resources.md
-         provider/direct-link-gateway-data-sources.md
-         provider/dns-resources.md
-         provider/dns-datasources.md
-         provider/enterprise-management-resources.md
-         provider/enterprise-management-data-sources.md
-         provider/event-streams-data-sources.md
-         provider/event-streams-resources.md
-         provider/function-resources.md
-         provider/function-data-sources.md
-         provider/iam-resources.md
-         provider/iam-data-sources.md
-         provider/internet-services-resources.md
-         provider/internet-service-data-sources.md
-         provider/key-management-service-resources.md
-         provider/key-management-service-data-sources.md
-         provider/container-resources.md
-         provider/container-data-sources.md
-         provider/object-storage-resources.md
-         provider/object-storage-data-sources.md
-         provider/power-vsi-resources.md
-         provider/power-vsi-data-sources.md
-         provider/push-notifications-resources.md
-         provider/push-notifications-data-sources.md
-         provider/resource-management-resources.md
-         provider/resource-management-data-sources.md
-         provider/satellite-resources.md
-         provider/satellite-data-sources.md
-         provider/schematics-resources.md
-         provider/schematics-data-sources.md
-         provider/secrets-manager-data-sources.md
-         provider/transit-gateway-resources.md
-         provider/transit-gateway-data-sources.md
-         provider/vpc-infrastructure-resources.md
-         provider/vpc-infrastructure-data-sources.md
-         provider/vpc-gen2-resources.md
-         provider/vpc-gen2-data-sources.md   
    
     [Architecture reference: Highly available, secured, and managed Kubernetes environment](https://github.com/ibm-cloud-architecture/refarch-public-iaas-iks)
     {: .navgroup-end}
