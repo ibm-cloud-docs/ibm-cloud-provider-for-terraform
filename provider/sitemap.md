@@ -140,7 +140,7 @@ subcollection: ibm-cloud-provider-for-terraform
   <tbody>
    <tr>
  <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[`ibm_certificate_manager_import`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/certificate_manager_import)</li><li style="margin:0px; padding:0px">[`ibm_certificate_manager_order`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/certificate_manager_order)</li></ul></td>
-     <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[`ibm_certificate_manager_certificate`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/certificate_manager_certificate)</li><li style="margin:0px; padding:0px">[`ibm_certificate_manager_certificates`][https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/certificate_manager_certificates)</li></ul></td>
+     <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">[`ibm_certificate_manager_certificate`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/certificate_manager_certificate)</li><li style="margin:0px; padding:0px">[`ibm_certificate_manager_certificates`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/certificate_manager_certificates)</li></ul></td>
     </tr>
   </tbody>
   </table>
