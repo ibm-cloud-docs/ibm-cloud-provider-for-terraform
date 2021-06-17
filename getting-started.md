@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-02"
+lastupdated: "2021-06-17"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -207,13 +207,14 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
    {: tip}
       
 3. [Create or retrieve an {{site.data.keyword.cloud_notm}} API key](/docs/account?topic=account-userapikey#create_user_key). The API key is used to authenticate with the {{site.data.keyword.cloud_notm}} platform and to determine your permissions for {{site.data.keyword.cloud_notm}} services.
-4. Create a variables file that is named `terraform.tfvars` and specify the {{site.data.keyword.cloud_notm}} API key that you retrieved. Variables that are defined in the `terraform.tfvars` file are automatically loaded by Terraform when the {{site.data.keyword.cloud_notm}} Provider plug-in is initialized and you can reference them in every Terraform configuration file that you use. 
+4. Create a variables file that is named `terraform.tfvars` and specify the {{site.data.keyword.cloud_notm}} API key that you retrieved. In addition, you specify the region where you want your {{site.data.keyword.cloud_notm}} resources to be created. If no region is specified, Terraform on {{site.data.keyword.cloud_notm}} automatically creates your resources in the `us-south` region. Variables that are defined in the `terraform.tfvars` file are automatically loaded by Terraform when the {{site.data.keyword.cloud_notm}} Provider plug-in is initialized and you can reference them in every Terraform configuration file that you use. 
 
    Because the `terraform.tfvars` file contains confidential information, do not push this file to a version control system. This file is meant to be on your local system only. 
    {: important}
    
    ```
    ibmcloud_api_key = "<ibmcloud_api_key>"
+   region = "<region>"
    ```
    {: codeblock}
    
@@ -221,9 +222,11 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
 
    ```
    variable "ibmcloud_api_key" {}
+   variable "region" {}
  
    provider "ibm" {
        ibmcloud_api_key   = var.ibmcloud_api_key
+       region = var.region
       }
    ```
    {: codeblock}
