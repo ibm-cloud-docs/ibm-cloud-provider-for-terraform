@@ -751,7 +751,7 @@ To create a VPC and a VSI:
    {: pre}
 
 9. You can verify that VPC and VSI are created by accessing your IBM Cloud console. 
-   - Click **Menu icon**  > **VPC Infrastructure** > **VPCs** to view VPC named `gsmvpcv13test2-vpc` is created 
+   - Click **Menu icon** > **VPC Infrastructure** > **VPCs** to view VPC named `gsmvpcv13test2-vpc` is created 
    - Click **Menu icon** > **VPC Infrastructure** > **Virtual server instances** to view VSI named `gsmvpcv13test2_vsi1` is created 
 
 
