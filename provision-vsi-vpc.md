@@ -118,7 +118,7 @@ To create a VPC and a VSI:
 
 1. Make sure that you have the [required permissions](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls) to create and work with VPC infrastructure. 
 
-2. In the Terraform on {{site.data.keyword.cloud_notm}} directory create a `versions.tf` file to run the required Terraform on {{site.data.keyword.cloud_notm}} version. For `versions.tf`, refer to [sample versions tf file](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v13).
+2. In the Terraform on {{site.data.keyword.cloud_notm}} directory create a `versions.tf` file to run the Terraform on {{site.data.keyword.cloud_notm}} v0.13. For `versions.tf`, refer to [sample versions tf file](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v13).
 
    ```
    terraform {
