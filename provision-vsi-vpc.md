@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-20"
+lastupdated: "2021-06-23"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for vpc
 
@@ -77,6 +77,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
@@ -117,80 +118,95 @@ To create a VPC and a VSI:
 
 1. Make sure that you have the [required permissions](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls) to create and work with VPC infrastructure. 
 
-2. In the same directory where you stored the `terraform.tfvars` and `provider.tf` files, create an Terraform on {{site.data.keyword.cloud_notm}} configuration file and name it `vpc.tf`. The configuration file includes the following definition blocks: 
+2. In the Terraform on {{site.data.keyword.cloud_notm}} directory create a `versions.tf` file to run the required Terraform on {{site.data.keyword.cloud_notm}} version. For `versions.tf`, refer to [sample versions tf file](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v13).
+
+   ```
+   terraform {
+    required_providers {
+      ibm = {
+         source = "IBM-Cloud/ibm"
+         version = "1.26.2"
+       }
+     }
+   }
+   ```
+   {: codeblock}
+
+3. In the Terraform on {{site.data.keyword.cloud_notm}} directory create a Terraform on {{site.data.keyword.cloud_notm}} configuration file and name it `vpc.tf`. The configuration file includes the following definition blocks: 
    - **locals**: Use this block to specify variables that you want to use multiple times throughout this configuration file. 
    - **resource**: Every resource block specifies the {{site.data.keyword.cloud_notm}} resource that you want to provision. To find more information about supported configurations for each resource, see the [{{site.data.keyword.cloud_notm}} provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
    - **data**: Use this block to retrieve information for an existing resource in your {{site.data.keyword.cloud_notm}} account. 
    - **output**: This block specifies commands that you want to run after your resources are provisioned. 
    
-   **Example configuration file:**   
+   **Example configuration file:** 
+
    ```
-   variable "ssh_key" {
-   }
+    variable "ssh_key" {
+    }
 
-   locals {
-     BASENAME = "<name>"
-     ZONE     = "us-south-1"
-   }
+    locals {
+      BASENAME = "gsmvpcv13test2"
+      ZONE     = "us-south-1"
+    }
 
-   resource "ibm_is_vpc" "vpc" {
-     name = "${local.BASENAME}-vpc"
-   }
+    resource "ibm_is_vpc" "vpc" {
+      name = "${local.BASENAME}-vpc"
+    }
 
-   resource "ibm_is_security_group" "sg1" {
-     name = "${local.BASENAME}-sg1"
-     vpc  = ibm_is_vpc.vpc.id
-   }
+    resource "ibm_is_security_group" "sg1" {
+      name = "${local.BASENAME}-sg1"
+      vpc  = ibm_is_vpc.vpc.id
+    }
 
-   # allow all incoming network traffic on port 22
-   resource "ibm_is_security_group_rule" "ingress_ssh_all" {
-     group     = ibm_is_security_group.sg1.id
-     direction = "inbound"
-     remote    = "0.0.0.0/0"
+    # allow all incoming network traffic on port 22
+    resource "ibm_is_security_group_rule" "ingress_ssh_all" {
+      group     = ibm_is_security_group.sg1.id
+      direction = "inbound"
+      remote    = "0.0.0.0/0"
 
-     tcp {
-       port_min = 22
-       port_max = 22
-     }
-   }
+      tcp {
+        port_min = 22
+        port_max = 22
+      }
+    }
 
-   resource "ibm_is_subnet" "subnet1" {
-     name                     = "${local.BASENAME}-subnet1"
-     vpc                      = ibm_is_vpc.vpc.id
-     zone                     = local.ZONE
-     total_ipv4_address_count = 256
-   }
+    resource "ibm_is_subnet" "subnet1" {
+      name                     = "${local.BASENAME}-subnet1"
+      vpc                      = ibm_is_vpc.vpc.id
+      zone                     = local.ZONE
+      total_ipv4_address_count = 256
+    }
 
-   data "ibm_is_image" "ubuntu" {
-     name = "ubuntu-18.04-amd64"
-   }
+    data "ibm_is_image" "centos" {
+      name = "ibm-centos-7-6-minimal-amd64-1"
+    }
 
-   data "ibm_is_ssh_key" "ssh_key_id" {
-     name = var.ssh_key
-   }
+    data "ibm_is_ssh_key" "ssh_key_id" {
+      name = var.ssh_key
+    }
 
-   resource "ibm_is_instance" "vsi1" {
-     name    = "${local.BASENAME}-vsi1"
-     vpc     = ibm_is_vpc.vpc.id
-     zone    = local.ZONE
-     keys    = [data.ibm_is_ssh_key.ssh_key_id.id]
-     image   = data.ibm_is_image.ubuntu.id
-     profile = "cc1-2x4"
+    resource "ibm_is_instance" "vsi1" {
+      name    = "${local.BASENAME}-vsi1"
+      vpc     = ibm_is_vpc.vpc.id
+      zone    = local.ZONE
+      keys    = [data.ibm_is_ssh_key.ssh_key_id.id]
+      image   = data.ibm_is_image.centos.id
+      profile = "cx2-2x4"
 
-     primary_network_interface {
-       subnet          = ibm_is_subnet.subnet1.id
-       security_groups = [ibm_is_security_group.sg1.id]
-     }
-   }
+      primary_network_interface {
+        subnet          = ibm_is_subnet.subnet1.id
+        security_groups = [ibm_is_security_group.sg1.id]
+        }
+      }
 
-   resource "ibm_is_floating_ip" "fip1" {
-     name   = "${local.BASENAME}-fip1"
-     target = ibm_is_instance.vsi1.primary_network_interface[0].id
-   }
+      resource "ibm_is_floating_ip" "fip1" {
+        name   = "${local.BASENAME}-fip1"
+        target = ibm_is_instance.vsi1.primary_network_interface[0].id
+      }
 
-   output "sshcommand" {
-     value = "ssh root@ibm_is_floating_ip.fip1.address"
-   }
+      output "sshcommand" {
+        value = "ssh root@ibm_is_floating_ip.fip1.address"
+      }
    ```
    {: codeblock}
     
@@ -320,23 +336,54 @@ To create a VPC and a VSI:
    **Example output:**
 
    ```
-   Initializing provider plugins...
+    2021/06/22 16:47:27 [WARN] Log levels other than TRACE are currently unreliable, and are supported only for backward compatibility.
+    Use TF_LOG=TRACE to see Terraform's internal logs.
+    ----
+    2021/06/22 16:47:27 [INFO] Terraform version: 0.13.5  
+    2021/06/22 16:47:27 [INFO] Go runtime version: go1.14.7
+    2021/06/22 16:47:27 [INFO] CLI args: []string{"/Users/geethasathyamurthy/terraform/terraform", "init"}
+    2021/06/22 16:47:27 [DEBUG] Attempting to open CLI config file: /Users/geethasathyamurthy/.terraformrc
+    2021/06/22 16:47:27 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+    2021/06/22 16:47:27 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+    2021/06/22 16:47:27 [DEBUG] ignoring non-existing provider search directory /Users/geethasathyamurthy/.terraform.d/plugins
+    2021/06/22 16:47:27 [DEBUG] ignoring non-existing provider search directory /Users/geethasathyamurthy/Library/Application Support/io.terraform/plugins
+    2021/06/22 16:47:27 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+    2021/06/22 16:47:27 [INFO] CLI command args: []string{"init"}
+    2021/06/22 16:47:27 [WARN] Log levels other than TRACE are currently unreliable, and are supported only for backward compatibility.
+    Use TF_LOG=TRACE to see Terraform's internal logs.
+    ----
 
-   The following providers do not have any version constraints in configuration, so the latest version was installed.
+    Initializing the backend...
+    2021/06/22 16:47:27 [DEBUG] New state was assigned lineage "ec69aeac-0645-6299-244d-da5f238dcaad"
+    2021/06/22 16:47:27 [DEBUG] checking for provisioner in "."
+    2021/06/22 16:47:27 [DEBUG] checking for provisioner in "/Users/geethasathyamurthy/terraform"
+    2021/06/22 16:47:27 [INFO] Failed to read plugin lock file .terraform/plugins/darwin_amd64/lock.json: open .terraform/plugins/darwin_amd64/lock.json: no such file or directory
 
-   To prevent automatic upgrades to new major versions that may contain breaking changes, it is recommended to add version = "..." constraints to the corresponding provider blocks in configuration, with the constraint strings suggested.
+    Initializing provider plugins...
+    - Using previously-installed ibm-cloud/ibm v1.26.2
 
-   * provider.ibm: version = "~> 0.11"
+    Terraform has been successfully initialized!
 
-   Terraform on {{site.data.keyword.cloud_notm}} has been successfully initialized!
+    You may now begin working with Terraform. Try running "terraform plan" to see
+    any changes that are required for your infrastructure. All Terraform commands
+    should now work.
 
-   You may now begin working with Terraform on {{site.data.keyword.cloud_notm}}. Try running "terraform plan" to see any changes that are required for your infrastructure. All Terraform on {{site.data.keyword.cloud_notm}} commands should now work.
+    If you ever set or change modules or backend configuration for Terraform,
+    rerun this command to reinitialize your working directory. If you forget, other
+    commands will detect it and remind you to do so if necessary.
 
-   If you ever set or change modules or backend configuration for Terraform on {{site.data.keyword.cloud_notm}}, rerun this command to reinitialize your working directory. If you forget, other commands detect it and remind you to do so if necessary.
    ```
    {: screen}
+4. From your Terraform directory, export following `IC_API_Key` and `TF_LOG` variable to set your environment variable.
    
-4. Generate an Terraform on {{site.data.keyword.cloud_notm}} execution plan. When you execute this command, Terraform on {{site.data.keyword.cloud_notm}} validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in.
+   **Example**
+
+    - `export IC_API_KEY=VoeEd1231231234134123413`
+    - `export TF_LOG=debug`
+5. Generate an Terraform on {{site.data.keyword.cloud_notm}} execution plan. When you execute this command, Terraform on {{site.data.keyword.cloud_notm}} validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in.
+
+   Your SSH key name need to be provide during terraform plan and terraform apply execution.
+   {: note}
 
    ```
    terraform plan
@@ -346,90 +393,166 @@ To create a VPC and a VSI:
    **Example output:** 
 
    ```
-   Refreshing Terraform on {{site.data.keyword.cloud_notm}} state in-memory prior to plan...
-   The refreshed state be used to calculate this plan, but not be
-   persisted to local or remote state storage.
+    var.ssh_key
+      Enter a value: <Provide your SSH key name>
+    2021/06/22 16:48:53 [INFO] backend/local: plan operation completed
 
-   An execution plan has been generated and is shown.
-   Resource actions are indicated with the following symbols:
-     + create
+    An execution plan has been generated and is shown below.
+    Resource actions are indicated with the following symbols:
+      + create
 
-   Terraform on {{site.data.keyword.cloud_notm}} performs the following actions:
+    Terraform will perform the following actions:
 
-     + ibm_is_floating_ip.fip1
-         id:                                               <computed>
-         address:                                          <computed>
-         name:                                             "newvpc-fip1"
-         status:                                           <computed>
-         target:                                           "${ibm_is_instance.vsi1.primary_network_interface.0.id}"
-         zone:                                             <computed>
+      # ibm_is_floating_ip.fip1 will be created
+      + resource "ibm_is_floating_ip" "fip1" {
+          + address                 = (known after apply)
+          + id                      = (known after apply)
+          + name                    = "gsmvpcv13test2-fip1"
+          + resource_controller_url = (known after apply)
+          + resource_crn            = (known after apply)
+          + resource_group          = (known after apply)
+          + resource_group_name     = (known after apply)
+          + resource_name           = (known after apply)
+          + resource_status         = (known after apply)
+          + status                  = (known after apply)
+          + tags                    = (known after apply)
+          + target                  = (known after apply)
+          + zone                    = (known after apply)
+        }
 
-     + ibm_is_instance.vsi1
-         id:                                               <computed>
-         boot_volume.#:                                    <computed>
-         cpu.#:                                            <computed>
-         generation:                                       "gc"
-         gpu.#:                                            <computed>
-         image:                                            "cfdaf1a0-5350-4350-fcbc-97173b510843"
-         keys.#:                                           "1"
-         keys.3772860677:                                  "<ssh_key_UUID>"
-         memory:                                           <computed>
-         name:                                             "newvpc-vsi2"
-         primary_network_interface.#:                      "1"
-         primary_network_interface.0.id:                   <computed>
-         primary_network_interface.0.name:                 <computed>
-         primary_network_interface.0.primary_ipv4_address: <computed>
-         primary_network_interface.0.security_groups.#:    <computed>
-         primary_network_interface.0.subnet:               "${ibm_is_subnet.subnet1.id}"
-         profile:                                          "cc1-2x4"
-         resource_group:                                   <computed>
-         status:                                           <computed>
-         vpc:                                              "${ibm_is_vpc.vpc.id}"
-         zone:                                             "us-south-2"
+      # ibm_is_instance.vsi1 will be created
+      + resource "ibm_is_instance" "vsi1" {
+          + disks                   = (known after apply)
+          + gpu                     = (known after apply)
+          + id                      = (known after apply)
+          + image                   = "r006-e0039ab2-fcc8-11e9-8a36-6ffb6501dd33"
+          + keys                    = [
+              + "r006-3f44b01f-5edc-434b-ba6b-f5de782759f7",
+            ]
+          + memory                  = (known after apply)
+          + name                    = "gsmvpcv13test2-vsi1"
+          + profile                 = "cx2-2x4"
+          + resource_controller_url = (known after apply)
+          + resource_crn            = (known after apply)
+          + resource_group          = (known after apply)
+          + resource_group_name     = (known after apply)
+          + resource_name           = (known after apply)
+          + resource_status         = (known after apply)
+          + status                  = (known after apply)
+          + tags                    = (known after apply)
+          + vcpu                    = (known after apply)
+          + volume_attachments      = (known after apply)
+          + vpc                     = (known after apply)
+          + wait_before_delete      = true
+          + zone                    = "us-south-1"
 
-     + ibm_is_security_group.sg1
-         id:                                               <computed>
-         name:                                             "newvpc-sg1"
-         rules.#:                                          <computed>
-         vpc:                                              "${ibm_is_vpc.vpc.id}"
+          + boot_volume {
+              + encryption = (known after apply)
+              + iops       = (known after apply)
+              + name       = (known after apply)
+              + profile    = (known after apply)
+              + size       = (known after apply)
+            }
 
-     + ibm_is_security_group_rule.ingress_ssh_all
-         id:                                               <computed>
-         direction:                                        "ingress"
-         group:                                            "${ibm_is_security_group.sg1.id}"
-         ip_version:                                       "ipv4"
-         remote:                                           "0.0.0.0/0"
-         rule_id:                                          <computed>
-         tcp.#:                                            "1"
-         tcp.0.port_max:                                   "22"
-         tcp.0.port_min:                                   "22"
+          + primary_network_interface {
+              + allow_ip_spoofing    = false
+              + id                   = (known after apply)
+              + name                 = (known after apply)
+              + primary_ipv4_address = (known after apply)
+              + security_groups      = (known after apply)
+              + subnet               = (known after apply)
+            }
+        }
 
-     + ibm_is_subnet.subnet1
-         id:                                               <computed>
-         available_ipv4_address_count:                     <computed>
-         ip_version:                                       "ipv4"
-         ipv4_cidr_block:                                  <computed>
-         ipv6_cidr_block:                                  <computed>
-         name:                                             "newvpc-subnet1"
-         network_acl:                                      <computed>
-         status:                                           <computed>
-         total_ipv4_address_count:                         "256"
-         vpc:                                              "${ibm_is_vpc.vpc.id}"
-         zone:                                             "us-south-2"
+      # ibm_is_security_group.sg1 will be created
+      + resource "ibm_is_security_group" "sg1" {
+          + crn                     = (known after apply)
+          + id                      = (known after apply)
+          + name                    = "gsmvpcv13test2-sg1"
+          + resource_controller_url = (known after apply)
+          + resource_crn            = (known after apply)
+          + resource_group          = (known after apply)
+          + resource_group_name     = (known after apply)
+          + resource_name           = (known after apply)
+          + rules                   = (known after apply)
+          + tags                    = (known after apply)
+          + vpc                     = (known after apply)
+        }
 
-     + ibm_is_vpc.vpc
-         id:                                               <computed>
-         classic_access:                                   "false"
-         default_network_acl:                              <computed>
-         default_security_group:                           <computed>
-         is_default:                                       "false"
-         name:                                             "newvpc"
-         resource_group:                                   <computed>
-         status:                                           <computed>
+      # ibm_is_security_group_rule.ingress_ssh_all will be created
+      + resource "ibm_is_security_group_rule" "ingress_ssh_all" {
+          + direction   = "inbound"
+          + group       = (known after apply)
+          + id          = (known after apply)
+          + ip_version  = "ipv4"
+          + protocol    = (known after apply)
+          + related_crn = (known after apply)
+          + remote      = "0.0.0.0/0"
+          + rule_id     = (known after apply)
 
-   Plan: 6 to add, 0 to change, 0 to destroy.
+          + tcp {
+              + port_max = 22
+              + port_min = 22
+            }
+        }
 
-   **Note** You didn't specify an "-out" parameter to save this plan, so Terraform on {{site.data.keyword.cloud_notm}} can't guarantee that exactly these actions be performed if "terraform apply" is subsequently run.
+      # ibm_is_subnet.subnet1 will be created
+      + resource "ibm_is_subnet" "subnet1" {
+          + available_ipv4_address_count = (known after apply)
+          + crn                          = (known after apply)
+          + id                           = (known after apply)
+          + ip_version                   = "ipv4"
+          + ipv4_cidr_block              = (known after apply)
+          + ipv6_cidr_block              = (known after apply)
+          + name                         = "gsmvpcv13test2-subnet1"
+          + network_acl                  = (known after apply)
+          + resource_controller_url      = (known after apply)
+          + resource_crn                 = (known after apply)
+          + resource_group               = (known after apply)
+          + resource_group_name          = (known after apply)
+          + resource_name                = (known after apply)
+          + resource_status              = (known after apply)
+          + routing_table                = (known after apply)
+          + status                       = (known after apply)
+          + tags                         = (known after apply)
+          + total_ipv4_address_count     = 256
+          + vpc                          = (known after apply)
+          + zone                         = "us-south-1"
+        }
+
+      # ibm_is_vpc.vpc will be created
+      + resource "ibm_is_vpc" "vpc" {
+          + address_prefix_management   = "auto"
+          + classic_access              = false
+          + crn                         = (known after apply)
+          + cse_source_addresses        = (known after apply)
+          + default_network_acl         = (known after apply)
+          + default_network_acl_name    = (known after apply)
+          + default_routing_table       = (known after apply)
+          + default_routing_table_name  = (known after apply)
+          + default_security_group      = (known after apply)
+          + default_security_group_name = (known after apply)
+          + id                          = (known after apply)
+          + name                        = "gsmvpcv13test2-vpc"
+          + resource_controller_url     = (known after apply)
+          + resource_crn                = (known after apply)
+          + resource_group              = (known after apply)
+          + resource_group_name         = (known after apply)
+          + resource_name               = (known after apply)
+          + resource_status             = (known after apply)
+          + security_group              = (known after apply)
+          + status                      = (known after apply)
+          + subnets                     = (known after apply)
+          + tags                        = (known after apply)
+        }
+
+    Plan: 6 to add, 0 to change, 0 to destroy.
+
+    ------------------------------------------------------------------------
+
+    **Note** You didn't specify an "-out" parameter to save this plan, so Terraform
+    can't guarantee that exactly these actions will be performed if
+    "terraform apply" is subsequently run.
    ```
    {: screen}
    
@@ -443,133 +566,181 @@ To create a VPC and a VSI:
    **Example output:**
 
    ```
-     ibm_is_vpc.vpc: Creating...
-     classic_access:         "" => "false"
-     default_network_acl:    "" => "<computed>"
-     default_security_group: "" => "<computed>"
-     is_default:             "" => "false"
-     name:                   "" => "newvpc"
-     resource_group:         "" => "<computed>"
-     status:                 "" => "<computed>"
-   ibm_is_vpc.vpc: Creation complete after 8s (ID: 7fe1b2d1-cad1-4058-b7fa-700527c86394)
-   ibm_is_security_group.sg1: Creating...
-     name:    "" => "newvpc-sg1"
-     rules.#: "" => "<computed>"
-     vpc:     "" => "<vpc_ID>"
-   ibm_is_subnet.subnet1: Creating...
-     available_ipv4_address_count: "" => "<computed>"
-     ip_version:                   "" => "ipv4"
-     ipv4_cidr_block:              "" => "<computed>"
-     ipv6_cidr_block:              "" => "<computed>"
-     name:                         "" => "newvpc-subnet1"
-     network_acl:                  "" => "<computed>"
-     status:                       "" => "<computed>"
-     total_ipv4_address_count:     "" => "256"
-     vpc:                          "" => "<vpc_ID>"
-     zone:                         "" => "us-south-2"
-   ibm_is_security_group.sg1: Creation complete after 4s (ID: <security_group_ID>)
-   ibm_is_security_group_rule.ingress_ssh_all: Creating...
-     direction:      "" => "ingress"
-     group:          "" => "<security_group_ID>"
-     ip_version:     "" => "ipv4"
-     remote:         "" => "0.0.0.0/0"
-     rule_id:        "" => "<computed>"
-     tcp.#:          "" => "1"
-     tcp.0.port_max: "" => "22"
-     tcp.0.port_min: "" => "22"
-   ibm_is_security_group_rule.ingress_ssh_all: Creation complete after 2s (ID: <security_group_rule_ID>)
-   ibm_is_subnet.subnet1: Still creating... (10s elapsed)
-   ibm_is_subnet.subnet1: Still creating... (20s elapsed)
-   ibm_is_subnet.subnet1: Creation complete after 21s (ID: <subnet_ID>)
-   ibm_is_instance.vsi1: Creating...
-     boot_volume.#:                                         "" => "<computed>"
-     cpu.#:                                                 "" => "<computed>"
-     generation:                                            "" => "gc"
-     gpu.#:                                                 "" => "<computed>"
-     image:                                                 "" => "cfdaf1a0-5350-4350-fcbc-97173b510843"
-     keys.#:                                                "" => "1"
-     keys.3772860677:                                       "" => "<ssh_key_ID>"
-     memory:                                                "" => "<computed>"
-     name:                                                  "" => "newvpc-vsi2"
-     primary_network_interface.#:                           "" => "1"
-     primary_network_interface.0.id:                        "" => "<computed>"
-     primary_network_interface.0.name:                      "" => "<computed>"
-     primary_network_interface.0.primary_ipv4_address:      "" => "<computed>"
-     primary_network_interface.0.security_groups.#:         "" => "1"
-     primary_network_interface.0.security_groups.152758714: "" => "<security_group_ID>"
-     primary_network_interface.0.subnet:                    "" => "<subnet_ID>"
-     profile:                                               "" => "cc1-2x4"
-     resource_group:                                        "" => "<computed>"
-     status:                                                "" => "<computed>"
-     vpc:                                                   "" => "<vpc_ID>"
-     zone:                                                  "" => "us-south-2"
-   ibm_is_instance.vsi1: Still creating... (10s elapsed)
-   ibm_is_instance.vsi1: Still creating... (20s elapsed)
-   ibm_is_instance.vsi1: Still creating... (30s elapsed)
-   ibm_is_instance.vsi1: Still creating... (40s elapsed)
-   ibm_is_instance.vsi1: Still creating... (50s elapsed)
-   ibm_is_instance.vsi1: Still creating... (1m0s elapsed)
-   ibm_is_instance.vsi1: Still creating... (1m10s elapsed)
-   ibm_is_instance.vsi1: Still creating... (1m20s elapsed)
-   ibm_is_instance.vsi1: Still creating... (1m30s elapsed)
-   ibm_is_instance.vsi1: Still creating... (1m40s elapsed)
-   ibm_is_instance.vsi1: Creation complete after 1m44s (ID: <vsi_ID>)
-   ibm_is_floating_ip.fip1: Creating...
-     address: "" => "<computed>"
-     name:    "" => "newvpc-fip1"
-     status:  "" => "<computed>"
-     target:  "" => "<primary_subnet_ID>"
-     zone:    "" => "<computed>"
-   ibm_is_floating_ip.fip1: Still creating... (10s elapsed)
-   ibm_is_floating_ip.fip1: Still creating... (20s elapsed)
-   ibm_is_floating_ip.fip1: Creation complete after 24s (ID: <floating_ip_ID>)
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # ibm_is_floating_ip.fip1 will be created
+  + resource "ibm_is_floating_ip" "fip1" {
+      + address                 = (known after apply)
+      + id                      = (known after apply)
+      + name                    = "gsmvpcv13test2-fip1"
+      + resource_controller_url = (known after apply)
+      + resource_crn            = (known after apply)
+      + resource_group          = (known after apply)
+2021/06/22 16:57:25 [DEBUG] command: asking for input: "Do you want to perform these actions?"
+      + resource_group_name     = (known after apply)
+      + resource_name           = (known after apply)
+      + resource_status         = (known after apply)
+      + status                  = (known after apply)
+      + tags                    = (known after apply)
+      + target                  = (known after apply)
+      + zone                    = (known after apply)
+    }
+
+  # ibm_is_instance.vsi1 will be created
+  + resource "ibm_is_instance" "vsi1" {
+      + disks                   = (known after apply)
+      + gpu                     = (known after apply)
+      + id                      = (known after apply)
+      + image                   = "r006-e0039ab2-fcc8-11e9-8a36-6ffb6501dd33"
+      + keys                    = [
+          + "r006-3f44b01f-5edc-434b-ba6b-f5de782759f7",
+        ]
+      + memory                  = (known after apply)
+      + name                    = "gsmvpcv13test2-vsi1"
+      + profile                 = "cx2-2x4"
+      + resource_controller_url = (known after apply)
+      + resource_crn            = (known after apply)
+      + resource_group          = (known after apply)
+      + resource_group_name     = (known after apply)
+      + resource_name           = (known after apply)
+      + resource_status         = (known after apply)
+      + status                  = (known after apply)
+      + tags                    = (known after apply)
+      + vcpu                    = (known after apply)
+      + volume_attachments      = (known after apply)
+      + vpc                     = (known after apply)
+      + wait_before_delete      = true
+      + zone                    = "us-south-1"
+
+      + boot_volume {
+          + encryption = (known after apply)
+          + iops       = (known after apply)
+          + name       = (known after apply)
+          + profile    = (known after apply)
+          + size       = (known after apply)
+        }
+
+      + primary_network_interface {
+          + allow_ip_spoofing    = false
+          + id                   = (known after apply)
+          + name                 = (known after apply)
+          + primary_ipv4_address = (known after apply)
+          + security_groups      = (known after apply)
+          + subnet               = (known after apply)
+        }
+    }
+
+  # ibm_is_security_group.sg1 will be created
+  + resource "ibm_is_security_group" "sg1" {
+      + crn                     = (known after apply)
+      + id                      = (known after apply)
+      + name                    = "gsmvpcv13test2-sg1"
+      + resource_controller_url = (known after apply)
+      + resource_crn            = (known after apply)
+      + resource_group          = (known after apply)
+      + resource_group_name     = (known after apply)
+      + resource_name           = (known after apply)
+      + rules                   = (known after apply)
+      + tags                    = (known after apply)
+      + vpc                     = (known after apply)
+    }
+
+  # ibm_is_security_group_rule.ingress_ssh_all will be created
+  + resource "ibm_is_security_group_rule" "ingress_ssh_all" {
+      + direction   = "inbound"
+      + group       = (known after apply)
+      + id          = (known after apply)
+      + ip_version  = "ipv4"
+      + protocol    = (known after apply)
+      + related_crn = (known after apply)
+      + remote      = "0.0.0.0/0"
+      + rule_id     = (known after apply)
+
+      + tcp {
+          + port_max = 22
+          + port_min = 22
+        }
+    }
+
+  # ibm_is_subnet.subnet1 will be created
+  + resource "ibm_is_subnet" "subnet1" {
+      + available_ipv4_address_count = (known after apply)
+      + crn                          = (known after apply)
+      + id                           = (known after apply)
+      + ip_version                   = "ipv4"
+      + ipv4_cidr_block              = (known after apply)
+      + ipv6_cidr_block              = (known after apply)
+      + name                         = "gsmvpcv13test2-subnet1"
+      + network_acl                  = (known after apply)
+      + resource_controller_url      = (known after apply)
+      + resource_crn                 = (known after apply)
+      + resource_group               = (known after apply)
+      + resource_group_name          = (known after apply)
+      + resource_name                = (known after apply)
+      + resource_status              = (known after apply)
+      + routing_table                = (known after apply)
+      + status                       = (known after apply)
+      + tags                         = (known after apply)
+      + total_ipv4_address_count     = 256
+      + vpc                          = (known after apply)
+      + zone                         = "us-south-1"
+    }
+
+  # ibm_is_vpc.vpc will be created
+  + resource "ibm_is_vpc" "vpc" {
+      + address_prefix_management   = "auto"
+      + classic_access              = false
+      + crn                         = (known after apply)
+      + cse_source_addresses        = (known after apply)
+      + default_network_acl         = (known after apply)
+      + default_network_acl_name    = (known after apply)
+      + default_routing_table       = (known after apply)
+      + default_routing_table_name  = (known after apply)
+      + default_security_group      = (known after apply)
+      + default_security_group_name = (known after apply)
+      + id                          = (known after apply)
+      + name                        = "gsmvpcv13test2-vpc"
+      + resource_controller_url     = (known after apply)
+      + resource_crn                = (known after apply)
+      + resource_group              = (known after apply)
+      + resource_group_name         = (known after apply)
+      + resource_name               = (known after apply)
+      + resource_status             = (known after apply)
+      + security_group              = (known after apply)
+      + status                      = (known after apply)
+      + subnets                     = (known after apply)
+      + tags                        = (known after apply)
+    }
 
    Apply complete! Resources: 6 added, 0 changed, 0 destroyed.
 
    Outputs:
 
-   sshcommand = ssh root@169.61.123.231
+   sshcommand = ssh root@ibm_is_floating_ip.fip1.address
    ```
    {: screen}
    
 6. Log in to your VPC VSI by using the `ssh` command that is listed at the end of your command line output of the previous step.
 
    ```
-   ssh root@169.61.123.231
+   ssh root@52.118.150.55 
    ```
    {: pre}
    
    **Example output:**
 
    ```
-   The authenticity of host '169.61.123.231 (169.61.123.231)' can't be established.
-   ECDSA key fingerprint is SHA256:a1B0aaBCA12V3/AbC2AbcAA/a1Bab1CAAB1aABBabbC.
-   Are you sure you want to continue connecting (yes/no)? yes
-   Warning: Permanently added '169.61.123.231' (ECDSA) to the list of known hosts.
-   Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 4.15.0-30-generic x86_64)
+    The authenticity of host '52.116.134.139 (52.116.134.139)' can't be established.
+    ECDSA key fingerprint is SHA256:ZZRZY07mx3ccmnS5+Tip7eDDVSL7jlunPbANcrCeEYE.
+    Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+    Warning: Permanently added '52.116.134.139' (ECDSA) to the list of known hosts.
 
-    * Documentation:  https://help.ubuntu.com
-    * Management:     https://landscape.canonical.com
-    * Support:        https://ubuntu.com/advantage
-
-     System information as of Fri Jun 28 19:06:48 UTC 2019
-
-     System load:  0.15              Processes:           105
-     Usage of /:   0.9% of 98.06GB   Users logged in:     0
-     Memory usage: 3%                IP address for eth0: 10.240.64.5
-     Swap usage:   0%
-
-     Get cloud support with Ubuntu Advantage Cloud Guest:
-       http://www.ubuntu.com/business/services/cloud
-
-   0 packages can be updated.
-   0 updates are security updates.
-
-   The programs included with the Ubuntu system are free software; the exact distribution terms for each program are described in the individual files in /usr/share/doc/*/copyright.
-
-   Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.
-
-   root@newvpc-vsi2:~# 
+    -bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+    [root@gsmvpcv13test2-vsi1 ~]#
    ```
    {: screen}
 
@@ -580,8 +751,12 @@ To create a VPC and a VSI:
    ```
    {: pre}
 
+8. You can verify that VPC and VSI are created by accessing your IBM Cloud console. 
+   - Click **Menu icon**  > **VPC Infrastructure** >  **VPCs** to view your VPC named `gsmvpcv13test2-vpc` is created 
+   - Click **Menu icon** > **VPC Infrastructure** > **Virtual server instances** to view your VSI named `gsmvpcv13test2_vsi1` is created 
+
 
 **What's next?**
 
-Explore other [{{site.data.keyword.cloud_notm}} resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider) that you can provision with Terraform on {{site.data.keyword.cloud_notm}}. 
+Explore other [{{site.data.keyword.cloud_notm}} resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-on-ibm-cloud-resources-and-data-sources) that you can provision with Terraform on {{site.data.keyword.cloud_notm}}. 
 
