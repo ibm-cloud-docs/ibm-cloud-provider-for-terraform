@@ -403,7 +403,7 @@ To create a VPC and a VSI:
 
     Terraform will perform the following actions:
 
-      # ibm_is_floating_ip.fip1 will be created
+      ibm_is_floating_ip.fip1 will be created
       + resource "ibm_is_floating_ip" "fip1" {
           + address                 = (known after apply)
           + id                      = (known after apply)
@@ -420,7 +420,7 @@ To create a VPC and a VSI:
           + zone                    = (known after apply)
         }
 
-      # ibm_is_instance.vsi1 will be created
+      ibm_is_instance.vsi1 will be created
       + resource "ibm_is_instance" "vsi1" {
           + disks                   = (known after apply)
           + gpu                     = (known after apply)
@@ -464,7 +464,7 @@ To create a VPC and a VSI:
             }
         }
 
-      # ibm_is_security_group.sg1 will be created
+      ibm_is_security_group.sg1 will be created
       + resource "ibm_is_security_group" "sg1" {
           + crn                     = (known after apply)
           + id                      = (known after apply)
@@ -479,7 +479,7 @@ To create a VPC and a VSI:
           + vpc                     = (known after apply)
         }
 
-      # ibm_is_security_group_rule.ingress_ssh_all will be created
+      ibm_is_security_group_rule.ingress_ssh_all will be created
       + resource "ibm_is_security_group_rule" "ingress_ssh_all" {
           + direction   = "inbound"
           + group       = (known after apply)
@@ -496,7 +496,7 @@ To create a VPC and a VSI:
             }
         }
 
-      # ibm_is_subnet.subnet1 will be created
+      ibm_is_subnet.subnet1 will be created
       + resource "ibm_is_subnet" "subnet1" {
           + available_ipv4_address_count = (known after apply)
           + crn                          = (known after apply)
@@ -520,7 +520,7 @@ To create a VPC and a VSI:
           + zone                         = "us-south-1"
         }
 
-      # ibm_is_vpc.vpc will be created
+      ibm_is_vpc.vpc will be created
       + resource "ibm_is_vpc" "vpc" {
           + address_prefix_management   = "auto"
           + classic_access              = false
