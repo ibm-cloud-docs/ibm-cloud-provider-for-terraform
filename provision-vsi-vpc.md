@@ -556,7 +556,7 @@ To create a VPC and a VSI:
    ```
    {: screen}
    
-5. Create the VPC infrastructure resources. Confirm the creation by entering `yes` when prompted.
+6. Create the VPC infrastructure resources. Confirm the creation by entering `yes` when prompted.
 
    ```
    terraform apply
@@ -566,165 +566,164 @@ To create a VPC and a VSI:
    **Example output:**
 
    ```
-An execution plan has been generated and is shown below.
-Resource actions are indicated with the following symbols:
-  + create
+    An execution plan has been generated and is shown below.
+    Resource actions are indicated with the following symbols:
+      + create
 
-Terraform will perform the following actions:
+    Terraform will perform the following actions:
 
-  # ibm_is_floating_ip.fip1 will be created
-  + resource "ibm_is_floating_ip" "fip1" {
-      + address                 = (known after apply)
-      + id                      = (known after apply)
-      + name                    = "gsmvpcv13test2-fip1"
-      + resource_controller_url = (known after apply)
-      + resource_crn            = (known after apply)
-      + resource_group          = (known after apply)
-2021/06/22 16:57:25 [DEBUG] command: asking for input: "Do you want to perform these actions?"
-      + resource_group_name     = (known after apply)
-      + resource_name           = (known after apply)
-      + resource_status         = (known after apply)
-      + status                  = (known after apply)
-      + tags                    = (known after apply)
-      + target                  = (known after apply)
-      + zone                    = (known after apply)
-    }
-
-  # ibm_is_instance.vsi1 will be created
-  + resource "ibm_is_instance" "vsi1" {
-      + disks                   = (known after apply)
-      + gpu                     = (known after apply)
-      + id                      = (known after apply)
-      + image                   = "r006-e0039ab2-fcc8-11e9-8a36-6ffb6501dd33"
-      + keys                    = [
-          + "r006-3f44b01f-5edc-434b-ba6b-f5de782759f7",
-        ]
-      + memory                  = (known after apply)
-      + name                    = "gsmvpcv13test2-vsi1"
-      + profile                 = "cx2-2x4"
-      + resource_controller_url = (known after apply)
-      + resource_crn            = (known after apply)
-      + resource_group          = (known after apply)
-      + resource_group_name     = (known after apply)
-      + resource_name           = (known after apply)
-      + resource_status         = (known after apply)
-      + status                  = (known after apply)
-      + tags                    = (known after apply)
-      + vcpu                    = (known after apply)
-      + volume_attachments      = (known after apply)
-      + vpc                     = (known after apply)
-      + wait_before_delete      = true
-      + zone                    = "us-south-1"
-
-      + boot_volume {
-          + encryption = (known after apply)
-          + iops       = (known after apply)
-          + name       = (known after apply)
-          + profile    = (known after apply)
-          + size       = (known after apply)
+      ibm_is_floating_ip.fip1 will be created
+      + resource "ibm_is_floating_ip" "fip1" {
+          + address                 = (known after apply)
+          + id                      = (known after apply)
+          + name                    = "gsmvpcv13test2-fip1"
+          + resource_controller_url = (known after apply)
+          + resource_crn            = (known after apply)
+          + resource_group          = (known after apply)
+          + resource_group_name     = (known after apply)
+          + resource_name           = (known after apply)
+          + resource_status         = (known after apply)
+          + status                  = (known after apply)
+          + tags                    = (known after apply)
+          + target                  = (known after apply)
+          + zone                    = (known after apply)
         }
 
-      + primary_network_interface {
-          + allow_ip_spoofing    = false
-          + id                   = (known after apply)
-          + name                 = (known after apply)
-          + primary_ipv4_address = (known after apply)
-          + security_groups      = (known after apply)
-          + subnet               = (known after apply)
+      ibm_is_instance.vsi1 will be created
+      + resource "ibm_is_instance" "vsi1" {
+          + disks                   = (known after apply)
+          + gpu                     = (known after apply)
+          + id                      = (known after apply)
+          + image                   = "r006-e0039ab2-fcc8-11e9-8a36-6ffb6501dd33"
+          + keys                    = [
+              + "r006-3f44b01f-5edc-434b-ba6b-f5de782759f7",
+            ]
+          + memory                  = (known after apply)
+          + name                    = "gsmvpcv13test2-vsi1"
+          + profile                 = "cx2-2x4"
+          + resource_controller_url = (known after apply)
+          + resource_crn            = (known after apply)
+          + resource_group          = (known after apply)
+          + resource_group_name     = (known after apply)
+          + resource_name           = (known after apply)
+          + resource_status         = (known after apply)
+          + status                  = (known after apply)
+          + tags                    = (known after apply)
+          + vcpu                    = (known after apply)
+          + volume_attachments      = (known after apply)
+          + vpc                     = (known after apply)
+          + wait_before_delete      = true
+          + zone                    = "us-south-1"
+
+          + boot_volume {
+              + encryption = (known after apply)
+              + iops       = (known after apply)
+              + name       = (known after apply)
+              + profile    = (known after apply)
+              + size       = (known after apply)
+            }
+
+          + primary_network_interface {
+              + allow_ip_spoofing    = false
+              + id                   = (known after apply)
+              + name                 = (known after apply)
+              + primary_ipv4_address = (known after apply)
+              + security_groups      = (known after apply)
+              + subnet               = (known after apply)
+            }
         }
-    }
 
-  # ibm_is_security_group.sg1 will be created
-  + resource "ibm_is_security_group" "sg1" {
-      + crn                     = (known after apply)
-      + id                      = (known after apply)
-      + name                    = "gsmvpcv13test2-sg1"
-      + resource_controller_url = (known after apply)
-      + resource_crn            = (known after apply)
-      + resource_group          = (known after apply)
-      + resource_group_name     = (known after apply)
-      + resource_name           = (known after apply)
-      + rules                   = (known after apply)
-      + tags                    = (known after apply)
-      + vpc                     = (known after apply)
-    }
-
-  # ibm_is_security_group_rule.ingress_ssh_all will be created
-  + resource "ibm_is_security_group_rule" "ingress_ssh_all" {
-      + direction   = "inbound"
-      + group       = (known after apply)
-      + id          = (known after apply)
-      + ip_version  = "ipv4"
-      + protocol    = (known after apply)
-      + related_crn = (known after apply)
-      + remote      = "0.0.0.0/0"
-      + rule_id     = (known after apply)
-
-      + tcp {
-          + port_max = 22
-          + port_min = 22
+       ibm_is_security_group.sg1 will be created
+      + resource "ibm_is_security_group" "sg1" {
+          + crn                     = (known after apply)
+          + id                      = (known after apply)
+          + name                    = "gsmvpcv13test2-sg1"
+          + resource_controller_url = (known after apply)
+          + resource_crn            = (known after apply)
+          + resource_group          = (known after apply)
+          + resource_group_name     = (known after apply)
+          + resource_name           = (known after apply)
+          + rules                   = (known after apply)
+          + tags                    = (known after apply)
+          + vpc                     = (known after apply)
         }
-    }
 
-  # ibm_is_subnet.subnet1 will be created
-  + resource "ibm_is_subnet" "subnet1" {
-      + available_ipv4_address_count = (known after apply)
-      + crn                          = (known after apply)
-      + id                           = (known after apply)
-      + ip_version                   = "ipv4"
-      + ipv4_cidr_block              = (known after apply)
-      + ipv6_cidr_block              = (known after apply)
-      + name                         = "gsmvpcv13test2-subnet1"
-      + network_acl                  = (known after apply)
-      + resource_controller_url      = (known after apply)
-      + resource_crn                 = (known after apply)
-      + resource_group               = (known after apply)
-      + resource_group_name          = (known after apply)
-      + resource_name                = (known after apply)
-      + resource_status              = (known after apply)
-      + routing_table                = (known after apply)
-      + status                       = (known after apply)
-      + tags                         = (known after apply)
-      + total_ipv4_address_count     = 256
-      + vpc                          = (known after apply)
-      + zone                         = "us-south-1"
-    }
+       ibm_is_security_group_rule.ingress_ssh_all will be created
+      + resource "ibm_is_security_group_rule" "ingress_ssh_all" {
+          + direction   = "inbound"
+          + group       = (known after apply)
+          + id          = (known after apply)
+          + ip_version  = "ipv4"
+          + protocol    = (known after apply)
+          + related_crn = (known after apply)
+          + remote      = "0.0.0.0/0"
+          + rule_id     = (known after apply)
 
-  # ibm_is_vpc.vpc will be created
-  + resource "ibm_is_vpc" "vpc" {
-      + address_prefix_management   = "auto"
-      + classic_access              = false
-      + crn                         = (known after apply)
-      + cse_source_addresses        = (known after apply)
-      + default_network_acl         = (known after apply)
-      + default_network_acl_name    = (known after apply)
-      + default_routing_table       = (known after apply)
-      + default_routing_table_name  = (known after apply)
-      + default_security_group      = (known after apply)
-      + default_security_group_name = (known after apply)
-      + id                          = (known after apply)
-      + name                        = "gsmvpcv13test2-vpc"
-      + resource_controller_url     = (known after apply)
-      + resource_crn                = (known after apply)
-      + resource_group              = (known after apply)
-      + resource_group_name         = (known after apply)
-      + resource_name               = (known after apply)
-      + resource_status             = (known after apply)
-      + security_group              = (known after apply)
-      + status                      = (known after apply)
-      + subnets                     = (known after apply)
-      + tags                        = (known after apply)
-    }
+          + tcp {
+              + port_max = 22
+              + port_min = 22
+            }
+        }
 
-   Apply complete! Resources: 6 added, 0 changed, 0 destroyed.
+       ibm_is_subnet.subnet1 will be created
+      + resource "ibm_is_subnet" "subnet1" {
+          + available_ipv4_address_count = (known after apply)
+          + crn                          = (known after apply)
+          + id                           = (known after apply)
+          + ip_version                   = "ipv4"
+          + ipv4_cidr_block              = (known after apply)
+          + ipv6_cidr_block              = (known after apply)
+          + name                         = "gsmvpcv13test2-subnet1"
+          + network_acl                  = (known after apply)
+          + resource_controller_url      = (known after apply)
+          + resource_crn                 = (known after apply)
+          + resource_group               = (known after apply)
+          + resource_group_name          = (known after apply)
+          + resource_name                = (known after apply)
+          + resource_status              = (known after apply)
+          + routing_table                = (known after apply)
+          + status                       = (known after apply)
+          + tags                         = (known after apply)
+          + total_ipv4_address_count     = 256
+          + vpc                          = (known after apply)
+          + zone                         = "us-south-1"
+        }
 
-   Outputs:
+       ibm_is_vpc.vpc will be created
+      + resource "ibm_is_vpc" "vpc" {
+          + address_prefix_management   = "auto"
+          + classic_access              = false
+          + crn                         = (known after apply)
+          + cse_source_addresses        = (known after apply)
+          + default_network_acl         = (known after apply)
+          + default_network_acl_name    = (known after apply)
+          + default_routing_table       = (known after apply)
+          + default_routing_table_name  = (known after apply)
+          + default_security_group      = (known after apply)
+          + default_security_group_name = (known after apply)
+          + id                          = (known after apply)
+          + name                        = "gsmvpcv13test2-vpc"
+          + resource_controller_url     = (known after apply)
+          + resource_crn                = (known after apply)
+          + resource_group              = (known after apply)
+          + resource_group_name         = (known after apply)
+          + resource_name               = (known after apply)
+          + resource_status             = (known after apply)
+          + security_group              = (known after apply)
+          + status                      = (known after apply)
+          + subnets                     = (known after apply)
+          + tags                        = (known after apply)
+        }
 
-   sshcommand = ssh root@ibm_is_floating_ip.fip1.address
-   ```
+       Apply complete! Resources: 6 added, 0 changed, 0 destroyed.
+
+       Outputs:
+
+       sshcommand = ssh root@ibm_is_floating_ip.fip1.address
+     ```
    {: screen}
    
-6. Log in to your VPC VSI by using the `ssh` command that is listed at the end of your command line output of the previous step.
+7. Log in to your VPC VSI by using the `ssh` command that is listed at the end of your command line output of the previous step.
 
    ```
    ssh root@52.118.150.55 
@@ -744,14 +743,14 @@ Terraform will perform the following actions:
    ```
    {: screen}
 
-7. Optional: If you don't want to work with your VPC infrastructure resources anymore, remove them.
+8. Optional: If you don't want to work with your VPC infrastructure resources anymore, remove them.
 
    ```
    terraform destroy
    ```
    {: pre}
 
-8. You can verify that VPC and VSI are created by accessing your IBM Cloud console. 
+9. You can verify that VPC and VSI are created by accessing your IBM Cloud console. 
    - Click **Menu icon**  > **VPC Infrastructure** >  **VPCs** to view your VPC named `gsmvpcv13test2-vpc` is created 
    - Click **Menu icon** > **VPC Infrastructure** > **Virtual server instances** to view your VSI named `gsmvpcv13test2_vsi1` is created 
 
