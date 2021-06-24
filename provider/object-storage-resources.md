@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-29"
+lastupdated: "2021-06-24"
 
 keywords: terraform provider plugin, terraform data source cos, terraform data source object storage, terraform get cloud object storage bucket, terraform get object storage resources
 
@@ -77,6 +77,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
@@ -107,7 +108,7 @@ Before you start working with your resource, make sure to review the [required p
 
 Create or delete an {{site.data.keyword.cos_full_notm}} bucket. The bucket is used to store your data. For more information, about configuration options, see [Create some buckets to store your data](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets). 
 
-To create a bucket, you must provision an {{site.data.keyword.cos_full_notm}} instance first by using the [`ibm_resource_instance`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resource-mgmt-resources#resource-instance) resource.
+To create a bucket, you must provision an {{site.data.keyword.cos_full_notm}} instance first by using the [`ibm_resource_instance`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_instance) resource.
 {: note}
 
 ### Sample Terraform on {{site.data.keyword.cloud_notm}} code
