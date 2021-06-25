@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-03"
+lastupdated: "2021-06-25"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for classic infrastructure
 
@@ -221,20 +221,14 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
    **Example output:**
 
    ```
-      
+    Refreshing Terraform on {{site.data.keyword.cloud_notm}} state in-memory prior to plan...
+    The refreshed state be used to calculate this plan, but not be persisted to local or remote state storage.
 
-   ```
-   {: screen}
+    An execution plan has been generated and is shown.
+    Resource actions are indicated with the following symbols:
+      + create
 
-   ```
-   Refreshing Terraform on {{site.data.keyword.cloud_notm}} state in-memory prior to plan...
-   The refreshed state be used to calculate this plan, but not be persisted to local or remote state storage.
-
-   An execution plan has been generated and is shown.
-   Resource actions are indicated with the following symbols:
-     + create
-
-   Terraform on {{site.data.keyword.cloud_notm}} performs the following actions:
+    Terraform on {{site.data.keyword.cloud_notm}} performs the following actions:
 
      + ibm_compute_vm_instance.vm1
          id:                           <computed>
@@ -277,10 +271,10 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
          secondary_ip_addresses.#:     <computed>
          wait_time_minutes:            "90"
 
-   Plan: 1 to add, 0 to change, 0 to destroy.
-   ------------------------------------------------------------------------
-   **Note** You didn't specify an "-out" parameter to save this plan, so Terraform on {{site.data.keyword.cloud_notm}} can't guarantee that exactly these actions be performed if "terraform apply" is subsequently run.
-   ```
+        Plan: 1 to add, 0 to change, 0 to destroy.
+        ------------------------------------------------------------------------
+        Note You didn't specify an "-out" parameter to save this plan, so Terraform on {{site.data.keyword.cloud_notm}} can't guarantee that exactly these actions be performed if "terraform apply" is subsequently run.
+      ```
    {: screen}
    
 4. Review the execution plan to verify the type of resource that is planned to be provisioned by Terraform on {{site.data.keyword.cloud_notm}}.
@@ -295,7 +289,7 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
    **Example output:**
 
    ```
-   Creating...
+     Creating...
      block_storage_ids.#:        "" => "<computed>"
      cores:                      "" => "1"
      datacenter:                 "" => "dal10"
@@ -326,15 +320,15 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
      public_vlan_id:             "" => "<computed>"
      secondary_ip_addresses.#:   "" => "<computed>"
      wait_time_minutes:          "" => "90"
-   ibm_compute_vm_instance.vm1: Still creating... (10s elapsed)
-   ibm_compute_vm_instance.vm1: Still creating... (20s elapsed)
-   ibm_compute_vm_instance.vm1: Still creating... (30s elapsed)
-   ibm_compute_vm_instance.vm1: Still creating... (40s elapsed)
-   ibm_compute_vm_instance.vm1: Still creating... (50s elapsed)
-   ibm_compute_vm_instance.vm1: Still creating... (1m0s elapsed)
-   ibm_compute_vm_instance.vm1: Creation complete after 1m04s (ID: 62364997)
-   
-   Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+      ibm_compute_vm_instance.vm1: Still creating... (10s elapsed)
+      ibm_compute_vm_instance.vm1: Still creating... (20s elapsed)
+      ibm_compute_vm_instance.vm1: Still creating... (30s elapsed)
+      ibm_compute_vm_instance.vm1: Still creating... (40s elapsed)
+      ibm_compute_vm_instance.vm1: Still creating... (50s elapsed)
+      ibm_compute_vm_instance.vm1: Still creating... (1m0s elapsed)
+      ibm_compute_vm_instance.vm1: Creation complete after 1m04s (ID: 62364997)
+      
+      Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
    ```
    {: screen}
    
@@ -348,7 +342,7 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
    **Example output:**
 
    ```
-   ibm_compute_vm_instance.vm1:
+     ibm_compute_vm_instance.vm1:
      id = 62364997
      block_storage_ids.# = 0
      cores = 1

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-03"
+lastupdated: "2021-06-25"
 
 keywords: terraform templates, schematics template
 
@@ -296,7 +296,7 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}` following action
   <tbody>
  <tr>
    <td><code>vpc-classic-cluster</code></td>
-      <td>Create an {{site.data.keyword.containerfull_notm}} cluster in a Virtual Private Cloud (VPC) for Generation 1 compute with worker nodes in a default worker pool that you spread across two zones. You can provision an IBM Cloud Object Storage service, and bind this service to the cluster.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><listyle="margin:0px; padding:0px"><code>ibm_is_vpc</code></li><li style="margin:0px; padding:0px"><code>ibm_is_subnet</code></li><li style="margin:0px; padding:0px"><code>ibm_container_vpc_cluster</code></li><li style="margin:0px; padding:0px"><code>ibm_container_vpc_worker_pool</code></li><li style="margin:0px; padding:0px"><code>ibm_resource_instance</code></li><li style="margin:0px; padding:0px"><code>ibm_container_bind_service</code></li></ul></td>
+      <td>Create an {{site.data.keyword.containerfull_notm}} cluster in a Virtual Private Cloud (VPC) for Generation 1 compute with worker nodes in a default worker pool that you spread across two zones. You can provision an IBM Cloud Object Storage service, and bind this service to the cluster.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_is_vpc</code></li><li style="margin:0px; padding:0px"><code>ibm_is_subnet</code></li><li style="margin:0px; padding:0px"><code>ibm_container_vpc_cluster</code></li><li style="margin:0px; padding:0px"><code>ibm_container_vpc_worker_pool</code></li><li style="margin:0px; padding:0px"><code>ibm_resource_instance</code></li><li style="margin:0px; padding:0px"><code>ibm_container_bind_service</code></li></ul></td>
       <td><a href="https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-classic-cluster"><img alt="View Git Hub" src="/images/viewgithub.png"></a><br><br><a href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-classic-cluster&terraform_version=terraform_v0.12"><img alt="Deploy to Schematics" src="/images/deploytoschematics.png"></a></td>
   </tr>
   <tr>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-23"
+lastupdated: "2021-06-25"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for vpc
 
@@ -118,7 +118,7 @@ To create a VPC and a VSI:
 
 1. Make sure that you have the [required permissions](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls) to create and work with VPC infrastructure. 
 
-2. In the Terraform on {{site.data.keyword.cloud_notm}} directory create a `versions.tf` file to run the Terraform on {{site.data.keyword.cloud_notm}} v0.13. For `versions.tf`, refer to [sample versions tf file](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v13).
+2. In the Terraform on {{site.data.keyword.cloud_notm}} directory create a `versions.tf` file to run the Terraform on {{site.data.keyword.cloud_notm}} v0.13. For `versions.tf`, refer to [sample versions tf file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v13).
 
    ```
    terraform {
@@ -341,23 +341,7 @@ To create a VPC and a VSI:
     ----
     2021/06/22 16:47:27 [INFO] Terraform version: 0.13.5  
     2021/06/22 16:47:27 [INFO] Go runtime version: go1.14.7
-    2021/06/22 16:47:27 [INFO] CLI args: []string{"/Users/geethasathyamurthy/terraform/terraform", "init"}
-    2021/06/22 16:47:27 [DEBUG] Attempting to open CLI config file: /Users/geethasathyamurthy/.terraformrc
-    2021/06/22 16:47:27 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
-    2021/06/22 16:47:27 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
-    2021/06/22 16:47:27 [DEBUG] ignoring non-existing provider search directory /Users/geethasathyamurthy/.terraform.d/plugins
-    2021/06/22 16:47:27 [DEBUG] ignoring non-existing provider search directory /Users/geethasathyamurthy/Library/Application Support/io.terraform/plugins
-    2021/06/22 16:47:27 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
-    2021/06/22 16:47:27 [INFO] CLI command args: []string{"init"}
-    2021/06/22 16:47:27 [WARN] Log levels other than TRACE are currently unreliable, and are supported only for backward compatibility.
-    Use TF_LOG=TRACE to see Terraform's internal logs.
-    ----
-
-    Initializing the backend...
-    2021/06/22 16:47:27 [DEBUG] New state was assigned lineage "ec69aeac-0645-6299-244d-da5f238dcaad"
-    2021/06/22 16:47:27 [DEBUG] checking for provisioner in "."
-    2021/06/22 16:47:27 [DEBUG] checking for provisioner in "/Users/geethasathyamurthy/terraform"
-    2021/06/22 16:47:27 [INFO] Failed to read plugin lock file .terraform/plugins/darwin_amd64/lock.json: open .terraform/plugins/darwin_amd64/lock.json: no such file or directory
+    terraform/plugins/darwin_amd64/lock.json: no such file or directory
 
     Initializing provider plugins...
     - Using previously-installed ibm-cloud/ibm v1.26.2
@@ -382,7 +366,7 @@ To create a VPC and a VSI:
     - `export TF_LOG=debug`
 5. Generate an Terraform on {{site.data.keyword.cloud_notm}} execution plan. When you execute this command, Terraform on {{site.data.keyword.cloud_notm}} validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in.
 
-   Your SSH key name need to be provide during terraform plan and terraform apply execution.
+   Your SSH key name need to be provide during `terraform plan` and `terraform apply` execution.
    {: note}
 
    ```
@@ -633,62 +617,6 @@ To create a VPC and a VSI:
             }
         }
 
-       ibm_is_security_group.sg1 will be created
-      + resource "ibm_is_security_group" "sg1" {
-          + crn                     = (known after apply)
-          + id                      = (known after apply)
-          + name                    = "gsmvpcv13test2-sg1"
-          + resource_controller_url = (known after apply)
-          + resource_crn            = (known after apply)
-          + resource_group          = (known after apply)
-          + resource_group_name     = (known after apply)
-          + resource_name           = (known after apply)
-          + rules                   = (known after apply)
-          + tags                    = (known after apply)
-          + vpc                     = (known after apply)
-        }
-
-       ibm_is_security_group_rule.ingress_ssh_all will be created
-      + resource "ibm_is_security_group_rule" "ingress_ssh_all" {
-          + direction   = "inbound"
-          + group       = (known after apply)
-          + id          = (known after apply)
-          + ip_version  = "ipv4"
-          + protocol    = (known after apply)
-          + related_crn = (known after apply)
-          + remote      = "0.0.0.0/0"
-          + rule_id     = (known after apply)
-
-          + tcp {
-              + port_max = 22
-              + port_min = 22
-            }
-        }
-
-       ibm_is_subnet.subnet1 will be created
-      + resource "ibm_is_subnet" "subnet1" {
-          + available_ipv4_address_count = (known after apply)
-          + crn                          = (known after apply)
-          + id                           = (known after apply)
-          + ip_version                   = "ipv4"
-          + ipv4_cidr_block              = (known after apply)
-          + ipv6_cidr_block              = (known after apply)
-          + name                         = "gsmvpcv13test2-subnet1"
-          + network_acl                  = (known after apply)
-          + resource_controller_url      = (known after apply)
-          + resource_crn                 = (known after apply)
-          + resource_group               = (known after apply)
-          + resource_group_name          = (known after apply)
-          + resource_name                = (known after apply)
-          + resource_status              = (known after apply)
-          + routing_table                = (known after apply)
-          + status                       = (known after apply)
-          + tags                         = (known after apply)
-          + total_ipv4_address_count     = 256
-          + vpc                          = (known after apply)
-          + zone                         = "us-south-1"
-        }
-
        ibm_is_vpc.vpc will be created
       + resource "ibm_is_vpc" "vpc" {
           + address_prefix_management   = "auto"
@@ -743,17 +671,16 @@ To create a VPC and a VSI:
    ```
    {: screen}
 
-8. Optional: If you don't want to work with your VPC infrastructure resources anymore, remove them.
+8. You can verify that VPC and VSI are created by accessing your IBM Cloud console. 
+   - Click **Menu icon** > **VPC Infrastructure** > **VPCs** to view VPC named `gsmvpcv13test2-vpc` is created 
+   - Click **Menu icon** > **VPC Infrastructure** > **Virtual server instances** to view VSI named `gsmvpcv13test2_vsi1` is created 
+
+9. Optional: If you don't want to work with your VPC infrastructure resources anymore, remove them.
 
    ```
    terraform destroy
    ```
    {: pre}
-
-9. You can verify that VPC and VSI are created by accessing your IBM Cloud console. 
-   - Click **Menu icon** > **VPC Infrastructure** > **VPCs** to view VPC named `gsmvpcv13test2-vpc` is created 
-   - Click **Menu icon** > **VPC Infrastructure** > **Virtual server instances** to view VSI named `gsmvpcv13test2_vsi1` is created 
-
 
 **What's next?**
 
