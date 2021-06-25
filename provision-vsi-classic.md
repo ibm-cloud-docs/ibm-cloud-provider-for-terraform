@@ -221,20 +221,14 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
    **Example output:**
 
    ```
-      
+    Refreshing Terraform on {{site.data.keyword.cloud_notm}} state in-memory prior to plan...
+    The refreshed state be used to calculate this plan, but not be persisted to local or remote state storage.
 
-   ```
-   {: screen}
+    An execution plan has been generated and is shown.
+    Resource actions are indicated with the following symbols:
+      + create
 
-   ```
-   Refreshing Terraform on {{site.data.keyword.cloud_notm}} state in-memory prior to plan...
-   The refreshed state be used to calculate this plan, but not be persisted to local or remote state storage.
-
-   An execution plan has been generated and is shown.
-   Resource actions are indicated with the following symbols:
-     + create
-
-   Terraform on {{site.data.keyword.cloud_notm}} performs the following actions:
+    Terraform on {{site.data.keyword.cloud_notm}} performs the following actions:
 
      + ibm_compute_vm_instance.vm1
          id:                           <computed>
@@ -280,7 +274,7 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
         Plan: 1 to add, 0 to change, 0 to destroy.
         ------------------------------------------------------------------------
         Note You didn't specify an "-out" parameter to save this plan, so Terraform on {{site.data.keyword.cloud_notm}} can't guarantee that exactly these actions be performed if "terraform apply" is subsequently run.
-   ```
+      ```
    {: screen}
    
 4. Review the execution plan to verify the type of resource that is planned to be provisioned by Terraform on {{site.data.keyword.cloud_notm}}.
