@@ -23,7 +23,7 @@ Terraform on IBM Cloud
     setup_cli.md
     provider/provider-ref.md
     migrate.md
-    create-terraform-template.md
+    create-terraform-config.md
     manage_resources.md
     autodeploy_template.md
     {: .navgroup-end}
