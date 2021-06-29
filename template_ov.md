@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-25"
+lastupdated: "2021-06-29"
 
 keywords: terraform templates, schematics template
 
@@ -271,10 +271,11 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}` following action
     <th style="width:150px">Access</th>
   </thead>
   <tbody>
+  https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-hpcs-crypto
   <tr>
     <td><code>ibm-key-management-service</code></td>
       <td>Create an {{site.data.keyword.cos_full_notm}} service instance with a bucket to store your data and provide a key management service resource for Hyper Protect Crypto Services and Key Protect service instance with a root key. This allow access between these services with an IBM Cloud Identity and Access Management policy.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_kms_key</code></li><li style="margin:0px; padding:0px"><code>ibm_kp_key</code></li></ul></td>
-      <td><a href="https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-kms"><img alt="View Git Hub" src="/images/viewgithub.png"></a><br><br><a href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-kms&terraform_version=terraform_v0.12"><img alt="Deploy to Schematics" src="/images/deploytoschematics.png"></a></td>
+      <td><a href="https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-hpcs-crypto"><img alt="View Git Hub" src="/images/viewgithub.png"></a><br><br><a href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-hpcs-crypto&terraform_version=terraform_v0.12"><img alt="Deploy to Schematics" src="/images/deploytoschematics.png"></a></td>
   </tr>
   <tr>
     <td><code>ibm-hpcs-crypto</code></td>
