@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-17"
+lastupdated: "2021-07-05"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -117,7 +117,7 @@ Use these steps to install the Terraform CLI.
    ```
    {: pre}
    
-2. Download the [Terraform version](https://releases.hashicorp.com/terraform){: external} that you want. The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform currently supports Terraform version 0.12.x, 0.13.x, and 0.14.x only. Make sure to select a supported Terraform version. 
+2. Download the [Terraform version](https://releases.hashicorp.com/terraform){: external} that you want. The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform currently supports Terraform version 0.12.x, 0.13.x, 0.14.x and 0.15.x only. Make sure to select a supported Terraform version. 
 3. Extract the Terraform `zip` file and copy the files to your `terraform` directory. 
 4. Set the environment `PATH` variable to your Terraform files.
    ```
