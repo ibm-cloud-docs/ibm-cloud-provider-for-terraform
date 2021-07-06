@@ -113,7 +113,7 @@ Error: Error creating database instance: Request failed with status code: 400, S
 
 **Why it’s happening?**
 
-There is a constraint in the {{site.data.keyword.cloud_notm}} region, that you cannot provision a database backup ID from `us-east` region to `eu-de` region. Hence, you are receiving an internal server error stating that creating database request failed.
+There is a constraint in the {{site.data.keyword.cloud_notm}} region, that you cannot provision a database backup ID from `us-east` region to `eu-de` region. Hence, you are receiving an internal server error stating that database creation request failed.
 
 **How to fix it?**
 
