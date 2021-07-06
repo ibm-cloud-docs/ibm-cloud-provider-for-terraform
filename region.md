@@ -120,5 +120,5 @@ There is a constraint in the {{site.data.keyword.cloud_notm}} region, that you c
 Use one of the following options to fix this issue:
  - You configure database and workspace resources in one region.
  - To access the database or to backup the database resources in another region. You need to check the region constraints in the {{site.data.keyword.cloud_notm}} location. For more information, about the services provided in specific region, see [Services region](/docs/overview?topic=overview-services_region#paas-services).
- - You need to check the price, billing usage, and capability of the region before communicating between the regions.
+ - You need to check the price, billing usage, and region specific capabilities before communicating between the regions.
 
