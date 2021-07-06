@@ -109,7 +109,7 @@ You have set up your database in `us-east` region and provisioning a database ba
 ```
 Error: Error creating database instance: Request failed with status code: 400, ServerErrorResponse: {"error_code":"RC-ServiceBrokerErrorResponse","message":"[500, Internal Server Error] We were unable to complete your request. Try again later or contact support if the issue persists.
 ```
-{: pre}
+{: codeblock}
 
 **Why it’s happening?**
 
