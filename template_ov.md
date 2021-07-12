@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-05"
+lastupdated: "2021-07-12"
 
 keywords: terraform templates, schematics template
 
@@ -114,6 +114,8 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}` following action
   3. The auto deploy link set up a create workspace in the {{site.data.keyword.bplong_notm}}.
 
   4. To execute `generate plan` successfully, you need to configure the required variables.
+
+
 
 
 
