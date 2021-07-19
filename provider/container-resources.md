@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-06" 
+lastupdated: "2021-07-19" 
 
 keywords: terraform provider plugin, terraform kubernetes service, terraform container service, terraform cluster, terraform worker nodes, terraform iks, terraform kubernetes, observability logging, observability monitoring
 
@@ -77,6 +77,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
@@ -327,7 +328,7 @@ The following timeouts are defined for this resource.
 ## `ibm_container_api_key_reset`
 {: #container-api-key-reset}
 
-Create, update, or delete Kubernetes API key. For more information, about Kubernetes API key, see [Assigning cluster access](/docs/containers?topic=containers-users#access-checklist).
+Create, update, or delete Kubernetes API key.
 {: shortdesc}
 
 ### Sample Terraform on {{site.data.keyword.cloud_notm}} code

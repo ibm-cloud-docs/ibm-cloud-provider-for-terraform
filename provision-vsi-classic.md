@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-25"
+lastupdated: "2021-07-19"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for classic infrastructure
 
@@ -200,8 +200,6 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
    The following providers do not have any version constraints in configuration, so the latest version was installed.
 
    To prevent automatic upgrades to new major versions that may contain breaking changes, it is recommended to add version = "..." constraints to the corresponding provider blocks in configuration, with the constraint strings suggested.
-
-   * provider.ibm: version = "~> 0.11"
 
    Terraform on {{site.data.keyword.cloud_notm}} has been successfully initialized!
 
