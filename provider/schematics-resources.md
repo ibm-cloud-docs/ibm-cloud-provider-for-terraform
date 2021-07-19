@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-07-19"
 
 keywords: terraform provider plugin, terraform schematics data source, terraform schematics workspace 
 
@@ -77,6 +77,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
@@ -371,7 +372,7 @@ Review the input parameters that you can specify for your resource.
 |`template_data.env_values`| `[]interface{}]` | Optional | A list of environment variables that you want to apply during the execution of a bash script or Terraform action. This field contains the list of key-value pairs, for example, `TF_LOG=debug`. Each entry is map with one entry where key is the environment variable name and value is value. You can define environment variables for {{site.data.keyword.cloud_notm}} catalog offerings that are provisioned by using a bash script.|
 |`template_data.folder` | String | Optional |  The subfolder in your GitHub or GitLab repository where your Terraform template is stored.|
 |`template_data.init_state_file` | String | Optional |  The content of an existing Terraform statefile that you want to import to your workspace. To get the content of a Terraform statefile for a specific Terraform template in an existing workspace, run `ibmcloud terraform state pull --id <workspace_id> --template <template_id>`.|
-|`template_data.type` | String | Optional |  The Terraform version that you want to run your Terraform code. Enter `terraform_v0.12` to use Terraform version 0.12, and `terraform_v0.11` to use Terraform version 0.11. If value is not specified, the Terraform config files are run with Terraform version 0.11. Make sure that your Terraform config files are compatible with the Terraform version that you select.|
+|`template_data.type` | String | Optional |  The Terraform version that you want to run your Terraform code. Enter `terraform_v0.12` to use Terraform version 0.12. Make sure that your Terraform configuration files are compatible with the Terraform version that you select.|
 |`template_data.uninstall_script_name` | String | Optional | The script name to uninstall. |
 |`template_data.values` | String | Optional |  A list of variable values that you want to apply during the Helm chart installation. The list must be provided in JSON format, such as `autoscaling: enabled: true minReplicas: 2`. The values that you define here overrides the default Helm chart values. This field is supported only for {{site.data.keyword.cloud_notm}} catalog offerings that are provisioned by using the Terraform Helm provider.|
 |`template_data.values_metadata` | `[]interface{}]` | Optional |  The list of values metadata.|
@@ -383,7 +384,7 @@ Review the input parameters that you can specify for your resource.
 |`template_repo.repo_sha_value` | String | Optional |  The SHA value from the repository.|
 |`template_repo.repo_url` | String | Optional |  The URL to the repository where the {{site.data.keyword.cloud_notm}} catalog software template is stored.|
 |`template_repo.url` | String | Optional |  The GitHub or GitLab repository URL where your Terraform and public bit bucket template is stored. For more information of the environment variable syntax, see [Create workspace new](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-new).|
-|`type`| List | Optional | The Terraform version that you want to use to run your Terraform code. Enter terraform_v0.12 to use Terraform version 0.12, and terraform_v0.11 to use Terraform version 0.11. If no value is specified, the Terraform config files are run with Terraform version 0.11. Make sure that your Terraform config files are compatible with the Terraform version that you select.
+|`type`| List | Optional | The Terraform version that you want to use to run your Terraform code. Enter terraform_v0.12 to use Terraform version 0.12. Make sure that your Terraform config files are compatible with the Terraform version that you select.
 |`workspace_status`| List | Optional | The Workspace status request.|
 |`workspace_status.frozen`| Bool | Optional | If set to `true`, the workspace is frozen and changes to the workspace are disabled.|
 |`workspace_status.frozen_at` | `TypeString` | Optional |  The timestamp when the workspace was frozen.|
