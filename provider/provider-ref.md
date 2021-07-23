@@ -299,8 +299,8 @@ The steps that are involved in configuring your {{site.data.keyword.cloud_notm}}
 |CIS|`IBMCLOUD_CIS_API_ENDPOINT`|N/A|
 |Containers|`IBMCLOUD_CS_API_ENDPOINT`|[Docs](/docs/containers?topic=containers-plan_clusters#workeruser-master)|
 |Content Catalog | `IBMCLOUD_CATALOG_MANAGEMENT_API_ENDPOINT`|N/A|
-|COS config | `IBMCLOUD_COS_CONFIG_ENDPOINT`|N/A|
 |Container Registry | `IBMCLOUD_CR_API_ENDPOINT`|N/A|
+|COS config | `IBMCLOUD_COS_CONFIG_ENDPOINT`|N/A|
 |COS-S3 | `IBMCLOUD_COS_ENDPOINT`|N/A|
 |Direct Link | `IBMCLOUD_DL_PROVIDER_API_ENDPOINT`|N/A|
 |Enterprise Management | `IBMCLOUD_ENTERPRISE_API_ENDPOINT`|N/A|
