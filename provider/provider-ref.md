@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-06-02"
+lastupdated: "2021-07-23"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -280,24 +280,33 @@ Support for using non-default {{site.data.keyword.cloud_notm}} service endpoints
 The steps that are involved in configuring your {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on {{site.data.keyword.cloud_notm}} to use the private Cloud Service Endpoint (CSE) of an {{site.data.keyword.cloud_notm}} service in  public CSE in [Production environment](https://cloud.ibm.com).
 
 1. Set up the Terraform on {{site.data.keyword.cloud_notm}} engine and an {{site.data.keyword.cloud_notm}} Provider plug-in, in {{site.data.keyword.cloud_notm}} virtual machine by using private VLAN. And provision the enabled Virtual Routing and Forwarding (VRF) account.
-2. Export the following environment variables on your local machine. For more information, about supported private Cloud Service Endpoints for each {{site.data.keyword.cloud_notm}} service to support in production, see [Use service endpoints](/docs/account?topic=account-vrf-service-endpoint).
+2. Export the environment variables that are listed in the table to your local machine. For more information, about supported private Cloud Service Endpoints for each {{site.data.keyword.cloud_notm}} service to support in production, see [Use service endpoints](/docs/account?topic=account-vrf-service-endpoint).
 3. Initialize the Terraform on {{site.data.keyword.cloud_notm}} command line to load the environment variables that you set.
    ```
    terraform init
    ```
    {: pre}
 
+
+
 |Service|Environment variable key|Private service endpoint|
 |-------------|--------|----------------|
 |Account management|`IBMCLOUD_ACCOUNT_MANAGEMENT_API_ENDPOINT`|N/A|
+|API Gateway | ` IBMCLOUD_API_GATEWAY_ENDPOINT`|N/A|
 |Certificate manager|`IBMCLOUD_CERTIFICATE_MANAGER_API_ENDPOINT`|N/A|
 |Cloud Foundry|`IBMCLOUD_MCCP_API_ENDPOINT`|N/A|
 |Cloud functions|`IBMCLOUD_NAMESPACE_API_ENDPOINT`|N/A|
-|Containers|`IBMCLOUD_CS_API_ENDPOINT`|[Docs](/docs/containers?topic=containers-plan_clusters#workeruser-master)|
 |CIS|`IBMCLOUD_CIS_API_ENDPOINT`|N/A|
-|Direct Link|`IBMCLOUD_DL_API_ENDPOINT`|N/A|
+|Containers|`IBMCLOUD_CS_API_ENDPOINT`|[Docs](/docs/containers?topic=containers-plan_clusters#workeruser-master)|
+|Content Catalog | `IBMCLOUD_CATALOG_MANAGEMENT_API_ENDPOINT`|N/A|
+|COS config | `IBMCLOUD_COS_CONFIG_ENDPOINT`|N/A|
+|Container Registry | `IBMCLOUD_CR_API_ENDPOINT`|N/A|
+|COS-S3 | `IBMCLOUD_COS_ENDPOINT`|N/A|
+|Direct Link | `IBMCLOUD_DL_PROVIDER_API_ENDPOINT`|N/A|
+|Enterprise Management | `IBMCLOUD_ENTERPRISE_API_ENDPOINT`|N/A|
 |Global search |`IBMCLOUD_GT_API_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/search#endpoint-url) |
 |Global tagging |`IBMCLOUD_GT_API_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/tagging#endpoint-url) |
+|GHoST / Tagging|`IBMCLOUD_GT_API_ENDPOINT`|`https://tags.global-search-tagging.test.cloud.ibm.com`|
 |HPCS|`IBMCLOUD_HPCS_API_ENDPOINT`|N/A|
 |IAM|`IBMCLOUD_IAM_API_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/iam-access-groups#endpoint-urls) |
 |`IAMPAP`|`IBMCLOUD_IAMPAP_API_ENDPOINT`|N/A|
@@ -307,12 +316,13 @@ The steps that are involved in configuring your {{site.data.keyword.cloud_notm}}
 |Resource management|`IBMCLOUD_RESOURCE_MANAGEMENT_API_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/resource-controller/resource-manager#endpoint-urls) |
 |Resource controller|`IBMCLOUD_RESOURCE_CONTROLLER_API_ENDPOINT`|N/A|
 |Resource catalog|`IBMCLOUD_RESOURCE_CATALOG_API_ENDPOINT`|N/A|
+|Resource management|`IBMCLOUD_RESOURCE_MANAGEMENT_API_ENDPOINT`|N/A|
+|Satellite | `IBMCLOUD_SATELLITE_API_ENDPOINT`|N/A|
 |Schematics|`IBMCLOUD_SCHEMATICS_API_ENDPOINT`|[Docs](/docs/schematics?topic=schematics-private-endpoints)|
 |Transit Gateway|`IBMCLOUD_TG_API_ENDPOINT`| N/A|
 |UAA|`IBMCLOUD_UAA_ENDPOINT`|N/A|
 |User management|`IBMCLOUD_USER_MANAGEMENT_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/user-management#endpoint-urls) |
 |VPC Gen2|`IBMCLOUD_IS_NG_API_ENDPOINT`|N/A|
-
 
 
 
