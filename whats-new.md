@@ -33,7 +33,7 @@ Learn about the latest changes to the Terraform on {{site.data.keyword.cloud_not
 
 <table>
     <thead>
-    <th style="width:80px">Releases and updates</th>
+    <th style="width:80px">Releases, updates and enhancements</th>
     </thead>
   <tbody>
     <tr>
