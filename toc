@@ -42,7 +42,7 @@ Terraform on IBM Cloud
     terraform_ts_index.md
 
     {: .topicgroup}
-    Troubleshooting
+    Troubleshooting 
         region.md
     {: .navgroup-end}
 
