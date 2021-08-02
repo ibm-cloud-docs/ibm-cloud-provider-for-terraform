@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-06-25"
+lastupdated: "2021-08-02"
 
 keywords: terraform resources, terraform modules, terraform provider, terraform autodeploy, 
 
@@ -27,6 +27,20 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #new-in-terraform}
 
 Learn about the latest changes to the Terraform on {{site.data.keyword.cloud_notm}} service that are grouped by month.
+
+## 31 July 2021
+{: #31-July-2021}
+
+<table>
+    <thead>
+    <th style="width:80px">Releases, updates and enhancements</th>
+    </thead>
+  <tbody>
+    <tr>
+      <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**Enhancements:** {{site.data.keyword.cloud_notm}} Provider now supports Terraform v0.15</li><li style="margin:0px; padding:0px">For the latest `Resources`, `Data sources`, `Enhancements`, and `Bug fixes`, see [Updates and fixes in v1.29.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.29.0)</li><li style="margin:0px; padding:0px">For the latest `Resources`, `Data sources`, `Enhancements`, and `Bug fixes`, see [Updates and fixes in v1.28.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.28.0)</li><li style="margin:0px; padding:0px">For the latest `Resources`, `Data sources`, `Enhancements`, and `Bug fixes`, see [Updates and fixes in v1.27.2](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.27.2)</li></ul></td>
+    </tr>
+  </tbody>
+  </table> 
 
 ## 9 June 2021
 {: #9-June-2021}
