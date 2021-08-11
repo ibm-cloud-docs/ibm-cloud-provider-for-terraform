@@ -124,11 +124,11 @@ Or
 ```
 Error: {{site.data.keyword.containershort_notm}} cluster unreachable: invalid configuration: no configuration has been provided
 ```
+{: tsSymptoms}
 
-{: tsCauses}
 You are combining the cluster provisioning and working with the {{site.data.keyword.containershort_notm}} provider at the same time in your Terraform template in the {{site.data.keyword.bplong_notm}} workspace or in your localhost. This causes the network and namespace issues.
+{: tsCauses}
 
-{: tsResolve}
 You make a change in the cluster configuration that leads to the cluster recreate. and when you run `terraform refresh` command, you can view strange errors such as, network or namespace issues.
 
 To troubleshoot this error you need to ensure:
@@ -138,5 +138,6 @@ To troubleshoot this error you need to ensure:
 - The resources should not be created in the same Terraform template or module where {{site.data.keyword.containershort_notm}} provider resources are in use.
 
 - The Terraform provider evaluates the provider blocks versus actual resource, and the order in which the resources are defined. For more information, see [Provider configuration](https://www.terraform.io/docs/language/providers/configuration.html#provider-configuration){: external}.
+{: tsResolve}
 
 If you cannot resolve this issue, contact support by opening a support case for the service that you want to work with. Make sure to include the incident ID. For more information, see [Using the Support Center](/docs/get-support?topic=get-support-using-avatar).
