@@ -112,7 +112,6 @@ content-type: troubleshoot
 # How can I resolve the network error when working with the {{site.data.keyword.containershort_notm}} provider?
 {: #ks-network-error}
 
-{: tsSymptoms}
 During the cluster upgrade from {{site.data.keyword.containershort}} older version to new version. The Terraform apply fails with the `TCP connection error message`.
 {: shortdesc}
 {: tsSymptoms}
