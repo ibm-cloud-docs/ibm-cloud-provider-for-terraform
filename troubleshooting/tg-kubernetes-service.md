@@ -125,13 +125,11 @@ Or
 Error: {{site.data.keyword.containershort_notm}} cluster unreachable: invalid configuration: no configuration has been provided
 ```
 
-You are combining the cluster provisioning and working with the {{site.data.keyword.containershort_notm}} provider at the same time in your Terraform template in the {{site.data.keyword.bplong_notm}} workspace or in your localhost. This causes the network and namespace issues.
+You are combining the cluster provisioning and working with the {{site.data.keyword.containershort_notm}} provider at the same time in your Terraform template in the {{site.data.keyword.bplong_notm}} workspace or in your localhost. You make a change in the cluster configuration that leads to the cluster recreate. When you run `terraform refresh` command, you view strange errors such as, network or namespace issues.
 {: tsCauses}
 
-You make a change in the cluster configuration that leads to the cluster recreate. and when you run `terraform refresh` command, you can view strange errors such as, network or namespace issues.
-{: tsResolve}
-
 To troubleshoot this error you need to ensure:
+{: tsResolve}
 
 - You don't combine the {{site.data.keyword.containershort_notm}} provider with the cluster resource at the same time in the Terraform template.
 
