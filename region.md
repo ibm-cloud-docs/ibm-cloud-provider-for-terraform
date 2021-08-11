@@ -114,9 +114,9 @@ content-type: troubleshoot
 
 In the {{site.data.keyword.cloud_notm}} global network of location. To achieve the highly available resources and service instances. You are forced to create resources in multiple regions, but with the same billing and usage. To achieve the low application latency, you may deploy your resources and applications to the location that are nearest to your customers. For more information, about location, see [about locations](/docs/overview?topic=overview-locations).
 {: shortdesc}
+{: tsSymptoms}
 
 You have set up your database in `us-east` region and provisioning a database backup in `us-south` region, the set up is working as expected. Whereas, when you provision a backup in `eu-de` region following error message are displayed.
-{: tsSymptoms}
 
 ```
 Error: Error creating database instance: Request failed with status code: 400, ServerErrorResponse: {"error_code":"RC-ServiceBrokerErrorResponse","message":"[500, Internal Server Error] We were unable to complete your request. Try again later or contact support if the issue persists.
