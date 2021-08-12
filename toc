@@ -9,7 +9,7 @@ Terraform on IBM Cloud
     about.md
     whats-new.md
      {: .navgroup-end}
-    
+
     {: .navgroup id="tutorial"}
     template_ov.md
     tutorials/clusters.md
