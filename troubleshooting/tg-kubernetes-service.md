@@ -2,11 +2,13 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-08-11"
 
-keywords: terraform provider plugin, terraform push notifications, ibm cloud provider notifications, push notifications resource
+keywords: question about kubernetes provider, troubleshooting guide, kubernetes service troubleshooting
 
 subcollection: ibm-cloud-provider-for-terraform
+
+content-type: troubleshoot
 
 ---
 
@@ -21,13 +23,16 @@ subcollection: ibm-cloud-provider-for-terraform
 {:app_url: data-hd-keyref="app_url"}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: .ph data-hd-programlang='c#'}
 {:c#: data-hd-programlang="c#"}
 {:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: #curl .ph data-hd-programlang='curl'}
 {:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
 {:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
+{:external: .external target="_blank"}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
 {:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
@@ -40,20 +45,28 @@ subcollection: ibm-cloud-provider-for-terraform
 {:hide-in-docs: .hide-in-docs}
 {:important: .important}
 {:ios: data-hd-operatingsystem="ios"}
+{:java: #java .ph data-hd-programlang='java'}
 {:java: .ph data-hd-programlang='java'}
 {:java: data-hd-programlang="java"}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
+{:middle: .ph data-hd-position='middle'}
+{:navgroup: .navgroup}
 {:new_window: target="_blank"}
+{:node: .ph data-hd-programlang='node'}
 {:note .note}
 {:note: .note}
+{:note:.deprecated}
 {:objectc data-hd-programlang="objectc"}
+{:objectc: .ph data-hd-programlang='Objective C'}
 {:org_name: data-hd-keyref="org_name"}
+{:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
 {:ruby: .ph data-hd-programlang='ruby'}
@@ -71,14 +84,18 @@ subcollection: ibm-cloud-provider-for-terraform
 {:shortdesc: .shortdesc}
 {:space_name: data-hd-keyref="space_name"}
 {:step: data-tutorial-type='step'}
+{:step: data-tutorial-type='step'} 
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift: #swift .ph data-hd-programlang='swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
+{:topicgroup: .topicgroup}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
@@ -92,54 +109,32 @@ subcollection: ibm-cloud-provider-for-terraform
 {:video: .video}
 
 
-# Push notifications data sources
-{: #pn-data-sources}
+# How can I resolve the network error when working with the {{site.data.keyword.containershort_notm}} provider?
+{: #ks-network-error}
 
-Before you start working with your data source, make sure to review the [required parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters) that you need to specify in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
-{: important}
-
-
-Review the data sources that you can use to retrieve information about the [push notifications](/docs/mobilepush?topic=mobilepush-gettingstartedtemplate). All data sources are imported as read-only information. You can reference the output parameters for each data source by using [Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html){: external}. 
+During the cluster upgrade from {{site.data.keyword.containershort}} older version to new version. The Terraform apply fails with the `TCP connection error message`.
 {: shortdesc}
-
-
-## `ibm_pn_application_chrome`
-{: #is-pn-appln-chrome}
-
-Configure push notifications resource for Chrome web platform. For more information, about push notifications for Chrome, see [Chrome applications](/docs/mobilepush?topic=mobilepush-push_step_2#push_step_2_chrome-apps).
-{: shortdesc}
-
-### Sample Terraform on {{site.data.keyword.cloud_notm}} code
-{: #is-pn-appln-chrome-dssample}
+{: tsSymptoms}
 
 ```
-data "pn_application_chrome" "pn_application_chrome" {
-	guid = "guid"
-}
+Error: Get "http://localhost/api/v1/": dial tcp [::1]:80: connect: connection refused
 ```
-{: codeblock}
 
-### Input parameters
-{: #is-pn-appln-chrome-dsinput}
+Or
+```
+Error: {{site.data.keyword.containershort_notm}} cluster unreachable: invalid configuration: no configuration has been provided
+```
 
-Review the input parameters that you can specify for your resource. 
-{: shortdesc}
+You are combining the cluster provisioning and working with the {{site.data.keyword.containershort_notm}} provider at the same time in your Terraform template in the {{site.data.keyword.bplong_notm}} workspace or in your localhost. You make a change in the cluster configuration that leads to the cluster recreate. When you run `terraform refresh` command, you view strange errors such as, network or namespace issues.
+{: tsCauses}
 
+To troubleshoot this error you need to ensure:
+{: tsResolve}
 
-| Input parameter | Data type | Required / optional | Description | 
-| ------------- |-------------| ----- | -------------- | 
-|`guid`| String| Required | The unique GUID of the application by using the push service.|
-{: caption="Table 1. Available input parameters" caption-side="top"}
+- You don't combine the {{site.data.keyword.containershort_notm}} provider with the cluster resource at the same time in the Terraform template.
 
-### Output parameters
-{: #is-pn-appln-chrome-dsoutput}
+- The resources should not be created in the same Terraform template or module where {{site.data.keyword.containershort_notm}} provider resources are in use.
 
-Review the output parameters that you can access after your resource is created. 
-{: shortdesc}
+- The Terraform provider evaluates the provider blocks versus actual resource, and the order in which the resources are defined. For more information, see [Provider configuration](https://www.terraform.io/docs/language/providers/configuration.html#provider-configuration){: external}.
 
-| Output parameter | Data type | Description |
-| ------------- |-------------| -------------- |
-|`id`| String | The unique identifier of the applications chrome.|
-|`server_key`| String | Server key that provides push notification service to authorize the access to Google services that is used for Chrome web push.|
-|`web_site_url`| String | The URL of the website or web application that should be permitted to subscribe to the web push.|
-{: caption="Table 1. Available output parameters" caption-side="top"}
+If you cannot resolve this issue, contact support by opening a support case for the service that you want to work with. Make sure to include the incident ID. For more information, see [Using the Support Center](/docs/get-support?topic=get-support-using-avatar).
