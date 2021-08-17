@@ -3,7 +3,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-16"
+lastupdated: "2021-08-17"
 
 keywords: terraform ownership, transferring terraform ownership, service ownership
 
@@ -114,17 +114,13 @@ subcollection: ibm-cloud-provider-for-terraform
 ## Executive summary
 {: #tf-exec-summary}
 
-This is the simple process to engage with IBM Cloud service teams and how to plan and update Terraform provider capabilities and features for the services. It includes
-engaging those teams that don't yet have the TF provider as required by Service Framework item UX030
-engaging those teams that need to pick up the current TF Provider support and keep it up-to-date
+This is the simple process to engage with IBM Cloud service teams and how to plan and update Terraform provider capabilities and features for the services. It includes engaging those teams that don't yet have the TF provider as required by Service Framework item UX030 engaging those teams that need to pick up the current TF Provider support and keep it up-to-date
 opening new requests & defects against those teams with regard to the service's TF providers
-
 
 ## Background
 {: #tf-background}
 
 IBM Cloud services are required under Service Framework item UX030 to create and maintain critical IBM Cloud automation integration with their service. Automation is a cornerstone of every Cloud, and also needs to be in IBM Cloud, it has been repeatedly confirmed that automation is critical to our largest IBM Cloud customers. This very simple process allows Service Teams and external / internal users of those services to act on these automation requirements, and to track the implementation commitments and delivery dates.
-
 
 ## Engagement actions
 {: #tf-engagement-actions}
@@ -133,7 +129,6 @@ There are several important interactions that "Service Teams" and "Terraform Use
 
 If you are a Service Team that is engaged with your own Service Provider work, go to "Service Teams".
 If you need a Service Team to handle a new request or problem, go to "End Users".
-
 
 ## Service teams
 {: #tf-svc-teams}
@@ -150,7 +145,6 @@ As required in the mandatory Service Framework item UX030, all IBM Cloud service
             - Handle all support tickets raised by customers
             - Use this AHA tagging: TF-service-create
 
-
 - **Task** Take ownership of the already existing Terraform Provider for their service
 - **Description** If the TF provider has been created, it needs to be taken over and owned by the Service team. SF UX030 has full details how to do that for the Service Team. As part of this activity, the teams are expected to
             - Take over the current Terraform support and keep it up-to-date
@@ -164,7 +158,6 @@ End users, internal or external, need things added and fixed. These track those 
 
 ## Query to track these: TF Service - Requests
 {: #track-requests}
-
 
 - **Task** Service Terraform Provider Request
 - **Description** The TF Provider for a given service doesn't handle something it should and needs to be enhanced
