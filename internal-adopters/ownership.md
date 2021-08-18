@@ -107,72 +107,85 @@ subcollection: ibm-cloud-provider-for-terraform
 {:video: .video}
 
 
-# Service teams verses Terraform provider
+# Service teams versus Terraform provider
 {: #tf-engagement-process}
 
 
 ## Executive summary
 {: #tf-exec-summary}
 
-This is the simple process to engage with the {{site.data.keyword.cloud}} service teams. To guide how to plan and update Terraform provider capabilities and features for the services. It includes engaging those teams that don't yet have the TF provider as required by Service Framework item UX030 engaging those teams that need to pick up the current TF Provider support and keep it up-to-date
-opening new requests & defects against those teams with regard to the service's TF providers
+This is the simple process to engage with the {{site.data.keyword.cloud}} service teams to plan and update Terraform provider capabilities and features for the services. This includes 
+- engaging those service teams that are yet to have the Terraform provider as required by [Service Framework item UX030](/docs/service-framework?topic=service-framework-one-cloud-3q20-updates#currency3q20-ux030-terraform-provider). 
+- engaging those teams that need to pick up the current Terraform provider support and keep the services up-to-date.
+- opening new requests and defects against those teams with regard to the service's Terraform providers.
+{: shortdesc}
 
 ## Background
 {: #tf-background}
 
-IBM Cloud services are required under Service Framework item UX030 to create and maintain critical IBM Cloud automation integration with their service. Automation is a cornerstone of every Cloud, and also needs to be in IBM Cloud, it has been repeatedly confirmed that automation is critical to our largest IBM Cloud customers. This very simple process allows Service Teams and external / internal users of those services to act on these automation requirements, and to track the implementation commitments and delivery dates.
+{{site.data.keyword.cloud_notm}} services are required under [Service Framework item UX030](/docs/service-framework?topic=service-framework-one-cloud-3q20-updates#currency3q20-ux030-terraform-provider) to create and maintain critical {{site.data.keyword.cloud_notm}} automation and integration with their services. 
+Automation is a cornerstone of every cloud, and also needs to be in {{site.data.keyword.cloud_notm}}, it has been repeatedly confirmed that automation is critical to our largest {{site.data.keyword.cloud_notm}} customers. This  process allows service teams, and external or internal users of those services to act on an automation requirements to track the implementation commitments and delivery dates.
 
 ## Engagement actions
 {: #tf-engagement-actions}
 
-There are several important interactions that "Service Teams" and "Terraform Users" can engage in with regard to Terraform Providers. AHA Epics will be created on Service Team AHA boards for tracking.
+There are several important interactions that `service teams` and `Terraform users` can engage in, with regard to Terraform providers. 
 
-If you are a Service Team that is engaged with your own Service Provider work, go to "Service Teams".
-If you need a Service Team to handle a new request or problem, go to "End Users".
+[AHA Epics](https://bigblue.aha.io/bookmarks/idea_grids/6978999499627562927/6978999940899169319) will be created on service team AHA boards for tracking.
+
+- If you are a service team that is engaged with your own service provider task, go to **Service Teams**.
+- If you need a service team to handle a new request or a problem, go to **End Users**.
 
 ## Service teams
 {: #tf-svc-teams}
 
-As required in the mandatory Service Framework item UX030, all IBM Cloud services need to create and maintain their Terraform Provider for their service. Some of been previous created for them and they need to take ownership, others have not been created and need to be started. This is the current tracking page for the overall service TF Provider ownership is here
+As required in the mandatory [Service Framework item UX030](/docs/service-framework?topic=service-framework-one-cloud-3q20-updates#currency3q20-ux030-terraform-provider), all {{site.data.keyword.cloud_notm}} services need to create and maintain their Terraform Provider for their service. Some of service created by the Terraform team, need to take ownership. The service team that have not been created need to start.Here is the current tracking page for the overall [service Terraform provider ownership](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-adopting-terraform-provider-in-the-service).
 
-## Query to track the Terraform service team ownership
+## Tracking the Terraform service team ownership
 {: #tf-query}
 
-- **Task** Create the Service Terraform Provider
-- **Description** If the TF provider has not already been created, it needs to be created. SF UX030 has full details how to do that for the Service Team. As part of this activity, the teams are expected to
-            - Create TF provider support for their service as per the guidelines.
-            - Include TF testing as part of their sanity test runs (for every release)
-            - Handle all support tickets raised by customers
-            - Use this AHA tagging: TF-service-create
+**Task** 
+Create the Service Terraform Provider
+**Description** 
+If the Terraform provider has not already been created, it needs to be created. [Service Framework item UX030](/docs/service-framework?topic=service-framework-one-cloud-3q20-updates#currency3q20-ux030-terraform-provider) has the complete information of how to do that for the service team. As part of this activity, the teams are expected to
+    - Create Terraform provider support for their service as per the guidelines.
+    - Include Terraform testing as part of their sanity test runs (for every release).
+    - Handle all support tickets raised by the customers.
+    - Use AHA tag as **TF-service-create**.
 
-- **Task** Take ownership of the already existing Terraform Provider for their service
-- **Description** If the TF provider has been created, it needs to be taken over and owned by the Service team. SF UX030 has full details how to do that for the Service Team. As part of this activity, the teams are expected to
-            - Take over the current Terraform support and keep it up-to-date
-            - Include TF testing as part of their sanity test runs (for every release)
-            - Handle all support tickets raised by customers. Use this AHA tagging: TF-service-ownership
+**Task** 
+Take ownership of the already existing Terraform Provider for their service
+**Description** 
+If the Terraform provider has been created, it needs to be taken over and owned by the service team. [Service Framework item UX030](/docs/service-framework?topic=service-framework-one-cloud-3q20-updates#currency3q20-ux030-terraform-provider) has the complete information of how to do that for the service team. As part of this activity, the teams are expected to
+    - Take over the current Terraform support and keep it up-to-date.
+    - Include Terraform testing as part of their sanity test runs (for every release).
+    - Handle all support tickets raised by the customers. 
+    - Use AHA tag as **TF-service-ownership**.
 
 ## End Users
 {: #end-users}
 
-End users, internal or external, need things added and fixed. These track those requests and defects to ensure proper attention.
+The end users, internal or external, need their services to be added and fixed. These tracks those requests and defects to ensure proper attention.
 
-## Query to track these: TF Service - Requests
+## Query to track these: Terraform Service - Requests
 {: #track-requests}
 
-- **Task** Service Terraform Provider Request
-- **Description** The TF Provider for a given service doesn't handle something it should and needs to be enhanced
-- **AHA tagging** Access AHA items, provide tag as `TF-service-enhancement`.
-    1. Access **Internal User action** Go here => TF Service - Requests & Defects
+**Task** 
+Service Terraform provider request
+**Description** 
+The Terraform Provider for a given service doesn't handle something it should and needs to be enhanced.
+**AHA tagging** Access AHA items and use AHA tag as `TF-service-enhancement`.
+    1. Access **Internal User action** Go here => Terraform Service - Requests & Defects
     2. Hit "Add Structured idea" blue button
     3. Workspace: "Schematics Service" 
     4. Name: <Brief information>
     5. Description: More details - who to talk to for reference or a Github or something would help, who exactly is requesting project it is for, external customer needing, etc - the more meta-data the more it helps. Refresh that link and make sure it shows up. This filters automatically on "needs review" so clear that filter if it's been changed and you want to find out where it is
 
-## Query to track these: TF Service - Defects
+## Query to track these: Terraform Service - Defects
 {: #track-defects}
 
 - **Task** Service Terraform provider defect
-- **Description** The TF Provider for the given service has a defect and it needs to be fixed
+- **Description** The Terraform Provider for the given service has a defect and it needs to be fixed
 - **AHA tagging** TF-service-defect
 
 **Internal User Action**
