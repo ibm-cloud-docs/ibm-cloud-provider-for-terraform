@@ -3,7 +3,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-17"
+lastupdated: "2021-08-18"
 
 keywords: terraform ownership, transferring terraform ownership, service ownership
 
@@ -107,14 +107,14 @@ subcollection: ibm-cloud-provider-for-terraform
 {:video: .video}
 
 
-# IBM Cloud service teams Terraform Provider engagement process
+# Service teams verses Terraform provider
 {: #tf-engagement-process}
 
 
 ## Executive summary
 {: #tf-exec-summary}
 
-This is the simple process to engage with IBM Cloud service teams and how to plan and update Terraform provider capabilities and features for the services. It includes engaging those teams that don't yet have the TF provider as required by Service Framework item UX030 engaging those teams that need to pick up the current TF Provider support and keep it up-to-date
+This is the simple process to engage with the {{site.data.keyword.cloud}} service teams. To guide how to plan and update Terraform provider capabilities and features for the services. It includes engaging those teams that don't yet have the TF provider as required by Service Framework item UX030 engaging those teams that need to pick up the current TF Provider support and keep it up-to-date
 opening new requests & defects against those teams with regard to the service's TF providers
 
 ## Background
