@@ -109,7 +109,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 
-# Sample Terraform on {{site.data.keyword.cloud_notm}} templates for {{site.data.keyword.cloud_notm}}
+# Sample Terraform on {{site.data.keyword.cloud_notm}} templates
 {: #sample_terraformtemplates}
 
 All Terraform on {{site.data.keyword.cloud_notm}} templates use the Terraform on {{site.data.keyword.cloud_notm}} version 0.12 format.
