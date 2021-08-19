@@ -3,7 +3,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-18"
+lastupdated: "2021-08-19"
 
 keywords: terraform ownership, transferring terraform ownership, service ownership
 
@@ -133,15 +133,15 @@ There are several important interactions that `service teams` and `Terraform use
 
 [AHA Epics](https://bigblue.aha.io/bookmarks/idea_grids/6978999499627562927/6978999940899169319) will be created on service team AHA boards for tracking.
 
-- If you are a service team that is engaged with your own service provider task, go to **Service Teams**.
-- If you need a service team to handle a new request or a problem, go to **End Users**.
+- If you are a service team that is engaged with your own service provider task, click [Service teams](#tf-svc-teams) to know more information.
+- If you need a service team to handle a new request or a problem, click [End users](#end-users) to know more information.
 
 ## Service teams
 {: #tf-svc-teams}
 
 As required in the mandatory [Service Framework item UX030](/docs/service-framework?topic=service-framework-one-cloud-3q20-updates#currency3q20-ux030-terraform-provider), all {{site.data.keyword.cloud_notm}} services need to create and maintain their Terraform Provider for their service. Some of service created by the Terraform team, need to take ownership. The service team that have not been created need to start.Here is the current tracking page for the overall [service Terraform provider ownership](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-adopting-terraform-provider-in-the-service).
 
-## Tracking the Terraform service team ownership
+### Tracking the Terraform service team ownership
 {: #tf-query}
 
 **Task** 
