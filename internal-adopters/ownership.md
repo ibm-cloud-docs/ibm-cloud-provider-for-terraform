@@ -164,7 +164,7 @@ As required in the mandatory [Service Framework item UX030](/docs/service-framew
 
 The end users, internal or external, need their services to be added and fixed. These tracks those requests and defects to ensure proper attention.
 
-### Query to track these: Terraform Service - Requests
+### Query to track Terraform service requests
 {: #track-requests}
 
 **Task** Service Terraform provider request
@@ -178,7 +178,7 @@ The end users, internal or external, need their services to be added and fixed. 
       - who exactly is requesting the project? For example, **external customer or internal enhancement**. 
       - refresh the link and make sure the description shows up. This filters automatically on **needs review**. You can clear that filter if it's been changed and you want to find out the status.
 
-### Query to track these: Terraform Service - Defects
+### Query to track Terraform service defects
 {: #track-defects}
 
 **Task** Service Terraform provider defect
