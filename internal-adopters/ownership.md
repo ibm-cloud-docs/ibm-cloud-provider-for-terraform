@@ -144,23 +144,20 @@ As required in the mandatory [Service Framework item UX030](/docs/service-framew
 ### Tracking the Terraform service team ownership
 {: #tf-query}
 
-**Task** 
-Create the Service Terraform Provider
-**Description** 
-If the Terraform provider has not already been created, it needs to be created. [Service Framework item UX030](/docs/service-framework?topic=service-framework-one-cloud-3q20-updates#currency3q20-ux030-terraform-provider) has the complete information of how to do that for the service team. As part of this activity, the teams are expected to
-    - Create Terraform provider support for their service as per the guidelines.
-    - Include Terraform testing as part of their sanity test runs (for every release).
-    - Handle all support tickets raised by the customers.
-    - Use AHA tag as **TF-service-create**.
+**Task** Create the Service Terraform Provider
+**Description** If the Terraform provider has not already been created, it needs to be created. [Service Framework item UX030](/docs/service-framework?topic=service-framework-one-cloud-3q20-updates#currency3q20-ux030-terraform-provider) has the complete information of how to do that for the service team. As part of this activity, the teams are expected to
+- create Terraform provider support for their service as per the guidelines.
+- include Terraform testing as part of their sanity test runs (for every release).
+- handle all support tickets raised by the customers.
+- use AHA tag as **TF-service-create**.
 
-**Task** 
-Take ownership of the already existing Terraform Provider for their service
-**Description** 
-If the Terraform provider has been created, it needs to be taken over and owned by the service team. [Service Framework item UX030](/docs/service-framework?topic=service-framework-one-cloud-3q20-updates#currency3q20-ux030-terraform-provider) has the complete information of how to do that for the service team. As part of this activity, the teams are expected to
-    - Take over the current Terraform support and keep it up-to-date.
-    - Include Terraform testing as part of their sanity test runs (for every release).
-    - Handle all support tickets raised by the customers. 
-    - Use AHA tag as **TF-service-ownership**.
+**Task** Take ownership of the already existing Terraform Provider for their service
+
+**Description** If the Terraform provider is created, service team need to take over the ownership. [Service Framework item UX030](/docs/service-framework?topic=service-framework-one-cloud-3q20-updates#currency3q20-ux030-terraform-provider) has the complete information of how to do that for the service team. As part of this activity, the teams are expected to
+- take over the current Terraform support and keep it up-to-date.
+- include Terraform testing as part of their sanity test runs (for every release).
+- handle all support tickets raised by the customers. 
+- use AHA tag as **TF-service-ownership**.
 
 ## End Users
 {: #end-users}
@@ -170,16 +167,16 @@ The end users, internal or external, need their services to be added and fixed. 
 ## Query to track these: Terraform Service - Requests
 {: #track-requests}
 
-**Task** 
-Service Terraform provider request
-**Description** 
-The Terraform Provider for a given service doesn't handle something it should and needs to be enhanced.
-**AHA tagging** Access AHA items and use AHA tag as `TF-service-enhancement`.
-    1. Access **Internal User action** Go here => Terraform Service - Requests & Defects
-    2. Hit "Add Structured idea" blue button
-    3. Workspace: "Schematics Service" 
-    4. Name: <Brief information>
-    5. Description: More details - who to talk to for reference or a Github or something would help, who exactly is requesting project it is for, external customer needing, etc - the more meta-data the more it helps. Refresh that link and make sure it shows up. This filters automatically on "needs review" so clear that filter if it's been changed and you want to find out where it is
+**Task** Service Terraform provider request
+**Description** The Terraform Provider for a given service doesn't handle something it should and needs to be enhanced.
+**AHA tagging** Access [AHA items](https://bigblue.aha.io/bookmarks/idea_grids/6978999499627562927/6978999940899169319){: external} and use AHA tag as `TF-service-enhancement`.
+   - Access **Internal User action**. click  **Terraform Service -> Requests and Defects**.
+   - Click **Add Structured idea** blue button. Provide your service name, for example, `Workspace **Schematics Service**` 
+   - Enter the brief information in the **Name** field. 
+   - Enter the short description having 
+      * whom to coordinate for reference or a Github or something would help?
+      * who exactly is requesting the project? For example, `external customer or internal enhancement`. 
+      * refresh the link and make sure the description shows up. This filters automatically on **needs review** so clear that filter if it's been changed and you want to find out where it is.
 
 ## Query to track these: Terraform Service - Defects
 {: #track-defects}
