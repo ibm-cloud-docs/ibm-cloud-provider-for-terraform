@@ -164,7 +164,7 @@ As required in the mandatory [Service Framework item UX030](/docs/service-framew
 
 The end users, internal or external, need their services to be added and fixed. These tracks those requests and defects to ensure proper attention.
 
-## Query to track these: Terraform Service - Requests
+### Query to track these: Terraform Service - Requests
 {: #track-requests}
 
 **Task** Service Terraform provider request
@@ -172,32 +172,31 @@ The end users, internal or external, need their services to be added and fixed. 
 **AHA tagging** Access [AHA items](https://bigblue.aha.io/bookmarks/idea_grids/6978999499627562927/6978999940899169319){: external} and use AHA tag as `TF-service-enhancement`.
    - Access **Internal User action**. click  **Terraform Service -> Requests and Defects**.
    - Click **Add Structured idea** blue button. Provide your service name, for example, `Workspace **Schematics Service**` 
-   - Enter the brief information in the **Name** field. 
-   - Enter the short description having 
-      * whom to coordinate for reference or a Github or something would help?
-      * who exactly is requesting the project? For example, `external customer or internal enhancement`. 
-      * refresh the link and make sure the description shows up. This filters automatically on **needs review** so clear that filter if it's been changed and you want to find out where it is.
+   - Enter the brief information in the **Name** field.
+   - Enter the short description having
+      - whom to coordinate for reference or a Github or something would help?
+      - who exactly is requesting the project? For example, **external customer or internal enhancement**. 
+      - refresh the link and make sure the description shows up. This filters automatically on **needs review**. You can clear that filter if it's been changed and you want to find out the status.
 
-## Query to track these: Terraform Service - Defects
+### Query to track these: Terraform Service - Defects
 {: #track-defects}
 
-- **Task** Service Terraform provider defect
-- **Description** The Terraform Provider for the given service has a defect and it needs to be fixed
-- **AHA tagging** TF-service-defect
+**Task** Service Terraform provider defect
+**Description** The Terraform Provider for the given service has a defect and it needs to be fixed
+**AHA tagging** Access [AHA items](https://bigblue.aha.io/bookmarks/idea_grids/6978999499627562927/6978999940899169319){: external} and use AHA tag as `TF-service-defect`.
 
-**Internal User Action**
+**Internal user action**
 
-Option 1: 
+Raise a [GitHub issue](https://github.com/IBM-Cloud/terraform-provider-ibm/issues). An IBMer can notify the Terraform team, by using  `#terraform-ibmcloud-users` slack channel. Non-IBMer can notify the Terraform team  by using the [public workspace](https://ibm-cloud-schematics.slack.com/archives/C4R15M6SZ.){: external}.
 
-Raise a github issue here - https://github.com/IBM-Cloud/terraform-provider-ibm/issues. An IBMer can notify the terraform team, using this #terraform-ibmcloud-users channel. Non-IBMer can notify the terraform team using this public workspace https://ibm-cloud-schematics.slack.com/archives/C4R15M6SZ.
-
-Please tag the issues with the appropriate Cloud Service name. The IBM Cloud Services team & the terraform team will respond.
-The Terraform team will triage the issues and will open up corresponding issues on the Service offering and update the issues here with the new service team open issue.
+You should tag the issues with the {{site.data.keyword.cloud_notm}} service name. The {{site.data.keyword.cloud_notm}} services team or the Terraform team will respond.<br>
+The Terraform team triage the issues and open up corresponding issues on the service offering and update the issues with the new service team.
 {: note}
 
 ## FAQ
-{: ownership-faq}
+{: #ownership-faq}
 
-**Questions** - Why Epics and not GitHub?
+### Why epics and not GitHub?
+{: #faq-epic}
 
-**Reply** - we dont know your github - so we open Epics and you create the github execution step
+The team don't know your GitHub. Thus you need to open epics and create the GitHub execution step.
