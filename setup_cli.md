@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-07-19"
+lastupdated: "2021-08-19"
 
 keywords: install Terraform on {{site.data.keyword.cloud_notm}} cli, set up Terraform on {{site.data.keyword.cloud_notm}} cli, ibm cloud provider plugin, Terraform on {{site.data.keyword.cloud_notm}}
 
@@ -18,15 +18,19 @@ subcollection: ibm-cloud-provider-for-terraform
 {:app_name: data-hd-keyref="app_name"}
 {:app_secret: data-hd-keyref="app_secret"}
 {:app_url: data-hd-keyref="app_url"}
+{:audio: .audio}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: .ph data-hd-programlang='c#'}
 {:c#: data-hd-programlang="c#"}
 {:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: #curl .ph data-hd-programlang='curl'}
 {:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
 {:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
+{:external: .external target="_blank"}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
 {:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
@@ -39,20 +43,26 @@ subcollection: ibm-cloud-provider-for-terraform
 {:hide-in-docs: .hide-in-docs}
 {:important: .important}
 {:ios: data-hd-operatingsystem="ios"}
+{:java: #java .ph data-hd-programlang='java'}
 {:java: .ph data-hd-programlang='java'}
 {:java: data-hd-programlang="java"}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
+{:middle: .ph data-hd-position='middle'}
+{:navgroup: .navgroup}
 {:new_window: target="_blank"}
-{:note .note}
+{:node: .ph data-hd-programlang='node'}
 {:note: .note}
-{:objectc data-hd-programlang="objectc"}
+{:objectc: .ph data-hd-programlang='Objective C'}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
+{:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
 {:ruby: .ph data-hd-programlang='ruby'}
@@ -70,8 +80,10 @@ subcollection: ibm-cloud-provider-for-terraform
 {:shortdesc: .shortdesc}
 {:space_name: data-hd-keyref="space_name"}
 {:step: data-tutorial-type='step'}
+{:step: data-tutorial-type='step'} 
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift: #swift .ph data-hd-programlang='swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
@@ -79,6 +91,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
+{:topicgroup: .topicgroup}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
@@ -108,36 +121,36 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform currently su
 {: note}
 
 1. Create a `terraform` folder on your local machine, and navigate to your `terraform` folder. 
-   ```
-   mkdir terraform && cd terraform
-   ```
-   {: pre}
-   
+    ```
+    mkdir terraform && cd terraform
+    ```
+    {: pre}
+
 2. Download the [Terraform version](https://releases.hashicorp.com/terraform){: external} that you want. 
 3. Extract the Terraform `zip` file and copy the files to your `terraform` directory. 
 4. Set the environment `PATH` variable to your Terraform files.
-   ```
-   export PATH=$PATH:$HOME/terraform
-   ```
-   {: pre}
-   
+    ```
+    export PATH=$PATH:$HOME/terraform
+    ```
+    {: pre}
+
 5. Verify that the installation is successful by using a `terraform` command.
-   ```
-   terraform
-   ```
-   {: pre}
+    ```
+    terraform
+    ```
+    {: pre}
 
-   Example output:
-   ```
-   Usage: terraform [-version] [-help] <command> [args]
+    Example output:
+    ```
+    Usage: terraform [-version] [-help] <command> [args]
 
-   The available commands for execution are listed below.
-   The most common, useful commands are shown first, followed by
-   less common or more advanced commands. If you're just getting
-   started with Terraform, stick with the common commands. For the
-   other commands, please read the help and docs before usage.
+    The available commands for execution are listed below.
+    The most common, useful commands are shown first, followed by
+    less common or more advanced commands. If you're just getting
+    started with Terraform, stick with the common commands. For the
+    other commands, please read the help and docs before usage.
 
-   Common commands:
+    Common commands:
     apply              Builds or changes infrastructure
     console            Interactive console for Terraform interpolations
     destroy            Destroy Terraform-managed infrastructure
@@ -160,19 +173,19 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform currently su
     version            Prints the Terraform version
     workspace          Workspace management
 
-   All other commands:
+    All other commands:
     0.12upgrade        Rewrites pre-0.12 module source code for v0.12
     debug              Debug output management (experimental)
     force-unlock       Manually unlock the terraform state
     push               Obsolete command for Terraform Enterprise legacy (v1)
     state              Advanced state management
 
-   ```
-   {: screen}
+    ```
+    {: screen}
 
-   To upgrade your Terraform templates from Terraform version 0.12 to 0.13, or v0.12 to v0.14, or v0.12 to v0.15, see [Upgrading your Terraform version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol#tf-0.1x-migration).
-   {: tip}
-   
+    To upgrade your Terraform templates from Terraform version 0.12 to 0.13, or v0.12 to v0.14, or v0.12 to v0.15, see [Upgrading your Terraform version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol#tf-0.1x-migration).
+    {: tip}
+
 6. [Install the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform](#install_provider).
 
 ## Installing the {{site.data.keyword.cloud_notm}} Provider plug-in
@@ -194,41 +207,41 @@ Create a `versions.tf` file with the following content and store it in your Git 
 **Syntax**:
 ```
 terraform {
-   required_providers {
-      ibm = {
-         source = "IBM-Cloud/ibm"
-         version = "<provider version>"       
-         }
+    required_providers {
+        ibm = {
+            source = "IBM-Cloud/ibm"
+            version = "<provider version>"       
+            }
     }
 }
 ```
 {: codeblock}
-   
+
 **Example**:
 ```
 terraform {
-   required_providers {
-      ibm = {
-         source = "IBM-Cloud/ibm"
-         version = "1.20.0"
-      }
+    required_providers {
+        ibm = {
+            source = "IBM-Cloud/ibm"
+            version = "1.20.0"
+        }
     }
 }
 ```
 {: codeblock} 
 
 Terraform supports `version` constraints to specify the range of acceptable versions to initialize. The version syntax format is specified as `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. The following operators are supported: 
-   
+
 |Operator|Description|
 |-------|---------|
 | `= (or no operator)`| Allows only extract version number. You cannot combine with other conditions. For example, `1.21.0`.|
 | `!=` | Excludes an exact version number. For example, `!=1.19.0`.|
 | `>, >=, <, <=` | Compares against a specified version, allows version for which the comparison is true. `Greater-than` requests newer version, and `less-than` requests older versions. For example, `>= 1.20.0 < 2.0.0`.|
 | `~>` | Allows only the rightmost version component to increment. For example, `~> 1.20.0` allows new patch releases within a specific minor patch releases like `1.20.1, 1.20.2, 1.20.3`, but not `1.21.0` release.|
-   
+
 If you are using Terraform on {{site.data.keyword.cloud_notm}} modules, you must add a `versions.tf` file to all the module folders. You can refer the Terraform provider block from the [provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest){: external}.
 {: note}
-   
+
 
 ### Terraform v0.12.x and earlier
 {: #install-provider-v12}
@@ -239,31 +252,33 @@ Complete the following steps to install the {{site.data.keyword.cloud_notm}} pro
 1. Download the latest version of the [{{site.data.keyword.cloud_notm}} provider plug-in](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
 2. Extract the `zip` file and retrieve the files.
 3. Create a hidden `plugins` folder on your local machine.
-   ```
-   mkdir -p $HOME/.terraform.d/plugins
-   ```
-   {: pre}
-   
+    ```
+    mkdir -p $HOME/.terraform.d/plugins
+    ```
+    {: pre}
+
 4. Move the {{site.data.keyword.cloud_notm}} Provider plug-in into your `plugins` folder.
-   ```
-   mv $HOME/<DOWNLOAD_FOLDER_NAME>/terraform-provider-ibm* $HOME/.terraform.d/plugins
-   ```
-   {: pre}
-   
+    ```
+    mv $HOME/<DOWNLOAD_FOLDER_NAME>/terraform-provider-ibm* $HOME/.terraform.d/plugins
+    ```
+    {: pre}
+
 5. Navigate to your `plugins` folder and verify that the installation is complete.
-   ```
-   cd $HOME/.terraform.d/plugins && ./terraform-provider-ibm_*
-   ```
-   {: pre}
-   
-   Example output: 
-   ```
-   2021/04/16 17:00:39 IBM Cloud Provider version 1.23.1  
-   This binary is a plugin. These are not meant to be executed directly.
-   Please execute the program that consumes these plugins, which will load any plugins automatically
-   ```
-   {: screen}
-   
+    ```
+    cd $HOME/.terraform.d/plugins && ./terraform-provider-ibm_*
+    ```
+    {: pre}
+
+    Example output: 
+    ```
+    2021/04/16 17:00:39 IBM Cloud Provider version 1.23.1  
+    This binary is a plugin. These are not meant to be executed directly.
+    Please execute the program that consumes these plugins, which will load any plugins automatically
+    ```
+    {: screen}
+
 6. [Configure the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference). The list of supported versions, see the [{{site.data.keyword.cloud_notm}} Provider plug-in releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
+
+
 
 

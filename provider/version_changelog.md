@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2021
-lastupdated: "2021-08-05"
+lastupdated: "2021-08-19"
 
 keywords: terraform, terraform provider release, terraform provider versions
 
@@ -19,6 +19,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {:app_name: data-hd-keyref="app_name"}
 {:app_secret: data-hd-keyref="app_secret"}
 {:app_url: data-hd-keyref="app_url"}
+{:audio: .audio}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
 {:c#: .ph data-hd-programlang='c#'}
@@ -52,11 +53,9 @@ subcollection: ibm-cloud-provider-for-terraform
 {:navgroup: .navgroup}
 {:new_window: target="_blank"}
 {:node: .ph data-hd-programlang='node'}
-{:note .note}
 {:note: .note}
-{:note:.deprecated}
-{:objectc data-hd-programlang="objectc"}
 {:objectc: .ph data-hd-programlang='Objective C'}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
 {:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
@@ -558,3 +557,5 @@ The following table shows the changes that are included in version 1.2.1 of the 
 | -------- | ------- | ----------- |
 | 1.2.0 | 1.2.1 | [See the release notes for the Terraform on {{site.data.keyword.cloud_notm}} version 1.2.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.2.1){: external}.|
 {: caption="Terraform on {{site.data.keyword.cloud_notm}} provider 1.2.1" caption-side="top"}
+
+

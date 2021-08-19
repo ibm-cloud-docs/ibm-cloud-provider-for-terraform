@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-26"
+lastupdated: "2021-08-19"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -19,15 +19,19 @@ subcollection: ibm-cloud-provider-for-terraform
 {:app_name: data-hd-keyref="app_name"}
 {:app_secret: data-hd-keyref="app_secret"}
 {:app_url: data-hd-keyref="app_url"}
+{:audio: .audio}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: .ph data-hd-programlang='c#'}
 {:c#: data-hd-programlang="c#"}
 {:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: #curl .ph data-hd-programlang='curl'}
 {:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
 {:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
+{:external: .external target="_blank"}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
 {:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
@@ -40,20 +44,26 @@ subcollection: ibm-cloud-provider-for-terraform
 {:hide-in-docs: .hide-in-docs}
 {:important: .important}
 {:ios: data-hd-operatingsystem="ios"}
+{:java: #java .ph data-hd-programlang='java'}
 {:java: .ph data-hd-programlang='java'}
 {:java: data-hd-programlang="java"}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
+{:middle: .ph data-hd-position='middle'}
+{:navgroup: .navgroup}
 {:new_window: target="_blank"}
-{:note .note}
+{:node: .ph data-hd-programlang='node'}
 {:note: .note}
-{:objectc data-hd-programlang="objectc"}
+{:objectc: .ph data-hd-programlang='Objective C'}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
+{:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
 {:ruby: .ph data-hd-programlang='ruby'}
@@ -71,14 +81,18 @@ subcollection: ibm-cloud-provider-for-terraform
 {:shortdesc: .shortdesc}
 {:space_name: data-hd-keyref="space_name"}
 {:step: data-tutorial-type='step'}
+{:step: data-tutorial-type='step'} 
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift: #swift .ph data-hd-programlang='swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
+{:topicgroup: .topicgroup}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
@@ -124,53 +138,53 @@ You can provide an API key for a service ID for all IAM-enabled services, includ
 To configure the `provider` block: 
 
 1. Choose how you want to configure the `provider` block. 
-   - **Option 1: Create a separate `provider.tf` file.** The information in this file is loaded by Terraform on {{site.data.keyword.cloud_notm}} and {{site.data.keyword.bplong_notm}}, and applied to all Terraform on {{site.data.keyword.cloud_notm}} configuration files that exist in the same GitHub directory or tape archive file (`.tar`). This approach is useful if you split out your infrastructure code across multiple files. 
-   - **Option 2: Add a `provider` block to your Terraform on {{site.data.keyword.cloud_notm}} configuration file.** You might choose this option if you prefer to specify the provider alongside with your variables and resources in one Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
+    - **Option 1: Create a separate `provider.tf` file.** The information in this file is loaded by Terraform on {{site.data.keyword.cloud_notm}} and {{site.data.keyword.bplong_notm}}, and applied to all Terraform on {{site.data.keyword.cloud_notm}} configuration files that exist in the same GitHub directory or tape archive file (`.tar`). This approach is useful if you split out your infrastructure code across multiple files. 
+    - **Option 2: Add a `provider` block to your Terraform on {{site.data.keyword.cloud_notm}} configuration file.** You might choose this option if you prefer to specify the provider alongside with your variables and resources in one Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
 
 2. Review what [credentials and information you must provide in the `provider` block to work with your resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters). {{site.data.keyword.bpshort}} automatically retrieves your {{site.data.keyword.cloud_notm}} API key so that you do not need to specify this information in your `provider` block. 
-   
+
 3. Create a `provider.tf` file or add the following code to your Terraform on {{site.data.keyword.cloud_notm}} configuration file. For a full list of supported parameters that you can set in the `provider` block, see the [{{site.data.keyword.cloud_notm}} provider reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-parameter-ov).
 
-   Example for VPC infrastructure resources: 
-   ```
-   provider "ibm" {
-     generation = 2
-     region = "<region_name>"
-   }
-   ```
-   {: codeblock}
-   
-   Example for classic infrastructure resources: 
-   ```
-   variable "iaas_classic_username" {
-      type = "string"
-   }
-   variable "iaas_classic_api_key" {
-      type = "string"
-   }
+    Example for VPC infrastructure resources: 
+    ```
+    provider "ibm" {
+        generation = 2
+        region = "<region_name>"
+    }
+    ```
+    {: codeblock}
 
-   provider "ibm" {
-     region = "<region_name>"
-     iaas_classic_username = var.iaas_classic_username
-     iaas_classic_api_key  = var.iaas_classic_api_key
-   }
-   ```
-   {: codeblock}
-   
-   Example for all {{site.data.keyword.containerlong_notm}} resources:
-   ```
-   provider "ibm" {
-   }
-   ```
-   {: codeblock}
-   
-   Example for all other resources:
-   ```
-   provider "ibm" {
-     region = "<region_name>"
-   }
-   ```
-   {: codeblock}
+    Example for classic infrastructure resources: 
+    ```
+    variable "iaas_classic_username" {
+        type = "string"
+    }
+    variable "iaas_classic_api_key" {
+        type = "string"
+    }
+
+    provider "ibm" {
+        region = "<region_name>"
+        iaas_classic_username = var.iaas_classic_username
+        iaas_classic_api_key  = var.iaas_classic_api_key
+    }
+    ```
+    {: codeblock}
+
+    Example for all {{site.data.keyword.containerlong_notm}} resources:
+    ```
+    provider "ibm" {
+    }
+    ```
+    {: codeblock}
+
+    Example for all other resources:
+    ```
+    provider "ibm" {
+        region = "<region_name>"
+    }
+    ```
+    {: codeblock}
 
 ## Adding {{site.data.keyword.cloud_notm}} resources to the `resource` block
 {: #configure-resources}
@@ -183,7 +197,7 @@ To support a multi-cloud approach, Terraform on {{site.data.keyword.cloud_notm}}
 Example infrastructure code for provisioning a VPC: 
 ```
 resource ibm_is_vpc "vpc" {
-  name = "myvpc"
+    name = "myvpc"
 }
 ```
 {: codeblock}
@@ -200,29 +214,29 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 
 - **Resources**: To create a resource, you use the resource definition in the {{site.data.keyword.cloud_notm}} Provider plug-in reference. A resource definition includes the syntax for configuring your {{site.data.keyword.cloud_notm}} resources and an **Attributes reference** that shows the properties that you can reference as input parameters in other resource blocks. For example, when you create a VPC, the ID of the VPC is made available after the creation. You can use the ID as an input parameter when you create a subnet for your VPC. Use this option if you combine multiple resources in one Terraform on {{site.data.keyword.cloud_notm}} configuration file.  </br>
 
-  Example infrastructure code: 
-  ```
-  resource ibm_is_vpc "vpc" {
-    name = "myvpc"
-  }
+    Example infrastructure code: 
+    ```
+    resource ibm_is_vpc "vpc" {
+        name = "myvpc"
+    }
 
-  resource ibm_is_security_group "sg1" {
-    name = "mysecuritygroup"
+    resource ibm_is_security_group "sg1" {
+        name = "mysecuritygroup"
     vpc  = ibm_is_vpc.vpc.id
-  }
-  ```
-  {: codeblock}
+    }
+    ```
+    {: codeblock}
 
 - **Data sources**: You can also use the data sources from the {{site.data.keyword.cloud_notm}} Provider plug-in reference to retrieve information about an existing {{site.data.keyword.cloud_notm}} resource. Review the **Argument reference** section in the {{site.data.keyword.cloud_notm}} Provider plug-in reference to see what input parameters you must provide to retrieve an existing resource. Then, review the **Attributes reference** section to find an overview of parameters that are made available to you and that you can reference in your `resource` blocks. Use this option if you want to access the details of a resource that is configured in another Terraform on {{site.data.keyword.cloud_notm}} configuration file. 
-  
-  Example infrastructure code: 
-  ```
-  data ibm_is_image "ubuntu" {
-    name = "ubuntu-18.04-amd64"
-  }
-  
-  resource ibm_is_instance "vsi1" {
-    name    = "$mysi"
+
+    Example infrastructure code: 
+    ```
+    data ibm_is_image "ubuntu" {
+        name = "ubuntu-18.04-amd64"
+    }
+
+    resource ibm_is_instance "vsi1" {
+        name    = "$mysi"
     vpc     = ibm_is_vpc.vpc.id
     zone    = "us-south1"
     keys    = [data.ibm_is_ssh_key.ssh_key_id.id]
@@ -230,12 +244,12 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
     profile = "cc1-2x4"
 
     primary_network_interface {
-      subnet          = ibm_is_subnet.subnet1.id
-      security_groups = [ibm_is_security_group.sg1.id]
+        subnet          = ibm_is_subnet.subnet1.id
+        security_groups = [ibm_is_security_group.sg1.id]
     }
-  }
-  ```
-  {: codeblock}
+    }
+    ```
+    {: codeblock}
 
 
 ## Using `variable` blocks to customize resources
@@ -256,8 +270,8 @@ Yes. If you define input variables in your Terraform on {{site.data.keyword.clou
 Example variable declaration without a Default value is 
 ```
 variable "datacenter" {
-  type        = "string"
-  description = "The data center that you want to deploy your Kubernetes cluster in."
+    type        = "string"
+    description = "The data center that you want to deploy your Kubernetes cluster in."
 }
 ```
 {: codeblock}
@@ -265,9 +279,9 @@ variable "datacenter" {
 Example variable declaration with a Default value is 
 ```
 variable "datacenter" {
-  type        = "string"
-  description = "The data center that you want to deploy your Kubernetes cluster in."
-  default = "dal10"
+    type        = "string"
+    description = "The data center that you want to deploy your Kubernetes cluster in."
+    default = "dal10"
 }
 ```
 {: codeblock}
@@ -281,8 +295,8 @@ Example for referencing a `datacenter` variable:
 
 ```
 resource ibm_container_cluster "test_cluster" {
-  name         = "test"
-  datacenter   = var.datacenter
+    name         = "test"
+    datacenter   = var.datacenter
 }
 ```
 {: codeblock}
@@ -298,9 +312,9 @@ Your Terraform on {{site.data.keyword.cloud_notm}} configuration files contain i
 {: shortdesc}
 
 Cloning GitHub repository in {{site.data.keyword.bplong_notm}} is allowed only to the listed extension files. The blocked extension files having more than 500 KB in size, and any invalid image is considered as vulnerable files while cloning.
--	Allowed extension: `.tf` `.tfvars` `.md` `.yaml` `.sh` `.txt` `.yml` `.html` `.tf` `.json` `.gitignore` `license` `.js` `.pub` `.service` `_rsa`
--	Blocked extension: `.php5` `.pht` `.phtml` `.shtml` `.asa` `.cer` `.asax` `.swf` `.xap` `.tfstate` `.tfstate.backup`
--	Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg` 
+-    Allowed extension: `.tf` `.tfvars` `.md` `.yaml` `.sh` `.txt` `.yml` `.html` `.tf` `.json` `.gitignore` `license` `.js` `.pub` `.service` `_rsa`
+-    Blocked extension: `.php5` `.pht` `.phtml` `.shtml` `.asa` `.cer` `.asax` `.swf` `.xap` `.tfstate` `.tfstate.backup`
+-    Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg` 
 
 
 The directory structure of the Terraform on {{site.data.keyword.cloud_notm}} template in the GitHub repository looks like listed in the table with the last updated time.
@@ -312,4 +326,6 @@ The directory structure of the Terraform on {{site.data.keyword.cloud_notm}} tem
 | output.tf | Create output.tf |
 | provider.tf | Create provider.tf |
 | variables.tf | Create variables.tf |
+
+
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-08-19"
 
 keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, Terraform on {{site.data.keyword.cloud_notm}}, provision resources
 
@@ -19,15 +19,19 @@ subcollection: ibm-cloud-provider-for-terraform
 {:app_name: data-hd-keyref="app_name"}
 {:app_secret: data-hd-keyref="app_secret"}
 {:app_url: data-hd-keyref="app_url"}
+{:audio: .audio}
 {:authenticated-content: .authenticated-content}
 {:beta: .beta}
+{:c#: .ph data-hd-programlang='c#'}
 {:c#: data-hd-programlang="c#"}
 {:cli: .ph data-hd-interface='cli'}
 {:codeblock: .codeblock}
+{:curl: #curl .ph data-hd-programlang='curl'}
 {:curl: .ph data-hd-programlang='curl'}
 {:deprecated: .deprecated}
 {:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
 {:download: .download}
+{:external: .external target="_blank"}
 {:external: target="_blank" .external}
 {:faq: data-hd-content-type='faq'}
 {:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
@@ -40,20 +44,26 @@ subcollection: ibm-cloud-provider-for-terraform
 {:hide-in-docs: .hide-in-docs}
 {:important: .important}
 {:ios: data-hd-operatingsystem="ios"}
+{:java: #java .ph data-hd-programlang='java'}
 {:java: .ph data-hd-programlang='java'}
 {:java: data-hd-programlang="java"}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:javascript: data-hd-programlang="javascript"}
+{:middle: .ph data-hd-position='middle'}
+{:navgroup: .navgroup}
 {:new_window: target="_blank"}
-{:note .note}
+{:node: .ph data-hd-programlang='node'}
 {:note: .note}
-{:objectc data-hd-programlang="objectc"}
+{:objectc: .ph data-hd-programlang='Objective C'}
+{:objectc: data-hd-programlang="objectc"}
 {:org_name: data-hd-keyref="org_name"}
+{:php: .ph data-hd-programlang='PHP'}
 {:php: data-hd-programlang="php"}
 {:pre: .pre}
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
 {:ruby: .ph data-hd-programlang='ruby'}
@@ -71,14 +81,18 @@ subcollection: ibm-cloud-provider-for-terraform
 {:shortdesc: .shortdesc}
 {:space_name: data-hd-keyref="space_name"}
 {:step: data-tutorial-type='step'}
+{:step: data-tutorial-type='step'} 
 {:subsection: outputclass="subsection"}
 {:support: data-reuse='support'}
+{:swift: #swift .ph data-hd-programlang='swift'}
 {:swift: .ph data-hd-programlang='swift'}
 {:swift: data-hd-programlang="swift"}
 {:table: .aria-labeledby="caption"}
 {:term: .term}
+{:terraform: .ph data-hd-interface='terraform'}
 {:tip: .tip}
 {:tooling-url: data-tooling-url-placeholder='tooling-url'}
+{:topicgroup: .topicgroup}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
@@ -104,7 +118,7 @@ View the versions that are associated in the Terraform on {{site.data.keyword.cl
 
 ## Upgrading the Terraform on {{site.data.keyword.cloud_notm}} version
 {: #tf-0.1x-migration}
-  
+
 You can upgrade your Terraform on {{site.data.keyword.cloud_notm}}, for example, `Terraform v0.12 to Terraform v0.13`. With the release of Terraform on {{site.data.keyword.cloud_notm}} v0.13, the syntax for configuration files have changed.
 {: shortdesc}
 
@@ -112,59 +126,59 @@ Complete the following steps to upgrade your configuration files:
 
 1. Follow the [instructions](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli) to install existing Terraform on {{site.data.keyword.cloud_notm}} and the latest version of the Terraform on {{site.data.keyword.cloud_notm}}.
 2. Copy your existing Terraform on {{site.data.keyword.cloud_notm}} version configuration files into your Terraform on {{site.data.keyword.cloud_notm}} working directory. 
-   ```
-   mv <tf_config_file_path> $HOME/terraform
-   ```
-   {: codeblock}
-   
+    ```
+    mv <tf_config_file_path> $HOME/terraform
+    ```
+    {: codeblock}
+
 3. Use the Terraform on {{site.data.keyword.cloud_notm}} upgrade command to automatically apply the new syntax to your Terraform on {{site.data.keyword.cloud_notm}} configuration files. 
-  
-   **Syntax**
-   ```
-   terraform <0.xx>upgrade
-   ```
-   {: codeblock}
 
-   **Example to upgrade Terraform on {{site.data.keyword.cloud_notm}} v0.12 to Terraform on {{site.data.keyword.cloud_notm}} v0.13**
-   ```
-   terraform 0.13upgrade
-   ```
-   {: codeblock}
-   
-   Example output: 
-   ```
-   This command rewrites the configuration files in the given directory to
-   use the new syntax features from Terraform on {{site.data.keyword.cloud_notm}} v0.12, and identify
-   any constructs that may need to be adjusted for correct operation with
-   Terraform on {{site.data.keyword.cloud_notm}} v0.13.
+    **Syntax**
+    ```
+    terraform <0.xx>upgrade
+    ```
+    {: codeblock}
 
-   We recommend to use this command in a clean version control work tree, so that
-   you can easily see the proposed changes as a diff against the latest commit.
-   If you have uncommited changes already present, we recommend aborting this
-   command and dealing with them before running this command again.
+    **Example to upgrade Terraform on {{site.data.keyword.cloud_notm}} v0.12 to Terraform on {{site.data.keyword.cloud_notm}} v0.13**
+    ```
+    terraform 0.13upgrade
+    ```
+    {: codeblock}
 
-   Would you like to upgrade the module in the current directory?
-     Only 'yes' is accepted to confirm.
+    Example output: 
+    ```
+    This command rewrites the configuration files in the given directory to
+    use the new syntax features from Terraform on {{site.data.keyword.cloud_notm}} v0.12, and identify
+    any constructs that may need to be adjusted for correct operation with
+    Terraform on {{site.data.keyword.cloud_notm}} v0.13.
 
-     Enter a value: yes
+    We recommend to use this command in a clean version control work tree, so that
+    you can easily see the proposed changes as a diff against the latest commit.
+    If you have uncommited changes already present, we recommend aborting this
+    command and dealing with them before running this command again.
 
-   -----------------------------------------------------------------------------
+    Would you like to upgrade the module in the current directory?
+        Only 'yes' is accepted to confirm.
 
-   Upgrade complete!
+        Enter a value: yes
 
-   The configuration files were upgraded successfully. Use your version control
-   system to review the proposed changes, make any necessary adjustments, and
-   then commit.
-   ```
-   {: screen}
+    -----------------------------------------------------------------------------
+
+    Upgrade complete!
+
+    The configuration files were upgraded successfully. Use your version control
+    system to review the proposed changes, make any necessary adjustments, and
+    then commit.
+    ```
+    {: screen}
 
 4. Verify `versions.tf` file is generated as shown in the example.
 
-   **Example versions.tf:**
+    **Example versions.tf:**
 
-   ```
-   terraform {
-      required_providers {
+    ```
+    terraform {
+        required_providers {
         ibm = {
           # TF-UPGRADE-TODO
           #
@@ -177,11 +191,11 @@ Complete the following steps to upgrade your configuration files:
           #
           # https://www.terraform.io/docs/configuration/providers.html#provider-source
         }
-      }
-      required_version = ">= 0.13"
+        }
+        required_version = ">= 0.13"
     }
-   ```
-   {: codeblock}
+    ```
+    {: codeblock}
 
 5. Edit the `versions.tf` configuration file. Comment out `source = "your-registry.example.com/organization/ibm"` parameter and provide source value as `source = "IBM-Cloud/ibm"` as shown in the example. For more information, about the provider registry, see [IBM Cloud provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest){: external}.
 
@@ -189,7 +203,7 @@ Complete the following steps to upgrade your configuration files:
 
     ```
     terraform {
-      required_providers {
+        required_providers {
         ibm = {
           # TF-UPGRADE-TODO
           #
@@ -202,9 +216,9 @@ Complete the following steps to upgrade your configuration files:
           #
           # https://www.terraform.io/docs/configuration/providers.html#provider-source
         }
-      }
-      required_version = ">= 0.13"
-     }
+        }
+        required_version = ">= 0.13"
+        }
     ```
     {: codeblock}
 
@@ -220,5 +234,7 @@ The versions that are associated with the resources and data sources are:
 
 With the release of Terraform on {{site.data.keyword.cloud_notm}} version 0.12, the syntax for configuration files changed. If you want to run your infrastructure code by using Terraform on {{site.data.keyword.cloud_notm}} version 0.12, you must first [update your configuration files](#tf-0.1x-migration) to apply the new syntax. 
 {: important}
+
+
 
 
