@@ -23,8 +23,8 @@
         "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-on-ibm-cloud-resources-and-data-sources"
       },
       {
-      "title": "Browse Terrafom template from private catalogs",
-      "description": "Use one of the Terraform templates from private catalogs to quickly provision IBM Cloud services.",
+      "title": "Browse Terrafom templates",
+      "description": "Explore the sample Terraform templates, onboard them to your private catalogs, and try them using Schematics.",
       "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-catalog-template"
       },
       {
