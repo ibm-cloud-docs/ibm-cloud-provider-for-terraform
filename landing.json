@@ -28,11 +28,6 @@
       "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-catalog-template"
       },
       {
-        "title": "Browse sample Terraform templates",
-        "description": "Use one of the IBM-provided Terraform templates to quickly provision IBM Cloud services with Terraform. ",
-        "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_terraformtemplates"
-      },
-      {
         "title": "Create Kubernetes and OpenShift clusters",
         "description": "Learn how to create single and multizone IBM Cloud Kubernetes Service or Red Hat OpenShift on IBM Cloud clusters with Terraform.",
         "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters"
