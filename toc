@@ -11,7 +11,7 @@ Terraform on IBM Cloud
     {: .navgroup-end}
 
     {: .navgroup id="tutorial"}
-    template_ov.md
+    provider-template.md
     tutorials/clusters.md
     tutorials/install_redhat_openshift.md
     provision-vsi-vpc.md
