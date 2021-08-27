@@ -34,24 +34,10 @@ Learn about the latest changes to the Terraform on {{site.data.keyword.cloud_not
 
 |Date|Description|
 |-----|---------|
-|27 August 2021 |<ul><li>**Use sample Terraform templates and onboard to private catalog** Terraform supports [sample Terraform templates to deploy into {{site.data.keyword.bpshort}} workspace](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-sample) and [automate to onboard Terraform templates to private catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-onboard).</li><li>**For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**.** see [Updates and fixes in v1.30.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.30.1)</li><li>**For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**.** see [Updates and fixes in v1.30.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.30.1)</li></ul> |
-|17 August 2021 |<ul><li><li>**For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**.** see [Updates and fixes in v1.30.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.30.0)</li></ul> |
+|27 August 2021 |<ul><li>**Use sample Terraform templates and onboard to private catalog** Terraform supports [sample Terraform templates to deploy into {{site.data.keyword.bpshort}} workspace](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-sample) and [automate to onboard Terraform templates to private catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-onboard).</li><li>**For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**.** see [Updates and fixes in v1.30.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.30.1)</li></ul> |
+|17 August 2021 |<ul><li>**For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**.** see [Updates and fixes in v1.30.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.30.0)</li></ul> |
 {: caption="What's new in August" caption-side="top"}
 
-
-## 17 August 2021
-{: #17-Aug-2021}
-
-<table>
-    <thead>
-    <th style="width:80px">Releases, updates and enhancements</th>
-    </thead>
-    <tbody>
-        <tr>
-        <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">For the latest <code>Resources</code>, <code>Data sources</code>, <code>Enhancements</code>, and <code>Bug fixes</code>, see <a href="https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.30.0">Updates and fixes in v1.30.0</a></li></ul></td>
-    </tr>
-    </tbody>
-    </table> 
 
 ## 31 July 2021
 {: #31-July-2021}
