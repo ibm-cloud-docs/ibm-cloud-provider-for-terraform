@@ -126,7 +126,7 @@ For more information, about how the Ansible based automation is configured to lo
 ## Using sample templates
 {: #provider-sample}
 
-The following sample templates allows you to provision your resource by using {{site.data.keyword.bpshort}}. 
+The following sample templates allows you to provision your resource by using {{site.data.keyword.bpshort}} workspace. 
 
 In the **Workspace details** page, click **Next** button to view the **Create** button active to create {{site.data.keyword.bpshort}} workspace.
 {: note}
