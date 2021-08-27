@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-19"
+lastupdated: "2021-08-27"
 
 keywords: terraform resources, terraform modules, terraform provider, terraform autodeploy, 
 
@@ -27,6 +27,17 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #new-in-terraform}
 
 Learn about the latest changes to the Terraform on {{site.data.keyword.cloud_notm}} service that are grouped by month.
+
+
+## August 2021
+{: #aug-2021}
+
+|Date|Description|
+|-----|---------|
+|27 August 2021 |<ul><li>**Use sample Terraform templates and onboard to private catalog** Terraform supports [sample Terraform templates to deploy into {{site.data.keyword.bpshort}} workspace](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-sample) and [automate to onboard Terraform templates to private catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-onboard).</li><li>**For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**.** see [Updates and fixes in v1.30.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.30.1)</li><li>**Enhancements:** {{site.data.keyword.cloud_notm}} Provider now supports Terraform v1.0</li></ul> |
+|17 August 2021 |<ul><li>**For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**.** see [Updates and fixes in v1.30.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.30.0)</li></ul> |
+{: caption="What's new in August" caption-side="top"}
+
 
 ## 31 July 2021
 {: #31-July-2021}

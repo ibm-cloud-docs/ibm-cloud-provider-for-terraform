@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-19"
+lastupdated: "2021-08-27"
 
 keywords: install Terraform on {{site.data.keyword.cloud_notm}} cli, set up Terraform on {{site.data.keyword.cloud_notm}} cli, ibm cloud provider plugin, Terraform on {{site.data.keyword.cloud_notm}}
 
@@ -62,6 +62,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:release-note: data-hd-content-type='release-note'}
 {:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
@@ -183,7 +184,7 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform currently su
     ```
     {: screen}
 
-    To upgrade your Terraform templates from Terraform version 0.12 to 0.13, or v0.12 to v0.14, or v0.12 to v0.15, see [Upgrading your Terraform version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol#tf-0.1x-migration).
+    To upgrade your Terraform templates from Terraform version 0.12 to 0.13, or v0.12 to v0.14, v0.12 to v0.15, or v0.15 to v1.0, see [Upgrading your Terraform version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol#tf-0.1x-migration).
     {: tip}
 
 6. [Install the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform](#install_provider).
