@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-24"
+lastupdated: "2021-09-01"
 
 keywords: terraform templates, schematics template
 
@@ -64,6 +64,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:release-note: data-hd-content-type='release-note'}
 {:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
@@ -154,31 +155,31 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}` following action
 ## Certificate Manager templates
 {: #cert-mgr-template}
 
-    <table>
+<table>
     <thead>
     <th style="width:60px">Name</th>
     <th style="width:250px">Description and resources</th>
     <th style="width:150px">Access</th>
     </thead>
-    <tbody>
+<tbody>
     <tr>
     <td><code>ibm-certificate-manager-order</code></td>
         <td> Create an {{site.data.keyword.cis_full_notm}} instance with a domain, and use <a href="/docs/certificate-manager?topic=certificate-manager-about-certificate-manager">IBM Cloud Certificate Manager</a> to generate a TLS certificate for this domain.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_resource_instance</code></li><li style="margin:0px; padding:0px"><code>ibm_cis</code></li><li style="margin:0px; padding:0px"><code>ibm_cis_domain</code></li><li style="margin:0px; padding:0px"><code>ibm_certificate_manager_order</code></li></ul></td>
         <td><a href="https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-certificate-manager/ibm-certificate-manager-order"><img alt="View Git Hub" src="/images/viewgithub.png"></a><br><br><a href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-certificate-manager/ibm-certificate-manager-order&terraform_version=terraform_v0.12"><img alt="Deploy to Schematics" src="/images/deploytoschematics.png"></a></td>
         </tr>
-    </tbody>
-    </table>
+</tbody>
+</table>
 
 ## Cloud Foundry templates
 {: #cloud-foundry-template}
 
-    <table>
+<table>
     <thead>
     <th style="width:60px">Name</th>
     <th style="width:250px">Description and resources</th>
     <th style="width:150px">Access</th>
     </thead>
-    <tbody>
+<tbody>
         <tr>
         <td><code>ibm-app</code></td>
         <td>Create and deploy a Cloud Foundry app in {{site.data.keyword.cloud_notm}}.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>null_resource</code></li><li style="margin:0px; padding:0px"><code>ibm_app_route</code></li><li style="margin:0px; padding:0px"><code>ibm_service_instance</code></li><li style="margin:0px; padding:0px"><code>ibm_service_key</code></li><li style="margin:0px; padding:0px"><code>ibm_app</code></li></ul></td>
@@ -191,38 +192,38 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}` following action
 ## Direct Link templates
 {: #dl-template}
 
-    <table>
+<table>
     <thead>
     <th style="width:60px">Name</th>
     <th style="width:250px">Description and resources</th>
     <th style="width:150px">Access</th>
     </thead>
-    <tbody>
+<tbody>
     <tr>
         <td><code>ibm-dl-gateway</code></td>
         <td>Create a speed and reliable direct link gateways, virtual connections, offering information, routers, and ports by using the resources.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_dl_gateway</code></li><li style="margin:0px; padding:0px"><code>ibm_dl_virtual_connection</code></li><li style="margin:0px; padding:0px"><code>ibm_is_vpc</code></li></ul></td>
         <td><a href="https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-direct-link"><img alt="View Git Hub" src="/images/viewgithub.png"></a><br><br><a href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-direct-link&terraform_version=terraform_v0.12"><img alt="Deploy to Schematics" src="/images/deploytoschematics.png"></a></td>
     </tr>
-    </tbody>
-    </table>
+</tbody>
+</table>
 
 ## Event Streams templates
 {: #event-stream-template}
 
-    <table>
+<table>
     <thead>
     <th style="width:60px">Name</th>
     <th style="width:250px">Description and resources</th>
     <th style="width:150px">Access</th>
     </thead>
-    <tbody>
+<tbody>
     <tr>
         <td><code>ibm-event-streams</code></td>
         <td>Create a communication through an Event Streams instance, topic instance, or Kafka consumer application to connect an existing event stream instances and its topic instance by using {{site.data.keyword.bplong_notm}} workspace.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_resource_instance</code></li><li style="margin:0px; padding:0px"><code>ibm_event_streams_topic</code></li><li style="margin:0px; padding:0px"><code>kafka_consumer_app</code></li></ul></td>
         <td><a href="https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-event-streams"><img alt="View Git Hub" src="/images/viewgithub.png"></a><br><br><a href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-event-streams&terraform_version=terraform_v0.12"><img alt="Deploy to Schematics" src="/images/deploytoschematics.png"></a></td>
     </tr>
-    </tbody>
-    </table>
+</tbody>
+</table>
 
 
 ## Functions templates
@@ -234,7 +235,7 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}` following action
     <th style="width:250px">Description and resources</th>
     <th style="width:150px">Access</th>
     </thead>
-    <tbody>
+<tbody>
         <tr>
     <td><code>ibm-function-cloudant-trigger</code></td>
     <td>Create a Cloudant NoSQL service instance and a Python app deployment that creates the <code>database demo</code> database in your service instance. Then, you create an action with {{site.data.keyword.cloud_notm}} functions that is triggered when you add or edit documents to your database.<br><br><strong>Resources</strong><br>
@@ -251,19 +252,19 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}` following action
         </ul></td>
     <td><a href="https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-function-cloudant-trigger"><img alt="View Git Hub" src="/images/viewgithub.png"></a><br><br><a href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-function-cloudant-trigger&terraform_version=terraform_v0.12"><img  alt="Deploy to Schematics" src="/images/deploytoschematics.png"></a></td>
     </tr>
-    </tbody>
-    </table>
+</tbody>
+</table>
 
 ## Identity & Access (IAM) templates
 {: #iam-template}
 
-    <table>
+<table>
     <thead>
     <th style="width:60px">Name</th>
     <th style="width:250px">Description and resources</th>
     <th style="width:150px">Access</th>
     </thead>
-    <tbody>
+<tbody>
     <tr>
         <td><code>ibm-iam-custom-role</code></td>
         <td>Create a custom role in IBM Cloud Identity and Access Management (IAM) for IBM Cloud Key Protect.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_iam_custom_role</code></li></ul></td>
@@ -274,26 +275,26 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}` following action
         <td>Create an access policy in IBM Cloud Identity and Access Management (IAM) to grant permissions for a resource group to a user.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_iam_user_policy</code></li></ul></td>
         <td><a href="https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-iam-policy"><img alt="View Git Hub" src="/images/viewgithub.png"></a><br><br><a href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-iam-policy&terraform_version=terraform_v0.12"><img alt="Deploy to Schematics" src="/images/deploytoschematics.png"></a></td>
     </tr>
-    </tbody>
-    </table>
+</tbody>
+</table>
 
 ## Key Management Service templates
 {: #kms-template}
 
-    <table>
+<table>
     <thead>
     <th style="width:60px">Name</th>
     <th style="width:250px">Description and resources</th>
     <th style="width:150px">Access</th>
     </thead>
-    <tbody>
+<tbody>
     <tr>
         <td><code>ibm-key-management-service</code></td>
         <td>Create an {{site.data.keyword.cos_full_notm}} service instance with a bucket to store your data and provide a key management service resource for Hyper Protect Crypto Services and Key Protect service instance with a root key. This allow access between these services with an IBM Cloud Identity and Access Management policy.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_kms_key</code></li><li style="margin:0px; padding:0px"><code>ibm_kp_key</code></li></ul></td>
         <td><a href="https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-kms"><img alt="View Git Hub" src="/images/viewgithub.png"></a><br><br><a href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-kms&terraform_version=terraform_v0.12"><img alt="Deploy to Schematics" src="/images/deploytoschematics.png"></a></td>
     </tr>
-    </tbody>
-    </table>  
+</tbody>
+</table>  
 
 ## Kubernetes templates
 {: #kubernetes-template}
@@ -327,21 +328,20 @@ When you click the `Deploy to {{site.data.keyword.cloud_notm}}` following action
 ## Transit Gateway templates
 {: #transit-gwy-template}
 
-    <table>
+<table>
     <thead>
     <th style="width:60px">Name</th>
     <th style="width:250px">Description and resources</th>
     <th style="width:150px">Access</th>
     </thead>
-    <tbody>
+<tbody>
     <tr>
         <td><code>ibm-transit-gateway</code></td>
         <td>Create a transit gateways, list available connections, and locations for the gateways.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_tg_gateway</code></li><li style="margin:0px; padding:0px"><code>ibm_tg_connection</code></li><li style="margin:0px; padding:0px"><code>ibm_is_vpc</code></li></ul></td>
         <td><a href="https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-transit-gateway"><img alt="View Git Hub" src="/images/viewgithub.png"></a><br><br><a href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-transit-gateway&terraform_version=terraform_v0.12"><img alt="Deploy to Schematics" src="/images/deploytoschematics.png"></a></td>
-
     </tr>
-    </tbody>
-    </table>
+</tbody>
+</table>
 
 
 
