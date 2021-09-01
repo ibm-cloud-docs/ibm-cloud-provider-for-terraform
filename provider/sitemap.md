@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-19"
+lastupdated: "2021-09-01"
 
 keywords: terraform provider plugin, terraform functions, terraform open whisk, terraform function action, terraform serverless
 
@@ -63,6 +63,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:release-note: data-hd-content-type='release-note'}
 {:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
@@ -113,97 +114,97 @@ subcollection: ibm-cloud-provider-for-terraform
 ## API Gateway
 {: #ibm-api-gateway_rd}
 
-    <table>
-        <thead>
-    <th>Resources</th>
-    <th>Data sources</th>
+<table>
+    <thead>
+<th>Resources</th>
+<th>Data sources</th>
     </thead>
-    <tbody>
-        <tr>
+<tbody>
+<tr>
     <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/api_gateway_endpoint"><code>ibm_api_gateway_endpoint</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/api_gateway_endpoint_subscription"><code>ibm_api_gateway_endpoint_subscription</code></a></li></ul></td><td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/api_gateway"><code>ibm_api_gateway</code></a></li></ul></td>
-    </tr>
-    </tbody>
-    </table>
+</tr>
+</tbody>
+</table>
 
 ## Catalog Management
 {: #ibm-catalog-management_rd}
 
-    <table>
-        <thead>
-    <th style="width:180px">Resources</th>
-    <th style="width:150px">Data sources</th>
+<table>
+    <thead>
+<th style="width:180px">Resources</th>
+<th style="width:150px">Data sources</th>
     </thead>
-    <tbody>
-        <tr>
+<tbody>
+    <tr>
     <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cm_catalog"><code>ibm_cm_catalog</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cm_offering"><code>ibm_cm_offering</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cm_offering_instance"><code>ibm_cm_offering_instance</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cm_version"><code>ibm_cm_version</code></a></li></ul></td>
         <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cm_catalog"><code>ibm_cm_catalog</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cm_offering"><code>ibm_cm_offering</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cm_offering_instance"><code>ibm_cm_offering_instance</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cm_version"><code>ibm_cm_version</code></a></li></ul></td>
     </tr>
-    </tbody>
-    </table>
+</tbody>
+</table>
 
 ## Certificate Manager
 {: #ibm-certificate-manager_rd}
 
-    <table>
-        <thead>
-        <th style="width:180px">Resources</th>
-        <th style="width:150px">Data sources</th>
+<table>
+    <thead>
+<th style="width:180px">Resources</th>
+<th style="width:150px">Data sources</th>
     </thead>
-    <tbody>
+<tbody>
     <tr>
     <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/certificate_manager_import"><code>ibm_certificate_manager_import</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/certificate_manager_order"><code>ibm_certificate_manager_order</code></a></li></ul></td>
         <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/certificate_manager_certificate"><code>ibm_certificate_manager_certificate</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/certificate_manager_certificates"><code>ibm_certificate_manager_certificates</code></a></li></ul></td>
     </tr>
-    </tbody>
-    </table>
+</tbody>
+</table>
 
 ## Classic infrastructure
 {: #ibm-classic-infrastructure_rd}
 
-    <table>
+<table>
         <thead>
-    <th style="width:180px">Resources</th>
-    <th style="width:150px">Data sources</th>
-    </thead>
-    <tbody>
+<th style="width:180px">Resources</th>
+<th style="width:150px">Data sources</th>
+</thead>
+<tbody>
 <tr>
 <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cdn"><code>ibm_cdn</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_autoscale_group"><code>ibm_compute_autoscale_group</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_autoscale_policy"><code>ibm_compute_autoscale_policy</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_bare_metal"><code>ibm_compute_bare_metal</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_dedicated_host"><code>ibm_compute_dedicated_host</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_monitor"><code>ibm_compute_monitor</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_placement_group"><code>ibm_compute_placement_group</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_provisioning_hook"><code>ibm_compute_provisioning_hook</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_ssh_key"><code>ibm_compute_ssh_key</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_ssl_certificate"><code>ibm_compute_ssl_certificate</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_user"><code>ibm_compute_user</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_vm_instance"><code>ibm_compute_vm_instance</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_domain"><code>ibm_dns_domain</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_domain_registration_nameservers"><code>ibm_dns_domain_registration_nameservers</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_record"><code>ibm_dns_record</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_reverse_record"><code>ibm_dns_reverse_record</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dns_secondary"><code>ibm_dns_secondary</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/firewall"><code>ibm_firewall</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/firewall_policy"><code>ibm_firewall_policy</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/hardware_firewall_shared"><code>ibm_hardware_firewall_shared</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/ipsec_vpn"><code>ibm_ipsec_vpn</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/lb"><code>ibm_lb</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/lb_service"><code>ibm_lb_service</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/lb_service_group"><code>ibm_lb_service_group</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/lb_vpx"><code>ibm_lb_vpx</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/lb_vpx_ha"><code>ibm_lb_vpx_ha</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/lb_vpx_service"><code>ibm_lb_vpx_service</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/lb_vpx_vip"><code>ibm_lb_vpx_vip</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/lbaas"><code>ibm_lbaas</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/lbaas_health_monitor"><code>ibm_lbaas_health_monitor</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/lbaas_server_instance_attachment"><code>ibm_lbaas_server_instance_attachment</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/multi_vlan_firewall"><code>ibm_multivlan_firewall</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/network_gateway"><code>ibm_network_gateway</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/network_gateway_vlan_association"><code>ibm_network_gateway_vlan_association</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/network_interface_sg_attachment"><code>ibm_network_interface_sg_attachment</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/network_public_ip"><code>ibm_network_public_ip</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/network_vlan"><code>ibm_network_vlan</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/network_vlan_spanning"><code>ibm_network_vlan_spanning</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/object_storage_account"><code>ibm_object_storage_account</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/security_group"><code>ibm_security_group</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/security_group_rule"><code>ibm_security_group_rule</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/ssl_certificate"><code>ibm_ssl_certificate</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/storage_block"><code>ibm_storage_block</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/storage_evault"><code>ibm_storage_evault</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/storage_file"><code>ibm_storage_file</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/subnet"><code>ibm_subnet</code></a></li></ul></td>
 <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/compute_bare_metal"><code>ibm_compute_bare_metal</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/compute_image_template"><code>ibm_compute_image_template</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/compute_placement_group"><code>ibm_compute_placement_group</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/compute_ssh_key"><code>ibm_compute_ssh_key</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/compute_vm_instance"><code>ibm_compute_vm_instance</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dns_domain"><code>ibm_dns_domain</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dns_domain_registration"><code>ibm_dns_domain_registration</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dns_secondary"><code>ibm_dns_secondary</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/lbaas"><code>ibm_lbaas</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/network_vlan"><code>ibm_network_vlan</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/security_group"><code>ibm_security_group</code></a></li></ul></td>
 </tr>
-    </tbody>
-    </table>
+</tbody>
+</table>
 
 ## Cloud Databases
 {: #ibm-Cloud-Databases_rd}
 
-    <table>
-        <thead>
-    <th style="width:180px">Resources</th>
-    <th style="width:150px">Data sources</th>
-    </thead>
-    <tbody>
+<table>
+    <thead>
+<th style="width:180px">Resources</th>
+<th style="width:150px">Data sources</th>
+</thead>
+<tbody>
     <tr>
         <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/database"><code>ibm_database</code></a></li></ul></td>
     <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/database"><code>ibm_database</code></a></li></ul></td>
     </tr>
-    </tbody>
-    </table>
+</tbody>
+</table>
 
 ## Cloud Foundry
 {: #ibm-Cloud-Foundry_rd}
 
-    <table>
+<table>
         <thead>
-    <th style="width:180px">Resources</th>
-    <th style="width:150px">Data sources</th>
-    </thead>
-    <tbody>
+<th style="width:180px">Resources</th>
+<th style="width:150px">Data sources</th>
+</thead>
+<tbody>
     <tr>
         <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/app"><code>ibm_app</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/app_domain_private"><code>ibm_app_domain_private</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/app_domain_shared"><code>ibm_app_domain_shared</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/app_route"><code>ibm_app_route</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/org"><code>ibm_org</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/service_instance"><code>ibm_service_instance</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/service_key"><code>ibm_service_key</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/space"><code>ibm_space</code></a></li></ul></td>
     <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/account"><code>ibm_account</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/app"><code>ibm_app</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/app_domain_private"><code>ibm_app_domain_private</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/app_domain_shared"><code>ibm_app_domain_shared</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/app_route"><code>ibm_app_route</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/org"><code>ibm_org</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/org_quota"><code>ibm_org_quota</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/service_instance"><code>ibm_service_instance</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/service_key"><code>ibm_service_key</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/service_plan"><code>ibm_service_plan</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/space"><code>ibm_space</code></a></li></ul></td>
     </tr>
-    </tbody>
-    </table>
+</tbody>
+</table>
 
 ## Container Registry
 {: #ibm-container-registry_rd}
@@ -259,18 +260,18 @@ subcollection: ibm-cloud-provider-for-terraform
 ## Enterprise Management
 {: #ibm-enterprise-management_rd}
 
-    <table>
-        <thead>
-    <th style="width:180px">Resources</th>
-    <th style="width:150px">Data sources</th>
+<table>
+    <thead>
+<th style="width:180px">Resources</th>
+<th style="width:150px">Data sources</th>
     </thead>
-    <tbody>
+<tbody>
         <tr>
     <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/enterprise"><code>ibm_enterprise</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/enterprise_account"><code>ibm_enterprise_account</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/enterprise_account_group"><code>ibm_enterprise_account_group</code></a></li></ul></td>
         <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/enterprises"><code>ibm_enterprises</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/enterprise_accounts"><code>ibm_enterprise_accounts</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/enterprise_account_groups"><code>ibm_enterprise_account_groups</code></a></li></ul></td>
     </tr>
-    </tbody>
-    </table>
+</tbody>
+</table>
 
 ## Event Streams
 {: #ibm-event-streams_rd}
@@ -307,18 +308,18 @@ subcollection: ibm-cloud-provider-for-terraform
 ## Global Tagging 
 {: #ibm-global-tagging_rd}
 
-    <table>
+<table>
         <thead>
-    <th style="width:180px">Resources</th>
-    <th style="width:150px">Data sources</th>
+<th style="width:180px">Resources</th>
+<th style="width:150px">Data sources</th>
     </thead>
-    <tbody>
+<tbody>
         <tr>
     <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_tag"><code>ibm_resource_tag</code></a></li></ul></td>
     <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/resource_tag"><code>ibm_resource_tag</code></a></li></ul></td>
         </tr>
-    </tbody>
-    </table>
+</tbody>
+</table>
 
 ## Identity & Access Management (IAM)
 {: #ibm-iam-resource_rd}
@@ -536,7 +537,7 @@ subcollection: ibm-cloud-provider-for-terraform
 "><code>ibm_is_dedicated_host_groups</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_dedicated_host_profile"><code>ibm_is_dedicated_host_profile</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_dedicated_host_profiles"><code>ibm_is_dedicated_host_profiles</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_dedicated_hosts"><code>ibm_is_dedicated_hosts</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_endpoint_gateway_targets"><code>ibm_is_endpoint_gateway_targets</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_floating_ip"><code>ibm_is_floating_ip</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_flow_logs"><code>ibm_is_flow_logs</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_image"><code>ibm_is_image</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_images"><code>ibm_is_images</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_instance"><code>ibm_is_instance</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_instance_disk"><code>ibm_is_instance_disk</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_instance_disks"><code>ibm_is_instance_disks</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_instance_group"><code>ibm_is_instance_group</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_instance_group_manager"><code>ibm_is_instance_group_manager</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_instance_group_manager_action"><code>ibm_is_instance_group_manager_action</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_instance_group_manager_actions"><code>ibm_is_instance_group_manager_actions</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_instance_group_manager_policies"><code>ibm_is_instance_group_manager_policies</code></a></li>
 <li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_instance_group_manager_policy"><code>ibm_is_instance_group_manager_policy</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_instance_group_managers"><code>ibm_is_instance_group_managers</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_instance_group_membership"><code>ibm_is_instance_group_membership</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_instance_group_memberships"><code>ibm_is_instance_group_memberships</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_instance_profile"><code>ibm_is_instance_profile</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_instance_profiles"><code>ibm_is_instance_profiles</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_instance_templates"><code>ibm_is_instance_templates</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_instances"><code>ibm_is_instances</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_lb"><code>ibm_is_lb</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_lb_profiles"><code>ibm_is_lb_profiles</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_lbs"><code>ibm_is_lbs</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_operating_system"><code>ibm_is_operating_system</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_operating_systems"><code>ibm_is_operating_systems</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_public_gateway"><code>ibm_is_public_gateway</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_public_gateways"><code>ibm_is_public_gateways</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_region"><code>ibm_is_region</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_security_group"><code>ibm_is_security_group</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_security_group_target"><code>ibm_is_security_group_target</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_security_group_targets"><code>ibm_is_security_group_targets</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_ssh_key"><code>ibm_is_ssh_key</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_subnet"><code>ibm_is_subnet</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_subnet_reserved_ip"><code>ibm_is_subnet_reserved_ip</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_subnet_reserved_ips"><code>ibm_is_subnet_reserved_ips</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_subnets"><code>ibm_is_subnets</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_virtual_endpoint_gateway"><code>ibm_is_virtual_endpoint_gateway</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_virtual_endpoint_gateway_ips"><code>ibm_is_virtual_endpoint_gateway_ips</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_virtual_endpoint_gateways"><code>ibm_is_virtual_endpoint_gateways</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_volume"><code>ibm_is_volume</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_volume_profile"><code>ibm_is_volume_profile</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_volume_profiles"><code>ibm_is_volume_profiles</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_vpc"><code>ibm_is_vpc</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_vpc_default_routing_table"><code>ibm_is_vpc_default_routing_table</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_vpc_routing_table_routes"><code>ibm_is_vpc_routing_table_routes</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_vpc_routing_tables"><code>ibm_is_vpc_routing_tables</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_vpn_gateway_connections"><code>ibm_is_vpn_gateway_connections</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_vpn_gateways"><code>ibm_is_vpn_gateways</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_zone"><code>ibm_is_zone</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_zones"><code>ibm_is_zones</code></a></li></ul></td>
     </tr>
-    </tbody>
-    </table>
+</tbody>
+</table>
 
 
