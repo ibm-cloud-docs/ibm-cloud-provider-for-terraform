@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-19"
+lastupdated: "2021-09-07"
 
 keywords: question about kubernetes provider, troubleshooting guide, kubernetes service troubleshooting
 
@@ -65,6 +65,7 @@ content-type: troubleshoot
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:release-note: data-hd-content-type='release-note'}
 {:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
@@ -125,7 +126,7 @@ Or
 Error: {{site.data.keyword.containershort_notm}} cluster unreachable: invalid configuration: no configuration has been provided
 ```
 
-You are combining the cluster provisioning and working with the {{site.data.keyword.containershort_notm}} provider at the same time in your Terraform template in the {{site.data.keyword.bplong_notm}} workspace or in your localhost. You make a change in the cluster configuration that leads to the cluster recreate. When you run `terraform refresh` command, you view strange errors such as, network or namespace issues.
+You are combining the cluster provisioning and working with the {{site.data.keyword.containershort_notm}} provider at the same time in your Terraform template in the {{site.data.keyword.bplong_notm}} workspace or in your localhost. You make a change in the cluster configuration that leads to the cluster re-create. When you run `terraform refresh` command, you view strange errors such as, network or namespace issues.
 {: tsCauses}
 
 To troubleshoot this error you need to ensure:
