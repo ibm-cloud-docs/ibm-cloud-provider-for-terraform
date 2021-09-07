@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-19"
+lastupdated: "2021-09-07"
 
 keywords: Terraform on {{site.data.keyword.cloud_notm}}, ansible, red hat, openshift, automate, automation, iaas
 
@@ -68,6 +68,7 @@ completion-time: 3h
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:release-note: data-hd-content-type='release-note'}
 {:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
@@ -124,7 +125,7 @@ Use this tutorial to create your own highly available Red Hat® OpenShift Contai
 Instead of manually installing Red Hat® OpenShift Container Platform on {{site.data.keyword.cloud_notm}} classic infrastructure, check out [Red Hat OpenShift on {{site.data.keyword.cloud_notm}}](/docs/openshift?topic=openshift-openshift_tutorial). This offering lets you create an {{site.data.keyword.containerlong_notm}} cluster with worker nodes that come installed with the OpenShift Container Platform software. You get all the advantages of managed {{site.data.keyword.containerlong_notm}} for your cluster infrastructure environment, while the OpenShift tooling and catalog that runs on Red Hat Enterprise Linux for your app deployments.
 {: tip}
 
-[Red Hat® OpenShift Container Platform ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.openshift.com/products/container-platform/) is built around a core of containers, with orchestration and management provided by Kubernetes, on a foundation of Atomic Host and Red Hat® Enterprise Linux. OpenShift Origin is the community distribution of Kubernetes that is optimized for continuous app development and multi-tenant deployment. The community project provides developer and operations-centric tools that are based on Kubernetes to enable rapid app development, deployment, scaling, and long-term app lifecycle maintenance. 
+[Red Hat® OpenShift Container Platform ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.redhat.com/products/container-platform/) is built around a core of containers, with orchestration and management provided by Kubernetes, on a foundation of Atomic Host and Red Hat® Enterprise Linux. OpenShift Origin is the community distribution of Kubernetes that is optimized for continuous app development and multi-tenant deployment. The community project provides developer and operations-centric tools that are based on Kubernetes to enable rapid app development, deployment, scaling, and long-term app lifecycle maintenance. 
 
 This tutorial shows how you can set up OpenShift Container Platform 3.11 on {{site.data.keyword.cloud_notm}} classic infrastructure with Terraform on {{site.data.keyword.cloud_notm}} to try out the high availability capabilities of native Kubernetes and {{site.data.keyword.cloud_notm}}. Review the following image to find an architectural overview of the classic infrastructure components that are needed for the Red Hat OpenShift Container Platform to work properly.
 
