@@ -227,19 +227,3 @@ The code snippets provides list of example templates that you can use to underst
 [API Gateway](#api-gwy-template)
 
 
-## API Gateway templates
-{: #api-gwy-template}
-
-<table>
-    <thead>
-    <th style="width:60px">Name</th>
-    <th style="width:250px">Description and resources</th>
-    <th style="width:150px">Access</th>
-    </thead>
-    <tbody>
-        <tr>
-        <td><code>ibm-api-gateway</code></td>
-        <td>Create an <a href="/docs/api-gateway?topic=api-gateway-whatis_apigw">IBM Cloud API Gateway</a> service instance to set up an API for an IBM Cloud service of your choice. You can specify the API endpoint that you want to use to access your service, and define subscription keys so that developers can securely consume your API.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_resource_instance</code></li><li style="margin:0px; padding:0px"><code>ibm_api_gateway_endpoint</code></li><li style="margin:0px; padding:0px"><code>ibm_api_gateway</code></li><li style="margin:0px; padding:0px"><code>ibm_api_gateway_endpoint_subscription</code></li></ul></td><td>[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway)</td>
-    </tr>
-    </tbody>
-    </table>
