@@ -221,9 +221,11 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 ## Code snippets
 {: #code-snippets}
 
+The code snippets provides list of example templates that you can use to understand how to configure IBM Cloud service. You can also use the snippets as a starting point for sections of your custom templates.
+{: shortdesc}
 
-## API Gateway
-{: #ibm-api-gateway_rd}
+[API Gateway](#api-gwy-template)
+
 
 ## API Gateway templates
 {: #api-gwy-template}
