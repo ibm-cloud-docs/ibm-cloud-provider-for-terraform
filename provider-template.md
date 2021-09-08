@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-09-07"
+lastupdated: "2021-09-08"
 
 keywords: provider templates, schematics template
 
@@ -123,13 +123,81 @@ For more information, about how the Ansible based automation is configured to lo
 
 <img src="images/onboardtoibmcatalog.png" usemap="#image-map2"><map name="image-map2"><area target="_blank" alt="bulk onboard Terraform templates into private catalog" title="onboard Terraform template to private catalog" href="https://cloud.ibm.com/schematics/actions/create?name=demo-catalogs&url=https://github.com/Cloud-Schematics/onboard-to-ibm-catalog" coords="1,1,200,40" shape="rect"></map>
 
+
+Browse [sample templates](#provider-sample) by IBM Cloud service.
+Browse [code snippets](#code-snippets) by IBM Cloud service.
+
 ## Using sample templates
 {: #provider-sample}
 
-The following sample templates allows you to provision your resource by using {{site.data.keyword.bpshort}} workspace. 
+The following templates allows you to provision your resource by using {{site.data.keyword.bpshort}} workspace. 
 
 In the **Workspace details** page, click **Next** button to view the **Create** button active to create {{site.data.keyword.bpshort}} workspace.
 {: note}
+
+### Kubernetes and OpenShift
+{: #kubnernetes-openshift}
+
+|  Repository link | Description | Link to provision |
+| ---- | ---- | --- |
+| [Multi-tier Kubernetes cluster on VPC](https://github.com/Cloud-Schematics/multizone-iks-on-vpc-cluster) | Provision a Kubernetes cluster on an existing VPC network, with private application load balancers.| <img usemap="#deploybutton_mapcs10" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs10" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/multizone-iks-on-vpc-cluster&terraform_version=terraform_v0.12" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+| [{{site.data.keyword.openshiftshort}} cluster on classic infrastructure](https://github.com/Cloud-Schematics/openshift-cluster) | Provision a simple Red Hat OpenShift cluster on Classic infrastructure. | <img usemap="#deploybutton_mapcs11" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs11" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/openshift-cluster&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+| [{{site.data.keyword.openshiftshort}} development cluster](https://github.com/Cloud-Schematics/openshift-dev-cluster) | Provision a Red Hat Openshift cluster on Classic infrastructure for a development team with IBM CLoud Operation, Red Hat CodeReady.| <img usemap="#deploybutton_mapcs11" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs11" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/openshift-dev-cluster&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+| [Application with ingress on Kubernetes cluster](https://github.com/Cloud-Schematics/iks-on-vpc-deploy-demo-ingress-app) | Deploy a sample app with ingress on your existing Kubernetes cluster on VPC.| <img usemap="#deploybutton_mapcs4" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs4" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/iks-on-vpc-deploy-demo-ingress-app&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+| [Application with load balancer on Kubernetes cluster](https://github.com/Cloud-Schematics/iks-on-vpc-deploy-demo-load-balancer-app) | Deploy a sample app with load balance on your existing Kubernetes cluster on VPC.| <img usemap="#deploybutton_mapcs5" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs5" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/iks-on-vpc-deploy-demo-load-balancer-app&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+{: caption="Kubernetes and OpenShift Terraform templates to provision resource using {{site.data.keyword.bpshort}} workspace" caption-side="top"}
+
+
+### VPC
+{: #vpc-templates}
+
+|  Repository link | Description | Link to provision |
+| ---- | ---- | --- |
+| [VSI on VPC with block storage volume and single load balancer](https://github.com/Cloud-Schematics/vpc-vsi-with-volumes-and-lb) | Provision multiple virtual servers each with a block storage volume on VPC, across a number of subnets, and connected with a single load balancer. | <img usemap="#deploybutton_mapcs14" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs14" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/vpc-vsi-with-volumes-and-lb&terraform_version=terraform_v0.12" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+| [Multi-tier infrastructure in VPC with bastion and VSIs](https://github.com/Cloud-Schematics/multitier-bastion-vpc-lamp) | Provision multi-tier infrastructure with VPC, SSH, Bastion host, front-end and backend servers.| <img usemap="#deploybutton_mapcs8" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs8" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/multitier-bastion-vpc-lamp&terraform_version=terraform_v0.12" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+| [Multi-tier VPC network](https://github.com/Cloud-Schematics/multitier-vpc-network) | Provision a multi-tier infrastructure with VPC, in a single region up to 3 zones, ACL and public gateways.| <img usemap="#deploybutton_mapcs9" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs9" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/multitier-vpc-network&terraform_version=terraform_v0.12" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+{: caption="VPC Terraform templates to provision resource using {{site.data.keyword.bpshort}} workspace" caption-side="top"}
+
+
+### Observability
+{: #observability-templates}
+
+|  Repository link | Description | Link to provision |
+| ---- | ---- | --- |
+| [Observability service instance](https://github.com/Cloud-Schematics/terraform-ibm-observability) | Provision an instance of all the Observability services on IBM Cloud such as IBM Cloud Log Analysis, IBM Cloud Monitoring, and IBM Cloud Activity Tracker in your account.| <img usemap="#deploybutton_mapcs13" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs13" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/terraform-ibm-observability&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+| [Observability for Kubernetes cluster on VPC](https://github.com/Cloud-Schematics/iks-logging-and-monitoring) | Deploy logging and monitoring agents onto your existing {{site.data.keyword.containerlong_notm}} cluster on VPC. | <img usemap="#deploybutton_mapcs3" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs3" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/iks-logging-and-monitoring&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+| [Configure integrations for Log Analysis service instance](https://github.com/Cloud-Schematics/logdna-provider-example) | configure the Log Analysis service instance in IBM Cloud to integrate with `Slack`, `PagerDuty` and `Webhooks`. | <img usemap="#deploybutton_mapcs7" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs7" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/logdna-provider-example&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+| [Configure the monitoring service instance](https://github.com/Cloud-Schematics/sysdig-provider-example) | Configure the monitoring service instance in IBM Cloud with alerts and dashboard. | <img usemap="#deploybutton_mapcs12" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs12" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/sysdig-provider-example&terraform_version=terraform_v0.12" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+{: caption="Observability Terraform templates to provision resource using {{site.data.keyword.bpshort}} workspace" caption-side="top"}
+
+
+### Storage
+{: #storage-templates}
+
+|  Repository link | Description | Link to provision |
+| ---- | ---- | --- |
+| [IBM Cloud Object Storage bucket with encryption](https://github.com/Cloud-Schematics/kms-encrypted-cos-bucket) | Provision IBM Cloud Object Storage with IBM Key Protect integration. | <img usemap="#deploybutton_mapcs6" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs6" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/kms-encrypted-cos-bucket&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+{: caption="Storage Terraform templates to provision resource using {{site.data.keyword.bpshort}} workspace" caption-side="top"}
+
+
+### Account management and IAM
+{: #account-mgt-iam}
+
+|  Repository link | Description | Link to provision |
+| ---- | ---- | --- |
+| [Copy users to new account](https://github.com/Cloud-Schematics/add-all-users-to-new-account)| Copy all the IAM users from one IBM Cloud account into another IBM Cloud account. | <img usemap="#deploybutton_mapcs1" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs1" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/add-all-users-to-new-account&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+{: caption="Account management and IAM Terraform templates to provision resource using {{site.data.keyword.bpshort}} workspace" caption-side="top"}
+
+### Classic infrastructure service
+{: #classic-infra-templates}
+
+|  Repository link | Description | Link to provision |
+| ---- | ---- | --- |
+| [Autoscale the Classic virtual servers VSI on IBM Cloud](https://github.com/Cloud-Schematics/classic-vsi-autoscaling-solution) | Autoscale the classic VSIs using {{site.data.keyword.bpshort}}, {{site.data.keyword.openwhisk_short}} and Sysdig | <img usemap="#deploybutton_mapcs2" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs2" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/classic-vsi-autoscaling-solution&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+{: caption="Classic infrastructure templates to provision resource using {{site.data.keyword.bpshort}} workspace" caption-side="top"}
+
+## Hidden table
+{: #hiddentab}
 
 |  Repository link | Description | Link to provision |
 | ---- | ---- | --- |
