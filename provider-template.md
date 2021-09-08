@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2021
 lastupdated: "2021-09-08"
 
-keywords: provider templates, schematics template
+keywords: terraform templates, templates, sample terraform templates, private catalog
 
 subcollection: ibm-cloud-provider-for-terraform
 
@@ -218,3 +218,26 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 | [VSI on VPC with block storage volume and single load balancer](https://github.com/Cloud-Schematics/vpc-vsi-with-volumes-and-lb) | Provision multiple virtual servers each with a block storage volume on VPC, across a number of subnets, and connected with a single load balancer. | <img usemap="#deploybutton_mapcs14" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs14" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/vpc-vsi-with-volumes-and-lb&terraform_version=terraform_v0.12" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
 {: caption="Terraform templates to provision resource using {{site.data.keyword.bpshort}} workspace" caption-side="top"}
 
+## Code snippets
+{: #code-snippets}
+
+
+## API Gateway
+{: #ibm-api-gateway_rd}
+
+## API Gateway templates
+{: #api-gwy-template}
+
+<table>
+    <thead>
+    <th style="width:60px">Name</th>
+    <th style="width:250px">Description and resources</th>
+    <th style="width:150px">Access</th>
+    </thead>
+    <tbody>
+        <tr>
+        <td><code>ibm-api-gateway</code></td>
+        <td>Create an <a href="/docs/api-gateway?topic=api-gateway-whatis_apigw">IBM Cloud API Gateway</a> service instance to set up an API for an IBM Cloud service of your choice. You can specify the API endpoint that you want to use to access your service, and define subscription keys so that developers can securely consume your API.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_resource_instance</code></li><li style="margin:0px; padding:0px"><code>ibm_api_gateway_endpoint</code></li><li style="margin:0px; padding:0px"><code>ibm_api_gateway</code></li><li style="margin:0px; padding:0px"><code>ibm_api_gateway_endpoint_subscription</code></li></ul></td><td>[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway)</td>
+    </tr>
+    </tbody>
+    </table>
