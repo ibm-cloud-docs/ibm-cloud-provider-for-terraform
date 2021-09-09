@@ -128,9 +128,6 @@ Browse [Sample templates](#provider-sample) by IBM Cloud service. <br>
 Browse [Code snippets](#code-snippets) by IBM Cloud service.
 
 
-## Sample templates
-{: #tf-templates}
-
 ### Listing sample templates
 {: #provider-sample}
 
@@ -139,12 +136,12 @@ The following templates allows you to provision your resource by using {{site.da
 In the **Workspace details** page, click **Next** button to view the **Create** button active to create {{site.data.keyword.bpshort}} workspace.
 {: note}
 
-[Kubernetes and OpenShift](#kubnernetes-openshift)
-[VPC infrastructure](#vpc-templates)
-[Observability](observability-templates)
-[Storage](#storage-templates)
-[Classic infrastructure service](#classic-infra-templates)
-[Account management and IAM](#account-mgt-iam)
+- [Kubernetes and OpenShift](#kubnernetes-openshift)
+- [VPC infrastructure](#vpc-templates)
+- [Observability](observability-templates)
+- [Storage](#storage-templates)
+- [Classic infrastructure service](#classic-infra-templates)
+- [Account management and IAM](#account-mgt-iam)
 
 ### Kubernetes and OpenShift
 {: #kubnernetes-openshift}
