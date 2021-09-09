@@ -146,8 +146,6 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 [Classic infrastructure service](#classic-infra-templates)
 [Account management and IAM](#account-mgt-iam)
 
-
-
 ### Kubernetes and OpenShift
 {: #kubnernetes-openshift}
 
