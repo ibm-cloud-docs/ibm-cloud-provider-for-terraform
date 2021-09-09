@@ -124,11 +124,11 @@ For more information, about how the Ansible based automation is configured to lo
 <img src="images/onboardtoibmcatalog.png" usemap="#image-map2"><map name="image-map2"><area target="_blank" alt="bulk onboard Terraform templates into private catalog" title="onboard Terraform template to private catalog" href="https://cloud.ibm.com/schematics/actions/create?name=demo-catalogs&url=https://github.com/Cloud-Schematics/onboard-to-ibm-catalog" coords="1,1,200,40" shape="rect"></map>
 
 
-Browse [sample templates](#provider-sample) by IBM Cloud service. <br>
-Browse [code snippets](#code-snippets) by IBM Cloud service.
+Browse [Sample templates](#provider-sample) by IBM Cloud service. <br>
+Browse [Code snippets](#code-snippets) by IBM Cloud service.
 
 
-## Terraform templates
+## Sample templates
 {: #tf-templates}
 
 ### Listing sample templates
