@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-19"
+lastupdated: "2021-09-09"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -63,6 +63,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {:preview: .preview}
 {:python: .ph data-hd-programlang='python'}
 {:python: data-hd-programlang="python"}
+{:release-note: data-hd-content-type='release-note'}
 {:right: .ph data-hd-position='right'}
 {:route: data-hd-keyref="route"}
 {:row-headers: .row-headers}
@@ -248,10 +249,11 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
     **Classic infrastructure, Functions, Power Systems**: Additional parameters are required when configuring the {{site.data.keyword.cloud_notm}} Provider plug-in. To find sample configurations for these services, see [Specifying the `provider` block](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-example). 
     {: tip}
 
-## Step 3: Using Terraform on {{site.data.keyword.cloud_notm}} to work with your {{site.data.keyword.cloud_notm}} service
+## Step 3: Testing your configuration
 
-Now that you configured the {{site.data.keyword.cloud_notm}} Provider plug-in for your service, you can start using Terraform on {{site.data.keyword.cloud_notm}} to create, update, or delete {{site.data.keyword.cloud_notm}} service instances or resources. 
+Now that you configured the {{site.data.keyword.cloud_notm}} Provider plug-in for your service, you can start using Terraform on {{site.data.keyword.cloud_notm}} to create, update, or delete {{site.data.keyword.cloud_notm}} service by executing Terraform commands. For more information, about Terraform command, see [Provisioning IBM Cloud resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-manage_resources#provision_resources).
 {: shortdesc}
+
 
 For an overview of the Terraform resources and data sources that you can use, see the [{{site.data.keyword.cloud_notm}} Provider plug-in documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external}. 
 
