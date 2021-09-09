@@ -129,7 +129,7 @@ Browse [Code snippets](#code-snippets) by IBM Cloud service.
 
 
 ### Listing sample templates
-{: #provider-sample}
+{: #listing-templates}
 
 The following templates allows you to provision your resource by using {{site.data.keyword.bpshort}} workspace. 
 
