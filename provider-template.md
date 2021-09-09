@@ -112,6 +112,9 @@ subcollection: ibm-cloud-provider-for-terraform
 
 Explore the sample {{site.data.keyword.cloud}} Terraform templates, onboard the templates to your private catalogs, and try your templates by using {{site.data.keyword.bpshort}} workspace.
 
+Deploy [Sample templates](#listing-templates) by using IBM Cloud service. <br>
+Browse the [Code snippets](#code-snippets) by using IBM Cloud service.
+
 ## Onboard to IBM Cloud private catalog
 {: #provider-onboard}
 
@@ -123,15 +126,10 @@ For more information, about how the Ansible based automation is configured to lo
 
 <img src="images/onboardtoibmcatalog.png" usemap="#image-map2"><map name="image-map2"><area target="_blank" alt="bulk onboard Terraform templates into private catalog" title="onboard Terraform template to private catalog" href="https://cloud.ibm.com/schematics/actions/create?name=demo-catalogs&url=https://github.com/Cloud-Schematics/onboard-to-ibm-catalog" coords="1,1,200,40" shape="rect"></map>
 
-
-Browse [Sample templates](#provider-sample) by IBM Cloud service. <br>
-Browse [Code snippets](#code-snippets) by IBM Cloud service.
-
-
-### Listing sample templates
+## Listing sample templates
 {: #listing-templates}
 
-The following templates allows you to provision your resource by using {{site.data.keyword.bpshort}} workspace. 
+Following are the lsit of sample templates that allows you to provision resource by using {{site.data.keyword.bpshort}} workspace. 
 
 - [Kubernetes and OpenShift](#kubnernetes-openshift)
 - [VPC infrastructure](#vpc-templates)
@@ -140,6 +138,16 @@ The following templates allows you to provision your resource by using {{site.da
 - [Classic infrastructure service](#classic-infra-templates)
 - [Account management and IAM](#account-mgt-iam)
 
+## Code snippets
+{: #code-snippets}
+
+The code snippets provides the templates that you can use to understand how to configure IBM Cloud service. You can also use the snippets as a starting point for your custom templates.
+{: shortdesc}
+
+[API Gateway](#api-gwy-snippet)
+
+## Samples
+{: #sample}
 ### Kubernetes and OpenShift
 {: #kubnernetes-openshift}
 
@@ -205,20 +213,11 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 {: caption="Classic infrastructure templates to provision resource using {{site.data.keyword.bpshort}} workspace" caption-side="top"}
 
 
-## Code snippets
-{: #code-snippets}
 
-The code snippets provides list of example templates that you can use to understand how to configure IBM Cloud service. You can also use the snippets as a starting point for sections of your custom templates.
-{: shortdesc}
-
-[API Gateway](#api-gwy-snippet)
-
-
-### Snippets
+## Snippets
 {: #tf_snippet}
 
-
-## API Gateway templates
+### API Gateway templates
 {: #api-gwy-snippet}
 
 | Name | Description and resources | Access |

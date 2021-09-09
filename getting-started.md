@@ -251,7 +251,7 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
 
 ## Step 3: Testing your configuration
 
-Now that you configured the {{site.data.keyword.cloud_notm}} Provider plug-in for your resource you can start using Terraform on {{site.data.keyword.cloud_notm}} to initialize, execute plan and apply command to provision the resource. For more information, about Terraform commands to test your configuration, see [Provisioning IBM Cloud resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-manage_resources#provision_resources).
+Now that you configured the {{site.data.keyword.cloud_notm}} Provider plug-in for your resource you can start using Terraform on {{site.data.keyword.cloud_notm}} to initialize, execute plan and apply commands to provision the resource. For more information, about Terraform commands to test your configuration, see [Provisioning IBM Cloud resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-manage_resources#provision_resources).
 {: shortdesc}
 
 For an overview of the Terraform resources and data sources that you can use, see the [{{site.data.keyword.cloud_notm}} Provider plug-in documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external}. 
