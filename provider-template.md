@@ -133,9 +133,6 @@ Browse [Code snippets](#code-snippets) by IBM Cloud service.
 
 The following templates allows you to provision your resource by using {{site.data.keyword.bpshort}} workspace. 
 
-In the **Workspace details** page, click **Next** button to view the **Create** button active to create {{site.data.keyword.bpshort}} workspace.
-{: note}
-
 - [Kubernetes and OpenShift](#kubnernetes-openshift)
 - [VPC infrastructure](#vpc-templates)
 - [Observability](observability-templates)
@@ -145,6 +142,9 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 
 ### Kubernetes and OpenShift
 {: #kubnernetes-openshift}
+
+In the **Workspace details** page, click **Next** button to view the **Create** button active to create {{site.data.keyword.bpshort}} workspace.
+{: note}
 
 |  Template | Description | Provision |
 | ---- | ---- | --- |
