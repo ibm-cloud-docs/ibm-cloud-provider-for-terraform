@@ -138,16 +138,21 @@ Following are the lsit of sample templates that allows you to provision resource
 - [Classic infrastructure service](#classic-infra-templates)
 - [Account management and IAM](#account-mgt-iam)
 
+
 ## Code snippets
 {: #code-snippets}
 
 The code snippets provides the templates that you can use to understand how to configure IBM Cloud service. You can also use the snippets as a starting point for your custom templates.
 {: shortdesc}
 
-[API Gateway](#api-gwy-snippet)
-[Certificate Manager](#cert-mgr-snippet)
-[Cloud Foundry](#cloud-foundry-snippet)
-[Direct Link](#dl-snippet)
+- [API Gateway](#api-gwy-snippet)
+- [Certificate Manager](#cert-mgr-snippet)
+- [Cloud Foundry](#cloud-foundry-snippet)
+- [Direct Link](#dl-snippet)
+- [Event Streams](#event-stream-snippet)
+- [Functions](#func-snippet)
+- [Identity & Access (IAM)](#iam-snippet)
+- [Key Management Service](#kms-snippet)
 
 ## Templates
 {: #sample}
