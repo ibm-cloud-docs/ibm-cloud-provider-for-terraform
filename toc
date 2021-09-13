@@ -1,5 +1,5 @@
 {:navgroup: .navgroup}
-{:topicgroup: .topicgroup}
+{:topicgroup: .topicgroup} 
 
 {: .toc subcollection="ibm-cloud-provider-for-terraform" category="dev_ops" audience="compute" href="/docs/ibm-cloud-provider-for-terraform" path="ibm-cloud-provider-for-terraform"}
 Terraform on IBM Cloud
