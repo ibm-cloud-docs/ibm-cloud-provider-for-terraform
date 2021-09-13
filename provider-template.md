@@ -138,16 +138,21 @@ Following are the lsit of sample templates that allows you to provision resource
 - [Classic infrastructure service](#classic-infra-templates)
 - [Account management and IAM](#account-mgt-iam)
 
+
 ## Code snippets
 {: #code-snippets}
 
 The code snippets provides the templates that you can use to understand how to configure IBM Cloud service. You can also use the snippets as a starting point for your custom templates.
 {: shortdesc}
 
-[API Gateway](#api-gwy-snippet)
-[Certificate Manager](#cert-mgr-snippet)
-[Cloud Foundry](#cloud-foundry-snippet)
-[Direct Link](#dl-snippet)
+- [API Gateway](#api-gwy-snippet)
+- [Certificate Manager](#cert-mgr-snippet)
+- [Cloud Foundry](#cloud-foundry-snippet)
+- [Direct Link](#dl-snippet)
+- [Event Streams](#event-stream-snippet)
+- [Functions](#func-snippet)
+- [Identity & Access (IAM)](#iam-snippet)
+- [Key Management Service](#kms-snippet)
 
 ## Templates
 {: #sample}
@@ -261,18 +266,7 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 
 | Name | Description and resources | Access |
 | --- | --- | --- |
-| `ibm-function-cloudant-trigger` | Create a Cloudant NoSQL service instance and a Python app deployment that creates the **database demo** database in your service instance. Then, you create an action with {{site.data.keyword.cloud_notm}} functions that is triggered when you add or edit documents to your database.<br><br>**Resources**<br>
-        <ul style="margin:0px 0px 0px 20px; padding:0px">
-        <li style="margin:0px; padding:0px">**null_resource**</li>
-        <li style="margin:0px; padding:0px">**ibm_service_instance**</li>
-        <li style="margin:0px; padding:0px">**ibm_service_key**</li>
-        <li style="margin:0px; padding:0px">**ibm_app_route**</li>
-        <li style="margin:0px; padding:0px">**ibm_app**</li>
-        <li style="margin:0px; padding:0px">**ibm_function_package**</li>
-        <li style="margin:0px; padding:0px">**ibm_function_action**</li>
-        <li style="margin:0px; padding:0px">**ibm_function_trigger**</li>
-        <li style="margin:0px; padding:0px">**ibm_function_rule**</li>
-        </ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-function-cloudant-trigger)|
+| `ibm-function-cloudant-trigger` | Create a Cloudant NoSQL service instance and a Python app deployment that creates the **database demo** database in your service instance. Then, you create an action with {{site.data.keyword.cloud_notm}} functions that is triggered when you add or edit documents to your database.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**null_resource**</li><li style="margin:0px; padding:0px">**ibm_service_instance**</li><li style="margin:0px; padding:0px">**ibm_service_key**</li><li style="margin:0px; padding:0px">**ibm_app_route**</li><li style="margin:0px; padding:0px">**ibm_app**</li><li style="margin:0px; padding:0px">**ibm_function_package**</li><li style="margin:0px; padding:0px">**ibm_function_action**</li><li style="margin:0px; padding:0px">**ibm_function_trigger**</li><li style="margin:0px; padding:0px">**ibm_function_rule**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-function-cloudant-trigger)|
 
 ## Identity & Access (IAM) templates
 {: #iam-snippet}
