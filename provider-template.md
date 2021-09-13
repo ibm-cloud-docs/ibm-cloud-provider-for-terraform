@@ -248,3 +248,43 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 | Name | Description and resources | Access |
 | --- | --- | --- |
 | `ibm-dl-gateway` | Create a speed and reliable direct link gateways, virtual connections, offering information, routers, and ports by using the resources.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_dl_gateway**</li><li style="margin:0px; padding:0px">**ibm_dl_virtual_connection**</li><li style="margin:0px; padding:0px">**ibm_is_vpc**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-direct-link)|
+
+## Event Streams templates
+{: #event-stream-snippet}
+
+| Name | Description and resources | Access |
+| --- | --- | --- |
+| `ibm-event-streams` | Create a communication through an Event Streams instance, topic instance, or Kafka consumer application to connect an existing event stream instances and its topic instance by using {{site.data.keyword.bplong_notm}} workspace.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_resource_instance**</li><li style="margin:0px; padding:0px">**ibm_event_streams_topic**</li><li style="margin:0px; padding:0px">**kafka_consumer_app**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-event-streams)|
+
+## Functions templates
+{: #func-snippet}
+
+| Name | Description and resources | Access |
+| --- | --- | --- |
+| `ibm-function-cloudant-trigger` | Create a Cloudant NoSQL service instance and a Python app deployment that creates the **database demo** database in your service instance. Then, you create an action with {{site.data.keyword.cloud_notm}} functions that is triggered when you add or edit documents to your database.<br><br>**Resources**<br>
+        <ul style="margin:0px 0px 0px 20px; padding:0px">
+        <li style="margin:0px; padding:0px">**null_resource**</li>
+        <li style="margin:0px; padding:0px">**ibm_service_instance**</li>
+        <li style="margin:0px; padding:0px">**ibm_service_key**</li>
+        <li style="margin:0px; padding:0px">**ibm_app_route**</li>
+        <li style="margin:0px; padding:0px">**ibm_app**</li>
+        <li style="margin:0px; padding:0px">**ibm_function_package**</li>
+        <li style="margin:0px; padding:0px">**ibm_function_action**</li>
+        <li style="margin:0px; padding:0px">**ibm_function_trigger**</li>
+        <li style="margin:0px; padding:0px">**ibm_function_rule**</li>
+        </ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-function-cloudant-trigger)|
+
+## Identity & Access (IAM) templates
+{: #iam-snippet}
+
+| Name | Description and resources | Access |
+| --- | --- | --- |
+| `ibm-iam-custom-role` | Create a custom role in IBM Cloud Identity and Access Management (IAM) for IBM Cloud Key Protect.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_iam_custom_role**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-iam-custom-role)|
+| `ibm-iam-policy` | Create an access policy in IBM Cloud Identity and Access Management (IAM) to grant permissions for a resource group to a user.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_iam_user_policy**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-iam-policy)|
+
+## Key Management Service templates
+{: #kms-snippet}
+
+| Name | Description and resources | Access |
+| --- | --- | --- |
+| `ibm-key-management-service` | Create an {{site.data.keyword.cos_full_notm}} service instance with a bucket to store your data and provide a key management service resource for Hyper Protect Crypto Services and Key Protect service instance with a root key. This allow access between these services with an IBM Cloud Identity and Access Management policy.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_kms_key**</li><li style="margin:0px; padding:0px">**ibm_kp_key**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-kms)|
