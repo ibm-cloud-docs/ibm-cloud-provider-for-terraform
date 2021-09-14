@@ -147,12 +147,23 @@ The code snippets provides the templates that you can use to understand how to c
 
 - [API Gateway](#api-gwy-snippet)
 - [Certificate Manager](#cert-mgr-snippet)
+- [Cloud Databases templates](#cloud-db-snippet)
 - [Cloud Foundry](#cloud-foundry-snippet)
 - [Direct Link](#dl-snippet)
+- [DNS templates](#dns-snippet)
 - [Event Streams](#event-stream-snippet)
 - [Functions](#func-snippet)
 - [Identity & Access (IAM)](#iam-snippet)
+- [Internet templates ](#internet-snippet)
 - [Key Management Service](#kms-snippet)
+- [Kubernetes templates](#kubernetes-snippet)
+- [Object Storage templates](#cos-snippet)
+- [Power Systems templates](#power-sys-snippet)
+- [Resource Management templates](#resource-mgt-snippet)
+- [Schematics templates](#schematics-snippet)
+- [Transit Gateway templates](#transit-gwy-snippet)
+- [VPC infrastructure templates (Gen 2 compute)](#vpc-gen2-snippet)
+
 
 ## Templates
 {: #sample}
@@ -275,6 +286,7 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 | --- | --- | --- |
 | `ibm-iam-custom-role` | Create a custom role in IBM Cloud Identity and Access Management (IAM) for IBM Cloud Key Protect.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_iam_custom_role**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-iam-custom-role)|
 | `ibm-iam-policy` | Create an access policy in IBM Cloud Identity and Access Management (IAM) to grant permissions for a resource group to a user.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_iam_user_policy**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-iam-policy)|
+| `ibm-iam-policy` | Create an access group in {{site.data.keyword.IBM_notm}} {{site.data.keyword.iamshort}} and assign this access group permission to a resource group. Then, you add users to your access group and assign these users access to IBM Cloud Kubernetes Service, classic IBM Cloud infrastructure, and Cloud Foundry.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_iam_access_group</code></li><li style="margin:0px; padding:0px"><code>ibm_iam_access_group_policy</code></li><li style="margin:0px; padding:0px"><code>ibm_iam_user_invite</code></li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-iam-user-invite)|
 
 ## Key Management Service templates
 {: #kms-snippet}
@@ -282,3 +294,89 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 | Name | Description and resources | Code |
 | --- | --- | --- |
 | `ibm-key-management-service` | Create an {{site.data.keyword.cos_full_notm}} service instance with a bucket to store your data and provide a key management service resource for Hyper Protect Crypto Services and Key Protect service instance with a root key. This allow access between these services with an IBM Cloud Identity and Access Management policy.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_kms_key**</li><li style="margin:0px; padding:0px">**ibm_kp_key**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-kms)|
+
+## Kubernetes templates
+{: #kubernetes-snippet}
+
+| Name | Description and resources | Code |
+| --- | --- | --- |
+| `vpc-classic-cluster` | Create an {{site.data.keyword.containerfull_notm}} cluster in a Virtual Private Cloud (VPC) for Generation 1 compute with worker nodes in a default worker pool that you spread across two zones. You can provision an IBM Cloud Object Storage service, and bind this service to the cluster.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_is_vpc**</li><li style="margin:0px; padding:0px">**ibm_is_subnet**</li><li style="margin:0px; padding:0px">**ibm_container_vpc_cluster**</li><li style="margin:0px; padding:0px">**ibm_container_vpc_worker_pool**</li><li style="margin:0px; padding:0px">**ibm_resource_instance**</li><li style="margin:0px; padding:0px">**ibm_container_bind_service**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-classic-cluster)|
+| `vpc-Gen2-cluster` | Create an {{site.data.keyword.containerfull_notm}} cluster in a Virtual Private Cloud (VPC) for Generation 2 compute with worker nodes in a default worker pool that you spread across two zones. Also, you provision an IBM Cloud Object Storage service, and bind this service to the cluster.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_is_vpc**</li><li style="margin:0px; padding:0px">**ibm_is_subnet**</li><li style="margin:0px; padding:0px">**ibm_container_vpc_cluster**</li><li style="margin:0px; padding:0px">**ibm_container_vpc_worker_pool**</li><li style="margin:0px; padding:0px">**ibm_resource_instance**</li><li style="margin:0px; padding:0px">**ibm_container_bind_service**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/vpc-gen2-cluster)|
+| `ibm-iks-classic-ROKS` | Create a Red Hat View GitHub repository on IBM Cloud cluster that runs version 3.11 of the View GitHub repository Container Platform.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_container_cluster**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-iks-classic-ROKS)|
+| `ibm-cluster-update` | Cordon and drain your worker nodes to update the IBM Cloud Kubernetes Service cluster master and worker nodes to the latest version.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>null_resource</code></li><li style="margin:0px; padding:0px"><code>ibm_container_cluster</code></li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster-update)|
+| `cluster-worker-pool-zone` | Create an IBM Cloud Kubernetes Service cluster with a default worker pool that is spread across two zones. Also, you create another worker pool and bind an IBM Cloud service of your choice to the cluster.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_container_cluster</code></li><li style="margin:0px; padding:0px"><code>ibm_container_worker_pool_zone_attachment</code></li><li style="margin:0px; padding:0px"><code>ibm_container_worker_pool</code></li><li style="margin:0px; padding:0px"><code>ibm_service_instance</code></li><li style="margin:0px; padding:0px"><code>ibm_service_key</code></li><li style="margin:0px; padding:0px"><code>ibm_container_bind_service</code></li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/cluster-worker-pool-zone)|
+| `ibm-storage-cos` | Set up Helm in an {{site.data.keyword.containerlong_notm}} cluster to install the {{site.data.keyword.cos_full_notm}} Helm plug-in. Then, you create an {{site.data.keyword.cos_full_notm}} service instance where you can store data from the apps in your cluster. You also learn how to create a Kubernetes persistent volume claim (PVC) to create a bucket in your {{site.data.keyword.cos_full_notm}} instance. Also to deploy an app in the cluster that mounts your {{site.data.keyword.cos_full_notm}} bucket.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_resource_instance</code></li><li style="margin:0px; padding:0px"><code>ibm_container_bind_service</code></li><li style="margin:0px; padding:0px"><code>kubernetes_secret</code></li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-storage-cos)|
+| `ibm-openshift-job` | Create and execute a secured shell script in an {{site.data.keyword.openshiftlong_notm}} cluster by using an Terraform on {{site.data.keyword.cloud_notm}} template. This template creates a Kubernetes configmap that includes a reference to a shell script. Then, you create a pod that mounts the configmap as a volume and executes the shell script.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>kubernetes_secret</code></li><li style="margin:0px; padding:0px"><code>kubernetes_config_map</code></li><li style="margin:0px; padding:0px"><code>kubernetes_job</code></li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-openshift-job)|
+| `portworx` | Set up Helm in an {{site.data.keyword.containerlong_notm}} software-defined storage (SDS) cluster to install Portworx as a storage solution. Make sure that this template requires an SDS cluster on Bare Metal worker nodes. After you installed Portworx, you can create persistent volume claims (PVC) to store data on local storage of your worker nodes. For more information, about Portworx and how to create an SDS cluster, see <a href="/docs/containers?topic=containers-portworx">Storing data on SDS with Portworx</a>.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>random_id</code></li><li style="margin:0px; padding:0px"><code>kubernetes_secret</code></li><li style="margin:0px; padding:0px"><code>helm_release</code></li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/portworx)|
+| `ibm-lbaas` | Create an {{site.data.keyword.loadbalancer_full}} for a classic virtual server instance. You configure the load balancer to manage incoming HTTPS and HTTP network traffic and set up health monitoring for your virtual server instance.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_compute_ssl_certificate</code></li><li style="margin:0px; padding:0px"><code>ibm_compute_ssh_key</code></li><li style="margin:0px; padding:0px"><code>ibm_compute_vm_instance</code></li><li style="margin:0px; padding:0px"><code>ibm_lbaas</code></li></li><li style="margin:0px; padding:0px"><code>ibm_lbaas_server_instance_attachment</code></li><li style="margin:0px; padding:0px"><code>ibm_lbaas_health_monitor</code></li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-lbaas)|
+| `ibm-logdna-cluster-integration` | Create an IBM Cloud cluster integration service to configure IBM Cloud provider such as Helm, Kubernetes. Then, you can use a  resource role binding to fetch resource key, and agents to log through resource role binding.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>random_id</code></li><li style="margin:0px; padding:0px"><code>kubernetes_role_binding</code></li><li style="margin:0px; padding:0px"><code>helm_release</code></li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-logdna-cluster-integration)|
+
+
+## Transit Gateway templates
+{: #transit-gwy-snippet}
+
+| Name | Description and resources | Code |
+| --- | --- | --- |
+| `ibm-transit-gateway` | Create a transit gateways, list available connections, and locations for the gateways.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_tg_gateway**</li><li style="margin:0px; padding:0px">**ibm_tg_connection**</li><li style="margin:0px; padding:0px">**ibm_is_vpc**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-transit-gateway)|
+
+## Cloud Databases templates
+{: #cloud-db-snippet}
+
+| Name | Description and resources | Code |
+| --- | --- | --- |
+| `ibm-database` | Create a classic virtual server instance and an {{site.data.keyword.cloud_notm}} database for PostgreSQL instance, and set up connectivity between the instances.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_compute_vm_instance</code></li><li style="margin:0px; padding:0px"><code>ibm_resource_group</code></li><li style="margin:0px; padding:0px"><code>ibm_database</code></li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-database)|
+
+## DNS templates
+{: #dns-snippet}
+
+| Name | Description and resources | Code |
+| --- | --- | --- |
+| `ibm-private-dns` | Create an {{site.data.keyword.vpc_short}} and an {{site.data.keyword.dns_full_notm}} instance, and add the VPC as a permitted network to the DNS service instance. Then, you create different types of DNS records.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_is_vpc</code></li><li style="margin:0px; padding:0px"><code>ibm_resource_instance</code></li><li style="margin:0px; padding:0px"><code>ibm_dns_zone</code></li><li style="margin:0px; padding:0px"><code>ibm_dns_resource_record</code></li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-private-dns)|
+
+## Internet templates 
+{: #internet-snippet}
+
+| Name | Description and resources | Code |
+| --- | --- | --- |
+| `ibm-cis` | Create an IBM Cloud Internet Service instance and configure the instance with health check monitoring, origin pool, global load-balancing, DNS records, firewall, and limit the rate rules.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_cis</code></li><li style="margin:0px; padding:0px"><code>ibm_cis_domain_settings</code></li><li style="margin:0px; padding:0px"><code>ibm_cis_domain</code></li><li style="margin:0px; padding:0px"><code>ibm_cis_edge_functions_action</code></li><li style="margin:0px; padding:0px"><code>ibm_cis_edge_functions_trigger</code></li><li style="margin:0px; padding:0px"><code>ibm_cis_healthcheck</code></li><li style="margin:0px; padding:0px"><code>ibm_cis_origin_pool</code></li><li style="margin:0px; padding:0px"><code>ibm_cis_global_load_balancer</code></li><li style="margin:0px; padding:0px"><code>ibm_cis_dns_record</code></li><li style="margin:0px; padding:0px"><code>ibm_cis_firewall</code></li><li style="margin:0px; padding:0px"><code>ibm_cis_rate_limit</code></li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cis)|
+
+## Object Storage templates
+{: #cos-snippet}
+
+| Name | Description and resources | Code |
+| --- | --- | --- |
+| `ibm-cos-bucket` | Create an <a href="/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage">IBM Cloud Object Storage</a> service instance in IBM Cloud and your first bucket to persistently store data.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_resource_group</code></li><li style="margin:0px; padding:0px"><code>ibm_resource_instance</code></li><li style="margin:0px; padding:0px"><code>ibm_cos_bucket</code></li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cos-bucket)|
+
+## Power Systems templates
+{: #power-sys-snippet}
+
+| Name | Description and resources | Code |
+| --- | --- | --- |
+| `ibm-power` | Create an {{site.data.keyword.powerSys_notm}} instance with a public and a private network that mounts the system volumes. You can also create an SSH key to access the instance.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_pi_key</code></li><li style="margin:0px; padding:0px"><code>ibm_pi_network</code></li><li style="margin:0px; padding:0px"><code>ibm_pi_volume</code></li><li style="margin:0px; padding:0px"><code>ibm_pi_instance</code></li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-power)|
+
+## Resource Management templates
+{: #resource-mgt-snippet}
+
+| Name | Description and resources | Code |
+| --- | --- | --- |
+| `ibm-resource-instance` | Create an {{site.data.keyword.cos_full_notm}} service instance with HMAC credentials, and configure custom timeouts for creating, updating, or deleting the instance.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm-resource-instance</code></li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-resource-instance)|
+
+## Schematics templates
+{: #schematics-snippet}
+
+| Name | Description and resources | Code |
+| --- | --- | --- |
+| `ibm-schematics` | Retrieve the Terraform on {{site.data.keyword.cloud_notm}} state file and output variables for a {{site.data.keyword.bpshort}} workspace by using a {{site.data.keyword.bpshort}} data source. For more information, about how to use the data source, see <a href="/docs/schematics?topic=schematics-remote-state">Managing cross-workspace state access with Terraform on {{site.data.keyword.cloud_notm}}</a>.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>N/A</code></li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-schematics)|
+
+## VPC infrastructure templates (Gen 2 compute)
+{: #vpc-gen2-snippet}
+
+| Name | Description and resources | Code |
+| --- | --- | --- |
+| `ibm-is-ng` | Create a Virtual Private Cloud (VPC) for Generation 2 compute, configure a VPC load balancer with custom routing rules. Then, add a virtual server instance to your VPC that you can access from the internet by using a public IP address. Then, create another VPC Gen 2 and configure it with a VPN gateway with custom IPSec and IKE networking rules. You also learn how to create VPC Gen 2 block storage volumes.<br><br><strong>Resources</strong><br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><code>ibm_is_vpc</code></li><li style="margin:0px; padding:0px"><code>ibm_is_vpc_route</code></li><li style="margin:0px; padding:0px"><code>ibm_is_subnet</code></li><li style="margin:0px; padding:0px"><code>ibm_is_lb</code></li><li style="margin:0px; padding:0px"><code>ibm_is_lb_listener</code></li><li style="margin:0px; padding:0px"><code>ibm_is_lb_listener_policy</code></li><li style="margin:0px; padding:0px"><code>ibm_is_lb_listener_policy_rule</code></li><li style="margin:0px; padding:0px"><code>ibm_is_vpn_gateway</code></li><li style="margin:0px; padding:0px"><code>ibm_is_vpn_gateway_connection</code></li><li style="margin:0px; padding:0px"><code>ibm_is_ssh_key</code></li><li style="margin:0px; padding:0px"><code>ibm_is_instance</code></li><li style="margin:0px; padding:0px"><code>ibm_is_floating_ip</code></li><li style="margin:0px; padding:0px"><code>ibm_is_security_group_rule</code></li><li style="margin:0px; padding:0px"><code>ibm_is_ipsec_policy</code></li><li style="margin:0px; padding:0px"><code>ibm_is_ike_policy</code></li><li style="margin:0px; padding:0px"><code>ibm_is_volume</code></li><li style="margin:0px; padding:0px"><code>ibm_is_public_gateway</code></li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-is-ng)|
+
+
+
+
+
+
