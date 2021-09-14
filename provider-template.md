@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-09-13"
+lastupdated: "2021-09-14"
 
 keywords: terraform templates, templates, sample terraform templates, private catalog
 
@@ -176,7 +176,7 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 ### VPC infrastructure
 {: #vpc-templates}
 
-|  Repository link | Description | Link to provision |
+|  Template | Description | Provision |
 | ---- | ---- | --- |
 | [Multiple VSIs on VPC with block storage volume and a load balancer](https://github.com/Cloud-Schematics/vpc-vsi-with-volumes-and-lb) | Provision multiple virtual servers each with a block storage volume on VPC, across a number of subnets, and connected with a single load balancer. | <img usemap="#deploybutton_mapcs14" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs14" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/vpc-vsi-with-volumes-and-lb&terraform_version=terraform_v0.12" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
 | [Multi-tier VPC with bastion and VSIs](https://github.com/Cloud-Schematics/multitier-bastion-vpc-lamp) | Provision multi-tier infrastructure with VPC, SSH, Bastion host, front-end, and backend servers.| <img usemap="#deploybutton_mapcs8" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs8" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/multitier-bastion-vpc-lamp&terraform_version=terraform_v0.12" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
@@ -187,7 +187,7 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 ### Observability
 {: #observability-templates}
 
-|  Repository link | Description | Link to provision |
+|  Template | Description | Provision |
 | ---- | ---- | --- |
 | [Observability service instance](https://github.com/Cloud-Schematics/terraform-ibm-observability) | Provision an instance of all the Observability services on IBM Cloud such as IBM Cloud Log Analysis, IBM Cloud Monitoring, and IBM Cloud Activity Tracker in your account.| <img usemap="#deploybutton_mapcs13" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs13" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/terraform-ibm-observability&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
 | [Observability agents for Kubernetes cluster](https://github.com/Cloud-Schematics/iks-logging-and-monitoring) | Deploy logging and monitoring agents onto your existing {{site.data.keyword.containerlong_notm}} cluster on VPC. | <img usemap="#deploybutton_mapcs3" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs3" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/iks-logging-and-monitoring&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
@@ -199,7 +199,7 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 ### Storage
 {: #storage-templates}
 
-|  Repository link | Description | Link to provision |
+|  Template | Description | Provision |
 | ---- | ---- | --- |
 | [IBM Cloud Object Storage bucket with encryption](https://github.com/Cloud-Schematics/kms-encrypted-cos-bucket) | Provision IBM Cloud Object Storage with IBM Key Protect integration. | <img usemap="#deploybutton_mapcs6" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs6" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/kms-encrypted-cos-bucket&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
 {: caption="Storage Terraform templates to provision resource using {{site.data.keyword.bpshort}} workspace" caption-side="top"}
@@ -208,7 +208,7 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 ### Account management and IAM
 {: #account-mgt-iam}
 
-|  Repository link | Description | Link to provision |
+|  Template | Description | Provision |
 | ---- | ---- | --- |
 | [Clone users to new account](https://github.com/Cloud-Schematics/add-all-users-to-new-account)| Clone all the IAM users from one IBM Cloud account into another IBM Cloud account. | <img usemap="#deploybutton_mapcs1" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs1" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/add-all-users-to-new-account&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
 {: caption="Account management and IAM Terraform templates to provision resource using {{site.data.keyword.bpshort}} workspace" caption-side="top"}
@@ -216,7 +216,7 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 ### Classic infrastructure service
 {: #classic-infra-templates}
 
-|  Repository link | Description | Link to provision |
+|  Template | Description | Provision |
 | ---- | ---- | --- |
 | [Autoscale the Classic VSIs](https://github.com/Cloud-Schematics/classic-vsi-autoscaling-solution) | Autoscale the classic VSIs using {{site.data.keyword.bpshort}}, {{site.data.keyword.openwhisk_short}}, and Sysdig. | <img usemap="#deploybutton_mapcs2" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs2" alt="This image leads to create a workspace."><area alt="Deploy to IBM Cloud" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/classic-vsi-autoscaling-solution&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
 {: caption="Classic infrastructure templates to provision resource using {{site.data.keyword.bpshort}} workspace" caption-side="top"}
@@ -228,7 +228,7 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 ### API Gateway templates
 {: #api-gwy-snippet}
 
-| Name | Description and resources | Access |
+| Name | Description and resources | Code |
 | --- | --- | --- |
 | `ibm-api-gateway` | Create an <a href="/docs/api-gateway?topic=api-gateway-whatis_apigw">IBM Cloud API Gateway</a> service instance to set up an API for an IBM Cloud service of your choice. You can specify the API endpoint that you want to use to access your service, and define subscription keys so that developers can securely consume your API. <br><br> **Resources** <ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_resource_instance**</li><li style="margin:0px; padding:0px">**ibm_api_gateway_endpoint**</li><li style="margin:0px; padding:0px">**ibm_api_gateway**</li><li style="margin:0px; padding:0px">**ibm_api_gateway_endpoint_subscription**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway)|
 
@@ -236,42 +236,42 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 ## Certificate Manager templates
 {: #cert-mgr-snippet}
 
-| Name | Description and resources | Access |
+| Name | Description and resources | Code |
 | --- | --- | --- |
 | `ibm-certificate-manager-order` | Create an {{site.data.keyword.cis_full_notm}} instance with a domain, and use <a href="/docs/certificate-manager?topic=certificate-manager-about-certificate-manager">IBM Cloud Certificate Manager</a> to generate a TLS certificate for this domain.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_resource_instance**</li><li style="margin:0px; padding:0px">**ibm_cis**</li><li style="margin:0px; padding:0px">**ibm_cis_domain**</li><li style="margin:0px; padding:0px">**ibm_certificate_manager_order**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-certificate-manager/ibm-certificate-manager-order)|
 
 ## Cloud Foundry templates
 {: #cloud-foundry-snippet}
 
-| Name | Description and resources | Access |
+| Name | Description and resources | Code |
 | --- | --- | --- |
 | `ibm-app` | Create and deploy a Cloud Foundry app in {{site.data.keyword.cloud_notm}}.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**null_resource**</li><li style="margin:0px; padding:0px">**ibm_app_route**</li><li style="margin:0px; padding:0px">**ibm_service_instance**</li><li style="margin:0px; padding:0px">**ibm_service_key**</li><li style="margin:0px; padding:0px">**ibm_app**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-app)|
 
 ## Direct Link templates
 {: #dl-snippet}
 
-| Name | Description and resources | Access |
+| Name | Description and resources | Code |
 | --- | --- | --- |
 | `ibm-dl-gateway` | Create a speed and reliable direct link gateways, virtual connections, offering information, routers, and ports by using the resources.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_dl_gateway**</li><li style="margin:0px; padding:0px">**ibm_dl_virtual_connection**</li><li style="margin:0px; padding:0px">**ibm_is_vpc**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-direct-link)|
 
 ## Event Streams templates
 {: #event-stream-snippet}
 
-| Name | Description and resources | Access |
+| Name | Description and resources | Code |
 | --- | --- | --- |
 | `ibm-event-streams` | Create a communication through an Event Streams instance, topic instance, or Kafka consumer application to connect an existing event stream instances and its topic instance by using {{site.data.keyword.bplong_notm}} workspace.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_resource_instance**</li><li style="margin:0px; padding:0px">**ibm_event_streams_topic**</li><li style="margin:0px; padding:0px">**kafka_consumer_app**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-event-streams)|
 
 ## Functions templates
 {: #func-snippet}
 
-| Name | Description and resources | Access |
+| Name | Description and resources | Code |
 | --- | --- | --- |
 | `ibm-function-cloudant-trigger` | Create a Cloudant NoSQL service instance and a Python app deployment that creates the **database demo** database in your service instance. Then, you create an action with {{site.data.keyword.cloud_notm}} functions that is triggered when you add or edit documents to your database.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**null_resource**</li><li style="margin:0px; padding:0px">**ibm_service_instance**</li><li style="margin:0px; padding:0px">**ibm_service_key**</li><li style="margin:0px; padding:0px">**ibm_app_route**</li><li style="margin:0px; padding:0px">**ibm_app**</li><li style="margin:0px; padding:0px">**ibm_function_package**</li><li style="margin:0px; padding:0px">**ibm_function_action**</li><li style="margin:0px; padding:0px">**ibm_function_trigger**</li><li style="margin:0px; padding:0px">**ibm_function_rule**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-function-cloudant-trigger)|
 
 ## Identity & Access (IAM) templates
 {: #iam-snippet}
 
-| Name | Description and resources | Access |
+| Name | Description and resources | Code |
 | --- | --- | --- |
 | `ibm-iam-custom-role` | Create a custom role in IBM Cloud Identity and Access Management (IAM) for IBM Cloud Key Protect.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_iam_custom_role**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-iam-custom-role)|
 | `ibm-iam-policy` | Create an access policy in IBM Cloud Identity and Access Management (IAM) to grant permissions for a resource group to a user.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_iam_user_policy**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-iam-policy)|
@@ -279,6 +279,6 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 ## Key Management Service templates
 {: #kms-snippet}
 
-| Name | Description and resources | Access |
+| Name | Description and resources | Code |
 | --- | --- | --- |
 | `ibm-key-management-service` | Create an {{site.data.keyword.cos_full_notm}} service instance with a bucket to store your data and provide a key management service resource for Hyper Protect Crypto Services and Key Protect service instance with a root key. This allow access between these services with an IBM Cloud Identity and Access Management policy.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_kms_key**</li><li style="margin:0px; padding:0px">**ibm_kp_key**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-kms)|
