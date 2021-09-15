@@ -129,7 +129,7 @@ For more information, about how the Ansible based automation is configured to lo
 ## Sample templates
 {: #sample-templates}
 
-Following are the lsit of sample templates that allows you to provision resource by using {{site.data.keyword.bpshort}} workspace. 
+Following are the sample templates that allows you to provision resource by using {{site.data.keyword.bpshort}} workspace. 
 
 - [Kubernetes and OpenShift](#kubnernetes-openshift)
 - [VPC infrastructure](#vpc-templates)
