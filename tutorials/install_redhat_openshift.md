@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-09-07"
+lastupdated: "2021-09-15"
 
 keywords: Terraform on {{site.data.keyword.cloud_notm}}, ansible, red hat, openshift, automate, automation, iaas
 
@@ -695,27 +695,27 @@ For more information, about Red Hat OpenShift Container Platform components, see
         +-------------------------------------------+
         Subscription Name:   30 Day Self-Supported Red Hat OpenShift Container Platform, 2-Core Evaluation
         Provides:            Red Hat Ansible Engine
-Red Hat Software Collections (for RHEL Server for IBM Power LE)
-Red Hat OpenShift Enterprise Infrastructure
-Red Hat JBoss Core Services
-Red Hat Enterprise Linux Fast Datapath
-Red Hat OpenShift Container Platform for Power
-JBoss Enterprise Application Platform
-                              :
-Red Hat OpenShift Container Platform Client Tools for Power
-Red Hat Enterprise Linux Fast Datapath (for RHEL Server for IBM Power LE)
-Red Hat OpenShift Enterprise JBoss EAP add-on
-Red Hat OpenShift Container Platform
-Red Hat Gluster Storage Management Console (for RHEL Server)
-Red Hat OpenShift Enterprise JBoss A-MQ add-on
-Red Hat Enterprise Linux for Power, little endian Beta
-Red Hat OpenShift Enterprise Client Tools
-                              :
-Red Hat OpenShift Enterprise Application Node
-                              :
-Red Hat OpenShift Service Mesh
-                              :
-Red Hat OpenShift Enterprise JBoss FUSE add-on
+        Red Hat Software Collections (for RHEL Server for IBM Power LE)
+        Red Hat OpenShift Enterprise Infrastructure
+        Red Hat JBoss Core Services
+        Red Hat Enterprise Linux Fast Datapath
+        Red Hat OpenShift Container Platform for Power
+        JBoss Enterprise Application Platform
+                                    :
+        Red Hat OpenShift Container Platform Client Tools for Power
+        Red Hat Enterprise Linux Fast Datapath (for RHEL Server for IBM Power LE)
+        Red Hat OpenShift Enterprise JBoss EAP add-on
+        Red Hat OpenShift Container Platform
+        Red Hat Gluster Storage Management Console (for RHEL Server)
+        Red Hat OpenShift Enterprise JBoss A-MQ add-on
+        Red Hat Enterprise Linux for Power, little endian Beta
+        Red Hat OpenShift Enterprise Client Tools
+                                    :
+        Red Hat OpenShift Enterprise Application Node
+                                    :
+        Red Hat OpenShift Service Mesh
+                                    :
+        Red Hat OpenShift Enterprise JBoss FUSE add-on
         SKU:                 SER0419
         Contract:            123456789
         Pool ID:             1a2345bcd6789098765abcde43219bc3
@@ -746,10 +746,10 @@ Red Hat OpenShift Enterprise JBoss FUSE add-on
         {: screen}
 
 2. Finish setting up and registering the nodes with the Red Hat Network. 
-    ```
-    make rhn_username=<rhn_username> rhn_password=<rhn_password> pool_id=<pool_ID> rhnregister
-    ```
-    {: pre}
+      ```
+      make rhn_username=<rhn_username> rhn_password=<rhn_password> pool_id=<pool_ID> rhn_register
+      ```
+     {: pre}
 
     When you create the nodes, the following software and Red Hat subscriptions are automatically downloaded and installed on the nodes for you: 
 
