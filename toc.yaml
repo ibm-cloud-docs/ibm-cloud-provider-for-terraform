@@ -1,0 +1,80 @@
+
+toc:
+  properties:
+    subcollection: ibm-cloud-provider-for-terraform
+    version: 2
+    category: dev_ops
+    audience: software
+    href: /docs/ibm-cloud-provider-for-terraform
+    console-page: /schematics/overview
+    product-page: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
+    path: ibm-cloud-provider-for-terraform
+    label: Terraform on IBM Cloud
+
+#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
+  entries:
+  - navgroup:
+      id: learn
+      topics:
+      - getting-started.md
+      - about.md
+      - whats-new.md
+  - navgroup:
+      id: tutorial
+      topics:
+      - 
+      - provider-template.md
+      - tutorials/clusters.md
+      - tutorials/install_redhat_openshift.md
+      - provision-vsi-vpc.md
+      links:
+      - link:
+          label: Deploying a 3-Tier web app in a VPC
+          href: https://github.com/jonghall/ibmcloud-terraform-vpc
+      - provision-vsi-classic.md
+      - link:
+          label: Deploying a VPC environment on IBM Cloud by using Bastion host
+          href: https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/
+      - link:
+          label: Deploying multi-tier VPC on IBM Cloud by using Bastion host
+          href: https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md
+  - navgroup:
+      id: howto
+      topics:
+      - setup_cli.md
+      - provider/provider-ref.md
+      - migrate.md
+      - create-terraform-config.md
+      - manage_resources.md
+      - autodeploy_template.md
+  - navgroup:
+      id: reference
+      topics:
+      - topicgroup:
+          label: IBM Cloud Provider plug-in for Terraform
+          topics:
+          - provider/sitemap.md
+          links:
+          - link:
+              label: IBM Cloud Provider release and updates
+              href: https://github.com/IBM-Cloud/terraform-provider-ibm/releases
+          - 
+          - link:
+              label: Architecture reference - Highly available, secured, and managed Kubernetes environment
+              href: https://github.com/ibm-cloud-architecture/refarch-public-iaas-iks
+          - 
+  - navgroup:
+      id: help
+      topics:
+      - faqs.md
+      - terraform_ts_index.md
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+          - region.md
+          - topicgroup:
+              label: Debugging Kubernetes service errors
+              topics:
+              - troubleshooting/tg-kubernetes-service.md
+
+
