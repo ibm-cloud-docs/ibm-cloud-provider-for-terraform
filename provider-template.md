@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-09-25"
+lastupdated: "2021-09-28"
 
 keywords: terraform templates, templates, sample terraform templates, private catalog
 
@@ -10,101 +10,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 ---
 
-{:DomainName: data-hd-keyref="APPDomain"}
-{:DomainName: data-hd-keyref="DomainName"}
-{:android: data-hd-operatingsystem="android"}
-{:api: .ph data-hd-interface='api'}
-{:apikey: data-credential-placeholder='apikey'}
-{:app_key: data-hd-keyref="app_key"}
-{:app_name: data-hd-keyref="app_name"}
-{:app_secret: data-hd-keyref="app_secret"}
-{:app_url: data-hd-keyref="app_url"}
-{:audio: .audio}
-{:authenticated-content: .authenticated-content}
-{:beta: .beta}
-{:c#: .ph data-hd-programlang='c#'}
-{:c#: data-hd-programlang="c#"}
-{:cli: .ph data-hd-interface='cli'}
-{:codeblock: .codeblock}
-{:curl: #curl .ph data-hd-programlang='curl'}
-{:curl: .ph data-hd-programlang='curl'}
-{:deprecated: .deprecated}
-{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
-{:download: .download}
-{:external: .external target="_blank"}
-{:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
-{:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
-{:generic: data-hd-operatingsystem="generic"}
-{:generic: data-hd-programlang="generic"}
-{:gif: data-image-type='gif'}
-{:go: .ph data-hd-programlang='go'}
-{:help: data-hd-content-type='help'}
-{:hide-dashboard: .hide-dashboard}
-{:hide-in-docs: .hide-in-docs}
-{:important: .important}
-{:ios: data-hd-operatingsystem="ios"}
-{:java: #java .ph data-hd-programlang='java'}
-{:java: .ph data-hd-programlang='java'}
-{:java: data-hd-programlang="java"}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:javascript: data-hd-programlang="javascript"}
-{:middle: .ph data-hd-position='middle'}
-{:navgroup: .navgroup}
-{:new_window: target="_blank"}
-{:node: .ph data-hd-programlang='node'}
-{:note: .note}
-{:objectc: .ph data-hd-programlang='Objective C'}
-{:objectc: data-hd-programlang="objectc"}
-{:org_name: data-hd-keyref="org_name"}
-{:php: .ph data-hd-programlang='PHP'}
-{:php: data-hd-programlang="php"}
-{:pre: .pre}
-{:preview: .preview}
-{:python: .ph data-hd-programlang='python'}
-{:python: data-hd-programlang="python"}
-{:release-note: data-hd-content-type='release-note'}
-{:right: .ph data-hd-position='right'}
-{:route: data-hd-keyref="route"}
-{:row-headers: .row-headers}
-{:ruby: .ph data-hd-programlang='ruby'}
-{:ruby: data-hd-programlang="ruby"}
-{:runtime: architecture="runtime"}
-{:runtimeIcon: .runtimeIcon}
-{:runtimeIconList: .runtimeIconList}
-{:runtimeLink: .runtimeLink}
-{:runtimeTitle: .runtimeTitle}
-{:screen: .screen}
-{:script: data-hd-video='script'}
-{:service: architecture="service"}
-{:service_instance_name: data-hd-keyref="service_instance_name"}
-{:service_name: data-hd-keyref="service_name"}
-{:shortdesc: .shortdesc}
-{:space_name: data-hd-keyref="space_name"}
-{:step: data-tutorial-type='step'}
-{:step: data-tutorial-type='step'} 
-{:subsection: outputclass="subsection"}
-{:support: data-reuse='support'}
-{:swift: #swift .ph data-hd-programlang='swift'}
-{:swift: .ph data-hd-programlang='swift'}
-{:swift: data-hd-programlang="swift"}
-{:table: .aria-labeledby="caption"}
-{:term: .term}
-{:terraform: .ph data-hd-interface='terraform'}
-{:tip: .tip}
-{:tooling-url: data-tooling-url-placeholder='tooling-url'}
-{:topicgroup: .topicgroup}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:tsSymptoms: .tsSymptoms}
-{:tutorial: data-hd-content-type='tutorial'}
-{:ui: .ph data-hd-interface='ui'}
-{:unity: .ph data-hd-programlang='unity'}
-{:url: data-credential-placeholder='url'}
-{:user_ID: data-hd-keyref="user_ID"}
-{:vbnet: .ph data-hd-programlang='vb.net'}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 
 # Sample Terraform templates for {{site.data.keyword.cloud_notm}}
@@ -340,7 +246,7 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 | `ibm-cis` | Create an {{site.data.keyword.cis_full_notm}} instance and configure the instance with health check monitoring, origin pool, global load-balancing, DNS records, firewall, and limit the rate rules.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_cis**</li><li style="margin:0px; padding:0px">**ibm_cis_domain_settings**</li><li style="margin:0px; padding:0px">**ibm_cis_domain**</li><li style="margin:0px; padding:0px">**ibm_cis_edge_functions_action**</li><li style="margin:0px; padding:0px">**ibm_cis_edge_functions_trigger**</li><li style="margin:0px; padding:0px">**ibm_cis_healthcheck**</li><li style="margin:0px; padding:0px">**ibm_cis_origin_pool**</li><li style="margin:0px; padding:0px">**ibm_cis_global_load_balancer**</li><li style="margin:0px; padding:0px">**ibm_cis_dns_record**</li><li style="margin:0px; padding:0px">**ibm_cis_firewall**</li><li style="margin:0px; padding:0px">**ibm_cis_rate_limit**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cis)|
 
 ### Object Storage templates
-{: #cos-snippet}
+{: #cos-snippet}vpc_short
 
 | Name | Description and resources | Code |
 | --- | --- | --- |
@@ -374,8 +280,4 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 | --- | --- | --- |
 | `ibm-is-ng` | Create a Virtual Private Cloud (VPC) for Generation 2 compute, configure a VPC load balancer with custom routing rules. Then, add a virtual server instance to your VPC that you can access from the internet by using a public IP address. Then, create another VPC Gen 2 and configure it with a VPN gateway with custom IPSec and IKE networking rules. You also learn how to create VPC Gen 2 block storage volumes.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_is_vpc**</li><li style="margin:0px; padding:0px">**ibm_is_vpc_route**</li><li style="margin:0px; padding:0px">**ibm_is_subnet**</li><li style="margin:0px; padding:0px">**ibm_is_lb**</li><li style="margin:0px; padding:0px">**ibm_is_lb_listener**</li><li style="margin:0px; padding:0px">**ibm_is_lb_listener_policy**</li><li style="margin:0px; padding:0px">**ibm_is_lb_listener_policy_rule**</li><li style="margin:0px; padding:0px">**ibm_is_vpn_gateway**</li><li style="margin:0px; padding:0px">**ibm_is_vpn_gateway_connection**</li><li style="margin:0px; padding:0px">**ibm_is_ssh_key**</li><li style="margin:0px; padding:0px">**ibm_is_instance**</li><li style="margin:0px; padding:0px">**ibm_is_floating_ip**</li><li style="margin:0px; padding:0px">**ibm_is_security_group_rule**</li><li style="margin:0px; padding:0px">**ibm_is_ipsec_policy**</li><li style="margin:0px; padding:0px">**ibm_is_ike_policy**</li><li style="margin:0px; padding:0px">**ibm_is_volume**</li><li style="margin:0px; padding:0px">**ibm_is_public_gateway**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-is-ng)|
 
-
-
-
-
-
+Testing images in prod 
