@@ -22,7 +22,7 @@ toc:
   - navgroup:
       id: tutorial
       topics:
-      - 
+      
       - provider-template.md
       - tutorials/clusters.md
       - tutorials/install_redhat_openshift.md
@@ -32,6 +32,7 @@ toc:
           label: Deploying a 3-Tier web app in a VPC
           href: https://github.com/jonghall/ibmcloud-terraform-vpc
       - provision-vsi-classic.md
+      
       - link:
           label: Deploying a VPC environment on IBM Cloud by using Bastion host
           href: https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/
@@ -58,11 +59,11 @@ toc:
           - link:
               label: IBM Cloud Provider release and updates
               href: https://github.com/IBM-Cloud/terraform-provider-ibm/releases
-          - 
+          
           - link:
               label: Architecture reference - Highly available, secured, and managed Kubernetes environment
               href: https://github.com/ibm-cloud-architecture/refarch-public-iaas-iks
-          - 
+          
   - navgroup:
       id: help
       topics:
@@ -76,5 +77,4 @@ toc:
               label: Debugging Kubernetes service errors
               topics:
               - troubleshooting/tg-kubernetes-service.md
-
-
+      
