@@ -60,6 +60,7 @@ toc:
               label: IBM Cloud Provider release and updates
               href: https://github.com/IBM-Cloud/terraform-provider-ibm/releases
           
+          
           - link:
               label: Architecture reference - Highly available, secured, and managed Kubernetes environment
               href: https://github.com/ibm-cloud-architecture/refarch-public-iaas-iks

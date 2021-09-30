@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-09-28"
+lastupdated: "2021-09-29"
 
 keywords: terraform templates, templates, sample terraform templates, private catalog
 
@@ -279,5 +279,3 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 | Name | Description and resources | Code |
 | --- | --- | --- |
 | `ibm-is-ng` | Create a Virtual Private Cloud (VPC) for Generation 2 compute, configure a VPC load balancer with custom routing rules. Then, add a virtual server instance to your VPC that you can access from the internet by using a public IP address. Then, create another VPC Gen 2 and configure it with a VPN gateway with custom IPSec and IKE networking rules. You also learn how to create VPC Gen 2 block storage volumes.<br><br>**Resources**<br><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px">**ibm_is_vpc**</li><li style="margin:0px; padding:0px">**ibm_is_vpc_route**</li><li style="margin:0px; padding:0px">**ibm_is_subnet**</li><li style="margin:0px; padding:0px">**ibm_is_lb**</li><li style="margin:0px; padding:0px">**ibm_is_lb_listener**</li><li style="margin:0px; padding:0px">**ibm_is_lb_listener_policy**</li><li style="margin:0px; padding:0px">**ibm_is_lb_listener_policy_rule**</li><li style="margin:0px; padding:0px">**ibm_is_vpn_gateway**</li><li style="margin:0px; padding:0px">**ibm_is_vpn_gateway_connection**</li><li style="margin:0px; padding:0px">**ibm_is_ssh_key**</li><li style="margin:0px; padding:0px">**ibm_is_instance**</li><li style="margin:0px; padding:0px">**ibm_is_floating_ip**</li><li style="margin:0px; padding:0px">**ibm_is_security_group_rule**</li><li style="margin:0px; padding:0px">**ibm_is_ipsec_policy**</li><li style="margin:0px; padding:0px">**ibm_is_ike_policy**</li><li style="margin:0px; padding:0px">**ibm_is_volume**</li><li style="margin:0px; padding:0px">**ibm_is_public_gateway**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-is-ng)|
-
-Testing images in prod 
