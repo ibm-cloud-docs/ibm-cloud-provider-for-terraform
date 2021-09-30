@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-09-29"
+lastupdated: "2021-09-30"
 
 keywords: terraform provider plugin, terraform functions, terraform open whisk, terraform function action, terraform serverless
 
@@ -28,6 +28,36 @@ subcollection: ibm-cloud-provider-for-terraform
 <tbody>
 <tr>
     <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/api_gateway_endpoint"><code>ibm_api_gateway_endpoint</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/api_gateway_endpoint_subscription"><code>ibm_api_gateway_endpoint_subscription</code></a></li></ul></td><td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/api_gateway"><code>ibm_api_gateway</code></a></li></ul></td>
+</tr>
+</tbody>
+</table>
+
+## Activity Tracker API
+{: #ibm-activity-tracker_rd}
+
+<table>
+    <thead>
+<th>Resources</th>
+<th>Data sources</th>
+    </thead>
+<tbody>
+<tr>
+    <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/atracker_route"><code>ibm_atracker_route</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/atracker_target"><code>ibm_atracker_target</code></a></li></ul></td><td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/atracker_endpoints"><code>ibm_atracker_endpoints</code></a></li>li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/atracker_routes"><code>ibm_atracker_routes</code></a></li>li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/atracker_targets"><code>ibm_atracker_targets</code></a></li></ul></td>
+</tr>
+</tbody>
+</table>
+
+## App Configuration
+{: #ibm-app-configuration_rd}
+
+<table>
+    <thead>
+<th>Resources</th>
+<th>Data sources</th>
+    </thead>
+<tbody>
+<tr>
+    <td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/app_config_environment"><code>ibm_app_config_environment</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/app_config_feature"><code>ibm_app_config_feature</code></a></li></ul></td><td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/app_config_environment"><code>ibm_app_config_environment</code></a></li>li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/app_config_environments"><code>ibm_app_config_environments</code></a></li>li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/app_config_feature"><code>ibm_app_config_features</code></a></li>li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/app_config_features"><code>ibm_app_config_feature</code></a></li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -189,8 +219,8 @@ subcollection: ibm-cloud-provider-for-terraform
 </thead>
 <tbody>
     <tr>
-<td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/event_streams_topic"><code>ibm_event_streams_topic</code></a></li></ul></td>
-<td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/event_streams_topic"><code>ibm_event_streams_topic</code></a></li></ul></td>
+<td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/event_streams_schema"><code>ibm_event_streams_schema</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/event_streams_topic"><code>ibm_event_streams_topic</code></a></li></ul></td>
+<td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/event_streams_schema"><code>ibm_event_streams_schema</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/event_streams_topic"><code>ibm_event_streams_topic</code></a></li></ul></td>
     </tr>
 </tbody>
 </table>
