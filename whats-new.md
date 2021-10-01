@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-09-29"
+lastupdated: "2021-10-01"
 
 keywords: terraform resources, terraform modules, terraform provider, terraform autodeploy, 
 
@@ -38,7 +38,7 @@ Learn about the latest changes to the Terraform on {{site.data.keyword.cloud_not
 |14 September 2021 |<ul><li>**For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**.** see [Updates and fixes in v1.32.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.32.0)</li></ul> |
 |7 September 2021 |<ul><li>**For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**.** see [Updates and fixes in v1.32.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.31.0)</li></ul> |
 |1 September 2021 |<ul><li>**For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**.** see [Updates and fixes in v1.30.2](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.30.2)</li></ul> |
-
+{: caption="What's new in September" caption-side="top"}
 
 
 
