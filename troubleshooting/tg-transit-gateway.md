@@ -38,17 +38,14 @@ data "ibm_is_vpc" "vpc1" {
 }
 ```
 
-
 Without manually write CRN for VPC, You need to get information about the VPC from the different region to create a Transit Gateway to connect different regions. Is there a way to accomplish this error?
+{: tsCauses}
 
 ```
 Error: No VPC found with name aa-kubecf-a 
 ```
-{: tsCauses}
-
 
 You can accomplish to connect and retrieve information from a remote system by using `aliases` targeting multiple regions. Refer the example code block for the syntax. For more information, refer to [Multiple provider configurations](https://www.terraform.io/docs/language/providers/configuration.html#alias-multiple-provider-configurations).
-
 {: tsResolve}
 
 **Example**
