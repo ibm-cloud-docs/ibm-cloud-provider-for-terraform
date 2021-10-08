@@ -100,3 +100,84 @@ Error: Error waiting for create resource alb cert (buvlsclf0qcur3hjcrng/ingress-
 
 You need to update the Terraform on {{site.data.keyword.cloud_notm}} provider to use `version 1.16.1` and above.
 
+## How do you set or add multiple address prefixes to the configuration file when provisioning VPC?
+{: #addressprefix}
+{: faq}
+{: support}
+
+**Problem**
+
+The `address_prefix_management` argument indicates a default address prefix should be created automatically or manually for each zone in the VPC. Supported values are **auto** and **manual**. The default value is **auto**.
+
+Most scenario covers default address prefixes set as optional without specifying during the creation of VPC through Terraform. 
+
+**Solution**
+
+If user requires one or more address prefixes you should define as part of resource provisioning in the configuration file. To configure multiple address prefix with arguments define the code as stated in the example. For more information, see [ibm_is_vpc_address_prefix data source](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_vpc_address_prefixes#attribute-reference){: external}.
+
+**Example**
+
+```
+resource "ibm_is_vpc" "testacc_vpc" {
+  name = "testvpc"
+}
+
+resource "ibm_is_vpc_address_prefix" "testacc_vpc_address_prefix" {
+  name = "test"
+  zone = "us-south-1"
+  vpc  = ibm_is_vpc.testacc_vpc.id
+  cidr = "10.240.0.0/24"
+}
+
+resource "ibm_is_vpc_address_prefix" "testacc_vpc_address_prefix2" {
+  name = "test2"
+  zone = "us-south-1"
+  vpc  = ibm_is_vpc.testacc_vpc.id
+  cidr = "10.240.0.0/24"
+}
+```
+
+## How to define a policy which has all resource groups?
+{: #policy-faq}
+{: faq}
+{: support}
+
+**Solution**
+
+A access group policy is a way to organize your account having create, modify, or delete an IAM access groups, where user can grant permissions to members with appropriate privileges such as **Manager**, **Viewer** and **Administrator**. For more information, about [ibm_access_group_policy resource](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group_policy) and [iam_service_policy resource](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_service_policy). 
+
+**Sample code**
+
+```
+resource "ibm_iam_access_group" "accgrp" {
+  name = "rg"
+}
+
+resource "ibm_iam_access_group_policy" "policy" {
+  access_group_id = ibm_iam_access_group.accgrp.id
+  roles           = ["Manager", "Viewer", "Administrator"]
+]
+
+  resources {
+    resource_type = "resource-group"
+  }
+}
+```
+
+## How to configure policy for all services in all the resource groups for an user?
+{: #user-policy-faq}
+{: faq}
+{: support}
+
+**Solution**
+
+View the sample code to configure the policy for all services in all resource group. But you have to enter all the roles in the list. 
+
+**Sample code**
+
+```
+resource "ibm_iam_user_policy" "policy" {
+  ibm_id = "test@in.ibm.com"
+  roles  = ["Viewer"]
+}
+```
