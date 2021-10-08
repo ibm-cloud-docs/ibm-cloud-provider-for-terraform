@@ -60,6 +60,7 @@ provider "ibm" {
   region = "eu-de"
 }
 ```
+{: codeblock}
 
 **Example configuring `aliases` to target multiple regions**
 
@@ -75,4 +76,5 @@ provider "ibm" {
   region = "eu-gb-2"
 }
 ```
+{: codeblock}
 

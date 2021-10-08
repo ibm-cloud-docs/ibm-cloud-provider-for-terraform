@@ -94,7 +94,7 @@ If you are using the resource `ibm_container_alb_cert` to create a secret and fa
 stderr : 
 Error: Error waiting for create resource alb cert (buvlsclf0qcur3hjcrng/ingress-tls-cert) : The resource alb cert buvlsclf0qcur3hjcrng/ingress-tls-cert does not exist anymore: Request failed with status code: 404, ServerErrorResponse: {"incidentID":"5f82fa1696ce299a-IAD","code":"E0024","description":"The specified Ingress secret name is not found for this cluster.","type":"ALBSecret","recoveryCLI":"To list the Ingress secrets for a cluster, run 'ibmcloud ks ingress secret ls -c \u003ccluster_name_or_ID\u003e'."}
 ```
-{: pre}
+{: screen}
 
 **Solution**
 
@@ -136,6 +136,7 @@ resource "ibm_is_vpc_address_prefix" "testacc_vpc_address_prefix2" {
   cidr = "10.240.0.0/24"
 }
 ```
+{: codeblock}
 
 ## How to define a policy which has all resource groups?
 {: #policy-faq}
@@ -163,6 +164,7 @@ resource "ibm_iam_access_group_policy" "policy" {
   }
 }
 ```
+{: codeblock}
 
 ## How to configure policy for all services in all the resource groups for an user?
 {: #user-policy-faq}
@@ -181,3 +183,4 @@ resource "ibm_iam_user_policy" "policy" {
   roles  = ["Viewer"]
 }
 ```
+{: codeblock}
