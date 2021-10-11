@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-08"
+lastupdated: "2021-10-11"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -74,13 +74,11 @@ If the Terraform on {{site.data.keyword.cloud_notm}} operation does not complete
 </tbody>
 </table>
 
-## How do I set up Terraform on {{site.data.keyword.cloud_notm}} v0.13.0?
+## How do I set up Terraform on {{site.data.keyword.cloud_notm}} greater than v0.13.0 ?
 {: #ibm-terraform-provider-v13}
 {: faq}
 
 For detailed steps, see how to [install the Terraform on {{site.data.keyword.cloud_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#tf_installation) and [install the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
-
-
 
 ## Why I am getting an issue when trying to provision an `ibm_container_alb_cert`?
 {: #provision-ibm-container-alb-cert}
@@ -184,3 +182,67 @@ resource "ibm_iam_user_policy" "policy" {
 }
 ```
 {: codeblock}
+
+
+# How to configure a target resource to connect from different regions?
+{: #target-regions-faq}
+{: faq}
+{: support}
+
+You need to configure the different regions in the provider block by using `region` parameter, as shown in the example.
+
+**Example**
+
+```
+// First code block
+provider "ibm" {
+    ibmcloud_api_key   = xxxxxx
+    region             = "eu-de"
+}
+```
+
+```
+// Second code block
+data "ibm_is_vpc" "vpc1" {
+  name            = "aa-kubecf-a"
+}
+```
+
+
+## How can a user connect and retrieve information from multiple region at once in the same template?
+{: #alias-parameter-faq}
+{: faq}
+{: support}
+
+**Solution**
+
+You can connect and retrieve information from a multiple regions by using `aliases` parameter. Refer the example code block for the syntax. For more information, about configuring multiple provider block, refer to [Multiple provider configurations](https://www.terraform.io/docs/language/providers/configuration.html#alias-multiple-provider-configurations).
+{: tsResolve}
+
+**Example**
+
+```
+provider "ibm" {
+  ibmcloud_api_key = "${var.ibmcloud_api_key}"
+  generation = 2
+  region = "eu-de"
+}
+```
+{: codeblock}
+
+**Example configuring an `aliases` to connect and retrieve information from multiple regions**
+
+```
+provider "ibm" {
+  ibmcloud_api_key = "${var.ibmcloud_api_key}"
+  region = "eu-de"
+}
+
+provider "ibm" {
+  ibmcloud_api_key = "${var.ibmcloud_api_key}"
+  alias  = "eu-gb-alias"
+  region = "eu-gb"
+}
+```
+{: codeblock}
+
