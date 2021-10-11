@@ -50,7 +50,6 @@ Terraform on IBM Cloud
         {: .topicgroup}
         Debugging Kubernetes service errors
             troubleshooting/tg-kubernetes-service.md
-            troubleshooting/tg-transit-gateway.md
     {: .navgroup-end}
 
 

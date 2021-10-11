@@ -103,8 +103,6 @@ You need to update the Terraform on {{site.data.keyword.cloud_notm}} provider to
 {: faq}
 {: support}
 
-**Problem**
-
 The `address_prefix_management` argument indicates a default address prefix should be created automatically or manually for each zone in the VPC. Supported values are **auto** and **manual**. The default value is **auto**.
 
 Most scenario covers default address prefixes set as optional without specifying during the creation of VPC through Terraform. 
