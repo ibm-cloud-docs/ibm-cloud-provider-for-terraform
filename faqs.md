@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-11"
+lastupdated: "2021-10-12"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -182,7 +182,7 @@ resource "ibm_iam_user_policy" "policy" {
 {: codeblock}
 
 
-# How to configure a target resource to connect from different regions?
+## How to configure a target resource to connect from different regions?
 {: #target-regions-faq}
 {: faq}
 {: support}
@@ -214,8 +214,7 @@ data "ibm_is_vpc" "vpc1" {
 
 **Solution**
 
-You can connect and retrieve information from a multiple regions by using `aliases` parameter. Refer the example code block for the syntax. For more information, about configuring multiple provider block, refer to [Multiple provider configurations](https://www.terraform.io/docs/language/providers/configuration.html#alias-multiple-provider-configurations).
-{: tsResolve}
+You can connect and retrieve information from a multiple regions by using `aliases` parameter as shown in the example code block. For more information, about configuring multiple provider block, see [Multiple provider configurations](https://www.terraform.io/docs/language/providers/configuration.html#alias-multiple-provider-configurations).
 
 **Example**
 
