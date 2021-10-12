@@ -1,0 +1,39 @@
+---
+
+copyright: 
+  years: 2014, 2021
+lastupdated: "2021-10-11"
+
+keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
+
+subcollection: ibm-cloud-provider-for-terraform
+---
+
+{{site.data.keyword.attribute-definition-list}}
+
+
+# Release notes
+{: #rel-notes}
+
+Use the release notes to learn about the latest changes to the {{site.data.keyword.cloud}} Terraform documentation that are grouped by month.
+{: shortdesc}
+
+For information about releases that occured before October 2021, see [Release notes](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform).
+{: note}
+
+
+## October 2021
+{: #release-oct-2021}
+
+Review the release notes for October 2021.
+{: shortdesc}
+
+### 12 October 2021
+{: #12oct2021}
+
+New resources and datasources
+:   For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**. see [Updates and fixes in v1.34.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.34.0)
+
+JWT version support
+:   [The IBM Cloud provider v1.33.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.34.0) replaces the [dependency](https://github.com/dgrijalva/jwt-go) of JSON web tokens with the [latest version](https://github.com/golang-jwt/jwt) as per [CVE-2020-26160](https://github.com/IBM-Cloud/terraform-provider-ibm/pull/3191).
+
