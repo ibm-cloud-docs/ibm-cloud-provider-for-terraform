@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-11"
+lastupdated: "2021-10-12"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -182,7 +182,7 @@ resource "ibm_iam_user_policy" "policy" {
 {: codeblock}
 
 
-# How to configure a target resource to connect from different regions?
+## How to configure a target resource to connect from different regions?
 {: #target-regions-faq}
 {: faq}
 {: support}
