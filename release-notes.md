@@ -30,6 +30,7 @@ Review the release notes for October 2021.
 
 ### 12 October 2021
 {: #12oct2021}
+{: release-note}
 
 New resources and datasources
 :   For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**. see [Updates and fixes in v1.34.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.34.0)
