@@ -214,8 +214,7 @@ data "ibm_is_vpc" "vpc1" {
 
 **Solution**
 
-You can connect and retrieve information from a multiple regions by using `aliases` parameter. Refer the example code block for the syntax. For more information, about configuring multiple provider block, refer to [Multiple provider configurations](https://www.terraform.io/docs/language/providers/configuration.html#alias-multiple-provider-configurations).
-{: tsResolve}
+You can connect and retrieve information from a multiple regions by using `aliases` parameter as shown in the example code block. For more information, about configuring multiple provider block, see [Multiple provider configurations](https://www.terraform.io/docs/language/providers/configuration.html#alias-multiple-provider-configurations).
 
 **Example**
 
