@@ -38,4 +38,4 @@ JWT version support
 :   [The IBM Cloud provider v1.33.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.34.0) replaces the [dependency](https://github.com/dgrijalva/jwt-go) of JSON web tokens with the [latest version](https://github.com/golang-jwt/jwt) as per [CVE-2020-26160](https://github.com/IBM-Cloud/terraform-provider-ibm/pull/3191).
 
 Increasing FAQs
-:  [Terraform supports more FAQs](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-faqs#addressprefix) to ease user experience.
+:  [Terraform supports more FAQs](docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-faqs).
