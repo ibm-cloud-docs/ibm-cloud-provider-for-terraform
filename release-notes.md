@@ -18,7 +18,7 @@ subcollection: ibm-cloud-provider-for-terraform
 Use the release notes to learn about the latest changes to the {{site.data.keyword.cloud}} Terraform documentation that are grouped by month.
 {: shortdesc}
 
-For information about releases that occured before October 2021, see [Release notes](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform){: external}.
+For information about releases that occured before October 2021, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform){: external}.
 {: note}
 
 
@@ -37,3 +37,5 @@ New resources and datasources
 JWT version support
 :   [The IBM Cloud provider v1.33.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.34.0) replaces the [dependency](https://github.com/dgrijalva/jwt-go) of JSON web tokens with the [latest version](https://github.com/golang-jwt/jwt) as per [CVE-2020-26160](https://github.com/IBM-Cloud/terraform-provider-ibm/pull/3191).
 
+Increasing FAQs
+:  [Terraform supports more FAQs](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-faqs#addressprefix) to ease user experience.
