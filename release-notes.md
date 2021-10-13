@@ -36,7 +36,7 @@ New resources and data sources
 :   For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**. see [Updates and fixes in v1.34.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.34.0)
 
 JWT version support
-:   [The IBM Cloud provider v1.33.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.34.0) replaces the [dependency](https://github.com/dgrijalva/jwt-go) of JSON web tokens with the [latest version](https://github.com/golang-jwt/jwt) as per [CVE-2020-26160](https://github.com/IBM-Cloud/terraform-provider-ibm/pull/3191).
+:   Ensure you move to [The IBM Cloud provider v1.33.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.34.0) that replaces the [dependency](https://github.com/dgrijalva/jwt-go) of JSON web tokens with the [latest version](https://github.com/golang-jwt/jwt) to remediate [CVE-2020-26160](https://github.com/IBM-Cloud/terraform-provider-ibm/pull/3191) vulnerability.
 
 Increasing FAQs
 :  [Terraform supports more FAQs](docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-faqs).
