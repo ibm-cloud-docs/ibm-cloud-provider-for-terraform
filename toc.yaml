@@ -22,7 +22,7 @@ toc:
   - navgroup:
       id: tutorial
       topics:
-      - template_ov.md
+      
       - provider-template.md
       - tutorials/clusters.md
       - tutorials/install_redhat_openshift.md
