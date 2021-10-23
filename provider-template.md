@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-20"
+lastupdated: "2021-10-23"
 
 keywords: terraform templates, templates, sample terraform templates, private catalog
 
@@ -21,21 +21,21 @@ Explore the sample {{site.data.keyword.cloud}} Terraform templates, onboard the 
 Deploy [Sample templates](#sample-templates) by using {{site.data.keyword.cloud_notm}} service. <br>
 Browse [Code snippets](#code-snippets) by {{site.data.keyword.cloud_notm}} service.
 
-## Onboard to {{site.data.keyword.cloud_notm}} private catalog
+## Sample templates
+{: #sample-templates}
+
+### Onboard to {{site.data.keyword.cloud_notm}} private catalog
 {: #provider-onboard}
 
 Click the **Onboard to {{site.data.keyword.cloud_notm}} catalog** button to automatically load the following sample Terraform templates into your catalog. In order to run this automation, press the **Create** button in **Create an action** page in the console.
 {: shortdesc}
 
-For more information, about how the Ansible based automation is configured to load the template to private catalogs? refer to [Onboard to IBM Catalog readme file](https://github.com/Cloud-Schematics/onboard-to-ibm-catalog/blob/main/README.md).
+For more information, about how the Ansible based automation is configured to load the template to private catalogs? refer to [Onboard to IBM Catalog readme file](https://github.com/Cloud-Schematics/onboard-to-ibm-catalog/blob/main/README.md){: external}.
 {: note}
 
 <img src="images/onboardtoibmcatalog.png" usemap="#image-map2"><map name="image-map2"><area target="_blank" alt="bulk onboard Terraform templates into private catalog" title="onboard Terraform template to private catalog" href="https://cloud.ibm.com/schematics/actions/create?name=myprivatecatalogaction&url=https://github.com/Cloud-Schematics/onboard-to-ibm-catalog" coords="1,1,200,40" shape="rect"></map>
 
-## Sample templates
-{: #sample-templates}
-
-Following are the sample templates that allows you to provision resource by using {{site.data.keyword.bpshort}} workspace. 
+Following sample templates allows you to provision resource by using {{site.data.keyword.bpshort}} workspace. 
 
 - [Kubernetes and {{site.data.keyword.openshiftshort}}](#kubnernetes-openshift)
 - [VPC infrastructure](#vpc-templates)
