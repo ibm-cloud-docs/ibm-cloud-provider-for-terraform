@@ -18,7 +18,7 @@ subcollection: ibm-cloud-provider-for-terraform
 Use the release notes to learn about the latest changes to the {{site.data.keyword.cloud}} Terraform documentation that are grouped by month.
 {: shortdesc}
 
-For information about releases that occured before 12 October 2021, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform){: external}.
+For information about releases that occured before 12 October 2021, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform).
 {: note}
 
 
