@@ -18,7 +18,7 @@ subcollection: ibm-cloud-provider-for-terraform
 Use the release notes to learn about the latest changes to the {{site.data.keyword.cloud}} Terraform documentation that are grouped by month.
 {: shortdesc}
 
-For information about releases that occured before 12 October 2021, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform){: external}.
+For information about releases that occured before 12 October 2021, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform).
 {: note}
 
 
@@ -27,6 +27,20 @@ For information about releases that occured before 12 October 2021, see [What's 
 
 Review the release notes for October 2021.
 {: shortdesc}
+
+### 22 October 2021
+{: #22oct2021}
+{: release-note}
+
+Onboarding Terraform templates to private catalog
+:   For onboarding multiple Terraform templates into IBM Cloud private catalog, see [Onboard bulk Terraform templates to private catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-onboard).
+
+Sample Terraform templates
+:   Explore [Terraform sample Terraform templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-sample) to provision different IBM Cloud services.
+
+Terraform code snippets
+:   Use [Terraform code snippets](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#code-snippets){: external} to configure IBM Cloud service and use as a starting point for your custom templates.
+
 
 ### 12 October 2021
 {: #12oct2021}

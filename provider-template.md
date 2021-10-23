@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-20"
+lastupdated: "2021-10-23"
 
 keywords: terraform templates, templates, sample terraform templates, private catalog
 
@@ -16,26 +16,15 @@ subcollection: ibm-cloud-provider-for-terraform
 # Sample Terraform templates for {{site.data.keyword.cloud_notm}}
 {: #provider-template}
 
-Explore the sample {{site.data.keyword.cloud}} Terraform templates, onboard the templates to your private catalogs, and try your templates by using {{site.data.keyword.bpshort}} workspace.
+Explore the sample {{site.data.keyword.cloud}} Terraform templates, and try your templates by using {{site.data.keyword.bpshort}} workspace.
 
 Deploy [Sample templates](#sample-templates) by using {{site.data.keyword.cloud_notm}} service. <br>
 Browse [Code snippets](#code-snippets) by {{site.data.keyword.cloud_notm}} service.
 
-## Onboard to {{site.data.keyword.cloud_notm}} private catalog
-{: #provider-onboard}
-
-Click the **Onboard to {{site.data.keyword.cloud_notm}} catalog** button to automatically load the following sample Terraform templates into your catalog. In order to run this automation, press the **Create** button in **Create an action** page in the console.
-{: shortdesc}
-
-For more information, about how the Ansible based automation is configured to load the template to private catalogs? refer to [Onboard to IBM Catalog readme file](https://github.com/Cloud-Schematics/onboard-to-ibm-catalog/blob/main/README.md).
-{: note}
-
-<img src="images/onboardtoibmcatalog.png" usemap="#image-map2"><map name="image-map2"><area target="_blank" alt="bulk onboard Terraform templates into private catalog" title="onboard Terraform template to private catalog" href="https://cloud.ibm.com/schematics/actions/create?name=myprivatecatalogaction&url=https://github.com/Cloud-Schematics/onboard-to-ibm-catalog" coords="1,1,200,40" shape="rect"></map>
-
 ## Sample templates
 {: #sample-templates}
 
-Following are the sample templates that allows you to provision resource by using {{site.data.keyword.bpshort}} workspace. 
+Following sample templates allows you to provision resource by using {{site.data.keyword.bpshort}} workspace. 
 
 - [Kubernetes and {{site.data.keyword.openshiftshort}}](#kubnernetes-openshift)
 - [VPC infrastructure](#vpc-templates)
@@ -44,6 +33,16 @@ Following are the sample templates that allows you to provision resource by usin
 - [Classic infrastructure service](#classic-infra-templates)
 - [Account management and IAM](#account-mgt-iam)
 
+## Onboard to {{site.data.keyword.cloud_notm}} private catalog
+{: #provider-onboard}
+
+You can click the **Onboard to {{site.data.keyword.cloud_notm}} catalog** button to automatically load the following sample Terraform templates into your catalog. In order to run the automation, click the **Create** button in **Create an action** page in the console.
+{: shortdesc}
+
+For more information, about how the Ansible based automation is configured to load the template to private catalogs? refer to [Onboard to IBM Catalog readme file](https://github.com/Cloud-Schematics/onboard-to-ibm-catalog/blob/main/README.md){: external}.
+{: note}
+
+<img src="images/onboardtoibmcatalog.png" usemap="#image-map2"><map name="image-map2"><area target="_blank" alt="bulk onboard Terraform templates into private catalog" title="onboard Terraform template to private catalog" href="https://cloud.ibm.com/schematics/actions/create?name=myprivatecatalogaction&url=https://github.com/Cloud-Schematics/onboard-to-ibm-catalog" coords="1,1,200,40" shape="rect"></map>
 
 ## Code snippets
 {: #code-snippets}
@@ -103,9 +102,9 @@ Blue/Green - Fault Tolerance during deployments by maintaining two similar envir
 | [Multiple VPC to maintain the fault tolerance during Blue-Green deployment](https://github.com/Cloud-Schematics/vpc-bastion-bluegreen-deploy) | Provisioning VSIs on a VPC infrastructure for fault tolerance during deployments by maintaining two similar environments. Also isolation between the production and pre-production environment on the network level by using 2 subnets. | <img usemap="#deploybutton_mapvpc03" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapvpc03" alt="This image leads to create a workspace."><area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/vpc-bastion-bluegreen-deploy&terraform_version=terraform_v1.0" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
 | [Multi-tier VPC with bastion and VSIs](https://github.com/Cloud-Schematics/multitier-bastion-vpc-lamp) | Provision multi-tier infrastructure with VPC, SSH, Bastion host, front-end, and backend servers.| <img usemap="#deploybutton_mapvpc04" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapvpc04" alt="This image leads to create a workspace."><area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/multitier-bastion-vpc-lamp&terraform_version=terraform_v0.12" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
 | [Multi-zone VPC network](https://github.com/Cloud-Schematics/gcat-multizone-vpc) | Provision of a multi-zone infrastructure with VPC, in a single region up to 3 zones or more, ACL and public gateways.| <img usemap="#deploybutton_mapvpc05" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapvpc05" alt="This image leads to create a workspace."><area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/gcat-multizone-vpc&terraform_version=terraform_v1.0" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
-| [Multi-zone VPCs using Transit Gateway](https://github.com/Cloud-Schematics/gcat-vpc-hub-spoke-cluster) | Provision of two multi-zone VPCs and connects them through the IBM Cloud Transit Gateway. Also, provision a ROKS cluster on the spoke VPC and bastion VSI on the OpenShift hub VPC.| <img usemap="#deploybutton_mapvpc06" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapvpc06" alt="This image leads to create a workspace."><area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/gcat-vpc-hub-spoke-cluster&terraform_version=terraform_v1.0" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+| [Multi-zone VPCs connecting using Transit Gateway](https://github.com/Cloud-Schematics/gcat-vpc-hub-spoke-cluster) | Provision of two multi-zone VPCs and connects them through the IBM Cloud Transit Gateway. Also, provision a ROKS cluster on the spoke VPC and bastion VSI on the OpenShift hub VPC.| <img usemap="#deploybutton_mapvpc06" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapvpc06" alt="This image leads to create a workspace."><area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/gcat-vpc-hub-spoke-cluster&terraform_version=terraform_v1.0" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
 | [Multi-tier landing zone with IAM and resource group access for a catalog offering](https://github.com/Cloud-Schematics/gcat-landing-zone-catalog) | Provision a resource group, a VPC in the resource group, IAM access groups, and invites users to those access groups. This module configures the environment using a JSON object stored in Cloud Object Storage to allow users to configure and update complex environments as part of a catalog offering.| <img usemap="#deploybutton_mapvpc07" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapvpc07" alt="This image leads to create a workspace."><area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/gcat-landing-zone-catalog&terraform_version=terraform_v1.0" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
-| [Multi-zone VPC with bastion reusing existing Terraform template](https://github.com/Cloud-Schematics/gcat-multizone-vpc-bastion-subnet) | Provision multi-zone VPC with a bastion subnet in one zone by reusing a multi-tier VPC template.| <img usemap="#deploybutton_mapvpc08" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapvpc08" alt="This image leads to create a workspace."><area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/gcat-multizone-vpc-bastion-subnet&terraform_version=terraform_v1.0" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+| [Multi-zone VPC with bastion using subnet](https://github.com/Cloud-Schematics/gcat-multizone-vpc-bastion-subnet) | Provision multi-zone VPC with a bastion subnet in one zone by reusing a multi-tier VPC template.| <img usemap="#deploybutton_mapvpc08" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapvpc08" alt="This image leads to create a workspace."><area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/gcat-multizone-vpc-bastion-subnet&terraform_version=terraform_v1.0" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
 {: caption="VPC Terraform templates to provision resource using {{site.data.keyword.bpshort}} workspace" caption-side="top"}
 
 
