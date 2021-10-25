@@ -243,3 +243,93 @@ provider "ibm" {
 ```
 {: codeblock}
 
+## How to assign multiple resources to a group policy?
+{: #alias-resource-gpolicy}
+{: faq}
+{: support}
+
+**Solution**
+
+You can configure only one region for a resource list to a group policy, as shown in the example. For more information, about configuring resource block, see [Multiple provider configurations](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_user_policy#user-policy-using-service-with-region).
+
+**Example**
+
+```
+resource "ibm_iam_user_policy" 
+"policy" { 
+ibm_id = "test@in.ibm.com" 
+roles = ["Viewer"] 
+resources { 
+service = "kms" 
+} 
+} 
+```
+{: codeblock}
+
+## How can a user create access groups polices and add Memo as attribute to the policy?
+{: #alias-attributes-gpolicy}
+{: faq}
+{: support}
+
+**Solution**
+
+You can create access group policies and add memo as attribute to the policy as shown in the example code block.
+
+
+**Example**
+
+```
+resource "ibm_iam_access_group_policy"
+"policy" {
+	access_group_id = ibm_iam_access_group.grp.id
+	roles = ["Viewer"]
+
+	resources {
+		resource_type = "resource-group"
+		resource = "resource-id"
+	}
+}
+
+or
+
+data "ibm_resource_group"
+"group" {
+	name = "default"
+}
+
+resource "ibm_iam_access_group_policy"
+"policy" {
+	access_group_id = ibm_iam_access_group.accgrp.id
+	roles = ["Viewer"]
+
+	resources {
+		resource_type = "resource-group"
+		resource = data.ibm_resource_group.group.id
+	}
+}
+
+```
+{: codeblock}
+
+## How to create the resources of same type in sequential order during the Terraform resource creation?
+{: #alias-squential-terrreso}
+{: faq}
+{: support}
+
+**Solution**
+
+View the sample code to create the resources of same type in sequential order.
+
+**Example**
+
+```
+resource "ibm_is_vpc" "res_a" {
+  name = "test1"
+}
+resource "ibm_is_vpc" "res_b" {
+  name = "test2"
+  depends_on = [ibm_is_vpc.res_a]
+}
+
+```
+{: codeblock}
