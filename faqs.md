@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-12"
+lastupdated: "2021-10-26"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -134,7 +134,7 @@ resource "ibm_is_vpc_address_prefix" "testacc_vpc_address_prefix2" {
 ```
 {: codeblock}
 
-## How to define a policy which has all resource groups?
+## How do I define a policy which has all resource groups?
 {: #policy-faq}
 {: faq}
 {: support}
@@ -162,7 +162,7 @@ resource "ibm_iam_access_group_policy" "policy" {
 ```
 {: codeblock}
 
-## How to configure policy for all services in all the resource groups for an user?
+## How do I configure policy for all services in all the resource groups for an user?
 {: #user-policy-faq}
 {: faq}
 {: support}
@@ -243,3 +243,83 @@ provider "ibm" {
 ```
 {: codeblock}
 
+## How do I assign multiple resources to a group policy?
+{: #alias-resource-gpolicy}
+{: faq}
+{: support}
+
+**Solution**
+
+You can configure only one region for a resource list to a group policy, as shown in the example. For more information, about configuring resource block, see [Multiple provider configurations](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_user_policy#user-policy-using-service-with-region).
+
+**Example**
+
+```
+resource "ibm_iam_user_policy"  "policy" { 
+ ibm_id = "test@in.ibm.com" 
+ roles = ["Viewer"] 
+ resources { 
+  service = "kms" 
+ } 
+} 
+```
+{: codeblock}
+
+## How can a user create access group polices and add memo as an attribute to the policy?
+{: #alias-attributes-gpolicy}
+{: faq}
+{: support}
+
+**Solution**
+
+You can create access group policies and add memo as an attribute to the policy as shown in the example code block.
+
+**Example**
+
+```
+resource "ibm_iam_access_group_policy" "policy" {
+	access_group_id = ibm_iam_access_group.grp.id
+	roles = ["Viewer"]
+	resources {
+		resource_type = "resource-group"
+		resource = "resource-id"
+	}
+}
+
+or
+
+data "ibm_resource_group" "group" {
+	name = "default"
+}
+resource "ibm_iam_access_group_policy" "policy" {
+	access_group_id = ibm_iam_access_group.accgrp.id
+	roles = ["Viewer"]
+	resources {
+		resource_type = "resource-group"
+		resource = data.ibm_resource_group.group.id
+	}
+}
+```
+{: codeblock}
+
+## How do I create the resources of the same type in sequential order during the Terraform resource creation?
+{: #alias-squential-terrreso}
+{: faq}
+{: support}
+
+**Solution**
+
+The sample code block helps to create the resources of the same type in a sequential order.
+
+**Sample**
+
+```
+resource "ibm_is_vpc" "res_a" {
+  name = "test1"
+}
+resource "ibm_is_vpc" "res_b" {
+  name = "test2"
+  depends_on = [ibm_is_vpc.res_a]
+}
+```
+{: codeblock}
