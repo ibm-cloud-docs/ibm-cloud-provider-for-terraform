@@ -227,7 +227,7 @@ provider "ibm" {
 ```
 {: codeblock}
 
-**Example configuring an `aliases` to connect and retrieve information from multiple regions**
+**Example to configure an `aliases` to connect and retrieve information from multiple regions**
 
 ```
 provider "ibm" {
