@@ -18,7 +18,7 @@ subcollection: ibm-cloud-provider-for-terraform
 Use the release notes to learn about the latest changes to the {{site.data.keyword.cloud}} Terraform documentation that are grouped by month.
 {: shortdesc}
 
-For information about releases that occured before 12 October 2021, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform).
+For information about releases that occurred before 12 October 2021, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform).
 {: note}
 
 
@@ -36,7 +36,7 @@ Onboarding Terraform templates to private catalog
 :   For onboarding multiple Terraform templates into IBM Cloud private catalog, see [Onboard bulk Terraform templates to private catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-onboard).
 
 Sample Terraform templates
-:   Explore [Terraform sample Terraform templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-sample) to provision different IBM Cloud services.
+:   Explore [Terraform sample Terraform templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates) to provision different IBM Cloud services.
 
 Terraform code snippets
 :   Use [Terraform code snippets](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#code-snippets){: external} to configure IBM Cloud service and use as a starting point for your custom templates.
@@ -53,4 +53,4 @@ JWT version support
 :   Ensure you move to [The IBM Cloud provider v1.33.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.34.0) that replaces the [dependency](https://github.com/dgrijalva/jwt-go) of JSON web tokens with the [latest version](https://github.com/golang-jwt/jwt) to remediate [CVE-2020-26160](https://github.com/IBM-Cloud/terraform-provider-ibm/pull/3191) vulnerability.
 
 Increasing FAQs
-:  [Terraform supports more FAQs](docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-faqs).
+:  [Terraform supports more FAQs](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-faqs).
