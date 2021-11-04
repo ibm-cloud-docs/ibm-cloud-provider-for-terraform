@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-03"
+lastupdated: "2021-11-04"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -314,12 +314,12 @@ The sample code block helps to create the resources of the same type in a sequen
 **Sample**
 
 ```
-resource "ibm_is_vpc" "res_a" {
-  name = "test1"
-}
-resource "ibm_is_vpc" "res_b" {
-  name = "test2"
-  depends_on = [ibm_is_vpc.res_a]
-}
+ resource "ibm_is_vpc" "res_a" {
+   name = "test1"
+ }
+ resource "ibm_is_vpc" "res_b" {
+   name = "test2"
+   depends_on = [ibm_is_vpc.res_a]
+ }
 ```
 {: codeblock}
