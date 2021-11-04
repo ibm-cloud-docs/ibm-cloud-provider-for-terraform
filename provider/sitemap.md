@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-12"
+lastupdated: "2021-11-03"
 
 keywords: terraform provider plugin, terraform functions, terraform open whisk, terraform function action, terraform serverless
 
@@ -223,6 +223,23 @@ subcollection: ibm-cloud-provider-for-terraform
     </tr>
 </tbody>
 </table>
+
+## Event Notifications
+{: #ibm-event-notifications_rd}
+
+<table>
+    <thead>
+<th style="width:180px">Resources</th>
+<th style="width:150px">Data sources</th>
+</thead>
+<tbody>
+    <tr>
+<td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/en_destination"><code>ibm_en_destination</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/en_subscription"><code>ibm_en_subscription</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/en_topic"><code>ibm_en_topic</code></a></li></ul></td>
+<td><ul style="margin:0px 0px 0px 20px; padding:0px"><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/en_destination"><code>ibm_en_destination</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/en_destinations"><code>ibm_en_destinations</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/en_subscription"><code>ibm_en_subscription</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/en_subscriptions"><code>ibm_en_subscriptions</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/en_topic"><code>ibm_en_topic</code></a></li><li style="margin:0px; padding:0px"><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/en_topics"><code>ibm_en_topics</code></a></li></ul></td>
+    </tr>
+</tbody>
+</table>
+
 
 ## Event Streams
 {: #ibm-event-streams_rd}

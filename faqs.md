@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-26"
+lastupdated: "2021-11-03"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -302,7 +302,7 @@ resource "ibm_iam_access_group_policy" "policy" {
 ```
 {: codeblock}
 
-## How do I create the resources of the same type in sequential order during the Terraform resource creation?
+## How do I create the Terraform resources of the same type in sequential order?
 {: #alias-squential-terrreso}
 {: faq}
 {: support}

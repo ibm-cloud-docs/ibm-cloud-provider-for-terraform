@@ -13,7 +13,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 # Release notes
-{: #rel-notes}
+{: #release-notes}
 
 Use the release notes to learn about the latest changes to the {{site.data.keyword.cloud}} Terraform documentation that are grouped by month.
 {: shortdesc}
@@ -21,12 +21,18 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 For information about releases that occurred before 12 October 2021, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform).
 {: note}
 
-
 ## October 2021
 {: #release-oct-2021}
 
 Review the release notes for October 2021.
 {: shortdesc}
+
+### 30 October 2021:
+{: #30oct2021}
+{: release-note}
+
+Enhancements and fixes
+:   For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.35.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.35.0).
 
 ### 22 October 2021
 {: #22oct2021}
@@ -47,7 +53,7 @@ Terraform code snippets
 {: release-note}
 
 New resources and data sources
-:   For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**. see [Updates and fixes in v1.34.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.34.0)
+:   For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.34.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.34.0)
 
 JWT version support
 :   Ensure you move to [The IBM Cloud provider v1.33.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.34.0) that replaces the [dependency](https://github.com/dgrijalva/jwt-go) of JSON web tokens with the [latest version](https://github.com/golang-jwt/jwt) to remediate [CVE-2020-26160](https://github.com/IBM-Cloud/terraform-provider-ibm/pull/3191) vulnerability.
