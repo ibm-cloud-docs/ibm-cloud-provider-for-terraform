@@ -27,10 +27,11 @@ For information about releases that occurred before 12 October 2021, see [What's
 Review the release notes for October 2021.
 {: shortdesc}
 
-### 30 October 2021: Enhancements and fixes
+### 30 October 2021:
 {: #30oct2021}
 {: release-note}
 
+Enhancements and fixes
 :   For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.35.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.35.0).
 
 ### 22 October 2021
