@@ -12,7 +12,6 @@ subcollection: ibm-cloud-provider-for-terraform
 
 {{site.data.keyword.attribute-definition-list}}
 
-
 # Sample Terraform templates for {{site.data.keyword.cloud_notm}}
 {: #provider-template}
 

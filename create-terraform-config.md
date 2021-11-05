@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-12"
+lastupdated: "2021-11-05"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -11,7 +11,6 @@ subcollection: ibm-cloud-provider-for-terraform
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 
 # Creating Terraform on {{site.data.keyword.cloud_notm}} templates

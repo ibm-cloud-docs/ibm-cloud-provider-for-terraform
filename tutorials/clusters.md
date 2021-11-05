@@ -19,7 +19,6 @@ completion-time: 2h
 
 
 
-
 # Creating single and multizone Kubernetes and OpenShift clusters
 {: #tutorial-tf-clusters}
 {: toc-content-type="tutorial"}

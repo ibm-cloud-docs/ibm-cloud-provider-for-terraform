@@ -12,7 +12,6 @@ subcollection: ibm-cloud-provider-for-terraform
 
 {{site.data.keyword.attribute-definition-list}}
 
-
 # Provisioning an {{site.data.keyword.cloud_notm}} virtual server for classic infrastructure
 {: #sample_infrastructure_config}
 

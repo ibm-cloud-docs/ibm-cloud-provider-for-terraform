@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-11"
+lastupdated: "2021-11-05"
 
 keywords: ibm cloud region, location, region, ibm cloud location
 
@@ -13,7 +13,6 @@ content-type: troubleshoot
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Why is my database provisioning success in us-east and us-south, but fails in eu-de region?
 {: #db-provisioning-eu-de}

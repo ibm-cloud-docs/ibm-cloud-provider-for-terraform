@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-11"
+lastupdated: "2021-11-05"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -11,7 +11,6 @@ subcollection: ibm-cloud-provider-for-terraform
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 
 # Getting started with Terraform on {{site.data.keyword.cloud_notm}}

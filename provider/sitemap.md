@@ -13,7 +13,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {{site.data.keyword.attribute-definition-list}}
 
 
-
 # Index of Terraform on {{site.data.keyword.cloud_notm}} resources and data sources 
 
 
