@@ -1,8 +1,8 @@
 ---
 
-copyright: 
-  years: 2014, 2021
-lastupdated: "2021-10-11"
+copyright:
+  years: 2017, 2021
+lastupdated: "2021-11-05"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -27,7 +27,7 @@ For information about releases that occurred before 12 October 2021, see [What's
 Review the release notes for October 2021.
 {: shortdesc}
 
-### 30 October 2021:
+### 30 October 2021
 {: #30oct2021}
 {: release-note}
 

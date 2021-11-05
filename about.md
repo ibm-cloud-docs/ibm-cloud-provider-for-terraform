@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-08-19"
+lastupdated: "2021-11-05"
 
 keywords: Terraform on {{site.data.keyword.cloud_notm}}, configuration files, resources, what is Terraform on {{site.data.keyword.cloud_notm}}, automation, automate
 
@@ -10,101 +10,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 ---
 
-{:DomainName: data-hd-keyref="APPDomain"}
-{:DomainName: data-hd-keyref="DomainName"}
-{:android: data-hd-operatingsystem="android"}
-{:api: .ph data-hd-interface='api'}
-{:apikey: data-credential-placeholder='apikey'}
-{:app_key: data-hd-keyref="app_key"}
-{:app_name: data-hd-keyref="app_name"}
-{:app_secret: data-hd-keyref="app_secret"}
-{:app_url: data-hd-keyref="app_url"}
-{:audio: .audio}
-{:authenticated-content: .authenticated-content}
-{:beta: .beta}
-{:c#: .ph data-hd-programlang='c#'}
-{:c#: data-hd-programlang="c#"}
-{:cli: .ph data-hd-interface='cli'}
-{:codeblock: .codeblock}
-{:curl: #curl .ph data-hd-programlang='curl'}
-{:curl: .ph data-hd-programlang='curl'}
-{:deprecated: .deprecated}
-{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
-{:download: .download}
-{:external: .external target="_blank"}
-{:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
-{:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
-{:generic: data-hd-operatingsystem="generic"}
-{:generic: data-hd-programlang="generic"}
-{:gif: data-image-type='gif'}
-{:go: .ph data-hd-programlang='go'}
-{:help: data-hd-content-type='help'}
-{:hide-dashboard: .hide-dashboard}
-{:hide-in-docs: .hide-in-docs}
-{:important: .important}
-{:ios: data-hd-operatingsystem="ios"}
-{:java: #java .ph data-hd-programlang='java'}
-{:java: .ph data-hd-programlang='java'}
-{:java: data-hd-programlang="java"}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:javascript: data-hd-programlang="javascript"}
-{:middle: .ph data-hd-position='middle'}
-{:navgroup: .navgroup}
-{:new_window: target="_blank"}
-{:node: .ph data-hd-programlang='node'}
-{:note: .note}
-{:objectc: .ph data-hd-programlang='Objective C'}
-{:objectc: data-hd-programlang="objectc"}
-{:org_name: data-hd-keyref="org_name"}
-{:php: .ph data-hd-programlang='PHP'}
-{:php: data-hd-programlang="php"}
-{:pre: .pre}
-{:preview: .preview}
-{:python: .ph data-hd-programlang='python'}
-{:python: data-hd-programlang="python"}
-{:right: .ph data-hd-position='right'}
-{:route: data-hd-keyref="route"}
-{:row-headers: .row-headers}
-{:ruby: .ph data-hd-programlang='ruby'}
-{:ruby: data-hd-programlang="ruby"}
-{:runtime: architecture="runtime"}
-{:runtimeIcon: .runtimeIcon}
-{:runtimeIconList: .runtimeIconList}
-{:runtimeLink: .runtimeLink}
-{:runtimeTitle: .runtimeTitle}
-{:screen: .screen}
-{:script: data-hd-video='script'}
-{:service: architecture="service"}
-{:service_instance_name: data-hd-keyref="service_instance_name"}
-{:service_name: data-hd-keyref="service_name"}
-{:shortdesc: .shortdesc}
-{:space_name: data-hd-keyref="space_name"}
-{:step: data-tutorial-type='step'}
-{:step: data-tutorial-type='step'} 
-{:subsection: outputclass="subsection"}
-{:support: data-reuse='support'}
-{:swift: #swift .ph data-hd-programlang='swift'}
-{:swift: .ph data-hd-programlang='swift'}
-{:swift: data-hd-programlang="swift"}
-{:table: .aria-labeledby="caption"}
-{:term: .term}
-{:terraform: .ph data-hd-interface='terraform'}
-{:tip: .tip}
-{:tooling-url: data-tooling-url-placeholder='tooling-url'}
-{:topicgroup: .topicgroup}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:tsSymptoms: .tsSymptoms}
-{:tutorial: data-hd-content-type='tutorial'}
-{:ui: .ph data-hd-interface='ui'}
-{:unity: .ph data-hd-programlang='unity'}
-{:url: data-credential-placeholder='url'}
-{:user_ID: data-hd-keyref="user_ID"}
-{:vbnet: .ph data-hd-programlang='vb.net'}
-{:video: .video}
-
+{{site.data.keyword.attribute-definition-list}}
 
 
 # About Terraform on {{site.data.keyword.cloud_notm}}
@@ -133,12 +39,15 @@ To use Terraform on {{site.data.keyword.cloud_notm}}, you must create a Terrafor
 
 
 ## What are the benefits of using Terraform on {{site.data.keyword.cloud_notm}}?
+{: #abt-benefits}
 
 |Benefit|Description|
 |--|--|
 |Codify your {{site.data.keyword.cloud_notm}} environment|Use a high-level scripting language to declare all the {{site.data.keyword.cloud_notm}} resources and services that you want. Instead of learning the API or command-line to work with a specific resource, you use  Terraform configuration files to specify the required state and resource configuration. Then, you use Terraform on {{site.data.keyword.cloud_notm}} to rapidly build, configure, and replicate the resources in your cloud environments.|
 |Automate cloud resource lifecycle|By using Terraform templates to build your cloud environment, you can orchestrate the provisioning, update, and deletion of your {{site.data.keyword.cloud_notm}} resources, and easily replicate your configuration across environments. |
 |Enable Infrastructure as Code|By codifying your cloud environment, you can treat your Terraform templates the same way as you treat your app code. You can author your templates in any code editor, check them into a version control system such as GitHub, and let your team review and monitor updates before you apply these changes in your cloud environment. By applying these DevOps core practices, you can enable Infrastructure as Code (IaC) for your cloud environments.|
+{: caption="Benefits" caption-side="top"}
+
 
 ## Key terms
 {: #terms}
@@ -153,6 +62,7 @@ Learn about the key terms that are used in Terraform on {{site.data.keyword.clou
 |Terraform configuration file|A Terraform configuration file defines the {{site.data.keyword.cloud_notm}} resources that you want to create. You can configure one resource per file, or combine multiple resources in one file. Terraform configuration files can be written in HashiCorp Configuration Language (HCL) or JSON format, and are stored in a source code repository. For more information, about how to write configuration files, see [creating Terraform configurations](https://www.terraform.io/docs/language/syntax/configuration.html){: external}.|
 |Terraform template|A Terraform template includes one or a set of Terraform configuration files that combined can be used to build a specific {{site.data.keyword.cloud_notm}} solution. For example, you might have a template that creates a multizone cluster in {{site.data.keyword.containerlong_notm}}. This cluster consists of multiple {{site.data.keyword.cloud_notm}} resources in different zones, such as classic infrastructure virtual servers and VLANs. Templates are designed and constructed for reuse by using variables so that you can share these templates with other teams in your organization.|
 |Terraform execution plan|A Terraform execution plan is a summary of actions that Terraform on {{site.data.keyword.cloud_notm}} must perform to provision, modify, or remove the {{site.data.keyword.cloud_notm}} resources of your template.|
+ {: caption="Key terms" caption-side="top"}
 
 
 

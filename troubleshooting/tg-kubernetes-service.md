@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-08"
+lastupdated: "2021-11-05"
 
 keywords: question about kubernetes provider, troubleshooting guide, kubernetes service troubleshooting
 
@@ -13,7 +13,6 @@ content-type: troubleshoot
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # How can I resolve the network error when working with the {{site.data.keyword.containershort_notm}} provider?
 {: #ks-network-error}

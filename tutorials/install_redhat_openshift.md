@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-27"
+lastupdated: "2021-11-05"
 
 keywords: Terraform on {{site.data.keyword.cloud_notm}}, ansible, red hat, openshift, automate, automation, iaas
 
@@ -16,7 +16,6 @@ completion-time: 3h
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 
 # Using Terraform on {{site.data.keyword.cloud_notm}} to manage your own Red Hat OpenShift Container Platform on IBM Cloud classic infrastructure
