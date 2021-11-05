@@ -1,8 +1,8 @@
 ---
 
-copyright: 
-  years: 2014, 2021
-lastupdated: "2021-10-11"
+copyright:
+  years: 2017, 2021
+lastupdated: "2021-11-05"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 

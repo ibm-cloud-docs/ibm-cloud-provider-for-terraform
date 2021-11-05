@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2014, 2021
+  years: 2017, 2021
 lastupdated: "2021-11-05"
 
 keywords: terraform, terraform provider release, terraform provider versions
