@@ -29,6 +29,7 @@ Terraform on IBM Cloud
     {: .navgroup-end}
     
     {: .navgroup id="reference"}
+
     {: .topicgroup}
     IBM Cloud Provider plug-in for Terraform
          provider/sitemap.md
