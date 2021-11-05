@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-12"
+lastupdated: "2021-11-05"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for vpc
 
@@ -132,8 +132,8 @@ To create a VPC and a VSI:
 
     <table>
     <caption>Understanding the configuration file components</caption>
-    <col style="width:30%">
-        <col style="width:70%">
+    <col>
+        <col>
     <thead>
         <th>Parameter</th>
         <th>Description</th>
