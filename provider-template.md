@@ -154,7 +154,7 @@ Blue/Green - Fault Tolerance during deployments by maintaining two similar envir
 
 | Name | Description and resources | Code |
 | --- | --- | --- |
-| `ibm-api-gateway` | Create an <a href="/docs/api-gateway?topic=api-gateway-whatis_apigw">{{site.data.keyword.apigw_full_notm}}</a> service instance to set up an API for an {{site.data.keyword.cloud_ntom}} service of your choice. You can specify the API endpoint that you want to use to access your service, and define subscription keys so that developers can securely consume your API. <br><br> **Resources** <ul><li>**ibm_resource_instance**</li><li>**ibm_api_gateway_endpoint**</li><li>**ibm_api_gateway**</li><li>**ibm_api_gateway_endpoint_subscription**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway)|
+| `ibm-api-gateway` | Create an <a href="/docs/api-gateway?topic=api-gateway-whatis_apigw">{{site.data.keyword.apigw_full_notm}}</a> service instance to set up an API for an {{site.data.keyword.cloud_notm}} service of your choice. You can specify the API endpoint that you want to use to access your service, and define subscription keys so that developers can securely consume your API. <br><br> **Resources** <ul><li>**ibm_resource_instance**</li><li>**ibm_api_gateway_endpoint**</li><li>**ibm_api_gateway**</li><li>**ibm_api_gateway_endpoint_subscription**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway)|
 
 ### Certificate Manager templates
 {: #cert-mgr-snippet}
