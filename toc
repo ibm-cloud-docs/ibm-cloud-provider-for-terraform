@@ -34,6 +34,7 @@ Terraform on IBM Cloud
     IBM Cloud Provider plug-in for Terraform
          provider/sitemap.md
          [IBM Cloud Provider release and updates](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
+    
     [Architecture reference Highly available, secured, and managed Kubernetes environment](https://github.com/ibm-cloud-architecture/refarch-public-iaas-iks)
     {: .navgroup-end}
 
@@ -45,7 +46,6 @@ Terraform on IBM Cloud
     {: .topicgroup}
     Troubleshooting 
         region.md
-    
 
         {: .topicgroup}
         Debugging Kubernetes service errors
