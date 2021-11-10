@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-11-10"
 
 keywords: terraform templates, templates, sample terraform templates, private catalog
 
@@ -15,15 +15,15 @@ subcollection: ibm-cloud-provider-for-terraform
 # Sample Terraform templates for {{site.data.keyword.cloud_notm}}
 {: #provider-template}
 
-Explore the sample {{site.data.keyword.cloud}} Terraform templates, and try your templates by using {{site.data.keyword.bpshort}} workspace.
+Explore the sample {{site.data.keyword.cloud}} Terraform templates, and try to execute the templates by using {{site.data.keyword.bpshort}} workspace.
 
-Deploy [Sample templates](#sample-templates) by using {{site.data.keyword.cloud_notm}} service. <br>
+Deploy [Solution templates](#sample-templates) by using {{site.data.keyword.cloud_notm}} service. <br>
 Browse [Code snippets](#code-snippets) by {{site.data.keyword.cloud_notm}} service.
 
 ## Sample templates
 {: #sample-templates}
 
-Following sample templates allows you to provision resource by using {{site.data.keyword.bpshort}} workspace. 
+Following solution templates allows you to provision resource by using {{site.data.keyword.bpshort}} workspace. 
 
 - [Kubernetes and {{site.data.keyword.openshiftshort}}](#kubnernetes-openshift)
 - [VPC infrastructure](#vpc-templates)
@@ -69,7 +69,7 @@ The code snippets provides the templates that you can use to understand how to c
 - [VPC infrastructure templates (Gen 2 compute)](#vpc-gen2-snippet)
 
 
-## Templates
+## Solution templates
 {: #sample}
 
 ### Kubernetes and {{site.data.keyword.openshiftshort}}
