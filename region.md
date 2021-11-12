@@ -17,7 +17,7 @@ content-type: troubleshoot
 # Why is my database provisioning success in us-east and us-south, but fails in eu-de region?
 {: #db-provisioning-eu-de}
 
-To know abour the services provided in specific region and resource deployment, refer to, [locations for resource deployment](/docs/overview?topic=overview-locations)
+To know about the services provided in specific region and resource deployment, refer to, [locations for resource deployment](/docs/overview?topic=overview-locations)
 {: shortdesc}
 
 {: tsSymptoms}
