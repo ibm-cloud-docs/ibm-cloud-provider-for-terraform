@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-11-11"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for vpc
 
@@ -38,20 +38,24 @@ To create a VPC and a VSI:
 1. Make sure that you have the [required permissions](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls) to create and work with VPC infrastructure. 
 
 2. In the Terraform on {{site.data.keyword.cloud_notm}} directory create a `versions.tf` file to run the Terraform on {{site.data.keyword.cloud_notm}} v0.13. For `versions.tf`, refer to [sample versions tf file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v13).
-
+    
     ```
-    terraform {
-    required_providers {
-        ibm = {
-            source = "IBM-Cloud/ibm"
-            version = "1.26.2"
-        }
-      }
-    }
-    ```
-    {: codeblock}
+    variable ibmcloud_api_key {}
 
-3. In the Terraform on {{site.data.keyword.cloud_notm}} directory create a Terraform on {{site.data.keyword.cloud_notm}} configuration file and name it `vpc.tf`. The configuration file includes the following definition blocks: 
+     provider "ibm" {
+       ibmcloud_api_key = var.ibmcloud_api_key
+       region           = "us-south" # this could come from a variable, you need to match the ZONE variable.
+     }
+     ```
+     {: codeblock}
+
+3. From your Terraform directory, export following `IC_API_Key` variable to set your environment variable.
+
+    **Example**
+
+    - `export TF_VAR_ibmcloud_api_key="VoeEd1231231234134123413"`
+
+4. In the Terraform on {{site.data.keyword.cloud_notm}} directory create a Terraform on {{site.data.keyword.cloud_notm}} configuration file and name it `vpc.tf`. The configuration file includes the following definition blocks: 
     - **locals**: Use this block to specify variables that you want to use multiple times throughout this configuration file. 
     - **resource**: Every resource block specifies the {{site.data.keyword.cloud_notm}} resource that you want to provision. To find more information about supported configurations for each resource, see the [{{site.data.keyword.cloud_notm}} provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
     - **data**: Use this block to retrieve information for an existing resource in your {{site.data.keyword.cloud_notm}} account. 
@@ -129,7 +133,7 @@ To create a VPC and a VSI:
     ```
     {: codeblock}
 
-    <table>
+  <table>
     <caption>Understanding the configuration file components</caption>
     <col>
         <col>
@@ -245,7 +249,7 @@ To create a VPC and a VSI:
     </tbody>
     </table>
 
-3. Initialize Terraform on {{site.data.keyword.cloud_notm}}. 
+5. Initialize Terraform on {{site.data.keyword.cloud_notm}}. 
 
     ```
     terraform init
@@ -278,13 +282,7 @@ To create a VPC and a VSI:
     ```
     {: screen}
 
-4. From your Terraform directory, export following `IC_API_Key` and `TF_LOG` variable to set your environment variable.
-
-    **Example**
-
-    - `export IC_API_KEY=VoeEd1231231234134123413`
-    - `export TF_LOG=debug`
-5. Generate an Terraform on {{site.data.keyword.cloud_notm}} execution plan. When you execute this command, Terraform on {{site.data.keyword.cloud_notm}} validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in.
+6. Generate an Terraform on {{site.data.keyword.cloud_notm}} execution plan. When you execute this command, Terraform on {{site.data.keyword.cloud_notm}} validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in.
 
     Your SSH key name need to be provide during `terraform plan` and `terraform apply` execution.
     {: note}
@@ -460,7 +458,7 @@ To create a VPC and a VSI:
     ```
     {: screen}
 
-6. Create the VPC infrastructure resources. Confirm the creation by entering `yes` when prompted.
+7. Create the VPC infrastructure resources. Confirm the creation by entering `yes` when prompted.
 
     ```
     terraform apply
@@ -571,7 +569,7 @@ To create a VPC and a VSI:
         ```
         {: screen}
 
-7. Log in to your VPC VSI by using the `ssh` command that is listed at the end of your command line output of the previous step.
+8. Log in to your VPC VSI by using the `ssh` command that is listed at the end of your command line output of the previous step.
 
     ```
     ssh root@52.118.150.55 
@@ -591,12 +589,12 @@ To create a VPC and a VSI:
     ```
     {: screen}
 
-8. You can verify that VPC and VSI are created by accessing your IBM Cloud console. 
+9. You can verify that VPC and VSI are created by accessing your IBM Cloud console. 
     - Click **Menu icon** > **VPC Infrastructure** > **VPCs** to view VPC named `gsmvpcv13test2-vpc` is created 
     - Click **Menu icon** > **VPC Infrastructure** > **Virtual server instances** to view VSI named `gsmvpcv13test2_vsi1` is created 
 
-9. Optional: If you don't want to work with your VPC infrastructure resources anymore, remove them.
-
+10. Optional: If you don't want to work with your VPC infrastructure resources anymore, remove them.
+    
     ```
     terraform destroy
     ```
