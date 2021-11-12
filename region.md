@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-11-12"
 
 keywords: ibm cloud region, location, region, ibm cloud location
 
@@ -17,7 +17,7 @@ content-type: troubleshoot
 # Why is my database provisioning success in us-east and us-south, but fails in eu-de region?
 {: #db-provisioning-eu-de}
 
-In the {{site.data.keyword.cloud_notm}} global network of location. To achieve the highly available resources and service instances. You are forced to create resources in multiple regions, but with the same billing and usage. To achieve the low application latency, you may deploy your resources and applications to the location that are nearest to your customers. For more information, about location, see [about locations](/docs/overview?topic=overview-locations).
+To know abour the services provided in specific region and resource deployment, refer to, [locations for resource deployment](/docs/overview?topic=overview-locations)
 {: shortdesc}
 
 {: tsSymptoms}
