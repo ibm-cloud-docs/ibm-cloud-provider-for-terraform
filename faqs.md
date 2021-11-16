@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-11-16"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -322,3 +322,201 @@ The sample code block helps to create the resources of the same type in a sequen
  }
 ```
 {: codeblock}
+
+## How do you enable the "User list visibility" for IAM in Terraform?
+{: #alias-userlistvisibility-iam}
+{: faq}
+{: support}
+
+**Solution**
+
+Currently, {{site.data.keyword.bpshort}} do not have support for enabling `user list visibility`. For more information, about user list visibility, see ibm_iam_account_settings.
+
+## Can I configure the ibm_container_cluster Terraform resource to control the IPs on the {{site.data.keyword.cos_full_notm}} bucket?
+{: #alias-ibmcontainerclus-terraform}
+{: faq}
+{: support}
+
+**Solution**
+
+No, currently, the API does not support IPs on the {{site.data.keyword.cos_full_notm}} bucket. For more information, about the argument and attribute reference for the container cluster, see IBM Cloud Kubernetes Service{: external}.
+
+## Can you retrieve a list of all the existing {{site.data.keyword.vsi_is_short}}s from all the regions by using Terraform?
+{: #alias-retrievelist-terraform}
+{: faq}
+{: support}
+
+**Solution**
+
+The VPC API’s are regional specific so ibm_is_vpcs gives one region VPC. If user requires one or more regions user should define or use the `alias` as part of resource provisioning.
+
+**Example**
+
+```
+provider "ibm" {
+  region = "eu-de"
+}
+
+provider "ibm" {
+  alias  = "dal"
+  region = "us-south"
+}
+
+data ibm_is_vpcs eu-de{
+}
+data ibm_is_vpcs dal {
+   provider = ibm.dal
+}
+
+output "vpcs" {
+  value = concat(
+    tolist(data.ibm_is_vpcs.eu-de.vpcs), 
+    tolist(data.ibm_is_vpcs.dal.vpcs)
+    )
+} 
+
+```
+{: codeblock}
+
+## How can we change the flavor of an existing IKS worker pool without deleting or destroying an old one by updating its machine_type?
+{: #alias-flavoriks-machinetype}
+{: faq}
+{: support}
+
+**Solution**
+
+Updating the machine type in the terraform file will allows to built or provision new set of resource creating an entirely new worker pool.
+
+**Example**
+
+```
+resource "ibm_container_cluster" "iks_cluster" {
+    name                      = var.cluster_name
+    datacenter                = var.datacenter
+    machine_type              = var.machine_type
+    hardware                  = var.hardware
+    public_vlan_id            = var.public_vlan_id
+    private_vlan_id           = var.private_vlan_id
+    disk_encryption           = "true"
+
+    kube_version              = var.kube_version
+
+    default_pool_size         = var.pool_size
+
+    public_service_endpoint   = "true"
+    private_service_endpoint  = "true"
+    update_all_workers        = var.update_all_workers
+    wait_for_worker_update    = "true"
+
+    resource_group_id         = var.resource_group.id
+} 
+
+```
+{: codeblock}
+
+## How can I create a workspace setting an environment variable as secure ?
+{: #alias-squential-envvariable}
+{: faq}
+{: support}
+
+**Solution**
+
+Currently, the IBM Cloud Schematics service working on Enabling secure environment variables and support for passing credentials for modules. It is planned for, in the future roadmap.
+
+**Sample**
+
+```
+Example input file get workspace:
+  "env_values": [{
+      "name": "GIT_ASKPASS",
+      "value": "./git-askpass-helper.sh",
+      "secure": false,
+      "hidden": false
+    },
+    {
+      "name": "GIT_PASSWORD",
+      "value": "plain text token",
+      "secure": false,
+      "hidden": false
+    }
+  ]
+```
+## How do I creating an ibm_function_trigger with terraform which connects to an Event Stream?
+{: #alias-functional-trigger}
+{: faq}
+{: support}
+
+**Solution**
+The sample code block helps to create the resources of the same type in a sequential order. For more information, about Creating a trigger that listens to an Event Streams instance block see [eventstreams_trigger](https://cloud.ibm.com/docs/openwhisk?topic=openwhisk-pkg_event_streams#eventstreams_trigger).
+
+**Example**
+
+```
+resource“ ibm_function_trigger”“ trigger” {
+  name = “event - trigger”
+  namespace = “ns01 "
+  user_defined_annotations = jsonencode([])
+  user_defined_parameters = jsonencode([])
+  feed {
+    name = “/whisk.system/messaging / messageHubFeed”
+    parameters = jsonencode([])
+  }
+}
+```
+
+## How do I associate a public gateway while creating multiple zones and having a subnet for each zone?
+{: #alias-multiplezone-subnet}
+{: faq}
+{: support}
+
+**Error: Error while creating Subnet Failed to attach public gateway of different zone to the subnet**
+
+```
+{
+  
+  "StatusCode": 400,
+  "Headers": {
+    
+    "Cache-Control": ["max-age=0, no-cache, no-store, must-revalidate"],
+    "Cf-Cache-Status": ["DYNAMIC"],
+    "Cf-Ray": ["6ab6a5e86ac41b69-DEL"],
+    "Connection": ["keep-alive"],
+    "Content-Length": ["261"],
+    "Content-Type": ["application/json; charset=utf-8"],
+    "Date": ["Tue, 09 Nov 2021 11:19:47 GMT"],
+    "Expect-Ct": ["max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""],
+    "Expires": ["-1"],
+    "Pragma": ["no-cache"],
+    "Server": ["cloudflare"],
+    "Strict-Transport-Security": ["max-age=31536000; includeSubDomains"],
+    "Vary": ["Accept-Encoding"],
+    "X-Content-Type-Options": ["nosniff"],
+    "X-Request-Id": ["37b94c40-a4bf-4942-a0da-45dc5434d610"],
+    "X-Xss-Protection": ["1; mode=block"]
+  },
+  "Result": {
+    
+    "errors": [{
+      
+      "code": "bad_field",
+      "message": "Failed to attach public gateway of different zone to the subnet",
+      "target": {
+        
+        "name": "public_gateway.id",
+        "type": "field",
+        "value": "r010-2df568da-f87e-468d-9696-27b05e126179"
+      }
+    }],
+    "trace": "37b94c40-a4bf-4942-a0da-45dc5434d610"
+  },
+  "RawResult": null
+}
+```
+
+**Solution**
+
+The Zones can have multiple subnets and would need at least one subnet per zone for IP distribution. One subnet can be part of only one zone, Public gateway can be attached to one or more subnets (of the same zone). Each zone has only one public gateway.
+
+
+
+
