@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-12"
+lastupdated: "2021-11-16"
 
 keywords: ibm cloud region, location, region, ibm cloud location
 
@@ -34,7 +34,7 @@ There is a constraint in the {{site.data.keyword.cloud_notm}} region, that you c
 
 Use one of the following options to fix this issue:
 - You configure database and workspace resources in one region.
-- To access the database or to backup the database resources in another region. You need to check the region constraints in the {{site.data.keyword.cloud_notm}} location. For more information, about the services provided in specific region, see [Services region](/docs/overview?topic=overview-services_region#paas-services).
+- To access the database or to backup the database resources in another region. You need to check the region constraints in the {{site.data.keyword.cloud_notm}} location. For more detailed information, about services provided in specific regions and resource deployment, refer to [locations for resource deployment](/docs/overview?topic=overview-locations).
 - You need to check the price, billing usage, and region specific capabilities before communicating between the regions.
 {: tsResolve}
 
