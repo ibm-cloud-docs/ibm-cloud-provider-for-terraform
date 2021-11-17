@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-11-17"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -20,6 +20,20 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 
 For information about releases that occurred before 12 October 2021, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform).
 {: note}
+
+
+## November 2021
+{: #release-nov-2021}
+
+Review the release notes for November 2021.
+{: shortdesc}
+
+### 16 November 2021
+{: #16nov2021}
+{: release-note}
+
+Features and enhancements with the bug fixes
+:   For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.36.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.36.0).
 
 ## October 2021
 {: #release-oct-2021}
