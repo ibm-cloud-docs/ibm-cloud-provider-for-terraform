@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-11-17"
 
 keywords: terraform provider plugin, terraform functions, terraform open whisk, terraform function action, terraform serverless
 
@@ -516,8 +516,8 @@ subcollection: ibm-cloud-provider-for-terraform
  </thead>
  <tbody>
      <tr>
-     <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_si_note"><code>ibm_scc_si_note</code></a></li></ul></td>
-     <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_latest_scans"><code>ibm_scc_posture_latest_scans</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_profiles"><code>ibm_scc_posture_profiles</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_scan_summaries"><code>ibm_scc_posture_scan_summaries</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_scans_summary"><code>ibm_scc_posture_scan_summary</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_scopes"><code>ibm_scc_posture_scopes</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_si_note"><code>ibm_scc_si_note</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_si_notes"><code>ibm_scc_si_notes</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_si_providers"><code>ibm_scc_si_providers</code></a></li></ul></td>
+     <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_si_note"><code>ibm_scc_si_note</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_si_occurrence"><code>ibm_scc_si_occurrence</code></a></li></ul></td>
+     <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_latest_scans"><code>ibm_scc_posture_latest_scans</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_profiles"><code>ibm_scc_posture_profiles</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_scan_summaries"><code>ibm_scc_posture_scan_summaries</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_scans_summary"><code>ibm_scc_posture_scan_summary</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_scopes"><code>ibm_scc_posture_scopes</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_si_note"><code>ibm_scc_si_note</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_si_notes"><code>ibm_scc_si_notes</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_si_occurrence"><code>ibm_scc_si_occurrence</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_si_occurrences"><code>ibm_scc_si_occurrences</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_si_providers"><code>ibm_scc_si_providers</code></a></li></ul></td>
  </tr>
  </tbody>
  </table>
