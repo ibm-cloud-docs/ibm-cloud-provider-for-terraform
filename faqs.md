@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-16"
+lastupdated: "2021-11-18"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -30,8 +30,6 @@ The Terraform on {{site.data.keyword.cloud_notm}} `ibm_compute_vm_instance` reso
     ```sh
     ibmcloud sl vs options
     ```
-    {: pre}
-
 
 ## How long does it take for my resources to provision and delete?
 {: #provisioning_times}
@@ -66,7 +64,6 @@ For detailed steps, see how to [install the Terraform on {{site.data.keyword.clo
     stderr :
     Error: Error waiting for create resource alb cert (buvlsclf0qcur3hjcrng/ingress-tls-cert) : The resource alb cert buvlsclf0qcur3hjcrng/ingress-tls-cert does not exist anymore: Request failed with status code: 404, ServerErrorResponse: {"incidentID":"5f82fa1696ce299a-IAD","code":"E0024","description":"The specified Ingress secret name is not found for this cluster.","type":"ALBSecret","recoveryCLI":"To list the Ingress secrets for a cluster, run 'ibmcloud ks ingress secret ls -c \u003ccluster_name_or_ID\u003e'."}
     ```
-    {: screen}
 
 You need to update the {{site.data.keyword.cloud_notm}} provider version to `version 1.16.1` or above to support [create secret](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_alb_cert){: external} feature in `ibm_container_alb_cert`. 
 
@@ -99,7 +96,6 @@ If you require one or more address prefixes you should define as part of resourc
       cidr = "10.240.0.0/24"
     }
     ```
-    {: codeblock}
 
 ## How do I define a policy which has all resource groups?
 {: #policy-faq}
@@ -123,7 +119,7 @@ A access group policy is a way to organize your account having create, modify, o
       }
     }
     ```
-    {: codeblock}
+    
 
 ## How do I configure policy for all services in all the resource groups for an user?
 {: #user-policy-faq}
@@ -138,7 +134,7 @@ The sample code block helps to configure the policy for all services in all reso
       roles  = ["Viewer"]
     }
     ```
-    {: codeblock}
+    
 
 ## How can I configure a target resource to connect from different regions?
 {: #target-regions-faq}
@@ -154,7 +150,7 @@ You need to configure the different regions in the provider block by using `regi
         region             = "eu-de"
     }
     ```
-    {: codeblock}
+    
 
     ```terraform
     // Second code block
@@ -162,7 +158,7 @@ You need to configure the different regions in the provider block by using `regi
       name            = "aa-kubecf-a"
     }
     ```
-    {: codeblock}
+    
 
 
 ## How can I connect and retrieve information from multiple region at once in the same template?
@@ -180,7 +176,7 @@ You can connect and retrieve information from a multiple regions by using `alias
       region = "eu-de"
     }
     ```
-    {: codeblock}
+    
 
 
     ```terraform
@@ -195,7 +191,7 @@ You can connect and retrieve information from a multiple regions by using `alias
       region = "eu-gb"
     }
     ```
-    {: codeblock}
+    
 
 ## How do I assign multiple resources to a group policy?
 {: #alias-resource-gpolicy}
@@ -213,7 +209,7 @@ You can configure only one region for a resource list to a group policy, as show
     } 
     } 
     ```
-    {: codeblock}
+    
 
 ## How can I create access group polices and add memo as an attribute to the policy?
 {: #alias-attributes-gpolicy}
@@ -246,7 +242,7 @@ Here is a code block that helps you to create access group policies and add memo
       }
     }
     ```
-    {: codeblock}
+    
 
 ## How do I create the Terraform resources of the same type in sequential order?
 {: #alias-squential-terrreso}
@@ -264,7 +260,7 @@ The sample code block helps to create the resources of the same type in a sequen
       depends_on = [ibm_is_vpc.res_a]
     }
     ```
-    {: codeblock}
+    
 
 ## How do I enable the User list visibility for the IAM in Terraform?
 {: #alias-userlistvisibility-iam}
@@ -311,7 +307,7 @@ Yes, but the VPC API’s are region specific so `ibm_is_vpcs` gives only one reg
     } 
 
     ```
-    {: codeblock}
+    
 
 ## How can I edit the flavor of an existing IKS worker pool without deleting or destroying an existing one by updating its machine_type?
 {: #alias-flavoriks-machinetype}
@@ -343,7 +339,7 @@ Updating the machine type in the Terraform file allows to built or provision new
     } 
 
     ```
-    {: codeblock}
+    
 
 ## How can I secure a workspace by setting an environment variable?
 {: #alias-squential-envvariable}
@@ -368,7 +364,7 @@ Currently, the {{site.data.keyword.bplong_notm}} service team is working to enab
         }
       ]
     ```
-    {: codeblock}
+    
 
 ## How can I create `ibm_function_trigger` with Terraform that connects to an Event Stream?
 {: #alias-functional-trigger}
@@ -437,7 +433,5 @@ The sample code block allows to create the resources of the same type in a seque
       "RawResult": null
     }
     ```
-    {: screen}
-
 
 The Zones can have multiple subnets, but you need at least one subnet per zone for IP distribution. One subnet can be part of only one zone. Public gateway can be attached to one or more subnets (of the same zone). Each zone has only one public gateway.
