@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-12"
+lastupdated: "2021-12-02"
 
 keywords: terraform templates, templates, sample terraform templates, private catalog
 
@@ -134,6 +134,7 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 |  Template | Description | Provision |
 | ---- | ---- | --- |
 | [Clone users to new account](https://github.com/Cloud-Schematics/add-all-users-to-new-account)| Clone all the IAM users from one {{site.data.keyword.cloud_notm}} account into another {{site.data.keyword.cloud_notm}} account. | <img usemap="#deploybutton_mapcs1" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs1" alt="This image leads to create a workspace."><area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/add-all-users-to-new-account&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+| [Create multiple access policies in access groups and invite users](https://github.com/Cloud-Schematics/gcat-iam-setup-module)| Create multiple access groups, and access policies that allow users to invite and users to the account and add users to any of the access groups created. | <img usemap="#deploybutton_mapcs2" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs2" alt="This image leads to create a workspace."><area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/gcat-iam-setup-module&terraform_version=terraform_v1.0" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
 {: caption="Account management and IAM Terraform templates to provision resource using {{site.data.keyword.bpshort}} workspace" caption-side="top"}
 
 ### Classic infrastructure service
@@ -142,6 +143,8 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 |  Template | Description | Provision |
 | ---- | ---- | --- |
 | [Autoscale the Classic VSIs](https://github.com/Cloud-Schematics/classic-vsi-autoscaling-solution) | Autoscale the classic VSIs using {{site.data.keyword.bpshort}}, {{site.data.keyword.openwhisk_short}}, and Sysdig. | <img usemap="#deploybutton_mapcs2" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs2" alt="This image leads to create a workspace."><area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/classic-vsi-autoscaling-solution&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+| [LEMP to provision a Classic Virtual Server instance](https://github.com/Cloud-Schematics/LEMP) | Provision a classic Virtual Server Instance (VSI) by using a full-stack LEMP environment on a virtual machine. | <img usemap="#deploybutton_mapcs3" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs3" alt="This image leads to create a workspace."><area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/LEMP&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
+| [LAMP to provision a Classic Virtual Server instance](https://github.com/Cloud-Schematics/LAMP) | Provision a classic virtual server instance by using a full-stack LAMP environment on a virtual machine. | <img usemap="#deploybutton_mapcs4" alt="Auto deployment button"  src="images/autodeploy_button.png"><map name="deploybutton_mapcs4" alt="This image leads to create a workspace."><area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/Cloud-Schematics/LAMP&terraform_version=terraform_v0.13" target="_blank" coords="1,3,139,20"  shape="rect"></map>|
 {: caption="Classic infrastructure templates to provision resource using {{site.data.keyword.bpshort}} workspace" caption-side="top"}
 
 
