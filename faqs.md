@@ -348,7 +348,7 @@ Updating the machine type in the Terraform file allows to built or provision new
 
 Currently, the {{site.data.keyword.bplong_notm}} service team is working to enable secure environment variables and support for passing credentials for modules. It is planned in the future roadmap. However, here is a sample code block to secure a workspace.
 
-    ```sh
+    ```text
     Example input file get workspace:
       "env_values": [{
           "name": "GIT_ASKPASS",

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-11"
+lastupdated: "2021-12-02"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for vpc
 
@@ -39,7 +39,7 @@ To create a VPC and a VSI:
 
 2. In the Terraform on {{site.data.keyword.cloud_notm}} directory create a `versions.tf` file to run the Terraform on {{site.data.keyword.cloud_notm}} v0.13. For `versions.tf`, refer to [sample versions tf file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v13).
     
-    ```
+    ```terraform
     variable ibmcloud_api_key {}
 
      provider "ibm" {
@@ -64,6 +64,75 @@ To create a VPC and a VSI:
     **Example configuration file:** 
 
     ```
+     variable "ssh_key" {
+    }
+
+    locals {
+        BASENAME = "gsmvpcv13test2"
+        ZONE     = "us-south-1"
+    }
+
+    resource "ibm_is_vpc" "vpc" {
+        name = "${local.BASENAME}-vpc"
+    }
+
+    resource "ibm_is_security_group" "sg1" {
+        name = "${local.BASENAME}-sg1"
+        vpc  = ibm_is_vpc.vpc.id
+    }
+
+    # allow all incoming network traffic on port 22
+    resource "ibm_is_security_group_rule" "ingress_ssh_all" {
+        group     = ibm_is_security_group.sg1.id
+        direction = "inbound"
+        remote    = "0.0.0.0/0"
+
+        tcp {
+          port_min = 22
+          port_max = 22
+        }
+    }
+
+    resource "ibm_is_subnet" "subnet1" {
+        name                     = "${local.BASENAME}-subnet1"
+        vpc                      = ibm_is_vpc.vpc.id
+        zone                     = local.ZONE
+        total_ipv4_address_count = 256
+    }
+
+    data "ibm_is_image" "centos" {
+        name = "ibm-centos-7-6-minimal-amd64-1"
+    }
+
+    data "ibm_is_ssh_key" "ssh_key_id" {
+        name = var.ssh_key
+    }
+
+    resource "ibm_is_instance" "vsi1" {
+        name    = "${local.BASENAME}-vsi1"
+        vpc     = ibm_is_vpc.vpc.id
+        zone    = local.ZONE
+        keys    = [data.ibm_is_ssh_key.ssh_key_id.id]
+        image   = data.ibm_is_image.centos.id
+        profile = "cx2-2x4"
+
+        primary_network_interface {
+            subnet          = ibm_is_subnet.subnet1.id
+            security_groups = [ibm_is_security_group.sg1.id]
+        }
+    }
+
+    resource "ibm_is_floating_ip" "fip1" {
+        name   = "${local.BASENAME}-fip1"
+        target = ibm_is_instance.vsi1.primary_network_interface[0].id
+        }
+
+      output "sshcommand" {
+        value = "ssh root@${ibm_is_floating_ip.fip1.address}"
+        }
+    ```
+
+    ```terraform
     variable "ssh_key" {
     }
 
@@ -120,7 +189,7 @@ To create a VPC and a VSI:
             subnet          = ibm_is_subnet.subnet1.id
             security_groups = [ibm_is_security_group.sg1.id]
         }
-        }
+    }
 
     resource "ibm_is_floating_ip" "fip1" {
         name   = "${local.BASENAME}-fip1"
