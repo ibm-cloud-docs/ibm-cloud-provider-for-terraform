@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-18"
+lastupdated: "2021-12-07"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -150,7 +150,6 @@ You need to configure the different regions in the provider block by using `regi
         region             = "eu-de"
     }
     ```
-    
 
     ```terraform
     // Second code block
@@ -158,7 +157,6 @@ You need to configure the different regions in the provider block by using `regi
       name            = "aa-kubecf-a"
     }
     ```
-    
 
 
 ## How can I connect and retrieve information from multiple region at once in the same template?
@@ -435,3 +433,68 @@ The sample code block allows to create the resources of the same type in a seque
     ```
 
 The Zones can have multiple subnets, but you need at least one subnet per zone for IP distribution. One subnet can be part of only one zone. Public gateway can be attached to one or more subnets (of the same zone). Each zone has only one public gateway.
+
+## How can I resolve the unexpected HTTP status code 502 (502 Bad Gateway) null error when deploying an instance of IBM Cloud Database RabbitMQ by using Terraform?
+{: #deploy-icdrabbitmq-faq}
+{: faq}
+{: support}
+
+The sample Terraform configuration with the default memory and disk allocation size for RabbitMQ resource
+
+```terraform
+resource "ibm_database" "messages-for-rabbitmq" {
+  name              = "rabbitmq"
+  plan              = "standard"
+  location          = "eu-de"
+  service           = "messages-for-rabbitmq"
+  resource_group_id = data.ibm_resource_group.resource_group.id
+  adminpassword                = "password12"
+  members_memory_allocation_mb = 2048
+  members_disk_allocation_mb   = 1024
+  
+  service_endpoints = var.service_endpoints
+}
+```
+{: pre}
+
+You have to update the memory and disk allocation size in the Terraform configuration file as shown in the code block.
+
+```terraform
+members_memory_allocation_mb = 3072
+members_disk_allocation_mb   = 3072
+```
+{: pre}
+
+For more information, about configuring the memory and disk allocation for the database, see [{{site.data.keyword.cloud_notm}} Database instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/database).
+
+## How can I resolve cross-origin resource sharing (CORS) configuration issue while creating a cloudant instance?
+{: #cos-instance-faq}
+{: faq}
+{: support}
+
+You need to own `manager` role for configuring cross-origin resource sharing (CORS) configuration to successfully apply the plan. You can only create an {{site.data.keyword.cloudant_short_notm}} instance with the `writer` role. For more information, about {{site.data.keyword.cloudant_short_notm}} instance access, see [roles](https://cloud.ibm.com/docs/Cloudant?topic=Cloudant-work-with-your-account#roles).
+
+For example, to get the `resource-controller.instance.create` action you need Cloudant **Platform** editor or Administrator role. To configure the Cloudant instance feature such as `cloudantnosqldb.sapi.usercors` action you need the cloudant service manager role. For more information, about {{site.data.keyword.cloud_notm}} cloudant, see [ibm_cloudant](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cloudant) resource.
+
+## Can I increase or decrease timeouts while deleting Terraform resource?
+{: #timeouts-resource-faq}
+{: faq}
+{: support}
+
+Yes, you can increase or decrease timeouts by using timeouts blocks within your resource block as shown in the example. For more information, about a resource having timeouts block, see [ibm_container_vpc_cluster](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_cluster#timeouts) timeouts.
+
+```terraform
+timeouts {
+    create = "3h"
+    update = "2h"
+    delete = "1h"
+  }
+
+resource "ibm_container_cluster" "mycluster" {
+  ...
+  timeouts {
+    delete = "60m" # something higher than the default of 45m
+  }
+}
+```
+{: pre}
