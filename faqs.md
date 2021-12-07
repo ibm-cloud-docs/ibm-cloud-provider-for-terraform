@@ -455,7 +455,6 @@ resource "ibm_database" "messages-for-rabbitmq" {
   service_endpoints = var.service_endpoints
 }
 ```
-{: pre}
 
 You have to update the memory and disk allocation size in the Terraform configuration file as shown in the code block.
 
@@ -463,7 +462,6 @@ You have to update the memory and disk allocation size in the Terraform configur
 members_memory_allocation_mb = 3072
 members_disk_allocation_mb   = 3072
 ```
-{: pre}
 
 For more information, about configuring the memory and disk allocation for the database, see [{{site.data.keyword.cloud_notm}} Database instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/database).
 
@@ -497,4 +495,3 @@ resource "ibm_container_cluster" "mycluster" {
   }
 }
 ```
-{: pre}
