@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-12-07"
+lastupdated: "2021-12-11"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -23,6 +23,16 @@ For information about releases that occurred before 12 October 2021, see [What's
 
 ## December 2021
 {: #release-dec-2021}
+
+Review the release notes for December 2021.
+{: shortdesc}
+
+### 9 December 2021
+{: #9dec2021}
+{: release-note}
+
+Enhancements with the bug fixes
+:   This release contains the regression fix on IAM Policy Management resources from [1.37.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.37.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.37.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.37.1).
 
 ### 7 December 2021
 {: #7dec2021}
