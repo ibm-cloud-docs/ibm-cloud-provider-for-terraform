@@ -20,7 +20,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #ibm-api-gateway_rd}
 
 <table>
-    <thead>
+<thead>
 <th>Resources</th>
 <th>Data sources</th>
     </thead>
