@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-13"
+lastupdated: "2021-12-11"
 
 keywords: terraform provider deployment, automation, schematics workspace, ibm cloud terraform provider deployment, schematics workspace creation, auto deploy 
 
@@ -63,9 +63,9 @@ You can add an image on `Deploy to {{site.data.keyword.cloud_notm}} Schematics` 
 ```
 {: pre}
 
-**Output**
+**Output:**
 
-<img src="/images/deploytoschematics.png" alt="Deploy to {{site.data.keyword.cloud_notm}}" width="200" style="width: 200px; border-style: none"/>
+![Deploy to {{site.data.keyword.cloud_notm}}](/images/deploytoschematics.png "Deploy to {{site.data.keyword.cloud_notm}}"){: caption="Deploy to {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
 
 To view about the sample Terraform on {{site.data.keyword.cloud_notm}} template examples, refer [Sample Terraform on {{site.data.keyword.cloud_notm}} templates and deploy to {{site.data.keyword.bplong_notm}}](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway){: external}.
 
