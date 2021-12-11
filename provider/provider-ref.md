@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-12-11"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -29,11 +29,11 @@ By default, the {{site.data.keyword.cloud_notm}} Provider plug-in is configured 
 
 |Required parameters|Classic infrastructure|Cloud Foundry|Functions|Power Systems|Other IAM-enabled services|
 |--|:--:|:--:|:--:|:--:|:--:|
-|`ibmcloud_api_key`|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|
-|`iaas_classic_username`|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||||
-|`iaas_classic_api_key`|<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||||
-|`function_namespace`|||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/>|||
-|`zone`||||<img src="../images/checkmark.svg" alt="Check mark" width="30" style="width: 30px; border-style: none"/> <br>For multi-zone regions only||
+|`ibmcloud_api_key`|![Check mark](../images/checkmark.svg "Check mark")|![Check mark](../images/checkmark.svg "Check mark")|![Check mark](../images/checkmark.svg "Check mark")|![Check mark](../images/checkmark.svg "Check mark")|![Check mark](../images/checkmark.svg "Check mark")|
+|`iaas_classic_username`|![Check mark](../images/checkmark.svg "Check mark")|||||
+|`iaas_classic_api_key`|![Check mark](../images/checkmark.svg "Check mark")|||||
+|`function_namespace`|||![Check mark](../images/checkmark.svg "Check mark")|||
+|`zone`||||![Check mark](../images/checkmark.svg "Check mark") <br> For multi-zone regions only||
 {: caption="Required Parameters" caption-side="top"}
 
 ## Supported input parameters
@@ -57,6 +57,7 @@ Review what parameters you can set in the `provider` block of your Terraform on 
 |`resource_group`|Optional|The ID of the resource group that you want to use for your {{site.data.keyword.cloud_notm}} resources. To retrieve the ID, run `ibmcloud resource groups`. You can specify the resource group in the `provider` block or retrieve the value from the `IC_RESOURCE_GROUP` or `IBMCLOUD_RESOURCE_GROUP` environment variables. If both environment variables are defined, `IC_RESOURCE_GROUP` takes precedence. |
 |`zone`|Required for Power Systems|The zone of an {{site.data.keyword.cloud_notm}} region where you want to create Power System resources. This value is required if you want to work with resources in a multizone-capable region. For example, if you want to work in the `eu-de` region, you must enter `eu-de-1` or `eu-de-2`. You can specify the zone in the `provider` block or retrieve the value from the `IC_ZONE` or `IBMCLOUD_ZONE` environment variables. If both environment variables are specified, `IC_ZONE` takes precedence.|
 |`visibility` |Optional| The visibility to {{site.data.keyword.cloud_notm}} endpoint. Allowable values are`public`, `private`, `public-and-private`. Default value is `public`. <ul><li>If visibility is set to <strong>public</strong>, use the regional public endpoint or global public endpoint. The regional public endpoints has higher precedence.</li><li>If visibility is set to <strong>private</strong>, use the regional private endpoint or global private endpoint. The regional private endpoint is given higher precedence. In order to use the private endpoint from an {{site.data.keyword.cloud_notm}} resource (such as, a classic VM instance), one must have VRF-enabled account. If the {{site.data.keyword.cloud_notm}} service does not support private endpoint, the Terraform resource or datasource will log an error.</li><li>If visibility is set to <strong>public-and-private</strong>, use regional private endpoints or global private endpoint. If service does not support regional or global private endpoints it uses the regional or global public endpoint.</li><li>This can be retrieved from the <code>IC_VISIBILITY</code> higher precedence or <code>IBMCLOUD_VISIBILITY</code> environment variable.</li></ul>|
+{: caption="Supported input parameters in configuration file" caption-side="top"}
 
 
 ## Specifying the `provider` block
@@ -65,7 +66,7 @@ Review what parameters you can set in the `provider` block of your Terraform on 
 After you [retrieved the required parameters](#required-parameters) to work with a Terraform resource or data source, you can now specify your provider block. 
 
 ### Creating a static `provider.tf` file
-{: static}
+{: #static}
 
 You can declare the input parameters in the `provider` block directly. 
 {: shortdesc}
@@ -74,7 +75,7 @@ Because the `provider` block includes sensitive information, do not commit this 
 {: important}
 
 1. Create a `provider.tf` file and specify the input parameters that are required for your resource or data source.
-    ```
+    ```terraform
     provider "ibm" {
         ibmcloud_api_key = "<api_key>"
         iaas_classic_username = "<classic_username>"
@@ -84,7 +85,7 @@ Because the `provider` block includes sensitive information, do not commit this 
     {: codeblock}
 
 2. Initialize the Terraform CLI. 
-    ```
+    ```sh
     terraform init
     ```
     {: pre}
@@ -99,7 +100,7 @@ Do not commit the `terraform.tfvars` into a public source repository. This file 
 {: important}
 
 1. Create a `terraform.tfvars` file on your local machine and add the input parameters that are required for your resource or data source. 
-    ```
+    ```sh
     ibmcloud_api_key = "<ibmcloud_api_key>"
     iaas_classic_username = "<classic_infrastructure_username>"
     iaas_classic_api_key = "<classic_infrasturcture_apikey>"
@@ -107,7 +108,7 @@ Do not commit the `terraform.tfvars` into a public source repository. This file 
     {: codeblock}
 
 2. Create a `provider.tf` file and use Terraform interpolation syntax to reference the variables from the `terraform.tfvars`. 
-    ```
+    ```terraform
     variable "ibmcloud_api_key" {}
     variable "iaas_classic_username" {}
     variable "iaas_classic_api_key" {}
@@ -121,7 +122,7 @@ Do not commit the `terraform.tfvars` into a public source repository. This file 
     {: codeblock}
 
 3. Initialize the Terraform CLI. 
-    ```
+    ```sh
     terraform init
     ```
     {: pre}
@@ -135,13 +136,13 @@ You can configure the {{site.data.keyword.cloud_notm}} Provider plug-in by expor
 
 1. [Retrieve the environment variable names](#provider-parameter-ov) for the provider parameters that you want to export. For example, to specify a classic infrastructure username, use `IAAS_CLASSIC_USERNAME`. 
 2. Create a `provider.tf` file and add an empty provider block.
-    ```
+    ```terraform
     provider "ibm" {}
     ```
     {: codeblock}
 
 3. Set the environment variables on your local machine. 
-    ```
+    ```sh
     export IC_API_KEY="<ibmcloud_api_key>"
     export IAAS_CLASSIC_USERNAME="<classic_username>"
     export IAAS_CLASSIC_API_KEY="<classic_api_key>"
@@ -149,7 +150,7 @@ You can configure the {{site.data.keyword.cloud_notm}} Provider plug-in by expor
     {: codeblock}
 
 4. Initialize the Terraform CLI.
-    ```
+    ```sh
     terraform init
     ```
     {: pre} 
@@ -164,7 +165,7 @@ You can add multiple `provider` configurations within the same Terraform on {{si
 Creating multiple `provider` configurations is useful when you want to use different input parameters, such as different regions, zones, infrastructure generations, or accounts to create the {{site.data.keyword.cloud_notm}} resources in your Terraform on {{site.data.keyword.cloud_notm}} configuration file. For more information, see [Multiple Provider Instances](https://www.terraform.io/docs/language/providers/configuration.html){: external}. 
 
 1. In your Terraform on {{site.data.keyword.cloud_notm}} configuration or `provider.tf` file, create multiple provider blocks with the same provider name. The provider configuration without an alias is considered the default provider configuration and is used for every resource where you do not specify a specific provider configuration. Any more provider configurations must include an alias so that you can reference this provider from your resource definition.
-    ```
+    ```terraform
     provider "ibm" {
         ibmcloud_api_key    = var.ibmcloud_api_key
         region = "us-south"
@@ -179,7 +180,7 @@ Creating multiple `provider` configurations is useful when you want to use diffe
     {: codeblock}
 
 2. In your resource definition, specify the provider configuration that you want to use. If you do not specify a provider, the default provider configuration is used.
-    ```
+    ```terraform
     resource "ibm_container_cluster" "cluster" {
         provider = ibm.east
     ...
@@ -201,7 +202,7 @@ The steps that are involved in configuring your {{site.data.keyword.cloud_notm}}
 1. Set up the Terraform on {{site.data.keyword.cloud_notm}} engine and an {{site.data.keyword.cloud_notm}} Provider plug-in, in {{site.data.keyword.cloud_notm}} virtual machine by using private VLAN. And provision the enabled Virtual Routing and Forwarding (VRF) account.
 2. Export the environment variables that are listed in the table to your local machine. For more information, about supported private Cloud Service Endpoints for each {{site.data.keyword.cloud_notm}} service to support in production, see [Use service endpoints](/docs/account?topic=account-vrf-service-endpoint).
 3. Initialize the Terraform on {{site.data.keyword.cloud_notm}} command line to load the environment variables that you set.
-    ```
+    ```sh
     terraform init
     ```
     {: pre}
@@ -242,7 +243,7 @@ The steps that are involved in configuring your {{site.data.keyword.cloud_notm}}
 |UAA|`IBMCLOUD_UAA_ENDPOINT`|N/A|
 |User management|`IBMCLOUD_USER_MANAGEMENT_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/user-management#endpoint-urls) |
 |VPC Gen2|`IBMCLOUD_IS_NG_API_ENDPOINT`|N/A|
-
+{: caption="Terraform on {{site.data.keyword.cloud_notm}} environment variables" caption-side="top"}
 
 
 
