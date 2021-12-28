@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-05"
+lastupdated: "2021-12-28"
 
 keywords: terraform create kubernetes cluster, terraform create openshift cluster, terraform kubernetes cluster, terraform openshift cluster, schematics create kubernetes cluster, schematics create openshift cluster, schematics kubernetes cluster, schematics openshift cluster, terraform iks cluster, terraform roks cluster, schematics iks cluster, schematics roks cluster, terraform multizone cluster, schematics multizone cluster, terraform remove default worker pool, schematics remove default worker pool 
 
@@ -191,7 +191,7 @@ Create a classic {{site.data.keyword.containerlong_notm}} or {{site.data.keyword
     </tr>
     <tr>
     <td><code>resource.ibm_container_cluster.private_vlan_id</code></td>
-        <td>Enter the ID of an existing private VLAN that you have in the zone where you want to create the cluster. If you do not have a private VLAN in that zone yet, remove this parameter from your configuration file. A private VLAN is automatically created for you. To list available VLANs in a zone, run <code>ibmcloud ks vlan ls --zone &lt;zone&gt;</code>. </td>
+        <td>Enter the ID of an existing private VLAN that you have in the zone where you want to create the cluster. If you do not have a private VLAN in that zone yet, remove this parameter from your configuration file. A private VLAN is automatically created for you. To list available VLANs in a zone, run <code>ibmcloud ks vlan ls --zone &lt;zone&gt;</code>. For more information, see [Standard cluster and free clusters for private vlan_id](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_cluster#attribute-reference).</td>
     </tr>
     <tr>
     <td><code>resource.ibm_container_cluster.kube_version</code></td>
@@ -353,7 +353,7 @@ Add zones to the default worker pool in your cluster that you created in lesson 
     </tr>
     <tr>
     <td><code>resource.ibm_container_worker_pool_zone_attachment.private_vlan_id</code></td>
-    <td>Enter the ID of an existing private VLAN that you have in the zone that you want to add to the cluster. If you do not have a private VLAN in that zone yet, remove this parameter from your configuration file. A private VLAN is automatically created for you. To list available VLANs in a zone, run <code>ibmcloud ks vlan ls --zone &lt;zone&gt;</code>. </td>
+    <td>Enter the ID of an existing private VLAN that you have in the zone that you want to add to the cluster. If you do not have a private VLAN in that zone yet, remove this parameter from your configuration file. A private VLAN is automatically created for you. To list available VLANs in a zone, run <code>ibmcloud ks vlan ls --zone &lt;zone&gt;</code>. For more information, see [Standard cluster and free clusters for private vlan_id](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_cluster#attribute-reference).</td>
     </tr>
         <tr>
     <td><code>resource.ibm_container_worker_pool_zone_attachment.public_vlan_id</code></td>
