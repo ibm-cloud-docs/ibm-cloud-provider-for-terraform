@@ -3,7 +3,7 @@ toc:
     subcollection: ibm-cloud-provider-for-terraform
     version: 2
     category: dev_ops
-    audience: software
+    audience: compute
     href: /docs/ibm-cloud-provider-for-terraform
     console-page: /schematics/overview
     product-page: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
