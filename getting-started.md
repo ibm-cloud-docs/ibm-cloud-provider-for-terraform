@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-11-05"
+  years: 2017, 2022
+lastupdated: "2022-01-23"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -123,7 +123,7 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
     ```
     {: codeblock}
 
-    The version is specified in the following format `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. You can modify the version constraint operator in this example by using one of the [supported operators in Terraform](https://www.terraform.io/docs/language/expressions/version-constraints.html#version-constraint-syntax){: external}. 
+    The version is specified in the following format `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. You can modify the version constraint operator in this example by using one of the [supported operators in Terraform](https://www.terraform.io/language/expressions/version-constraints#version-constraint-syntax){: external}. 
     {: tip}
 
 3. [Create or retrieve an {{site.data.keyword.cloud_notm}} API key](/docs/account?topic=account-userapikey#create_user_key). The API key is used to authenticate with the {{site.data.keyword.cloud_notm}} platform and to determine your permissions for {{site.data.keyword.cloud_notm}} services.

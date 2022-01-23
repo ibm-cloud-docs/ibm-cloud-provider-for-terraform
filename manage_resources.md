@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-11-05"
+  years: 2017, 2022
+lastupdated: "2022-01-23"
 
 keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, Terraform on {{site.data.keyword.cloud_notm}}, provision resources
 
@@ -26,7 +26,7 @@ Use the Terraform CLI to create, update, and delete platform and infrastructure 
 To provision {{site.data.keyword.cloud_notm}} resources, you must describe the state of your resources that you want to achieve in a configuration file.  
 {: shortdesc}
 
-Terraform on {{site.data.keyword.cloud_notm}} configuration files are written by using the [HashiCorp Configuration Language (HCL) ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.terraform.io/docs/language/syntax/configuration.html) or JSON syntax. When you create your configuration file, you must describe the type of resource that you want and the state that you want to achieve for your resource. Terraform on {{site.data.keyword.cloud_notm}} reads this configuration and creates an execution plan with the steps that were identified to achieve the specified state. If existing resources are found, Terraform on {{site.data.keyword.cloud_notm}} identifies the necessary steps to update them. 
+Terraform on {{site.data.keyword.cloud_notm}} configuration files are written by using the [HashiCorp Configuration Language (HCL) ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.terraform.io/language/syntax/configuration) or JSON syntax. When you create your configuration file, you must describe the type of resource that you want and the state that you want to achieve for your resource. Terraform on {{site.data.keyword.cloud_notm}} reads this configuration and creates an execution plan with the steps that were identified to achieve the specified state. If existing resources are found, Terraform on {{site.data.keyword.cloud_notm}} identifies the necessary steps to update them. 
 
 Before you begin: 
 - [Install the Terraform on {{site.data.keyword.cloud_notm}} command line and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#setup_cli).

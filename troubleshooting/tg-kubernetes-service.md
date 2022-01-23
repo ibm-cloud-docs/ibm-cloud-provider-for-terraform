@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-11-05"
+  years: 2017, 2022
+lastupdated: "2022-01-23"
 
 keywords: question about kubernetes provider, troubleshooting guide, kubernetes service troubleshooting
 
@@ -40,6 +40,6 @@ To troubleshoot this error you need to ensure:
 
 - The resources should not be created in the same Terraform template or module where {{site.data.keyword.containershort_notm}} provider resources are in use.
 
-- The Terraform provider evaluates the provider blocks versus actual resource, and the order in which the resources are defined. For more information, see [Provider configuration](https://www.terraform.io/docs/language/providers/configuration.html#provider-configuration){: external}.
+- The Terraform provider evaluates the provider blocks versus actual resource, and the order in which the resources are defined. For more information, see [Provider configuration](https://www.terraform.io/language/providers/configuration#provider-configuration){: external}.
 
 If you cannot resolve this issue, contact support by opening a support case for the service that you want to work with. Make sure to include the incident ID. For more information, see [Using the Support Center](/docs/get-support?topic=get-support-using-avatar).
