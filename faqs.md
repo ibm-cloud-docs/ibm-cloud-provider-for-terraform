@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-12-07"
+  years: 2017, 2022
+lastupdated: "2022-01-23"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -164,7 +164,7 @@ You need to configure the different regions in the provider block by using `regi
 {: faq}
 {: support}
 
-You can connect and retrieve information from a multiple regions by using `aliases` parameter as shown in the example code block. For more information, about configuring multiple provider block, see [Multiple provider configurations](https://www.terraform.io/docs/language/providers/configuration.html#alias-multiple-provider-configurations).
+You can connect and retrieve information from a multiple regions by using `aliases` parameter as shown in the example code block. For more information, about configuring multiple provider block, see [Multiple provider configurations](https://www.terraform.io/language/providers/configuration#alias-multiple-provider-configurations).
 
 
     ```terraform
@@ -369,7 +369,7 @@ Currently, the {{site.data.keyword.bplong_notm}} service team is working to enab
 {: faq}
 {: support}
 
-The sample code block allows to create the resources of the same type in a sequential order. For more information, about creating a trigger that listens to an Event Streams instance block, see [eventstreams_trigger](https://cloud.ibm.com/docs/openwhisk?topic=openwhisk-pkg_event_streams#eventstreams_trigger).
+The sample code block allows to create the resources of the same type in a sequential order. For more information, about creating a trigger that listens to an Event Streams instance block, see [eventstreams_trigger](/docs/openwhisk?topic=openwhisk-pkg_event_streams#eventstreams_trigger).
 
     ```terraform
     resource "ibm_function_trigger" "trigger" {
@@ -470,7 +470,7 @@ For more information, about configuring the memory and disk allocation for the d
 {: faq}
 {: support}
 
-You need to own `manager` role for configuring cross-origin resource sharing (CORS) configuration to successfully apply the plan. You can only create an {{site.data.keyword.cloudant_short_notm}} instance with the `writer` role. For more information, about {{site.data.keyword.cloudant_short_notm}} instance access, see [roles](https://cloud.ibm.com/docs/Cloudant?topic=Cloudant-work-with-your-account#roles).
+You need to own `manager` role for configuring cross-origin resource sharing (CORS) configuration to successfully apply the plan. You can only create an {{site.data.keyword.cloudant_short_notm}} instance with the `writer` role. For more information, about {{site.data.keyword.cloudant_short_notm}} instance access, see [roles](/docs/Cloudant?topic=Cloudant-work-with-your-account#roles).
 
 For example, to get the `resource-controller.instance.create` action you need Cloudant **Platform** editor or Administrator role. To configure the Cloudant instance feature such as `cloudantnosqldb.sapi.usercors` action you need the cloudant service manager role. For more information, about {{site.data.keyword.cloud_notm}} cloudant, see [ibm_cloudant](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cloudant) resource.
 

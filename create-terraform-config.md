@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-11-05"
+  years: 2017, 2022
+lastupdated: "2022-01-23"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -21,7 +21,7 @@ Learn how to create Terraform on {{site.data.keyword.cloud_notm}} templates that
 
 An Terraform on {{site.data.keyword.cloud_notm}} template consists of one or more Terraform on {{site.data.keyword.cloud_notm}} configuration files that declare the state that you want to achieve for your {{site.data.keyword.cloud_notm}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](#configure-provider) and [add resources to your Terraform on {{site.data.keyword.cloud_notm}} configuration file](#configure-resources). Optionally, you can use [input variables](#configure-variables) to customize your resources.
 
-You can write your Terraform on {{site.data.keyword.cloud_notm}} configuration file by using HashiCorp Configuration Language (HCL) or JSON syntax. For more information, see [Configuration language](https://www.terraform.io/docs/language/index.html){: external}.  
+You can write your Terraform on {{site.data.keyword.cloud_notm}} configuration file by using HashiCorp Configuration Language (HCL) or JSON syntax. For more information, see [Configuration language](https://www.terraform.io/language){: external}.  
 
 
 ## Configuring the `provider` block 
@@ -209,7 +209,7 @@ resource ibm_container_cluster "test_cluster" {
 ```
 {: codeblock}
 
-For more information, about variable configurations, see the [Terraform on {{site.data.keyword.cloud_notm}} documentation](https://www.terraform.io/docs/language/values/variables.html){: external}.
+For more information, about variable configurations, see the [Terraform on {{site.data.keyword.cloud_notm}} documentation](https://www.terraform.io/language/values/variables){: external}.
 
 
 

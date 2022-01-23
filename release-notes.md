@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-12-11"
+  years: 2017, 2022
+lastupdated: "2022-01-23"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -20,6 +20,19 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 
 For information about releases that occurred before 12 October 2021, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform).
 {: note}
+
+## January 2022
+{: #release-jan-2022}
+
+Review the release notes for January 2022.
+{: shortdesc}
+
+### 14 January 2022
+{: #14jan2022}
+{: release-note}
+
+Features and enhancements with the bug fixes
+:   For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.38.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.38.0). **Note** In `terraform-provider-ibm_1.38.0_darwin_amd64.zip` binary release the team is working to resolve the notarization approval issue.
 
 ## December 2021
 {: #release-dec-2021}
