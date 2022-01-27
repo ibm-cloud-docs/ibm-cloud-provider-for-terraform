@@ -229,9 +229,10 @@ The steps that are involved in configuring your {{site.data.keyword.cloud_notm}}
 |GHoST / Tagging|`IBMCLOUD_GT_API_ENDPOINT`|`https://tags.global-search-tagging.test.cloud.ibm.com`|
 |HPCS|`IBMCLOUD_HPCS_API_ENDPOINT`|N/A|
 |IAM|`IBMCLOUD_IAM_API_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/iam-access-groups#endpoint-urls) |
-|`IAMPAP`|`IBMCLOUD_IAMPAP_API_ENDPOINT`|N/A|
+|IAMPAP|`IBMCLOUD_IAMPAP_API_ENDPOINT`|N/A|
 |ICD|`IBMCLOUD_ICD_API_ENDPOINT`|[Docs](/docs/account?topic=account-vrf-service-endpoint)|
 |Key protect|`IBMCLOUD_KP_API_ENDPOINT`|[Docs](/docs/key-protect?topic=key-protect-private-endpoints)|
+|Power Systems|`IBMCLOUD_PI_API_ENDPOINT`| [Endpoint URL](https://cloud.ibm.com/apidocs/power-cloud#endpoint) |
 |Private DNS|`IBMCLOUD_PRIVATE_DNS_API_ENDPOINT`| N/A|
 |Resource management|`IBMCLOUD_RESOURCE_MANAGEMENT_API_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/resource-controller/resource-manager#endpoint-urls) |
 |Resource controller|`IBMCLOUD_RESOURCE_CONTROLLER_API_ENDPOINT`|N/A|
