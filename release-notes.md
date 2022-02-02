@@ -32,7 +32,7 @@ Review the release notes for January 2022.
 {: release-note}
 
 Enhancements 
-:   For the latest **Enhancements** on integration of security group with VPE gateway and depreciation notice of policy management in KMS resources, see [Updates and fixes in v1.38.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.38.1) release. 
+:   For the latest **Enhancements** on integration of security group with VPE gateway and update the deprecation notice of policy management in KMS resources, see [Updates and fixes in v1.38.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.38.1) release. 
 
 ### 14 January 2022
 {: #14jan2022}
