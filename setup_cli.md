@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-11-05"
+  years: 2017, 2022
+lastupdated: "2022-02-02"
 
-keywords: install Terraform on {{site.data.keyword.cloud_notm}} cli, set up Terraform on {{site.data.keyword.cloud_notm}} cli, ibm cloud provider plugin, Terraform on {{site.data.keyword.cloud_notm}}
+keywords: install Terraform on IBM Cloud cli, set up Terraform on IBM Cloud cli, ibm cloud provider plugin, Terraform on IBM Cloud
 
 subcollection: ibm-cloud-provider-for-terraform
 
@@ -145,7 +145,7 @@ Terraform supports `version` constraints to specify the range of acceptable vers
 | `>, >=, <, <=` | Compares against a specified version, allows version for which the comparison is true. `Greater-than` requests newer version, and `less-than` requests older versions. For example, `>= 1.20.0 < 2.0.0`.|
 | `~>` | Allows only the rightmost version component to increment. For example, `~> 1.20.0` allows new patch releases within a specific minor patch releases like `1.20.1, 1.20.2, 1.20.3`, but not `1.21.0` release.|
 
-If you are using Terraform on {{site.data.keyword.cloud_notm}} modules, you must add a `versions.tf` file to all the module folders. You can refer the Terraform provider block from the [provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest){: external}.
+If you are using Terraform on IBM Cloud modules, you must add a `versions.tf` file to all the module folders. You can refer the Terraform provider block from the [provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest){: external}.
 {: note}
 
 

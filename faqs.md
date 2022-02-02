@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-23"
+lastupdated: "2022-02-02"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -22,7 +22,7 @@ content-type: faq
 {: #vsi_config}
 {: faq}
 
-The Terraform on {{site.data.keyword.cloud_notm}} `ibm_compute_vm_instance` resource includes optional and mandatory configuration parameters. To find an overview of how you can configure your virtual server, use the {{site.data.keyword.Bluemix_notm}} CLI.  
+The Terraform on IBM Cloud `ibm_compute_vm_instance` resource includes optional and mandatory configuration parameters. To find an overview of how you can configure your virtual server, use the {{site.data.keyword.Bluemix_notm}} CLI.  
 
 1. Install the [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli). 
 
@@ -39,7 +39,7 @@ Most {{site.data.keyword.Bluemix_notm}} platform resources provision within a fe
 
 Use the `terraform apply` and `terraform destroy` times in the following table as a reference for when you can expect your commands to complete. 
 
-If the Terraform on {{site.data.keyword.cloud_notm}} operation does not complete due to a timeout, wait for the resource state change to complete and retry the operation. 
+If the Terraform on IBM Cloud operation does not complete due to a timeout, wait for the resource state change to complete and retry the operation. 
 {: tip}
 
 | Resource | terraform apply return time | terraform destroy return time |
@@ -50,11 +50,11 @@ If the Terraform on {{site.data.keyword.cloud_notm}} operation does not complete
 | Bare Metal servers | Up to a few hours | Up to a few hours |
 {: caption="Overview of Terraform apply and destroy command completion times" caption-side="top"}
 
-## How do I set up Terraform on {{site.data.keyword.cloud_notm}} greater than v0.13.0 ?
+## How do I set up Terraform on IBM Cloud greater than v0.13.0 ?
 {: #ibm-terraform-provider-v13}
 {: faq}
 
-For detailed steps, see how to [install the Terraform on {{site.data.keyword.cloud_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#tf_installation) and [install the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
+For detailed steps, see how to [install the Terraform on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#tf_installation) and [install the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
 
 ## How can I resolve the error when provisioning a `ibm_container_alb_cert` resource with secret?
 {: #provision-ibm-container-alb-cert}

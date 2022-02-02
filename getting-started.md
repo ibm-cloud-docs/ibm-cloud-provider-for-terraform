@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-23"
+lastupdated: "2022-02-02"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -13,13 +13,13 @@ subcollection: ibm-cloud-provider-for-terraform
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Getting started with Terraform on {{site.data.keyword.cloud_notm}}
+# Getting started with Terraform on IBM Cloud
 {: #getting-started}
 
-Terraform on {{site.data.keyword.cloud_notm}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} platform, classic infrastructure, and VPC infrastructure resources so that you can rapidly build complex, multi-tier cloud environments, and enable Infrastructure as Code (IaC). 
+Terraform on IBM Cloud enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} platform, classic infrastructure, and VPC infrastructure resources so that you can rapidly build complex, multi-tier cloud environments, and enable Infrastructure as Code (IaC). 
 {: shortdesc}
 
-Looking for a managed Terraform on {{site.data.keyword.cloud_notm}} solution? Try out [{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform scripting language that you are familiar with, but you don't have to worry about setting up and maintaining the Terraform command line and the {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides pre-defined Terraform templates that you can easily install from the {{site.data.keyword.cloud_notm}} catalog.
+Looking for a managed Terraform on IBM Cloud solution? Try out [{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform scripting language that you are familiar with, but you don't have to worry about setting up and maintaining the Terraform command line and the {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides pre-defined Terraform templates that you can easily install from the {{site.data.keyword.cloud_notm}} catalog.
 {: tip}
 
 
@@ -103,13 +103,13 @@ After the Terraform CLI installation is complete, you must set up and configure 
 The following steps show how to set up the provider plug-in for Terraform v0.13.x or higher. If you installed or want to use an earlier version of Terraform, install the provider plug-in by following the steps in [Terraform v0.12.x and earlier](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v12). 
 {: note}
 
-1. In your Terraform installation directory, create a folder for your first Terraform on {{site.data.keyword.cloud_notm}} project and navigate into the folder. This folder is used to store all configuration files and variable definitions. 
+1. In your Terraform installation directory, create a folder for your first Terraform on IBM Cloud project and navigate into the folder. This folder is used to store all configuration files and variable definitions. 
     ```
     mkdir myproject && cd myproject
     ```
     {: pre}
 
-2. Create a `versions.tf` file with the following content. In this file, specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use with the `version` parameter. If no version is specified, Terraform on {{site.data.keyword.cloud_notm}} automatically uses the latest version. For a list of supported versions, see the [{{site.data.keyword.cloud_notm}} Provider plug-in releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
+2. Create a `versions.tf` file with the following content. In this file, specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use with the `version` parameter. If no version is specified, Terraform on IBM Cloud automatically uses the latest version. For a list of supported versions, see the [{{site.data.keyword.cloud_notm}} Provider plug-in releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
 
     ```
     terraform {
@@ -127,7 +127,7 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
     {: tip}
 
 3. [Create or retrieve an {{site.data.keyword.cloud_notm}} API key](/docs/account?topic=account-userapikey#create_user_key). The API key is used to authenticate with the {{site.data.keyword.cloud_notm}} platform and to determine your permissions for {{site.data.keyword.cloud_notm}} services.
-4. Create a variables file that is named `terraform.tfvars` and specify the {{site.data.keyword.cloud_notm}} API key that you retrieved. In addition, you specify the region where you want your {{site.data.keyword.cloud_notm}} resources to be created. If no region is specified, Terraform on {{site.data.keyword.cloud_notm}} automatically creates your resources in the `us-south` region. Variables that are defined in the `terraform.tfvars` file are automatically loaded by Terraform when the {{site.data.keyword.cloud_notm}} Provider plug-in is initialized and you can reference them in every Terraform configuration file that you use. 
+4. Create a variables file that is named `terraform.tfvars` and specify the {{site.data.keyword.cloud_notm}} API key that you retrieved. In addition, you specify the region where you want your {{site.data.keyword.cloud_notm}} resources to be created. If no region is specified, Terraform on IBM Cloud automatically creates your resources in the `us-south` region. Variables that are defined in the `terraform.tfvars` file are automatically loaded by Terraform when the {{site.data.keyword.cloud_notm}} Provider plug-in is initialized and you can reference them in every Terraform configuration file that you use. 
 
     Because the `terraform.tfvars` file contains confidential information, do not push this file to a version control system. This file is meant to be on your local system only. 
     {: important}
@@ -156,7 +156,7 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
 
 ## Step 3: Testing your configuration
 
-Now that you configured the {{site.data.keyword.cloud_notm}} Provider plug-in for your resource you can start using Terraform on {{site.data.keyword.cloud_notm}} to initialize, execute plan and apply commands to provision the resource. For more information, about Terraform commands to test your configuration, see [Provisioning IBM Cloud resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-manage_resources#provision_resources).
+Now that you configured the {{site.data.keyword.cloud_notm}} Provider plug-in for your resource you can start using Terraform on IBM Cloud to initialize, execute plan and apply commands to provision the resource. For more information, about Terraform commands to test your configuration, see [Provisioning IBM Cloud resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-manage_resources#provision_resources).
 {: shortdesc}
 
 For an overview of the Terraform resources and data sources that you can use, see the [{{site.data.keyword.cloud_notm}} Provider plug-in documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external}. 

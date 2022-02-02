@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-12-02"
+  years: 2017, 2022
+lastupdated: "2022-02-02"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for vpc
 
@@ -16,7 +16,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # Provisioning an {{site.data.keyword.cloud_notm}} virtual server for VPC
 {: #sample_vpc_config}
 
-Use {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on {{site.data.keyword.cloud_notm}} to provision a VPC, and set up networking for your VPC, and provision a virtual server for VPC in your {{site.data.keyword.cloud_notm}} account. 
+Use {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on IBM Cloud to provision a VPC, and set up networking for your VPC, and provision a virtual server for VPC in your {{site.data.keyword.cloud_notm}} account. 
 {: shortdesc}
 
 A VPC allows you to create your own space in {{site.data.keyword.cloud_notm}} so that you can run an isolated environment in the public cloud with custom network policies. The example in this topic provisions the following VPC infrastructure resources for you: 
@@ -30,14 +30,14 @@ Keep in mind that a VPC virtual server instance is an {{site.data.keyword.cloud_
 {: important}
 
 Before you begin: 
-    - Install the [latest Terraform on {{site.data.keyword.cloud_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#tf_installation) and the latest [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on {{site.data.keyword.cloud_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
-- [Retrieve your {{site.data.keyword.cloud_notm}} credentials, upload an SSH key, and configure the {{site.data.keyword.cloud_notm}} Provider plug-in forTerraform on {{site.data.keyword.cloud_notm}} provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider). 
+    - Install the [latest Terraform on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#tf_installation) and the latest [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
+- [Retrieve your {{site.data.keyword.cloud_notm}} credentials, upload an SSH key, and configure the {{site.data.keyword.cloud_notm}} Provider plug-in forTerraform on IBM Cloud provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider). 
 
 To create a VPC and a VSI: 
 
 1. Make sure that you have the [required permissions](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls) to create and work with VPC infrastructure. 
 
-2. In the Terraform on {{site.data.keyword.cloud_notm}} directory create a `versions.tf` file to run the Terraform on {{site.data.keyword.cloud_notm}} v0.13. For `versions.tf`, refer to [sample versions tf file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v13).
+2. In the Terraform on IBM Cloud directory create a `versions.tf` file to run the Terraform on IBM Cloud v0.13. For `versions.tf`, refer to [sample versions tf file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v13).
     
     ```terraform
     variable ibmcloud_api_key {}
@@ -55,7 +55,7 @@ To create a VPC and a VSI:
 
     - `export TF_VAR_ibmcloud_api_key="VoeEd1231231234134123413"`
 
-4. In the Terraform on {{site.data.keyword.cloud_notm}} directory create a Terraform on {{site.data.keyword.cloud_notm}} configuration file and name it `vpc.tf`. The configuration file includes the following definition blocks: 
+4. In the Terraform on IBM Cloud directory create a Terraform on IBM Cloud configuration file and name it `vpc.tf`. The configuration file includes the following definition blocks: 
     - **locals**: Use this block to specify variables that you want to use multiple times throughout this configuration file. 
     - **resource**: Every resource block specifies the {{site.data.keyword.cloud_notm}} resource that you want to provision. To find more information about supported configurations for each resource, see the [{{site.data.keyword.cloud_notm}} provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
     - **data**: Use this block to retrieve information for an existing resource in your {{site.data.keyword.cloud_notm}} account. 
@@ -285,11 +285,11 @@ To create a VPC and a VSI:
         </tr>
         <tr>
         <td><code>resource.ibm_is_instance.keys</code></td>
-        <td>Enter the UUID of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account. In this example, you retrieve the UUID from the <code>ibm_is_ssh_key</code> data source of this configuration file. Terraform on {{site.data.keyword.cloud_notm}} uses the name of the SSH key that you define in your data source object to look up information about the SSH key in your {{site.data.keyword.cloud_notm}} account.</td>
+        <td>Enter the UUID of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account. In this example, you retrieve the UUID from the <code>ibm_is_ssh_key</code> data source of this configuration file. Terraform on IBM Cloud uses the name of the SSH key that you define in your data source object to look up information about the SSH key in your {{site.data.keyword.cloud_notm}} account.</td>
         </tr>
         <tr>
         <td><code>resource.ibm_is_instance.image</code></td>
-        <td>Enter the ID of the image that represents the Operating System that you want to install on your VPC virtual server instance. In this example, you retrieve the ID from the <code>ibm_is_image</code> data source of this configuration file. Terraform on {{site.data.keyword.cloud_notm}} uses the name of the image that you define in your data source object to look up information about the image in the {{site.data.keyword.cloud_notm}} infrastructure portfolio. </td>
+        <td>Enter the ID of the image that represents the Operating System that you want to install on your VPC virtual server instance. In this example, you retrieve the ID from the <code>ibm_is_image</code> data source of this configuration file. Terraform on IBM Cloud uses the name of the image that you define in your data source object to look up information about the image in the {{site.data.keyword.cloud_notm}} infrastructure portfolio. </td>
         </tr>
         <tr>
         <td><code>resource.ibm_is_instance.profile</code></td>
@@ -318,7 +318,7 @@ To create a VPC and a VSI:
     </tbody>
     </table>
 
-5. Initialize Terraform on {{site.data.keyword.cloud_notm}}. 
+5. Initialize Terraform on IBM Cloud. 
 
     ```
     terraform init
@@ -351,7 +351,7 @@ To create a VPC and a VSI:
     ```
     {: screen}
 
-6. Generate an Terraform on {{site.data.keyword.cloud_notm}} execution plan. When you execute this command, Terraform on {{site.data.keyword.cloud_notm}} validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in.
+6. Generate an Terraform on IBM Cloud execution plan. When you execute this command, Terraform on IBM Cloud validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in.
 
     Your SSH key name need to be provide during `terraform plan` and `terraform apply` execution.
     {: note}
@@ -671,7 +671,7 @@ To create a VPC and a VSI:
 
 **What's next?**
 
-Explore other [{{site.data.keyword.cloud_notm}} resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-on-ibm-cloud-resources-and-data-sources) that you can provision with Terraform on {{site.data.keyword.cloud_notm}}. 
+Explore other [{{site.data.keyword.cloud_notm}} resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-on-ibm-cloud-resources-and-data-sources) that you can provision with Terraform on IBM Cloud. 
 
 
 

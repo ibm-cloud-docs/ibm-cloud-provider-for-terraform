@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-23"
+lastupdated: "2022-02-02"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -16,7 +16,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # Configuring the {{site.data.keyword.cloud_notm}} Provider plug-in
 {: #provider-reference}
 
-Before you can start working with Terraform on {{site.data.keyword.cloud_notm}}, you must retrieve the credentials and parameters that are required for a Terraform resource or data source, and specify them in the `provider` configuration. This configuration is used by the {{site.data.keyword.cloud_notm}} Provider plug-in to authenticate with the {{site.data.keyword.cloud_notm}} platform and to view, create, update, or delete {{site.data.keyword.cloud_notm}} resources and services. 
+Before you can start working with Terraform on IBM Cloud, you must retrieve the credentials and parameters that are required for a Terraform resource or data source, and specify them in the `provider` configuration. This configuration is used by the {{site.data.keyword.cloud_notm}} Provider plug-in to authenticate with the {{site.data.keyword.cloud_notm}} platform and to view, create, update, or delete {{site.data.keyword.cloud_notm}} resources and services. 
 {: shortdesc}
 
 ## Required input parameters for each resource category
@@ -39,7 +39,7 @@ By default, the {{site.data.keyword.cloud_notm}} Provider plug-in is configured 
 ## Supported input parameters
 {: #provider-parameter-ov}
 
-Review what parameters you can set in the `provider` block of your Terraform on {{site.data.keyword.cloud_notm}} configuration file.
+Review what parameters you can set in the `provider` block of your Terraform on IBM Cloud configuration file.
 {: shortdesc}
 
 |Input parameter|Required / optional|Description|
@@ -159,12 +159,12 @@ You can configure the {{site.data.keyword.cloud_notm}} Provider plug-in by expor
 ## Creating multiple `provider` configurations
 {: #multiple-providers}
 
-You can add multiple `provider` configurations within the same Terraform on {{site.data.keyword.cloud_notm}} configuration file to create your {{site.data.keyword.cloud_notm}} resources with different provider parameters. 
+You can add multiple `provider` configurations within the same Terraform on IBM Cloud configuration file to create your {{site.data.keyword.cloud_notm}} resources with different provider parameters. 
 {: shortdesc}
 
-Creating multiple `provider` configurations is useful when you want to use different input parameters, such as different regions, zones, infrastructure generations, or accounts to create the {{site.data.keyword.cloud_notm}} resources in your Terraform on {{site.data.keyword.cloud_notm}} configuration file. For more information, see [Multiple Provider Instances](https://www.terraform.io/language/providers/configuration){: external}. 
+Creating multiple `provider` configurations is useful when you want to use different input parameters, such as different regions, zones, infrastructure generations, or accounts to create the {{site.data.keyword.cloud_notm}} resources in your Terraform on IBM Cloud configuration file. For more information, see [Multiple Provider Instances](https://www.terraform.io/language/providers/configuration){: external}. 
 
-1. In your Terraform on {{site.data.keyword.cloud_notm}} configuration or `provider.tf` file, create multiple provider blocks with the same provider name. The provider configuration without an alias is considered the default provider configuration and is used for every resource where you do not specify a specific provider configuration. Any more provider configurations must include an alias so that you can reference this provider from your resource definition.
+1. In your Terraform on IBM Cloud configuration or `provider.tf` file, create multiple provider blocks with the same provider name. The provider configuration without an alias is considered the default provider configuration and is used for every resource where you do not specify a specific provider configuration. Any more provider configurations must include an alias so that you can reference this provider from your resource definition.
     ```terraform
     provider "ibm" {
         ibmcloud_api_key    = var.ibmcloud_api_key
@@ -197,11 +197,11 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform can be confi
 Support for using non-default {{site.data.keyword.cloud_notm}} service endpoints is offered as best effort. Individual Terraform resources might require compatibility updates to support the declaration of custom service endpoints. 
 {: important}
 
-The steps that are involved in configuring your {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on {{site.data.keyword.cloud_notm}} to use the private Cloud Service Endpoint (CSE) of an {{site.data.keyword.cloud_notm}} service in  public CSE in [Production environment](https://cloud.ibm.com).
+The steps that are involved in configuring your {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on IBM Cloud to use the private Cloud Service Endpoint (CSE) of an {{site.data.keyword.cloud_notm}} service in  public CSE in [Production environment](https://cloud.ibm.com).
 
-1. Set up the Terraform on {{site.data.keyword.cloud_notm}} engine and an {{site.data.keyword.cloud_notm}} Provider plug-in, in {{site.data.keyword.cloud_notm}} virtual machine by using private VLAN. And provision the enabled Virtual Routing and Forwarding (VRF) account.
+1. Set up the Terraform on IBM Cloud engine and an {{site.data.keyword.cloud_notm}} Provider plug-in, in {{site.data.keyword.cloud_notm}} virtual machine by using private VLAN. And provision the enabled Virtual Routing and Forwarding (VRF) account.
 2. Export the environment variables that are listed in the table to your local machine. For more information, about supported private Cloud Service Endpoints for each {{site.data.keyword.cloud_notm}} service to support in production, see [Use service endpoints](/docs/account?topic=account-vrf-service-endpoint).
-3. Initialize the Terraform on {{site.data.keyword.cloud_notm}} command line to load the environment variables that you set.
+3. Initialize the Terraform on IBM Cloud command line to load the environment variables that you set.
     ```sh
     terraform init
     ```
@@ -243,7 +243,7 @@ The steps that are involved in configuring your {{site.data.keyword.cloud_notm}}
 |UAA|`IBMCLOUD_UAA_ENDPOINT`|N/A|
 |User management|`IBMCLOUD_USER_MANAGEMENT_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/user-management#endpoint-urls) |
 |VPC Gen2|`IBMCLOUD_IS_NG_API_ENDPOINT`|N/A|
-{: caption="Terraform on {{site.data.keyword.cloud_notm}} environment variables" caption-side="top"}
+{: caption="Terraform on IBM Cloud environment variables" caption-side="top"}
 
 
 
