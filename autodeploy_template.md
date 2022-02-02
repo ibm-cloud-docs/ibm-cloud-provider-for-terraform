@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-12-11"
+  years: 2017, 2022
+lastupdated: "2022-02-02"
 
 keywords: terraform provider deployment, automation, schematics workspace, ibm cloud terraform provider deployment, schematics workspace creation, auto deploy 
 
@@ -21,7 +21,7 @@ The deploy to {{site.data.keyword.cloud_notm}} URL is an efficient way for you t
 The following steps show how to create a URL to deploy to Terraform v0.12 template example in {{site.data.keyword.bplong_notm}}.
 {: shortdesc}
 
-1. Create a template example by using Terraform on {{site.data.keyword.cloud_notm}} provider and publish in the public Git repository. To create example, see [Sample template](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples){: external}.
+1. Create a template example by using Terraform on IBM Cloud provider and publish in the public Git repository. To create example, see [Sample template](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples){: external}.
 2. Copy the public Git repository URL, for example, `https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway`.
 3. Use this syntax to auto deploy the Schematics workspace creation in the {{site.data.keyword.cloud_notm}}.
 
@@ -39,7 +39,7 @@ The following steps show how to create a URL to deploy to Terraform v0.12 templa
     ```
     {: pre}
 
-    The URL contains two parameters, first parameter is provided with the workspace name as `ibm-api-gateway` and second parameter is provided with the Terraform on {{site.data.keyword.cloud_notm}} version as `terraform_v0.12`. For more information, about the parameters refer to this example, `https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/<ibm-api-gateway>.&<terraform_version=terraform_v0.12>`. If you do not provide any parameters or ignore one parameter, the `Deploy to {{site.data.keyword.cloud_notm}}` link defaults to the repository's master branch. You can provide the Terraform on {{site.data.keyword.cloud_notm}} version parameter that you are using.
+    The URL contains two parameters, first parameter is provided with the workspace name as `ibm-api-gateway` and second parameter is provided with the Terraform on IBM Cloud version as `terraform_v0.12`. For more information, about the parameters refer to this example, `https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/<ibm-api-gateway>.&<terraform_version=terraform_v0.12>`. If you do not provide any parameters or ignore one parameter, the `Deploy to {{site.data.keyword.cloud_notm}}` link defaults to the repository's master branch. You can provide the Terraform on IBM Cloud version parameter that you are using.
     {: important}
 
 4. You can copy, and paste the example URL in the browser to view the {{site.data.keyword.cloud_notm}} Schematics workspace console with the create button is displayed.
@@ -67,7 +67,7 @@ You can add an image on `Deploy to {{site.data.keyword.cloud_notm}} Schematics` 
 
 ![Deploy to {{site.data.keyword.cloud_notm}}](/images/deploytoschematics.png "Deploy to {{site.data.keyword.cloud_notm}}"){: caption="Deploy to {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
 
-To view about the sample Terraform on {{site.data.keyword.cloud_notm}} template examples, refer [Sample Terraform on {{site.data.keyword.cloud_notm}} templates and deploy to {{site.data.keyword.bplong_notm}}](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway){: external}.
+To view about the sample Terraform on IBM Cloud template examples, refer [Sample Terraform on IBM Cloud templates and deploy to {{site.data.keyword.bplong_notm}}](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway){: external}.
 
 
 

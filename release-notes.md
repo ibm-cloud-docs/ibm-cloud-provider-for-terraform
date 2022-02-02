@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-23"
+lastupdated: "2022-02-02"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -26,6 +26,13 @@ For information about releases that occurred before 12 October 2021, see [What's
 
 Review the release notes for January 2022.
 {: shortdesc}
+
+### 28 January 2022
+{: #28jan2022}
+{: release-note}
+
+Enhancements 
+:   For the latest **Enhancements** on integration of security group with VPE gateway and depreciation notice of policy management in KMS resources, see [Updates and fixes in v1.38.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.38.1) release. 
 
 ### 14 January 2022
 {: #14jan2022}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-12-28"
+  years: 2017, 2022
+lastupdated: "2022-02-02"
 
 keywords: terraform create kubernetes cluster, terraform create openshift cluster, terraform kubernetes cluster, terraform openshift cluster, schematics create kubernetes cluster, schematics create openshift cluster, schematics kubernetes cluster, schematics openshift cluster, terraform iks cluster, terraform roks cluster, schematics iks cluster, schematics roks cluster, terraform multizone cluster, schematics multizone cluster, terraform remove default worker pool, schematics remove default worker pool 
 
@@ -42,7 +42,7 @@ Keep in mind that creating a cluster incurs costs. Make sure to review [What am 
 {: #cluster-tutorial-objectives}
 
 In this tutorial, you will:
-- Learn how to create a single zone {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.openshiftlong_notm}} cluster with Terraform on {{site.data.keyword.cloud_notm}}.
+- Learn how to create a single zone {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.openshiftlong_notm}} cluster with Terraform on IBM Cloud.
 - Convert your single zone cluster into a multizone cluster for higher availability.
 - Add a new worker pool to the cluster.
 - Remove the default worker pool that is automatically set up during cluster creation.
@@ -58,19 +58,19 @@ This tutorial is intended for system administrators that want to learn how to cr
 - Install the [{{site.data.keyword.cloud_notm}} command line and the {{site.data.keyword.containerlong_notm}} command line plug-in](/docs/cli?topic=cli-getting-started).
 - Follow the [instructions](/docs/containers?topic=containers-clusters#cluster_prepare) to make sure that you are assigned the required permissions in Identity and Access Management (IAM) to create clusters and that your account is enabled for Virtual Routing and Forwarding (VRF). 
 
-## Lesson 1: Prepare your Terraform on {{site.data.keyword.cloud_notm}} environment
+## Lesson 1: Prepare your Terraform on IBM Cloud environment
 {: #prepare-tf}
 
-1. [Install the Terraform on {{site.data.keyword.cloud_notm}} command line and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli).
+1. [Install the Terraform on IBM Cloud command line and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli).
 2. If you do not have one, [create an {{site.data.keyword.cloud_notm}} API key](/docs/account?topic=account-userapikey#create_user_key).
-3. Create an Terraform on {{site.data.keyword.cloud_notm}} project directory. The directory will hold all your Terraform on {{site.data.keyword.cloud_notm}} configuration files that you create as part of this tutorial. The directory in this tutorial is named `tf-cluster`, but you can use any name for the directory.
+3. Create an Terraform on IBM Cloud project directory. The directory will hold all your Terraform on IBM Cloud configuration files that you create as part of this tutorial. The directory in this tutorial is named `tf-cluster`, but you can use any name for the directory.
 
     ``` 
     mkdir tf-cluster && cd tf-cluster
     ```
     {: pre}
 
-4. In your project directory, create a `terraform.tfvars` file and add the {{site.data.keyword.cloud_notm}} API key that you created earlier. The `terraform.tfvars` file is an Terraform on {{site.data.keyword.cloud_notm}} variables file that you store on your local machine. When you initialize the Terraform on {{site.data.keyword.cloud_notm}} CLI, all variables that are defined in this file are automatically loaded into Terraform on {{site.data.keyword.cloud_notm}} and you can reference them in every Terraform on {{site.data.keyword.cloud_notm}} configuration file in the same project directory.
+4. In your project directory, create a `terraform.tfvars` file and add the {{site.data.keyword.cloud_notm}} API key that you created earlier. The `terraform.tfvars` file is an Terraform on IBM Cloud variables file that you store on your local machine. When you initialize the Terraform on IBM Cloud CLI, all variables that are defined in this file are automatically loaded into Terraform on IBM Cloud and you can reference them in every Terraform on IBM Cloud configuration file in the same project directory.
 
     ```
     ibmcloud_api_key = "<ibmcloud_api_key>"
@@ -80,7 +80,7 @@ This tutorial is intended for system administrators that want to learn how to cr
     The `terraform.tfvars` file includes credentials to authenticate with the {{site.data.keyword.cloud_notm}} platform. Keep the file on your local machine only and do not share these credentials with an unauthorized person.
     {: important}
 
-5. In the same project directory, create a `provider.tf` file and configure IBM as your Terraform on {{site.data.keyword.cloud_notm}} provider. To authenticate with {{site.data.keyword.cloud_notm}}, you must pass in your {{site.data.keyword.cloud_notm}} API key by using Terraform on {{site.data.keyword.cloud_notm}} interpolation syntax.
+5. In the same project directory, create a `provider.tf` file and configure IBM as your Terraform on IBM Cloud provider. To authenticate with {{site.data.keyword.cloud_notm}}, you must pass in your {{site.data.keyword.cloud_notm}} API key by using Terraform on IBM Cloud interpolation syntax.
 
     ```
     variable "ibmcloud_api_key" {}
@@ -91,16 +91,16 @@ This tutorial is intended for system administrators that want to learn how to cr
     ```
     {: codeblock}
 
-Great! Now that you completed your Terraform on {{site.data.keyword.cloud_notm}} setup, you can go ahead and add the code to create your {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.openshiftlong_notm}} cluster.
+Great! Now that you completed your Terraform on IBM Cloud setup, you can go ahead and add the code to create your {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.openshiftlong_notm}} cluster.
 
 
 ## Lesson 2: Create a single zone cluster
 {: #create-cluster}
 
-Create a classic {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.openshiftlong_notm}} cluster by using Terraform on {{site.data.keyword.cloud_notm}}. 
+Create a classic {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.openshiftlong_notm}} cluster by using Terraform on IBM Cloud. 
 {: shortdesc}
 
-1. Create an Terraform on {{site.data.keyword.cloud_notm}} configuration file for your single zone cluster. The following example creates a single zone cluster in the `dal10` zone with a default worker pool that consists of 3 worker nodes that are connected to a private and public VLAN in `dal10`.
+1. Create an Terraform on IBM Cloud configuration file for your single zone cluster. The following example creates a single zone cluster in the `dal10` zone with a default worker pool that consists of 3 worker nodes that are connected to a private and public VLAN in `dal10`.
 
     **Example for an {{site.data.keyword.containerlong_notm}} cluster**: 
 
@@ -212,14 +212,14 @@ Create a classic {{site.data.keyword.containerlong_notm}} or {{site.data.keyword
     </tbody>
     </table>
 
-2. Initialize the Terraform on {{site.data.keyword.cloud_notm}} CLI.
+2. Initialize the Terraform on IBM Cloud CLI.
 
     ```
     terraform init
     ```
     {: pre}
 
-3. Create an Terraform on {{site.data.keyword.cloud_notm}} execution plan. When you execute this command, Terraform on {{site.data.keyword.cloud_notm}} validates the syntax of your configuration file and resource definitions against the specifications of the {{site.data.keyword.cloud_notm}} Provider plug-in.
+3. Create an Terraform on IBM Cloud execution plan. When you execute this command, Terraform on IBM Cloud validates the syntax of your configuration file and resource definitions against the specifications of the {{site.data.keyword.cloud_notm}} Provider plug-in.
 
     ```
     terraform plan
@@ -229,7 +229,7 @@ Create a classic {{site.data.keyword.containerlong_notm}} or {{site.data.keyword
     Example output:
 
     ```
-    Refreshing Terraform on {{site.data.keyword.cloud_notm}} state in-memory prior to plan...
+    Refreshing Terraform on IBM Cloud state in-memory prior to plan...
     The refreshed state will be used to calculate this plan, but will not be
     persisted to local or remote state storage.
 
@@ -241,7 +241,7 @@ Create a classic {{site.data.keyword.containerlong_notm}} or {{site.data.keyword
     Resource actions are indicated with the following symbols:
         + create
 
-    Terraform on {{site.data.keyword.cloud_notm}} will perform the following actions:
+    Terraform on IBM Cloud will perform the following actions:
 
         # ibm_container_cluster.tfcluster will be created
         + resource "ibm_container_cluster" "tfcluster" {
@@ -257,7 +257,7 @@ Create a classic {{site.data.keyword.containerlong_notm}} or {{site.data.keyword
     ```
     {: screen}
 
-4. Review the Terraform on {{site.data.keyword.cloud_notm}} execution plan to verify that your cluster set up is correct.
+4. Review the Terraform on IBM Cloud execution plan to verify that your cluster set up is correct.
 5. Create your single zone cluster. Note that the creation of your cluster takes a few minutes to complete.
 
     ```
@@ -307,7 +307,7 @@ You have now completed the tutorial! You created your single zone {{site.data.ke
 Add zones to the default worker pool in your cluster that you created in lesson 1. By adding zones, the same number of worker nodes that you created in lesson 2 are spread across these zones converting your single zone cluster into a multizone cluster. 
 {: shortdesc}
 
-1. Open your Terraform on {{site.data.keyword.cloud_notm}} configuration file and add the following content to your configuration. For each zone that you want to add, you must add a separate `ibm_container_worker_pool_zone_attachment` resource.
+1. Open your Terraform on IBM Cloud configuration file and add the following content to your configuration. For each zone that you want to add, you must add a separate `ibm_container_worker_pool_zone_attachment` resource.
 
     ```
     resource "ibm_container_worker_pool_zone_attachment" "dal12" {
@@ -341,7 +341,7 @@ Add zones to the default worker pool in your cluster that you created in lesson 
     <tbody>
     <tr>
     <td><code>resource.ibm_container_worker_pool_zone_attachment.cluster</code></td>
-    <td>Enter the name or ID of the cluster where you want to add zones. The example in this tutorial references the cluster that you created in lesson 3. Terraform on {{site.data.keyword.cloud_notm}} automatically retrieves the ID of the cluster. </td>
+    <td>Enter the name or ID of the cluster where you want to add zones. The example in this tutorial references the cluster that you created in lesson 3. Terraform on IBM Cloud automatically retrieves the ID of the cluster. </td>
     </tr>
         <tr>
     <td><code>resource.ibm_container_worker_pool_zone_attachment.worker_pool</code></td>
@@ -362,7 +362,7 @@ Add zones to the default worker pool in your cluster that you created in lesson 
     </tbody>
     </table>
 
-2. Create an Terraform on {{site.data.keyword.cloud_notm}} execution plan and review the action Terraform on {{site.data.keyword.cloud_notm}} is about to perform.
+2. Create an Terraform on IBM Cloud execution plan and review the action Terraform on IBM Cloud is about to perform.
 
     ```
     terraform plan
@@ -381,7 +381,7 @@ Add zones to the default worker pool in your cluster that you created in lesson 
     Resource actions are indicated with the following symbols:
         + create
 
-    Terraform on {{site.data.keyword.cloud_notm}} will perform the following actions:
+    Terraform on IBM Cloud will perform the following actions:
 
         # ibm_container_worker_pool_zone_attachment.dal12 will be created
         + resource "ibm_container_worker_pool_zone_attachment" "dal12" {
@@ -450,7 +450,7 @@ Create another worker pool in your cluster and add zones to the worker pool to a
 Adding a worker pool only does not create any worker nodes. To create worker nodes, you must use the `ibm_container_worker_pool_zone_attachement` resource to add zones to your worker pool. 
 {: note}
 
-1. Open your existing Terraform on {{site.data.keyword.cloud_notm}} configuration file and add the following content to your configuration. The `ibm_container_worker_pool` resource creates a worker pool in your cluster with a size of two worker nodes per zone that you want. To start creating the worker nodes in each zone, you must add an `ibm_container_worker_pool_zone_attachment` resource for every zone where you want to create worker nodes. 
+1. Open your existing Terraform on IBM Cloud configuration file and add the following content to your configuration. The `ibm_container_worker_pool` resource creates a worker pool in your cluster with a size of two worker nodes per zone that you want. To start creating the worker nodes in each zone, you must add an `ibm_container_worker_pool_zone_attachment` resource for every zone where you want to create worker nodes. 
 
     ```
     resource "ibm_container_worker_pool" "workerpool" {
@@ -511,7 +511,7 @@ Adding a worker pool only does not create any worker nodes. To create worker nod
     </tr>
         <tr>
     <td><code>resource.ibm_container_worker_pool.cluster</code></td>
-    <td>Enter the name or ID of the cluster where you want to create the worker pool. The example in this tutorial references the cluster that you created in lesson 3. Terraform on {{site.data.keyword.cloud_notm}} automatically retrieves the ID of the cluster. </td>
+    <td>Enter the name or ID of the cluster where you want to create the worker pool. The example in this tutorial references the cluster that you created in lesson 3. Terraform on IBM Cloud automatically retrieves the ID of the cluster. </td>
     </tr>
         <tr>
     <td><code>resource.ibm_container_worker_pool.size_per_zone</code></td>
@@ -527,12 +527,12 @@ Adding a worker pool only does not create any worker nodes. To create worker nod
     </tr>   
         <tr>
     <td><code>data.ibm_container_worker_pool_zone_attachment.worker_pool</code></td>
-    <td>Enter the ID of the new worker pool where you want to add the zone. The ID is returned as a concatenated string in the format <code>&lt;cluster_name_id&gt;/&lt;worker_pool_id&gt;</code>. To receive the worker pool ID, you must split the string after the <code>/</code>, put both strings into a list, and use the Terraform on {{site.data.keyword.cloud_notm}} <code>element</code> function to retrieve the worker pool ID. </td>
+    <td>Enter the ID of the new worker pool where you want to add the zone. The ID is returned as a concatenated string in the format <code>&lt;cluster_name_id&gt;/&lt;worker_pool_id&gt;</code>. To receive the worker pool ID, you must split the string after the <code>/</code>, put both strings into a list, and use the Terraform on IBM Cloud <code>element</code> function to retrieve the worker pool ID. </td>
     </tr>
     </tbody>
     </table>
 
-2. Create an Terraform on {{site.data.keyword.cloud_notm}} execution plan and review the actions that Terraform on {{site.data.keyword.cloud_notm}} is about to perform.
+2. Create an Terraform on IBM Cloud execution plan and review the actions that Terraform on IBM Cloud is about to perform.
 
     ```
     terraform plan
@@ -589,9 +589,9 @@ Adding a worker pool only does not create any worker nodes. To create worker nod
 You can remove the default worker pool from your cluster. 
 {: shortdesc}
 
-The default worker pool is automatically created when the cluster is created. Because you do not explicitly specify the default worker pool in your configuration file, you cannot remove this worker pool by removing the `ibm_container_worker_pool` resource from your file. Instead, you use the `local-exec` Terraform on {{site.data.keyword.cloud_notm}} provisioner to run an {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.openshiftlong_notm}} command against your cluster to remove the default worker pool. 
+The default worker pool is automatically created when the cluster is created. Because you do not explicitly specify the default worker pool in your configuration file, you cannot remove this worker pool by removing the `ibm_container_worker_pool` resource from your file. Instead, you use the `local-exec` Terraform on IBM Cloud provisioner to run an {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.openshiftlong_notm}} command against your cluster to remove the default worker pool. 
 
-1. Open your Terraform on {{site.data.keyword.cloud_notm}} configuration and add the following content. To run a command against your cluster, you embed the `local-exec` provisioner in an Terraform on {{site.data.keyword.cloud_notm}} [`null_resource`](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource){: external}. 
+1. Open your Terraform on IBM Cloud configuration and add the following content. To run a command against your cluster, you embed the `local-exec` provisioner in an Terraform on IBM Cloud [`null_resource`](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource){: external}. 
 
     **Example for an {{site.data.keyword.containerlong_notm}} cluster:**
 
@@ -615,14 +615,14 @@ The default worker pool is automatically created when the cluster is created. Be
     ```
     {: codeblock}
 
-2. Initialize the Terraform on {{site.data.keyword.cloud_notm}} CLI. 
+2. Initialize the Terraform on IBM Cloud CLI. 
 
     ```
     terraform init
     ```
     {: pre}
 
-3. Create an Terraform on {{site.data.keyword.cloud_notm}} execution plan and review the actions that Terraform on {{site.data.keyword.cloud_notm}} is about to perform.
+3. Create an Terraform on IBM Cloud execution plan and review the actions that Terraform on IBM Cloud is about to perform.
 
     ```
     terraform plan
@@ -674,7 +674,7 @@ The default worker pool is automatically created when the cluster is created. Be
     ```
     {: pre}
 
-6. Remove the `ibm_container_worker_pool_zone_attachment` resources that you added for the default worker pool from your Terraform on {{site.data.keyword.cloud_notm}} configuration file. This step is important so that these resources are not added to your cluster again when you run the next `terraform apply` command. To remove these resources, you can remove the code from your file or use `#` to comment out each line. The following lines must be removed.
+6. Remove the `ibm_container_worker_pool_zone_attachment` resources that you added for the default worker pool from your Terraform on IBM Cloud configuration file. This step is important so that these resources are not added to your cluster again when you run the next `terraform apply` command. To remove these resources, you can remove the code from your file or use `#` to comment out each line. The following lines must be removed.
 
     ```
     resource "ibm_container_worker_pool_zone_attachment" "dal12" {
@@ -697,7 +697,7 @@ The default worker pool is automatically created when the cluster is created. Be
     ```
     {: codeblock}
 
-7. Update the Terraform on {{site.data.keyword.cloud_notm}} statefile. When you run this command, Terraform on {{site.data.keyword.cloud_notm}} automatically verifies that all of the resources in the statefile exist in {{site.data.keyword.cloud_notm}}. Missing resources are removed from the statefile.
+7. Update the Terraform on IBM Cloud statefile. When you run this command, Terraform on IBM Cloud automatically verifies that all of the resources in the statefile exist in {{site.data.keyword.cloud_notm}}. Missing resources are removed from the statefile.
 
     ```
     terraform refresh

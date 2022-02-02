@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-23"
+lastupdated: "2022-02-02"
 
-keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, Terraform on {{site.data.keyword.cloud_notm}}, provision resources
+keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, Terraform on IBM Cloud, provision resources
 
 subcollection: ibm-cloud-provider-for-terraform
 
@@ -14,7 +14,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 
-# Managing {{site.data.keyword.cloud_notm}} resources with Terraform on {{site.data.keyword.cloud_notm}}
+# Managing {{site.data.keyword.cloud_notm}} resources with Terraform on IBM Cloud
 {: #manage_resources}
 
 Use the Terraform CLI to create, update, and delete platform and infrastructure services in {{site.data.keyword.cloud_notm}}. 
@@ -26,10 +26,10 @@ Use the Terraform CLI to create, update, and delete platform and infrastructure 
 To provision {{site.data.keyword.cloud_notm}} resources, you must describe the state of your resources that you want to achieve in a configuration file.  
 {: shortdesc}
 
-Terraform on {{site.data.keyword.cloud_notm}} configuration files are written by using the [HashiCorp Configuration Language (HCL) ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.terraform.io/language/syntax/configuration) or JSON syntax. When you create your configuration file, you must describe the type of resource that you want and the state that you want to achieve for your resource. Terraform on {{site.data.keyword.cloud_notm}} reads this configuration and creates an execution plan with the steps that were identified to achieve the specified state. If existing resources are found, Terraform on {{site.data.keyword.cloud_notm}} identifies the necessary steps to update them. 
+Terraform on IBM Cloud configuration files are written by using the [HashiCorp Configuration Language (HCL) ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.terraform.io/language/syntax/configuration) or JSON syntax. When you create your configuration file, you must describe the type of resource that you want and the state that you want to achieve for your resource. Terraform on IBM Cloud reads this configuration and creates an execution plan with the steps that were identified to achieve the specified state. If existing resources are found, Terraform on IBM Cloud identifies the necessary steps to update them. 
 
 Before you begin: 
-- [Install the Terraform on {{site.data.keyword.cloud_notm}} command line and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#setup_cli).
+- [Install the Terraform on IBM Cloud command line and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#setup_cli).
 - [Configure the {{site.data.keyword.cloud_notm}} Provider plug-in to use your {{site.data.keyword.cloud_notm}} credentials](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider). 
 
 The following example shows how you can configure a virtual server in {{site.data.keyword.cloud_notm}} by using JSON syntax. A virtual server is an {{site.data.keyword.cloud_notm}} infrastructure resource that incurs costs. Be sure to review [available plans ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/gen1/infrastructure/provision/vs) before you proceed. 
@@ -38,7 +38,7 @@ The following example shows how you can configure a virtual server in {{site.dat
 Looking for other resource types? Find a complete list of supported resource types in the [{{site.data.keyword.cloud_notm}} Provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider). 
 {: tip}
 
-1. Create a configuration file that is named `sample.tf` with the following content. Configuration file names must have the `.tf` extension to be found by Terraform on {{site.data.keyword.cloud_notm}}. Store this file in the same folder that you used to store your {{site.data.keyword.cloud_notm}} credentials.
+1. Create a configuration file that is named `sample.tf` with the following content. Configuration file names must have the `.tf` extension to be found by Terraform on IBM Cloud. Store this file in the same folder that you used to store your {{site.data.keyword.cloud_notm}} credentials.
 
     ```
     resource "ibm_compute_vm_instance" "vm1" {
@@ -57,7 +57,7 @@ Looking for other resource types? Find a complete list of supported resource typ
     ```
     {: codeblock}
 
-2. Initialize Terraform on {{site.data.keyword.cloud_notm}}. 
+2. Initialize Terraform on IBM Cloud. 
 
     ```
     terraform init
@@ -73,15 +73,15 @@ Looking for other resource types? Find a complete list of supported resource typ
 
     To prevent automatic upgrades to new major versions that may contain breaking changes, it is recommended to add version = "..." constraints to the corresponding provider blocks in configuration, with the constraint strings suggested.
 
-    Terraform on {{site.data.keyword.cloud_notm}} has been successfully initialized!
+    Terraform on IBM Cloud has been successfully initialized!
 
-    You may now begin working with Terraform on {{site.data.keyword.cloud_notm}}. Try running "terraform plan" to see any changes that are required for your infrastructure. All Terraform on {{site.data.keyword.cloud_notm}} commands should now work.
+    You may now begin working with Terraform on IBM Cloud. Try running "terraform plan" to see any changes that are required for your infrastructure. All Terraform on IBM Cloud commands should now work.
 
-    If you ever set or change modules or backend configuration for Terraform on {{site.data.keyword.cloud_notm}}, rerun this command to reinitialize your working directory. If you forget, other commands detects it and remind you to do so if necessary.
+    If you ever set or change modules or backend configuration for Terraform on IBM Cloud, rerun this command to reinitialize your working directory. If you forget, other commands detects it and remind you to do so if necessary.
     ```
     {: screen}
 
-3. Generate an Terraform on {{site.data.keyword.cloud_notm}} execution plan. When you execute this command, Terraform on {{site.data.keyword.cloud_notm}} validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in.
+3. Generate an Terraform on IBM Cloud execution plan. When you execute this command, Terraform on IBM Cloud validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in.
 
     ```
     terraform plan
@@ -91,14 +91,14 @@ Looking for other resource types? Find a complete list of supported resource typ
     Example output:
 
     ```
-    Refreshing Terraform on {{site.data.keyword.cloud_notm}} state in-memory prior to plan...
+    Refreshing Terraform on IBM Cloud state in-memory prior to plan...
     The refreshed state be used to calculate this plan, but not be persisted to local or remote state storage.
 
    An execution plan has been generated and is shown here.
    Resource actions are indicated with the following symbols:
      + create
 
-   Terraform on {{site.data.keyword.cloud_notm}} perform the following actions:
+   Terraform on IBM Cloud perform the following actions:
 
      + ibm_compute_vm_instance.vm1
          id:                           <computed>
@@ -143,11 +143,11 @@ Looking for other resource types? Find a complete list of supported resource typ
 
    Plan: 1 to add, 0 to change, 0 to destroy.
    ------------------------------------------------------------------------
-   **Note** You didn't specify an "-out" parameter to save this plan, so Terraform on {{site.data.keyword.cloud_notm}} can't guarantee that exactly these actions be performed if "terraform apply" is subsequently run.
+   **Note** You didn't specify an "-out" parameter to save this plan, so Terraform on IBM Cloud can't guarantee that exactly these actions be performed if "terraform apply" is subsequently run.
     ```
     {: screen}
 
-4. Review the execution plan to verify the steps that were identified by Terraform on {{site.data.keyword.cloud_notm}} to provision the virtual server.  
+4. Review the execution plan to verify the steps that were identified by Terraform on IBM Cloud to provision the virtual server.  
 
 5. Create your infrastructure resources.  
 
@@ -207,7 +207,7 @@ Looking for other resource types? Find a complete list of supported resource typ
 ## Updating IBM Cloud resources
 {: #update_resources}
 
-You can update your resources by changing your Terraform on {{site.data.keyword.cloud_notm}} configuration file and applying these changes in your environment. 
+You can update your resources by changing your Terraform on IBM Cloud configuration file and applying these changes in your environment. 
 {: shortdesc}
 
 1. List your {{site.data.keyword.cloud_notm}} resources. 
@@ -262,7 +262,7 @@ You can update your resources by changing your Terraform on {{site.data.keyword.
 
 2. Open your `sample.tf` configuration file and change a value. For example, you can change the **network_speed** to **100**. To find an overview of parameters that you can change, see the [{{site.data.keyword.cloud_notm}} resource reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
 
-3. Create an Terraform on {{site.data.keyword.cloud_notm}} execution plan.
+3. Create an Terraform on IBM Cloud execution plan.
 
     ```
     terraform plan
@@ -272,7 +272,7 @@ You can update your resources by changing your Terraform on {{site.data.keyword.
     Example output: 
 
     ```
-    Refreshing Terraform on {{site.data.keyword.cloud_notm}} state in-memory prior to plan...
+    Refreshing Terraform on IBM Cloud state in-memory prior to plan...
     The refreshed state be used to calculate this plan, but not be persisted to local or remote state storage.
 
     ibm_compute_vm_instance.vm1: Refreshing state... (ID: 51404681)
@@ -283,7 +283,7 @@ You can update your resources by changing your Terraform on {{site.data.keyword.
    Resource actions are indicated with the following symbols:
     ~ update in-place
 
-    Terraform on {{site.data.keyword.cloud_notm}} performs the following actions:
+    Terraform on IBM Cloud performs the following actions:
 
     ~ ibm_compute_vm_instance.vm1
     network_speed: "10" => "100"
@@ -309,17 +309,17 @@ You can update your resources by changing your Terraform on {{site.data.keyword.
 ## Removing IBM Cloud resources 
 {: #remove_resources}
 
-You can use Terraform on {{site.data.keyword.cloud_notm}} to remove {{site.data.keyword.cloud_notm}} resources if you do not want them anymore. 
+You can use Terraform on IBM Cloud to remove {{site.data.keyword.cloud_notm}} resources if you do not want them anymore. 
 {: shortdesc}
 
-1. Show the summary of steps that Terraform on {{site.data.keyword.cloud_notm}} identified to remove your {{site.data.keyword.cloud_notm}} resources. 
+1. Show the summary of steps that Terraform on IBM Cloud identified to remove your {{site.data.keyword.cloud_notm}} resources. 
 
     ```
     terraform plan -destroy
     ```
     {: pre}
 
-2. Verify the Terraform on {{site.data.keyword.cloud_notm}} execution plan. 
+2. Verify the Terraform on IBM Cloud execution plan. 
 
 3. Remove your {{site.data.keyword.cloud_notm}} resources. 
 
@@ -336,14 +336,14 @@ You can use Terraform on {{site.data.keyword.cloud_notm}} to remove {{site.data.
     Resource actions are indicated with the following symbols:
         - destroy
 
-    Terraform on {{site.data.keyword.cloud_notm}} performs the following actions:
+    Terraform on IBM Cloud performs the following actions:
 
         - ibm_compute_vm_instance.vm1
 
     Plan: 0 to add, 0 to change, 1 to destroy.
 
     Do you really want to destroy?
-        Terraform on {{site.data.keyword.cloud_notm}} destroys all your managed infrastructure, as shown above.
+        Terraform on IBM Cloud destroys all your managed infrastructure, as shown above.
         There is no undo. Only 'yes' is accepted to confirm.
 
         Enter a value: yes

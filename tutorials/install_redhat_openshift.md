@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-11-05"
+  years: 2017, 2022
+lastupdated: "2022-02-02"
 
-keywords: Terraform on {{site.data.keyword.cloud_notm}}, ansible, red hat, openshift, automate, automation, iaas
+keywords: Terraform on IBM Cloud, ansible, red hat, openshift, automate, automation, iaas
 
 subcollection: ibm-cloud-provider-for-terraform
 
@@ -18,13 +18,13 @@ completion-time: 3h
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Using Terraform on {{site.data.keyword.cloud_notm}} to manage your own Red Hat OpenShift Container Platform on IBM Cloud classic infrastructure
+# Using Terraform on IBM Cloud to manage your own Red Hat OpenShift Container Platform on IBM Cloud classic infrastructure
 {: #redhat}
 {: toc-content-type="tutorial"}
 {: toc-services="terraform, openshift"}
 {: toc-completion-time="3h"}
 
-Use this tutorial to create your own highly available Red Hat® OpenShift Container Platform 3.11 environment on IBM® Cloud classic infrastructure by using Terraform on {{site.data.keyword.cloud_notm}}. 
+Use this tutorial to create your own highly available Red Hat® OpenShift Container Platform 3.11 environment on IBM® Cloud classic infrastructure by using Terraform on IBM Cloud. 
 {: shortdesc}
 
 Instead of manually installing Red Hat® OpenShift Container Platform on {{site.data.keyword.cloud_notm}} classic infrastructure, check out [Red Hat OpenShift on {{site.data.keyword.cloud_notm}}](/docs/openshift?topic=openshift-openshift_tutorial). This offering lets you create an {{site.data.keyword.containerlong_notm}} cluster with worker nodes that come installed with the OpenShift Container Platform software. You get all the advantages of managed {{site.data.keyword.containerlong_notm}} for your cluster infrastructure environment, while the OpenShift tooling and catalog that runs on Red Hat Enterprise Linux for your app deployments.
@@ -32,7 +32,7 @@ Instead of manually installing Red Hat® OpenShift Container Platform on {{site.
 
 [Red Hat® OpenShift Container Platform ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.redhat.com/products/container-platform/) is built around a core of containers, with orchestration and management provided by Kubernetes, on a foundation of Atomic Host and Red Hat® Enterprise Linux. OpenShift Origin is the community distribution of Kubernetes that is optimized for continuous app development and multi-tenant deployment. The community project provides developer and operations-centric tools that are based on Kubernetes to enable rapid app development, deployment, scaling, and long-term app lifecycle maintenance. 
 
-This tutorial shows how you can set up OpenShift Container Platform 3.11 on {{site.data.keyword.cloud_notm}} classic infrastructure with Terraform on {{site.data.keyword.cloud_notm}} to try out the high availability capabilities of native Kubernetes and {{site.data.keyword.cloud_notm}}. Review the following image to find an architectural overview of the classic infrastructure components that are needed for the Red Hat OpenShift Container Platform to work properly.
+This tutorial shows how you can set up OpenShift Container Platform 3.11 on {{site.data.keyword.cloud_notm}} classic infrastructure with Terraform on IBM Cloud to try out the high availability capabilities of native Kubernetes and {{site.data.keyword.cloud_notm}}. Review the following image to find an architectural overview of the classic infrastructure components that are needed for the Red Hat OpenShift Container Platform to work properly.
 
 <img src="../images/infra-diagram.png" alt="Infrastructure components for the Red Hat® OpenShift Container Platform on {{site.data.keyword.cloud_notm}}" width="800" style="width: 800px; border-style: none"/>
 
@@ -49,9 +49,9 @@ When you complete this tutorial, the following classic infrastructure components
 
 In this tutorial, you set up Red Hat OpenShift Container Platform version 3.11 on {{site.data.keyword.cloud_notm}} classic infrastructure and deploy your first `nginx` app in the OpenShift cluster. In particular, you will: 
 
-- Set up your environment and all the software that you need for your Red Hat OpenShift Container Platform installation, such as Terraform on {{site.data.keyword.cloud_notm}}, {{site.data.keyword.cloud_notm}} Provider plug-in, and the Terraform on {{site.data.keyword.cloud_notm}} OpenShift project. 
+- Set up your environment and all the software that you need for your Red Hat OpenShift Container Platform installation, such as Terraform on IBM Cloud, {{site.data.keyword.cloud_notm}} Provider plug-in, and the Terraform on IBM Cloud OpenShift project. 
 - Retrieve {{site.data.keyword.cloud_notm}} credentials, configure the {{site.data.keyword.cloud_notm}} Provider plug-in, and define your Red Hat OpenShift Container Platform classic infrastructure components.
-- Provision {{site.data.keyword.cloud_notm}} classic infrastructure for your Red Hat OpenShift Container Platform components by using Terraform on {{site.data.keyword.cloud_notm}}. 
+- Provision {{site.data.keyword.cloud_notm}} classic infrastructure for your Red Hat OpenShift Container Platform components by using Terraform on IBM Cloud. 
 - Install Red Hat OpenShift Container Platform on {{site.data.keyword.cloud_notm}} classic infrastructure. 
 - Deploy the `nginx` app in your OpenShift cluster and expose this app to the public. 
 
@@ -70,14 +70,14 @@ This tutorial is intended for network administrators who want to deploy Red Hat 
 ## Lesson 1: Configure your environment
 {: #configure environment}
 
-In this tutorial, you provision {{site.data.keyword.cloud_notm}} classic infrastructure for the Red Hat OpenShift Container Platform by using Terraform on {{site.data.keyword.cloud_notm}}. Before you can start the classic infrastructure provisioning process, you must ensure that you set up Terraform on {{site.data.keyword.cloud_notm}}, the {{site.data.keyword.cloud_notm}} Provider plug-in, and the Terraform on {{site.data.keyword.cloud_notm}} OpenShift project. 
+In this tutorial, you provision {{site.data.keyword.cloud_notm}} classic infrastructure for the Red Hat OpenShift Container Platform by using Terraform on IBM Cloud. Before you can start the classic infrastructure provisioning process, you must ensure that you set up Terraform on IBM Cloud, the {{site.data.keyword.cloud_notm}} Provider plug-in, and the Terraform on IBM Cloud OpenShift project. 
 {: shortdesc}
 
-1. Create a Docker container that installs Terraform on {{site.data.keyword.cloud_notm}} and the {{site.data.keyword.cloud_notm}} Provider plug-in. To execute Terraform on {{site.data.keyword.cloud_notm}} commands, you must be logged in to the container. 
-    You can also [install Terraform on {{site.data.keyword.cloud_notm}} and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#setup_cli) on your local machine to run Terraform on {{site.data.keyword.cloud_notm}} commands without a Docker container. 
+1. Create a Docker container that installs Terraform on IBM Cloud and the {{site.data.keyword.cloud_notm}} Provider plug-in. To execute Terraform on IBM Cloud commands, you must be logged in to the container. 
+    You can also [install Terraform on IBM Cloud and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#setup_cli) on your local machine to run Terraform on IBM Cloud commands without a Docker container. 
     {: tip}
 
-    1. Download the latest version of the Docker image for Terraform on {{site.data.keyword.cloud_notm}} to your local machine. 
+    1. Download the latest version of the Docker image for Terraform on IBM Cloud to your local machine. 
         ```
         docker pull ibmterraform/terraform-provider-ibm-docker
         ```
@@ -102,13 +102,13 @@ In this tutorial, you provision {{site.data.keyword.cloud_notm}} classic infrast
         ```
         {: screen}
 
-    2. Create a container from your image and log in to your container. When the container is created, Terraform on {{site.data.keyword.cloud_notm}} and the {{site.data.keyword.cloud_notm}} Provider plug-in are automatically installed and you are automatically logged in to the container. The working directory is set to `/go/bin`. 
+    2. Create a container from your image and log in to your container. When the container is created, Terraform on IBM Cloud and the {{site.data.keyword.cloud_notm}} Provider plug-in are automatically installed and you are automatically logged in to the container. The working directory is set to `/go/bin`. 
         ```
         docker run -it ibmterraform/terraform-provider-ibm-docker:latest
         ```
         {: pre}
 
-2. From within your container, set up the IBM Terraform on {{site.data.keyword.cloud_notm}} OpenShift Project.
+2. From within your container, set up the IBM Terraform on IBM Cloud OpenShift Project.
     1. Install OpenSSH inside the container that you created in the previous step. 
         ```
         apk add --no-cache openssh
@@ -130,7 +130,7 @@ In this tutorial, you provision {{site.data.keyword.cloud_notm}} classic infrast
         ```
         {: screen}
 
-    2. Download the Terraform on {{site.data.keyword.cloud_notm}} configuration files to deploy the Red Hat OpenShift Container Platform. 
+    2. Download the Terraform on IBM Cloud configuration files to deploy the Red Hat OpenShift Container Platform. 
         ```
         git clone https://github.com/IBM-Cloud/terraform-ibm-openshift.git
         ```
@@ -203,7 +203,7 @@ In this tutorial, you provision {{site.data.keyword.cloud_notm}} classic infrast
     ```
     {: pre}
 
-5. Open the Terraform on {{site.data.keyword.cloud_notm}} `variables.tf` file and review the default values that are set in the file. The `variables.tf` file specifies all information that you want to pass on to Terraform on {{site.data.keyword.cloud_notm}} during the provisioning of your infrastructure resources. You can change the default values, but do not add sensitive data, such as your infrastructure user name and API key, to this file. The `variables.tf` file is usually stored under version control and shared across users. 
+5. Open the Terraform on IBM Cloud `variables.tf` file and review the default values that are set in the file. The `variables.tf` file specifies all information that you want to pass on to Terraform on IBM Cloud during the provisioning of your infrastructure resources. You can change the default values, but do not add sensitive data, such as your infrastructure user name and API key, to this file. The `variables.tf` file is usually stored under version control and shared across users. 
     ```
     vi variables.tf
     ```
@@ -322,14 +322,14 @@ In this tutorial, you provision {{site.data.keyword.cloud_notm}} classic infrast
 ## Lesson 2: Provision the IBM Cloud classic infrastructure for your Red Hat OpenShift cluster 
 {: #provision_infrastructure}
 
-Now that you prepared your environment, you can go ahead and provision {{site.data.keyword.cloud_notm}} classic infrastructure resources by using Terraform on {{site.data.keyword.cloud_notm}}. 
+Now that you prepared your environment, you can go ahead and provision {{site.data.keyword.cloud_notm}} classic infrastructure resources by using Terraform on IBM Cloud. 
 {: shortdesc}
 
 Before you begin, make sure that you are logged in to the container that you created in the previous lesson. 
 
 1. [Retrieve your {{site.data.keyword.cloud_notm}} classic infrastructure user name and API key](/docs/account?topic=account-classic_keys).
 
-2. From the OpenShift installation directory `/go/bin/terraform-ibm-openshift` inside your container, create the {{site.data.keyword.cloud_notm}} classic infrastructure components for your Red Hat OpenShift cluster. When you run the command, Terraform on {{site.data.keyword.cloud_notm}} evaluates what components must be provisioned and presents an execution plan. You must confirm that you want to provision the classic infrastructure resources by entering **yes**. During the provisioning, Terraform on {{site.data.keyword.cloud_notm}} creates another execution plan that you must approve to continue. When prompted, enter the classic infrastructure user name and API key that you retrieved earlier. The provisioning of your resources takes about 40 minutes.  
+2. From the OpenShift installation directory `/go/bin/terraform-ibm-openshift` inside your container, create the {{site.data.keyword.cloud_notm}} classic infrastructure components for your Red Hat OpenShift cluster. When you run the command, Terraform on IBM Cloud evaluates what components must be provisioned and presents an execution plan. You must confirm that you want to provision the classic infrastructure resources by entering **yes**. During the provisioning, Terraform on IBM Cloud creates another execution plan that you must approve to continue. When prompted, enter the classic infrastructure user name and API key that you retrieved earlier. The provisioning of your resources takes about 40 minutes.  
     ```
     make rhn_username=<rhn_username> rhn_password=<rhn_password> infrastructure
     ```
