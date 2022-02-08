@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-02-08"
 
 keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, Terraform on IBM Cloud, provision resources
 
@@ -17,7 +17,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # Migrating and version controlling
 {: #migration-versioncontrol}
 
-IBM continually updates the Terraform on IBM Cloud provider to give you higher levels of performance and being up-to-date. Some of the instances aren't able to be upgraded, so they must be closed and you must migrate your resources with the right version.
+IBM continually updates the Terraform on IBM Cloud provider to give you higher levels of performance and being up-to-date. Some instances aren't able to be upgraded, so they must be closed and you must migrate your resources with the right version.
 
 View the versions that are associated in the Terraform on IBM Cloud and the {{site.data.keyword.cloud_notm}} provider plug-in.
 {: shortdesc}
@@ -32,7 +32,7 @@ Complete the following steps to upgrade your configuration files:
 
 1. Follow the [instructions](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli) to install existing Terraform on IBM Cloud and the latest version of the Terraform on IBM Cloud.
 2. Copy your existing Terraform on IBM Cloud version configuration files into your Terraform on IBM Cloud working directory. 
-    ```
+    ```sh
     mv <tf_config_file_path> $HOME/terraform
     ```
     {: codeblock}
@@ -40,19 +40,19 @@ Complete the following steps to upgrade your configuration files:
 3. Use the Terraform on IBM Cloud upgrade command to automatically apply the new syntax to your Terraform on IBM Cloud configuration files. 
 
     **Syntax**
-    ```
+    ```sh
     terraform <0.xx>upgrade
     ```
     {: codeblock}
 
     **Example to upgrade Terraform on IBM Cloud v0.12 to Terraform on IBM Cloud v0.13**
-    ```
+    ```sh
     terraform 0.13upgrade
     ```
     {: codeblock}
 
     Example output: 
-    ```
+    ```text
     This command rewrites the configuration files in the given directory to
     use the new syntax features from Terraform on IBM Cloud v0.12, and identify
     any constructs that may need to be adjusted for correct operation with
@@ -82,7 +82,7 @@ Complete the following steps to upgrade your configuration files:
 
     **Example versions.tf:**
 
-    ```
+    ```terraform
     terraform {
         required_providers {
         ibm = {
@@ -107,7 +107,7 @@ Complete the following steps to upgrade your configuration files:
 
     **Example versions.tf:**
 
-    ```
+    ```terraform
     terraform {
         required_providers {
         ibm = {

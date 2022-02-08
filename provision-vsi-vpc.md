@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-02-08"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for vpc
 
@@ -37,7 +37,7 @@ To create a VPC and a VSI:
 
 1. Make sure that you have the [required permissions](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls) to create and work with VPC infrastructure. 
 
-2. In the Terraform on IBM Cloud directory create a `versions.tf` file to run the Terraform on IBM Cloud v0.13. For `versions.tf`, refer to [sample versions tf file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v13).
+2. In the Terraform on IBM Cloud directory create a `versions.tf` file to run the Terraform on IBM Cloud v0.13. For `versions.tf`, refer to [sample Terraform version file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v13).
     
     ```terraform
     variable ibmcloud_api_key {}
@@ -63,7 +63,7 @@ To create a VPC and a VSI:
 
     **Example configuration file:** 
 
-    ```
+    ```terraform
      variable "ssh_key" {
     }
 
@@ -320,14 +320,14 @@ To create a VPC and a VSI:
 
 5. Initialize Terraform on IBM Cloud. 
 
-    ```
+    ```sh
     terraform init
     ```
     {: pre}
 
     **Example output:**
 
-    ```
+    ```text
     2021/06/22 16:47:27 [WARN] Log levels other than TRACE are currently unreliable, and are supported only for backward compatibility.
     Use TF_LOG=TRACE to see Terraform's internal logs.
     ----
@@ -356,14 +356,14 @@ To create a VPC and a VSI:
     Your SSH key name need to be provide during `terraform plan` and `terraform apply` execution.
     {: note}
 
-    ```
+    ```sh
     terraform plan
     ```
     {: pre}
 
     **Example output:** 
 
-    ```
+    ```text
     var.ssh_key
         Enter a value: <Provide your SSH key name>
     2021/06/22 16:48:53 [INFO] backend/local: plan operation completed
@@ -529,14 +529,14 @@ To create a VPC and a VSI:
 
 7. Create the VPC infrastructure resources. Confirm the creation by entering `yes` when prompted.
 
-    ```
+    ```sh
     terraform apply
     ```
     {: pre}
 
     **Example output:**
 
-    ```
+    ```text
     An execution plan has been generated and is shown below.
     Resource actions are indicated with the following symbols:
         + create
@@ -640,14 +640,14 @@ To create a VPC and a VSI:
 
 8. Log in to your VPC VSI by using the `ssh` command that is listed at the end of your command line output of the previous step.
 
-    ```
+    ```sh
     ssh root@52.118.150.55 
     ```
     {: pre}
 
     **Example output:**
 
-    ```
+    ```text
     The authenticity of host '52.116.134.139 (52.116.134.139)' can't be established.
     ECDSA key fingerprint is SHA256:ZZRZY07mx3ccmnS5+Tip7eDDVSL7jlunPbANcrCeEYE.
     Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
@@ -664,7 +664,7 @@ To create a VPC and a VSI:
 
 10. Optional: If you don't want to work with your VPC infrastructure resources anymore, remove them.
     
-    ```
+    ```sh
     terraform destroy
     ```
     {: pre}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-02-08"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for classic infrastructure
 
@@ -23,7 +23,7 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
 
 1. Create a configuration file that is named `classic-vsi.tf` with the following content. Store this file in the folder that you created earlier.
  
-    ```
+    ```terraform
     resource "ibm_compute_vm_instance" "vm1" {
     hostname             = "vm1"
     domain               = "example.com"
@@ -106,14 +106,14 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
 
 2. Initialize Terraform on IBM Cloud.
 
-    ```
+    ```sh
     terraform init
     ```
     {: pre}
    
     **Example output:**
 
-    ```
+    ```text
     Initializing provider plugins...
 
     The following providers do not have any version constraints in configuration, so the latest version was installed.
@@ -130,14 +130,14 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
 
 3. Generate an Terraform on IBM Cloud execution plan. When you execute this command, Terraform on IBM Cloud validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in. 
   
-    ```
+    ```sh
     terraform plan
     ```
     {: pre}
 
     **Example output:**
 
-    ```
+    ```text
     Refreshing Terraform on IBM Cloud state in-memory prior to plan...
     The refreshed state be used to calculate this plan, but not be persisted to local or remote state storage.
 
@@ -198,14 +198,14 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
 
 5. Create your classic infrastructure virtual server. Confirm the creation by entering `yes` when prompted. 
 
-    ```
+    ```sh
     terraform apply
     ```
     {: pre} 
 
     **Example output:**
 
-    ```
+    ```text
       Creating...
       block_storage_ids.#:        "" => "<computed>"
       cores:                      "" => "1"
@@ -251,14 +251,14 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
 
 6. List the classic infrastructure virtual server that is provisioned. 
    
-    ```
+    ```sh
     terraform show
     ```
     {: pre}
 
     **Example output:**
 
-    ```
+    ```text
         ibm_compute_vm_instance.vm1:
         id = 62364997
         block_storage_ids.# = 0
@@ -296,7 +296,7 @@ Keep in mind that a virtual server is an {{site.data.keyword.cloud_notm}} classi
 
 8. Optional: Remove your classic infrastructure virtual server. 
 
-    ```
+    ```sh
     terraform destroy
     ```
     {: pre}

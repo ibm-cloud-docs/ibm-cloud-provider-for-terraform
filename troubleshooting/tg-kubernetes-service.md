@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-23"
+lastupdated: "2022-02-08"
 
 keywords: question about kubernetes provider, troubleshooting guide, kubernetes service troubleshooting
 
@@ -21,12 +21,12 @@ content-type: troubleshoot
 During the cluster upgrade from {{site.data.keyword.containershort}} older version to new version. The Terraform apply fails with the `TCP connection error message`.
 {: tsSymptoms}
 
-```
+```text
 Error: Get "http://localhost/api/v1/": dial tcp [::1]:80: connect: connection refused
 ```
 
 Or
-```
+```text
 Error: {{site.data.keyword.containershort_notm}} cluster unreachable: invalid configuration: no configuration has been provided
 ```
 

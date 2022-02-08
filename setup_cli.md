@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-02-08"
 
 keywords: install Terraform on IBM Cloud cli, set up Terraform on IBM Cloud cli, ibm cloud provider plugin, Terraform on IBM Cloud
 
@@ -27,7 +27,7 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform currently su
 {: note}
 
 1. Create a `terraform` folder on your local machine, and navigate to your `terraform` folder. 
-    ```
+    ```sh
     mkdir terraform && cd terraform
     ```
     {: pre}
@@ -35,19 +35,19 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform currently su
 2. Download the [Terraform version](https://releases.hashicorp.com/terraform){: external} that you want. 
 3. Extract the Terraform `zip` file and copy the files to your `terraform` directory. 
 4. Set the environment `PATH` variable to your Terraform files.
-    ```
+    ```sh
     export PATH=$PATH:$HOME/terraform
     ```
     {: pre}
 
 5. Verify that the installation is successful by using a `terraform` command.
-    ```
+    ```sh
     terraform
     ```
     {: pre}
 
     Example output:
-    ```
+    ```text
     Usage: terraform [-version] [-help] <command> [args]
 
     The available commands for execution are listed below.
@@ -111,7 +111,7 @@ To run your Terraform configuration files with Terraform version 0.13.x or highe
 Create a `versions.tf` file with the following content and store it in your Git repository or the folder where Terraform is set up. In this file, specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use with the `version` parameter. 
 
 **Syntax**:
-```
+```terraform
 terraform {
     required_providers {
         ibm = {
@@ -124,7 +124,7 @@ terraform {
 {: codeblock}
 
 **Example**:
-```
+```terraform
 terraform {
     required_providers {
         ibm = {
@@ -158,25 +158,25 @@ Complete the following steps to install the {{site.data.keyword.cloud_notm}} pro
 1. Download the latest version of the [{{site.data.keyword.cloud_notm}} provider plug-in](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
 2. Extract the `zip` file and retrieve the files.
 3. Create a hidden `plugins` folder on your local machine.
-    ```
+    ```sh
     mkdir -p $HOME/.terraform.d/plugins
     ```
     {: pre}
 
 4. Move the {{site.data.keyword.cloud_notm}} Provider plug-in into your `plugins` folder.
-    ```
+    ```sh
     mv $HOME/<DOWNLOAD_FOLDER_NAME>/terraform-provider-ibm* $HOME/.terraform.d/plugins
     ```
     {: pre}
 
 5. Navigate to your `plugins` folder and verify that the installation is complete.
-    ```
+    ```sh
     cd $HOME/.terraform.d/plugins && ./terraform-provider-ibm_*
     ```
     {: pre}
 
     Example output: 
-    ```
+    ```text
     2021/04/16 17:00:39 IBM Cloud Provider version 1.23.1  
     This binary is a plugin. These are not meant to be executed directly.
     Please execute the program that consumes these plugins, which will load any plugins automatically

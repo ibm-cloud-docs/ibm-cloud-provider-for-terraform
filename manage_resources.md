@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-02-08"
 
 keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, Terraform on IBM Cloud, provision resources
 
@@ -40,7 +40,7 @@ Looking for other resource types? Find a complete list of supported resource typ
 
 1. Create a configuration file that is named `sample.tf` with the following content. Configuration file names must have the `.tf` extension to be found by Terraform on IBM Cloud. Store this file in the same folder that you used to store your {{site.data.keyword.cloud_notm}} credentials.
 
-    ```
+    ```terraform
     resource "ibm_compute_vm_instance" "vm1" {
     hostname = "vm1"
     domain = "example.com"
@@ -59,14 +59,14 @@ Looking for other resource types? Find a complete list of supported resource typ
 
 2. Initialize Terraform on IBM Cloud. 
 
-    ```
+    ```sh
     terraform init
     ```
     {: pre}
 
     Example output:
 
-    ```
+    ```text
     Initializing provider plugins...
 
     The following providers do not have any version constraints in configuration, so the latest version was installed.
@@ -83,14 +83,14 @@ Looking for other resource types? Find a complete list of supported resource typ
 
 3. Generate an Terraform on IBM Cloud execution plan. When you execute this command, Terraform on IBM Cloud validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in.
 
-    ```
+    ```sh
     terraform plan
     ```
     {: pre}
 
     Example output:
 
-    ```
+    ```text
     Refreshing Terraform on IBM Cloud state in-memory prior to plan...
     The refreshed state be used to calculate this plan, but not be persisted to local or remote state storage.
 
@@ -151,7 +151,7 @@ Looking for other resource types? Find a complete list of supported resource typ
 
 5. Create your infrastructure resources.  
 
-    ```
+    ```sh
     terraform apply
     ```
     {: pre} 
@@ -159,7 +159,7 @@ Looking for other resource types? Find a complete list of supported resource typ
     Confirm the creation of infrastructure resources by entering **yes** when prompted. 
 
     Example output: 
-    ```
+    ```text
     Creating...
       block_storage_ids.#:        "" => "<computed>"
       cores:                      "" => "1"
@@ -212,14 +212,14 @@ You can update your resources by changing your Terraform on IBM Cloud configurat
 
 1. List your {{site.data.keyword.cloud_notm}} resources. 
 
-    ```
+    ```sh
     terraform show
     ```
     {: pre}
 
     Example output:
 
-    ```
+    ```text
     ibm_compute_vm_instance.vm1:
         id = 62364997
         block_storage_ids.# = 0
@@ -264,14 +264,14 @@ You can update your resources by changing your Terraform on IBM Cloud configurat
 
 3. Create an Terraform on IBM Cloud execution plan.
 
-    ```
+    ```sh
     terraform plan
     ```
     {: pre}
 
     Example output: 
 
-    ```
+    ```text
     Refreshing Terraform on IBM Cloud state in-memory prior to plan...
     The refreshed state be used to calculate this plan, but not be persisted to local or remote state storage.
 
@@ -294,14 +294,14 @@ You can update your resources by changing your Terraform on IBM Cloud configurat
 
 4. Apply the changes to your {{site.data.keyword.cloud_notm}} resources.
 
-    ```
+    ```sh
     terraform apply
     ```
     {: pre}
 
 5. Verify that your {{site.data.keyword.cloud_notm}} resources are updated.
 
-    ```
+    ```sh
     terraform show
     ```
     {: pre}
@@ -314,7 +314,7 @@ You can use Terraform on IBM Cloud to remove {{site.data.keyword.cloud_notm}} re
 
 1. Show the summary of steps that Terraform on IBM Cloud identified to remove your {{site.data.keyword.cloud_notm}} resources. 
 
-    ```
+    ```sh
     terraform plan -destroy
     ```
     {: pre}
@@ -323,14 +323,14 @@ You can use Terraform on IBM Cloud to remove {{site.data.keyword.cloud_notm}} re
 
 3. Remove your {{site.data.keyword.cloud_notm}} resources. 
 
-    ```
+    ```sh
     terraform destroy
     ```
     {: pre}
 
     Example output:
 
-    ```
+    ```text
     ibm_compute_vm_instance.vm1: Refreshing state... (ID: 60948867)
     An execution plan has been generated and is shown here.
     Resource actions are indicated with the following symbols:
@@ -357,7 +357,7 @@ You can use Terraform on IBM Cloud to remove {{site.data.keyword.cloud_notm}} re
 
 4. Verify that your {{site.data.keyword.cloud_notm}} resources are removed.
 
-    ```
+    ```sh
     terraform show
     ```
     {: pre}

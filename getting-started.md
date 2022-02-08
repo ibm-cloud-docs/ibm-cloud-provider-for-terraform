@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-02-08"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -32,7 +32,7 @@ Use these steps to install the Terraform CLI.
 {: shortdesc}
 
 1. Create a `terraform` folder on your local machine, and navigate to your `terraform` folder. 
-    ```
+    ```sh
     mkdir terraform && cd terraform
     ```
     {: pre}
@@ -40,19 +40,19 @@ Use these steps to install the Terraform CLI.
 2. Download the [Terraform version](https://releases.hashicorp.com/terraform){: external} that you want. The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform currently supports Terraform version 0.12.x, 0.13.x, 0.14.x, 0.15.x, and 1.0 only. Make sure to select a supported Terraform version. 
 3. Extract the Terraform `zip` file and copy the files to your `terraform` directory. 
 4. Set the environment `PATH` variable to your Terraform files.
-    ```
+    ```sh
     export PATH=$PATH:$HOME/terraform
     ```
     {: pre}
 
 5. Verify that the installation is successful by using a `terraform` command.
-    ```
+    ```sh
     terraform
     ```
     {: pre}
 
     Example output:
-    ```
+    ```text
     Usage: terraform [-version] [-help] <command> [args]
 
     The available commands for execution are listed below.
@@ -104,14 +104,14 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
 {: note}
 
 1. In your Terraform installation directory, create a folder for your first Terraform on IBM Cloud project and navigate into the folder. This folder is used to store all configuration files and variable definitions. 
-    ```
+    ```sh
     mkdir myproject && cd myproject
     ```
     {: pre}
 
 2. Create a `versions.tf` file with the following content. In this file, specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use with the `version` parameter. If no version is specified, Terraform on IBM Cloud automatically uses the latest version. For a list of supported versions, see the [{{site.data.keyword.cloud_notm}} Provider plug-in releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
 
-    ```
+    ```terraform
     terraform {
         required_providers {
             ibm = {
@@ -132,7 +132,7 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
     Because the `terraform.tfvars` file contains confidential information, do not push this file to a version control system. This file is meant to be on your local system only. 
     {: important}
 
-    ```
+    ```terraform
     ibmcloud_api_key = "<ibmcloud_api_key>"
     region = "<region>"
     ```
@@ -140,7 +140,7 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
 
 5. Create a provider configuration file that is named `provider.tf`. Use this file to configure the {{site.data.keyword.cloud_notm}} Provider plug-in with the {{site.data.keyword.cloud_notm}} API key from your `terraform.tfvars` file. The plug-in uses this key to access {{site.data.keyword.cloud_notm}} and to work with your {{site.data.keyword.cloud_notm}} service. To access a variable value from the `terraform.tfvars` file, you must first declare the variable in the `provider.tf` file and then reference the variable by using the `var.<variable_name>` syntax . 
 
-    ```
+    ```terraform
     variable "ibmcloud_api_key" {}
     variable "region" {}
 
