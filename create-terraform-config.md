@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-02-08"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -33,7 +33,7 @@ Specify the cloud provider that you want to use in the `provider` block of your 
 {: shortdesc}
 
 **Do I need to provide the {{site.data.keyword.cloud_notm}} API key?** </br>
-The {{site.data.keyword.cloud_notm}} API key is essential to authenticate with the {{site.data.keyword.cloud_notm}} platform, receive the IAM token and IAM refresh token that {{site.data.keyword.bpshort}} requires to work with the resource's API, and to determine the permissions that you were granted. When you use native Terraform on IBM Cloud, you must provide the {{site.data.keyword.cloud_notm}} API key at all times. In {{site.data.keyword.bpshort}}, the API key is automatically retrieved for all IAM-enabled resources, including {{site.data.keyword.containerlong_notm}} clusters, and VPC infrastructure resources. However, the API key is not retrieved for Cloud Foundry and classic infrastructure resources and must be provided in the `provider` block. 
+The {{site.data.keyword.cloud_notm}} API key is essential to authenticate with the {{site.data.keyword.cloud_notm}} platform, receive the IAM token and IAM refresh token that {{site.data.keyword.bpshort}} requires to work with the resource's API, and to determine the permissions that you were granted. When you use native Terraform on IBM Cloud, you must always provide the {{site.data.keyword.cloud_notm}} API key. In {{site.data.keyword.bpshort}}, the API key is automatically retrieved for all IAM-enabled resources, including {{site.data.keyword.containerlong_notm}} clusters, and VPC infrastructure resources. However, the API key is not retrieved for Cloud Foundry and classic infrastructure resources and must be provided in the `provider` block. 
 
 **Can I specify a different {{site.data.keyword.cloud_notm}} API key in the `provider` block?** </br>
 If you want to use a different API key than the one that is associated with your {{site.data.keyword.cloud_notm}} account, you can provide this API key in the `provider` block. If an API key is configured in the `provider` block, this key takes precedence over the API key that is stored in {{site.data.keyword.cloud_notm}}.  
@@ -52,7 +52,7 @@ To configure the `provider` block:
 3. Create a `provider.tf` file or add the following code to your Terraform on IBM Cloud configuration file. For a full list of supported parameters that you can set in the `provider` block, see the [{{site.data.keyword.cloud_notm}} provider reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-parameter-ov).
 
     Example for VPC infrastructure resources: 
-    ```
+    ```terraform
     provider "ibm" {
         generation = 2
         region = "<region_name>"
@@ -61,7 +61,7 @@ To configure the `provider` block:
     {: codeblock}
 
     Example for classic infrastructure resources: 
-    ```
+    ```terraform
     variable "iaas_classic_username" {
         type = "string"
     }
@@ -78,14 +78,14 @@ To configure the `provider` block:
     {: codeblock}
 
     Example for all {{site.data.keyword.containerlong_notm}} resources:
-    ```
+    ```terraform
     provider "ibm" {
     }
     ```
     {: codeblock}
 
     Example for all other resources:
-    ```
+    ```terraform
     provider "ibm" {
         region = "<region_name>"
     }
@@ -101,7 +101,7 @@ Use `resource` blocks to define the {{site.data.keyword.cloud_notm}} resources t
 To support a multi-cloud approach, Terraform on IBM Cloud works with multiple cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, every supported cloud provider must provide a command line plug-in for Terraform on IBM Cloud that users can use to work with the resources. To find an overview of the resources that you can provision in {{site.data.keyword.cloud_notm}}, see the [Terraform on IBM Cloud reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-on-ibm-cloud-resources-and-data-sources). 
 
 Example infrastructure code for provisioning a VPC: 
-```
+```terraform
 resource ibm_is_vpc "vpc" {
     name = "myvpc"
 }
@@ -121,7 +121,7 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 - **Resources**: To create a resource, you use the resource definition in the {{site.data.keyword.cloud_notm}} Provider plug-in reference. A resource definition includes the syntax for configuring your {{site.data.keyword.cloud_notm}} resources and an **Attributes reference** that shows the properties that you can reference as input parameters in other resource blocks. For example, when you create a VPC, the ID of the VPC is made available after the creation. You can use the ID as an input parameter when you create a subnet for your VPC. Use this option if you combine multiple resources in one Terraform on IBM Cloud configuration file.  </br>
 
     Example infrastructure code: 
-    ```
+    ```terraform
     resource ibm_is_vpc "vpc" {
         name = "myvpc"
     }
@@ -137,7 +137,7 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 
     **Example infrastructure code**
 
-    ```
+    ```terraform
     data ibm_is_image "ubuntu" {
         name = "ubuntu-18.04-amd64"
     }
@@ -162,7 +162,7 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 ## Using `variable` blocks to customize resources
 {: #configure-variables}
 
-You can use `variable` blocks to templatize your infrastructure code. For example, instead of creating multiple Terraform on IBM Cloud configuration files for a resource that you want to deploy in multiple data centers, simply reuse the same configuration and use an input variable to define the data center. 
+You can use `variable` blocks to create templates for your infrastructure code. For example, instead of creating multiple Terraform on IBM Cloud configuration files for a resource that you want to deploy in multiple data centers, simply reuse the same configuration and use an input variable to define the data center. 
 {: shortdesc}
 
 **Where do I store my variable declarations?** </br>
@@ -176,7 +176,7 @@ Yes. If you define input variables in your Terraform on IBM Cloud configuration 
 
 Example variable declaration without a Default value is 
 
-```
+```terraform
 variable "datacenter" {
     type        = "string"
     description = "The data center that you want to deploy your Kubernetes cluster in."
@@ -185,7 +185,7 @@ variable "datacenter" {
 {: codeblock}
 
 Example variable declaration with a Default value is 
-```
+```terraform
 variable "datacenter" {
     type        = "string"
     description = "The data center that you want to deploy your Kubernetes cluster in."
@@ -201,7 +201,7 @@ You can reference the value of the variable in other blocks of your Terraform on
 
 Example for referencing a `datacenter` variable: 
 
-```
+```terraform
 resource ibm_container_cluster "test_cluster" {
     name         = "test"
     datacenter   = var.datacenter

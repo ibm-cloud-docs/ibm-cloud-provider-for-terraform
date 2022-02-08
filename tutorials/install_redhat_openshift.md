@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-02-08"
 
 keywords: Terraform on IBM Cloud, ansible, red hat, openshift, automate, automation, iaas
 
@@ -78,13 +78,13 @@ In this tutorial, you provision {{site.data.keyword.cloud_notm}} classic infrast
     {: tip}
 
     1. Download the latest version of the Docker image for Terraform on IBM Cloud to your local machine. 
-        ```
+        ```sh
         docker pull ibmterraform/terraform-provider-ibm-docker
         ```
         {: pre}
 
         Example output: 
-        ```
+        ```text
         Using default tag: latest
         latest: Pulling from ibmterraform/terraform-provider-ibm-docker
         911c6d0c7995: Pull complete 
@@ -103,20 +103,20 @@ In this tutorial, you provision {{site.data.keyword.cloud_notm}} classic infrast
         {: screen}
 
     2. Create a container from your image and log in to your container. When the container is created, Terraform on IBM Cloud and the {{site.data.keyword.cloud_notm}} Provider plug-in are automatically installed and you are automatically logged in to the container. The working directory is set to `/go/bin`. 
-        ```
+        ```sh
         docker run -it ibmterraform/terraform-provider-ibm-docker:latest
         ```
         {: pre}
 
 2. From within your container, set up the IBM Terraform on IBM Cloud OpenShift Project.
     1. Install OpenSSH inside the container that you created in the previous step. 
-        ```
+        ```sh
         apk add --no-cache openssh
         ```
         {: pre}
 
         Example output: 
-        ```
+        ```text
         fetch http://dl-cdn.alpinelinux.org/alpine/v3.7/main/x86_64/APKINDEX.tar.gz
         fetch http://dl-cdn.alpinelinux.org/alpine/v3.7/community/x86_64/APKINDEX.tar.gz
         (1/6) Installing openssh-keygen (7.5_p1-r9)
@@ -131,13 +131,13 @@ In this tutorial, you provision {{site.data.keyword.cloud_notm}} classic infrast
         {: screen}
 
     2. Download the Terraform on IBM Cloud configuration files to deploy the Red Hat OpenShift Container Platform. 
-        ```
+        ```sh
         git clone https://github.com/IBM-Cloud/terraform-ibm-openshift.git
         ```
         {: pre}
 
         Example output: 
-        ```
+        ```text
         Cloning into 'terraform-ibm-openshift'...
         remote: Enumerating objects: 375, done.
         remote: Total 375 (delta 0), reused 0 (delta 0), pack-reused 375
@@ -147,21 +147,21 @@ In this tutorial, you provision {{site.data.keyword.cloud_notm}} classic infrast
         {: screen}
 
     3. Navigate into the installation directory. 
-        ```
+        ```sh
         cd terraform-ibm-openshift
         ```
         {: pre}
 
 3. Generate an SSH key. The SSH key is used to access {{site.data.keyword.cloud_notm}} classic infrastructure resources during provisioning.  
     1. Create an SSH key inside the container that you created earlier. Enter the email address that you want to associate with your SSH key. Make sure to accept the default file name, file location, and missing passphrase by pressing **Enter**.
-        ```
+        ```sh
         ssh-keygen -t rsa -b 4096 -C "<email_address>"
         ```
         {: pre}
 
         Example output: 
-        ```
-        Generating public/private rsa key pair.
+        ```text
+        Generating public/private RSA key pair.
         Enter file in which to save the key (/root/.ssh/id_rsa): 
         Created directory '/root/.ssh'.
         Enter passphrase (empty for no passphrase): 
@@ -186,25 +186,25 @@ In this tutorial, you provision {{site.data.keyword.cloud_notm}} classic infrast
         {: screen}
 
     2. Verify that the SSH key is created successfully. The creation is successful if you can see one **id_rsa** and one **id_rsa.pub** file. 
-        ```
+        ```sh
         cd /root/.ssh && ls
         ```
         {: pre}
 
         Example output: 
-        ```
+        ```text
         id_rsa      id_rsa.pub
         ```
         {: screen}
 
 4. Navigate back to your OpenShift installation directory. 
-    ```
+    ```sh
     cd /go/bin/terraform-ibm-openshift
     ```
     {: pre}
 
 5. Open the Terraform on IBM Cloud `variables.tf` file and review the default values that are set in the file. The `variables.tf` file specifies all information that you want to pass on to Terraform on IBM Cloud during the provisioning of your infrastructure resources. You can change the default values, but do not add sensitive data, such as your infrastructure user name and API key, to this file. The `variables.tf` file is usually stored under version control and shared across users. 
-    ```
+    ```sh
     vi variables.tf
     ```
     {: pre}
@@ -330,13 +330,13 @@ Before you begin, make sure that you are logged in to the container that you cre
 1. [Retrieve your {{site.data.keyword.cloud_notm}} classic infrastructure user name and API key](/docs/account?topic=account-classic_keys).
 
 2. From the OpenShift installation directory `/go/bin/terraform-ibm-openshift` inside your container, create the {{site.data.keyword.cloud_notm}} classic infrastructure components for your Red Hat OpenShift cluster. When you run the command, Terraform on IBM Cloud evaluates what components must be provisioned and presents an execution plan. You must confirm that you want to provision the classic infrastructure resources by entering **yes**. During the provisioning, Terraform on IBM Cloud creates another execution plan that you must approve to continue. When prompted, enter the classic infrastructure user name and API key that you retrieved earlier. The provisioning of your resources takes about 40 minutes.  
-    ```
+    ```sh
     make rhn_username=<rhn_username> rhn_password=<rhn_password> infrastructure
     ```
     {: pre}
 
     Example output: 
-    ```
+    ```text
     ...
 
     Apply complete! Resources: 63 added, 0 changed, 0 destroyed.
@@ -532,7 +532,7 @@ Before you begin, make sure that you are logged in to the container that you cre
     </table>
 
 3. Validate your deployment.  
-    ```
+    ```sh
     terraform show
     ```
     {: pre}
@@ -554,7 +554,7 @@ For more information, about Red Hat OpenShift Container Platform components, see
 
 1. Retrieve the pool ID for your Red Hat account. 
     1. From the OpenShift installation directory `/go/bin/terraform-ibm-openshift` inside your container, log in to your Bastion node by using a secure shell. 
-        ```
+        ```sh
         ssh root@$(terraform output bastion_public_ip)
         ```
         {: pre}
@@ -562,39 +562,39 @@ For more information, about Red Hat OpenShift Container Platform components, see
     2. Enter **yes** to all security questions to proceed. You are now logged in to your Bastion node. 
 
         Example output: 
-        ```
+        ```text
         root@bastion-ose-1a2b3c1234 #
         ```
         {: screen}
 
     3. Remove any previous registration of the Bastion node. 
-        ```
+        ```sh
         subscription-manager unregister
         ```
         {: pre}
 
     4. Import the `gpg` public key for Red Hat by using the Red Hat Package Manager. 
-        ```
+        ```sh
         rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
         ```
         {: pre}
 
     5. Register your Bastion node with the Red Hat Network. Enter the user name and password for your Red Hat account. 
-        ```
+        ```sh
         subscription-manager register --serverurl subscription.rhsm.redhat.com:443/subscription --baseurl cdn.redhat.com --username <redhat_username> --password <redhat_password>
 
         ```
         {: pre}
 
     6. Find your OpenShift **Pool ID**. For example, the pool ID in the following example is `1a2345bcd6789098765abcde43219bc3`.
-        ```
+        ```sh
         subscription-manager list --available --matches '*OpenShift Container Platform*'
 
         ```
         {: pre}
 
         Example output: 
-        ```
+        ```text
         +-------------------------------------------+
         Available Subscriptions
         +-------------------------------------------+
@@ -603,7 +603,7 @@ For more information, about Red Hat OpenShift Container Platform components, see
         Red Hat Software Collections (for RHEL Server for IBM Power LE)
         Red Hat OpenShift Enterprise Infrastructure
         Red Hat JBoss Core Services
-        Red Hat Enterprise Linux Fast Datapath
+        Red Hat Enterprise Linux Fast Data path
         Red Hat OpenShift Container Platform for Power
         JBoss Enterprise Application Platform
                                     :
@@ -637,13 +637,13 @@ For more information, about Red Hat OpenShift Container Platform components, see
         {: screen}
 
     7. Exit the secure shell to return to your OpenShift installation directory inside your container. 
-        ```
+        ```sh
         exit
         ```
         {: pre}
 
         Example output: 
-        ```
+        ```text
         logout
         Connection to 169.47.XXX.XX closed.
         /go/bin/terraform-ibm-openshift #
@@ -651,7 +651,7 @@ For more information, about Red Hat OpenShift Container Platform components, see
         {: screen}
 
 2. Finish setting up and registering the nodes with the Red Hat Network. 
-      ```
+      ```sh
       make rhn_username=<rhn_username> rhn_password=<rhn_password> pool_id=<pool_ID> rhn_register
       ```
      {: pre}
@@ -713,7 +713,7 @@ For more information, about Red Hat OpenShift Container Platform components, see
     </table>
 
 2. Prepare the master, infrastructure, and application nodes for the OpenShift installation.   
-    ```
+    ```sh
     make openshift
     ```
     {: pre}
@@ -722,7 +722,7 @@ For more information, about Red Hat OpenShift Container Platform components, see
     {: tip}
 
     Example output: 
-    ```
+    ```text
     Outputs:
 
     app_hostname = [
@@ -763,26 +763,26 @@ For more information, about Red Hat OpenShift Container Platform components, see
     {: tip}
 
 4. Exit your container. 
-    ```
+    ```sh
     exit
     ```
     {: pre}
 
 4. On your local machine, add the master node as a host to your local `/etc/hosts` file. 
     1. Open the `/etc/hosts` file. 
-        ```
+        ```sh
         sudo vi /etc/hosts
         ```
         {: pre}
 
     2. Insert the following line to the end of your file. 
-        ```
+        ```sh
         <master_public_ip> <master_hostname>
         ```
         {: codeblock}
 
 5. Open the OpenShift console.
-    ```
+    ```sh
     open https://$(terraform output master_public_ip):8443/console
     ```
     {: pre}
@@ -800,57 +800,57 @@ With your OpenShift cluster up and running, you can now deploy your first app in
 {: shortdesc}
 
 1. Log in to the master node. 
-    ```
+    ```sh
     ssh -t -A root@$(terraform output master_public_ip)
     ```
     {: pre}
 
 2. Log in to the OpenShift client. Enter **admin** as your user name and **test123** as your password, or use any other user name and password that you set up earlier. 
-    ```
+    ```sh
     oc login https://$(terraform output master_public_ip):8443
     ```
     {: pre} 
 
 3. Create a project directory where you can store all your app files and configurations. 
-    ```
+    ```sh
     oc new-project <project_name>
     ```
     {: pre}
 
 4. Deploy the app. In this example, `nginx` is deployed to your cluster.
-    ```
+    ```sh
     oc new-app --name=nginx --docker-image=bitnami/nginx
     ```
     {: pre}
 
 5. Create a service for your `nginx` app to expose your app inside the cluster. 
-    ```
+    ```sh
     oc expose svc/nginx
     ```
     {: pre}
 
 6. Edit your service and change the service type to **NodePort**. 
-    ```
+    ```sh
     oc edit svc/nginx
     ```
     {: pre}
 
 7. Access your `nginx` app from the internet.  
     1. Get the public route that was assigned to your `nginx` app. You can find the route in the **HOST/PORT** column of your command line output. 
-        ```
+        ```sh
         oc get routes
         ```
         {: pre} 
 
         Example output: 
-        ```
+        ```text
         NAME            HOST/PORT                                      PATH      SERVICES        PORT      TERMINATION   WILDCARD
         nginx-example   nginx-example-new.apps.158.123.12.123.xip.io             nginx-example   all                   None
         ```
         {: screen}
 
     2. In your preferred web browser, open your app by using the public route. 
-        ```
+        ```text
         http://nginx-example-new.apps.158.176.91.200.xip.io
         ```
         {: codeblock}

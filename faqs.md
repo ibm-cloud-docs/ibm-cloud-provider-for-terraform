@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-02"
+lastupdated: "2022-02-08"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -26,7 +26,7 @@ The Terraform on IBM Cloud `ibm_compute_vm_instance` resource includes optional 
 
 1. Install the [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli). 
 
-2. List supported configuration options for virtual servers in {{site.data.keyword.Bluemix_notm}}. The listed options include available data centers, machine flavors, cpu, memory, operating systems, local disk and SAN disk sizes, and network interface controllers (nic). {{site.data.keyword.Bluemix_notm}} offers multiple virtual server offerings that each come with a specific configuration. The configuration of an offering is optimized for a specific workload need, such as high performance, or real-time analytics. For more information, see [Public Virtual Servers](/docs/virtual-servers?topic=virtual-servers-about-public-virtual-servers). 
+2. List supported configuration options for virtual servers in {{site.data.keyword.Bluemix_notm}}. The listed options include available data centers, machine flavors, CPU, memory, operating systems, local disk and SAN disk sizes, and network interface controllers (NIC). {{site.data.keyword.Bluemix_notm}} offers multiple virtual server offerings that each come with a specific configuration. The configuration of an offering is optimized for a specific workload need, such as high performance, or real-time analytics. For more information, see [Public Virtual Servers](/docs/virtual-servers?topic=virtual-servers-about-public-virtual-servers). 
     ```sh
     ibmcloud sl vs options
     ```
@@ -209,7 +209,7 @@ You can configure only one region for a resource list to a group policy, as show
     ```
     
 
-## How can I create access group polices and add memo as an attribute to the policy?
+## How can I create access group policies and add memo as an attribute to the policy?
 {: #alias-attributes-gpolicy}
 {: faq}
 {: support}
@@ -369,7 +369,7 @@ Currently, the {{site.data.keyword.bplong_notm}} service team is working to enab
 {: faq}
 {: support}
 
-The sample code block allows to create the resources of the same type in a sequential order. For more information, about creating a trigger that listens to an Event Streams instance block, see [eventstreams_trigger](/docs/openwhisk?topic=openwhisk-pkg_event_streams#eventstreams_trigger).
+The sample code block allows to create the resources of the same type in a sequential order. For more information, about creating a trigger that listens to an Event Streams instance block, see [Event Streams_trigger](/docs/openwhisk?topic=openwhisk-pkg_event_streams#eventstreams_trigger).
 
     ```terraform
     resource "ibm_function_trigger" "trigger" {
