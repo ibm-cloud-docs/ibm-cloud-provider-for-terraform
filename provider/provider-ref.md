@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-21"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -224,12 +224,10 @@ The steps that are involved in configuring your {{site.data.keyword.cloud_notm}}
 |COS-S3 | `IBMCLOUD_COS_ENDPOINT`|N/A|
 |Direct Link | `IBMCLOUD_DL_PROVIDER_API_ENDPOINT`|N/A|
 |Enterprise Management | `IBMCLOUD_ENTERPRISE_API_ENDPOINT`|N/A|
-|Global search |`IBMCLOUD_GT_API_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/search#endpoint-url) |
 |Global tagging |`IBMCLOUD_GT_API_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/tagging#endpoint-url) |
-|GHoST / Tagging|`IBMCLOUD_GT_API_ENDPOINT`|`https://tags.global-search-tagging.test.cloud.ibm.com`|
 |HPCS|`IBMCLOUD_HPCS_API_ENDPOINT`|N/A|
 |IAM|`IBMCLOUD_IAM_API_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/iam-access-groups#endpoint-urls) |
-|`IAMPAP`|`IBMCLOUD_IAMPAP_API_ENDPOINT`|N/A|
+|IAMPAP|`IBMCLOUD_IAMPAP_API_ENDPOINT`|N/A|
 |ICD|`IBMCLOUD_ICD_API_ENDPOINT`|[Docs](/docs/account?topic=account-vrf-service-endpoint)|
 |Key protect|`IBMCLOUD_KP_API_ENDPOINT`|[Docs](/docs/key-protect?topic=key-protect-private-endpoints)|
 |Private DNS|`IBMCLOUD_PRIVATE_DNS_API_ENDPOINT`| N/A|
