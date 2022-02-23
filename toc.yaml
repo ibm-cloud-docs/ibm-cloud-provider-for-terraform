@@ -3,7 +3,7 @@ toc:
     subcollection: ibm-cloud-provider-for-terraform
     version: 2
     category: dev_ops
-    audience: compute
+    audience: service
     href: /docs/ibm-cloud-provider-for-terraform
     console-page: /schematics/overview
     product-page: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
@@ -26,7 +26,6 @@ toc:
       - tutorials/clusters.md
       - tutorials/install_redhat_openshift.md
       - provision-vsi-vpc.md
-      links:
       - link:
           label: Deploying a 3-Tier web app in a VPC
           href: https://github.com/jonghall/ibmcloud-terraform-vpc
