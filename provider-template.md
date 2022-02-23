@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-02-23"
 
 keywords: terraform templates, templates, sample terraform templates, private catalog
 
@@ -32,7 +32,7 @@ Following solution templates allows you to provision resource by using {{site.da
 - [Classic infrastructure service](#classic-infra-templates)
 - [Account management and IAM](#account-mgt-iam)
 
-## Onboard to {{site.data.keyword.cloud_notm}} private catalog
+### Onboard to {{site.data.keyword.cloud_notm}} private catalog
 {: #provider-onboard}
 
 You can click the **Onboard to {{site.data.keyword.cloud_notm}} catalog** button to automatically load the following sample Terraform templates into your catalog. To run the automation, click the **Create** button in **Create an action** page in the console.
