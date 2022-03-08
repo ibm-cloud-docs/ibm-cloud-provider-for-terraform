@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-03-08"
 
 keywords: install Terraform on IBM Cloud cli, set up Terraform on IBM Cloud cli, ibm cloud provider plugin, Terraform on IBM Cloud
 
@@ -102,7 +102,10 @@ After the Terraform CLI installation is complete, you must set up the {{site.dat
 
 The setup of the {{site.data.keyword.cloud_notm}} Provider plug-in varies depending on the Terraform version that you want to use. After you complete the set up, you must [configure the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference). 
 
-### Terraform v0.13.x and higher
+To upgrade Terraform template to the latest version such Terraform v1.0 and higher, refer to [Upgrading the Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version).
+{: important}
+
+### Terraform v0.13.x 
 {: #install-provider-v13}
 
 To run your Terraform configuration files with Terraform version 0.13.x or higher, installation of the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform is not required. Instead, you create a `versions.tf` file and specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use. For a list of supported versions, see the [{{site.data.keyword.cloud_notm}} Provider plug-in releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
@@ -147,7 +150,6 @@ Terraform supports `version` constraints to specify the range of acceptable vers
 
 If you are using Terraform on IBM Cloud modules, you must add a `versions.tf` file to all the module folders. You can refer the Terraform provider block from the [provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest){: external}.
 {: note}
-
 
 ### Terraform v0.12.x and earlier
 {: #install-provider-v12}
