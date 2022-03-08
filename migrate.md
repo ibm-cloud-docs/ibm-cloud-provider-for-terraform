@@ -21,7 +21,7 @@ IBM continually updates the Terraform on IBM Cloud provider to give you higher l
 View the versions that are associated in the Terraform and the {{site.data.keyword.cloud_notm}} provider plug-in.
 {: shortdesc}
 
-## Upgrading the Terraform} version
+## Upgrading the Terraform version
 {: #tf-0.1x-migration}
 
 You can upgrade your Terraform version from `Terraform v0.12 to Terraform v0.13`. With the release of Terraform v0.13, the syntax for configuration files have changed.
@@ -137,8 +137,8 @@ This completes your Terraform version upgrade.
 
 The versions that are associated with the resources and data sources are:
 
-- IBM Cloud Provider plug-in for Terraform. For more information, see [Provider version releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
-- Terraform. For more information, see [Terraform version](https://releases.hashicorp.com/terraform/){: external}.
+- **IBM Cloud Provider plug-in for Terraform.** For more information, see [Provider version releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
+- **Terraform.** For more information, see [Terraform version](https://releases.hashicorp.com/terraform/){: external}.
 
 With the release of Terraform version 0.12, the syntax for configuration files changed. If you want to run your infrastructure code by using Terraform version 0.12, you must first refer to refer to [Upgrading the Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version).
 {: important}

@@ -15,7 +15,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # Installing the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in
 {: #setup_cli}
 
-Install the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform to start automating infrastructure deployments and cloud resource management with Terraform. 
+Install the Terraform CLI and invoke the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform to start automating infrastructure deployments and cloud resource management with Terraform. 
 {: shortdesc}
 
 ## Installing the Terraform CLI
@@ -133,17 +133,17 @@ terraform {
     required_providers {
         ibm = {
             source = "IBM-Cloud/ibm"
-            version = ">= 1.38.1."
+            version = ">= 1.38.1"
         }
     }
 }
 ```
 {: codeblock} 
 
-### Specifying Terraform required version using operators
+### Specifying Terraform version constraints
 {: #terraform-operators}
 
-Terraform supports `version` constraints to specify the range of acceptable versions to initialize. The version syntax format is specified as `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. You can modify the version constraint operator in this example by using combination of the [supported operators in Terraform](https://www.terraform.io/language/expressions/version-constraints#version-constraint-syntax){: external}. The following operators are shown as an example: 
+Terraform supports `version` constraints to specify the range of acceptable versions to initialize. The version syntax format is specified as `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. You can modify the version constraint operator in this example by using combination of the [supported operators in Terraform](https://www.terraform.io/language/expressions/version-constraints#version-constraint-syntax){: external}. Some of the constraints are shown as an example. 
 
 |Operator|Description|
 |-------|---------|
@@ -153,7 +153,7 @@ Terraform supports `version` constraints to specify the range of acceptable vers
 | `~>` | Allows only the rightmost version component to increment. For example, `~> 1.30.0` allows new patch releases within a specific minor patch releases like `1.30.1, 1.30.2, 1.30.3`, but not `1.31.0` release.|
 {: caption="Terraform template version operators"}
 
-If you are using Terraform on IBM Cloud modules, you must add a `versions.tf` file in all the module folders. You can refer the Terraform provider block from the [provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest){: external}.
+If you are using Terraform on IBM Cloud modules, you must add a `versions.tf` file in all the module folders. You can refer the Terraform provider block from the [{{site.data.keyword.cloud_notm}} Provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest){: external}.
 {: note}
 
 ### Upgrading Terraform v0.12.x and earlier
@@ -190,4 +190,4 @@ Complete the following steps to install the {{site.data.keyword.cloud_notm}} pro
     ```
     {: screen}
 
-6. [Configure the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference). To view the list of supported versions, see the [{{site.data.keyword.cloud_notm}} Provider plug-in releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
+6. [Configure the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference). To view the list of supported {{site.data.keyword.cloud_notm}} Provider versions, refer to [{{site.data.keyword.cloud_notm}} Provider plug-in releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.

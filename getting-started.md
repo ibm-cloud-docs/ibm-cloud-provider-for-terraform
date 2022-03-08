@@ -37,7 +37,7 @@ Use these steps to install the Terraform CLI.
     ```
     {: pre}
 
-2. Download the [Terraform version](https://releases.hashicorp.com/terraform){: external} that you want. The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform currently supports Terraform stable version 1.1.x. For more information, about the supported Terraform version, see [list of Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version).
+2. Download the [Terraform version](https://releases.hashicorp.com/terraform){: external} that you want. The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform currently supports Terraform stable version 1.1.x. For more information, about the supported Terraform version, see [list of Terraform version](/docs/schematics?topic=schematics-migrating-terraform-version).
 3. Extract the Terraform `zip` file and copy the files to your `terraform` directory. 
 4. Set the environment `PATH` variable to your terraform folder.
     ```sh
@@ -111,7 +111,7 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
     ```
     {: pre}
 
-2. Create a `versions.tf` file with the following content. In this file, specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use with the `version` parameter for {{site.data.keyword.cloud_notm}} Provider plugin, and `required_version` to specify the Terraform template version. If no `version` parameter is specified, {{site.data.keyword.cloud_notm}} Provider automatically uses the latest version of the provider. For a list of supported versions, see the [{{site.data.keyword.cloud_notm}} Provider plug-in releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
+2. Create a `versions.tf` file with the following content. In this file, specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use with the `version` parameter for {{site.data.keyword.cloud_notm}} Provider plugin, and `required_version` to specify the Terraform template version. If no `version` parameter is specified, {{site.data.keyword.cloud_notm}} Provider automatically uses the latest version of the provider. For a list of supported {{site.data.keyword.cloud_notm}} Provider versions, see [{{site.data.keyword.cloud_notm}} Provider plug-in releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
 
     **Example with `version` parameter in `versions.tf` file**
     ```terraform
@@ -198,4 +198,4 @@ Now that you configured the {{site.data.keyword.cloud_notm}} Provider plug-in fo
 
 To view sample Terraform templates with the complete Terraform configuration files to test, refer to [Sample templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates).
 
-For an overview of the Terraform resources and data sources that you can use, see the [Index of Terraform on {{site.data.keyword.cloud_notm}} resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-on-ibm-cloud-resources-and-data-sources){: external}. 
+For an overview of the Terraform resources and data sources that you can use, see the [Index of Terraform on {{site.data.keyword.cloud_notm}} resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-on-ibm-cloud-resources-and-data-sources). 
