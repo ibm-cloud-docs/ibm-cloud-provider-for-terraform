@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-21"
+lastupdated: "2022-03-09"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -39,7 +39,7 @@ By default, the {{site.data.keyword.cloud_notm}} Provider plug-in is configured 
 ## Supported input parameters
 {: #provider-parameter-ov}
 
-Review what parameters you can set in the `provider` block of your Terraform on IBM Cloud configuration file.
+Review what parameters you can set in the `provider` block of your Terraform on IBM Cloud configuration file. For more information, about the {{site.data.keyword.cloud_notm}} provider input parameters, see [{{site.data.keyword.cloud_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs#argument-reference){: external}.
 {: shortdesc}
 
 |Input parameter|Required / optional|Description|
@@ -56,9 +56,8 @@ Review what parameters you can set in the `provider` block of your Terraform on 
 |`region`|Optional|The {{site.data.keyword.cloud_notm}} region where you want to create your resources. If this value is not specified, `us-south` is used by default. You can specify the region in the `provider` block or retrieve the value from the `IBMCLOUD_REGION` or `IC_REGION` environment variables. If both environment variables are specified, `IC_REGION` takes precedence.|
 |`resource_group`|Optional|The ID of the resource group that you want to use for your {{site.data.keyword.cloud_notm}} resources. To retrieve the ID, run `ibmcloud resource groups`. You can specify the resource group in the `provider` block or retrieve the value from the `IC_RESOURCE_GROUP` or `IBMCLOUD_RESOURCE_GROUP` environment variables. If both environment variables are defined, `IC_RESOURCE_GROUP` takes precedence. |
 |`zone`|Required for Power Systems|The zone of an {{site.data.keyword.cloud_notm}} region where you want to create Power System resources. This value is required if you want to work with resources in a multizone-capable region. For example, if you want to work in the `eu-de` region, you must enter `eu-de-1` or `eu-de-2`. You can specify the zone in the `provider` block or retrieve the value from the `IC_ZONE` or `IBMCLOUD_ZONE` environment variables. If both environment variables are specified, `IC_ZONE` takes precedence.|
-|`visibility` |Optional| The visibility to {{site.data.keyword.cloud_notm}} endpoint. Allowable values are`public`, `private`, `public-and-private`. Default value is `public`. <ul><li>If visibility is set to <strong>public</strong>, use the regional public endpoint or global public endpoint. The regional public endpoints has higher precedence.</li><li>If visibility is set to <strong>private</strong>, use the regional private endpoint or global private endpoint. The regional private endpoint is given higher precedence. To use the private endpoint from an {{site.data.keyword.cloud_notm}} resource (such as, a classic VM instance), one must have VRF-enabled account. If the {{site.data.keyword.cloud_notm}} service does not support private endpoint, the Terraform resource or datasource will log an error.</li><li>If visibility is set to <strong>public-and-private</strong>, use regional private endpoints or global private endpoint. If service does not support regional or global private endpoints it uses the regional or global public endpoint.</li><li>This can be retrieved from the <code>IC_VISIBILITY</code> higher precedence or <code>IBMCLOUD_VISIBILITY</code> environment variable.</li></ul>|
+|`visibility` |Optional| The visibility to {{site.data.keyword.cloud_notm}} endpoint. Allowable values are`public`, `private`, `public-and-private`. Default value is `public`. <ul><li>If visibility is set to **public**, use the regional public endpoint or global public endpoint. The regional public endpoints has higher precedence.</li><li>If visibility is set to **private**, use the regional private endpoint or global private endpoint. The regional private endpoint is given higher precedence. To use the private endpoint from an {{site.data.keyword.cloud_notm}} resource (such as, a classic VM instance), one must have VRF-enabled account. If the {{site.data.keyword.cloud_notm}} service does not support private endpoint, the Terraform resource or datasource will log an error.</li><li>If visibility is set to **public-and-private**, use regional private endpoints or global private endpoint. If service does not support regional or global private endpoints it uses the regional or global public endpoint.</li><li>This can be retrieved from the `IC_VISIBILITY` higher precedence or `IBMCLOUD_VISIBILITY` environment variable.</li></ul>|
 {: caption="Supported input parameters in configuration file" caption-side="top"}
-
 
 ## Specifying the `provider` block
 {: #provider-example}
