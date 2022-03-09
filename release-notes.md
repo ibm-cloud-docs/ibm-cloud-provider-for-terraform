@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-08"
+lastupdated: "2022-03-09"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -22,7 +22,7 @@ For information about releases that occurred before 12 October 2021, see [What's
 {: note}
 
 ## March 2022
-{: #release-feb-2022}
+{: #release-mar-2022}
 
 Review the release notes for March 2022.
 {: shortdesc}
