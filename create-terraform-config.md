@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-03-09"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -19,10 +19,9 @@ subcollection: ibm-cloud-provider-for-terraform
 Learn how to create Terraform on IBM Cloud templates that are well-structured, reusable, and comprehensive.
 {: shortdesc}
 
-An Terraform on IBM Cloud template consists of one or more Terraform on IBM Cloud configuration files that declare the state that you want to achieve for your {{site.data.keyword.cloud_notm}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](#configure-provider) and [add resources to your Terraform on IBM Cloud configuration file](#configure-resources). Optionally, you can use [input variables](#configure-variables) to customize your resources.
+An Terraform on IBM Cloud template consists of one or more Terraform on IBM Cloud configuration files that declare the state that you want to achieve for your {{site.data.keyword.cloud_notm}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](#configure-provider) and [add resources to your resource block](#configure-resources). Optionally, you can use [input variables](#configure-variables) to customize your resources.
 
 You can write your Terraform on IBM Cloud configuration file by using HashiCorp Configuration Language (HCL) or JSON syntax. For more information, see [Configuration language](https://www.terraform.io/language){: external}.  
-
 
 ## Configuring the `provider` block 
 {: #configure-provider}
@@ -47,11 +46,11 @@ To configure the `provider` block:
     - **Option 1: Create a separate `provider.tf` file.** The information in this file is loaded by Terraform on IBM Cloud and {{site.data.keyword.bplong_notm}}, and applied to all Terraform on IBM Cloud configuration files that exist in the same GitHub directory or tape archive file (`.tar`). This approach is useful if you split out your infrastructure code across multiple files. 
     - **Option 2: Add a `provider` block to your Terraform on IBM Cloud configuration file.** You might choose this option if you prefer to specify the provider alongside with your variables and resources in one Terraform on IBM Cloud configuration file. 
 
-2. Review what [credentials and information you must provide in the `provider` block to work with your resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters). {{site.data.keyword.bpshort}} automatically retrieves your {{site.data.keyword.cloud_notm}} API key so that you do not need to specify this information in your `provider` block. 
+2. Review what credentials and information you must provide in the `provider` block to work with your resources in [required input parameters for each resource category](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters). {{site.data.keyword.bpshort}} automatically retrieves your {{site.data.keyword.cloud_notm}} API key so that you do not need to specify this information in your `provider` block. 
 
 3. Create a `provider.tf` file or add the following code to your Terraform on IBM Cloud configuration file. For a full list of supported parameters that you can set in the `provider` block, see the [{{site.data.keyword.cloud_notm}} provider reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-parameter-ov).
 
-    Example for VPC infrastructure resources: 
+    **Example for VPC infrastructure resources**
     ```terraform
     provider "ibm" {
         generation = 2
@@ -60,7 +59,7 @@ To configure the `provider` block:
     ```
     {: codeblock}
 
-    Example for classic infrastructure resources: 
+    **Example for classic infrastructure resources** 
     ```terraform
     variable "iaas_classic_username" {
         type = "string"
@@ -77,14 +76,14 @@ To configure the `provider` block:
     ```
     {: codeblock}
 
-    Example for all {{site.data.keyword.containerlong_notm}} resources:
+    **Example for all {{site.data.keyword.containerlong_notm}} resources**
     ```terraform
     provider "ibm" {
     }
     ```
     {: codeblock}
 
-    Example for all other resources:
+    **Example for all other resources**
     ```terraform
     provider "ibm" {
         region = "<region_name>"
@@ -98,17 +97,16 @@ To configure the `provider` block:
 Use `resource` blocks to define the {{site.data.keyword.cloud_notm}} resources that you want to manage with {{site.data.keyword.bplong_notm}}. 
 {: shortdesc}
 
-To support a multi-cloud approach, Terraform on IBM Cloud works with multiple cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, every supported cloud provider must provide a command line plug-in for Terraform on IBM Cloud that users can use to work with the resources. To find an overview of the resources that you can provision in {{site.data.keyword.cloud_notm}}, see the [Terraform on IBM Cloud reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-on-ibm-cloud-resources-and-data-sources). 
+To support a multi-cloud approach, Terraform on IBM Cloud works with multiple cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, every supported cloud provider must provide a command line plug-in for Terraform on IBM Cloud that users can use to work with the resources. To find an overview of the resources that you can provision in {{site.data.keyword.cloud_notm}}, see the [Terraform on IBM Cloud reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list). 
 
-Example infrastructure code for provisioning a VPC: 
+**Example infrastructure code for provisioning a VPC:** 
+
 ```terraform
 resource ibm_is_vpc "vpc" {
     name = "myvpc"
 }
 ```
 {: codeblock}
-
-
 
 ### Referencing resources in other resource blocks
 {: #reference-resource-info}
@@ -120,7 +118,7 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 
 - **Resources**: To create a resource, you use the resource definition in the {{site.data.keyword.cloud_notm}} Provider plug-in reference. A resource definition includes the syntax for configuring your {{site.data.keyword.cloud_notm}} resources and an **Attributes reference** that shows the properties that you can reference as input parameters in other resource blocks. For example, when you create a VPC, the ID of the VPC is made available after the creation. You can use the ID as an input parameter when you create a subnet for your VPC. Use this option if you combine multiple resources in one Terraform on IBM Cloud configuration file.  </br>
 
-    Example infrastructure code: 
+    **Example infrastructure code** 
     ```terraform
     resource ibm_is_vpc "vpc" {
         name = "myvpc"
@@ -174,8 +172,7 @@ When you declare an input variable, you must provide a name for your variable an
 **Is there a character limit for input variables?** </br>
 Yes. If you define input variables in your Terraform on IBM Cloud configuration file, keep in mind that the value that you enter for these variables can be up to 2049 characters. If your input variable requires a value that exceeds this limit, the value is truncated after 2049 characters. 
 
-Example variable declaration without a Default value is 
-
+Example variable declaration without a default value
 ```terraform
 variable "datacenter" {
     type        = "string"
@@ -184,7 +181,7 @@ variable "datacenter" {
 ```
 {: codeblock}
 
-Example variable declaration with a Default value is 
+Example variable declaration with a default value is 
 ```terraform
 variable "datacenter" {
     type        = "string"
@@ -209,9 +206,7 @@ resource ibm_container_cluster "test_cluster" {
 ```
 {: codeblock}
 
-For more information, about variable configurations, see the [Terraform on IBM Cloud documentation](https://www.terraform.io/language/values/variables){: external}.
-
-
+For more information, about variable configurations, see the [Terraform documentation](https://www.terraform.io/language/values/variables){: external}.
 
 ## Storing your Terraform on IBM Cloud templates
 {: #store-template}
@@ -224,7 +219,6 @@ Cloning GitHub repository in {{site.data.keyword.bplong_notm}} is allowed only t
 -    Blocked extension: `.php5` `.pht` `.phtml` `.shtml` `.asa` `.cer` `.asax` `.swf` `.xap` `.tfstate` `.tfstate.backup`
 -    Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg` 
 
-
 The directory structure of the Terraform on IBM Cloud template in the GitHub repository looks like listed in the table with the last updated time.
 
 | File | Description |
@@ -234,6 +228,3 @@ The directory structure of the Terraform on IBM Cloud template in the GitHub rep
 | output.tf | Create output.tf |
 | provider.tf | Create provider.tf |
 | variables.tf | Create variables.tf |
-
-
-

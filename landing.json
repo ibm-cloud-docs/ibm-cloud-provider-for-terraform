@@ -1,6 +1,6 @@
 {
     "title": "Terraform on IBM Cloud docs",
-    "lastupdated": "2021-10-27",
+    "lastupdated": "2022-03-09",
     "introduction": "Explore the capabilities of the IBM Cloud Provider plug-in for Terraform. You can get started by installing the Terraform CLI and configure the IBM Cloud Provider plug-in. Then, you can try out a tutorial to create an IBM Cloud Kubernetes Service or Red Hat OpenShift on IBM Cloud cluster by using Terraform. You can also choose one of the IBM-provided Terraform templates to get started with the provisioning of other IBM Cloud services with Terraform, such as IBM Cloud Object Storage or IBM Key Protect. ",
     "section_devtools": {
       "cli": "https://www.terraform.io/docs/cli/index.html",
@@ -20,7 +20,7 @@
       {
         "title": "Find supported Terraform resources and data sources",
         "description": "Explore the Terraform resources and data sources that you can use to provision, update, and delete IBM Cloud services with Terraform. ",
-        "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-index-of-terraform-on-ibm-cloud-resources-and-data-sources"
+        "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list"
       },
       {
       "title": "Browse Terraform templates",

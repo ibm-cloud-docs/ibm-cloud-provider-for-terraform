@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-03-09"
 
 keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, Terraform on IBM Cloud, provision resources
 
@@ -13,14 +13,13 @@ subcollection: ibm-cloud-provider-for-terraform
 {{site.data.keyword.attribute-definition-list}}
 
 
-
 # Managing {{site.data.keyword.cloud_notm}} resources with Terraform on IBM Cloud
 {: #manage_resources}
 
 Use the Terraform CLI to create, update, and delete platform and infrastructure services in {{site.data.keyword.cloud_notm}}. 
 {: shortdesc}
 
-## Provisioning IBM Cloud resources
+## Provisioning {{site.data.keyword.cloud_notm}} resources
 {: #provision_resources}
 
 To provision {{site.data.keyword.cloud_notm}} resources, you must describe the state of your resources that you want to achieve in a configuration file.  
@@ -29,7 +28,7 @@ To provision {{site.data.keyword.cloud_notm}} resources, you must describe the s
 Terraform on IBM Cloud configuration files are written by using the [HashiCorp Configuration Language (HCL) ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.terraform.io/language/syntax/configuration) or JSON syntax. When you create your configuration file, you must describe the type of resource that you want and the state that you want to achieve for your resource. Terraform on IBM Cloud reads this configuration and creates an execution plan with the steps that were identified to achieve the specified state. If existing resources are found, Terraform on IBM Cloud identifies the necessary steps to update them. 
 
 Before you begin: 
-- [Install the Terraform on IBM Cloud command line and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#setup_cli).
+- [Install the Terraform command-line and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#setup_cli).
 - [Configure the {{site.data.keyword.cloud_notm}} Provider plug-in to use your {{site.data.keyword.cloud_notm}} credentials](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider). 
 
 The following example shows how you can configure a virtual server in {{site.data.keyword.cloud_notm}} by using JSON syntax. A virtual server is an {{site.data.keyword.cloud_notm}} infrastructure resource that incurs costs. Be sure to review [available plans ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/gen1/infrastructure/provision/vs) before you proceed. 
@@ -361,6 +360,3 @@ You can use Terraform on IBM Cloud to remove {{site.data.keyword.cloud_notm}} re
     terraform show
     ```
     {: pre}
-
-
-

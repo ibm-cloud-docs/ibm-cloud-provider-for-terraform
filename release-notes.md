@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-08"
+lastupdated: "2022-03-09"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -22,17 +22,21 @@ For information about releases that occurred before 12 October 2021, see [What's
 {: note}
 
 ## March 2022
-{: #release-feb-2022}
+{: #release-mar-2022}
 
 Review the release notes for March 2022.
 {: shortdesc}
+
 
 ### 3 March 2022
 {: #3mar2022}
 {: release-note}
 
 Enhancements 
-:   For the latest **fixes** for `ibm_is_instance` resource on VPC VSI, see [Updates and fixes in v1.39.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.39.1) release. 
+:   For the latest **fixes** for `ibm_is_instance` resource on VPC VSI, see [Updates and fixes in v1.39.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.39.1) release.
+
+Terraform latest version support
+: Terraform on IBM Cloud supports the [Terraform stable version 1.1.x](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli).
 
 ### 1 March 2022
 {: #1mar2022}
