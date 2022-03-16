@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-09"
+lastupdated: "2022-03-16"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -133,7 +133,7 @@ New resources and data sources
 :   For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.34.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.34.0)
 
 JWT version support
-:   Ensure you move to [The IBM Cloud provider v1.33.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.34.0) that replaces the [dependency](https://github.com/dgrijalva/jwt-go) of JSON web tokens with the [latest version](https://github.com/golang-jwt/jwt) to remediate [CVE-2020-26160](https://github.com/IBM-Cloud/terraform-provider-ibm/pull/3191) vulnerability.
+:   Ensure you move to [The IBM Cloud provider v1.33.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.34.0) that replaces the [dependency](https://github.com/dgrijalva/jwt-go) of JSON web tokens with the [latest version](https://github.com/golang-jwt/jwt) to `remediate` [CVE-2020-26160](https://github.com/IBM-Cloud/terraform-provider-ibm/pull/3191) vulnerability.
 
 Increasing FAQs
 :  [Terraform supports more FAQs](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-faqs).

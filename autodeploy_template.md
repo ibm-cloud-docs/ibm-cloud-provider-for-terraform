@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-09"
+lastupdated: "2022-03-16"
 
 keywords: terraform provider deployment, automation, schematics workspace, ibm cloud terraform provider deployment, schematics workspace creation, auto deploy 
 
@@ -45,7 +45,7 @@ The following steps show how to create a URL to deploy to `Terraform >=1.0.0, <2
 4. You can copy, and paste the example URL in the browser to view the {{site.data.keyword.cloud_notm}} {{site.data.keyword.bpshort}} workspace console with the create button is displayed.
 5. Cross-check the parameters in the workspace console and click `Create` button.
 
-## Adding an image on deployment to {{site.data.keyword.cloud_notm}} hyperlink
+## Adding an image on deployment to {{site.data.keyword.cloud_notm}} link
 {: #add_an_image}
 
 You can add an image on `Deploy to {{site.data.keyword.cloud_notm}} Schematics` text by using the following syntax and example.

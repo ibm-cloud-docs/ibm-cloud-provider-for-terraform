@@ -45,7 +45,7 @@ In this tutorial, you will:
 
 This tutorial is intended for system administrators who want to learn how to create an virtual server for classic infrastructure with `DEBIAN_8_64` or `CENTOS_7_64` Operating System by using {{site.data.keyword.cloud_notm}} Provider.
 
-## Prerequisities
+## Prerequisites
 {: #classic-tutorial-prereq}
 
 - Create your new folder in your local machine or [Git repository](/docs/sell?topic=sell-source-repo-setup) to configure the Terraform configuration files.

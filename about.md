@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-08"
+lastupdated: "2022-03-16"
 
 keywords: Terraform on IBM Cloud, configuration files, resources, what is Terraform on IBM Cloud, automation, automate
 
@@ -16,7 +16,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # About Terraform on IBM Cloud
 {: #about}
 
-Terraform on IBM Cloud enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} platform, classic infrastructure, and VPC infrastructure resources so that you can rapidly build complex, multi-tier cloud environments, and enable Infrastructure as Code (IaC).
+Terraform on IBM Cloud enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} platform, classic infrastructure, and VPC infrastructure resources so that you can rapidly build complex, multitiered cloud environments, and enable Infrastructure as Code (IaC).
 {: shortdesc}
 
 ## How does Terraform on IBM Cloud work? 
