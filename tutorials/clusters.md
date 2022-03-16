@@ -32,7 +32,7 @@ In this tutorial, you create a standard classic {{site.data.keyword.containerlon
 - The cluster is created with the default worker pool.
 - All worker nodes are connected to a private and public VLAN. These public and private VLANs assign public and private IP addresses to the worker nodes.
 - All worker nodes are created with a virtual worker node flavor on shared hardware. If you want to use a different worker node flavor, see the [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-planning_worker_nodes) or [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-planning_worker_nodes) documentation.
-- To allow access to your cluster from the internet and run public-facing app workloads in your cluster, the cluster is set up with both a public and a private service endpoint. For more information, about how network traffic flows when a public and a private service endpoint is enabled, see Worker-to-master and user-to-master communication: Service endpoints in [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-plan_clusters#workeruser-master) and [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-plan_clusters#workeruser-master). 
+- To allow access to your cluster from the internet and run public-facing app workloads in your cluster, the cluster is set up with both a public and a private service endpoint. For more information, about how network traffic flows when a public and a private service endpoint is enabled, see Worker-to-master and user-to-master communication: Service endpoints in [{{site.data.keyword.containerlong_notm}}](https://cloud.ibm.com/docs/containers?topic=containers-plan_clusters) and [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-plan_clusters#workeruser-master). 
 
 Keep in mind that creating a cluster incurs costs. Make sure to review [What am I charged for when I use {{site.data.keyword.containerlong_notm}}?](/docs/containers?topic=containers-faqs#charges) or [What am I charged for when I use {{site.data.keyword.openshiftlong_notm}}?](/docs/openshift?topic=openshift-faqs#charges) before you proceed.
 {: note}
@@ -84,10 +84,13 @@ This tutorial is intended for system administrators that want to learn how to cr
 5. In the same project directory, create a `provider.tf` file and configure IBM as your Terraform on IBM Cloud provider. To authenticate with {{site.data.keyword.cloud_notm}}, you must pass in your {{site.data.keyword.cloud_notm}} API key by using Terraform on IBM Cloud interpolation syntax.
 
     ```terraform
-    variable "ibmcloud_api_key" {}
-
-    provider "ibm" {
-        ibmcloud_api_key    = var.ibmcloud_api_key
+    terraform {
+    required_version = ">=1.0.0, <2.0"
+    required_providers {
+        ibm = {
+        source = "IBM-Cloud/ibm"
+        }
+    }
     }
     ```
     {: codeblock}
