@@ -40,18 +40,19 @@ In this tutorial, you will:
 - Terraform commands to provision the resource.
 - Destroy the configured virtual server for classic infrastructure.
 
-## Prerequisities
-{: #classic-tutorial-prereq}
-
-1. Create your new folder in your local machine or [Git repository](/docs/sell?topic=sell-source-repo-setup) to configure the Terraform configuration files.
-2. Setup the Terraform installation and configuration. For more information, see [installation and testing the configuration](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#tf_installation).
-3. Setup the environment variable such as `IC_API_KEY`, `IAAS_CLASSIC_USERNAME`, and `IAAS_CLASS_API_KEY` on your local machine. For more information, about how to setup the environment variables? see [Using environment variable](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#env-vars).
-
-
 ## Audience
 {: #classic-tutorial-audience}
 
 This tutorial is intended for system administrators who want to learn how to create an virtual server for classic infrastructure with `DEBIAN_8_64` or `CENTOS_7_64` Operating System by using {{site.data.keyword.cloud_notm}} Provider.
+
+## Prerequisites
+{: #classic-tutorial-prereq}
+
+- Create your new folder in your local machine or [Git repository](/docs/sell?topic=sell-source-repo-setup) to configure the Terraform configuration files.
+- If you do not have one, create an [IBM Cloud Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}. 
+- Install the [{{site.data.keyword.cloud_notm}} command line](/docs/cli?topic=cli-getting-started) and the Terraform installation and configuration. For more information, see [installation and testing the configuration](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#tf_installation).
+- Setup the environment variable such as `IC_API_KEY`, `IAAS_CLASSIC_USERNAME`, and `IAAS_CLASS_API_KEY` on your local machine. For more information, about how to setup the environment variables? see [Using environment variable](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#env-vars).
+
 
 ## Configure the resource file
 {: #classic-tutorial-resource}
@@ -76,7 +77,7 @@ This tutorial is intended for system administrators who want to learn how to cre
     ```
     {: codeblock}
 
-    For more information, about the `ibm_compute_vm_instance` resource description for the argument and its values, refer to [Argument reference](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_vm_instance#argument-reference){: external}
+    For more information, about the `ibm_compute_vm_instance` resource description for the argument and its values, refer to [registry documentation of `ibm_compute_vm_instance`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_vm_instance#argument-reference){: external}
 
 ## Configure Terraform and provider version
 {: #classic-tutorial-version}
@@ -119,7 +120,7 @@ Generate an Terraform on IBM Cloud execution plan. When you execute this command
 
 Review the execution plan to verify the type of resource that is planned to be provisioned by Terraform on IBM Cloud.
 
-## Generate Terrafom apply
+## Executing Terrafom apply
 {: #classic-tutorial-apply}
 {: step}
 
@@ -204,7 +205,8 @@ Optional: Remove your classic infrastructure virtual server.
 ```
 {: pre}
 
-**What's next?**
+## What's next?
+{: #classic-tutorial-whatsnext}
 
 - Explore [Classic infrastrucutre services](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#classic-infra-templates) related templates that you can provision by using Terraform on IBM Cloud.
 

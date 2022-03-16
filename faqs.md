@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-03-16"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -30,6 +30,7 @@ The Terraform on IBM Cloud `ibm_compute_vm_instance` resource includes optional 
     ```sh
     ibmcloud sl vs options
     ```
+    {: pre}
 
 ## How long does it take for my resources to provision and delete?
 {: #provisioning_times}
@@ -96,6 +97,7 @@ If you require one or more address prefixes you should define as part of resourc
       cidr = "10.240.0.0/24"
     }
     ```
+    {: codeblock}
 
 ## How do I define a policy which has all resource groups?
 {: #policy-faq}
@@ -119,6 +121,7 @@ A access group policy is a way to organize your account having create, modify, o
       }
     }
     ```
+    {: codeblock}
     
 
 ## How do I configure policy for all services in all the resource groups for an user?
@@ -134,6 +137,7 @@ The sample code block helps to configure the policy for all services in all reso
       roles  = ["Viewer"]
     }
     ```
+    {: codeblock}
     
 
 ## How can I configure a target resource to connect from different regions?
@@ -150,6 +154,7 @@ You need to configure the different regions in the provider block by using `regi
         region             = "eu-de"
     }
     ```
+    {: codeblock}
 
     ```terraform
     // Second code block
@@ -157,6 +162,7 @@ You need to configure the different regions in the provider block by using `regi
       name            = "aa-kubecf-a"
     }
     ```
+    {: codeblock}
 
 
 ## How can I connect and retrieve information from multiple region at once in the same template?
@@ -174,8 +180,7 @@ You can connect and retrieve information from a multiple regions by using `alias
       region = "eu-de"
     }
     ```
-    
-
+    {: codeblock}
 
     ```terraform
     provider "ibm" {
@@ -189,7 +194,7 @@ You can connect and retrieve information from a multiple regions by using `alias
       region = "eu-gb"
     }
     ```
-    
+    {: codeblock}
 
 ## How do I assign multiple resources to a group policy?
 {: #alias-resource-gpolicy}
@@ -207,6 +212,7 @@ You can configure only one region for a resource list to a group policy, as show
     } 
     } 
     ```
+    {: codeblock}
     
 
 ## How can I create access group policies and add memo as an attribute to the policy?
@@ -240,7 +246,7 @@ Here is a code block that helps you to create access group policies and add memo
       }
     }
     ```
-    
+    {: codeblock}
 
 ## How do I create the Terraform resources of the same type in sequential order?
 {: #alias-squential-terrreso}
@@ -258,7 +264,7 @@ The sample code block helps to create the resources of the same type in a sequen
       depends_on = [ibm_is_vpc.res_a]
     }
     ```
-    
+    {: codeblock}
 
 ## How do I enable the User list visibility for the IAM in Terraform?
 {: #alias-userlistvisibility-iam}
@@ -305,6 +311,7 @@ Yes, but the VPC API’s are region specific so `ibm_is_vpcs` gives only one reg
     } 
 
     ```
+    {: codeblock}
     
 
 ## How can I edit the flavor of an existing IKS worker pool without deleting or destroying an existing one by updating its machine_type?
@@ -337,6 +344,7 @@ Updating the machine type in the Terraform file allows to built or provision new
     } 
 
     ```
+    {: codeblock}
     
 
 ## How can I secure a workspace by setting an environment variable?
@@ -383,6 +391,7 @@ The sample code block allows to create the resources of the same type in a seque
       }
     }
     ```
+    {: codeblock}
 
 ## How do I associate a public gateway while creating multiple zones with a Subnet for each zone?
 {: #alias-multiplezone-subnet}
@@ -455,6 +464,7 @@ resource "ibm_database" "messages-for-rabbitmq" {
   service_endpoints = var.service_endpoints
 }
 ```
+{: codeblock}
 
 You have to update the memory and disk allocation size in the Terraform configuration file as shown in the code block.
 
@@ -462,6 +472,7 @@ You have to update the memory and disk allocation size in the Terraform configur
 members_memory_allocation_mb = 3072
 members_disk_allocation_mb   = 3072
 ```
+{: codeblock}
 
 For more information, about configuring the memory and disk allocation for the database, see [{{site.data.keyword.cloud_notm}} Database instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/database).
 
@@ -495,3 +506,4 @@ resource "ibm_container_cluster" "mycluster" {
   }
 }
 ```
+{: codeblock}

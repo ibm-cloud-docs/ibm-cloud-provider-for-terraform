@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-14"
+lastupdated: "2022-03-16"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -216,7 +216,7 @@ The steps that are involved in configuring your {{site.data.keyword.cloud_notm}}
 |Cloud Foundry|`IBMCLOUD_MCCP_API_ENDPOINT`|N/A|
 |Cloud functions|`IBMCLOUD_NAMESPACE_API_ENDPOINT`|N/A|
 |CIS|`IBMCLOUD_CIS_API_ENDPOINT`|N/A|
-|Containers|`IBMCLOUD_CS_API_ENDPOINT`|[Docs](/docs/containers?topic=containers-plan_clusters#workeruser-master)|
+|Containers|`IBMCLOUD_CS_API_ENDPOINT`|[Docs](https://cloud.ibm.com/docs/containers?topic=containers-plan_clusters)|
 |Content Catalog | `IBMCLOUD_CATALOG_MANAGEMENT_API_ENDPOINT`|N/A|
 |Container Registry | `IBMCLOUD_CR_API_ENDPOINT`|N/A|
 |COS config | `IBMCLOUD_COS_CONFIG_ENDPOINT`|N/A|
