@@ -8,6 +8,11 @@ keywords: terraform quickstart, terraform getting started, terraform tutorial, v
 
 subcollection: ibm-cloud-provider-for-terraform
 
+content-type: tutorial
+services: containers, terraform, openshift
+account-plan: lite
+completion-time: 2h
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
