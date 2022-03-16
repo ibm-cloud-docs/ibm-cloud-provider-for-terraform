@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-08"
+lastupdated: "2022-03-16"
 
 keywords: terraform create kubernetes cluster, terraform create openshift cluster, terraform kubernetes cluster, terraform openshift cluster, schematics create kubernetes cluster, schematics create openshift cluster, schematics kubernetes cluster, schematics openshift cluster, terraform iks cluster, terraform roks cluster, schematics iks cluster, schematics roks cluster, terraform multizone cluster, schematics multizone cluster, terraform remove default worker pool, schematics remove default worker pool 
 
@@ -16,7 +16,6 @@ completion-time: 2h
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 
 # Creating single and multizone Kubernetes and OpenShift clusters
@@ -53,6 +52,7 @@ In this tutorial, you will:
 This tutorial is intended for system administrators that want to learn how to create an {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.openshiftlong_notm}} cluster and spread this cluster across zones.
 
 ## Prerequisites
+{: #cluster-tutorial-prereq}
 
 - If you do not have one, create an [IBM Cloud Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}. 
 - Install the [{{site.data.keyword.cloud_notm}} command line and the {{site.data.keyword.containerlong_notm}} command line plug-in](/docs/cli?topic=cli-getting-started).
