@@ -281,6 +281,8 @@ terraform apply
 ```
 {: pre}
 
+Observe the [`terraform.tfstate`](https://www.terraform.io/language/state/purpose){: external} file that is created in your directory. Terraform state file maps your resources to your configuration and keep track of the metadata. Also improves performance for the large infrastrucutres.
+
 **Example output:**
 
 ```text
