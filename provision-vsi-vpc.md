@@ -9,7 +9,7 @@ keywords: terraform quickstart, terraform getting started, terraform tutorial, v
 subcollection: ibm-cloud-provider-for-terraform
 
 content-type: tutorial
-services: containers, terraform, openshift, vpc
+services:  terraform, vpc
 account-plan: lite
 completion-time: 2h
 
@@ -21,7 +21,7 @@ completion-time: 2h
 # Provisioning an {{site.data.keyword.cloud_notm}} virtual server for VPC
 {: #sample_vpc_config}
 {: toc-content-type="tutorial"}
-{: toc-services="containers, terraform, openshift, vpc"}
+{: toc-services="terraform, vpc"}
 {: toc-completion-time="2h"}
 
 Use {{site.data.keyword.cloud_notm}} Provider plug-in to provision a VPC, and set up networking for your VPC, and provision a virtual server for VPC in your {{site.data.keyword.cloud_notm}} account. A VPC allows you to create your own space in {{site.data.keyword.cloud_notm}} so that you can run an isolated environment in the public cloud with custom network policies. 
