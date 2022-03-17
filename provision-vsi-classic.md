@@ -77,7 +77,7 @@ This tutorial is intended for system administrators who want to learn how to cre
     ```
     {: codeblock}
 
-    For more information, about the `ibm_compute_vm_instance` resource description for the argument and its values, refer to [registry documentation of `ibm_compute_vm_instance`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_vm_instance#argument-reference){: external}
+    For more information, about the description of `ibm_compute_vm_instance` resource argument and its values, refer to [registry documentation of `ibm_compute_vm_instance`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_vm_instance#argument-reference){: external}
 
 ## Configure Terraform and provider version
 {: #classic-tutorial-version}
@@ -164,30 +164,7 @@ id = 62364997
 block_storage_ids.# = 0
 cores = 1
 datacenter = dal10
-dedicated_acct_host_only = false
-disks.# = 1
-disks.0 = 25
-domain = example.com
-file_storage_ids.# = 0
-hostname = vm1
-hourly_billing = true
-ip_address_id = 120354689
-ip_address_id_private = 120356235
-ipv4_address = 169.53.33.54
-ipv4_address_private = 10.120.45.183
-ipv6_enabled = false
-local_disk = false
-memory = 1024
-network_speed = 10
-notes = 
-os_reference_code = DEBIAN_8_64
-private_network_only = false
-private_subnet = 10.120.45.128/26
-private_vlan_id = 2451153
-public_bandwidth_unlimited = false
-public_subnet = 169.53.33.48/28
-public_vlan_id = 2451151
-secondary_ip_addresses.# = 0
+...
 wait_time_minutes = 90
 ```
 {: screen}

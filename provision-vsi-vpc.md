@@ -356,7 +356,7 @@ terraform destroy
 ```
 {: pre}
 
-**What's next?**
+## What's next?
 {: #vpc-tutorial-whatsnext}
 
 Explore other [{{site.data.keyword.cloud_notm}} resources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/) that you can provision by using Terraform on IBM Cloud. 
