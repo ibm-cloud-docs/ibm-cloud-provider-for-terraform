@@ -2,11 +2,16 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-09"
+lastupdated: "2022-03-17"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for vpc
 
 subcollection: ibm-cloud-provider-for-terraform
+
+content-type: tutorial
+services: containers, terraform, openshift, vpc
+account-plan: lite
+completion-time: 2h
 
 ---
 
@@ -15,129 +20,73 @@ subcollection: ibm-cloud-provider-for-terraform
 
 # Provisioning an {{site.data.keyword.cloud_notm}} virtual server for VPC
 {: #sample_vpc_config}
+{: toc-content-type="tutorial"}
+{: toc-services="containers, terraform, openshift, vpc"}
+{: toc-completion-time="2h"}
 
-Use {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on IBM Cloud to provision a VPC, and set up networking for your VPC, and provision a virtual server for VPC in your {{site.data.keyword.cloud_notm}} account. 
+Use {{site.data.keyword.cloud_notm}} Provider plug-in to provision a VPC, and set up networking for your VPC, and provision a virtual server for VPC in your {{site.data.keyword.cloud_notm}} account. A VPC allows you to create your own space in {{site.data.keyword.cloud_notm}} so that you can run an isolated environment in the public cloud with custom network policies. 
 {: shortdesc}
 
-A VPC allows you to create your own space in {{site.data.keyword.cloud_notm}} so that you can run an isolated environment in the public cloud with custom network policies. The example in this topic provisions the following VPC infrastructure resources for you: 
+## Objectives
+{: #vpc-tutorial-objective}
+
+In this tutorial, you will learn to provisions:
+
 - 1 VPC where you provision your VPC virtual server instance
 - 1 security group and a rule for this security group to allow SSH connection to your virtual server instance
 - 1 subnet to enable networking in your VPC
-- 1 VPC virtual server instance 
+- 1 VPC virtual server instance
 - 1 floating IP address that you use to access your VPC virtual server instance over the public network
 
 Keep in mind that a VPC virtual server instance is an {{site.data.keyword.cloud_notm}} VPC infrastructure resource that incurs costs. Be sure to review the [available plans](https://cloud.ibm.com/vpc/provision/vs) before you proceed.
 {: important}
 
-Before you begin: 
-    - Install the [latest Terraform on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#tf_installation) and the latest [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
-- [Retrieve your {{site.data.keyword.cloud_notm}} credentials, upload an SSH key, and configure the {{site.data.keyword.cloud_notm}} Provider plug-in forTerraform on IBM Cloud provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider). 
+## Audience
+{: #vpc-tutorial-audience}
 
-To create a VPC and a VSI: 
+This tutorial is intended for system administrators who want to learn how to provision an {{site.data.keyword.cloud_notm}} virtual server for a VPC by using {{site.data.keyword.cloud_notm}} Provider.
+{: shortdesc}
+
+## Prerequisites
+{: #vpc-tutorial-prereq}
+
+- Install the [latest Terraform on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#tf_installation) and the latest [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
+- Retrieve your [{{site.data.keyword.cloud_notm}} credentials, upload an SSH key, and configure the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
+
+## Create the Terraform configuration files
+{: #vpc-tutorial-create}
+{: step}
 
 1. Make sure that you have the [required permissions](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls) to create and work with VPC infrastructure. 
 
-2. In the Terraform on IBM Cloud directory create a `versions.tf` file to run the Terraform on IBM Cloud v0.13. For `versions.tf`, refer to [sample Terraform version file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v13).
+2. In the Terraform directory, create a configuration file names `versions.tf` file as specified in the code block. For more information, about `versions.tf`, refer to [sample Terraform version file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#install_provider).
     
     ```terraform
-    variable ibmcloud_api_key {}
-
-     provider "ibm" {
-       ibmcloud_api_key = var.ibmcloud_api_key
-       region           = "us-south" # this could come from a variable, you need to match the ZONE variable.
+    terraform {
+     required_version = ">=1.0.0, <2.0"
+     required_providers {
+       ibm = {
+       source = "IBM-Cloud/ibm"
+      }
      }
-     ```
-     {: codeblock}
+    }
+    ```
+    {: codeblock}
 
-3. From your Terraform directory, export following `IC_API_Key` variable to set your environment variable.
+3. From your Terraform directory, export `IC_API_Key` variable to set environment variable in your local machine. For more information, about how to setup the environment variables? see [Using environment variable](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#env-vars).
 
     **Example**
 
-    - `export TF_VAR_ibmcloud_api_key="VoeEd1231231234134123413"`
+    `export IC_API_Key="<provide your IBM Cloud API Key>"`
 
-4. In the Terraform on IBM Cloud directory create a Terraform on IBM Cloud configuration file and name it `vpc.tf`. The configuration file includes the following definition blocks: 
-    - **locals**: Use this block to specify variables that you want to use multiple times throughout this configuration file. 
-    - **resource**: Every resource block specifies the {{site.data.keyword.cloud_notm}} resource that you want to provision. To find more information about supported configurations for each resource, see the [{{site.data.keyword.cloud_notm}} provider plug-in reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
-    - **data**: Use this block to retrieve information for an existing resource in your {{site.data.keyword.cloud_notm}} account. 
-    - **output**: This block specifies commands that you want to run after your resources are provisioned. 
-
-    **Example configuration file:** 
-
-    ```terraform
-     variable "ssh_key" {
-    }
-
-    locals {
-        BASENAME = "gsmvpcv13test2"
-        ZONE     = "us-south-1"
-    }
-
-    resource "ibm_is_vpc" "vpc" {
-        name = "${local.BASENAME}-vpc"
-    }
-
-    resource "ibm_is_security_group" "sg1" {
-        name = "${local.BASENAME}-sg1"
-        vpc  = ibm_is_vpc.vpc.id
-    }
-
-    # allow all incoming network traffic on port 22
-    resource "ibm_is_security_group_rule" "ingress_ssh_all" {
-        group     = ibm_is_security_group.sg1.id
-        direction = "inbound"
-        remote    = "0.0.0.0/0"
-
-        tcp {
-          port_min = 22
-          port_max = 22
-        }
-    }
-
-    resource "ibm_is_subnet" "subnet1" {
-        name                     = "${local.BASENAME}-subnet1"
-        vpc                      = ibm_is_vpc.vpc.id
-        zone                     = local.ZONE
-        total_ipv4_address_count = 256
-    }
-
-    data "ibm_is_image" "centos" {
-        name = "ibm-centos-7-6-minimal-amd64-1"
-    }
-
-    data "ibm_is_ssh_key" "ssh_key_id" {
-        name = var.ssh_key
-    }
-
-    resource "ibm_is_instance" "vsi1" {
-        name    = "${local.BASENAME}-vsi1"
-        vpc     = ibm_is_vpc.vpc.id
-        zone    = local.ZONE
-        keys    = [data.ibm_is_ssh_key.ssh_key_id.id]
-        image   = data.ibm_is_image.centos.id
-        profile = "cx2-2x4"
-
-        primary_network_interface {
-            subnet          = ibm_is_subnet.subnet1.id
-            security_groups = [ibm_is_security_group.sg1.id]
-        }
-    }
-
-    resource "ibm_is_floating_ip" "fip1" {
-        name   = "${local.BASENAME}-fip1"
-        target = ibm_is_instance.vsi1.primary_network_interface[0].id
-        }
-
-      output "sshcommand" {
-        value = "ssh root@${ibm_is_floating_ip.fip1.address}"
-        }
-    ```
+4. In the Terraform directory, create a Terraform configuration file and name it `vpc.tf`. The configuration file includes the following definition blocks: 
 
     ```terraform
     variable "ssh_key" {
     }
 
     locals {
-        BASENAME = "gsmvpcv13test2"
+        BASENAME = "vpctestexample"
         ZONE     = "us-south-1"
     }
 
@@ -202,443 +151,175 @@ To create a VPC and a VSI:
     ```
     {: codeblock}
 
-  <table>
-    <caption>Understanding the configuration file components</caption>
-    <col>
-        <col>
-    <thead>
-        <th>Parameter</th>
-        <th>Description</th>
-    </thead>
-    <tbody>
-    <tr>
-    <td><code>locals.BASENAME</code></td>
-    <td>Enter a name that you want to append to the name of all VPC infrastructure resources that you create with this configuration file. </td>
-    </tr>
-        <tr>
-        <td><code>locals.ZONE</code></td>
-        <td>Enter a supported VPC zone where you want to create your resources. To find available zones, run <code>ibmcloud is zones</code>.  </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_vpc.name</code></td>
-        <td>Enter a name for your VPC. In this example, you use <code>locals.BASENAME</code> to create part of the name. For example, if your base name is <code>test</code>, the name of your VPC is set to <code>test-vpc</code>. Keep in mind that the name of your VPC must be unique within your {{site.data.keyword.cloud_notm}} account. </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_security_group.name</code></td>
-        <td>Enter a name for the security group that you create for your VPC. In this example, you use <code>locals.BASENAME</code> to create part of the name. For example, if your base name is <code>test</code>, the name of your security group is set to <code>test-sg1</code>.  </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_security_group.vpc</code></td>
-        <td>Enter the ID of the VPC for which you want to create the security group. In this example, you reference the ID of the VPC that you create with the <code>ibm_is_vpc</code> resource in the same configuration file.  </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_security_group_rule.group</code></td>
-        <td>Enter the ID of the security group for which you want to create a security group rule. In this example, you reference the ID of the security group that you create with the <code>ibm_is_security_group</code> resource in the same configuration file.  </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_security_group_rule.direction</code></td>
-        <td>Specify if the security group rule is applied to incoming or outgoing network traffic. Choose <strong>inbound</strong> to specify a rule for incoming network traffic, and <strong>outbound</strong> to specify a rule for outgoing network traffic. </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_security_group_rule.remote</code></td>
-        <td>Enter the IP address range, for which the security group rule is applied. In this example, <code>0.0.0.0/0</code> allows network traffic from all IP addresses. </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_security_group_rule.tcp</code></td>
-        <td>Enter the TCP port range that you want to open in your security group rule. If you want to open up a single port, enter the same port number in <code>port_min</code> and <code>port_max</code>. </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_subnet.name</code></td>
-        <td>Enter a name for your subnet. In this example, you use <code>locals.BASENAME</code> to create part of the name. For example, if your base name is <code>test</code>, the name of your subnet is set to <code>test-subnet1</code>.  </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_subnet.vpc</code></td>
-        <td>Enter the ID of the VPC for which you want to create the subnet. In this example, you reference the ID of the VPC that you create with the <code>ibm_is_vpc</code> resource in the same configuration file. </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_subnet.zone</code></td>
-        <td>Enter the zone in which you want to create the subnet. In this example, you use <code>locals.ZONE</code> as the name for your zone. </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_subnet.</code></br><code>total_ipv4_address_count</code></td>
-        <td>Enter the number of IPv4 IP addresses that you want to have in your subnet. </td>
-        </tr>
-        <tr>
-        <td><code>data.ibm_is_image.name</code></td>
-        <td>Enter the name of the Operating System that you want to install on your VPC virtual server instance. For supported image names, run <code>ibmcloud is images</code>. </td>
-        </tr>
-        <tr>
-        <td><code>data.ibm_is_ssh_key.name</code></td>
-        <td>Enter the name of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account.</td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_instance.name</code></td>
-        <td>Enter the name of the VPC virtual server instance that you want to create. In this example, you use <code>locals.BASENAME</code> to create part of the name. For example, if your base name is <code>test</code>, the name of your VPC virtual server instance is set to <code>test-vsi1</code>.  </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_instance.vpc</code></td>
-        <td>Enter the ID of the VPC in which you want to create the VPC virtual server instance. In this example, you reference the ID of the VPC that you create with the <code>ibm_is_vpc</code> resource in the same configuration file.  </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_instance.zone</code></td>
-        <td>Enter the zone in which you want to create the VPC virtual server instance. In this example, you use <code>locals.ZONE</code> as the name for your zone. </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_instance.keys</code></td>
-        <td>Enter the UUID of the SSH key that you uploaded to your {{site.data.keyword.cloud_notm}} account. In this example, you retrieve the UUID from the <code>ibm_is_ssh_key</code> data source of this configuration file. Terraform on IBM Cloud uses the name of the SSH key that you define in your data source object to look up information about the SSH key in your {{site.data.keyword.cloud_notm}} account.</td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_instance.image</code></td>
-        <td>Enter the ID of the image that represents the Operating System that you want to install on your VPC virtual server instance. In this example, you retrieve the ID from the <code>ibm_is_image</code> data source of this configuration file. Terraform on IBM Cloud uses the name of the image that you define in your data source object to look up information about the image in the {{site.data.keyword.cloud_notm}} infrastructure portfolio. </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_instance.profile</code></td>
-        <td>Enter the name of the profile that you want to use for your VPC virtual server instance. For supported profiles, run <code>ibmcloud is instance-profiles</code>. </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_instance.</code></br><code>primary_network_interface.subnet</code></td>
-        <td>Enter the ID of the subnet that you want to use for your VPC virtual server instance. In this example, you use the <code>ibm_is_subnet</code> resource in this configuration file to retrieve the ID of the subnet.   </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_instance.</code></br><code><primary_network_interface.security_groups</code></td>
-        <td>Enter the ID of the security group that you want to apply to your VPC virtual server instance. In this example, you use the <code>ibm_is_security_group</code> resource in this configuration file to retrieve the ID of the security group.   </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_floating_ip.name</code></td>
-        <td>Enter a name for your floating IP resource. In this example, you use <code>locals.BASENAME</code> to create part of the name. For example, if your base name is <code>test</code>, the name of your floating IP resource is set to <code>test-fip1</code>.   </td>
-        </tr>
-        <tr>
-        <td><code>resource.ibm_is_floating_ip.target</code></td>
-        <td>Enter the ID of the network interface where you want to allocate the floating IP addresses. In this example, you use the <code>ibm_is_instance</code> resource to retrieve the ID of the primary network interface.   </td>
-        </tr>
-        <tr>
-        <td><code>output.ssh_command.value</code></td>
-        <td>Build the SSH command that you need to run to connect to your VPC virtual server instance. In this example, you use the <code>ibm_is_floating_ip</code> resource to retrieve the floating IP address that is assigned to your VPC virtual server instance.  </td>
-        </tr>
-    </tbody>
-    </table>
+    For more information, about the description of the resource argument, refer to [registry documentation](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external}. The table specifies the registry link of each resources and data sources.
 
-5. Initialize Terraform on IBM Cloud. 
+    | Resource name | Registry documentation link |
+    | --- | --- |
+    | `ibm_is_vpc` | [Docs](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_vpc#argument-reference) |
+    | `ibm_is_security_group` | [Docs](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_security_group#argument-reference) |
+    | `ibm_is_security_group_rule` | [Docs](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_security_group_rule#argument-reference) |
+    | `ibm_is_instance` | [Docs](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_instance#argument-reference) |
+    | `ibm_is_floating_ip` | [Docs](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_floating_ip#argument-reference) |
+    | `ibm_is_subnet` | [Docs](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_subnet#argument-reference) |
+    {: caption="Registry link of the resources" caption-side="top"}
 
-    ```sh
-    terraform init
-    ```
-    {: pre}
+    | Data Sources name | Registry documentation link |
+    | --- | --- |
+    | `ibm_is_ssh_key` | [Docs](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_ssh_key#argument-reference) |
+    | `ibm_is_image` | [Docs](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_image#argument-reference) |
+    {: caption="Registry link of the data sources" caption-side="top"}
 
-    **Example output:**
+## Initializing Terraform
+{: #vpc-tutorial-init}
+{: step}
 
-    ```text
-    2021/06/22 16:47:27 [WARN] Log levels other than TRACE are currently unreliable, and are supported only for backward compatibility.
-    Use TF_LOG=TRACE to see Terraform's internal logs.
-    ----
-    2021/06/22 16:47:27 [INFO] Terraform version: 0.13.5  
-    2021/06/22 16:47:27 [INFO] Go runtime version: go1.14.7
-    terraform/plugins/darwin_amd64/lock.json: no such file or directory
+Run the Terraform initialization command and observe the successful execution.
 
-    Initializing provider plugins...
-    - Using previously-installed ibm-cloud/ibm v1.26.2
+```sh
+terraform init
+```
+{: pre}
 
-    Terraform has been successfully initialized!
+**Example output:**
 
-    You may now begin working with Terraform. Try running "terraform plan" to see
-    any changes that are required for your infrastructure. All Terraform commands
-    should now work.
+```text
+2021/06/22 16:47:27 [WARN] Log levels other than TRACE are currently unreliable, and are supported only for backward compatibility.
+Use TF_LOG=TRACE to see Terraform's internal logs.
+----
+2021/06/22 16:47:27 [INFO] Terraform version: 0.13.5  
+2021/06/22 16:47:27 [INFO] Go runtime version: go1.14.7
+terraform/plugins/darwin_amd64/lock.json: no such file or directory
 
-    If you ever set or change modules or backend configuration for Terraform,
-    rerun this command to reinitialize your working directory. If you forget, other
-    commands will detect it and remind you to do so if necessary.
+Initializing provider plugins...
+- Using previously-installed ibm-cloud/ibm v1.26.2
 
-    ```
-    {: screen}
+Terraform has been successfully initialized!
+...
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
 
-6. Generate an Terraform on IBM Cloud execution plan. When you execute this command, Terraform on IBM Cloud validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in.
+```
+{: screen}
 
-    Your SSH key name need to be provide during `terraform plan` and `terraform apply` execution.
-    {: note}
+## Generate Terraform plan
+{: #vpc-tutorial-plan}
+{: step}
 
-    ```sh
-    terraform plan
-    ```
-    {: pre}
+Generate an Terraform on IBM Cloud execution plan. When you execute this command, Terraform on IBM Cloud validates the syntax of your configuration file and resource definitions against the specifications that are provided by the {{site.data.keyword.cloud_notm}} Provider plug-in.
 
-    **Example output:** 
+Your SSH key name need to be provide during `terraform plan` and `terraform apply` execution.
+{: note}
 
-    ```text
-    var.ssh_key
-        Enter a value: <Provide your SSH key name>
-    2021/06/22 16:48:53 [INFO] backend/local: plan operation completed
+```sh
+terraform plan
+```
+{: pre}
 
-    An execution plan has been generated and is shown below.
-    Resource actions are indicated with the following symbols:
-        + create
+**Example output:** 
 
-    Terraform will perform the following actions:
+```text
+var.ssh_key
+    Enter a value: <Provide your SSH key name>
+2021/06/22 16:48:53 [INFO] backend/local: plan operation completed
 
-        ibm_is_floating_ip.fip1 will be created
-        + resource "ibm_is_floating_ip" "fip1" {
-          + address                 = (known after apply)
-          + id                      = (known after apply)
-          + name                    = "gsmvpcv13test2-fip1"
-          + resource_controller_url = (known after apply)
-          + resource_crn            = (known after apply)
-          + resource_group          = (known after apply)
-          + resource_group_name     = (known after apply)
-          + resource_name           = (known after apply)
-          + resource_status         = (known after apply)
-          + status                  = (known after apply)
-          + tags                    = (known after apply)
-          + target                  = (known after apply)
-          + zone                    = (known after apply)
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+    + create
+
+Terraform will perform the following actions:
+
+    ibm_is_floating_ip.fip1 will be created
+    + resource "ibm_is_floating_ip" "fip1" {
+        ...
+    }
+
+    ibm_is_instance.vsi1 will be created
+    + resource "ibm_is_instance" "vsi1" {
+        ...
         }
+    }
 
-        ibm_is_instance.vsi1 will be created
-        + resource "ibm_is_instance" "vsi1" {
-          + disks                   = (known after apply)
-          + gpu                     = (known after apply)
-          + id                      = (known after apply)
-          + image                   = "r006-e0039ab2-fcc8-11e9-8a36-6ffb6501dd33"
-          + keys                    = [
-              + "r006-3f44b01f-5edc-434b-ba6b-f5de782759f7",
-            ]
-          + memory                  = (known after apply)
-          + name                    = "gsmvpcv13test2-vsi1"
-          + profile                 = "cx2-2x4"
-          + resource_controller_url = (known after apply)
-          + resource_crn            = (known after apply)
-          + resource_group          = (known after apply)
-          + resource_group_name     = (known after apply)
-          + resource_name           = (known after apply)
-          + resource_status         = (known after apply)
-          + status                  = (known after apply)
-          + tags                    = (known after apply)
-          + vcpu                    = (known after apply)
-          + volume_attachments      = (known after apply)
-          + vpc                     = (known after apply)
-          + wait_before_delete      = true
-          + zone                    = "us-south-1"
+    ibm_is_security_group.sg1 will be created
+    + resource "ibm_is_security_group" "sg1" {
+        ...
+    }
 
-          + boot_volume {
-              + encryption = (known after apply)
-              + iops       = (known after apply)
-              + name       = (known after apply)
-              + profile    = (known after apply)
-              + size       = (known after apply)
-            }
+    ibm_is_security_group_rule.ingress_ssh_all will be created
+    + resource "ibm_is_security_group_rule" "ingress_ssh_all" {
+        ...
+    }
 
-          + primary_network_interface {
-              + allow_ip_spoofing    = false
-              + id                   = (known after apply)
-              + name                 = (known after apply)
-              + primary_ipv4_address = (known after apply)
-              + security_groups      = (known after apply)
-              + subnet               = (known after apply)
-            }
-        }
+    ibm_is_subnet.subnet1 will be created
+    + resource "ibm_is_subnet" "subnet1" {
+        ...
+    }
 
-        ibm_is_security_group.sg1 will be created
-        + resource "ibm_is_security_group" "sg1" {
-          + crn                     = (known after apply)
-          + id                      = (known after apply)
-          + name                    = "gsmvpcv13test2-sg1"
-          + resource_controller_url = (known after apply)
-          + resource_crn            = (known after apply)
-          + resource_group          = (known after apply)
-          + resource_group_name     = (known after apply)
-          + resource_name           = (known after apply)
-          + rules                   = (known after apply)
-          + tags                    = (known after apply)
-          + vpc                     = (known after apply)
-        }
+    ibm_is_vpc.vpc will be created
+    + resource "ibm_is_vpc" "vpc" {
+        ...
+    }
 
-        ibm_is_security_group_rule.ingress_ssh_all will be created
-        + resource "ibm_is_security_group_rule" "ingress_ssh_all" {
-          + direction   = "inbound"
-          + group       = (known after apply)
-          + id          = (known after apply)
-          + ip_version  = "ipv4"
-          + protocol    = (known after apply)
-          + related_crn = (known after apply)
-          + remote      = "0.0.0.0/0"
-          + rule_id     = (known after apply)
+Plan: 6 to add, 0 to change, 0 to destroy.
 
-          + tcp {
-              + port_max = 22
-              + port_min = 22
-            }
-        }
+------------------------------------------------------------------------
 
-        ibm_is_subnet.subnet1 will be created
-        + resource "ibm_is_subnet" "subnet1" {
-          + available_ipv4_address_count = (known after apply)
-          + crn                          = (known after apply)
-          + id                           = (known after apply)
-          + ip_version                   = "ipv4"
-          + ipv4_cidr_block              = (known after apply)
-          + ipv6_cidr_block              = (known after apply)
-          + name                         = "gsmvpcv13test2-subnet1"
-          + network_acl                  = (known after apply)
-          + resource_controller_url      = (known after apply)
-          + resource_crn                 = (known after apply)
-          + resource_group               = (known after apply)
-          + resource_group_name          = (known after apply)
-          + resource_name                = (known after apply)
-          + resource_status              = (known after apply)
-          + routing_table                = (known after apply)
-          + status                       = (known after apply)
-          + tags                         = (known after apply)
-          + total_ipv4_address_count     = 256
-          + vpc                          = (known after apply)
-          + zone                         = "us-south-1"
-        }
+You didn't specify an "-out" parameter to save this plan, so Terraform
+can't guarantee that exactly these actions will be performed if
+"terraform apply" is subsequently run.
+```
+{: screen}
 
-        ibm_is_vpc.vpc will be created
-        + resource "ibm_is_vpc" "vpc" {
-          + address_prefix_management   = "auto"
-          + classic_access              = false
-          + crn                         = (known after apply)
-          + cse_source_addresses        = (known after apply)
-          + default_network_acl         = (known after apply)
-          + default_network_acl_name    = (known after apply)
-          + default_routing_table       = (known after apply)
-          + default_routing_table_name  = (known after apply)
-          + default_security_group      = (known after apply)
-          + default_security_group_name = (known after apply)
-          + id                          = (known after apply)
-          + name                        = "gsmvpcv13test2-vpc"
-          + resource_controller_url     = (known after apply)
-          + resource_crn                = (known after apply)
-          + resource_group              = (known after apply)
-          + resource_group_name         = (known after apply)
-          + resource_name               = (known after apply)
-          + resource_status             = (known after apply)
-          + security_group              = (known after apply)
-          + status                      = (known after apply)
-          + subnets                     = (known after apply)
-          + tags                        = (known after apply)
-        }
+## Executing Terraform apply
+{: #vpc-tutorial-apply}
+{: step}
 
-    Plan: 6 to add, 0 to change, 0 to destroy.
+Create the VPC infrastructure resources. Confirm the creation by entering `yes` when prompted.
 
-    ------------------------------------------------------------------------
+```sh
+terraform apply
+```
+{: pre}
 
-    **Note** You didn't specify an "-out" parameter to save this plan, so Terraform
-    can't guarantee that exactly these actions will be performed if
-    "terraform apply" is subsequently run.
-    ```
-    {: screen}
+**Example output:**
 
-7. Create the VPC infrastructure resources. Confirm the creation by entering `yes` when prompted.
+```text
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+    + create
 
-    ```sh
-    terraform apply
-    ```
-    {: pre}
+Terraform will perform the following actions:
 
-    **Example output:**
+ibm_is_floating_ip.fip1 will be created
++ resource "ibm_is_floating_ip" "fip1" {
+    ...
+}
 
-    ```text
-    An execution plan has been generated and is shown below.
-    Resource actions are indicated with the following symbols:
-        + create
+ibm_is_instance.vsi1 will be created
++ resource "ibm_is_instance" "vsi1" {
+    ...
+    }
+}
 
-    Terraform will perform the following actions:
+ibm_is_vpc.vpc will be created
++ resource "ibm_is_vpc" "vpc" {
+    + address_prefix_management   = "auto"
+...
+}
 
-        ibm_is_floating_ip.fip1 will be created
-        + resource "ibm_is_floating_ip" "fip1" {
-          + address                 = (known after apply)
-          + id                      = (known after apply)
-          + name                    = "gsmvpcv13test2-fip1"
-          + resource_controller_url = (known after apply)
-          + resource_crn            = (known after apply)
-          + resource_group          = (known after apply)
-          + resource_group_name     = (known after apply)
-          + resource_name           = (known after apply)
-          + resource_status         = (known after apply)
-          + status                  = (known after apply)
-          + tags                    = (known after apply)
-          + target                  = (known after apply)
-          + zone                    = (known after apply)
-        }
+Apply complete! Resources: 6 added, 0 changed, 0 destroyed.
 
-        ibm_is_instance.vsi1 will be created
-        + resource "ibm_is_instance" "vsi1" {
-          + disks                   = (known after apply)
-          + gpu                     = (known after apply)
-          + id                      = (known after apply)
-          + image                   = "r006-e0039ab2-fcc8-11e9-8a36-6ffb6501dd33"
-          + keys                    = [
-              + "r006-3f44b01f-5edc-434b-ba6b-f5de782759f7",
-            ]
-          + memory                  = (known after apply)
-          + name                    = "gsmvpcv13test2-vsi1"
-          + profile                 = "cx2-2x4"
-          + resource_controller_url = (known after apply)
-          + resource_crn            = (known after apply)
-          + resource_group          = (known after apply)
-          + resource_group_name     = (known after apply)
-          + resource_name           = (known after apply)
-          + resource_status         = (known after apply)
-          + status                  = (known after apply)
-          + tags                    = (known after apply)
-          + vcpu                    = (known after apply)
-          + volume_attachments      = (known after apply)
-          + vpc                     = (known after apply)
-          + wait_before_delete      = true
-          + zone                    = "us-south-1"
+Outputs:
 
-          + boot_volume {
-              + encryption = (known after apply)
-              + iops       = (known after apply)
-              + name       = (known after apply)
-              + profile    = (known after apply)
-              + size       = (known after apply)
-            }
+sshcommand = ssh root@ibm_is_floating_ip.fip1.address
+```
+{: screen}
 
-          + primary_network_interface {
-              + allow_ip_spoofing    = false
-              + id                   = (known after apply)
-              + name                 = (known after apply)
-              + primary_ipv4_address = (known after apply)
-              + security_groups      = (known after apply)
-              + subnet               = (known after apply)
-            }
-        }
+## Analyzing the provisioned resource
+{: #vpc-tutorial-analyze}
+{: step}
 
-        ibm_is_vpc.vpc will be created
-        + resource "ibm_is_vpc" "vpc" {
-          + address_prefix_management   = "auto"
-          + classic_access              = false
-          + crn                         = (known after apply)
-          + cse_source_addresses        = (known after apply)
-          + default_network_acl         = (known after apply)
-          + default_network_acl_name    = (known after apply)
-          + default_routing_table       = (known after apply)
-          + default_routing_table_name  = (known after apply)
-          + default_security_group      = (known after apply)
-          + default_security_group_name = (known after apply)
-          + id                          = (known after apply)
-          + name                        = "gsmvpcv13test2-vpc"
-          + resource_controller_url     = (known after apply)
-          + resource_crn                = (known after apply)
-          + resource_group              = (known after apply)
-          + resource_group_name         = (known after apply)
-          + resource_name               = (known after apply)
-          + resource_status             = (known after apply)
-          + security_group              = (known after apply)
-          + status                      = (known after apply)
-          + subnets                     = (known after apply)
-          + tags                        = (known after apply)
-        }
-
-        Apply complete! Resources: 6 added, 0 changed, 0 destroyed.
-
-        Outputs:
-
-        sshcommand = ssh root@ibm_is_floating_ip.fip1.address
-        ```
-        {: screen}
-
-8. Log in to your VPC VSI by using the `ssh` command that is listed at the end of your command line output of the previous step.
+1. Log in to your VPC VSI by using the `ssh` command that is listed at the end of your command-line output of the previous step.
 
     ```sh
     ssh root@52.118.150.55 
@@ -654,24 +335,26 @@ To create a VPC and a VSI:
     Warning: Permanently added '52.116.134.139' (ECDSA) to the list of known hosts.
 
     -bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
-    [root@gsmvpcv13test2-vsi1 ~]#
+    [root@vpctestexample-vsi1 ~]#
     ```
     {: screen}
 
-9. You can verify that VPC and VSI are created by accessing your IBM Cloud console. 
-    - Click **Menu icon** > **VPC Infrastructure** > **VPCs** to view VPC named `gsmvpcv13test2-vpc` is created 
-    - Click **Menu icon** > **VPC Infrastructure** > **Virtual server instances** to view VSI named `gsmvpcv13test2_vsi1` is created 
+2. You can verify that VPC and VSI are created by accessing your [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com). 
+    - Click **Navigation Menu** icon > **VPC Infrastructure** > **VPCs** to view VPC named `vpctestexample` is created 
+    - Click **Navigation Menu** icon > **VPC Infrastructure** > **Virtual server instances** to view VSI named `vsi1` is created 
 
-10. Optional: If you don't want to work with your VPC infrastructure resources anymore, remove them.
+## Executing Terraform destroy
+{: #vpc-tutorial-destroy}
+{: step}
+
+Optional: If you don't want to work with your VPC infrastructure resources anymore, remove them.
     
-    ```sh
-    terraform destroy
-    ```
-    {: pre}
+```sh
+terraform destroy
+```
+{: pre}
 
 **What's next?**
+{: #vpc-tutorial-whatsnext}
 
-Explore other [{{site.data.keyword.cloud_notm}} resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list) that you can provision with Terraform on IBM Cloud. 
-
-
-
+Explore other [{{site.data.keyword.cloud_notm}} resources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/) that you can provision by using Terraform on IBM Cloud. 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-03-17"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for classic infrastructure
 
@@ -94,9 +94,9 @@ terraform {
     }
 }
 ```
-{: pre}
+{: codeblock}
 
-## Execute Terraform init
+## Initializing Terraform
 {: #classic-tutorial-init}
 {: step}
 
@@ -107,7 +107,7 @@ Run the Terraform initialization command and observe the successful execution.
 ```
 {: pre}
 
-## Generate Terrafom plan
+## Generate Terraform plan
 {: #classic-tutorial-plan}
 {: step}
 
@@ -120,7 +120,7 @@ Generate an Terraform on IBM Cloud execution plan. When you execute this command
 
 Review the execution plan to verify the type of resource that is planned to be provisioned by Terraform on IBM Cloud.
 
-## Executing Terrafom apply
+## Executing Terraform apply
 {: #classic-tutorial-apply}
 {: step}
 
@@ -145,7 +145,7 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 {: screen}
 
-## Running Terrafom show
+## Running Terraform show
 {: #classic-tutorial-show}
 {: step}
 
@@ -194,7 +194,7 @@ wait_time_minutes = 90
 
 Optional: Review your classic virtual server instance in the [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/classic/devices) is created.
 
-## Executing Terrafom destroy
+## Executing Terraform destroy
 {: #classic-tutorial-destroy}
 {: step}
 
