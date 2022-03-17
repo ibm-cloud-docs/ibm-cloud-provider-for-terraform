@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-08"
+lastupdated: "2022-03-17"
 
 keywords: terraform provider plugin, terraform functions, terraform open whisk, terraform function action, terraform serverless
 

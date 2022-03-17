@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-03-17"
 
 keywords: terraform create kubernetes cluster, terraform create openshift cluster, terraform kubernetes cluster, terraform openshift cluster, schematics create kubernetes cluster, schematics create openshift cluster, schematics kubernetes cluster, schematics openshift cluster, terraform iks cluster, terraform roks cluster, schematics iks cluster, schematics roks cluster, terraform multizone cluster, schematics multizone cluster, terraform remove default worker pool, schematics remove default worker pool 
 
@@ -132,7 +132,7 @@ Create a classic {{site.data.keyword.containerlong_notm}} or {{site.data.keyword
     ```
     {: codeblock}
 
-    For more information, about the `ibm_container_cluster` arugment reference such as `public_vlan_id`, `private_vlan_id`, `kube_version` values, refer to [registry documentation of `ibm_container_cluster`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_cluster#argument-reference){: external}.
+    For more information, about the description of `ibm_container_cluster` argument reference such as `public_vlan_id`, `private_vlan_id`, `kube_version` values, refer to [registry documentation of `ibm_container_cluster`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_cluster#argument-reference){: external}.
     {: note}
 
     **Example for an {{site.data.keyword.openshiftlong_notm}} cluster**:
@@ -162,7 +162,7 @@ Create a classic {{site.data.keyword.containerlong_notm}} or {{site.data.keyword
     ```
     {: codeblock}
 
-    For more information, about the `ibm_container_cluster` arugment reference such as `public_vlan_id`, `private_vlan_id`, `kube_version` values, refer to [registry documentation of `ibm_container_cluster`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_cluster#argument-reference){: external}.
+    For more information, about the description of `ibm_container_cluster` argument reference such as `public_vlan_id`, `private_vlan_id`, `kube_version` values, refer to [registry documentation of `ibm_container_cluster`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_cluster#argument-reference){: external}.
     {: note}
 
 2. Initialize the Terraform on IBM Cloud CLI.
@@ -266,7 +266,7 @@ Add zones to the default worker pool in your cluster that you created in `step 1
     ```
     {: codeblock}
 
-    For more information, about the `ibm_container_worker_pool_zone_attachment` arugment reference such as `public_vlan_id`, `private_vlan_id` values, refer to [registry documentation of `ibm_container_worker_pool_zone_attachment`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_worker_pool_zone_attachment#argument-reference){: external}.
+    For more information, about the description of `ibm_container_worker_pool_zone_attachment` argument reference such as `public_vlan_id`, `private_vlan_id` values, refer to [registry documentation of `ibm_container_worker_pool_zone_attachment`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_worker_pool_zone_attachment#argument-reference){: external}.
     {: note}
 
 2. Create an Terraform on IBM Cloud execution plan and review the action Terraform on IBM Cloud is about to perform.
@@ -399,10 +399,10 @@ Adding a worker pool only does not create any worker nodes. To create worker nod
     ```
     {: codeblock}
 
-    For more information, about the `ibm_container_worker_pool_zone_attachment` arugment reference such as `public_vlan_id`, `private_vlan_id` values, refer to [registry documentation of `ibm_container_worker_pool_zone_attachment`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_worker_pool_zone_attachment#argument-reference){: external}.
+    For more information, about the description of `ibm_container_worker_pool_zone_attachment` argument reference such as `public_vlan_id`, `private_vlan_id` values, refer to [registry documentation of `ibm_container_worker_pool_zone_attachment`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_worker_pool_zone_attachment#argument-reference){: external}.
     {: note}
 
-     For more information, about the `ibm_container_worker_pool` arugment reference, refer to [registry documentation of `ibm_container_worker_pool`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_worker_pool#argument-reference){: external}.
+     For more information, about the description of `ibm_container_worker_pool` argument reference, refer to [registry documentation of `ibm_container_worker_pool`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_worker_pool#argument-reference){: external}.
     {: note}
     
 2. Create an Terraform on IBM Cloud execution plan and review the actions that Terraform on IBM Cloud is about to perform.
@@ -571,7 +571,7 @@ The default worker pool is automatically created when the cluster is created. Be
     ```
     {: codeblock}
 
-    For more information, about the `ibm_container_worker_pool_zone_attachment` arugment reference such as `public_vlan_id`, `private_vlan_id` values, refer to [registry documentation of `ibm_container_worker_pool_zone_attachment`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_worker_pool_zone_attachment#argument-reference){: external}.
+    For more information, about the description of `ibm_container_worker_pool_zone_attachment` argument reference such as `public_vlan_id`, `private_vlan_id` values, refer to [registry documentation of `ibm_container_worker_pool_zone_attachment`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_worker_pool_zone_attachment#argument-reference){: external}.
     {: note}
 
 7. Update the Terraform on IBM Cloud state file. When you run this command, Terraform on IBM Cloud automatically verifies that all the resources in the state file exist in {{site.data.keyword.cloud_notm}}. Missing resources are removed from the state file.

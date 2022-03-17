@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-03-17"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for classic infrastructure
 
@@ -77,7 +77,7 @@ This tutorial is intended for system administrators who want to learn how to cre
     ```
     {: codeblock}
 
-    For more information, about the `ibm_compute_vm_instance` resource description for the argument and its values, refer to [registry documentation of `ibm_compute_vm_instance`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_vm_instance#argument-reference){: external}
+    For more information, about the description of `ibm_compute_vm_instance` resource argument and its values, refer to [registry documentation of `ibm_compute_vm_instance`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/compute_vm_instance#argument-reference){: external}
 
 ## Configure Terraform and provider version
 {: #classic-tutorial-version}
@@ -94,9 +94,9 @@ terraform {
     }
 }
 ```
-{: pre}
+{: codeblock}
 
-## Execute Terraform init
+## Initializing Terraform
 {: #classic-tutorial-init}
 {: step}
 
@@ -107,7 +107,7 @@ Run the Terraform initialization command and observe the successful execution.
 ```
 {: pre}
 
-## Generate Terrafom plan
+## Generating Terraform plan
 {: #classic-tutorial-plan}
 {: step}
 
@@ -120,7 +120,7 @@ Generate an Terraform on IBM Cloud execution plan. When you execute this command
 
 Review the execution plan to verify the type of resource that is planned to be provisioned by Terraform on IBM Cloud.
 
-## Executing Terrafom apply
+## Executing Terraform apply
 {: #classic-tutorial-apply}
 {: step}
 
@@ -145,7 +145,7 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 {: screen}
 
-## Running Terrafom show
+## Running Terraform show
 {: #classic-tutorial-show}
 {: step}
 
@@ -164,37 +164,14 @@ id = 62364997
 block_storage_ids.# = 0
 cores = 1
 datacenter = dal10
-dedicated_acct_host_only = false
-disks.# = 1
-disks.0 = 25
-domain = example.com
-file_storage_ids.# = 0
-hostname = vm1
-hourly_billing = true
-ip_address_id = 120354689
-ip_address_id_private = 120356235
-ipv4_address = 169.53.33.54
-ipv4_address_private = 10.120.45.183
-ipv6_enabled = false
-local_disk = false
-memory = 1024
-network_speed = 10
-notes = 
-os_reference_code = DEBIAN_8_64
-private_network_only = false
-private_subnet = 10.120.45.128/26
-private_vlan_id = 2451153
-public_bandwidth_unlimited = false
-public_subnet = 169.53.33.48/28
-public_vlan_id = 2451151
-secondary_ip_addresses.# = 0
+...
 wait_time_minutes = 90
 ```
 {: screen}
 
 Optional: Review your classic virtual server instance in the [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/classic/devices) is created.
 
-## Executing Terrafom destroy
+## Executing Terraform destroy
 {: #classic-tutorial-destroy}
 {: step}
 
