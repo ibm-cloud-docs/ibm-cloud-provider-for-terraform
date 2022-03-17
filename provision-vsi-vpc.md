@@ -202,7 +202,7 @@ commands will detect it and remind you to do so if necessary.
 ```
 {: screen}
 
-## Generate Terraform plan
+## Generating Terraform plan
 {: #vpc-tutorial-plan}
 {: step}
 

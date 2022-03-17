@@ -107,7 +107,7 @@ Run the Terraform initialization command and observe the successful execution.
 ```
 {: pre}
 
-## Generate Terraform plan
+## Generating Terraform plan
 {: #classic-tutorial-plan}
 {: step}
 
