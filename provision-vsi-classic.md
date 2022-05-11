@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-17"
+lastupdated: "2022-04-22"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for classic infrastructure
 
@@ -185,6 +185,6 @@ Optional: Remove your classic infrastructure virtual server.
 ## What's next?
 {: #classic-tutorial-whatsnext}
 
-- Explore [Classic infrastrucutre services](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#classic-infra-templates) related templates that you can provision by using Terraform on IBM Cloud.
+- Explore [Classic infrastructure services](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#classic-infra-templates) related templates that you can provision by using Terraform on IBM Cloud.
 
 - Explore [{{site.data.keyword.cloud_notm}} VPC resources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_vpc){: external} that you can provision by using Terraform on IBM Cloud.
