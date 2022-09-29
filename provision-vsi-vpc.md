@@ -73,11 +73,11 @@ This tutorial is intended for system administrators who want to learn how to pro
     ```
     {: codeblock}
 
-3. From your Terraform directory, export `IC_API_Key` variable to set environment variable in your local machine. For more information, about how to setup the environment variables? see [Using environment variable](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#env-vars).
+3. From your Terraform directory, export `IC_API_KEY` variable to set environment variable in your local machine. For more information, about how to setup the environment variables? see [Using environment variable](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#env-vars).
 
     **Example**
 
-    `export IC_API_Key="<provide your IBM Cloud API Key>"`
+    `export IC_API_KEY="<provide your IBM Cloud API Key>"`
 
 4. In the Terraform directory, create a Terraform configuration file and name it `vpc.tf`. The configuration file includes the following definition blocks: 
 
