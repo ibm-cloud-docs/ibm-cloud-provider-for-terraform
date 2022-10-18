@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-10-18"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -26,6 +26,20 @@ For information about releases that occurred before 12 October 2021, see [What's
 
 Review the release notes for March 2022.
 {: shortdesc}
+
+### 31 March 2022
+{: #31mar2022}
+{: release-note}
+
+Features and enhancements with the bug fixes
+:    This release contains the features for Support VPC Infrstructure, Support Transit Gateway, Support CIS, Support Power Instance from [v1.40.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.39.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes** see [Updates and fixes in v1.40.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.40.0).
+
+### 11 March 2022
+{: #11mar2022}
+{: release-note}
+
+Enhancements with the bug fixes
+:   This release contains the fix proxy on kms client, fix crash on resource instance, ibm_cloud_shell_account_settings IAM issue from [1.39.2](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.39.2). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.39.2](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.39.2).
 
 ### 3 March 2022
 {: #3mar2022}
