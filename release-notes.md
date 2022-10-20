@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-18"
+lastupdated: "2022-10-20"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -21,6 +21,48 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 For information about releases that occurred before 12 October 2021, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform).
 {: note}
 
+## July 2022
+{: #release-july-2022}
+
+Review the release notes for July 2022.
+{: shortdesc}
+
+### 1 July 2022
+{: #7july2022}
+{: release-note}
+
+Features and enhancements with the bug fixes
+:   This release contains the features for Support Kubernetes, Support EventNotification, Support HPCS, Support CD Toolchain, Support CD Tekton Pipeline from [v1.43.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.43.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.43.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.43.0).
+
+
+## June 2022
+{: #release-june-2022}
+
+Review the release notes for June 2022.
+{: shortdesc}
+
+### 7 June 2022
+{: #7june2022}
+{: release-note}
+
+Features and enhancements with the bug fixes
+:    This release contains the features for Support Databases, Support PowerSystem, Support EventNotifications, Support VPC, Support Attacker, Support Cloudant from [v1.42.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.42.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.42.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.42.0).
+
+## May 2022
+{: #release-may-2022}
+
+Review the release notes for May 2022.
+{: shortdesc}
+
+### 17 May 2022
+{: #17may2022}
+{: release-note}
+
+For the latest **fixes** for `ibm_is_floating_ip`  **Resources**, **Data sources** on VPC Infrastructure, see Updates and fixes in [v1.41.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.41.1) release.
+
+Features and enhancements with the bug fixes
+:    This release contains the features for Support Databases, Support Power Instance, Support Event Notifications, Support SCC, Support Transist Gateway from [v1.41.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.41.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes** see [Updates and fixes in v1.41.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.41.0).
+
 ## March 2022
 {: #release-mar-2022}
 
@@ -32,14 +74,14 @@ Review the release notes for March 2022.
 {: release-note}
 
 Features and enhancements with the bug fixes
-:    This release contains the features for Support VPC Infrstructure, Support Transit Gateway, Support CIS, Support Power Instance from [v1.40.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.39.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes** see [Updates and fixes in v1.40.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.40.0).
+:    This release contains the features for Support VPC Infrstructure, Support Transit Gateway, Support CIS, Support Power Instance from [v1.40.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.40.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes** see [Updates and fixes in v1.40.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.40.0).
 
 ### 11 March 2022
 {: #11mar2022}
 {: release-note}
 
-Enhancements with the bug fixes
-:   This release contains the fix proxy on kms client, fix crash on resource instance, ibm_cloud_shell_account_settings IAM issue from [1.39.2](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.39.2). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.39.2](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.39.2).
+Enhancements
+:   This release contains the fix proxy on kms client, fix crash on resource instance, ibm_cloud_shell_account_settings IAM issue from [1.39.2](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.39.2). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes** see [Updates and fixes in v1.39.2](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.39.2).
 
 ### 3 March 2022
 {: #3mar2022}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-18"
+lastupdated: "2022-10-20"
 
 keywords: terraform provider plugin, terraform functions, terraform open whisk, terraform function action, terraform serverless
 
@@ -558,6 +558,29 @@ subcollection: ibm-cloud-provider-for-terraform
  </tbody>
  </table>
 
+## Support Database
+{: #ibm-tg_route_rd}
+
+ <table>
+     <thead>
+     <th>Resources</th>
+     <th>Data sources</th>
+ </thead>
+ <tbody>
+     <tr>
+     <td></td>
+     <td>
+     <ul>
+    <li>
+     <a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/database_connection">ibm_database_connection</a>
+     </li>
+     <li>
+     </ul>
+     </td></tr>
+ </tr>
+ </tbody>
+ </table>
+
 ## Support Transist Gateway
 {: #ibm-tg_route_rd}
 
@@ -568,22 +591,23 @@ subcollection: ibm-cloud-provider-for-terraform
  </thead>
  <tbody>
      <tr>
-     <td><ul><li>
-     <a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/tg_route_report">ibm_tg_route_report</a>
-     </li>
-     <li><a href="#"></a></li>
+     <td><ul>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/tg_route_report">ibm_tg_route_report</a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/tg_connection_prefix_filter">ibm_tg_connection_prefix_filter</a></li>
      </ul></td>
      <td>
      <ul>
-     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/tg_route_report">ibm_tg_route_report</li>
-     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/tg_route_reports">ibm_tg_route_reports</li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/tg_connection_prefix_filter">ibm_tg_connection_prefix_filter</a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/tg_connection_prefix_filters">ibm_tg_connection_prefix_filters</a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/tg_route_report">ibm_tg_route_report</a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/tg_route_reports">ibm_tg_route_reports</a></li>
      </ul>
      </td></tr>
  </tr>
  </tbody>
  </table>
 
- ## Support CIS
+## Support CIS
 {: #ibm-cis_alerts_rd}
 
  <table>
@@ -593,19 +617,56 @@ subcollection: ibm-cloud-provider-for-terraform
  </thead>
  <tbody>
      <tr><td>
-     <ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_alert">ibm_cis_alert</a>
-     </li>
+     <ul>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_alert">ibm_cis_alert</a></li>
      </ul>
      </td>
      <td>
-     <ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_alerts">ibm_cis_alerts</li>
+     <ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_alerts">ibm_cis_alerts</a></li>
      </ul>
      </td></tr>
  </tr>
  </tbody>
  </table>
 
-  ## Support Power Instance
+## Support Event Notifications
+{: #ibm-en_destination_rd}
+
+ <table>
+     <thead>
+     <th>Resources</th>
+     <th>Data sources</th>
+ </thead>
+ <tbody>
+     <tr><td>
+     <ul>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/en_destination_android">ibm_en_destination_android</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/en_destination_ios">ibm_en_destination_ios</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/en_destination_webhook">ibm_en_destination_webhook</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/en_subscription_android">ibm_en_subscription_android</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/en_subscription_email">ibm_en_subscription_email</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/en_subscription_ios">ibm_en_subscription_ios</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/en_subscription_sms">ibm_en_subscription_sms</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/en_subscription_webhook">ibm_en_subscription_webhook</a></li>
+     </ul>
+     </td>
+     <td>
+     <ul>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/en_subscription_android">ibm_en_destination_android</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/en_destination_ios">ibm_en_destination_ios</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/en_subscription_webhook">ibm_en_destination_webhook</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/en_subscription_android">ibm_en_subscription_android</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/en_subscription_email">ibm_en_subscription_email</a></li>     
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/en_subscription_ios">ibm_en_subscription_ios</a></li>     
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/en_subscription_sms">ibm_en_subscription_sms</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/en_subscription_webhook">ibm_en_subscription_webhook</a></li>
+     </ul>
+     </td></tr>
+ </tr>
+ </tbody>
+ </table>
+
+## Support Power Instance
 {: #ibm-pi_storage_rd}
 
  <table>
@@ -615,18 +676,44 @@ subcollection: ibm-cloud-provider-for-terraform
  </thead>
  <tbody>
      <tr><td>
+     <ul>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_cloud_connection_network_attach">ibm_pi_cloud_connection_network_attach</a></li>
+     </ul>
      </td>
      <td>
      <ul>
-        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_storage_pool_capacity">ibm_pi_storage_pool_capacity</li>
-        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_storage_pools_capacity">ibm_pi_storage_pools_capacity</li>
-        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_storage_type_capacity">ibm_pi_storage_type_capacity</li>
-        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_storage_types_capacity">ibm_pi_storage_types_capacity</li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_storage_pool_capacity">ibm_pi_storage_pool_capacity</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_storage_pools_capacity">ibm_pi_storage_pools_capacity</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_storage_type_capacity">ibm_pi_storage_type_capacity</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_storage_types_capacity">ibm_pi_storage_types_capacity</a></li>
      </ul>
      </td></tr>
  </tr>
  </tbody>
  </table>
+
+## Support SCC
+{: #ibm-scc_rule_rd}
+
+ <table>
+     <thead>
+     <th>Resources</th>
+     <th>Data sources</th>
+ </thead>
+ <tbody>
+     <tr>
+      <td></td>
+     <td>
+     <ul>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_rule_attachment">ibm_scc_rule_attachment</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_rule">ibm_scc_rule</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_template">ibm_scc_template</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_template_attachment">ibm_scc_template_attachment</a></li>
+     </ul>
+     </td></tr>
+ </tr>
+ </tbody>
+ </table> 
 
 ## Transit Gateway 
 {: #ibm-transit-gateway_rd}
