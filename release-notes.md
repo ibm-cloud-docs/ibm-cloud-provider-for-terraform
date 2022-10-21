@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-20"
+lastupdated: "2022-10-21"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -21,6 +21,19 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 For information about releases that occurred before 12 October 2021, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform).
 {: note}
 
+## August 2022
+{: #release-august-2022}
+
+Review the release notes for August 2022.
+{: shortdesc}
+
+### 2 Aug 2022
+{: #7august2022}
+{: release-note}
+
+Features and enhancements with the bug fixes
+:   This release contains the features for Support Internt Services, Support Security and Compilance, Support Virtual Private Cloud, Support IBM Cloud Storage, Support Private DNS from [v1.44.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.44.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.44.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.44.0).
+
 ## July 2022
 {: #release-july-2022}
 
@@ -33,7 +46,6 @@ Review the release notes for July 2022.
 
 Features and enhancements with the bug fixes
 :   This release contains the features for Support Kubernetes, Support EventNotification, Support HPCS, Support CD Toolchain, Support CD Tekton Pipeline from [v1.43.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.43.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.43.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.43.0).
-
 
 ## June 2022
 {: #release-june-2022}

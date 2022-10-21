@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-20"
+lastupdated: "2022-10-21"
 
 keywords: terraform provider plugin, terraform functions, terraform open whisk, terraform function action, terraform serverless
 
@@ -567,16 +567,12 @@ subcollection: ibm-cloud-provider-for-terraform
      <th>Data sources</th>
  </thead>
  <tbody>
-     <tr>
-     <td></td>
+     <tr><td></td>
      <td>
-     <ul>
-    <li>
-     <a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/database_connection">ibm_database_connection</a>
-     </li>
-     <li>
-     </ul>
-     </td></tr>
+     <ul><li>
+         <a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/database_connection">ibm_database_connection</a>
+     </li></ul>
+     </td>
  </tr>
  </tbody>
  </table>
@@ -666,6 +662,55 @@ subcollection: ibm-cloud-provider-for-terraform
  </tbody>
  </table>
 
+## Support Internt Services
+{: #ibm-cis_mtlss_rd}
+
+ <table>
+     <thead>
+     <th>Resources</th>
+     <th>Data sources</th>
+ </thead>
+ <tbody>
+     <tr><td>
+     <ul>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_mtls">ibm_cis_mtlss</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_mtls_app">ibm_cis_mtls_apps</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_origin_auth">ibm_cis_origin_auths</a></li>
+     </ul>
+     </td>
+     <td>
+     <ul>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_mtls">ibm_cis_mtls</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_mtls_apps">ibm_cis_mtls_app</a></li>
+        <li><a href="#">ibm_cis_origin_auth</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/database_task">ibm_database_task</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/database_tasks">ibm_database_tasks</a></li>
+     </ul>
+     </td></tr>
+ </tr>
+ </tbody>
+ </table>
+
+ ## Support IBM Cloud Storage
+{: #ibm-cos_bucket_replication_rule_rd}
+
+ <table>
+     <thead>
+     <th>Resources</th>
+     <th>Data sources</th>
+ </thead>
+ <tbody>
+     <tr><td></td>
+     <td>
+     <ul>
+        <li><a href="#">ibm_cos_bucket_replication_rule</a></li>
+     </ul>
+     </td></tr>
+ </tr>
+ </tbody>
+ </table>
+
+
 ## Support Power Instance
 {: #ibm-pi_storage_rd}
 
@@ -692,8 +737,29 @@ subcollection: ibm-cloud-provider-for-terraform
  </tbody>
  </table>
 
+  ## Support Private DNS
+{: #ibm-dns_custom_resolver_rd}
+
+ <table>
+     <thead>
+     <th>Resources</th>
+     <th>Data sources</th>
+ </thead>
+ <tbody>
+     <tr><td>
+     <ul><li><a href="#">ibm_dns_custom_resolver_secondary_zones</a></li>
+     </td>
+     <td>
+     <ul>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dns_custom_resolver_secondary_zones">ibm_dns_custom_resolver_secondary_zones</a></li>
+     </ul>
+     </td></tr>
+ </tr>
+ </tbody>
+ </table>
+
 ## Support SCC
-{: #ibm-scc_rule_rd}
+{: #ibm-scc_rule_template_rd}
 
  <table>
      <thead>
@@ -714,6 +780,69 @@ subcollection: ibm-cloud-provider-for-terraform
  </tr>
  </tbody>
  </table> 
+
+ ## Support Security and Compilance
+{: #ibm-scc_rule_posture_rd}
+
+ <table>
+     <thead>
+     <th>Resources</th>
+     <th>Data sources</th>
+ </thead>
+ <tbody>
+     <tr>
+      <td></td>
+     <td>
+     <ul>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_rule_attachment">ibm_scc_rule_attachment</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_credential">ibm_scc_posture_credential</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_collector">ibm_scc_posture_collector</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_scope">ibm_scc_posture_scope</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_credential">ibm_scc_posture_credentials</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_collectors">ibm_scc_posture_collectors</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_rule">ibm_scc_rule</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_template">ibm_scc_template</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_template_attachment">ibm_scc_template_attachment</a></li>
+     </ul>
+     </td></tr>
+ </tr>
+ </tbody>
+ </table> 
+
+  ## Support Virtual Private Cloud 
+{: #ibm-scc_rule_rd}
+
+ <table>
+     <thead>
+     <th>Resources</th>
+     <th>Data sources</th>
+ </thead>
+ <tbody>
+     <tr>
+      <td>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_backup_policy">ibm_is_backup_policy</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_backup_policy_plan">ibm_is_backup_policy_plan</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_vpn_server">ibm_is_vpn_server</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_vpn_server_route">ibm_is_vpn_server_route</a></li>
+      </td>
+     <td>
+     <ul>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_backup_policy">ibm_is_backup_policy</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_backup_policies">ibm_is_backup_policies</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_backup_policy_plan">ibm_is_backup_policy_plan</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_backup_policy_plans">ibm_is_backup_policy_plans</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_vpn_server">ibm_is_vpn_server</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_vpn_servers">ibm_is_vpn_servers</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_vpn_server_client">ibm_is_vpn_server_client</a></li>
+        <li><a href="#">ibm_is_vpn_server_client_configuration</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_vpn_server_clients">ibm_is_vpn_server_clients</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_vpn_server_route">ibm_is_vpn_server_route</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_vpn_server_routes">ibm_is_vpn_server_routes</a></li>
+     </ul>
+     </td></tr>
+ </tr>
+ </tbody>
+ </table>
 
 ## Transit Gateway 
 {: #ibm-transit-gateway_rd}
