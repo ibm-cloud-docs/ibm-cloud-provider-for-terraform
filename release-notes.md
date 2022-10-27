@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-21"
+lastupdated: "2022-10-27"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -26,6 +26,48 @@ For information about releases that occurred before 12 October 2021, see [What's
 
 Review the release notes for August 2022.
 {: shortdesc}
+
+### 3 Oct 2022
+{: #3october2022}
+{: release-note}
+
+Features and enhancements with the bug fixes
+:   This release contains the features for Support for Power Instance, Support Security and Compilance, Support App Configuration, Support Virtual Private Cloud from [v1.46.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.46.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.46.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.46.0).
+
+### 14 Sep 2022
+{: #14eptember2022}
+{: release-note}
+
+Enhancements
+:   This release contains the features Support for local argument to target the respective Schematics region service, see Updates in [v1.45.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.45.1) release.
+
+### 5 Sept 2022
+{: #5september2022}
+{: release-note}
+
+Features and enhancements with the bug fixes
+:   This release contains the features for Support App Configuration, Support IAM Access Group  from [v1.45.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.45.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.45.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.45.0).
+
+### 29 Aug 2022
+{: #29august2022}
+{: release-note}
+
+Enhancements with the bug fixes
+:   For the latest fixes for ibm_database on Cloud Databases, see Updates and fixes in [v1.44.3](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.44.3) release.
+
+### 8 Aug 2022
+{: #8august2022}
+{: release-note}
+
+Enhancements with the bug fixes
+:   For the latest fixes for schematics template metadata on VPC, see Updates and fixes in [v1.44.2](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.44.2) release.
+
+### 3 Aug 2022
+{: #3august2022}
+{: release-note}
+
+Enhancements with the bug fixes
+:   For the latest fixes for ibm_cos_bucket data sources on Object Storage, see Updates and fixes in [v1.44.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.44.1) release.
 
 ### 2 Aug 2022
 {: #7august2022}

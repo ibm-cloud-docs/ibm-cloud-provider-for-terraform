@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-21"
+lastupdated: "2022-10-27"
 
 keywords: terraform provider plugin, terraform functions, terraform open whisk, terraform function action, terraform serverless
 
@@ -552,11 +552,78 @@ subcollection: ibm-cloud-provider-for-terraform
  </thead>
  <tbody>
      <tr>
-     <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_account_settings"><code>ibm_scc_account_settings</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_si_note"><code>ibm_scc_si_note</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_si_occurrence"><code>ibm_scc_si_occurrence</code></a></li></ul></td>
-     <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_account_location"><code>ibm_scc_account_location</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_account_location_settings"><code>ibm_account_location_settings</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_account_locations"><code>ibm_scc_account_locations</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_group_profile"><code>ibm_scc_posture_group_profile</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_latest_scans"><code>ibm_scc_posture_latest_scans</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_profile"><code>ibm_scc_posture_profile</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_profiles"><code>ibm_scc_posture_profiles</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_scan_summaries"><code>ibm_scc_posture_scan_summaries</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_scans_summary"><code>ibm_scc_posture_scan_summary</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_scope_correlation"><code>ibm_scc_posture_scope_correlation</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_scopes"><code>ibm_scc_posture_scopes</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_si_note"><code>ibm_scc_si_note</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_si_notes"><code>ibm_scc_si_notes</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_si_occurrence"><code>ibm_scc_si_occurrence</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_si_occurrences"><code>ibm_scc_si_occurrences</code></a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_si_providers"><code>ibm_scc_si_providers</code></a></li></ul></td>
+     <td><ul>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_account_settings"><code>ibm_scc_account_settings</code></a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_si_note"><code>ibm_scc_si_note</code></a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_si_occurrence"><code>ibm_scc_si_occurrence</code></a></li></ul></td>
+     <td><ul>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_account_location"><code>ibm_scc_account_location</code></a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_account_location_settings"><code>ibm_account_location_settings</code></a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_account_locations"><code>ibm_scc_account_locations</code></a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_group_profile"><code>ibm_scc_posture_group_profile</code></a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_latest_scans"><code>ibm_scc_posture_latest_scans</code></a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_profile"><code>ibm_scc_posture_profile</code></a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_profiles"><code>ibm_scc_posture_profiles</code></a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_scan_summaries"><code>ibm_scc_posture_scan_summaries</code></a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_scans_summary"><code>ibm_scc_posture_scan_summary</code></a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_scope_correlation"><code>ibm_scc_posture_scope_correlation</code></a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_posture_scopes"><code>ibm_scc_posture_scopes</code></a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_si_note"><code>ibm_scc_si_note</code></a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_si_notes"><code>ibm_scc_si_notes</code></a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_si_occurrence"><code>ibm_scc_si_occurrence</code></a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_si_occurrences"><code>ibm_scc_si_occurrences</code></a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/scc_si_providers"><code>ibm_scc_si_providers</code></a></li></ul></td>
  </tr>
  </tbody>
  </table>
+
+## Support App Configuration
+{: #ibm-app_config_segment_rd}
+
+ <table>
+     <thead>
+     <th>Resources</th>
+     <th>Data sources</th>
+ </thead>
+ <tbody>
+     <tr><td>
+     <ul>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/app_config_collection">ibm_app_config_collection</a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/app_config_segment">ibm_app_config_segment</a></li>
+     </ul>
+     </td>
+     <td>
+     <ul>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/app_config_collection">ibm_app_config_collection</a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/app_config_collections">ibm_app_config_collections</a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/app_config_property">ibm_app_config_property</a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/app_config_properties">ibm_app_config_properties</a></li>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/app_config_segment">ibm_app_config_segment</a></li>
+     </ul>
+     </td>
+ </tr>
+ </tbody>
+ </table>
+
+
+## Support IAM Access Group
+{: #ibm-iam_access_group_account_rd}
+
+ <table>
+     <thead>
+     <th>Resources</th>
+     <th>Data sources</th>
+ </thead>
+ <tbody>
+     <tr><td>
+     <ul>
+     <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group_account_settings">ibm_iam_access_group_account_settings</a></li>
+     </ul>
+     </td>
+     <td></td>
+ </tr>
+ </tbody>
+ </table> 
 
 ## Support Database
 {: #ibm-tg_route_rd}
@@ -662,6 +729,34 @@ subcollection: ibm-cloud-provider-for-terraform
  </tbody>
  </table>
 
+## Support for Power Instance 
+{: #ibm-pi_instance_rd}
+
+<table>
+     <thead>
+     <th>Resources</th>
+     <th>Data sources</th>
+ </thead>
+ <tbody>
+<tr><td>
+<li>
+<a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_shared_processor_pool">ibm_pi_shared_processor_pool</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_spp_placement_group">ibm_pi_spp_placement_group</a>
+</li>
+</td>
+<td><ul>
+<li>
+<a href="#">ibm_pi_instance_action</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_shared_processor_pool">ibm_pi_shared_processor_pool</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_shared_processor_pools">ibm_pi_shared_processor_pools</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_spp_placement_group">ibm_pi_spp_placement_group</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_spp_placement_groups">ibm_pi_spp_placement_groups</a></li>
+</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
 ## Support Internt Services
 {: #ibm-cis_mtlss_rd}
 
@@ -702,9 +797,7 @@ subcollection: ibm-cloud-provider-for-terraform
  <tbody>
      <tr><td></td>
      <td>
-     <ul>
-        <li><a href="#">ibm_cos_bucket_replication_rule</a></li>
-     </ul>
+     <ul><li><a href="#">ibm_cos_bucket_replication_rule</a></li></ul>
      </td></tr>
  </tr>
  </tbody>
@@ -737,7 +830,7 @@ subcollection: ibm-cloud-provider-for-terraform
  </tbody>
  </table>
 
-  ## Support Private DNS
+## Support Private DNS
 {: #ibm-dns_custom_resolver_rd}
 
  <table>
@@ -746,14 +839,13 @@ subcollection: ibm-cloud-provider-for-terraform
      <th>Data sources</th>
  </thead>
  <tbody>
-     <tr><td>
-     <ul><li><a href="#">ibm_dns_custom_resolver_secondary_zones</a></li>
-     </td>
+     <tr><td></td>
      <td>
      <ul>
-        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dns_custom_resolver_secondary_zones">ibm_dns_custom_resolver_secondary_zones</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dns_custom_resolver_secondary_zones">ibm_dns_custom_resolver_secondary_zones</a>
+        </li>
      </ul>
-     </td></tr>
+     </td>
  </tr>
  </tbody>
  </table>
@@ -791,7 +883,11 @@ subcollection: ibm-cloud-provider-for-terraform
  </thead>
  <tbody>
      <tr>
-      <td></td>
+      <td>
+      <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_posture_scan_initiate_validation">ibm_scc_posture_scan_initiate_validation</a></li>
+      <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_posture_scan_initiate_validation">ibm_scc_posture_scan_initiate_validation</a></li>
+      <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_posture_profile_import">ibm_scc_posture_profile_import</a></li>
+      </td>
      <td>
      <ul>
         <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/scc_rule_attachment">ibm_scc_rule_attachment</a></li>
@@ -809,7 +905,7 @@ subcollection: ibm-cloud-provider-for-terraform
  </tbody>
  </table> 
 
-  ## Support Virtual Private Cloud 
+## Support Virtual Private Cloud 
 {: #ibm-scc_rule_rd}
 
  <table>
@@ -831,6 +927,9 @@ subcollection: ibm-cloud-provider-for-terraform
         <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_backup_policies">ibm_is_backup_policies</a></li>
         <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_backup_policy_plan">ibm_is_backup_policy_plan</a></li>
         <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_backup_policy_plans">ibm_is_backup_policy_plans</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_instance_groups">ibm_is_instance_groups</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_bare_metal_server_network_interface_reserved_ip">ibm_is_bare_metal_server_network_interface_reserved_ip</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_bare_metal_server_network_interface_reserved_ips">ibm_is_bare_metal_server_network_interface_reserved_ips</a><li>
         <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_vpn_server">ibm_is_vpn_server</a></li>
         <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_vpn_servers">ibm_is_vpn_servers</a></li>
         <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_vpn_server_client">ibm_is_vpn_server_client</a></li>
