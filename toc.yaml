@@ -58,7 +58,6 @@ toc:
           - link:
               label: Architecture reference - Highly available, secured, and managed Kubernetes environment
               href: https://github.com/ibm-cloud-architecture/refarch-public-iaas-iks
-          
   - navgroup:
       id: help
       topics:
@@ -73,4 +72,3 @@ toc:
               label: Debugging Kubernetes service errors
               topics:
               - troubleshooting/tg-kubernetes-service.md
-      
