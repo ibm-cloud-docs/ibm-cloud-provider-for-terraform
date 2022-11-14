@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-10-27"
+lastupdated: "2022-11-14"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -10,7 +10,6 @@ subcollection: ibm-cloud-provider-for-terraform
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Release notes
 {: #release-notes}
@@ -21,10 +20,10 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 For information about releases that occurred before 12 October 2021, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform).
 {: note}
 
-## August 2022
-{: #release-august-2022}
+## October 2022
+{: #release-october-2022}
 
-Review the release notes for August 2022.
+Review the release notes for October 2022.
 {: shortdesc}
 
 ### 3 Oct 2022
@@ -34,8 +33,14 @@ Review the release notes for August 2022.
 Features and enhancements with the bug fixes
 :   This release contains the features for Support for Power Instance, Support Security and Compilance, Support App Configuration, Support Virtual Private Cloud from [v1.46.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.46.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.46.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.46.0).
 
+## September 2022
+{: #release-September-2022}
+
+Review the release notes for September 2022.
+{: shortdesc}
+
 ### 14 Sep 2022
-{: #14eptember2022}
+{: #14september2022}
 {: release-note}
 
 Enhancements
@@ -47,6 +52,12 @@ Enhancements
 
 Features and enhancements with the bug fixes
 :   This release contains the features for Support App Configuration, Support IAM Access Group  from [v1.45.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.45.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.45.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.45.0).
+
+## August 2022
+{: #release-August-2022}
+
+Review the release notes for August 2022.
+{: shortdesc}
 
 ### 29 Aug 2022
 {: #29august2022}
