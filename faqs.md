@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-11"
+lastupdated: "2022-07-05"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -564,3 +564,32 @@ No, if the Terraform version is specified in the payload or template, only the v
 
 Yes, you need to specify the `version = "x.x.x"` as it signifies the {{site.data.keyword.cloud_notm}} provider version. Where as, `required_version = ">1.0.0, <2.0"` signifies the Terraform version to provision. For more information, refer to [Version constraints for the Terraform](/docs/schematics?topic=schematics-version-constraints#tf-version-constraint).
 If the version parameter is not declared in your `versions.tf` file, the latest version of the provider plug-in is automatically used in {{site.data.keyword.bpshort}}. For more information, refer to [Version constraints for the Terraform providers](/docs/schematics?topic=schematics-version-constraints#provider-version-contraint).
+
+## How can I deploy one resources in two different {{site.data.keyword.cloud_notm}} account?
+{: #terraform-depolyresource-faq}
+{: faq}
+{: support}
+
+Use `alias` concept for deploying resource into your different {{site.data.keyword.cloud_notm}} account as you can target provider with different accounts. For more information, about the configuration, see [Creating multiple provider configurations](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#multiple-providers).
+
+## Can I automate the certificates to the Secrets Manager by using Terraform provider?
+{: #terraform-secretmanager-faq}
+{: faq}
+{: support}
+
+No, currently there is no option for automation for moving the certificates to the Secrets Manager. As part of the workaround you can create a Secrets Manager with [ibm_resource_instance]( https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_instance){: external}.
+
+```terraform
+resource "ibm_resource_instance" "secret_manager" {
+  name              = "test"
+  service           = "secrets-manager"
+  plan              = "trial"
+  location          = "us-south"
+  resource_group_id = ibm_resource_group.group.id
+  parameters = {
+    kms_info        = data.ibm_resource_instance.kms.id
+    kms_key         = ibm_kms_key.secrets_manager_root_key.id
+  }
+}
+```
+{: codeblock}
