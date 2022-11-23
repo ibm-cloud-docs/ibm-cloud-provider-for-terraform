@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-11-23"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -164,7 +164,7 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
     Because the `terraform.tfvars` file contains confidential information, do not push this file to a version control system. This file is meant to be on your local system only. 
     {: important}
 
-    **Example of `terraform.tfvars`file**
+    **Example of `terraform.tfvars` file**
 
     ```terraform
     ibmcloud_api_key = "<ibmcloud_api_key>"
