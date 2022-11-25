@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-24"
+lastupdated: "2022-11-25"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -20,6 +20,23 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 For information about releases that occurred before 12 October 2021, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform).
 {: note}
 
+## November 2022
+{: #release-November-2022}
+
+### 8 Nov 2022
+{: #8nov2022}
+{: release-note}
+
+Features and enhancements with the bug fixes
+:   For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.47.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.47.1).
+
+### 2 Nov 2022
+{: #2nov2022}
+{: release-note}
+
+Features and enhancements with the bug fixes
+:   This release contains the features for Support for Support for Kubernetes Service, Support for APP Configuration and Support for DirectLink from [v1.47.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.47.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.47.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.47.0).
+
 ## October 2022
 {: #release-october-2022}
 
@@ -32,7 +49,6 @@ Review the release notes for October 2022.
 
 Features and enhancements with the bug fixes
 :   This release contains the features for Support for Power Instance, Support Security and Compilance, Support App Configuration, Support Virtual Private Cloud from [v1.46.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.46.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.46.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.46.0).
-
 
 ## September 2022
 {: #release-September-2022}

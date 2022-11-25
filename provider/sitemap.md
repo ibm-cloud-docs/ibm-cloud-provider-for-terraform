@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-24"
+lastupdated: "2022-11-25"
 
 keywords: terraform provider plugin, terraform functions, terraform open whisk, terraform function action, terraform serverless
 
@@ -729,6 +729,65 @@ subcollection: ibm-cloud-provider-for-terraform
  </tbody>
  </table>
 
+## Support for App Configuration 
+{: #ibm-pi_instance_rd}
+
+<table>
+     <thead>
+     <th>Resources</th>
+     <th>Data sources</th>
+ </thead>
+ <tbody>
+<tr><td><ul>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/app_config_snapshot">ibm_app_config_snapshot</a></li></ul>
+</td>
+<td><ul>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/app_config_snapshot">ibm_app_config_snapshot</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/app_config_snapshots">ibm_app_config_snapshots</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+## Support for Direct Link 
+{: #ibm-pi_instance_rd}
+
+<table>
+     <thead>
+     <th>Resources</th>
+     <th>Data sources</th>
+ </thead>
+ <tbody>
+<tr><td><ul>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dl_route_report">ibm_dl_route_report</a></li></ul>
+</td>
+<td><ul>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_route_report">ibm_dl_route_report</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_route_reports">ibm_dl_route_reports</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+## Support for Kubernetes Service 
+{: #ibm-pi_instance_rd}
+
+<table>
+     <thead>
+     <th>Resources</th>
+     <th>Data sources</th>
+ </thead>
+ <tbody>
+<tr><td><ul>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_worker">ibm_container_vpc_worker</a></li></ul>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
 ## Support for Power Instance 
 {: #ibm-pi_instance_rd}
 
@@ -738,20 +797,18 @@ subcollection: ibm-cloud-provider-for-terraform
      <th>Data sources</th>
  </thead>
  <tbody>
-<tr><td>
+<tr><td><ul>
 <li>
 <a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_shared_processor_pool">ibm_pi_shared_processor_pool</a></li>
 <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_spp_placement_group">ibm_pi_spp_placement_group</a>
-</li>
+</li></ul>
 </td>
 <td><ul>
-<li>
-<a href="#">ibm_pi_instance_action</a></li>
+<li><a href="#">ibm_pi_instance_action</a></li>
 <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_shared_processor_pool">ibm_pi_shared_processor_pool</a></li>
 <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_shared_processor_pools">ibm_pi_shared_processor_pools</a></li>
 <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_spp_placement_group">ibm_pi_spp_placement_group</a></li>
 <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_spp_placement_groups">ibm_pi_spp_placement_groups</a></li>
-</li>
 </ul></td>
 </tr>
 </tbody>
