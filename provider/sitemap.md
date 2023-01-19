@@ -128,14 +128,32 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #ibm-Cloud-Databases_rd}
 
 <table>
+<thead>
+<th>Resources</th>
+<th>Data sources</th>
+</thead>
+<tbody>
+    <tr>
+        <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/database">ibm_database</a></li></ul></td>
+    <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/database">ibm_database</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/database_backup">ibm_database_backup</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/database_backups">ibm_database_backups</a></li><li><a href="">ibm_database_backup</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/database_connection">ibm_database_connection</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/database_pitr">ibm_database_pitr</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/database_remotes">ibm_database_remotes</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/database_task">ibm_database_task</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/database_tasks">ibm_database_tasks</a></li></ul></td>
+    </tr>
+</tbody>
+</table>
+
+
+
+## Cloudant Databases
+{: #ibm-Cloudant-Databases_rd}
+
+<table>
     <thead>
 <th>Resources</th>
 <th>Data sources</th>
 </thead>
 <tbody>
     <tr>
-        <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cloudant">ibm_cloudant</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/database">ibm_database</a></li></ul></td>
-    <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cloudant">ibm_cloudant</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/database">ibm_database</a></li></ul></td>
+        <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cloudant">ibm_cloudant</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/database">ibm_cloudant_database</a></li></ul></td>
+    <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cloudant">ibm_cloudant</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/database">ibm_cloudant_database</a></li></ul></td>
     </tr>
 </tbody>
 </table>
@@ -144,7 +162,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #ibm-Cloud-Foundry_rd}
 
 <table>
-        <thead>
+<thead>
 <th>Resources</th>
 <th>Data sources</th>
 </thead>
@@ -205,7 +223,7 @@ subcollection: ibm-cloud-provider-for-terraform
 </table>
 
 
-## Direct Link Gateway
+## Direct Link 
 {: #ibm-directlink-gateway_rd}
 
 <table>
@@ -215,8 +233,8 @@ subcollection: ibm-cloud-provider-for-terraform
 </thead>
 <tbody>
     <tr>
-<td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dl_gateway">ibm_dl_gateway</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dl_provider_gateway">ibm_dl_provider_gateway</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dl_virtual_connection">ibm_dl_virtual_connection</a></li></li></ul></td>
-    <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_gateway">ibm_dl_gateway</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_gateways">ibm_dl_gateways</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_locations">ibm_dl_locations</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_offering_speeds">ibm_dl_offering_speeds</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_port">ibm_dl_port</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_ports">ibm_dl_ports</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_provider_gateways">ibm_dl_provider_gateways</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_provider_ports">ibm_dl_provider_ports</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_routers">ibm_dl_routers</a></li></ul></td>
+<td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dl_gateway">ibm_dl_gateway</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dl_provider_gateway">ibm_dl_provider_gateway</a></li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dl_route_report">ibm_dl_route_report</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dl_virtual_connection">ibm_dl_virtual_connection</a></li></li></ul></td>
+    <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_gateway">ibm_dl_gateway</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_gateways">ibm_dl_gateways</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_locations">ibm_dl_locations</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_offering_speeds">ibm_dl_offering_speeds</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_port">ibm_dl_port</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_ports">ibm_dl_ports</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_provider_gateways">ibm_dl_provider_gateways</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_provider_ports">ibm_dl_provider_ports</a></li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_route_report">ibm_dl_route_report</a></li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_route_reports">ibm_dl_route_reports</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_routers">ibm_dl_routers</a></li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -368,14 +386,12 @@ subcollection: ibm-cloud-provider-for-terraform
 </thead>
 <tbody>
     <tr>
-<td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis">ibm_cis</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_cache_settings">ibm_cis_cache_settings</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_certificate_order">ibm_cis_certificate_order</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_certificate_upload">ibm_cis_certificate_upload</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_custom_page">ibm_cis_custom_page</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_dns_record">ibm_cis_dns_record</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_dns_records_import">ibm_cis_dns_records_import</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_domain">ibm_cis_domain</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_domain_settings">ibm_cis_domain_settings</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_edge_functions_action">ibm_cis_edge_functions_action</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_edge_functions_trigger">ibm_cis_edge_functions_trigger</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_filter">ibm_cis_filter</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_firewall">ibm_cis_firewall</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_firewall_rules">ibm_cis_firewall_rules</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_global_load_balancer">ibm_cis_global_load_balancer</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_healthcheck">ibm_cis_healthcheck</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_origin_pool">ibm_cis_origin_pool</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_page_rule">ibm_cis_page_rule</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_range_app">ibm_cis_range_app</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_rate_limit">ibm_cis_rate_limit</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_routing">ibm_cis_routing</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_tls_settings">ibm_cis_tls_settings</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_waf_group">ibm_cis_waf_group</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_waf_package">ibm_cis_waf_package</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_waf_rule">ibm_cis_waf_rule</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_webhook">ibm_cis_webhook</a></li></ul></td>
+<td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis">ibm_cis</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_cache_settings">ibm_cis_cache_settings</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_certificate_order">ibm_cis_certificate_order</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_certificate_upload">ibm_cis_certificate_upload</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_custom_page">ibm_cis_custom_page</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_dns_record">ibm_cis_dns_record</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_dns_records_import">ibm_cis_dns_records_import</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_domain">ibm_cis_domain</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_domain_settings">ibm_cis_domain_settings</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_edge_functions_action">ibm_cis_edge_functions_action</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_edge_functions_trigger">ibm_cis_edge_functions_trigger</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_filter">ibm_cis_filter</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_firewall">ibm_cis_firewall</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_firewall_rules">ibm_cis_firewall_rules</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_global_load_balancer">ibm_cis_global_load_balancer</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_healthcheck">ibm_cis_healthcheck</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_mtls">ibm_cis_mtlss</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_mtls_app">ibm_cis_mtls_apps</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_origin_auth">ibm_cis_origin_auths</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_origin_pool">ibm_cis_origin_pool</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_page_rule">ibm_cis_page_rule</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_range_app">ibm_cis_range_app</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_rate_limit">ibm_cis_rate_limit</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_routing">ibm_cis_routing</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_tls_settings">ibm_cis_tls_settings</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_waf_group">ibm_cis_waf_group</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_waf_package">ibm_cis_waf_package</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_waf_rule">ibm_cis_waf_rule</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_webhook">ibm_cis_webhook</a></li></ul></td>
     <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis">ibm_cis</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_cache_settings">ibm_cis_cache_settings</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_certificates">ibm_cis_certificates</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_custom_certificates">ibm_cis_custom_certificates</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_custom_pages">ibm_cis_custom_pages</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_dns_records">ibm_cis_dns_records</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_domain">ibm_cis_domain</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_edge_functions_actions">ibm_cis_edge_functions_actions</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_edge_functions_triggers">ibm_cis_edge_functions_triggers</a></li>
-    <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_filters">ibm_cis_filters</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_firewall">ibm_cis_firewall</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_firewall_rules">ibm_cis_firewall_rules</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_global_load_balancers">ibm_cis_global_load_balancers</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_healthchecks">ibm_cis_healthchecks</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_ip_addresses">ibm_cis_ip_addresses</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_origin_pools">ibm_cis_origin_pools</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_page_rules">ibm_cis_page_rules</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_range_apps">ibm_cis_range_apps</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_rate_limit">ibm_cis_rate_limit</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_waf_groups">ibm_cis_waf_groups</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_waf_packages">ibm_cis_waf_packages</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_waf_rules">ibm_cis_waf_rules</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_webhooks">ibm_cis_webhooks</a></li></ul></td>
+    <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_filters">ibm_cis_filters</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_firewall">ibm_cis_firewall</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_firewall_rules">ibm_cis_firewall_rules</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_global_load_balancers">ibm_cis_global_load_balancers</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_healthchecks">ibm_cis_healthchecks</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_ip_addresses">ibm_cis_ip_addresses</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_mtls">ibm_cis_mtls</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_mtls_apps">ibm_cis_mtls_app</a></li><li><a href="#">ibm_cis_origin_auth</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_origin_pools">ibm_cis_origin_pools</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_page_rules">ibm_cis_page_rules</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_range_apps">ibm_cis_range_apps</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_rate_limit">ibm_cis_rate_limit</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_waf_groups">ibm_cis_waf_groups</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_waf_packages">ibm_cis_waf_packages</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_waf_rules">ibm_cis_waf_rules</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_webhooks">ibm_cis_webhooks</a></li></ul></td>
     </tr>
     </tbody>
     </table>
-
-
 
 ## Key Management Service
 {: #ibm-kms_rd}
@@ -387,8 +403,9 @@ subcollection: ibm-cloud-provider-for-terraform
 </thead>
 <tbody>
     <tr>
-<td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key">ibm_kms_key</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key_alias">ibm_kms_key_alias</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key_policies">ibm_kms_key_policies</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key_rings">ibm_kms_key_rings</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kp_key">ibm_kp_key</a></li></ul></td>
-    <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/kms_key">ibm_kms_key</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/kms_key_policies">ibm_kms_key_policies</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/kms_keys">ibm_kms_keys</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/kms_keys_rings">ibm_kms_key_rings</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/kp_key">ibm_kp_key</a></li></ul></td>
+<td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key">ibm_kms_key</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key_alias">ibm_kms_key_alias</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key_policies">ibm_kms_key_policies</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key_rings">ibm_kms_key_rings</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kp_key">ibm_kp_key</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_instance_policies">ibm_kms_instance_policies</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key_with_policy_overrides">ibm_kms_key_with_policy_overrides</a></li></ul></td>
+    <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/kms_key">ibm_kms_key</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/kms_key_policies">ibm_kms_key_policies</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/kms_keys">ibm_kms_keys</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/kms_instance_policies">ibm_kms_instance_policies</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/kms_keys_rings">ibm_kms_key_rings</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/kp_key">ibm_kp_key</a></li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -406,7 +423,7 @@ subcollection: ibm-cloud-provider-for-terraform
     <tr>
 <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_addons">ibm_container_addons</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_alb">ibm_container_alb</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_alb_cert">ibm_container_alb_cert</a></li>
 <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/1.37.0/docs/resources/container_alb_create">ibm_container_alb_create</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_api_key_Reset">ibm_container_api_key_reset</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_bind_service">ibm_container_bind_service</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_cluster">ibm_container_cluster</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_cluster_feature">ibm_container_cluster_feature</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/1.37.0/docs/resources/container_nlb_dns">ibm_container_nlb_dns</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_alb">ibm_container_vpc_alb</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/1.37.0/docs/resources/container_vpc_alb_create">ibm_container_vpc_alb_create</a></li>
-<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_cluster">ibm_container_vpc_cluster</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_worker_pool">ibm_container_vpc_worker_pool</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_worker_pool">ibm_container_worker_pool</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_worker_pool_zone_attachment">ibm_container_worker_pool_zone_attachment</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/ob_logging">ibm_ob_logging</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/ob_monitoring">ibm_ob_monitoring</a></li></ul></td>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_cluster">ibm_container_vpc_cluster</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_worker">ibm_container_vpc_worker</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_worker_pool">ibm_container_vpc_worker_pool</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_worker_pool">ibm_container_worker_pool</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_worker_pool_zone_attachment">ibm_container_worker_pool_zone_attachment</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/ob_logging">ibm_ob_logging</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/ob_monitoring">ibm_ob_monitoring</a></li></ul></td>
     <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_addons">ibm_container_addons</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_alb">ibm_container_alb</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_alb_cert">ibm_container_alb_cert</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_bind_service">ibm_container_bind_service</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_cluster">ibm_container_cluster</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_cluster_config">ibm_container_cluster_config</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_cluster_versions">ibm_container_cluster_versions</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_cluster_worker">ibm_container_cluster_worker</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_nlb_dns">ibm_container_nlb_dns</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_vpc_alb">ibm_container_vpc_alb</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_vpc_cluster">ibm_container_vpc_cluster</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_vpc_cluster_worker">ibm_container_vpc_cluster_worker</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_vpc_cluster_worker_pool">ibm_container_vpc_cluster_worker_pool</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_worker_pool">ibm_container_worker_pool</a></li></ul></td>
 </tr>
 </tbody>
@@ -779,66 +796,7 @@ subcollection: ibm-cloud-provider-for-terraform
 </tbody>
 </table>
 
-## Support for Direct Link 
-{: #ibm-direclink_instance_rd}
-
-<table>
-     <thead>
-     <th>Resources</th>
-     <th>Data sources</th>
- </thead>
- <tbody>
-<tr><td><ul>
-<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/dl_route_report">ibm_dl_route_report</a></li></ul>
-</td>
-<td><ul>
-<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_route_report">ibm_dl_route_report</a></li>
-<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/dl_route_reports">ibm_dl_route_reports</a></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-
-## Support for Kubernetes Service 
-{: #ibm-kubeservice_instance_rd}
-
-<table>
-     <thead>
-     <th>Resources</th>
-     <th>Data sources</th>
- </thead>
- <tbody>
-<tr><td><ul>
-<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_worker">ibm_container_vpc_worker</a></li></ul>
-</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-
-## Support for KMS
-{: #ibm-kms_instance_rd}
-
-<table>
-     <thead>
-     <th>Resources</th>
-     <th>Data sources</th>
- </thead>
- <tbody>
-<tr><td><ul>
-<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_instance_policies">ibm_kms_instance_policies</a></li>
-<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key_with_policy_overrides">ibm_kms_key_with_policy_overrides</a></li>
-</ul>
-</td>
-<td><ul>
-<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/kms_instance_policies">ibm_kms_instance_policies</a></li></ul>
-</td>
-</tr>
-</tbody>
-</table>
-
-## Support for Power Instance 
+## Power Instance 
 {: #ibm-pi_instance_rd}
 
 <table>
@@ -864,7 +822,7 @@ subcollection: ibm-cloud-provider-for-terraform
 </tbody>
 </table>
 
-## Support for Powervs 
+## Powervs 
 {: #ibm-powervs_instance_rd}
 
 <table>
@@ -896,36 +854,7 @@ subcollection: ibm-cloud-provider-for-terraform
 </tbody>
 </table>
 
-## Support Internt Services
-{: #ibm-cis_mtlss_rd}
-
- <table>
-     <thead>
-     <th>Resources</th>
-     <th>Data sources</th>
- </thead>
- <tbody>
-     <tr><td>
-     <ul>
-        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_mtls">ibm_cis_mtlss</a></li>
-        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_mtls_app">ibm_cis_mtls_apps</a></li>
-        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_origin_auth">ibm_cis_origin_auths</a></li>
-     </ul>
-     </td>
-     <td>
-     <ul>
-        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_mtls">ibm_cis_mtls</a></li>
-        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cis_mtls_apps">ibm_cis_mtls_app</a></li>
-        <li><a href="#">ibm_cis_origin_auth</a></li>
-        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/database_task">ibm_database_task</a></li>
-        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/database_tasks">ibm_database_tasks</a></li>
-     </ul>
-     </td></tr>
- </tr>
- </tbody>
- </table>
-
- ## Support IBM Cloud Storage
+## Support IBM Cloud Storage
 {: #ibm-cos_bucket_replication_rule_rd}
 
  <table>
