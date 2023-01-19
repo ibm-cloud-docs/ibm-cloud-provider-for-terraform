@@ -31,7 +31,7 @@ Review the release notes for January 2023.
 {: release-note}
 
 Features and enhancements with the bug fixes
-:   This release contains the features for Support for Catalog Management and Support for Virtual Private Cloud from [v1.49.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.49.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.49.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.49.0).
+:   The [1.49.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.49.0) version release contains the [resources and datasources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list) support for Catalog Management and Virtual Private Cloud. For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.49.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.49.0).
 
 ## December 2022
 {: #release-december-2022}
@@ -44,7 +44,7 @@ Review the release notes for December 2022.
 {: release-note}
 
 Features and enhancements with the bug fixes
-:   This release contains the features for Support for Support for Powervs and Support for KMS from [v1.48.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.48.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.48.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.48.0).
+:   The [1.48.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.48.0) version release contains the [resources and datasources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list) support for Powervs and support for KMS. For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.48.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.48.0).
 
 ## November 2022
 {: #release-november-2022}
@@ -64,7 +64,7 @@ Features and enhancements with the bug fixes
 {: release-note}
 
 Features and enhancements with the bug fixes
-:   This release contains the features for Support for Support for Kubernetes Service, Support for APP Configuration and Support for DirectLink from [v1.47.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.47.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.47.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.47.0).
+:   The [1.47.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.47.0) version release contains the [resources and datasources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list) support for Kubernetes Service, APP Configuration and DirectLink. For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.47.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.47.0).
 
 ## October 2022
 {: #release-october-2022}

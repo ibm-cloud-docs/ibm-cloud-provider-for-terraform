@@ -760,11 +760,19 @@ subcollection: ibm-cloud-provider-for-terraform
  </thead>
  <tbody>
 <tr><td><ul>
-<li><a href="">ibm_cm_object</a></li></ul>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cm_catalog">ibm_cm_catalog</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cm_object">ibm_cm_object</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cm_offering">ibm_cm_offering</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cm_offering_instance">ibm_cm_offering_instance</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cm_version">ibm_cm_version</a></li></ul>
 </td>
 <td><ul>
-<li><a href="">ibm_cm_preset</a></li>
-<li><a href="">ibm_cm_object</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cm_catalog">ibm_cm_catalog</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cm_object">ibm_cm_object</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cm_offering">ibm_cm_offering</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cm_offering_instance">ibm_cm_offering_instance</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cm_preset">ibm_cm_preset</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/cm_version">ibm_cm_version</a></li>
 </ul>
 </td>
 </tr>
