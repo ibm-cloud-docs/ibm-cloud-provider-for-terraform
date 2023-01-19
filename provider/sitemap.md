@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-11-25"
+  years: 2017, 2023
+lastupdated: "2023-01-19"
 
 keywords: terraform provider plugin, terraform functions, terraform open whisk, terraform function action, terraform serverless
 
@@ -730,7 +730,7 @@ subcollection: ibm-cloud-provider-for-terraform
  </table>
 
 ## Support for App Configuration 
-{: #ibm-pi_instance_rd}
+{: #ibm-app_instance_rd}
 
 <table>
      <thead>
@@ -750,8 +750,29 @@ subcollection: ibm-cloud-provider-for-terraform
 </tbody>
 </table>
 
+## Support for Catalog Management
+{: #ibm-catalogmang_instance_rd}
+
+<table>
+     <thead>
+     <th>Resources</th>
+     <th>Data sources</th>
+ </thead>
+ <tbody>
+<tr><td><ul>
+<li><a href="">ibm_cm_object</a></li></ul>
+</td>
+<td><ul>
+<li><a href="">ibm_cm_preset</a></li>
+<li><a href="">ibm_cm_object</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## Support for Direct Link 
-{: #ibm-pi_instance_rd}
+{: #ibm-direclink_instance_rd}
 
 <table>
      <thead>
@@ -772,7 +793,7 @@ subcollection: ibm-cloud-provider-for-terraform
 </table>
 
 ## Support for Kubernetes Service 
-{: #ibm-pi_instance_rd}
+{: #ibm-kubeservice_instance_rd}
 
 <table>
      <thead>
@@ -784,6 +805,27 @@ subcollection: ibm-cloud-provider-for-terraform
 <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_vpc_worker">ibm_container_vpc_worker</a></li></ul>
 </td>
 <td></td>
+</tr>
+</tbody>
+</table>
+
+## Support for KMS
+{: #ibm-kms_instance_rd}
+
+<table>
+     <thead>
+     <th>Resources</th>
+     <th>Data sources</th>
+ </thead>
+ <tbody>
+<tr><td><ul>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_instance_policies">ibm_kms_instance_policies</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key_with_policy_overrides">ibm_kms_key_with_policy_overrides</a></li>
+</ul>
+</td>
+<td><ul>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/kms_instance_policies">ibm_kms_instance_policies</a></li></ul>
+</td>
 </tr>
 </tbody>
 </table>
@@ -809,6 +851,38 @@ subcollection: ibm-cloud-provider-for-terraform
 <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_shared_processor_pools">ibm_pi_shared_processor_pools</a></li>
 <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_spp_placement_group">ibm_pi_spp_placement_group</a></li>
 <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_spp_placement_groups">ibm_pi_spp_placement_groups</a></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+## Support for Powervs 
+{: #ibm-powervs_instance_rd}
+
+<table>
+     <thead>
+     <th>Resources</th>
+     <th>Data sources</th>
+ </thead>
+ <tbody>
+<tr><td><ul>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_volume_onboarding">ibm_pi_volume_onboarding</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_volume_group">ibm_pi_volume_group</a></li></ul>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_volume_group_action">ibm_pi_volume_group_action</a></li>
+</td>
+<td><ul>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_disaster_recovery_location">ibm_pi_disaster_recovery_location</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_disaster_recovery_locations">ibm_pi_disaster_recovery_locations</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_group">ibm_pi_volume_group</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_groups">ibm_pi_volume_groups</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_group_details">ibm_pi_volume_group_details</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_groups_details">ibm_pi_volume_groups_details</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_group_storage_details">ibm_pi_volume_group_storage_details</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_remote_copy_relationship">ibm_pi_volume_group_remote_copy_relationships</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_flash_copy_mappings_html">ibm_pi_volume_flash_copy_mappings</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_group_remote_copy_relationships">ibm_pi_volume_remote_copy_relationship</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_onboardings">ibm_pi_volume_onboardings</a></li>
+<li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_onboarding">ibm_pi_volume_onboarding</a></li>
 </ul></td>
 </tr>
 </tbody>
@@ -973,10 +1047,13 @@ subcollection: ibm-cloud-provider-for-terraform
  <tbody>
      <tr>
       <td>
+      <ul>
         <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_backup_policy">ibm_is_backup_policy</a></li>
         <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_backup_policy_plan">ibm_is_backup_policy_plan</a></li>
+        <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_instance_network_interface_floating_ip">ibm_is_instance_network_interface_floating_ip</a></li>
         <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_vpn_server">ibm_is_vpn_server</a></li>
         <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/is_vpn_server_route">ibm_is_vpn_server_route</a></li>
+        </ul>
       </td>
      <td>
      <ul>

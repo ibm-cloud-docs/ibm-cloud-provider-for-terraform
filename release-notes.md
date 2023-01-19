@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-11-25"
+  years: 2017, 2023
+lastupdated: "2023-01-19"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -17,11 +17,40 @@ subcollection: ibm-cloud-provider-for-terraform
 Use the release notes to learn about the latest changes to the {{site.data.keyword.cloud}} Terraform documentation that are grouped by month.
 {: shortdesc}
 
-For information about releases that occurred before 12 October 2021, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform).
+For information about releases that occurred before 19 January 2023, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform).
 {: note}
 
+## January 2023
+{: #release-january-2023}
+
+Review the release notes for January 2023.
+{: shortdesc}
+
+### 12 Jan 2023
+{: #12jan2023}
+{: release-note}
+
+Features and enhancements with the bug fixes
+:   This release contains the features for Support for Catalog Management and Support for Virtual Private Cloud from [v1.49.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.49.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.49.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.49.0).
+
+## December 2022
+{: #release-december-2022}
+
+Review the release notes for December 2022.
+{: shortdesc}
+
+### 1 Dec 2022
+{: #1dec2022}
+{: release-note}
+
+Features and enhancements with the bug fixes
+:   This release contains the features for Support for Support for Powervs and Support for KMS from [v1.48.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.48.0). For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.48.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.48.0).
+
 ## November 2022
-{: #release-November-2022}
+{: #release-november-2022}
+
+Review the release notes for November 2022.
+{: shortdesc} 
 
 ### 8 Nov 2022
 {: #8nov2022}
