@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-04-22"
+  years: 2017, 2023
+lastupdated: "2023-03-07"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for classic infrastructure
 
@@ -131,7 +131,7 @@ Create your classic infrastructure virtual server. Confirm the creation by enter
 ```
 {: pre} 
 
-**Example output:**
+Example output
 
 ```text
 Creating...
@@ -156,7 +156,7 @@ List the classic infrastructure virtual server that is provisioned.
 ```
 {: pre}
 
-**Example output:**
+Example output
 
 ```text
 ibm_compute_vm_instance.vm1:

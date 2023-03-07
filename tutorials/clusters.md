@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-03-17"
+  years: 2017, 2023
+lastupdated: "2023-03-07"
 
 keywords: terraform create kubernetes cluster, terraform create openshift cluster, terraform kubernetes cluster, terraform openshift cluster, schematics create kubernetes cluster, schematics create openshift cluster, schematics kubernetes cluster, schematics openshift cluster, terraform iks cluster, terraform roks cluster, schematics iks cluster, schematics roks cluster, terraform multizone cluster, schematics multizone cluster, terraform remove default worker pool, schematics remove default worker pool 
 
@@ -32,7 +32,7 @@ In this tutorial, you create a standard classic {{site.data.keyword.containerlon
 - The cluster is created with the default worker pool.
 - All worker nodes are connected to a private and public VLAN. These public and private VLANs assign public and private IP addresses to the worker nodes.
 - All worker nodes are created with a virtual worker node flavor on shared hardware. If you want to use a different worker node flavor, see the [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-planning_worker_nodes) or [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-planning_worker_nodes) documentation.
-- To allow access to your cluster from the internet and run public-facing app workloads in your cluster, the cluster is set up with both a public and a private service endpoint. For more information, about how network traffic flows when a public and a private service endpoint is enabled, see Worker-to-master and user-to-master communication: Service endpoints in [{{site.data.keyword.containerlong_notm}}](https://cloud.ibm.com/docs/containers?topic=containers-plan_clusters) and [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-plan_clusters#workeruser-master). 
+- To allow access to your cluster from the internet and run public-facing app workloads in your cluster, the cluster is set up with both a public and a private service endpoint. For more information, about how network traffic flows when a public and a private service endpoint is enabled, see Worker-to-master and user-to-master communication: Service endpoints in [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-plan_clusters) and [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-plan_clusters#workeruser-master). 
 
 Keep in mind that creating a cluster incurs costs. Make sure to review [What am I charged for when I use {{site.data.keyword.containerlong_notm}}?](/docs/containers?topic=containers-faqs#charges) or [What am I charged for when I use {{site.data.keyword.openshiftlong_notm}}?](/docs/openshift?topic=openshift-faqs#charges) before you proceed.
 {: note}
@@ -106,7 +106,7 @@ Create a classic {{site.data.keyword.containerlong_notm}} or {{site.data.keyword
 
 1. Create an Terraform on IBM Cloud configuration file for your single zone cluster. The following example creates a single zone cluster in the `dal10` zone with a default worker pool that consists of 3 worker nodes that are connected to a private and public VLAN in `dal10`.
 
-    **Example for an {{site.data.keyword.containerlong_notm}} cluster**: 
+    Example for an {{site.data.keyword.containerlong_notm}} cluster
 
     ```terraform
     data ibm_resource_group "resource_group" {
@@ -135,7 +135,7 @@ Create a classic {{site.data.keyword.containerlong_notm}} or {{site.data.keyword
     For more information, about the description of `ibm_container_cluster` argument reference such as `public_vlan_id`, `private_vlan_id`, `kube_version` values, refer to [registry documentation of `ibm_container_cluster`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_cluster#argument-reference){: external}.
     {: note}
 
-    **Example for an {{site.data.keyword.openshiftlong_notm}} cluster**:
+    Example for an {{site.data.keyword.openshiftlong_notm}} cluster
 
     ```terraform
     data "ibm_resource_group" "resource_group" {
@@ -221,13 +221,15 @@ Create a classic {{site.data.keyword.containerlong_notm}} or {{site.data.keyword
 
 6. Optional: Review your cluster from the command-line. 
 
-    **Example for {{site.data.keyword.containerlong_notm}}:**
+    Example for {{site.data.keyword.containerlong_notm}}
+
     ```sh
     ibmcloud ks cluster get --cluster tfcluster
     ```
     {: pre}
 
-    **Example for {{site.data.keyword.openshiftlong_notm}}:**
+    Example for {{site.data.keyword.openshiftlong_notm}}
+
     ```sh
     ibmcloud oc cluster get --cluster tfcluster
     ```
@@ -333,13 +335,15 @@ Add zones to the default worker pool in your cluster that you created in `step 1
 
 4. Optional: Review the worker nodes in your cluster from the command-line. 
 
-    **Example for {{site.data.keyword.containerlong_notm}}:**
+    Example for {{site.data.keyword.containerlong_notm}}
+    
     ```sh
     ibmcloud ks workers --cluster tfcluster
     ```
     {: pre}
 
-    **Example for {{site.data.keyword.openshiftlong_notm}}:**
+    Example for {{site.data.keyword.openshiftlong_notm}}
+
     ```sh
     ibmcloud oc workers --cluster tfcluster
     ```
@@ -412,7 +416,8 @@ Adding a worker pool only does not create any worker nodes. To create worker nod
     ```
     {: pre}
 
-    **Example output:**
+    Example output
+    
     ```text
     ...
     Plan: 4 to add, 0 to change, 0 to destroy.
@@ -426,7 +431,7 @@ Adding a worker pool only does not create any worker nodes. To create worker nod
     ```
     {: pre}
 
-    **Example output:**
+    Example output
 
     ```text
     ...
@@ -442,14 +447,14 @@ Adding a worker pool only does not create any worker nodes. To create worker nod
 
 4. Optional: Review the worker nodes in your cluster from the command-line. 
 
-    **Example for {{site.data.keyword.containerlong_notm}}:**
+    Example for {{site.data.keyword.containerlong_notm}}
 
     ```sh
     ibmcloud ks workers --cluster tfcluster --show-pools
     ```
     {: pre}
 
-    **Example for {{site.data.keyword.openshiftlong_notm}}:**
+    Example for {{site.data.keyword.openshiftlong_notm}}
 
     ```sh
     ibmcloud oc workers --cluster tfcluster --show-pools
@@ -467,7 +472,7 @@ The default worker pool is automatically created when the cluster is created. Be
 
 1. Open your Terraform on IBM Cloud configuration and add the following content. To run a command against your cluster, you embed the `local-exec` provisioner in an Terraform on IBM Cloud [`null_resource`](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource){: external}. 
 
-    **Example for an {{site.data.keyword.containerlong_notm}} cluster:**
+    Example for an {{site.data.keyword.containerlong_notm}} cluster
 
     ```terraform
     resource "null_resource" "delete-default-worker-pool" {
@@ -478,7 +483,7 @@ The default worker pool is automatically created when the cluster is created. Be
     ```
     {: codeblock}
 
-    **Example for an {{site.data.keyword.openshiftlong_notm}} cluster:**
+    Example for an {{site.data.keyword.openshiftlong_notm}} cluster
 
     ```text
     resource "null_resource" "delete-default-worker-pool" {
@@ -503,7 +508,7 @@ The default worker pool is automatically created when the cluster is created. Be
     ```
     {: pre}
 
-    **Example output:**
+    Example output
 
     ```text
     ...
@@ -534,14 +539,14 @@ The default worker pool is automatically created when the cluster is created. Be
 
 5. Optional: Review the worker nodes in your cluster from the command-line. 
 
-    **Example for {{site.data.keyword.containerlong_notm}}:**
+    Example for {{site.data.keyword.containerlong_notm}}
 
     ```sh
     ibmcloud ks workers --cluster tfcluster --show-pools
     ```
     {: pre}
 
-    **Example for {{site.data.keyword.openshiftlong_notm}}:**
+    Example for {{site.data.keyword.openshiftlong_notm}}
 
     ```sh
     ibmcloud oc workers --cluster tfcluster --show-pools

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-03-16"
+  years: 2017, 2023
+lastupdated: "2023-03-07"
 
 keywords: terraform templates, templates, sample terraform templates, private catalog
 
@@ -163,7 +163,7 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 
 | Name | Description and resources | Code |
 | --- | --- | --- |
-| `ibm-certificate-manager-order` | Create an {{site.data.keyword.cis_full_notm}} instance with a domain, and use <a href="/docs/certificate-manager?topic=certificate-manager-about-certificate-manager">{{site.data.keyword.cloudcerts_long_notm}}</a> to generate a TLS certificate for this domain.<br><br>**Resources**<br><ul><li>**ibm_resource_instance**</li><li>**ibm_cis**</li><li>**ibm_cis_domain**</li><li>**ibm_certificate_manager_order**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-certificate-manager/ibm-certificate-manager-order)|
+| `ibm-certificate-manager-order` | Create an {{site.data.keyword.cis_full_notm}} instance with a domain, and use <a href="/docs/secrets-manager?topic=secrets-manager-certificates&interface=ui">{{site.data.keyword.cloudcerts_long_notm}}</a> to generate a TLS certificate for this domain.<br><br>**Resources**<br><ul><li>**ibm_resource_instance**</li><li>**ibm_cis**</li><li>**ibm_cis_domain**</li><li>**ibm_certificate_manager_order**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-secrets-manager)|
 
 ### Cloud Foundry templates
 {: #cloud-foundry-snippet}

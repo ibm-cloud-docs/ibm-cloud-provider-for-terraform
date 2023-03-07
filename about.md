@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-03-16"
+  years: 2017, 2023
+lastupdated: "2023-03-07"
 
 keywords: Terraform on IBM Cloud, configuration files, resources, what is Terraform on IBM Cloud, automation, automate
 
@@ -63,7 +63,7 @@ Learn about the key terms that are used in Terraform on IBM Cloud.
 |{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform|To support a multi-cloud approach, Terraform works with different cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, each cloud provider must provide a command-line plug-in for Terraform. The {{site.data.keyword.cloud_notm}} Provider plug-in is {{site.data.keyword.IBM_notm}}'s command-line plug-in for Terraform.|
 |Data source|Data sources are Terraform objects that you can use to retrieve information about {{site.data.keyword.cloud_notm}} resources that you previously provisioned with Terraform on IBM Cloud. |
 |Resource|Resources are Terraform objects that refer to IaaS, PaaS, or SaaS services that you can provision, update, or delete in {{site.data.keyword.cloud_notm}}. Typical examples include bare metal servers, virtual servers, auto scaling groups, load balancers, or non-infrastructure related services, such as Key Protect or Identity and Access Management (IAM) access policies. The resources that are supported in Terraform on IBM Cloud are defined by the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. |
-|Terraform configuration file|A Terraform configuration file defines the {{site.data.keyword.cloud_notm}} resources that you want to create. You can configure one resource per file, or combine multiple resources in one file. Terraform configuration files can be written in HashiCorp Configuration Language (HCL) or JSON format, and are stored in a source code repository. For more information, about how to write configuration files, see [creating Terraform configurations](https://www.terraform.io/language/syntax/configuration){: external}.|
+|Terraform configuration file|A Terraform configuration file defines the {{site.data.keyword.cloud_notm}} resources that you want to create. You can configure one resource per file, or combine multiple resources in one file. Terraform configuration files can be written in HashiCorp Configuration Language (HCL) or JSON format, and are stored in a source code repository. For more information, about how to write configuration files, see [creating Terraform configurations](https://developer.hashicorp.com/terraform/language/syntax/configuration){: external}.|
 |Terraform template|A Terraform template includes one or a set of Terraform configuration files that combined can be used to build a specific {{site.data.keyword.cloud_notm}} solution. For example, you might have a template that creates a multizone cluster in {{site.data.keyword.containerlong_notm}}. This cluster consists of multiple {{site.data.keyword.cloud_notm}} resources in different zones, such as classic infrastructure virtual servers and VLANs. Templates are designed and constructed for reuse by using variables so that you can share these templates with other teams in your organization.|
 |Terraform execution plan|A Terraform execution plan is a summary of actions that Terraform on IBM Cloud must perform to provision, modify, or remove the {{site.data.keyword.cloud_notm}} resources of your template.|
  {: caption="Key terms" caption-side="top"}

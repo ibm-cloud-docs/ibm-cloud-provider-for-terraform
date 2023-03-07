@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-03-08"
+  years: 2017, 2023
+lastupdated: "2023-03-07"
 
 keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, Terraform on IBM Cloud, provision resources
 
@@ -41,13 +41,15 @@ Complete the following steps to upgrade your configuration files:
 
 3. Use the Terraform upgrade command to automatically apply the new syntax to your Terraform configuration files. 
 
-    **Syntax**
+    Syntax
+    
     ```sh
     terraform <0.xx>upgrade
     ```
     {: codeblock}
 
-    **Example to upgrade Terraform v0.12 to Terraform v0.13**
+    Example to upgrade Terraform v0.12 to Terraform v0.13
+    
     ```sh
     terraform 0.13upgrade
     ```
@@ -82,7 +84,7 @@ Complete the following steps to upgrade your configuration files:
 
 4. Verify `versions.tf` file is generated as shown in the example.
 
-    **Example versions.tf:**
+    Example `versions.tf`
 
     ```terraform
     terraform {
@@ -107,7 +109,7 @@ Complete the following steps to upgrade your configuration files:
 
 5. Edit the `versions.tf` configuration file. Comment out `source = "your-registry.example.com/organization/ibm"` parameter and provide source value as `source = "IBM-Cloud/ibm"` as shown in the example. For more information, about the provider registry, see [IBM Cloud provider registry](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest){: external}.
 
-    **Example versions.tf:**
+    Example `versions.tf`
 
     ```terraform
     terraform {

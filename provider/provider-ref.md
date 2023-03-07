@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-03-16"
+  years: 2017, 2023
+lastupdated: "2023-03-07"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -161,7 +161,7 @@ You can configure the {{site.data.keyword.cloud_notm}} Provider plug-in by expor
 You can add multiple `provider` configurations within the same Terraform on IBM Cloud configuration file to create your {{site.data.keyword.cloud_notm}} resources with different provider parameters. 
 {: shortdesc}
 
-Creating multiple `provider` configurations is useful when you want to use different input parameters, such as different regions, zones, infrastructure generations, or accounts to create the {{site.data.keyword.cloud_notm}} resources in your Terraform on IBM Cloud configuration file. For more information, see [Multiple Provider Instances](https://www.terraform.io/language/providers/configuration){: external}. 
+Creating multiple `provider` configurations is useful when you want to use different input parameters, such as different regions, zones, infrastructure generations, or accounts to create the {{site.data.keyword.cloud_notm}} resources in your Terraform on IBM Cloud configuration file. For more information, see [Multiple Provider Instances](https://developer.hashicorp.com/terraform/language/providers/configuration){: external}. 
 
 1. In your Terraform on IBM Cloud configuration or `provider.tf` file, create multiple provider blocks with the same provider name. The provider configuration without an alias is considered the default provider configuration and is used for every resource where you do not specify a specific provider configuration. Any more provider configurations must include an alias so that you can reference this provider from your resource definition.
     ```terraform
@@ -216,7 +216,7 @@ The steps that are involved in configuring your {{site.data.keyword.cloud_notm}}
 |Cloud Foundry|`IBMCLOUD_MCCP_API_ENDPOINT`|N/A|
 |Cloud functions|`IBMCLOUD_NAMESPACE_API_ENDPOINT`|N/A|
 |CIS|`IBMCLOUD_CIS_API_ENDPOINT`|N/A|
-|Containers|`IBMCLOUD_CS_API_ENDPOINT`|[Docs](https://cloud.ibm.com/docs/containers?topic=containers-plan_clusters)|
+|Containers|`IBMCLOUD_CS_API_ENDPOINT`|[Docs](/docs/containers?topic=containers-plan_clusters)|
 |Content Catalog | `IBMCLOUD_CATALOG_MANAGEMENT_API_ENDPOINT`|N/A|
 |Container Registry | `IBMCLOUD_CR_API_ENDPOINT`|N/A|
 |COS config | `IBMCLOUD_COS_CONFIG_ENDPOINT`|N/A|
