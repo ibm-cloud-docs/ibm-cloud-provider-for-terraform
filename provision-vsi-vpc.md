@@ -51,7 +51,7 @@ This tutorial is intended for system administrators who want to learn how to pro
 {: #vpc-tutorial-prereq}
 
 - Install the [latest Terraform on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#tf_installation) and the latest [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
-- Retrieve your [{{site.data.keyword.cloud_notm}} credentials, upload an SSH key, and configure the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
+- Retrieve your [{{site.data.keyword.cloud_notm}} credentials, upload an SSH key, and configure the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ssh-keys?topic=ssh-keys-getting-started-tutorial#getting-started-tutorial).
 
 ## Create the Terraform configuration files
 {: #vpc-tutorial-create}
@@ -138,7 +138,6 @@ This tutorial is intended for system administrators who want to learn how to pro
             subnet          = ibm_is_subnet.subnet1.id
             security_groups = [ibm_is_security_group.sg1.id]
         }
-    }
 
     resource "ibm_is_floating_ip" "fip1" {
         name   = "${local.BASENAME}-fip1"
@@ -148,6 +147,7 @@ This tutorial is intended for system administrators who want to learn how to pro
       output "sshcommand" {
         value = "ssh root@${ibm_is_floating_ip.fip1.address}"
         }
+     }   
     ```
     {: codeblock}
 
