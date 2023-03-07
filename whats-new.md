@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-02-08"
+  years: 2017, 2023
+lastupdated: "2023-03-07"
 
 keywords: terraform resources, terraform modules, terraform provider, terraform autodeploy, 
 
@@ -16,6 +16,9 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #new-in-terraform}
 
 Learn about the latest changes to the Terraform on IBM Cloud service that are grouped by month.
+
+For the information about releases that occurred after 28 September 2021, see [Release notes](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes).
+{: note}
 
 ## September 2021
 {: #sept-2021}

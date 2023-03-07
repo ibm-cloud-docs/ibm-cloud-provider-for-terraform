@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-03-08"
+  years: 2017, 2023
+lastupdated: "2023-03-07"
 
 keywords: install Terraform on IBM Cloud cli, set up Terraform on IBM Cloud cli, ibm cloud provider plugin, Terraform on IBM Cloud
 
@@ -24,7 +24,7 @@ Install the Terraform CLI and invoke the {{site.data.keyword.cloud_notm}} Provid
 Use these steps to install the Terraform CLI. 
 {: shortdesc}
 
-The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform currently supports the Terraform stable version `1.1.x`. Make sure to select a supported Terraform version. 
+The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform currently supports the Terraform stable version `1.x.x`. Make sure to select a supported Terraform version. 
 {: note}
 
 1. Create a `terraform` folder on your local machine, and navigate to your `terraform` folder. 
@@ -114,7 +114,7 @@ To run your Terraform configuration files with Terraform version 0.13.x and high
 
 Create a `versions.tf` file with the following content and store it in your Git repository or the folder where Terraform is set up. In this file, specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use with the `version` parameter. 
 
-**Syntax**:
+Syntax:
 ```terraform
 terraform {
     required_providers {
@@ -127,7 +127,7 @@ terraform {
 ```
 {: codeblock}
 
-**Example**:
+Example:
 ```terraform
 terraform {
     required_providers {
@@ -143,7 +143,7 @@ terraform {
 ### Specifying Terraform version constraints
 {: #terraform-operators}
 
-Terraform supports `version` constraints to specify the range of acceptable versions to initialize. The version syntax format is specified as `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. You can modify the version constraint operator in this example by using combination of the [supported operators in Terraform](https://www.terraform.io/language/expressions/version-constraints#version-constraint-syntax){: external}. Some of the constraints are shown as an example. 
+Terraform supports `version` constraints to specify the range of acceptable versions to initialize. The version syntax format is specified as `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. You can modify the version constraint operator in this example by using combination of the [supported operators in Terraform](https://developer.hashicorp.com/terraform/language/expressions/version-constraints#version-constraint-syntax){: external}. Some of the constraints are shown as an example. 
 
 |Operator|Description|
 |-------|---------|

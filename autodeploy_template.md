@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-03-16"
+  years: 2017, 2023
+lastupdated: "2023-03-07"
 
 keywords: terraform provider deployment, automation, schematics workspace, ibm cloud terraform provider deployment, schematics workspace creation, auto deploy 
 
@@ -25,14 +25,14 @@ The following steps show how to create a URL to deploy to `Terraform >=1.0.0, <2
 2. Copy the public Git repository URL, for example, `https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway`.
 3. Use this syntax to auto deploy the {{site.data.keyword.bpshort}} workspace creation in the {{site.data.keyword.cloud_notm}}.
 
-    **Syntax**
+    Syntax
 
     ```text
     https://cloud.ibm.com/schematics/workspaces/create?repository=<template public Git repository example url>&terraform_version=<terraform_v1.x.x>
     ```
     {: pre}
 
-    **Example**
+    Example
 
     ```text
     https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway&terraform_version=terraform_v1.0
@@ -50,13 +50,13 @@ The following steps show how to create a URL to deploy to `Terraform >=1.0.0, <2
 
 You can add an image on `Deploy to {{site.data.keyword.cloud_notm}} Schematics` text by using the following syntax and example.
 
-**Syntax**
+Syntax
 ```html
 <a href="https://cloud.ibm.com/schematics/workspaces/create?repository=<public Git repository example URL>/<workspace name>&terraform_version=terraform_xx">Deploy to {{site.data.keyword.bplong_notm}} <img src=<image location>></a>
 ```
 {: pre}
 
-**Example**
+Example
 
 ```html
 <img src="images/autodeploy_button.png" alt="Deploy to {{site.data.keyword.cloud_notm}}" usemap="#viewgithubimage_map1t">
@@ -66,7 +66,7 @@ You can add an image on `Deploy to {{site.data.keyword.cloud_notm}} Schematics` 
 ```
 {: pre}
 
-**Output**
+Output
 
 <img usemap="#deploybutton_map1t" alt="Auto deployment button" src="images/autodeploy_button.png"><map name="deploybutton_map1t" alt="This image leads to create an action.">
     <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway&terraform_version=terraform_v1.0" target="_blank" coords="1,3,139,20" shape="rect">

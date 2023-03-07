@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-07-05"
+  years: 2017, 2023
+lastupdated: "2023-03-07"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -170,7 +170,7 @@ You need to configure the different regions in the provider block by using `regi
 {: faq}
 {: support}
 
-You can connect and retrieve information from a multiple regions by using `aliases` parameter as shown in the example code block. For more information, about configuring multiple provider block, see [Multiple provider configurations](https://www.terraform.io/language/providers/configuration#alias-multiple-provider-configurations).
+You can connect and retrieve information from a multiple regions by using `aliases` parameter as shown in the example code block. For more information, about configuring multiple provider block, see [Multiple provider configurations](https://developer.hashicorp.com/terraform/language/providers/configuration#alias-multiple-provider-configurations).
 
 
     ```terraform
@@ -520,7 +520,7 @@ Yes, Terraform saves the configuration in the form of the state file and identif
 {: faq}
 {: support}
 
-You can use [module blocks](https://www.terraform.io/language/modules/syntax){: external} which is a container for multiple resources that are used together. The Terraform configuration has at least one module known as its root module, which consists of the resources defined in the `.tf` files of the main working directory. For more information, about reusing configuration through modules, see [terraform-ibm-modules](https://github.com/terraform-ibm-modules/){: external}.
+You can use [module blocks](https://developer.hashicorp.com/terraform/language/modules/syntax){: external} which is a container for multiple resources that are used together. The Terraform configuration has at least one module known as its root module, which consists of the resources defined in the `.tf` files of the main working directory. For more information, about reusing configuration through modules, see [terraform-ibm-modules](https://github.com/terraform-ibm-modules/){: external}.
 
 ## Can I always set Terraform to use the latest or default version?
 {: #terraform-defaultversion-faq}

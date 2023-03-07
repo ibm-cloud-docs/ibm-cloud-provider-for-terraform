@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-11-23"
+  years: 2017, 2023
+lastupdated: "2023-03-07"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -37,7 +37,7 @@ Use these steps to install the Terraform CLI.
     ```
     {: pre}
 
-2. Download the [Terraform version](https://releases.hashicorp.com/terraform){: external} that you want. The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform currently supports Terraform stable version 1.1.x. For more information, about the supported Terraform version, see [list of Terraform version](/docs/schematics?topic=schematics-migrating-terraform-version).
+2. Download the [Terraform version](https://releases.hashicorp.com/terraform){: external} that you want. The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform currently supports Terraform stable version 1.x.x. For more information, about the supported Terraform version, see [list of Terraform version](/docs/schematics?topic=schematics-migrating-terraform-version).
 3. Extract the Terraform `zip` file and copy the files to your `terraform` directory. 
 4. Set the environment `PATH` variable to your terraform folder.
     ```sh
@@ -113,7 +113,7 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
 
 2. Create a `versions.tf` file with the following content. In this file, specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use with the `version` parameter for {{site.data.keyword.cloud_notm}} Provider plugin, and `required_version` to specify the Terraform template version. If no `version` parameter is specified, {{site.data.keyword.cloud_notm}} Provider automatically uses the latest version of the provider. For a list of supported {{site.data.keyword.cloud_notm}} Provider versions, see [{{site.data.keyword.cloud_notm}} Provider plug-in releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
 
-    **Example with `version` parameter in `versions.tf` file**
+    Example with `version` parameter in `versions.tf` file
     ```terraform
     terraform {
         required_providers {
@@ -126,7 +126,7 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
     ```
     {: codeblock}
 
-    **Example with `required_version` parameter in `versions.tf` file**
+    Example with `required_version` parameter in `versions.tf` file
 
     ```terraform
     terraform {
@@ -140,7 +140,7 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
     ```
     {: codeblock}
 
-    **Example with both `required_version` and `version` parameter in `versions.tf` file**
+    Example with both `required_version` and `version` parameter in `versions.tf` file
 
     ```terraform
     terraform {
@@ -155,7 +155,7 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
     ```
     {: codeblock}
 
-    The version is specified in the following format `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. You can modify the version constraint operator in this example by using combination of the [supported operators in Terraform](https://www.terraform.io/language/expressions/version-constraints#version-constraint-syntax){: external}. 
+    The version is specified in the following format `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. You can modify the version constraint operator in this example by using combination of the [supported operators in Terraform](https://developer.hashicorp.com/terraform/language/expressions/version-constraints#version-constraint-syntax){: external}. 
     {: tip}
 
 3. [Create or retrieve an {{site.data.keyword.cloud_notm}} API key](/docs/account?topic=account-userapikey#create_user_key). The API key is used to authenticate with the {{site.data.keyword.cloud_notm}} platform and to determine your permissions for {{site.data.keyword.cloud_notm}} services.
@@ -164,7 +164,7 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
     Because the `terraform.tfvars` file contains confidential information, do not push this file to a version control system. This file is meant to be on your local system only. 
     {: important}
 
-    **Example of `terraform.tfvars` file**
+    Example of `terraform.tfvars` file
 
     ```terraform
     ibmcloud_api_key = "<ibmcloud_api_key>"
@@ -174,7 +174,7 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
 
 5. Create a provider configuration file that is named `provider.tf`. Use this file to configure the {{site.data.keyword.cloud_notm}} Provider plug-in with the {{site.data.keyword.cloud_notm}} API key from your `terraform.tfvars` file. The plug-in uses this key to access {{site.data.keyword.cloud_notm}} and to work with your {{site.data.keyword.cloud_notm}} service. To access a variable value from the `terraform.tfvars` file, you must first declare the variable in the `provider.tf` file and then reference the variable by using the `var.<variable_name>` syntax . 
 
-    **Example of `provider.tf` file**
+    Example of `provider.tf` file
 
     ```terraform
     variable "ibmcloud_api_key" {}

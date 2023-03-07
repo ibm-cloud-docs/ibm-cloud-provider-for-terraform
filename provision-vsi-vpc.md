@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-03-17"
+  years: 2017, 2023
+lastupdated: "2023-03-07"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for vpc
 
@@ -51,7 +51,7 @@ This tutorial is intended for system administrators who want to learn how to pro
 {: #vpc-tutorial-prereq}
 
 - Install the [latest Terraform on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#tf_installation) and the latest [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
-- Retrieve your [{{site.data.keyword.cloud_notm}} credentials, upload an SSH key, and configure the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
+- Retrieve your [{{site.data.keyword.cloud_notm}} credentials, upload an SSH key, and configure the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ssh-keys?topic=ssh-keys-getting-started-tutorial#getting-started-tutorial).
 
 ## Create the Terraform configuration files
 {: #vpc-tutorial-create}
@@ -75,7 +75,7 @@ This tutorial is intended for system administrators who want to learn how to pro
 
 3. From your Terraform directory, export `IC_API_Key` variable to set environment variable in your local machine. For more information, about how to setup the environment variables? see [Using environment variable](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#env-vars).
 
-    **Example**
+    Example
 
     `export IC_API_Key="<provide your IBM Cloud API Key>"`
 
@@ -138,7 +138,6 @@ This tutorial is intended for system administrators who want to learn how to pro
             subnet          = ibm_is_subnet.subnet1.id
             security_groups = [ibm_is_security_group.sg1.id]
         }
-    }
 
     resource "ibm_is_floating_ip" "fip1" {
         name   = "${local.BASENAME}-fip1"
@@ -148,6 +147,7 @@ This tutorial is intended for system administrators who want to learn how to pro
       output "sshcommand" {
         value = "ssh root@${ibm_is_floating_ip.fip1.address}"
         }
+     }   
     ```
     {: codeblock}
 
@@ -180,7 +180,7 @@ terraform init
 ```
 {: pre}
 
-**Example output:**
+Example output
 
 ```text
 2021/06/22 16:47:27 [WARN] Log levels other than TRACE are currently unreliable, and are supported only for backward compatibility.
@@ -216,7 +216,7 @@ terraform plan
 ```
 {: pre}
 
-**Example output:** 
+Example output
 
 ```text
 var.ssh_key
@@ -281,9 +281,9 @@ terraform apply
 ```
 {: pre}
 
-Observe the [`terraform.tfstate`](https://www.terraform.io/language/state/purpose){: external} file that is created in your directory. Terraform state file maps your resources to your configuration and keep track of the metadata. Also improves performance for the large infrastrucutres.
+Observe the [`terraform.tfstate`](https://developer.hashicorp.com/terraform/language/state/purpose){: external} file that is created in your directory. Terraform state file maps your resources to your configuration and keep track of the metadata. Also improves performance for the large infrastrucutres.
 
-**Example output:**
+Example output
 
 ```text
 An execution plan has been generated and is shown below.
@@ -328,7 +328,7 @@ sshcommand = ssh root@ibm_is_floating_ip.fip1.address
     ```
     {: pre}
 
-    **Example output:**
+    Example output
 
     ```text
     The authenticity of host '52.116.134.139 (52.116.134.139)' can't be established.
