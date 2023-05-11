@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-07"
+lastupdated: "2023-04-21"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for vpc
 
@@ -281,7 +281,7 @@ terraform apply
 ```
 {: pre}
 
-Observe the [`terraform.tfstate`](https://developer.hashicorp.com/terraform/language/state/purpose){: external} file that is created in your directory. Terraform state file maps your resources to your configuration and keep track of the metadata. Also improves performance for the large infrastrucutres.
+Observe the [`terraform.tfstate`](https://developer.hashicorp.com/terraform/language/state/purpose){: external} file that is created in your directory. Terraform state file maps your resources to your configuration and keep track of the metadata. Also improves performance for the large infrastructures.
 
 Example output
 
