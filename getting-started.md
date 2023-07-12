@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-11"
+lastupdated: "2023-07-12"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -16,13 +16,15 @@ subcollection: ibm-cloud-provider-for-terraform
 # Getting started with Terraform on IBM Cloud
 {: #getting-started}
 
-Terraform on IBM Cloud enables predictable and consistent provisioning of {{site.data.keyword.cloud}} platform, classic infrastructure, and VPC infrastructure resources so that you can rapidly build complex, multitiered cloud environments, and enable Infrastructure as Code (IaC). 
+Terraform on IBM Cloud enables predictable and consistent provisioning of {{site.data.keyword.cloud}} platform, services, and VPC infrastructure resources so that you can rapidly build complex, multitier cloud environments, and adopt an Infrastructure as Code (IaC) approach to deploying environments. 
 {: shortdesc}
 
-Looking for a managed Terraform on IBM Cloud solution? Try out [{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started). With {{site.data.keyword.bpshort}}, you can use the Terraform scripting language that you are familiar with, but you don't have to worry about setting up and maintaining the Terraform command line and the {{site.data.keyword.cloud_notm}} Provider plug-in. {{site.data.keyword.bpshort}} also provides pre-defined Terraform templates that you can easily install from the {{site.data.keyword.cloud_notm}} catalog.
+An alternative to configuring {{site.data.keyword.cloud}} with the standalone Terraform CLI is {{site.data.keyword.bplong_notm}}. {{site.data.keyword.bpshort}} is an easy to use, managed Terraform as a service capability on {{site.data.keyword.cloud}}, with a full featured UI along with CLI and API support. {{site.data.keyword.bpshort}} is integrated with the IBM Cloud Platform, with support for team usage, with locking and centralized state file management, IAM access controls, logging and monitoring. Free to use, it supports many additional features, including drift detection and configuration management with Red Hat Ansible.  Get started now with [{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started).
 {: tip}
 
-Here you learn to install the Terraform command-line and the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform, and learn how to configure the plug-in to create, update, or delete {{site.data.keyword.cloud_notm}} services with Terraform.
+Here you learn how to install the Terraform command-line and the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on a local machine, laptop or server. Then how to configure the provider plug-in to create, update, or delete {{site.data.keyword.cloud_notm}} services with Terraform.
+
+See [{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-getting-started) if you want to start working with Terraform immediately without installation of the CLI and provider. 
 
 
 ## Step 1: Installing the Terraform CLI
@@ -103,7 +105,7 @@ After the Terraform command-line installation is complete. You must set up and c
 If you installed or want to use an Terraform v0.12.x and earlier version of Terraform, install the provider plug-in by following the steps in [Terraform v0.12.x and earlier](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v12). 
 {: note}
 
-The following steps show how to set up the provider plug-in for Terraform v0.13.x, or higher. 
+The following steps show how to set up the provider plug-in for Terraform v1.x or higher. 
 
 1. In your Terraform installation directory, create a folder for your first Terraform project and navigate into the folder. This folder is used to store all configuration files and variable definitions. 
     ```sh
@@ -111,7 +113,7 @@ The following steps show how to set up the provider plug-in for Terraform v0.13.
     ```
     {: pre}
 
-2. Create a `versions.tf` file with the following content. In this file, specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use with the `version` parameter for {{site.data.keyword.cloud_notm}} Provider plugin, and `required_version` to specify the Terraform template version. If no `version` parameter is specified, {{site.data.keyword.cloud_notm}} Provider automatically uses the latest version of the provider. For a list of supported {{site.data.keyword.cloud_notm}} Provider versions, see [{{site.data.keyword.cloud_notm}} Provider plug-in releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
+2. Create a `versions.tf` file with the following content. In this file, specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use with the `version` parameter for {{site.data.keyword.cloud_notm}} Provider plugin, and `required_version` to specify the Terraform template version. If no `version` parameter is specified, {{site.data.keyword.cloud_notm}} automatically uses the latest version of the provider. For a list of supported {{site.data.keyword.cloud_notm}} Provider versions, see [{{site.data.keyword.cloud_notm}} Provider plug-in releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
 
     Example with `version` parameter in `versions.tf` file
     ```terraform
