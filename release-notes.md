@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-07"
+lastupdated: "2023-07-31"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -20,11 +20,31 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 For information about releases that occurred before 19 January 2023, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform).
 {: note}
 
+## March 2023
+{: #release-march-2023}
+
+Review the release notes for March 2023.
+{: shortdesc}
+
+### 3 March 2023
+{: #3mar2023}
+{: release-note}
+
+Features and enhancements with the bug fixes
+:   The [1.51.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.51.0) version release contains the [resources and datasources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list) support for Virtual Private Cloud, Event Notification, and beta support for Secrets Manager. For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.51.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.51.0).
+
 ## January 2023
 {: #release-january-2023}
 
 Review the release notes for January 2023.
 {: shortdesc}
+
+### 30 Jan 2023
+{: #30jan2023}
+{: release-note}
+
+Features and enhancements with the bug fixes
+:   The [1.50.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.50.0) version release contains the [resources and datasources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list) support for Virtual Private Cloud. For the latest **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [Updates and fixes in v1.50.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.50.0).
 
 ### 12 Jan 2023
 {: #12jan2023}
