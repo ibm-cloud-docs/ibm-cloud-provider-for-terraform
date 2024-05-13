@@ -2,7 +2,7 @@
 
 copyright: 
     years: 2017, 2024
-lastupdated: "2024-03-15"
+lastupdated: "2024-05-13"
 
 keywords: terraform, terraform ownership, transferring terraform ownership, service ownership, terraform development, terraform release
 
@@ -21,7 +21,7 @@ Terraform parity with API/UI/CLI capabilities is expected for most service featu
 
 Developing the Terraform provider is an ongoing enhancement for the {{site.data.keyword.cloud}} services. This would mean asking each service team to define a plan to deliver Terraform provider support for your service.
 
-* TBU > For more information, about the service team adopting Terraform provider, see [Terraform provider ownership status](https://github.ibm.com/blueprint/terraform-getting-started/blob/master/Adopters.md).
+* For more information, about the service team adopting Terraform provider, see [Terraform provider ownership status](https://github.ibm.com/blueprint/terraform-getting-started/blob/master/Adopters.md).
 
 Follow these steps to create your Terraform provider for the {{site.data.keyword.cloud_notm}} services.
 
@@ -31,7 +31,8 @@ Follow these steps to create your Terraform provider for the {{site.data.keyword
 4. [Maintaining Terraform resources and data sources](#tf-resource-datasource-maintain)
 5. [Executing Terraform test cases](#tf-execute-test-cases)
 6. [Creating Terraform documentation](#tf-tab)
-7. [Creating Terraform provider issues](#tf-issues)
+7. [Raising a PR](#tf-prs)
+8. [Creating Terraform provider issues](#tf-issues)
 
 ![The image shows an overview of the Terraform development & release lifecycle](../images/tf_release_process_v_2_0.png){: caption="Figure 1. Terraform Development & Release Overview" caption-side="bottom"}
 
@@ -51,7 +52,7 @@ To contribute to the {{site.data.keyword.cloud_notm}} provider refer to the [gui
 ## Creating Terraform resources and data sources
 {: #tf-resource-datasource-creation}
 
-The [`OpenAPI SDK Generator`](https://github.ibm.com/CloudEngineering/openapi-sdkgen){: external} has the capability of generating a Terraform provider for your service. The code produced by the generator is combined with the code in the Terraform provider to produce a functioning Terraform provider for {{site.data.keyword.cloud_notm}}.  To generate a working Terraform provider, a working [`Go SDK`](https://test.cloud.ibm.com/docs/api-docs?topic=api-docs-sdk-info)) must be generated for your service. The generated Terraform provider depends on the generated `Go SDK`. Based on the complexity of your service, you may need to make manual edits to properly build and run generated Terraform provider code. Once the `Go SDK` is ready, Publish it in open-source, preferably, in this location: `http://github.com/IBM-Cloud/`.
+The [`OpenAPI SDK Generator`](https://github.ibm.com/CloudEngineering/openapi-sdkgen){: external} has the capability of generating a Terraform provider for your service. The code produced by the generator is combined with the code in the Terraform provider to produce a functioning Terraform provider for {{site.data.keyword.cloud_notm}}.  To generate a working Terraform provider, a working [`Go SDK`](https://test.cloud.ibm.com/docs/api-docs?topic=api-docs-sdk-info) must be generated for your service. The generated Terraform provider depends on the generated `Go SDK`. Based on the complexity of your service, you may need to make manual edits to properly build and run generated Terraform provider code. Once the `Go SDK` is ready, Publish it in open-source, preferably, in this location: `http://github.com/IBM-Cloud/`.
 
 You can generate a Terraform Provider for your service from an [OpenAPI SDK generator](https://github.ibm.com/CloudEngineering/openapi-sdkgen/wiki/Terraform-Provider-Generation){: external}. For any assistance in using `OpenAPI SDK generator` tool watch this [video tutorial](https://yourlearning.ibm.com/activity/PLAN-894B3F6170DE) and/or use `#ibm-terraform-generation` Slack channel.
 
@@ -69,7 +70,7 @@ For more information, about the maintaining Terraform resources and datasource, 
 ## Executing Terraform test cases
 {: #tf-execute-test-cases}
 
-The acceptance tests are mandatory process to create the real resources as it often costs money to run. If you are unable to pay to run an acceptance tests for your contribution, you can mention in your [`Pull Request (PR)`](#raising-a-pr). {{site.data.keyword.cloud_notm}} Provider for Terraform team accepts the implementations of [acceptance tests](https://github.ibm.com/blueprint/terraform-getting-started/blob/master/Contribute.md#acceptance-tests){: external} at minimal and run them for your service. 
+The acceptance tests are mandatory process to create the real resources as it often costs money to run. If you are unable to pay to run an acceptance tests for your contribution, you can mention in your [`Pull Request (PR)`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tf-transfer-ownership#tf-prs). {{site.data.keyword.cloud_notm}} Provider for Terraform team accepts the implementations of [acceptance tests](https://github.ibm.com/blueprint/terraform-getting-started/blob/master/Contribute.md#acceptance-tests){: external} at minimal and run them for your service. 
 
 
 ## Creating Terraform documentation
@@ -77,7 +78,7 @@ The acceptance tests are mandatory process to create the real resources as it of
 
 Typically, your development team will create this documentation in one of the following ways:
 
- 1. Generating the Terraform docs along with the Terraform provider, resources, and data sources from the API definition using the process described [here](#creating-terraform-resources-and-data-sources)
+ 1. Generating the Terraform docs along with the Terraform provider, resources, and data sources from the API definition using the process described [here](#tf-resource-datasource-creation)
  2. Manually writing and updating the docs if the Terraform provider, resources, and data sources are manually created
 
 Generating the Terraform provider using option 1 is convenient and efficient, where not only resources, and data sources for your product/service are included, but also reference docs and examples. The reference documentation is generated to the `website/docs` directory in the output directory that contains the generated provider. The generated examples are in the examples directory under the same output directory.

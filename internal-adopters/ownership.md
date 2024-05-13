@@ -44,7 +44,7 @@ There are important interactions that `service teams` and `Terraform users` can 
 ## Service teams
 {: #tf-svc-teams}
 
-As required in the mandatory [Service Framework item UX030](/docs/service-framework?topic=service-framework-user-experience-ux-#ux030-terraform-provider, all {{site.data.keyword.cloud_notm}} services need to create and maintain their Terraform provider for their service. 
+As required in the mandatory [Service Framework item UX030](/docs/service-framework?topic=service-framework-user-experience-ux-#ux030-terraform-provider), all {{site.data.keyword.cloud_notm}} services need to create and maintain their Terraform provider for their service.
 
 For more information, about creating Terraform provider for your service, see [Creating and owning your Terraform provider](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tf-transfer-ownership) documentation.
 {: shortdesc}
