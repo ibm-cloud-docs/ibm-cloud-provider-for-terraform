@@ -2,7 +2,7 @@
 
 copyright: 
     years: 2017, 2024
-lastupdated: "2024-03-15"
+lastupdated: "2024-05-13"
 
 keywords: terraform, terraform ownership, transferring terraform ownership, service ownership, terraform development, terraform release
 
@@ -70,7 +70,7 @@ For more information, about the maintaining Terraform resources and datasource, 
 ## Executing Terraform test cases
 {: #tf-execute-test-cases}
 
-The acceptance tests are mandatory process to create the real resources as it often costs money to run. If you are unable to pay to run an acceptance tests for your contribution, you can mention in your [`Pull Request (PR)`]((#tf-prs)). {{site.data.keyword.cloud_notm}} Provider for Terraform team accepts the implementations of [acceptance tests](https://github.ibm.com/blueprint/terraform-getting-started/blob/master/Contribute.md#acceptance-tests){: external} at minimal and run them for your service. 
+The acceptance tests are mandatory process to create the real resources as it often costs money to run. If you are unable to pay to run an acceptance tests for your contribution, you can mention in your [`Pull Request (PR)`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tf-transfer-ownership#tf-prs). {{site.data.keyword.cloud_notm}} Provider for Terraform team accepts the implementations of [acceptance tests](https://github.ibm.com/blueprint/terraform-getting-started/blob/master/Contribute.md#acceptance-tests){: external} at minimal and run them for your service. 
 
 
 ## Creating Terraform documentation
