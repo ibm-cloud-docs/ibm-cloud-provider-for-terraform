@@ -50,7 +50,6 @@ toc:
           label: IBM Cloud Provider plug-in for Terraform
           topics:
           - provider/sitemap.md
-          links:
           - link:
               label: IBM Cloud Provider release and updates
               href: https://github.com/IBM-Cloud/terraform-provider-ibm/releases
