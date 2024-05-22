@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-03-07"
+  years: 2017, 2024
+lastupdated: "2024-05-22"
 
 keywords: Terraform on IBM Cloud, ansible, red hat, openshift, automate, automation, iaas
 
@@ -68,7 +68,7 @@ This tutorial is intended for network administrators who want to deploy Red Hat 
 - Install [Docker and the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started). 
 
 ## Lesson 1: Configure your environment
-{: #configure environment}
+{: #configure_environment}
 
 In this tutorial, you provision {{site.data.keyword.cloud_notm}} classic infrastructure for the Red Hat OpenShift Container Platform by using Terraform on IBM Cloud. Before you can start the classic infrastructure provisioning process, you must ensure that you set up Terraform on IBM Cloud, the {{site.data.keyword.cloud_notm}} Provider plug-in, and the Terraform on IBM Cloud OpenShift project. 
 {: shortdesc}
