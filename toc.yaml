@@ -49,8 +49,7 @@ toc:
       - topicgroup:
           label: IBM Cloud Provider plug-in for Terraform
           topics:
-          - provider/sitemap.md
-          links:
+          - provider/provider-sitemap.md
           - link:
               label: IBM Cloud Provider release and updates
               href: https://github.com/IBM-Cloud/terraform-provider-ibm/releases
@@ -71,3 +70,4 @@ toc:
               label: Debugging Kubernetes service errors
               topics:
               - troubleshooting/tg-kubernetes-service.md
+      - sitemap.md
