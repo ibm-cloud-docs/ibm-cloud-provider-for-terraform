@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-03-07"
+  years: 2017, 2024
+lastupdated: "2024-05-28"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for classic infrastructure
 
@@ -50,7 +50,7 @@ This tutorial is intended for system administrators who want to learn how to cre
 
 - Create your new folder in your local machine or [Git repository](/docs/sell?topic=sell-source-repo-setup) to configure the Terraform configuration files.
 - If you do not have one, create an [IBM Cloud Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}. 
-- Install the [{{site.data.keyword.cloud_notm}} command line](/docs/cli?topic=cli-getting-started) and the Terraform installation and configuration. For more information, see [installation and testing the configuration](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#tf_installation).
+- Install the [{{site.data.keyword.cloud_notm}} command line](/docs/cli?topic=cli-getting-started) and the Terraform installation and configuration. For more information, see [installation and testing the configuration](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#tf_installation_step).
 - Setup the environment variable such as `IC_API_KEY`, `IAAS_CLASSIC_USERNAME`, and `IAAS_CLASS_API_KEY` on your local machine. For more information, about how to setup the environment variables? see [Using environment variable](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#env-vars).
 
 

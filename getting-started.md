@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-07-12"
+  years: 2017, 2024
+lastupdated: "2024-05-28"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -28,7 +28,7 @@ See [{{site.data.keyword.bplong_notm}}](/docs/schematics?topic=schematics-gettin
 
 
 ## Step 1: Installing the Terraform CLI
-{: #tf_installation}
+{: #tf_installation_step}
 
 Use these steps to install the Terraform CLI. 
 {: shortdesc}
@@ -97,7 +97,7 @@ Use these steps to install the Terraform CLI.
     {: screen}
 
 ## Step 2: Configuring the {{site.data.keyword.cloud_notm}} Provider plug-in
-{: #install_provider}
+{: #install_provider-step}
 
 After the Terraform command-line installation is complete. You must set up and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform so that you can start working with resources and services in {{site.data.keyword.cloud_notm}}. 
 {: shortdesc}
