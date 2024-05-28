@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-03-07"
+  years: 2017, 2024
+lastupdated: "2024-05-28"
 
 keywords: terraform provider deployment, automation, schematics workspace, ibm cloud terraform provider deployment, schematics workspace creation, auto deploy 
 
@@ -52,16 +52,16 @@ You can add an image on `Deploy to {{site.data.keyword.cloud_notm}} Schematics` 
 
 Syntax
 ```html
-<a href="https://cloud.ibm.com/schematics/workspaces/create?repository=<public Git repository example URL>/<workspace name>&terraform_version=terraform_xx">Deploy to {{site.data.keyword.bplong_notm}} <img src=<image location>></a>
+<a href="https://cloud.ibm.com/schematics/workspaces/create?repository=<public Git repository example URL>/<workspace name>&terraform_version=terraform_xx">Deploy to IBM Cloud Schematics <img src=<image location>></a>
 ```
 {: pre}
 
 Example
 
 ```html
-<img src="images/autodeploy_button.png" alt="Deploy to {{site.data.keyword.cloud_notm}}" usemap="#viewgithubimage_map1t">
+<img src="images/autodeploy_button.png" alt="Deploy to IBM Cloud" usemap="#viewgithubimage_map1t">
 <map name="viewgithubimage_map1t">
-    <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway&terraform_version=terraform_v1.0" target="_blank" coords="3,1,140,20" shape="rect">
+    <area alt="Deploy to IBM Cloud}" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway&terraform_version=terraform_v1.0" target="_blank" coords="3,1,140,20" shape="rect">
 </map>
 ```
 {: pre}

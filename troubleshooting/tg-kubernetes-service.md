@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-03-07"
+  years: 2017, 2024
+lastupdated: "2024-05-28"
 
 keywords: question about kubernetes provider, troubleshooting guide, kubernetes service troubleshooting
 
@@ -24,11 +24,14 @@ During the cluster upgrade from {{site.data.keyword.containershort}} older versi
 ```text
 Error: Get "http://localhost/api/v1/": dial tcp [::1]:80: connect: connection refused
 ```
+{: screen}
 
 Or
+
 ```text
-Error: {{site.data.keyword.containershort_notm}} cluster unreachable: invalid configuration: no configuration has been provided
+Error: Kubernetes service cluster unreachable: invalid configuration: no configuration has been provided
 ```
+{: screen}
 
 You are combining the cluster provisioning and working with the {{site.data.keyword.containershort_notm}} provider at the same time in your Terraform template in the {{site.data.keyword.bplong_notm}} workspace or in your localhost. You make a change in the cluster configuration that leads to the cluster re-create. When you run `terraform refresh` command, you view strange errors such as, network or namespace issues.
 {: tsCauses}

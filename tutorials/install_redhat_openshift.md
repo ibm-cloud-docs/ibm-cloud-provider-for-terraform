@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-22"
+lastupdated: "2024-05-28"
 
 keywords: Terraform on IBM Cloud, ansible, red hat, openshift, automate, automation, iaas
 
@@ -223,7 +223,7 @@ In this tutorial, you provision {{site.data.keyword.cloud_notm}} classic infrast
     </tr>
     <tr>
     <td><code>bastion_flavor</code></td>
-    <td>Enter the flavor that you want to use for your Bastion virtual machine. The Bastion host is the only ingress point for SSH in the OpenShift cluster from external entities. When you connect to the OpenShift Container Platform infrastructure, the Bastion host forwards the request to the infrastructure or app server. For more information, see <a href="https://access.redhat.com/documentation/en-us/reference_architectures/2018/html/deploying_and_managing_openshift_3.9_on_google_cloud_platform/components_and_considerations#bastion_instance">Bastion instance</a> <img src="../icons/launch-glyph.svg" alt="External link icon">. </td>
+    <td>Enter the flavor that you want to use for your Bastion virtual machine. The Bastion host is the only ingress point for SSH in the OpenShift cluster from external entities. When you connect to the OpenShift Container Platform infrastructure, the Bastion host forwards the request to the infrastructure or app server. For more information, see <a href="https://access.redhat.com/products/#bastion_instance">Bastion instance</a> <img src="../icons/launch-glyph.svg" alt="External link icon">. </td>
     <td>B1_4X16X100</td>
     </tr>
     <tr>
