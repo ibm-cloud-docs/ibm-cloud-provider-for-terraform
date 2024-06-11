@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-23"
+lastupdated: "2024-06-11"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -20,11 +20,19 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 For information about releases that occurred before 19 January 2023, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform).
 {: note}
 
+
 ## May 2024
 {: #release-may-2024}
 
 Review the release notes for May 2024.
 {: shortdesc}
+
+### 28 May 2024
+{: #28may2024}
+{: release-note}
+
+Features and enhancements with the bug fixes
+:   The [1.66.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.66.0) release supports [Cloud logs](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/logs_alert){: external}, [{{site.data.keyword.en_full_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/en_smtp_configuration){: external}, [{{site.data.keyword.cis_short}} rule set](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/cis_ruleset){: external}, [KMS adapters](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_kmip_adapters){: external}, [IAM policy management](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/policy_assignment){: external} resources and datasources. For the list of the **Resources**, **Data sources**, **Enhancements**, and **Bug fixes**, see [{{site.data.keyword.terraform-provider_full_notm}} registry documentation](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.66.0){: external}.
 
 ### 17 May 2024
 {: #17may2024}

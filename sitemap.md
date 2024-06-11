@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-28"
+lastupdated: "2024-06-11"
 
 keywords: terraform, sitemap
 
@@ -54,6 +54,8 @@ subcollection: ibm-cloud-provider-for-terraform
 [Release notes](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#release-notes)
 
 * [May 2024](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#release-may-2024)
+
+    * [28 May 2024](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#28may2024)
 
     * [17 May 2024](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#17may2024)
 
