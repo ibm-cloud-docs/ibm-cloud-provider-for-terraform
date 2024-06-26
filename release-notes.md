@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-11"
+lastupdated: "2024-06-26"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -19,7 +19,6 @@ Use the release notes to learn about the latest changes to the {{site.data.keywo
 
 For information about releases that occurred before 19 January 2023, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform).
 {: note}
-
 
 ## May 2024
 {: #release-may-2024}
