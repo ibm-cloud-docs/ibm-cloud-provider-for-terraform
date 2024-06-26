@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-03-07"
+  years: 2017, 2024
+lastupdated: "2024-06-26"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -577,7 +577,7 @@ Use `alias` concept for deploying resource into your different {{site.data.keywo
 {: faq}
 {: support}
 
-No, currently there is no option for automation for moving the certificates to the Secrets Manager. As part of the workaround you can create a Secrets Manager with [ibm_resource_instance]( https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_instance){: external}.
+No, currently there is no option for automation for moving the certificates to the Secrets Manager. As part of the workaround you can create a Secrets Manager with [ibm_resource_instance](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/resource_instance){: external}.
 
 ```terraform
 resource "ibm_resource_instance" "secret_manager" {

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-05-11"
+  years: 2017, 2024
+lastupdated: "2024-06-26"
 
 keywords: terraform create kubernetes cluster, terraform create openshift cluster, terraform kubernetes cluster, terraform openshift cluster, schematics create kubernetes cluster, schematics create openshift cluster, schematics kubernetes cluster, schematics openshift cluster, terraform iks cluster, terraform roks cluster, schematics iks cluster, schematics roks cluster, terraform multizone cluster, schematics multizone cluster, terraform remove default worker pool, schematics remove default worker pool 
 
@@ -24,7 +24,7 @@ completion-time: 2h
 {: toc-services="containers, terraform, openshift"}
 {: toc-completion-time="2h"}
 
-Use this tutorial to create single and multizone clusters with [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-iks-overview) or [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-roks-overview), and deploy your own set of compute hosts in the public cloud where you can run and manage highly available containerized apps.
+Use this tutorial to create single and multizone clusters with [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started) or [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-getting-started), and deploy your own set of compute hosts in the public cloud where you can run and manage highly available containerized apps.
 
 In this tutorial, you create a standard classic {{site.data.keyword.containerlong_notm}} or {{site.data.keyword.openshiftlong_notm}} cluster with the following configuration:
 
@@ -32,7 +32,7 @@ In this tutorial, you create a standard classic {{site.data.keyword.containerlon
 - The cluster is created with the default worker pool.
 - All worker nodes are connected to a private and public VLAN. These public and private VLANs assign public and private IP addresses to the worker nodes.
 - All worker nodes are created with a virtual worker node flavor on shared hardware. If you want to use a different worker node flavor, see the [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-planning_worker_nodes) or [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-planning_worker_nodes) documentation.
-- To allow access to your cluster from the internet and run public-facing app workloads in your cluster, the cluster is set up with both a public and a private service endpoint. For more information, about how network traffic flows when a public and a private service endpoint is enabled, see Worker-to-master and user-to-master communication: Service endpoints in [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-plan_clusters) and [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-plan_clusters#workeruser-master). 
+- To allow access to your cluster from the internet and run public-facing app workloads in your cluster, the cluster is set up with both a public and a private service endpoint. For more information, about how network traffic flows when a public and a private service endpoint is enabled, see Worker-to-master and user-to-master communication: Service endpoints in [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-strategy) and [{{site.data.keyword.openshiftlong_notm}}](/docs/openshift?topic=openshift-clusters). 
 
 Keep in mind that creating a cluster incurs costs. Make sure to review [What am I charged for when I use {{site.data.keyword.containerlong_notm}}?](/docs/containers?topic=containers-faqs#charges) or [What am I charged for when I use {{site.data.keyword.openshiftlong_notm}}?](/docs/openshift?topic=openshift-faqs#charges) before you proceed.
 {: note}
@@ -63,7 +63,7 @@ This tutorial is intended for system administrators that want to learn how to cr
 {: step}
 
 1. [Install the Terraform on IBM Cloud command line and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli).
-2. If you do not have one, [create an {{site.data.keyword.cloud_notm}} API key](/docs/account?topic=account-userapikey#create_user_key).
+2. If you do not have one, [create an {{site.data.keyword.cloud_notm}} API key](/docs/account?topic=account-userapikey&interface=ui).
 3. Create an Terraform on IBM Cloud project directory. The directory will hold all your Terraform on IBM Cloud configuration files that you create as part of this tutorial. The directory in this tutorial is named `tf-cluster`, but you can use any name for the directory.
 
     ``` sh
