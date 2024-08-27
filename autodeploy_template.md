@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-28"
+lastupdated: "2024-08-27"
 
 keywords: terraform provider deployment, automation, schematics workspace, ibm cloud terraform provider deployment, schematics workspace creation, auto deploy 
 
@@ -22,7 +22,7 @@ The following steps show how to create a URL to deploy to `Terraform >=1.0.0, <2
 {: shortdesc}
 
 1. Create a template example by using Terraform on IBM Cloud provider and publish in the public Git repository. To create example, see [Sample template](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples){: external}.
-2. Copy the public Git repository URL, for example, `https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway`.
+2. Copy the public Git repository URL, for example, `https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/app_config_collection`.
 3. Use this syntax to auto deploy the {{site.data.keyword.bpshort}} workspace creation in the {{site.data.keyword.cloud_notm}}.
 
     Syntax
@@ -72,4 +72,4 @@ Output
     <area alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway&terraform_version=terraform_v1.0" target="_blank" coords="1,3,139,20" shape="rect">
 </map>
 
-To view about the sample Terraform template examples, refer [Sample Terraform templates and deploy to {{site.data.keyword.bplong_notm}}](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway){: external}.
+To view about the sample Terraform template examples, refer [Sample Terraform templates and deploy to {{site.data.keyword.bplong_notm}}](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/app_config_collection){: external}.
