@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-26"
+lastupdated: "2024-08-27"
 
 keywords: terraform templates, templates, sample terraform templates, private catalog
 
@@ -151,12 +151,7 @@ In the **Workspace details** page, click **Next** button to view the **Create** 
 ## Snippets
 {: #tf_snippet}
 
-### API Gateway templates
-{: #api-gwy-snippet}
 
-| Name | Description and resources | Code |
-| --- | --- | --- |
-| `ibm-api-gateway` | Create an <a href="/docs/api-gateway?topic=api-gateway-whatis_apigw">{{site.data.keyword.apigw_full_notm}}</a> service instance to set up an API for an {{site.data.keyword.cloud_notm}} service of your choice. You can specify the API endpoint that you want to use to access your service, and define subscription keys so that developers can securely consume your API. <br><br> **Resources** <ul><li>**ibm_resource_instance**</li><li>**ibm_api_gateway_endpoint**</li><li>**ibm_api_gateway**</li><li>**ibm_api_gateway_endpoint_subscription**</li></ul>|[View code snippet](https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-api-gateway)|
 
 ### Certificate Manager templates
 {: #cert-mgr-snippet}

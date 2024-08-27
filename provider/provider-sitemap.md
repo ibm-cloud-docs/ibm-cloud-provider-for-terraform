@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-22"
+lastupdated: "2024-08-27"
 
 keywords: terraform provider plugin, terraform functions, terraform open whisk, terraform function action, terraform serverless
 
@@ -16,20 +16,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # Index of Terraform on IBM Cloud resources and data sources
 {: #resources-datasource-list}
 
-## API Gateway
-{: #ibm-api-gateway_rd}
 
-<table>
-    <thead>
-    <th>Resources</th>
-    <th>Data sources</th>
-    </thead>
-    <tbody>
-    <tr>
-    <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/api_gateway_endpoint">ibm_api_gateway_endpoint</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/api_gateway_endpoint_subscription">ibm_api_gateway_endpoint_subscription</a></li></ul></td><td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/api_gateway">ibm_api_gateway</a></li></ul></td>
-    </tr>
-    </tbody>
-</table>
 
 ## Activity Tracker API
 {: #ibm-activity-tracker_rd}

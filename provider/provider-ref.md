@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-26"
+lastupdated: "2024-08-27"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -239,7 +239,7 @@ The steps that are involved in configuring your {{site.data.keyword.cloud_notm}}
 |Schematics|`IBMCLOUD_SCHEMATICS_API_ENDPOINT`|[Docs](/docs/schematics?topic=schematics-private-endpoints)|
 |Transit Gateway|`IBMCLOUD_TG_API_ENDPOINT`| N/A|
 |UAA|`IBMCLOUD_UAA_ENDPOINT`|N/A|
-|User management|`IBMCLOUD_USER_MANAGEMENT_ENDPOINT`| [Endpoint URLs](https://{DomainName}/apidocs/user-management#endpoint-urls) |
+|User management|`IBMCLOUD_USER_MANAGEMENT_ENDPOINT`| [Endpoint URLs](`https://{DomainName}/apidocs/user-management#endpoint-urls`) |
 |VPC Gen2|`IBMCLOUD_IS_NG_API_ENDPOINT`|N/A|
 {: caption="Terraform on IBM Cloud environment variables" caption-side="top"}
 

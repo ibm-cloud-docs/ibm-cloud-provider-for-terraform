@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-04-21"
+  years: 2017, 2024
+lastupdated: "2024-08-27"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for vpc
 
@@ -57,9 +57,9 @@ This tutorial is intended for system administrators who want to learn how to pro
 {: #vpc-tutorial-create}
 {: step}
 
-1. Make sure that you have the [required permissions](/docs/vpc?topic=vpc-resource-authorizations-required-for-api-and-cli-calls) to create and work with VPC infrastructure. 
+1. Make sure that you have the [required permissions](/docs/vpc?topic=vpc-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure. 
 
-2. In the Terraform directory, create a configuration file names `versions.tf` file as specified in the code block. For more information, about `versions.tf`, refer to [sample Terraform version file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#install_provider).
+2. In the Terraform directory, create a configuration file names `versions.tf` file as specified in the code block. For more information, about `versions.tf`, refer to [sample Terraform version file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#tf_installation_step).
     
     ```terraform
     terraform {
@@ -144,7 +144,7 @@ This tutorial is intended for system administrators who want to learn how to pro
         target = ibm_is_instance.vsi1.primary_network_interface[0].id
         }
 
-      output "sshcommand" {
+        output "sshcommand" {
         value = "ssh root@${ibm_is_floating_ip.fip1.address}"
         }
      }   

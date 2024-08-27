@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-28"
+lastupdated: "2024-08-27"
 
 keywords: question about kubernetes provider, troubleshooting guide, kubernetes service troubleshooting
 
