@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-26"
+lastupdated: "2024-08-27"
 
 keywords: terraform, sitemap
 
@@ -241,8 +241,6 @@ subcollection: ibm-cloud-provider-for-terraform
     * [Classic infrastructure service](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#classic-infra-templates)
 
 * [Snippets](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#tf_snippet)
-
-    * [API Gateway templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#api-gwy-snippet)
 
     * [Certificate Manager templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#cert-mgr-snippet)
 
@@ -609,6 +607,93 @@ subcollection: ibm-cloud-provider-for-terraform
 * [29 December 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform#29-december-2020)
 
 * [14 December 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform#14-december-2020)
+
+
+## Version changelog
+{: #sitemap_version_changelog}
+
+
+[Version changelog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#provider-changelog)
+
+* [Change log for 1.23.2, released 20 April 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1232)
+
+* [Change log for 1.23.1, released 9 April 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1231)
+
+* [Change log for 1.23.0, released 4 April 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1230)
+
+* [Change log for 1.22.0, released 31 March 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1220)
+
+* [Change log for 1.21.2, released 16 March 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1212)
+
+* [Change log for 1.21.1, released 4 March 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1211)
+
+* [Change log for 1.21.0, released 12 February 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1210)
+
+* [Change log for 1.20.1, released 27 January 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1201)
+
+* [Change log for 1.20.0, released 25 January 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1200)
+
+* [Change log for 1.19.0, released 9 January 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1190)
+
+* [Change log for 1.18.0, released 24 December 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1180)
+
+* [Change log for 1.17.0, released 10 December 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1170)
+
+* [Change log for 1.16.1, released 2 December 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1161)
+
+* [Change log for 1.16.0, released 2 December 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1160)
+
+* [Change log for 1.15.0, released 26 November 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1150)
+
+* [Change log for 1.14.0, released 29 October 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1140)
+
+* [Change log for 1.13.1, released 7 October 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1131)
+
+* [Change log for 1.13.0, released 1 October 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1130)
+
+* [Change log for 1.12.0, released 14 September 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1120)
+
+* [Change log for 1.11.2, released 3 September 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1112)
+
+* [Change log for 1.11.1, released 28 August 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1111)
+
+* [Change log for 1.11.0, released 25 August 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1110)
+
+* [Change log for 1.10.0, released 6 August 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v1100)
+
+* [Change log for 1.9.0, released 22 July 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v190)
+
+* [Change log for 1.8.0, released 23 June 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v180)
+
+* [Change log for 1.7.1, released 11 June 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v171)
+
+* [Change log for 1.7.0, released 29 May 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v170)
+
+* [Change log for 1.6.0, released 20 May 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v160)
+
+* [Change log for 1.5.3, released 19 May 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v153)
+
+* [Change log for 1.5.2, released 7 May 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v152)
+
+* [Change log for 1.5.1, released 4 May 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v151)
+
+* [Change log for 1.5.0, released 29 April 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v150)
+
+* [Change log for 1.4.0, released 16 April 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v140)
+
+* [Change log for 1.3.0, released 2 April 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v130)
+
+* [Change log for 1.2.6, released 26 March 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v126)
+
+* [Change log for 1.2.5, released 19 March 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#change-log-for-125-released-19-march-2020)
+
+* [Change log for 1.2.4, released 10 March 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v124)
+
+* [Change log for 1.2.3, released 3 March 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v123)
+
+* [Change log for 1.2.2, released 26 February 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v122)
+
+* [Change log for 1.2.1, released 13 February 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#121)
 
 
 ## Troubleshooting
