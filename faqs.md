@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-06-26"
+lastupdated: "2024-09-23"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -104,7 +104,7 @@ If you require one or more address prefixes you should define as part of resourc
 {: faq}
 {: support}
 
-A access group policy is a way to organize your account having create, modify, or delete an IAM access groups, where user can grant permissions to members with appropriate privileges such as **Manager**, **Viewer** and **Administrator**. For more information, about [ibm_access_group_policy resource](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group_policy){: external} and [iam_service_policy resource](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_service_policy){: external}. 
+A access group policy is a way to organize your account having create, modify, or delete an IAM access groups, where user can grant permissions to members with appropriate privileges such as **Manager**, **Viewer** and **Administrator**. For more information, about [`ibm_access_group_policy resource`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group_policy){: external} and [iam_service_policy resource](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_service_policy){: external}. 
 
     ```terraform
     resource "ibm_iam_access_group" "accgrp" {
