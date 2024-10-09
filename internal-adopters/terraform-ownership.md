@@ -34,7 +34,7 @@ Follow these steps to create your Terraform provider for the {{site.data.keyword
 7. [Raising a PR](#tf-prs)
 8. [Creating Terraform provider issues](#tf-issues)
 
-![The image shows an overview of the Terraform development & release lifecycle](../images/tf_release_process_v_2_0.png){: caption="Figure 1. Terraform Development & Release Overview" caption-side="bottom"}
+![The image shows an overview of the Terraform development & release lifecycle](../images/tf_release_process_v_2_0.png){: caption="Terraform Development & Release Overview" caption-side="bottom"}
 
 ## Planning
 {: #tf-support}
