@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-27"
+  years: 2017, 2025
+lastupdated: "2025-02-13"
 
 keywords: question about kubernetes provider, troubleshooting guide, kubernetes service troubleshooting
 
@@ -45,4 +45,4 @@ To troubleshoot this error you need to ensure:
 
 - The Terraform provider evaluates the provider blocks versus actual resource, and the order in which the resources are defined. For more information, see [Provider configuration](https://developer.hashicorp.com/terraform/language/providers/configuration#provider-configuration){: external}.
 
-If you cannot resolve this issue, contact support by opening a support case for the service that you want to work with. Make sure to include the incident ID. For more information, see [Using the Support Center](/docs/get-support?topic=get-support-using-avatar).
+If you cannot resolve this issue, contact support by opening a support case for the service that you want to work with. Make sure to include the incident ID. For more information, see [Using the Support Center](/docs/account?topic=account-using-avatar).
