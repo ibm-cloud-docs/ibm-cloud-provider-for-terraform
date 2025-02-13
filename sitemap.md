@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-27"
+  years: 2017, 2025
+lastupdated: "2025-02-13"
 
 keywords: terraform, sitemap
 
@@ -685,7 +685,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 * [Change log for 1.2.6, released 26 March 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v126)
 
-* [Change log for 1.2.5, released 19 March 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#change-log-for-125-released-19-march-2020)
+* [Change log for 1.2.5, released 19 March 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v125)
 
 * [Change log for 1.2.4, released 10 March 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v124)
 
@@ -706,4 +706,3 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 [How can I resolve the network error when working with the {{site.data.keyword.containershort_notm}} provider?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-ks-network-error#ks-network-error)
-

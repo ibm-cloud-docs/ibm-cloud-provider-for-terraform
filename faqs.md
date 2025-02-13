@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-09-23"
+  years: 2017, 2025
+lastupdated: "2025-02-13"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -377,7 +377,7 @@ Currently, the {{site.data.keyword.bplong_notm}} service team is working to enab
 {: faq}
 {: support}
 
-The sample code block allows to create the resources of the same type in a sequential order. For more information, about creating a trigger that listens to an Event Streams instance block, see [Event Streams_trigger](/docs/openwhisk?topic=openwhisk-pkg_event_streams#eventstreams_trigger).
+The sample code block allows to create the resources of the same type in a sequential order. For more information, about creating a trigger that listens to an Event Streams instance block, see [Event Streams Terraform](/docs/EventStreams?topic=EventStreams-eventstreams-terraform) reference.
 
     ```terraform
     resource "ibm_function_trigger" "trigger" {
