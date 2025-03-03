@@ -8,7 +8,7 @@
         {
           "title": "Set up the Terraform CLI and IBM Cloud Provider plug-in",
           "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started"
-        }
+        },
         {
           "title": "Find supported Terraform resources and data sources",
           "href": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs"
