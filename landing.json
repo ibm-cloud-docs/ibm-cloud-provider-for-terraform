@@ -14,29 +14,20 @@
           "href": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs"
         },
         {
-        "title": "Browse Terraform templates",
-        "description": "Explore the sample Terraform templates, onboard them to your private catalogs, and try them using Schematics.",
-        "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates"
+           "title": "Browse Terraform templates",
+           "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates"
         },
         {
           "title": "Create Kubernetes and OpenShift clusters",
-          "description": "Learn how to create single and multizone IBM Cloud Kubernetes Service or Red Hat OpenShift on IBM Cloud clusters with Terraform.",
           "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters"
         },
         {
           "title": "Create a virtual server in a VPC",
-          "description": "Use Terraform on IBM Cloud to provision a VPC, set up networking for your VPC, and provision a virtual server for VPC in your IBM Cloud account.",
           "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config"
         }
       ]
     },
-    "section_highlights": [
-      {
-        "title": "IBM Developer",
-        "description": "Visit IBM Developer for technical articles, code patterns, tutorials, and more. ",
-        "href": "https://developer.ibm.com/?q=schematics",
-        "type": "training"
-      },   
+    "section_highlights": [  
       {
         "title": "Training",
         "description": "Build your skill with IBM Cloud training. ",
