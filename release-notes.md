@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-17"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
 
@@ -19,6 +19,23 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 For information about releases that occurred before 19 January 2023, see [What's new?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform)
 {: note}
+
+## March 2025
+{: #release-mar-2025}
+
+Review the release notes for March 2025.
+{: shortdesc}
+
+### 17 March 2025
+{: #17mar2025}
+{: release-note}
+
+Added a video to install Terraform on IBM Cloud
+:   Included a [video](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#tf_installation_step) with the steps to install Terraform on IBM Cloud.
+
+Updated the change log 
+:   The [change log](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-versiontaglist) version tags for Terraform on IBM Cloud.
+
 
 ## February 2025
 {: #release-feb-2025}
