@@ -33,24 +33,7 @@ Watch the video or follow the steps to install the IBM Cloud Provider plug-in fo
 
 ![Installing the IBM Cloud provider plug-in for Terraform](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_juwigbeb){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
 
-### Video transcript
-{: #video-transcript-in}
-{: notoc}
 
-Here are the steps to install Terraform CLI and IBM Cloud provider plug-in for Terraform.
-
-    1. Create a Terraform folder on your local machine, and navigate to your terraform folder.
-    2. Extract the Terraform zip file and copy the files to your terraform directory.
-    3. Make sure Terraform is placed correctly.
-    4. Set the environment PATH variable to your Terraform files.
-    5. Add necessary permissions if required.
-    6. Verify that the installation is successful by using a terraform command.
-    7. In your Terraform installation directory, create a folder for your first Terraform project and navigate into the folder. This folder is used to store all configuration files and variable definitions.
-    8. Add Configuration files with .tf extension.
-    9. Make sure to populate your IBM CLOUD API KEY in terraform.tfvars file.
-    10. Initialize Terraform on IBM Cloud.
-    11. Generate a Terraform on IBM Cloud execution plan.
-    12. Create your infrastructure resources to provision in the Cloud.
 
 Use the following steps to install the Terraform CLI.
 {: shortdesc}
