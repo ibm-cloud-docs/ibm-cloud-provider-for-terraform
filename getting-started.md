@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-17"
+lastupdated: "2025-04-08"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -40,69 +40,69 @@ Use the following steps to install the Terraform CLI.
 
 1. Create a `terraform` folder on your local machine, and navigate to your `terraform` folder.
 
-        ```sh
-        mkdir terraform && cd terraform
-        ```
-        {: pre}
+    ```sh
+    mkdir terraform && cd terraform
+    ```
+    {: pre}
 
 2. Download the [Terraform version](https://releases.hashicorp.com/terraform){: external} that you want. The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform currently supports Terraform stable version 1.x.x. For more information about the supported Terraform version, see [list of Terraform version](/docs/schematics?topic=schematics-migrating-terraform-version).
 3. Extract the Terraform `zip` file and copy the files to your `terraform` directory. 
 4. Set the environment `PATH` variable to your terraform folder.
 
-        ```sh
-        export PATH=$PATH:$HOME/terraform
-        ```
-        {: pre}
+    ```sh
+    export PATH=$PATH:$HOME/terraform
+    ```
+    {: pre}
 
 5. Verify that the installation is successful by using a `terraform` command.
 
-        ```sh
-        terraform
-        ```
-        {: pre}
+    ```sh
+    terraform
+    ```
+    {: pre}
 
-    Example output:
-        ```text
-        Usage: terraform [global options] <subcommand> [args]
+Example output:
+    ```text
+    Usage: terraform [global options] <subcommand> [args]
 
-        The available commands for execution are listed below.
-        The primary workflow commands are given first, followed by
-        less common or more advanced commands.
+    The available commands for execution are listed below.
+    The primary workflow commands are given first, followed by
+    less common or more advanced commands.
 
-        Main commands:
-        init          Prepare your working directory for other commands
-        validate      Check whether the configuration is valid
-        plan          Show changes required by the current configuration
-        apply         Create or update infrastructure
-        destroy       Destroy previously-created infrastructure
+    Main commands:
+    init          Prepare your working directory for other commands
+    validate      Check whether the configuration is valid
+    plan          Show changes required by the current configuration
+    apply         Create or update infrastructure
+    destroy       Destroy previously-created infrastructure
 
-        All other commands:
-        console       Try Terraform expressions at an interactive command prompt
-        fmt           Reformat your configuration in the standard style
-        force-unlock  Release a stuck lock on the current workspace
-        get           Install or upgrade remote Terraform modules
-        graph         Generate a Graphviz graph of the steps in an operation
-        import        Associate existing infrastructure with a Terraform resource
-        login         Obtain and save credentials for a remote host
-        logout        Remove locally-stored credentials for a remote host
-        output        Show output values from your root module
-        providers     Show the providers required for this configuration
-        refresh       Update the state to match remote systems
-        show          Show the current state or a saved plan
-        state         Advanced state management
-        taint         Mark a resource instance as not fully functional
-        test          Experimental support for module integration testing
-        untaint       Remove the 'tainted' state from a resource instance
-        version       Show the current Terraform version
-        workspace     Workspace management
+    All other commands:
+    console       Try Terraform expressions at an interactive command prompt
+    fmt           Reformat your configuration in the standard style
+    force-unlock  Release a stuck lock on the current workspace
+    get           Install or upgrade remote Terraform modules
+    graph         Generate a Graphviz graph of the steps in an operation
+    import        Associate existing infrastructure with a Terraform resource
+    login         Obtain and save credentials for a remote host
+    logout        Remove locally-stored credentials for a remote host
+    output        Show output values from your root module
+    providers     Show the providers required for this configuration
+    refresh       Update the state to match remote systems
+    show          Show the current state or a saved plan
+    state         Advanced state management
+    taint         Mark a resource instance as not fully functional
+    test          Experimental support for module integration testing
+    untaint       Remove the 'tainted' state from a resource instance
+    version       Show the current Terraform version
+    workspace     Workspace management
 
-        Global options (use these before the subcommand, if any):
-        -chdir=DIR    Switch to a different working directory before executing the
-                        given subcommand.
-        -help         Show this help output, or the help for a specified subcommand.
-        -version      An alias for the "version" subcommand.
-        ```
-        {: screen}
+    Global options (use these before the subcommand, if any):
+    -chdir=DIR    Switch to a different working directory before executing the
+                    given subcommand.
+    -help         Show this help output, or the help for a specified subcommand.
+    -version      An alias for the "version" subcommand.
+    ```
+    {: screen}
 
 ## Step 2: Configuring the {{site.data.keyword.cloud_notm}} Provider plug-in
 {: #install_provider-step}
@@ -116,54 +116,56 @@ If you want to use an Terraform v0.12.x and earlier version of Terraform, instal
 The following steps show how to set up the provider plug-in for Terraform v1.x or higher. 
 
 1. In your Terraform installation directory, create a folder for your first Terraform project and navigate into the folder. This folder is used to store all configuration files and variable definitions.
-        ```sh
-        mkdir myproject && cd myproject
-        ```
-        {: pre}
+
+    ```sh
+    mkdir myproject && cd myproject
+    ```
+    {: pre}
 
 2. Create a `versions.tf` file with the following content. In this file, specify the {{site.data.keyword.cloud_notm}} Provider plug-in version that you want to use with the `version` parameter for {{site.data.keyword.cloud_notm}} Provider plug-in, and `required_version` to specify the Terraform template version. If no `version` parameter is specified, {{site.data.keyword.cloud_notm}} automatically uses the latest version of the provider. For a list of supported {{site.data.keyword.cloud_notm}} Provider versions, see [{{site.data.keyword.cloud_notm}} Provider plug-in releases](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
 
     Example with `version` parameter in `versions.tf` file
-        ```terraform
-        terraform {
-            required_providers {
-                ibm = {
-                source = "IBM-Cloud/ibm"
-                version = "<provider_version>"
-                }
-            }
-        }
-        ```
-        {: codeblock}
 
-    Example with `required_version` parameter in `versions.tf` file
-
-        ```terraform
-        terraform {
-        required_version = ">=1.0.0, <2.0"
-        required_providers {
-            ibm = {
-            source = "IBM-Cloud/ibm"
-            }
-        }
-        }
-        ```
-        {: codeblock}
-
-    Example with both `required_version` and `version` parameter in `versions.tf` file
-
-        ```terraform
-        terraform {
-        required_version = ">=1.0.0, <2.0"
+    ```terraform
+    terraform {
         required_providers {
             ibm = {
             source = "IBM-Cloud/ibm"
             version = "<provider_version>"
             }
         }
+    }
+    ```
+    {: codeblock}
+
+    Example with `required_version` parameter in `versions.tf` file
+
+    ```terraform
+    terraform {
+    required_version = ">=1.0.0, <2.0"
+    required_providers {
+        ibm = {
+        source = "IBM-Cloud/ibm"
         }
-        ```
-        {: codeblock}
+    }
+    }
+    ```
+    {: codeblock}
+
+    Example with both `required_version` and `version` parameter in `versions.tf` file
+
+    ```terraform
+    terraform {
+    required_version = ">=1.0.0, <2.0"
+    required_providers {
+        ibm = {
+        source = "IBM-Cloud/ibm"
+        version = "<provider_version>"
+        }
+    }
+    }
+    ```
+    {: codeblock}
 
     The version is specified in the following format `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. You can modify the version constraint operator in this example by using combination of the [supported operators in Terraform](https://developer.hashicorp.com/terraform/language/expressions/version-constraints#version-constraint-syntax){: external}. 
     {: tip}
@@ -176,26 +178,26 @@ The following steps show how to set up the provider plug-in for Terraform v1.x o
 
     Example of `terraform.tfvars` file
 
-        ```terraform
-        ibmcloud_api_key = "<ibmcloud_api_key>"
-        region = "<region>"
-        ```
-        {: codeblock}
+    ```terraform
+    ibmcloud_api_key = "<ibmcloud_api_key>"
+    region = "<region>"
+    ```
+    {: codeblock}
 
 5. Create a providers file to configure your endpoint URLs, cloud regions, or other settings before Terraform can use them, so that Terraform can install and use them in the [provider configuration](https://developer.hashicorp.com/terraform/language/providers/configuration){: external} file that is named `provider.tf`. Use this file to configure the {{site.data.keyword.cloud_notm}} Provider plug-in with the {{site.data.keyword.cloud_notm}} API key from your `terraform.tfvars` file. The plug-in uses this key to access {{site.data.keyword.cloud_notm}} and to work with your {{site.data.keyword.cloud_notm}} service. To access a variable value from the `terraform.tfvars` file, you must first declare the variable in the `provider.tf` file and then reference the variable by using the `var.<variable_name>` syntax.
 
     Example of `provider.tf` file
 
-        ```terraform
-        variable "ibmcloud_api_key" {}
-        variable "region" {}
+    ```terraform
+    variable "ibmcloud_api_key" {}
+    variable "region" {}
 
-        provider "ibm" {
-            ibmcloud_api_key   = var.ibmcloud_api_key
-            region = var.region
-            }
-        ```
-        {: codeblock}
+    provider "ibm" {
+        ibmcloud_api_key   = var.ibmcloud_api_key
+        region = var.region
+        }
+    ```
+    {: codeblock}
 
     **Classic infrastructure, Functions, Power Systems**: Extra parameters are required when configuring the {{site.data.keyword.cloud_notm}} Provider plug-in. To find sample configurations for these services, see [Specifying the `provider` block](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-example). 
     {: tip}
