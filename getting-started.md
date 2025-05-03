@@ -195,7 +195,7 @@ The following steps show how to set up the provider plug-in for Terraform v1.x o
     provider "ibm" {
         ibmcloud_api_key   = var.ibmcloud_api_key
         region = var.region
-        }
+    }
     ```
     {: codeblock}
 
