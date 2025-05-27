@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-05-28"
+  years: 2017, 2025
+lastupdated: "2025-05-27"
 
 keywords: Terraform on IBM Cloud, ansible, red hat, openshift, automate, automation, iaas
 
@@ -550,7 +550,7 @@ During the deployment the following cluster components are set up and configured
 - 2 OpenShift Container Platform application nodes
 - 1 OpenShift Container Platform Bastion node
 
-For more information, about Red Hat OpenShift Container Platform components, see the [Architecture Overview ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.openshift.com/container-platform/3.9/architecture/index.html).
+For more information, about Red Hat OpenShift Container Platform components, see the [Architecture Overview ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.redhat.com/en/documentation/openshift_container_platform/3.9/html/architecture/architecture-index).
 
 1. Retrieve the pool ID for your Red Hat account. 
     1. From the OpenShift installation directory `/go/bin/terraform-ibm-openshift` inside your container, log in to your Bastion node by using a secure shell. 
@@ -787,7 +787,7 @@ For more information, about Red Hat OpenShift Container Platform components, see
     ```
     {: pre}
 
-6. Set up users and authentication for your OpenShift cluster. The OpenShift Container Platform master includes a built-in `OAuth` server. By default, this `OAuth` server is set up to deny all authentication. To let developers and administrators authenticate with the cluster, follow the steps in [Configuring access and authentication ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.openshift.com/container-platform/3.11/install_config/configuring_authentication.html#install-config-configuring-authentication) to set up access for your cluster. 
+6. Set up users and authentication for your OpenShift cluster. The OpenShift Container Platform master includes a built-in `OAuth` server. By default, this `OAuth` server is set up to deny all authentication. To let developers and administrators authenticate with the cluster, follow the steps in [Configuring access and authentication ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.redhat.com/en/documentation/openshift_container_platform/3.11/html/configuring_clusters/install-config-configuring-authentication#install-config-configuring-authentication) to set up access for your cluster. 
 
 7. Configure your Docker registry. During the creation of your cluster, an internal, integrated Docker registry is automatically set up for you. You can use the registry to build container images from your source code, deploy them, and manage their lifecycle. For more information, see [Registry Overview ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.openshift.com/container-platform/3.11/install_config/registry/index.html#install-config-registry-overview). 
 
@@ -860,8 +860,5 @@ With your OpenShift cluster up and running, you can now deploy your first app in
 **What's next?**</br>
 Great! You successfully installed Red Hat OpenShift Container Platform on {{site.data.keyword.cloud_notm}} classic infrastructure and deployed your first app to your OpenShift cluster. Now you can try out one of the following features:  
 
-- [Explore other features in Red Hat OpenShift Container Platform ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.openshift.com/container-platform/3.11/welcome/index.html). 
+- [Explore other features in Red Hat OpenShift Container Platform ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.redhat.com/en/documentation/openshift_container_platform/3.11). 
 - Remove your OpenShift cluster by running the `make destroy` command. 
-
-
-
