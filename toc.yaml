@@ -9,7 +9,6 @@ toc:
     product-page: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
     path: ibm-cloud-provider-for-terraform
     label: Terraform on IBM Cloud
-#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
   entries:
   - navgroup:
       id: learn

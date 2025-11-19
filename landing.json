@@ -1,40 +1,40 @@
 {
-    "version": 2,
-    "title": "Terraform on IBM Cloud docs",
-    "introduction": "Explore the capabilities of the IBM Cloud Provider plug-in for Terraform. You can get started by installing the Terraform CLI and configure the IBM Cloud Provider plug-in. Then, you can try out a tutorial to create an IBM Cloud Kubernetes Service or Red Hat OpenShift on IBM Cloud cluster by using Terraform. You can also choose one of the IBM-provided Terraform templates to get started with the provisioning of other IBM Cloud services with Terraform, such as IBM Cloud Object Storage or IBM Key Protect. ",
-    "product_page": "https://www.ibm.com/products/hashicorp",
-    "section_topics": {
-      "links": [
-        {
-          "title": "Set up the Terraform CLI and IBM Cloud Provider plug-in",
-          "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started"
-        },
-        {
-           "title": "Browse Terraform templates",
-           "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates"
-        },
-        {
-          "title": "Create Kubernetes and OpenShift clusters",
-          "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters"
-        },
-        {
-          "title": "Create a virtual server in a VPC",
-          "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config"
-        }
-      ]
-    },
-    "section_highlights": [  
+  "version": 2,
+  "title": "Terraform on IBM Cloud docs",
+  "introduction": "Explore the capabilities of the IBM Cloud Provider plug-in for Terraform. You can get started by installing the Terraform CLI and configure the IBM Cloud Provider plug-in. Then, you can try out a tutorial to create an IBM Cloud Kubernetes Service or Red Hat OpenShift on IBM Cloud cluster by using Terraform. You can also choose one of the IBM-provided Terraform templates to get started with the provisioning of other IBM Cloud services with Terraform, such as IBM Cloud Object Storage or IBM Key Protect. ",
+  "product_page": "https://www.ibm.com/products/hashicorp",
+  "section_topics": {
+    "links": [
       {
-        "title": "Training",
-        "description": "Build your skill with IBM Cloud training. ",
-        "href": "https://www.ibm.com/training/cloud",
-        "type": "training"
-      } 
-    ],
-    "section_devtools": {
-      "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs"
-    },
-    "section_updates": {
-      "view_more": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes"
+        "title": "Set up the Terraform CLI and IBM Cloud Provider plug-in",
+        "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started"
+      },
+      {
+        "title": "Browse Terraform templates",
+        "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates"
+      },
+      {
+        "title": "Create Kubernetes and OpenShift clusters",
+        "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters"
+      },
+      {
+        "title": "Create a virtual server in a VPC",
+        "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config"
+      }
+    ]
+  },
+  "section_highlights": [
+    {
+      "title": "Training",
+      "description": "Build your skill with IBM Cloud training. ",
+      "href": "https://www.ibm.com/training/cloud",
+      "type": "training"
     }
+  ],
+  "section_devtools": {
+    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs"
+  },
+  "section_updates": {
+    "view_more": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes"
+  }
 }
