@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-08"
+lastupdated: "2025-11-21"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -46,7 +46,7 @@ Use the following steps to install the Terraform CLI.
     {: pre}
 
 2. Download the [Terraform version](https://releases.hashicorp.com/terraform){: external} that you want. The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform currently supports Terraform stable version 1.x.x. For more information about the supported Terraform version, see [list of Terraform version](/docs/schematics?topic=schematics-migrating-terraform-version).
-3. Extract the Terraform `zip` file and copy the files to your `terraform` directory. 
+3. Extract the Terraform `zip` file and copy the files to your `terraform` directory.
 4. Set the environment `PATH` variable to your terraform folder.
 
     ```sh
@@ -107,13 +107,13 @@ Example output:
 ## Step 2: Configuring the {{site.data.keyword.cloud_notm}} Provider plug-in
 {: #install_provider-step}
 
-After the Terraform command-line installation is complete. Set up and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform so that you can start working with resources and services in {{site.data.keyword.cloud_notm}}. 
+After the Terraform command-line installation is complete. Set up and configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform so that you can start working with resources and services in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-If you want to use an Terraform v0.12.x and earlier version of Terraform, install the provider plug-in by following the steps in [Terraform v0.12.x and earlier](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v12). 
+If you want to use an Terraform v0.12.x and earlier version of Terraform, install the provider plug-in by following the steps in [Terraform v0.12.x and earlier](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v12).
 {: note}
 
-The following steps show how to set up the provider plug-in for Terraform v1.x or higher. 
+The following steps show how to set up the provider plug-in for Terraform v1.x or higher.
 
 1. In your Terraform installation directory, create a folder for your first Terraform project and navigate into the folder. This folder is used to store all configuration files and variable definitions.
 
@@ -167,13 +167,13 @@ The following steps show how to set up the provider plug-in for Terraform v1.x o
     ```
     {: codeblock}
 
-    The version is specified in the following format `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. You can modify the version constraint operator in this example by using combination of the [supported operators in Terraform](https://developer.hashicorp.com/terraform/language/expressions/version-constraints#version-constraint-syntax){: external}. 
+    The version is specified in the following format `<MAJOR_VERSION>.<MINOR_VERSION>.<PATCH>`. You can modify the version constraint operator in this example by using combination of the [supported operators in Terraform](https://developer.hashicorp.com/terraform/language/expressions/version-constraints#version-constraint-syntax){: external}.
     {: tip}
 
 3. [Create or retrieve an {{site.data.keyword.cloud_notm}} API key](/docs/account?topic=account-userapikey&interface=ui). The API key is used to authenticate with the {{site.data.keyword.cloud_notm}} platform and to determine your permissions for {{site.data.keyword.cloud_notm}} services.
-4. Create a variables file that is named `terraform.tfvars` and specify the {{site.data.keyword.cloud_notm}} API key that you retrieved. In addition, you specify the region where you want your {{site.data.keyword.cloud_notm}} resources to be created. If no region is specified, Terraform on IBM Cloud automatically creates your resources in the `us-south` region. Variables that are defined in the `terraform.tfvars` file are automatically loaded by Terraform when the {{site.data.keyword.cloud_notm}} Provider plug-in is initialized and you can reference them in every Terraform configuration file that you use. 
+4. Create a variables file that is named `terraform.tfvars` and specify the {{site.data.keyword.cloud_notm}} API key that you retrieved. In addition, you specify the region where you want your {{site.data.keyword.cloud_notm}} resources to be created. If no region is specified, Terraform on IBM Cloud automatically creates your resources in the `us-south` region. Variables that are defined in the `terraform.tfvars` file are automatically loaded by Terraform when the {{site.data.keyword.cloud_notm}} Provider plug-in is initialized and you can reference them in every Terraform configuration file that you use.
 
-    Because the `terraform.tfvars` file contains confidential information, do not push this file to a version control system. This file is meant to be on your local system only. 
+    Because the `terraform.tfvars` file contains confidential information, do not push this file to a version control system. This file is meant to be on your local system only.
     {: important}
 
     Example of `terraform.tfvars` file
@@ -199,7 +199,7 @@ The following steps show how to set up the provider plug-in for Terraform v1.x o
     ```
     {: codeblock}
 
-    **Classic infrastructure, Functions, Power Systems**: Extra parameters are required when configuring the {{site.data.keyword.cloud_notm}} Provider plug-in. To find sample configurations for these services, see [Specifying the `provider` block](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-example). 
+    **Classic infrastructure, Functions, Power Systems**: Extra parameters are required when configuring the {{site.data.keyword.cloud_notm}} Provider plug-in. To find sample configurations for these services, see [Specifying the `provider` block](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-example).
     {: tip}
 
 ## Step 3: Testing your configuration

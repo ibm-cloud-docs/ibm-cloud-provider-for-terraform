@@ -14,47 +14,30 @@ toc:
       id: learn
       topics:
       - getting-started.md
-      - about.md
-      - release-notes.md
+      - aboutProviderPlugin.md
   - navgroup:
       id: tutorial
       topics:
-      - provider-template.md
-      - tutorials/clusters.md
-      - tutorials/install_redhat_openshift.md
-      - provision-vsi-vpc.md
-      - link:
-          label: Deploying a 3-Tier web app in a VPC
-          href: https://github.com/jonghall/ibmcloud-terraform-vpc
-      - provision-vsi-classic.md
-      - link:
-          label: Deploying a VPC environment on IBM Cloud by using Bastion host
-          href: https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/
-      - link:
-          label: Deploying multitiered VPC on IBM Cloud by using Bastion host
-          href: https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md
+      - installTerraformCLI.md
+      - TIMStructure.md
+      - DeployTIMModule.md
+      - CombineTIMModules.md
+      - DeployTIMUsingHashiCorpWP.md
+      - DeployTIMUsingPulumi.md
+      - DeployTIMUsingSchematics.md
   - navgroup:
       id: howto
       topics:
-      - setup_cli.md
+      - setup.md
       - provider/provider-ref.md
-      - migrate.md
       - create-terraform-config.md
-      - manage_resources.md
       - autodeploy_template.md
   - navgroup:
       id: reference
       topics:
-      - topicgroup:
-          label: IBM Cloud Provider plug-in for Terraform
-          topics:
-          - provider/provider-sitemap.md
-          - link:
-              label: IBM Cloud Provider release and updates
-              href: https://github.com/IBM-Cloud/terraform-provider-ibm/releases
-          - link:
-              label: Architecture reference - Highly available, secured, and managed Kubernetes environment
-              href: https://github.com/ibm-cloud-architecture/refarch-public-iaas-iks
+      - link:
+          label: IBM Cloud Provider release and updates
+          href: https://github.com/IBM-Cloud/terraform-provider-ibm/releases
   - navgroup:
       id: help
       topics:

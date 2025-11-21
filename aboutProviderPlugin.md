@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-05-27"
+lastupdated: "2025-11-21"
 
 keywords: Terraform on IBM Cloud, configuration files, resources, what is Terraform on IBM Cloud, automation, automate
 
@@ -13,33 +13,33 @@ subcollection: ibm-cloud-provider-for-terraform
 {{site.data.keyword.attribute-definition-list}}
 
 
-# About Terraform on IBM Cloud
+# About {{site.data.keyword.terraform-provider_full}}
 {: #about}
 
-Terraform on IBM Cloud enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} platform, classic infrastructure, and VPC infrastructure resources so that you can rapidly build complex, multitiered cloud environments, and enable Infrastructure as Code (IaC).
+{{site.data.keyword.terraform-provider_full_notm}} enables predictable and consistent provisioning of {{site.data.keyword.cloud_notm}} platform, classic infrastructure, and VPC infrastructure resources so that you can rapidly build complex, multitiered cloud environments, and enable Infrastructure as Code (IaC).
 {: shortdesc}
 
-## How does Terraform on IBM Cloud work? 
+## How does Terraform on IBM Cloud work?
 {: #how-it-works}
 
-[Terraform](https://developer.hashicorp.com/terraform){: external} is an open source project that lets you specify your cloud infrastructure resources and services by using the high-level scripting HashiCorp Configuration Language (HCL). With HCL, you have one common language to declare the cloud resources that you want and the state that you want your resources to be in. 
+[Terraform](https://developer.hashicorp.com/terraform){: external} is an open source project that lets you specify your cloud infrastructure resources and services by using the high-level scripting HashiCorp Configuration Language (HCL). With HCL, you have one common language to declare the cloud resources that you want and the state that you want your resources to be in.
 
-Let's say you want to spin up multiple copies of your cloud environment that uses a cluster of virtual servers, a load balancer, and a database server on {{site.data.keyword.cloud_notm}}. You could learn how to create each resource, review the API or the commands that you need, and write a bash script to spin up these components. But it's easier, faster, and more orderly to use one language to declare all your requirements, document them in a configuration file, and let Terraform on IBM Cloud do it all for you. 
+Let's say you want to spin up multiple copies of your cloud environment that uses a cluster of virtual servers, a load balancer, and a database server on {{site.data.keyword.cloud_notm}}. You could learn how to create each resource, review the API or the commands that you need, and write a bash script to spin up these components. But it's easier, faster, and more orderly to use one language to declare all your requirements, document them in a configuration file, and let Terraform on IBM Cloud do it all for you.
 
 ### What is the {{site.data.keyword.cloud_notm}} Provider plug-in?
 {: #provider-plugin-ov}
 
-To abstract the APIs and complexity of the cloud resource provisioning and management process to the user, cloud providers create a plug-in for Terraform that contains the information for how to connect to the cloud provider and what APIs to call to work with a certain cloud resource. IBM's plug-in is called the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. The plug-in analyzes the resources that you specified and determines the order in which these resources must be provisioned, including any dependencies that must be considered. 
+To abstract the APIs and complexity of the cloud resource provisioning and management process to the user, cloud providers create a plug-in for Terraform that contains the information for how to connect to the cloud provider and what APIs to call to work with a certain cloud resource. IBM's plug-in is called the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform. The plug-in analyzes the resources that you specified and determines the order in which these resources must be provisioned, including any dependencies that must be considered.
 
 ### How does Terraform on IBM Cloud provision and manage cloud services?
 {: #resource-lifecycle-ov}
 
-To use Terraform on IBM Cloud, you must create a Terraform configuration file that describes the {{site.data.keyword.cloud_notm}} resources that you need and how you want to configure them. Based on your configuration, Terraform creates an execution plan and describes the actions that need to be executed to get to the required state. You can review the execution plan, change it, or simply execute the plan. When you change your configuration, Terraform on IBM Cloud can determine what changed and create incremental execution plans that you can apply to your existing {{site.data.keyword.cloud_notm}} resources. 
+To use Terraform on IBM Cloud, you must create a Terraform configuration file that describes the {{site.data.keyword.cloud_notm}} resources that you need and how you want to configure them. Based on your configuration, Terraform creates an execution plan and describes the actions that need to be executed to get to the required state. You can review the execution plan, change it, or simply execute the plan. When you change your configuration, Terraform on IBM Cloud can determine what changed and create incremental execution plans that you can apply to your existing {{site.data.keyword.cloud_notm}} resources.
 
 The following points specifies how Terraform on IBM Cloud provisions your services in {{site.data.keyword.cloud_notm}}.
 
-1. You declare the {{site.data.keyword.cloud_notm}} resources that you want in a Terraform configuration file by using HashiCorp Configuration Language (HCL). Store this configuration file in a source code repository that is version-controlled and that allows teams to collaborate, such as GitHub or GitLab. 
-2. Configure the {{site.data.keyword.cloud_notm}} Provider plug-in. 
+1. You declare the {{site.data.keyword.cloud_notm}} resources that you want in a Terraform configuration file by using HashiCorp Configuration Language (HCL). Store this configuration file in a source code repository that is version-controlled and that allows teams to collaborate, such as GitHub or GitLab.
+2. Configure the {{site.data.keyword.cloud_notm}} Provider plug-in.
 3. Create a Terraform execution plan that summarizes all the actions that Terraform needs to run to create, update, or delete the {{site.data.keyword.cloud_notm}} resources in your Terraform template.
 4. Apply the Terraform configuration file in {{site.data.keyword.cloud_notm}}.
 

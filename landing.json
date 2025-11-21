@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "title": "Terraform on IBM Cloud docs",
-  "introduction": "Explore the capabilities of the IBM Cloud Provider plug-in for Terraform. You can get started by installing the Terraform CLI and configure the IBM Cloud Provider plug-in. Then, you can try out a tutorial to create an IBM Cloud Kubernetes Service or Red Hat OpenShift on IBM Cloud cluster by using Terraform. You can also choose one of the IBM-provided Terraform templates to get started with the provisioning of other IBM Cloud services with Terraform, such as IBM Cloud Object Storage or IBM Key Protect. ",
+  "title": "Terraform IBM Modules",
+  "introduction": "Infrastructure as Code (IaC) is a contemporary method to ensure predictable and consistent resource provisioning on cloud platforms. Employing Terraform IBM Modules (TIM) can significantly aid in scaling and deploying your solutions using the IaC approach. These modules provide reusable, adaptable components adhering to IBM Cloud's best practices. Additionally, consider exploring the IBM Cloud Provider plug-in for Terraform to further expand your capabilities.",
   "product_page": "https://www.ibm.com/products/hashicorp",
   "section_topics": {
     "links": [
