@@ -41,15 +41,4 @@ toc:
   - navgroup:
       id: help
       topics:
-      - faqs.md
       - terraform_ts_index.md
-      - whats-new.md
-      - provider/version_changelog.md
-      - topicgroup:
-          label: Troubleshooting
-          topics:
-          - topicgroup:
-              label: Debugging Kubernetes service errors
-              topics:
-              - troubleshooting/tg-kubernetes-service.md
-      - sitemap.md
