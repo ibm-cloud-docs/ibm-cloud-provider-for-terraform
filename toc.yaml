@@ -30,7 +30,7 @@ toc:
       - topic: PackageTIMandPublish.md
       - link:
           label: Deploy Terraform IBM Modules using Schematics
-          href: /docs/schematics?topic=schematics-sch-create-wks&interface=ui
+          href: /schematics?topic=schematics-sch-create-wks
   - navgroup:
       id: howto
       topics:
