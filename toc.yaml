@@ -18,26 +18,35 @@ toc:
   - navgroup:
       id: tutorial
       topics:
-      - installTerraformCLI.md
-      - TIMStructure.md
-      - DeployTIMModule.md
-      - CombineTIMModules.md
-      - DeployTIMUsingHashiCorpWP.md
-      - DeployTIMUsingPulumi.md
-      - DeployTIMUsingSchematics.md
+      - topic: installTerraformCLI.md
+      - topic: using-tim-mcp.md
+        navtitle: Using TIM-MCP with AI assistants
+      - topic: TIMStructure.md
+      - topic: DeployTIMModule.md
+      - topic: CombineTIMModules.md
+      - topic: DeployTIMUsingHashiCorpWP.md
+      - topic: DeployTIMUsingPulumi.md
+        navtitle: Deploy Terraform IBM Modules using Pulumi
+      - topic: PackageTIMandPublish.md
+      - link:
+          label: Deploy Terraform IBM Modules using Schematics
+          href: /docs/schematics?topic=schematics-sch-create-wks&interface=ui
   - navgroup:
       id: howto
       topics:
-      - setup.md
       - provider/provider-ref.md
-      - create-terraform-config.md
-      - autodeploy_template.md
   - navgroup:
       id: reference
       topics:
       - link:
           label: IBM Cloud Provider release and updates
           href: https://github.com/IBM-Cloud/terraform-provider-ibm/releases
+      - link:
+          label: IBM Cloud Terraform IBM Modules release and updates
+          href: https://github.com/terraform-ibm-modules
+      - link:
+          label: Terraform IBM Modules MCP Server
+          href: https://github.com/terraform-ibm-modules/tim-mcp
   - navgroup:
       id: help
       topics:

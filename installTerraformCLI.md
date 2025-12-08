@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-11-21"
+lastupdated: "2025-12-08"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 
@@ -13,8 +13,8 @@ subcollection: ibm-cloud-provider-for-terraform
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Getting started with Terraform on IBM Cloud
-{: #getting-started}
+# Set up Terraform CLI
+{: #SetUpTerraformCLI}
 
 Terraform on IBM Cloud enables predictable and consistent provisioning of {{site.data.keyword.cloud}} platform, services, and VPC infrastructure resources so that you can rapidly build complex, multitier cloud environments, and adopt an Infrastructure as Code (IaC) approach to deploying environments.
 {: shortdesc}
