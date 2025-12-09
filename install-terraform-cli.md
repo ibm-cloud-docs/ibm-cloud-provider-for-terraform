@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-08"
+lastupdated: "2025-12-09"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
 

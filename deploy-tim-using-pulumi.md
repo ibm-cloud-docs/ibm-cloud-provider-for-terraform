@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-08"
+lastupdated: "2025-12-09"
 
 keywords: Terraform on IBM Cloud, pulumi, ibmcloud, automate, automation, iaas, paas, infrastructure-as-code, multi-service, multi-zone, terraform-ibm-modules, pulumi and ibmcloud, terraform
 

@@ -14,20 +14,34 @@ toc:
       id: learn
       topics:
       - getting-started.md
-      - aboutProviderPlugin.md
+      - about-provider-plug-in.md
   - navgroup:
       id: tutorial
       topics:
-      - topic: installTerraformCLI.md
+      - provider-template.md
+      - clusters.md
+      - install-redhat-openshift.md
+      - provision-vsi-vpc.md
+      - link:
+          label: Deploying a 3-Tier web app in a VPC
+          href: https://github.com/jonghall/ibmcloud-terraform-vpc
+      - provision-vsi-classic.md
+      - link:
+          label: Deploying a VPC environment on IBM Cloud by using Bastion host
+          href: https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/
+      - link:
+          label: Deploying multitiered VPC on IBM Cloud by using Bastion host
+          href: https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md
+      - topic: install-terraform-cli.md
       - topic: using-tim-mcp.md
         navtitle: Using TIM-MCP with AI assistants
-      - topic: TIMStructure.md
-      - topic: DeployTIMModule.md
-      - topic: CombineTIMModules.md
-      - topic: DeployTIMUsingHashiCorpWP.md
-      - topic: DeployTIMUsingPulumi.md
+      - topic: tim-structure.md
+      - topic: deploy-tim-module.md
+      - topic: combine-tim-modules.md
+      - topic: deploy-tim-using-hashicorpwp.md
+      - topic: deploy-tim-using-pulumi.md
         navtitle: Deploy Terraform IBM Modules using Pulumi
-      - topic: PackageTIMandPublish.md
+      - topic: package-tim-publish.md
       - link:
           label: Deploy Terraform IBM Modules using Schematics
           href: /schematics?topic=schematics-sch-create-wks
@@ -50,4 +64,4 @@ toc:
   - navgroup:
       id: help
       topics:
-      - terraform_ts_index.md
+      - terraform-ts-index.md

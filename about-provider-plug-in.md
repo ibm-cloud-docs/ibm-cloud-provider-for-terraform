@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-11-21"
+lastupdated: "2025-12-09"
 
 keywords: Terraform on IBM Cloud, configuration files, resources, what is Terraform on IBM Cloud, automation, automate
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-03"
+lastupdated: "2025-12-09"
 
 keywords: Terraform on IBM Cloud help, Terraform on IBM Cloud troubleshooting, ansible help, ansible troubleshooting
 
