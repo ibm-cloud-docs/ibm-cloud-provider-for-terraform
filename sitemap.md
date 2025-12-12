@@ -459,19 +459,6 @@ subcollection: ibm-cloud-provider-for-terraform
 [Deploying multitiered VPC on IBM Cloud by using Bastion host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md){: external}
 
 
-## Set up Terraform CLI
-{: #sitemap_set_up_terraform_cli}
-
-
-[Set up Terraform CLI](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-SetUpTerraformCLI#SetUpTerraformCLI)
-
-* [Step 1: Installing the Terraform CLI](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-SetUpTerraformCLI#tf_installation_step)
-
-* [Step 2: Configuring the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-SetUpTerraformCLI#install_provider-step)
-
-* [Step 3: Testing your configuration](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-SetUpTerraformCLI#test-terraform-template)
-
-
 ## Using TIM-MCP with AI assistants
 {: #sitemap_using_tim-mcp_with_ai_assistants}
 
@@ -526,6 +513,35 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 [Understand Terraform IBM Modules code structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UnderstandCodeStructure#UnderstandCodeStructure)
+
+
+## Deploy a Terraform IBM Module using Terraform CLI
+{: #sitemap_deploy_a_terraform_ibm_module_using_terraform_cli}
+
+
+[Deploy a Terraform IBM Module using Terraform CLI](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module)
+
+* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-objectives)
+
+* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-prerequisites)
+
+* [Clone the repository](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson1-clone)
+
+* [Understand the code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson2-code)
+
+* [Configure the variables](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson3-configure)
+
+* [Initialize Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson4-init)
+
+* [Generate execution plan](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson5-plan)
+
+* [Deploy the resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson6-deploy)
+
+* [Verify the deployed resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson7-verify)
+
+* [Clean-up the resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson8-destroy)
+
+* [What you learned](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-learnings)
 
 
 ## Combine Terraform IBM Modules to build a solution

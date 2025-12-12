@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "title": "Terraform IBM Modules",
-  "introduction": "Infrastructure as Code (IaC) is a contemporary method to ensure predictable and consistent resource provisioning on cloud platforms. Employing Terraform IBM Modules (TIM) can significantly aid in scaling and deploying your solutions using the IaC approach. These modules provide reusable, adaptable components adhering to IBM Cloud's best practices. Additionally, consider exploring the IBM Cloud Provider plug-in for Terraform to further expand your capabilities.",
+  "title": "Terraform on IBM Cloud",
+  "introduction": "Accelerate your cloud journey with the IBM Cloud Provider plug-in for Terraform and the terraform-ibm-modules — a curated collection of open-source, enterprise-ready modules built for speed, security, and scalability. Built using the IBM Cloud Provider plug-in, the modules are secure-by-default and fully aligned with IBM Cloud best practices. They enable you to automate infrastructure provisioning effortlessly, reduce complexity, and deploy production-grade environments with confidence.",
   "product_page": "https://www.ibm.com/products/hashicorp",
   "section_topics": {
     "links": [
@@ -10,12 +10,12 @@
         "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started"
       },
       {
-        "title": "Browse Terraform templates",
-        "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates"
+        "title": "Getting started with Terraform IBM Modules(TIM)",
+        "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim"
       },
       {
-        "title": "Create Kubernetes and OpenShift clusters",
-        "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters"
+        "title": "Deploy a TIM module",
+        "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module"
       },
       {
         "title": "Create a virtual server in a VPC",

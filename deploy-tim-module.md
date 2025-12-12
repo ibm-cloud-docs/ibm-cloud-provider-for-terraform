@@ -13,7 +13,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {{site.data.keyword.attribute-definition-list}}
 
 # Deploy a Terraform IBM Module using Terraform CLI
-{: deploy-tim-module}
+{: #deploy-tim-module}
 {: toc-content-type="tutorial"}
 {: toc-services="vpc"}
 
@@ -22,7 +22,7 @@ In this tutorial, you will learn how to deploy a terraform-ibm-module (TIM) modu
 
 
 ## Objectives
-{: deploy-tim-module-objectives}
+{: #deploy-tim-module-objectives}
 
 By the end of this tutorial, you will be able to:
 - Configure and manage variables in modules using `terraform.tfvars`.
@@ -31,7 +31,7 @@ By the end of this tutorial, you will be able to:
 While this tutorial uses the [Cloud Object Storage module](https://github.com/terraform-ibm-modules/terraform-ibm-cos) as an example, the skills gained here will be transferable to all Terraform modules.
 
 ## Prerequisites
-{: deploy-tim-module-prerequisites}
+{: #deploy-tim-module-prerequisites}
 
 Before you begin, ensure you have the following:
 - [Git CLI](https://git-scm.com/install/) installed
@@ -39,7 +39,7 @@ Before you begin, ensure you have the following:
 - [IBM Cloud apikey](/docs/account?topic=account-userapikey&interface=ui) to access the IBM Cloud.
 
 ## Clone the repository
-{: deploy-tim-module-lesson1-clone}
+{: #deploy-tim-module-lesson1-clone}
 {: step}
 
 Start by cloning the GitHub repository containing the Terraform module.
@@ -51,7 +51,7 @@ git clone https://github.com/terraform-ibm-modules/terraform-ibm-cos.git
 ```
 
 ## Understand the code
-{: deploy-tim-module-lesson2-code}
+{: #deploy-tim-module-lesson2-code}
 {: step}
 
 In the root of the cloned project, there exists a folder called `examples`. The `examples` directory contains working demonstrations of how to use the module. Each example is a complete, runnable Terraform configuration.
@@ -66,7 +66,7 @@ This example provisions the following resources:
 - Two buckets in the newly provisioned Object Storage instance
 
 ## Configure the variables
-{: deploy-tim-module-lesson3-configure}
+{: #deploy-tim-module-lesson3-configure}
 {: step}
 
 Create a new file named `terraform.tfvars` in the basic folder. This file is used to provide values for the input variables in the `variables.tf` file.
@@ -84,7 +84,7 @@ region = "us-south"
 Review the `variables.tf` file and update `terraform.tfvars` to override any default values do not meet your requirements.
 
 ## Initialize Terraform
-{: deploy-tim-module-lesson4-init}
+{: #deploy-tim-module-lesson4-init}
 {: step}
 
 Initialize Terraform in the working directory (`examples/basic`) using the following command:
@@ -96,7 +96,7 @@ terraform init
 This command downloads and installs plugins for the required providers as specified in `providers.tf`.
 
 ## Generate execution plan
-{: deploy-tim-module-lesson5-plan}
+{: #deploy-tim-module-lesson5-plan}
 {: step}
 
 Run the following command:
@@ -113,7 +113,7 @@ For this basic example, the command output shows that:
 - Two buckets will be created in the chosen region
 
 ## Deploy the resources
-{: deploy-tim-module-lesson6-deploy}
+{: #deploy-tim-module-lesson6-deploy}
 {: step}
 
 Run the following command to begin the deployment:
@@ -126,7 +126,7 @@ Approve the deployment when prompted, by typing `yes`. Alternatively, you may us
 Once confirmed, Terraform will begin provisioning all resources defined in the execution plan. This step make take some time depending on the configuration.
 
 ## Verify the deployed resources
-{: deploy-tim-module-lesson7-verify}
+{: #deploy-tim-module-lesson7-verify}
 {: step}
 
 After Terraform completes applying the configuration, verify that the resources have been successfully created in your IBM Cloud account. To verify the resources:
@@ -138,7 +138,7 @@ After Terraform completes applying the configuration, verify that the resources 
 The module has been deployed successfully, and you can now see the resources on the dashboard. You’re all set to start using them.
 
 ## Clean-up the resources
-{: deploy-tim-module-lesson8-destroy}
+{: #deploy-tim-module-lesson8-destroy}
 {: step}
 
 
@@ -153,7 +153,7 @@ This will show a summary of the resources that will be removed. Once you confirm
 Cleaning up is important to avoid unnecessary charges for cloud resources and keeps your IBM Cloud account organized. Even small resources, like storage buckets, can accumulate costs over time.
 
 ## What you learned
-{: deploy-tim-module-learnings}
+{: #deploy-tim-module-learnings}
 
 By completing this tutorial, you have:
 

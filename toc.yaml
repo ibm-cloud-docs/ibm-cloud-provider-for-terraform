@@ -14,8 +14,8 @@ toc:
       id: learn
       topics:
       - getting-started.md
-      - getting-started-with-tim.md
       - about.md
+      - getting-started-with-tim.md
       - release-notes.md
   - navgroup:
       id: tutorial
@@ -34,7 +34,6 @@ toc:
       - link:
           label: Deploying multitiered VPC on IBM Cloud by using Bastion host
           href: https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md
-      - topic: install-terraform-cli.md
       - topic: using-tim-mcp.md
         navtitle: Using TIM-MCP with AI assistants
       - topic: tim-structure.md
