@@ -47,6 +47,33 @@ subcollection: ibm-cloud-provider-for-terraform
 * [Key terms](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#terms)
 
 
+## Getting started with Terraform IBM Modules
+{: #sitemap_getting_started_with_terraform_ibm_modules}
+
+
+[Getting started with Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#getstarted-with-tim)
+
+* [What is Infrastructure as code(IaC)?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#infrastructure-as-code)
+
+* [Working with Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#using-terraform-ibm-modules)
+
+* [Benefits of using Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#abouttim-benefits)
+
+* [Key terms](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#keyterms-for-tim)
+
+* [Building larger solutions using multiple modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#integrating-multiple-modules)
+
+* [Deployment options](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#timdeployment-options)
+
+* [AI-Assisted Infrastructure Development with TIM-MCP](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#tim-mcp-overview)
+
+    * [What is TIM-MCP?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#what-is-tim-mcp)
+
+    * [Benefits of AI-Assisted Development](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#tim-mcp-benefits)
+
+    * [Getting Started with TIM-MCP](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#getting-started-tim-mcp)
+
+
 ## Release notes
 {: #sitemap_release_notes}
 
