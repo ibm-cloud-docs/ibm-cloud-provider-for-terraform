@@ -47,23 +47,6 @@ subcollection: ibm-cloud-provider-for-terraform
 * [Key terms](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#terms)
 
 
-## About {{site.data.keyword.terraform-provider_full}}
-{: #sitemap_about_}
-
-
-[About {{site.data.keyword.terraform-provider_full}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#about)
-
-* [How does Terraform on IBM Cloud work?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#how-it-works)
-
-    * [What is the {{site.data.keyword.cloud_notm}} Provider plug-in?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#provider-plugin-ov)
-
-    * [How does Terraform on IBM Cloud provision and manage cloud services?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#resource-lifecycle-ov)
-
-* [What are the benefits of using Terraform on IBM Cloud?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#abt-benefits)
-
-* [Key terms](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#terms)
-
-
 ## Release notes
 {: #sitemap_release_notes}
 
@@ -697,9 +680,21 @@ subcollection: ibm-cloud-provider-for-terraform
 
 [Architecture reference - Highly available, secured, and managed Kubernetes environment](https://github.com/ibm-cloud-architecture/refarch-public-iaas-iks){: external}
 
+
+## IBM Cloud Provider release and updates
+{: #sitemap_ibm-cloud-provider-release-and-updates}
+
 [IBM Cloud Provider release and updates](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}
 
+
+## IBM Cloud Terraform IBM Modules release and updates
+{: #sitemap_ibm-cloud-terraform-ibm-modules-release-and-updates}
+
 [IBM Cloud Terraform IBM Modules release and updates](https://github.com/terraform-ibm-modules){: external}
+
+
+## Terraform IBM Modules MCP Server
+{: #sitemap_terraform-ibm-modules-mcp-server}
 
 [Terraform IBM Modules MCP Server](https://github.com/terraform-ibm-modules/tim-mcp){: external}
 
@@ -905,4 +900,3 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 [How can I resolve the network error when working with the {{site.data.keyword.containershort_notm}} provider?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-ks-network-error#ks-network-error)
-
