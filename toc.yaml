@@ -14,7 +14,10 @@ toc:
       id: learn
       topics:
       - getting-started.md
+      - getting-started-with-tim.md
+      - about.md
       - about-provider-plug-in.md
+      - release-notes.md
   - navgroup:
       id: tutorial
       topics:
@@ -44,24 +47,50 @@ toc:
       - topic: package-tim-publish.md
       - link:
           label: Deploy Terraform IBM Modules using Schematics
-          href: /schematics?topic=schematics-sch-create-wks
+          href: /schematics/schematics-sch-create-wks
   - navgroup:
       id: howto
       topics:
+      - setup_cli.md
       - provider/provider-ref.md
+      - migrate.md
+      - create-terraform-config.md
+      - manage_resources.md
+      - autodeploy_template.md
   - navgroup:
       id: reference
       topics:
-      - link:
-          label: IBM Cloud Provider release and updates
-          href: https://github.com/IBM-Cloud/terraform-provider-ibm/releases
-      - link:
-          label: IBM Cloud Terraform IBM Modules release and updates
-          href: https://github.com/terraform-ibm-modules
-      - link:
-          label: Terraform IBM Modules MCP Server
-          href: https://github.com/terraform-ibm-modules/tim-mcp
+      - topicgroup:
+          label: IBM Cloud Provider plug-in for Terraform
+          topics:
+          - provider/provider-sitemap.md
+          - link:
+              label: IBM Cloud Provider release and updates
+              href: https://github.com/IBM-Cloud/terraform-provider-ibm/releases
+          - link:
+              label: Architecture reference - Highly available, secured, and managed Kubernetes environment
+              href: https://github.com/ibm-cloud-architecture/refarch-public-iaas-iks
+          - link:
+              label: IBM Cloud Provider release and updates
+              href: https://github.com/IBM-Cloud/terraform-provider-ibm/releases
+          - link:
+              label: IBM Cloud Terraform IBM Modules release and updates
+              href: https://github.com/terraform-ibm-modules
+          - link:
+              label: Terraform IBM Modules MCP Server
+              href: https://github.com/terraform-ibm-modules/tim-mcp
   - navgroup:
       id: help
       topics:
-      - terraform-ts-index.md
+      - faqs.md
+      - terraform_ts_index.md
+      - whats-new.md
+      - provider/version_changelog.md
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+          - topicgroup:
+              label: Debugging Kubernetes service errors
+              topics:
+              - tg-kubernetes-service.md
+      - sitemap.md
