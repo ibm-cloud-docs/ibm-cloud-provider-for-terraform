@@ -1,7 +1,7 @@
 {
   "version": 2,
   "title": "Terraform on IBM Cloud",
-  "introduction": "Accelerate your cloud journey with the IBM Cloud Provider plug-in for Terraform and the terraform-ibm-modules — a curated collection of open-source, enterprise-ready modules built for speed, security, and scalability. Built using the IBM Cloud Provider plug-in, the modules are secure-by-default and fully aligned with IBM Cloud best practices. They enable you to automate infrastructure provisioning effortlessly, reduce complexity, and deploy production-grade environments with confidence.",
+  "introduction": "Accelerate your cloud journey with the IBM Cloud Provider plug-in for Terraform and the Terraform IBM Modules Library — a curated collection of open-source, enterprise-ready modules built for speed, security, and scalability. Built using the IBM Cloud Provider plug-in, the Terraform IBM Modules are secure-by-default and fully aligned with IBM Cloud best practices. They enable you to automate infrastructure provisioning effortlessly, reduce complexity, and deploy production-grade environments with confidence.",
   "product_page": "https://www.ibm.com/products/hashicorp",
   "section_topics": {
     "links": [

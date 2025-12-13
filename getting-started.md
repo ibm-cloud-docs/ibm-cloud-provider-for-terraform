@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2025
+  years: 2017, 2025
 lastupdated: "2025-12-13"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial
@@ -39,7 +39,7 @@ Install Terraform on your machine is by following the [instructions](https://dev
 Ensure that the Terraform installation directory has been added to your PATH environment variable.
 {: note}
 
-Verify that the installation is successful by using the following command.
+Verify that the installation is successful by running the following command.
 
     ```sh
     terraform -version

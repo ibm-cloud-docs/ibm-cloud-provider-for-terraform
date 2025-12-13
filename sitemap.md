@@ -47,31 +47,27 @@ subcollection: ibm-cloud-provider-for-terraform
 * [Key terms](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#terms)
 
 
-## Getting started with Terraform IBM Modules
-{: #sitemap_getting_started_with_terraform_ibm_modules}
+## About Terraform IBM Modules
+{: #sitemap_about_terraform_ibm_modules}
 
 
-[Getting started with Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#getstarted-with-tim)
+[About Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#about-tim)
 
-* [What is Infrastructure as code(IaC)?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#infrastructure-as-code)
+* [How to use Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#using-terraform-ibm-modules)
 
-* [Working with Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#using-terraform-ibm-modules)
+* [Benefits of using Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#about-tim-benefits)
 
-* [Benefits of using Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#abouttim-benefits)
+* [Building larger solutions using multiple modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#integrating-multiple-modules)
 
-* [Key terms](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#keyterms-for-tim)
+* [Deployment options](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#tim-deployment-options)
 
-* [Building larger solutions using multiple modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#integrating-multiple-modules)
+* [AI-Assisted Infrastructure Development with TIM-MCP](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#tim-mcp-overview)
 
-* [Deployment options](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#timdeployment-options)
+    * [What is TIM-MCP?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#what-is-tim-mcp)
 
-* [AI-Assisted Infrastructure Development with TIM-MCP](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#tim-mcp-overview)
+    * [Benefits of AI-Assisted Development](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#tim-mcp-benefits)
 
-    * [What is TIM-MCP?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#what-is-tim-mcp)
-
-    * [Benefits of AI-Assisted Development](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#tim-mcp-benefits)
-
-    * [Getting Started with TIM-MCP](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getstarted-with-tim#getting-started-tim-mcp)
+    * [Getting Started with TIM-MCP](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#getting-started-tim-mcp)
 
 
 ## Release notes
