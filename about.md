@@ -20,9 +20,9 @@ Infrastructure as Code (IaC) enables you to define, manage, and provision cloud 
 
 On IBM Cloud, you have two flexible options to build your infrastructure:
 
-1. [**IBM Cloud Terraform Provider**](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#provider-plugin-ov) – Use the provider directly to build fully customizable solutions. This approach offers fine-grained control over IBM Cloud services, allowing you to define every aspect of your architecture.
+- [**IBM Cloud Terraform Provider**](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#provider-plugin-ov) – Use the provider directly to build fully customizable solutions. This approach offers fine-grained control over IBM Cloud services, allowing you to define every aspect of your architecture.
 
-2. [**Terraform IBM Modules Library**](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started-with-tim) – A curated set of open-source, enterprise-ready modules built for speed, security, and scalability. These modules are secure by default and aligned with IBM Cloud best practices, enabling you to deploy robust architectures quickly while maintaining strong governance and reliability.
+- [**Terraform IBM Modules Library**](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) – A curated set of open-source, enterprise-ready modules built for speed, security, and scalability. These modules are secure by default and aligned with IBM Cloud best practices, enabling you to deploy robust architectures quickly while maintaining strong governance and reliability.
 
 Together, these options empower you to build repeatable, scalable, and compliant IBM Cloud environments with confidence and efficiency.
 {: shortdesc}

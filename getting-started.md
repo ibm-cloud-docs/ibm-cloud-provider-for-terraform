@@ -44,6 +44,7 @@ Verify that the installation is successful by running the following command.
     ```sh
     terraform -version
     ```
+    
     {: pre}
 
 ## Configuring the {{site.data.keyword.cloud_notm}} Provider plug-in

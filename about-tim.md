@@ -47,7 +47,7 @@ Before integrating a module into your project, review its documentation(readme) 
 ## Building larger solutions using multiple modules
 {: #integrating-multiple-modules}
 
-Terraform’s modular design allows you to integrate two or more TIM modules together to create a larger, opinionated, and production-ready solution. Instead of deploying modules separately, you can compose them within a [root configuration](https://developer.hashicorp.com/terraform/language/modules/develop/composition) and use the complete architecture. By combining modules, you can construct a cohesive solution such as a secure VPC-based architecture with monitoring, logging, and encryption enabled. Outputs from one module can become inputs to another, enabling dependency chaining and consistent architecture composition.
+Terraform’s modular design allows you to integrate two or more TIM modules together to create a larger, opinionated, and production-ready solution. Instead of deploying modules separately, you can compose them within a [root configuration](https://developer.hashicorp.com/terraform/language/modules/develop/composition){: external} and use the complete architecture. By combining modules, you can construct a cohesive solution such as a secure VPC-based architecture with monitoring, logging, and encryption enabled. Outputs from one module can become inputs to another, enabling dependency chaining and consistent architecture composition.
 
 ## Deployment options
 {: #tim-deployment-options}
@@ -56,13 +56,13 @@ You can deploy your architecture using several different approaches depending on
 
 Some common deployment patterns include:
 
-1. [**Deployable Architecture (DA)**](https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-understand-module-da&interface=ui): A Deployable Architecture is a terraform solution often built using multiple TIM modules to create a common architectural pattern. The DA can be published as a deployable solution in the IBM Cloud catalog which allows teams to consume complex architecture without writing or understanding Terraform. Publishing as a DA is one option for teams who want to make reusable architectures available inside their organization.
+1. **Deployable Architecture (DA)**: A [Deployable Architecture](https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-understand-module-da&interface=ui) is a terraform solution often built using multiple TIM modules to create an architectural pattern. The DA can be published as a deployable solution in the IBM Cloud catalog which allows teams to consume complex architecture without writing or understanding Terraform. Publishing as a DA is one option for teams who want to make reusable architectures available inside their organization.
 
-2. **Plain Terraform**: Create a Terraform configuration that calls multiple TIM modules. This configuration can be deployed in multiple ways such as using [Terraform CLI](https://developer.hashicorp.com/terraform/cli/commands), IBM Cloud [Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started) etc.
+2. **Plain Terraform**: Create a Terraform configuration that calls multiple TIM modules. This configuration can be deployed either using [Terraform CLI](https://developer.hashicorp.com/terraform/cli/commands){: external} or through IBM Cloud [Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started).
 
-3. [**Terragrunt**](https://terragrunt.gruntwork.io/docs/getting-started/overview/): Terragrunt provides additional capabilities such as DRY configurations, environment layering, remote state management, and orchestration of multiple modules.
+3. **Terragrunt**: [Terragrunt](https://terragrunt.gruntwork.io/docs/getting-started/overview/){: external} provides additional capabilities such as DRY configurations, environment layering, remote state management, and orchestration of multiple modules.
 
-4. [**HashiStack**](https://hashistack.readthedocs.io/en/latest/): You can use TIM modules with HashiStack platforms to support collaborative, policy-driven, and automated deployments.
+4. **HashiStack**: You can use TIM modules with [HashiStack](https://hashistack.readthedocs.io/en/latest/){: external} platforms to support collaborative, policy-driven, and automated deployments.
 
 ## AI-Assisted Infrastructure Development with TIM-MCP
 {: #tim-mcp-overview}
