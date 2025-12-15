@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-12-12"
+lastupdated: "2025-12-15"
 
 keywords: Terraform IBM Modules, Deploy a Terraform IBM Module, terraform module deployment
 
@@ -18,7 +18,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {: toc-services="vpc"}
 
 
-In this tutorial, you will learn how to deploy a terraform-ibm-module (TIM) module using Terraform. It will cover how variables are defined and passed, which CLI commands drive the process, and demonstrate the workflow with IBM Cloud Object Storage (COS) as an example.
+In this tutorial, you will learn how to deploy a terraform-ibm-module (TIM) module using Terraform CLI. It will cover how variables are defined and passed, which CLI commands drive the process, and demonstrate the workflow with IBM Cloud Object Storage (COS) as an example.
 
 
 ## Objectives

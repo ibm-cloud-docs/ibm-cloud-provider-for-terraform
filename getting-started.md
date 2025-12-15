@@ -41,11 +41,11 @@ Ensure that the Terraform installation directory has been added to your PATH env
 
 Verify that the installation is successful by running the following command.
 
-    ```sh
-    terraform -version
-    ```
-    
-    {: pre}
+  ```sh
+  terraform -version
+  ```
+
+  {: pre}
 
 ## Configuring the {{site.data.keyword.cloud_notm}} Provider plug-in
 {: #install_provider-step}

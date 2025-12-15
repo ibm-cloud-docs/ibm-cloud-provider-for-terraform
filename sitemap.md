@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-13"
+lastupdated: "2025-12-15"
 
 keywords: terraform, sitemap
 
@@ -47,11 +47,11 @@ subcollection: ibm-cloud-provider-for-terraform
 * [Key terms](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#terms)
 
 
-## About Terraform IBM Modules
-{: #sitemap_about_terraform_ibm_modules}
+## About Terraform IBM Modules(TIM)
+{: #sitemap_about_terraform_ibm_modulestim}
 
 
-[About Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#about-tim)
+[About Terraform IBM Modules(TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#about-tim)
 
 * [How to use Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#using-terraform-ibm-modules)
 
@@ -61,13 +61,20 @@ subcollection: ibm-cloud-provider-for-terraform
 
 * [Deployment options](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#tim-deployment-options)
 
-* [AI-Assisted Infrastructure Development with TIM-MCP](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#tim-mcp-overview)
 
-    * [What is TIM-MCP?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#what-is-tim-mcp)
+## About TIM-MCP
+{: #sitemap_about_tim-mcp}
 
-    * [Benefits of AI-Assisted Development](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#tim-mcp-benefits)
 
-    * [Getting Started with TIM-MCP](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#getting-started-tim-mcp)
+[About TIM-MCP](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim-mcp#about-tim-mcp)
+
+    * [AI-Assisted Infrastructure Development with TIM-MCP](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim-mcp#tim-mcp-overview)
+
+    * [What is TIM-MCP?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim-mcp#what-is-tim-mcp)
+
+    * [Benefits of AI-Assisted Development](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim-mcp#tim-mcp-benefits)
+
+    * [Getting Started with TIM-MCP](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim-mcp#getting-started-tim-mcp)
 
 
 ## Release notes
@@ -299,6 +306,163 @@ subcollection: ibm-cloud-provider-for-terraform
     * [12 October 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#12oct2021)
 
 
+## Understand Terraform IBM Modules code structure
+{: #sitemap_understand_terraform_ibm_modules_code_structure}
+
+
+[Understand Terraform IBM Modules code structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UnderstandCodeStructure#UnderstandCodeStructure)
+
+
+## Deploy a Terraform IBM Module using Terraform CLI
+{: #sitemap_deploy_a_terraform_ibm_module_using_terraform_cli}
+
+
+[Deploy a Terraform IBM Module using Terraform CLI](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module)
+
+* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-objectives)
+
+* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-prerequisites)
+
+* [Clone the repository](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson1-clone)
+
+* [Understand the code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson2-code)
+
+* [Configure the variables](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson3-configure)
+
+* [Initialize Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson4-init)
+
+* [Generate execution plan](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson5-plan)
+
+* [Deploy the resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson6-deploy)
+
+* [Verify the deployed resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson7-verify)
+
+* [Clean-up the resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson8-destroy)
+
+* [What you learned](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-learnings)
+
+
+## Combine Terraform IBM Modules to build a solution
+{: #sitemap_combine_terraform_ibm_modules_to_build_a_solution}
+
+
+[Combine Terraform IBM Modules to build a solution](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-CombineTIMModules#CombineTIMModules)
+
+
+## Deploy Terraform IBM Modules using HashiCorp Cloud Platform (HCP) Waypoint
+{: #sitemap_deploy_terraform_ibm_modules_using_hashicorp_cloud_platform_hcp_waypoint}
+
+
+[Deploy Terraform IBM Modules using HashiCorp Cloud Platform (HCP) Waypoint](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#DeployTIMUsingHashiCorpWP)
+
+* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#objectives)
+
+* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#audience)
+
+* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#prerequisites)
+
+* [No-Code Terraform Module](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#no_code_module)
+
+    * [Create a Root Module from an Existing Example](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#create-a-root-module-from-an-existing-example)
+
+    * [Publish a No-Code Terraform Module](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#publish-a-no-code-terraform-module)
+
+* [Build a Waypoint Template](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#waypoint_template)
+
+* [Provision an Application via Waypoint](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#waypoint_application)
+
+* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#next-steps)
+
+* [Related links](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#related-links)
+
+
+## Deploy Terraform IBM Modules using Pulumi
+{: #sitemap_deploy_terraform_ibm_modules_using_pulumi}
+
+
+[Deploy Terraform IBM Modules using Pulumi](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#pulumi-with-terraform-ibm-modules)
+
+* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMobjectives)
+
+* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMaudience)
+
+* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMprereqs)
+
+* [Set up your environment](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMlesson1-setup)
+
+* [Configure the IBM Cloud provider](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMlesson2-provider)
+
+* [Use Terraform IBM Modules in Pulumi](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMlesson3-ibm-modules)
+
+* [Deploy your Pulumi stack](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMlesson4-deploy)
+
+* [Advanced usage](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMlesson5-advanced)
+
+* [Clean up resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMlesson6-cleanup)
+
+* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMnext-steps)
+
+* [Related links](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMrelated-links)
+
+
+## Package as a Deployment Architecture
+{: #sitemap_package_as_a_deployment_architecture}
+
+
+[Package as a Deployment Architecture](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-PackageAsADA#PackageAsADA)
+
+
+## Using TIM-MCP with AI assistants
+{: #sitemap_using_tim-mcp_with_ai_assistants}
+
+
+[Using TIM-MCP with AI assistants](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#using-tim-mcp-with-ai-assistants)
+
+* [What is TIM-MCP?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#what-is-tim-mcp)
+
+    * [Why use TIM-MCP?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#why-use-tim-mcp)
+
+* [Before you begin](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#before-you-begin)
+
+* [Installing TIM-MCP for IBM Project Bob](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#installing-tim-mcp-for-ibm-project-bob)
+
+    * [Installing from IBM Project Bob Marketplace](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#installing-from-ibm-project-bob-marketplace)
+
+    * [Manual configuration](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#manual-configuration)
+
+* [Installing TIM-MCP for Claude Desktop](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#installing-tim-mcp-for-claude-desktop)
+
+* [Installing TIM-MCP for VS Code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#installing-tim-mcp-for-vs-code)
+
+* [Installing TIM-MCP for Cursor](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#installing-tim-mcp-for-cursor)
+
+* [Installing TIM-MCP for Claude Code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#installing-tim-mcp-for-claude-code)
+
+* [Using TIM-MCP with AI assistants](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#using-tim-mcp-with-ai-assistants)
+
+    * [Getting started examples](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#getting-started-examples)
+
+    * [Enterprise infrastructure examples](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#enterprise-infrastructure-examples)
+
+    * [Best practices for AI-assisted development](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#best-practices-for-ai-assisted-development)
+
+* [Troubleshooting](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#troubleshooting)
+
+    * [Server not starting](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#server-not-starting)
+
+    * [No tools appearing](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#no-tools-appearing)
+
+    * [Rate limiting errors](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#rate-limiting-errors)
+
+    * [Token authentication fails](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#token-authentication-fails)
+
+* [Version pinning for production](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#version-pinning-for-production)
+
+* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#next-steps)
+
+[Deploy Terraform IBM Modules using Schematics](/docs/schematics?topic=schematics-sch-create-wks)
+
+
 ## Sample Terraform templates for {{site.data.keyword.cloud_notm}}
 {: #sitemap_sample_terraform_templates_for_}
 
@@ -480,143 +644,6 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #sitemap_deploying-multitiered-vpc-on-ibm-cloud-by-using-bastion-host}
 
 [Deploying multitiered VPC on IBM Cloud by using Bastion host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md){: external}
-
-
-## Using TIM-MCP with AI assistants
-{: #sitemap_using_tim-mcp_with_ai_assistants}
-
-
-[Using TIM-MCP with AI assistants](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#using-tim-mcp-with-ai-assistants)
-
-* [What is TIM-MCP?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#what-is-tim-mcp)
-
-    * [Why use TIM-MCP?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#why-use-tim-mcp)
-
-* [Before you begin](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#before-you-begin)
-
-* [Installing TIM-MCP for IBM Project Bob](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#installing-tim-mcp-for-ibm-project-bob)
-
-    * [Installing from IBM Project Bob Marketplace](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#installing-from-ibm-project-bob-marketplace)
-
-    * [Manual configuration](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#manual-configuration)
-
-* [Installing TIM-MCP for Claude Desktop](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#installing-tim-mcp-for-claude-desktop)
-
-* [Installing TIM-MCP for VS Code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#installing-tim-mcp-for-vs-code)
-
-* [Installing TIM-MCP for Cursor](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#installing-tim-mcp-for-cursor)
-
-* [Installing TIM-MCP for Claude Code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#installing-tim-mcp-for-claude-code)
-
-* [Using TIM-MCP with AI assistants](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#using-tim-mcp-with-ai-assistants)
-
-    * [Getting started examples](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#getting-started-examples)
-
-    * [Enterprise infrastructure examples](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#enterprise-infrastructure-examples)
-
-    * [Best practices for AI-assisted development](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#best-practices-for-ai-assisted-development)
-
-* [Troubleshooting](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#troubleshooting)
-
-    * [Server not starting](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#server-not-starting)
-
-    * [No tools appearing](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#no-tools-appearing)
-
-    * [Rate limiting errors](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#rate-limiting-errors)
-
-    * [Token authentication fails](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#token-authentication-fails)
-
-* [Version pinning for production](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#version-pinning-for-production)
-
-* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#next-steps)
-
-
-## Understand Terraform IBM Modules code structure
-{: #sitemap_understand_terraform_ibm_modules_code_structure}
-
-
-[Understand Terraform IBM Modules code structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UnderstandCodeStructure#UnderstandCodeStructure)
-
-
-## Deploy a Terraform IBM Module using Terraform CLI
-{: #sitemap_deploy_a_terraform_ibm_module_using_terraform_cli}
-
-
-[Deploy a Terraform IBM Module using Terraform CLI](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module)
-
-* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-objectives)
-
-* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-prerequisites)
-
-* [Clone the repository](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson1-clone)
-
-* [Understand the code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson2-code)
-
-* [Configure the variables](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson3-configure)
-
-* [Initialize Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson4-init)
-
-* [Generate execution plan](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson5-plan)
-
-* [Deploy the resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson6-deploy)
-
-* [Verify the deployed resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson7-verify)
-
-* [Clean-up the resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson8-destroy)
-
-* [What you learned](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-learnings)
-
-
-## Combine Terraform IBM Modules to build a solution
-{: #sitemap_combine_terraform_ibm_modules_to_build_a_solution}
-
-
-[Combine Terraform IBM Modules to build a solution](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-CombineTIMModules#CombineTIMModules)
-
-
-## Deploy Terraform IBM Modules using Hashicorp Waypoint
-{: #sitemap_deploy_terraform_ibm_modules_using_hashicorp_waypoint}
-
-
-[Deploy Terraform IBM Modules using Hashicorp Waypoint](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#DeployTIMUsingHashiCorpWP)
-
-
-## Deploy Terraform IBM Modules using Pulumi
-{: #sitemap_deploy_terraform_ibm_modules_using_pulumi}
-
-
-[Deploy Terraform IBM Modules using Pulumi](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#pulumi-with-terraform-ibm-modules)
-
-* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMobjectives)
-
-* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMaudience)
-
-* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMprereqs)
-
-* [Set up your environment](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMlesson1-setup)
-
-* [Configure the IBM Cloud provider](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMlesson2-provider)
-
-* [Use Terraform IBM Modules in Pulumi](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMlesson3-ibm-modules)
-
-* [Deploy your Pulumi stack](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMlesson4-deploy)
-
-* [Advanced usage](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMlesson5-advanced)
-
-* [Clean up resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMlesson6-cleanup)
-
-* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMnext-steps)
-
-* [Related links](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMrelated-links)
-
-
-## Package as a Deployment Architecture
-{: #sitemap_package_as_a_deployment_architecture}
-
-
-[Package as a Deployment Architecture](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-PackageAsADA#PackageAsADA)
-
-[Deploy Terraform IBM Modules using Schematics](/docs/schematics?topic=schematics-sch-create-wks)
 
 
 ## Installing the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in
