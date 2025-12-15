@@ -12,7 +12,7 @@ subcollection: ibm-cloud-terraform-ibm-modules
 
 {{site.data.keyword.attribute-definition-list}}
 
-# About Terraform IBM Modules(TIM)
+# About Terraform IBM Modules (TIM)
 {: #about-tim}
 
 The [Terraform IBM Modules (TIM)](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external} provides a curated collection of open-source, enterprise-ready Terraform modules designed to simplify the creation, management, and versioning of complex, compliant environments on {{site.data.keyword.cloud_notm}}.

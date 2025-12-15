@@ -12,7 +12,7 @@ subcollection: ibm-cloud-terraform-ibm-modules
 
 {{site.data.keyword.attribute-definition-list}}
 
-# About TIM-MCP
+# About Terraform IBM Modules MCP Server (TIM-MCP)
 {: #about-tim-mcp}
 
 ### AI-Assisted Infrastructure Development with TIM-MCP
@@ -20,7 +20,7 @@ subcollection: ibm-cloud-terraform-ibm-modules
 
 The [Terraform IBM Modules MCP Server (TIM-MCP)](https://github.com/terraform-ibm-modules/tim-mcp){: external} connects AI assistants like Claude, IBM Project Bob, and other MCP-compatible tools to the Terraform IBM Modules ecosystem. This integration enables AI-assisted infrastructure code generation with access to IBM Cloud best practices and validated module patterns.
 
-### What is TIM-MCP?
+## What is TIM-MCP?
 {: #what-is-tim-mcp}
 
 TIM-MCP acts as a bridge between foundation models and the Terraform IBM Modules ecosystem, providing:
@@ -31,7 +31,7 @@ TIM-MCP acts as a bridge between foundation models and the Terraform IBM Modules
 - **Real-time Module Data**: Ensures AI-generated code uses accurate parameters and proper versioning
 - **Example Access**: Retrieves implementation patterns and example code from module repositories
 
-### Benefits of AI-Assisted Development
+## Benefits of AI-Assisted Development
 {: #tim-mcp-benefits}
 
 Using TIM-MCP with AI assistants helps you:
@@ -42,7 +42,7 @@ Using TIM-MCP with AI assistants helps you:
 - **Learn Faster**: See working examples and patterns as you build
 - **Stay Current**: AI assistants use up-to-date module information from the registry
 
-### Getting Started with TIM-MCP
+## Getting Started with TIM-MCP
 {: #getting-started-tim-mcp}
 
 To use TIM-MCP, you need:
