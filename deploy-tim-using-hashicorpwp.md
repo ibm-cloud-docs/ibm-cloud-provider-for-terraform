@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2025-12-16"
 
 keywords: no-code, ibmcloud, infrastructure-as-code, terraform-ibm-modules, no-code and ibmcloud, terraform, hcp, waypoint, hashicorp
 
@@ -33,13 +33,13 @@ This tutorial walks you through publishing Terraform IBM Modules to the HCP Terr
 
 In this tutorial, you will:
 
-- Adjust Terraform IBM Modules: Configure a [Terraform IBM Module](https://github.com/terraform-ibm-modules){: external} for use in the registry by updating source references and validating the module structure.
+- **Adjust Terraform IBM Modules:** Configure a [Terraform IBM Module](https://github.com/terraform-ibm-modules){: external} for use in the registry by updating source references and validating the module structure.
 
-- Publish to the HCP Registry: Set up Version Control System(VCS) connections and versioning to publish the module to the HCP Terraform Registry with No-Code provisioning enabled.
+- **Publish to the HCP Registry:** Set up Version Control System(VCS) connections and versioning to publish the module to the HCP Terraform Registry with No-Code provisioning enabled.
 
-- Create a Waypoint Template: Build a reusable Waypoint template that consumes the No-Code module and defines the necessary input variables.
+- **Create a Waypoint Template:** Build a reusable Waypoint template that consumes the No-Code module and defines the necessary input variables.
 
-- Provision Infrastructure: Developers use these standardized templates to deploy their applications without needing to manage the underlying infrastructure.
+- **Provision Infrastructure:** Developers use these standardized templates to deploy their applications without needing to manage the underlying infrastructure.
 
 ## Audience
 {: #audience}
