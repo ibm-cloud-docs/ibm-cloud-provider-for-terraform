@@ -24,9 +24,8 @@ Considering you have successfully built and tested a secure infrastructure using
 Ensure that you have the following:
 
 - An IBM Cloud account with permissions to create and manage private catalogs.
-- Terraform code to package and publish
 
-## Package the Terraform code (`.tar.gz`)
+## Package the Terraform code
 {: #create-da-bundle}
 {: step}
 
@@ -36,7 +35,7 @@ Before you onboard a Deployable Architecture, you must create a Terraform bundle
 
 1. In your GitHub repository, go to **Releases** → **Draft a new release**.
 2. In **Tag version**, create a new tag. For example,  `v1.0.0-test`.
-3. Select the target branch (for example, `main`).
+3. Select the target branch. For example, `main`.
 4. Provide a release title.  
 5. (Optional) Select **Set as a pre-release**.
 6. Click **Publish release**.

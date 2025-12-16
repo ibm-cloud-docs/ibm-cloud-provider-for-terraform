@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2025-12-16"
 
 keywords: Terraform IBM Modules, Deploy a Terraform IBM Module, terraform module deployment
 
@@ -34,8 +34,8 @@ While this tutorial uses the [Cloud Object Storage module](https://github.com/te
 {: #deploy-tim-module-prerequisites}
 
 Before you begin, ensure you have the following:
-- [Git CLI](https://git-scm.com/install/) installed
-- [Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+- [Git CLI](https://git-scm.com/install/) installed.
+- [Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli).
 - [IBM Cloud apikey](/docs/account?topic=account-userapikey&interface=ui) to access the IBM Cloud.
 
 ## Clone the repository

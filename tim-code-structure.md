@@ -22,7 +22,7 @@ This document provides a comprehensive guide to understanding the TIM module cod
 
 ## Audience
 
-This tutorial focuses on understanding the structure and organization of Terraform IBM Modules (TIM) repositories. It's designed for developers and architects who want to effectively consume and work with these modules in their IaC projects.
+This document focuses on understanding the structure and organization of Terraform IBM Modules (TIM) modules. It's designed for developers and architects who want to effectively consume and work with these modules in their IaC projects.
 
 ## Objectives
 {: #tim-objectives}
@@ -61,7 +61,7 @@ terraform-ibm-<module-name>/
 ├── README.md                         # Module documentation
 ```
 
-> **💡 Note:** Module repositories also contain additional development and CI/CD tooling (workflows, build automation, etc.) that are primarily relevant to module contributors.
+Module repositories also contain additional development and CI/CD tooling (workflows, build automation, etc.) that are primarily relevant to module contributors.
 
 ### Root-level module code
 {: #module-root-code}
@@ -75,7 +75,8 @@ The root-level module code contains the core Terraform configuration files that 
 | `outputs.tf` | Output values exposed to use by other configurations |
 | `version.tf` | Terraform and provider version constraints |
 
-> **📘 Note:** You consume this module by referencing it in a `module` block within your own Terraform configuration (your working directory where you run `terraform plan` and `terraform apply`). The module repository itself is not meant to be deployed directly.
+You consume this module by referencing it in a `module` block within your own Terraform configuration (your working directory where you run `terraform plan` and `terraform apply`). The module repository itself is not meant to be deployed directly.
+{: note}
 
 ### Module documentation
 {: #module-documentation}
@@ -89,7 +90,8 @@ Every TIM module includes a `README.md` file at the root level that serves as th
 - **Inputs and Outputs** variables details
 - Links to **examples** and **submodules**
 
-> **💡 Tip:** Always check the required IAM permissions before using a module.
+Always check the required IAM permissions before using a module.
+{: tip}
 
 ### Usage example
 {: #module-usage}
@@ -169,3 +171,4 @@ Now that you understand the TIM module structure, you can:
 ## Feedback
 
 If you have questions or feedback for any specific module, open an issue in the relevant module repository.
+

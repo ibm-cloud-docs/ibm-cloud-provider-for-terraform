@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2025-12-16"
 
 keywords: terraform-ibm-modules, Terraform on IBM Cloud, MCP, TIM-MCP, automation
 
@@ -19,6 +19,7 @@ subcollection: ibm-cloud-terraform-ibm-modules
 {: #tim-mcp-overview}
 
 The [Terraform IBM Modules MCP Server (TIM-MCP)](https://github.com/terraform-ibm-modules/tim-mcp){: external} connects AI assistants like Claude, IBM Project Bob, and other MCP-compatible tools to the Terraform IBM Modules ecosystem. This integration enables AI-assisted infrastructure code generation with access to IBM Cloud best practices and validated module patterns.
+{: shortdesc}
 
 ## What is TIM-MCP?
 {: #what-is-tim-mcp}

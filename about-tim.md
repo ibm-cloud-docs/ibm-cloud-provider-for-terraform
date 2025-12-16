@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2025-12-16"
 
 keywords: terraform-ibm-modules, Terraform on IBM Cloud, configuration files, resources, what is Terraform IBM Modules, automation
 
@@ -23,7 +23,7 @@ These modules are purpose-built for {{site.data.keyword.cloud_notm}} services, f
 ## How to use Terraform IBM Modules
 {: #using-terraform-ibm-modules}
 
-Start by identifying the IBM Cloud service you want to provision — such as Object Storage, Databases, or Virtual Private Cloud (VPC) and then locate the corresponding Terraform module in the [terraform-ibm-modules](https://registry.terraform.io/namespaces/terraform-ibm-modules) organization. For example, use the [`terraform-ibm-cos`](https://registry.terraform.io/modules/terraform-ibm-modules/cos/ibm/latest) module for IBM Cloud Object Storage, or the [`terraform-ibm-cloud-monitoring`](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-monitoring/ibm/latest) module for deploying IBM Cloud Monitoring instance.
+Start by identifying the IBM Cloud service you want to provision — such as Object Storage, Databases, or Virtual Private Cloud (VPC) and then locate the corresponding Terraform module in the [terraform-ibm-modules](https://registry.terraform.io/namespaces/terraform-ibm-modules) organization. For example, use the [`terraform-ibm-cos`](https://registry.terraform.io/modules/terraform-ibm-modules/cos/ibm/latest) module for IBM Cloud Object Storage, or the [`terraform-ibm-cloud-monitoring`](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-monitoring/ibm/latest) module for deploying IBM Cloud Monitoring instance. Refer [here]((/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code) for a more detailed overview. 
 
 Before integrating a module into your project, review its documentation(readme) to understand key details such as required and optional input variables, output values, dependencies, minimum required permissions, and version compatibility with Terraform and the IBM Cloud provider. Each module also includes examples typically a basic example demonstrating minimal configuration using default values, and an advanced example showcasing full functionality and broader configuration options. These examples provide practical guidance for common usage patterns.
 

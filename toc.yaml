@@ -21,13 +21,13 @@ toc:
   - navgroup:
       id: tutorial
       topics:
-      - topic: tim-structure.md
+      - topic: tim-code-structure.md
       - topic: deploy-tim-module.md
       - topic: combine-tim-modules.md
       - topic: deploy-tim-using-hashicorpwp.md
       - topic: deploy-tim-using-pulumi.md
         navtitle: Deploy Terraform IBM Modules using Pulumi
-      - topic: package-tim-publish.md
+      - topic: package-and-publish-da.md
       - topic: using-tim-mcp.md
         navtitle: Using TIM-MCP with AI assistants
       - link:

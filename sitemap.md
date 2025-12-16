@@ -437,7 +437,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 * [Before you begin](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#before-you-begin)
 
-* [Package the Terraform code (`.tar.gz`)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#create-da-bundle)
+* [Package the Terraform code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#create-da-bundle)
 
     * [Create a release](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#create-a-release)
 
