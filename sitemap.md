@@ -306,11 +306,35 @@ subcollection: ibm-cloud-provider-for-terraform
     * [12 October 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#12oct2021)
 
 
-## Understand Terraform IBM Modules code structure
-{: #sitemap_understand_terraform_ibm_modules_code_structure}
+## Understanding the Terraform IBM Modules Code Structure
+{: #sitemap_understanding_the_terraform_ibm_modules_code_structure}
 
 
-[Understand Terraform IBM Modules code structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UnderstandCodeStructure#UnderstandCodeStructure)
+[Understanding the Terraform IBM Modules Code Structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#understand-tim-code)
+
+* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#audience)
+
+* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#tim-objectives)
+
+* [Navigating a Terraform IBM Module](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#navigating-tim-module)
+
+* [Module Code Structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#tim-code-structure)
+
+    * [Root-level module code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#module-root-code)
+
+    * [Module documentation](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#module-documentation)
+
+    * [Usage example](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#module-usage)
+
+    * [Examples](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#module-examples)
+
+    * [Submodules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#tim-submodules)
+
+    * [Reference architectures](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#tim-ref-architecture)
+
+* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#next-steps)
+
+* [Feedback](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#feedback)
 
 
 ## Deploy a Terraform IBM Module using Terraform CLI
