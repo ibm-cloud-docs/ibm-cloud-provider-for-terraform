@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2025-12-16"
 
 keywords: terraform, sitemap
 
@@ -405,11 +405,31 @@ subcollection: ibm-cloud-provider-for-terraform
 * [Related links](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMrelated-links)
 
 
-## Package as a Deployment Architecture
-{: #sitemap_package_as_a_deployment_architecture}
+## Package as a Deployable Architecture and Publish to a Private Catalog
+{: #sitemap_package_as_a_deployable_architecture_and_publish_to_a_private_catalog}
 
 
-[Package as a Deployment Architecture](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-PackageAsADA#PackageAsADA)
+[Package as a Deployable Architecture and Publish to a Private Catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#package-and-publish-da)
+
+* [Before you begin](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#before-you-begin)
+
+* [Package the Terraform code (`.tar.gz`)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#create-da-bundle)
+
+    * [Create a release](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#create-a-release)
+
+    * [Copy the `.tar.gz` bundle link](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#copy-the-targz-bundle-link)
+
+* [Publish to a Private Catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#publish-da)
+
+    * [Create a private catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#create-a-private-catalog)
+
+    * [Onboard the Deployable Architecture](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#onboard-the-deployable-architecture)
+
+    * [Mark the version as pre-release](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#mark-the-version-as-pre-release)
+
+    * [View the Deployable Architecture in the catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#view-the-deployable-architecture-in-the-catalog)
+
+* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#next-steps)
 
 
 ## Using TIM-MCP with AI assistants
