@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-12-16"
+lastupdated: "2025-12-17"
 
 keywords: no-code, ibmcloud, infrastructure-as-code, terraform-ibm-modules, no-code and ibmcloud, terraform, hcp, waypoint, hashicorp
 
@@ -18,7 +18,7 @@ completion-time: 1h
 {{site.data.keyword.attribute-definition-list}}
 
 # Deploy Terraform IBM Modules using HashiCorp Cloud Platform (HCP) Waypoint
-{: #DeployTIMUsingHashiCorpWP}
+{: #deploy-tim-using-hcp-waypoint}
 {: toc-content-type="tutorial"}
 {: toc-services="terraform, hcp, waypoint"}
 {: toc-completion-time="1h"}

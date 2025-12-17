@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-16"
+lastupdated: "2025-12-17"
 
 keywords: terraform, sitemap
 
@@ -67,8 +67,6 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 [About Terraform IBM Modules MCP Server (TIM-MCP)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim-mcp#about-tim-mcp)
-
-    * [AI-Assisted Infrastructure Development with TIM-MCP](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim-mcp#tim-mcp-overview)
 
 * [What is TIM-MCP?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim-mcp#what-is-tim-mcp)
 
@@ -377,27 +375,27 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #sitemap_deploy_terraform_ibm_modules_using_hashicorp_cloud_platform_hcp_waypoint}
 
 
-[Deploy Terraform IBM Modules using HashiCorp Cloud Platform (HCP) Waypoint](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#DeployTIMUsingHashiCorpWP)
+[Deploy Terraform IBM Modules using HashiCorp Cloud Platform (HCP) Waypoint](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#deploy-tim-using-hcp-waypoint)
 
-* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#objectives)
+* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#objectives)
 
-* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#audience)
+* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#audience)
 
-* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#prerequisites)
+* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#prerequisites)
 
-* [No-Code Terraform Module](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#no_code_module)
+* [No-Code Terraform Module](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#no_code_module)
 
-    * [Create a Root Module from an Existing Example](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#create-a-root-module-from-an-existing-example)
+    * [Create a Root Module from an Existing Example](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#create-a-root-module-from-an-existing-example)
 
-    * [Publish a No-Code Terraform Module](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#publish-a-no-code-terraform-module)
+    * [Publish a No-Code Terraform Module](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#publish-a-no-code-terraform-module)
 
-* [Build a Waypoint Template](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#waypoint_template)
+* [Build a Waypoint Template](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#waypoint_template)
 
-* [Provision an Application via Waypoint](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#waypoint_application)
+* [Provision an Application via Waypoint](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#waypoint_application)
 
-* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#next-steps)
+* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#next-steps)
 
-* [Related links](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-DeployTIMUsingHashiCorpWP#related-links)
+* [Related links](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#related-links)
 
 
 ## Deploy Terraform IBM Modules using Pulumi
