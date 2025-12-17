@@ -548,15 +548,15 @@ subcollection: ibm-cloud-provider-for-terraform
 
 * [Provision the Workload Servers and Private Load Balancer](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-hub-spoke-infrastructure#tim-workload-servers)
 
-* [Exposing the Application to the Internet](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-hub-spoke-infrastructure#exposing-the-application-to-the-internet)
+* [Exposing the Application to the Internet](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-hub-spoke-infrastructure#tim-expose-app)
 
-* [Provision Virtual Private Endpoints (VPEs)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-hub-spoke-infrastructure#provision-virtual-private-endpoints-vpes)
+* [Provision Virtual Private Endpoints (VPEs)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-hub-spoke-infrastructure#tim-vpe)
 
-* [Provision Cloud Object Storage](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-hub-spoke-infrastructure#provision-cloud-object-storage)
+* [Provision Cloud Object Storage](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-hub-spoke-infrastructure#tim-provision-cos)
 
 * [Define outputs](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-hub-spoke-infrastructure#tim-define-outputs)
 
-* [Deploy the Compute and Service Resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-hub-spoke-infrastructure#deploy-the-compute-and-service-resources)
+* [Deploy the Compute and Service Resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-hub-spoke-infrastructure#tim-final-deploy)
 
 * [Testing Connectivity and Applications](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-hub-spoke-infrastructure#tim-testing-connectivity-apps)
 

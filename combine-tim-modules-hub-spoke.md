@@ -18,7 +18,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {: toc-services="terraform, tim, tim-modules"}
 {: toc-completion-time="2h"}
 
-This tutorial demonstrates how to build a complete **Infrastructure as Code (IaC)** solution on IBM Cloud using [Terraform IBM Modules](https://github.com/terraform-ibm-modules). Rather than defining individual cloud resources, we focus on **assembling, integrating, and composing Terraform modules** into a cohesive, reusable solution. The infrastructure you’ll build is based on a **secure hub-and-spoke model**. 
+This tutorial demonstrates how to build a complete **Infrastructure as Code (IaC)** solution on IBM Cloud using [Terraform IBM Modules](https://github.com/terraform-ibm-modules). Rather than defining individual cloud resources, we focus on **assembling, integrating, and composing Terraform modules** into a cohesive, reusable solution. The infrastructure you’ll build is based on a **secure hub-and-spoke model**.
 {: shortdesc}
 
 ![Architectural diagram](images/architecture.png)
@@ -29,14 +29,14 @@ This tutorial uses a **hub-and-spoke network architecture**, a standard pattern 
 The deployment architecture uses these core components:
 
 - **Management VPC (Hub)**
-  - **Jumpbox Server**: Secure gateway for administrators to access workload servers. The only component reachable from the public internet (via SSH).  
-  - **Public Load Balancer**: Routes incoming traffic to the private load balancer in the Workload VPC, keeping workload servers isolated.  
+  - **Jumpbox Server**: Secure gateway for administrators to access workload servers. The only component reachable from the public internet (via SSH).
+  - **Public Load Balancer**: Routes incoming traffic to the private load balancer in the Workload VPC, keeping workload servers isolated.
 - **Workload VPC (Spoke)**
-  - **Workload Servers**: Private virtual servers hosting applications, without direct internet access.  
-  - **Private Load Balancer**: Distributes traffic from the public load balancer to workload servers.  
+  - **Workload Servers**: Private virtual servers hosting applications, without direct internet access.
+  - **Private Load Balancer**: Distributes traffic from the public load balancer to workload servers.
 - **Secure Connectivity**
-  - **Transit Gateway**: Connects Management and Workload VPCs over the private IBM Cloud backbone.  
-  - **Security Groups & Network ACLs**: Firewall rules that control traffic between the components.  
+  - **Transit Gateway**: Connects Management and Workload VPCs over the private IBM Cloud backbone.
+  - **Security Groups & Network ACLs**: Firewall rules that control traffic between the components.
 - **Private Access to IBM Cloud Services**
   - **Virtual Private Endpoints (VPEs)**: Enable private connections from workload servers to IBM Cloud services, such as Cloud Object Storage.
 
@@ -179,12 +179,12 @@ variable "region" {
 
 In this step, you will define the main network infrastructure for your `hub-and-spoke` deployment using **IBM Cloud Terraform modules**. The `main.tf` file orchestrates all core components in a structured and consistent way. Resources use the `${var.prefix}-` naming convention to **avoid conflicts and maintain uniform naming**.
 
-The following components will be created in sequence:  
+The following components will be created in sequence:
 
-- **Management VPC (Hub):** Jumpbox for secure access, public load balancer for incoming traffic.  
-- **Workload VPC (Spoke):** Application servers in private subnets, private load balancer for traffic distribution.  
-- **Secure Connectivity:** Transit gateway, security groups, and ACLs control communication between components.  
-- **Private Service Access:** Virtual Private Endpoints (VPEs) enable private access to IBM Cloud services.  
+- **Management VPC (Hub):** Jumpbox for secure access, public load balancer for incoming traffic.
+- **Workload VPC (Spoke):** Application servers in private subnets, private load balancer for traffic distribution.
+- **Secure Connectivity:** Transit gateway, security groups, and ACLs control communication between components.
+- **Private Service Access:** Virtual Private Endpoints (VPEs) enable private access to IBM Cloud services.
 
 This approach ensures a **secure, organized, and scalable** infrastructure deployment.
 
@@ -192,7 +192,7 @@ This approach ensures a **secure, organized, and scalable** infrastructure deplo
 {: #tim-create-resource-group}
 {: step}
 
-A **resource group** is a logical container for IBM Cloud resources used for organization, IAM access control, and lifecycle management.  
+A **resource group** is a logical container for IBM Cloud resources used for organization, IAM access control, and lifecycle management.
 This module typically acts as the **root dependency** for all other modules.
 
 Add the following code to your `main.tf` file:
@@ -212,11 +212,11 @@ module "resource_group" {
 
 You will create the **Management VPC**, which acts as the secure entry point for your hub-and-spoke infrastructure. This VPC hosts the jumpbox server and provides controlled internet access. We use the [terraform-ibm-landing-zone-vpc](https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vpc) module to define the VPC, its subnets across three availability zones, and the necessary network ACLs for secure traffic management.
 
-The following elements are configured in sequence:  
+The following elements are configured in sequence:
 
-- **High availability:** Subnets across three availability zones.  
-- **Network ACLs:** Stateful and custom rules for inbound/outbound traffic.  
-- **Public access:** Jumpbox and public load balancer with controlled internet connectivity.  
+- **High availability:** Subnets across three availability zones.
+- **Network ACLs:** Stateful and custom rules for inbound/outbound traffic.
+- **Public access:** Jumpbox and public load balancer with controlled internet connectivity.
 - **Subnet IP ranges:** Logical separation of resources per availability zone.
 
 Add the following code to `main.tf`:
@@ -346,11 +346,11 @@ For more information about this module, see the [terraform-ibm-landing-zone-vpc 
 
 In this step, you will create the **Workload VPC**, which hosts your application servers. Unlike the Management VPC, this VPC is **private** with **no direct internet access**, improving security and reducing exposure to external threats. This module sets up subnets, network ACLs, and connectivity rules to allow controlled communication with the Management VPC.
 
-The following elements are configured in sequence:  
+The following elements are configured in sequence:
 
-- **CIDR Ranges:** Separate address space from the Management VPC for proper routing.  
-- **Private Subnets:** No public gateways to prevent direct internet access.  
-- **Network ACLs:** Allow traffic only between Management and Workload VPCs, securing the environment.  
+- **CIDR Ranges:** Separate address space from the Management VPC for proper routing.
+- **Private Subnets:** No public gateways to prevent direct internet access.
+- **Network ACLs:** Allow traffic only between Management and Workload VPCs, securing the environment.
 
 Add the following code to `main.tf`
 
@@ -479,10 +479,10 @@ region           = "us-south"        # Set the IBM Cloud region
 ```
 {: pre}
 
-**Guidelines:**  
-1. Replace `<your-IBM-cloud-api-key>` with your actual IBM Cloud API key.  
-2. Replace `<your-prefix>` with a short, unique prefix for your resources.  
-3. Keep `region` as `"us-south"` unless you need a different deployment region.  
+**Guidelines:**
+1. Replace `<your-IBM-cloud-api-key>` with your actual IBM Cloud API key.
+2. Replace `<your-prefix>` with a short, unique prefix for your resources.
+3. Keep `region` as `"us-south"` unless you need a different deployment region.
 4. Ensure this file is **not checked into source control** as it contains sensitive information.
 
 ### Deploy the infrastructure
@@ -513,9 +513,9 @@ To securely connect to your virtual servers, you need an **SSH key pair**. In th
 
 The following actions are performed in sequence:
 
-- **Generate a key pair:** Creates a new RSA key pair for server authentication.  
-- **Store the private key locally:** Saves the key to `<your-prefix>_ssh_private_key.pem` (read-only for the owner).  
-- **Upload the public key to IBM Cloud:** Makes it available for server provisioning.  
+- **Generate a key pair:** Creates a new RSA key pair for server authentication.
+- **Store the private key locally:** Saves the key to `<your-prefix>_ssh_private_key.pem` (read-only for the owner).
+- **Upload the public key to IBM Cloud:** Makes it available for server provisioning.
 
 Add the following code to `main.tf`:
 
@@ -552,9 +552,9 @@ In this step, you will provision a **jumpbox server** in the Management VPC to p
 
 The following elements are configured in sequence:
 
-- **Security Groups:** Protect the jumpbox and allow controlled access.  
-- **Floating IP:** Assigns a public IP for SSH connectivity.  
-- **VSI Configuration:** Defines instance type, subnet placement, and SSH key access.  
+- **Security Groups:** Protect the jumpbox and allow controlled access.
+- **Floating IP:** Assigns a public IP for SSH connectivity.
+- **VSI Configuration:** Defines instance type, subnet placement, and SSH key access.
 
 Add the following code to `main.tf`:
 
@@ -619,12 +619,12 @@ For more information about this module, see the [terraform-ibm-landing-zone-vsi 
 <details>
 <summary>Code Breakdown</summary>
 
-**1. Security Groups vs. Network ACLs:**  
-  In this step, the `landing-zone-vsi` module creates a **Security Group** for the jumpbox. It’s important to understand the difference between these two VPC firewalls:  
-  - **Network ACLs:** Stateless, operate at the **subnet level**, and require explicit rules for both inbound and outbound traffic.  
+**1. Security Groups vs. Network ACLs:**
+  In this step, the `landing-zone-vsi` module creates a **Security Group** for the jumpbox. It’s important to understand the difference between these two VPC firewalls:
+  - **Network ACLs:** Stateless, operate at the **subnet level**, and require explicit rules for both inbound and outbound traffic.
   - **Security Groups:** Stateful, operate at the **instance (VSI) level**, and automatically allow return traffic for permitted inbound connections. They act as a virtual firewall for your servers and simplify rule management.
 
-**2. `enable_floating_ip = true`:**  
+**2. `enable_floating_ip = true`:**
   This setting provisions and attaches a **public Floating IP** to the jumpbox, making it accessible from the internet. The assigned IP is available in the `jumpbox_public_ip` output.
 
 </details>
@@ -637,8 +637,8 @@ In this step, you will provision **workload servers** in the private Workload VP
 
 The following actions are performed in sequence:
 
-- **Workload Servers:** Deploy Debian 12 minimal instances in private subnets.  
-- **Security Groups:** Restrict access to only the jumpbox and load balancer, while allowing outbound DNS and HTTPS calls.  
+- **Workload Servers:** Deploy Debian 12 minimal instances in private subnets.
+- **Security Groups:** Restrict access to only the jumpbox and load balancer, while allowing outbound DNS and HTTPS calls.
 - **Private Load Balancer:** Distributes incoming traffic from the Management VPC to workload servers using round-robin algorithm.
 
 Add the following code to `main.tf`:
@@ -763,17 +763,17 @@ For more information about this module, see the [terraform-ibm-landing-zone-vsi 
 {: note}
 
 ## Exposing the Application to the Internet
-{#tim-expose-app}
-{:step}
+{: #tim-expose-app}
+{: step}
 
-To make the application accessible from the internet, we need to **set up a public-facing load balancer**. This load balancer will receive traffic from the internet and securely forward it to the **private load balancer** in the Workload VPC.  
+To make the application accessible from the internet, we need to **set up a public-facing load balancer**. This load balancer will receive traffic from the internet and securely forward it to the **private load balancer** in the Workload VPC.
 
 In this step, you will:
 
-1. Create a **public load balancer** in the Management VPC.  
-2. Configure a **load balancer pool** and **pool members** pointing to the private load balancer.  
-3. Create a **listener** to handle HTTP traffic.  
-4. Apply a **security group** to allow internet traffic on port 80.  
+1. Create a **public load balancer** in the Management VPC.
+2. Configure a **load balancer pool** and **pool members** pointing to the private load balancer.
+3. Create a **listener** to handle HTTP traffic.
+4. Apply a **security group** to allow internet traffic on port 80.
 
 Add the following code to `main.tf`:
 
@@ -837,24 +837,24 @@ For more information about this module, see the [terraform-ibm-security-group do
 
 This setup follows a secure cloud design pattern called **Load Balancer Chaining**:
 
-- The **Public Load Balancer** serves as the secure entry point and resides in the Management VPC. It is the only component exposed to the internet.  
-- Traffic is then forwarded to the **Private Load Balancer** in the isolated Workload VPC.  
+- The **Public Load Balancer** serves as the secure entry point and resides in the Management VPC. It is the only component exposed to the internet.
+- Traffic is then forwarded to the **Private Load Balancer** in the isolated Workload VPC.
 - This design ensures that no resources in the Workload VPC are publicly exposed. The private load balancer remains inaccessible from the internet.
 
 </details>
 
 ## Provision Virtual Private Endpoints (VPEs)
-{#tim-vpe}
-{:step}
+{: #tim-vpe}
+{: step}
 
-To allow private workload servers to securely access IBM Cloud services like Cloud Object Storage, we use **Virtual Private Endpoints (VPEs)**.  
-A VPE provides a local IP representation of a remote IBM Cloud service within your VPC, ensuring that traffic remains on IBM Cloud’s private network.  
+To allow private workload servers to securely access IBM Cloud services like Cloud Object Storage, we use **Virtual Private Endpoints (VPEs)**.
+A VPE provides a local IP representation of a remote IBM Cloud service within your VPC, ensuring that traffic remains on IBM Cloud’s private network.
 
 In this step, you will:
 
-1. Create a **security group** for the VPE to allow inbound traffic from workload resources.  
-2. Provision a **VPE gateway** connected to the workload VPC.  
-3. Configure access to specific IBM Cloud services (e.g., Cloud Object Storage).  
+1. Create a **security group** for the VPE to allow inbound traffic from workload resources.
+2. Provision a **VPE gateway** connected to the workload VPC.
+3. Configure access to specific IBM Cloud services (e.g., Cloud Object Storage).
 
 Add the following code to `main.tf`:
 
@@ -887,7 +887,7 @@ module "workload_vpes" {
   security_group_ids = [module.workload_vpe_security_group.security_group_id]
 
   cloud_services = [
-    { 
+    {
       service_name                 = "cloud-object-storage",
       allow_dns_resolution_binding = true
     }
@@ -900,9 +900,11 @@ For more information about this module, see the [terraform-ibm-security-group](h
 {: note}
 
 ## Provision Cloud Object Storage
+{: #tim-provision-cos}
+{: step}
 
-To store application data securely, create a **Cloud Object Storage (COS)** instance and a bucket.  
-This COS instance will be used by your workload servers or applications to persist data.  
+To store application data securely, create a **Cloud Object Storage (COS)** instance and a bucket.
+This COS instance will be used by your workload servers or applications to persist data.
 
 Add the following code to `main.tf`:
 
@@ -992,8 +994,8 @@ output "cos_secret_access_key" {
 
 
 ## Deploy the Compute and Service Resources
-{#tim-final-deploy}
-{:step}
+{: #tim-final-deploy}
+{: step}
 
 Your Terraform files are now complete with all compute, load balancing, and storage resources. Let’s deploy them to IBM Cloud.
 
@@ -1019,13 +1021,13 @@ The provisioning process will take several minutes (typically 10-15 minutes, wit
 For each of the links above, copy the URL and paste it into the private browser window where you are logged into your target IBM Cloud account. Ensure the region is set to the value defined in the environment variable file (`envar`) on each page.
 {: note}
 
---- 
+---
 
 After completing the deployment of all compute, networking, and storage resources with Terraform, your IBM Cloud environment is fully provisioned. This includes the public and private load balancers, jumpbox, workload servers, virtual private endpoints, and Cloud Object Storage instance. All components are interconnected according to the hub-and-spoke VPC architecture, with secure communication paths and controlled internet exposure. The next step is to **verify that everything works as expected** by testing connectivity, SSH access, and end-to-end application functionality.
 
 ## Testing Connectivity and Applications
 {: #tim-testing-connectivity-apps}
-{:step}
+{: step}
 
 After deploying your IBM Cloud infrastructure, it’s essential to **verify connectivity and ensure that all resources are operational**. This section guides you through accessing the jumpbox, testing private workload server connectivity, and preparing for application deployment.
 
@@ -1110,14 +1112,14 @@ To connect from the jumpbox to the workload server, you must copy the SSH privat
 
 1. Open a new terminal window and label it **Terminal 2 (Local)**.
 2. In **Terminal 2 (Local)**, re-export the environment variables for the jumpbox IP and private key:
-    
+
     ```sh
     export JUMPBOX_IP=$(terraform output -raw jumpbox_public_ip)
     export PRIVATE_KEY_FILE=$(terraform output -raw ssh_private_key_file_name)
     ```
     {: pre}
 3. Copy the private key to the jumpbox:
-    
+
     ```sh
     scp -i $PRIVATE_KEY_FILE $PRIVATE_KEY_FILE root@$JUMPBOX_IP:~/.
     ```
@@ -1137,6 +1139,7 @@ With the private key on the jumpbox, you can now access a private workload serve
     echo "Private Key Filename: $PRIVATE_KEY_FILE"
     ```
     {: pre}
+
 2. Switch back to **Terminal 1 (Jumpbox Session)** and set the environment variables using the values you copied:
 
     ```sh
@@ -1157,6 +1160,7 @@ When prompted to continue connecting, type `yes`. If the connection is successfu
 
 **Success**: You have successfully "jumped" from the public internet into the secure, private workload environment.
 {: note}
+
 **Terminal Management**: Your **Terminal 1** window is now connected to the workload server. We’ll refer to this as the **Workload Session**. Keep this connection active.
 {: note}
 
@@ -1164,7 +1168,7 @@ When prompted to continue connecting, type `yes`. If the connection is successfu
 {: #tim-deploy-test-app}
 {: step}
 
-The final test validates the full data path from **Internet → Public Load Balancer → Private Load Balancer → Workload Server → VPE → Cloud Object Storage (COS)**.  
+The final test validates the full data path from **Internet → Public Load Balancer → Private Load Balancer → Workload Server → VPE → Cloud Object Storage (COS)**.
 We’ll deploy a sample Python application on the workload server that reads a file from COS and serves it via a local HTTP server.
 
 ### Create Required Files (Terminal 2 - Local)
@@ -1173,8 +1177,8 @@ We’ll deploy a sample Python application on the workload server that reads a f
 
 In this step, you will **create the Python server script** (`test_app.py`) and a **dummy HTML page** (`dummy_page.html`) locally. These files will be used to serve content from Cloud Object Storage via a VPE.
 
-#### Python Server Script 
-{: tim-python-script}
+#### Python Server Script
+{: #tim-python-script}
 {: step}
 
 <details>
@@ -1256,6 +1260,7 @@ if __name__ == "__main__":
 EOF
 ```
 {: pre}
+
 </details>
 
 #### Dummy HTML Page
@@ -1282,6 +1287,7 @@ cat > dummy_page.html << 'EOF'
 EOF
 ```
 {: pre}
+
 </details>
 
 ### Copy the Application to the Workload Server
@@ -1336,7 +1342,7 @@ Your prompt should now be: `root@<workload-server-name>` and you are back in the
     {: pre}
 
 2. Configure the COS CLI plugin with the CRN of the service instance created by Terraform:
-    
+
     ```sh
     export COS_CRN=$(terraform output -raw cos_instance_crn)
     ibmcloud cos config crn --crn "${COS_CRN}"
@@ -1394,7 +1400,7 @@ Finally, run the Python application on the workload server.
     {: pre}
 
     You should see output similar to:
-    
+
     ```sh
     10.10.8.6 - - [06/Dec/2025 18:39:50] "GET / HTTP/1.0" 200 -
     ```
@@ -1404,7 +1410,7 @@ Finally, run the Python application on the workload server.
 {: #tim-verify-public-access}
 {: step}
 
-The final step validates that your application is accessible from the public internet through the **public load balancer**.  
+The final step validates that your application is accessible from the public internet through the **public load balancer**.
 This confirms that your full end-to-end setup — **Internet → Public LB → Private LB → Workload Server → VPE → COS** — is working as expected.
 
 ### Access the Application
@@ -1413,18 +1419,18 @@ This confirms that your full end-to-end setup — **Internet → Public LB → P
 
 From your **local terminal (Terminal 2 - Local)**, retrieve the public load balancer hostname:
 
-  ```sh
+```sh
   export LB_HOSTNAME=$(terraform output -raw public_load_balancer_hostname)
   echo http://$LB_HOSTNAME
-  ```
-  {: pre}
+```
+{: pre}
 
 You can now access the application by navigating to `http://$LB_HOSTNAME` in any web browser or by running:
 
-  ```sh
+```sh
   curl http://$LB_HOSTNAME
-  ```
-  {: pre}
+```
+{: pre}
 
 ### Check the Result
 {: #tim-check-result}
