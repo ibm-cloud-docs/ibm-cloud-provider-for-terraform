@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-  lastupdated: "2025-12-16"
+  lastupdated: "2025-12-17"
 
 keywords: Terraform IBM Modules, code structure, Terraform IBM Modules structure, module structure, module code
 
@@ -12,8 +12,8 @@ subcollection: ibm-cloud-provider-for-terraform
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Understanding the Terraform IBM Modules Code Structure
-{: #understand-tim-code}
+# Understanding the Terraform IBM Module Structure
+{: #understand-tim-structure}
 
 
 The [Terraform IBM Modules](https://registry.terraform.io/namespaces/terraform-ibm-modules)(TIM) is a curated collection of reusable, production-ready Terraform modules designed to simplify the creation, management, and versioning of complex, compliant environments on {{site.data.keyword.cloud_notm}}. Each module follows a standardized structure based on [HashiCorp's module development guidelines](https://developer.hashicorp.com/terraform/language/modules/develop/structure){: external}, enhanced with IBM Cloud best practices for enterprise deployments.
@@ -40,8 +40,8 @@ At the end, you'll understand:
 
 Start by identifying the IBM Cloud service you want to provision (such as Object Storage, Databases, or Virtual Private Cloud) and locate the corresponding module in the [terraform-ibm-modules](https://registry.terraform.io/namespaces/terraform-ibm-modules) organization. For example, use [`terraform-ibm-cos`](https://registry.terraform.io/modules/terraform-ibm-modules/cos/ibm/latest) for IBM Cloud Object Storage, or [`terraform-ibm-cloud-monitoring`](https://registry.terraform.io/modules/terraform-ibm-modules/cloud-monitoring/ibm/latest) for IBM Cloud Monitoring.
 
-## Module Code Structure
-{: #tim-code-structure}
+## Module Structure
+{: #tim-structure}
 
 Get the source code of a TIM module either from the [Terraform registry](https://registry.terraform.io/namespaces/terraform-ibm-modules) or [GitHub Org](https://github.com/terraform-ibm-modules). When working with a TIM module, the following key directories and files are commonly used:
 
@@ -53,7 +53,6 @@ terraform-ibm-<module-name>/
 ├── modules/                          # Nested submodules
 │   ├── submodule-a/
 │   └── submodule-b/
-├── reference-architectures/          # Architecture diagrams and documentation
 ├── main.tf                           # Root module - primary resource definitions
 ├── variables.tf                      # Input variable declarations
 ├── outputs.tf                        # Output value declarations
@@ -81,7 +80,7 @@ You consume this module by referencing it in a `module` block within your own Te
 ### Module documentation
 {: #module-documentation}
 
-Every TIM module includes a `README.md` file at the root level that serves as the primary documentation and entry point for users. Before using a module into your project, review its documentation(readme) to understand the key details. The README provides comprehensive documentation including:
+Every TIM module includes a `README` file at the root level that serves as the primary documentation and entry point for users. Before using a module into your project, review its documentation(README) to understand the key details. The README provides comprehensive documentation including:
 
 - **Module description** and key features
 - **Usage instructions** for consuming the module from the Terraform registry
@@ -150,12 +149,6 @@ The submodules allow users to use specific functionality without deploying the e
 ```
 source = "terraform-ibm-modules/<module-name>/ibm//modules/<submodule-name>"
 ```
-
-### Reference architectures
-{: #tim-ref-architecture}
-
-The `reference-architectures/` directory contains architecture diagrams that illustrate how modules are composed and deployed. These are particularly useful for understanding the architecture of the solution provided.
-
 
 ## Next steps
 

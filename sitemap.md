@@ -304,35 +304,33 @@ subcollection: ibm-cloud-provider-for-terraform
     * [12 October 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#12oct2021)
 
 
-## Understanding the Terraform IBM Modules Code Structure
-{: #sitemap_understanding_the_terraform_ibm_modules_code_structure}
+## Understanding the Terraform IBM Module Structure
+{: #sitemap_understanding_the_terraform_ibm_module_structure}
 
 
-[Understanding the Terraform IBM Modules Code Structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#understand-tim-code)
+[Understanding the Terraform IBM Module Structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#understand-tim-structure)
 
-* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#audience)
+* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#audience)
 
-* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#tim-objectives)
+* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-objectives)
 
-* [Navigating a Terraform IBM Module](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#navigating-tim-module)
+* [Navigating a Terraform IBM Module](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#navigating-tim-module)
 
-* [Module Code Structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#tim-code-structure)
+* [Module Structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-structure)
 
-    * [Root-level module code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#module-root-code)
+    * [Root-level module code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#module-root-code)
 
-    * [Module documentation](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#module-documentation)
+    * [Module documentation](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#module-documentation)
 
-    * [Usage example](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#module-usage)
+    * [Usage example](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#module-usage)
 
-    * [Examples](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#module-examples)
+    * [Examples](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#module-examples)
 
-    * [Submodules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#tim-submodules)
+    * [Submodules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-submodules)
 
-    * [Reference architectures](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#tim-ref-architecture)
+* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#next-steps)
 
-* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#next-steps)
-
-* [Feedback](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-code#feedback)
+* [Feedback](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#feedback)
 
 
 ## Deploy a Terraform IBM Module using Terraform CLI

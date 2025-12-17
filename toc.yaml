@@ -21,7 +21,7 @@ toc:
   - navgroup:
       id: tutorial
       topics:
-      - topic: tim-code-structure.md
+      - topic: tim-structure.md
       - topic: deploy-tim-module.md
       - topic: deploy-tim-using-hashicorpwp.md
       - topic: deploy-tim-using-pulumi.md
