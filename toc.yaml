@@ -23,11 +23,12 @@ toc:
       topics:
       - topic: tim-code-structure.md
       - topic: deploy-tim-module.md
-      - topic: combine-tim-modules.md
       - topic: deploy-tim-using-hashicorpwp.md
       - topic: deploy-tim-using-pulumi.md
         navtitle: Deploy Terraform IBM Modules using Pulumi
       - topic: package-and-publish-da.md
+      - topic: combine-tim-modules-ai.md
+      - topic: combine-tim-modules-hub-spoke.md
       - topic: using-tim-mcp.md
         navtitle: Using TIM-MCP with AI assistants
       - link:
