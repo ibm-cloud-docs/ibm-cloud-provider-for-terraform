@@ -10,7 +10,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 content-type: tutorial
 services: terraform, hcp, waypoint
-account-plan: 
+account-plan:
 completion-time: 1h
 
 ---
@@ -28,8 +28,8 @@ A step-by-step guide to use IBM-supported [Terraform IBM Modules](https://regist
 
 This tutorial walks you through publishing Terraform IBM Modules to the HCP Terraform Registry and explicitly enabling them for No-Code provisioning. It also shows how to wrap the published module in a Waypoint Template. This method simplifies complex infrastructure-as-code into an easy, form-driven experience, allowing developers to deploy approved infrastructure patterns independently while preserving governance and standardization.
 
-## Objectives 
-{: #objectives}
+## Objectives
+{: #waypoint_objectives}
 
 In this tutorial, you will:
 
@@ -42,25 +42,27 @@ In this tutorial, you will:
 - **Provision Infrastructure:** Developers use these standardized templates to deploy their applications without needing to manage the underlying infrastructure.
 
 ## Audience
-{: #audience}
+{: #waypoint-audience}
 
 This tutorial is designed for Platform Engineers who create standardized 'golden paths' that allow Application Developers to self-serve infrastructure without needing to write any code.
 
 ## Prerequisites
-{: #prerequisites}
+{: #waypoint-prerequisites}
 
 1. An HCP account with HCP Waypoint enabled. Refer to [HCP Account](https://developer.hashicorp.com/hcp/docs/hcp/create-account){: external} for information about creating an account.
-2. If you do not have one, create an {{site.data.keyword.cloud_notm}} [Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration). 
-3. Make sure that you have an existing {{site.data.keyword.redhat_notm}} account that has an [active OpenShift subscription](https://access.redhat.com/products/red-hat-openshift-container-platform){: external}. 
+2. If you do not have one, create an {{site.data.keyword.cloud_notm}} [Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration).
+3. Make sure that you have an existing {{site.data.keyword.redhat_notm}} account that has an [active OpenShift subscription](https://access.redhat.com/products/red-hat-openshift-container-platform){: external}.
 
 
 ## No-Code Terraform Module
-{: #no_code_module}
+{: #waypoint-no_code_module}
 {: step}
 
 This step explains how Platform Engineers prepare and publish a Terraform module to the HCP Registry, enabling self-service, no-code infrastructure provisioning.
 
 ### Create a Root Module from an Existing Example
+{: #waypoint-createRootModule}
+{: step}
 
 Instead of designing a new module from scratch, use an existing example configuration to create a standalone root module suitable for No-Code provisioning.
 
@@ -109,6 +111,9 @@ Instead of designing a new module from scratch, use an existing example configur
 6.  Your module is now ready for publishing and consumption.
 
 ### Publish a No-Code Terraform Module
+{: #waypoint_publish-a-code}
+{: step}
+
 Start by publishing your Terraform IBM module as a **No-Code Module** in the HCP Terraform Registry. This allows developers to provision infrastructure without writing Terraform themselves.
 
 1.  Go to the **Registry** section in your HCP Terraform environment and open the **Modules** tab.
@@ -175,7 +180,8 @@ Developers can now use your template to deploy their infrastructure through Wayp
 
 
 ## Next steps
-{: #next-steps}
+{: #deploytim-hcpwp-next-steps}
+{: step}
 
 - Learn more about the [Terraform IBM Cloud Provider](https://github.com/IBM-Cloud/terraform-provider-ibm).
 - Explore available [Terraform IBM Modules](https://github.com/terraform-ibm-modules).
@@ -183,7 +189,7 @@ Developers can now use your template to deploy their infrastructure through Wayp
 - Learn more about the [Agents](https://developer.hashicorp.com/hcp/docs/waypoint/concepts/agents).
 
 ## Related links
-{: #related-links}
+{: #waypointrelated-links}
 
 - [HCP Waypoint](https://developer.hashicorp.com/hcp/docs/waypoint)
 - [Templates](https://developer.hashicorp.com/hcp/docs/waypoint/concepts/templates)

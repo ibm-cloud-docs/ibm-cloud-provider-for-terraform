@@ -58,7 +58,7 @@ Before you begin this tutorial, ensure you have the required tools, skills, and 
 Before provisioning any resources, you need to set up a clean Terraform project structure. This ensures your infrastructure is modular, maintainable, and ready for TIM-based deployments.
 
 ### Create a new empty project folder
-{: #tim-create-project-folder}
+{: #createHubSpoke-project-folder}
 {: step}
 
 Start by creating a dedicated folder for your Terraform project. This folder will contain all configuration files for your infrastructure deployment.
@@ -72,7 +72,7 @@ cd my-terraform-project
 {: pre}
 
 ### Create the necessary Terraform files
-{: #tim-create-terraform-files}
+{: #hubspoke_createterraform-files}
 {: step}
 
 The project follows a standard Terraform layout, where each file serves a single purpose. This structure promotes clarity, reuse, and predictable behavior.
@@ -122,7 +122,7 @@ Make sure your IBM Cloud API key and region are defined as input variables in `v
 {: note}
 
 ### Specify Terraform and provider versions
-{: #tim-terraform-version}
+{: #hubspoke_terraform-version}
 {: step}
 
 The `version.tf` file ensures that Terraform uses the correct version and compatible provider versions for IBM Cloud.
@@ -143,7 +143,7 @@ terraform {
 {: pre}
 
 ## Define input variables
-{: #tim-define-input-variables}
+{: #hubspoke_define-input-variables}
 {: step}
 
 To make your Terraform configuration **flexible and reusable**, you define input variables that allow you to manage sensitive information, environment-specific values, and configuration parameters outside of your main code. In this step, you will define the required variables `ibmcloud_api_key` and `prefix`, as well as the optional variable `region`, enabling different environments (dev, test, prod) to use the same Terraform code with different values.
@@ -189,7 +189,7 @@ The following components will be created in sequence:
 This approach ensures a **secure, organized, and scalable** infrastructure deployment.
 
 ### Create a Resource Group (Foundation)
-{: #tim-create-resource-group}
+{: #hubspoke_create-resource-group}
 {: step}
 
 A **resource group** is a logical container for IBM Cloud resources used for organization, IAM access control, and lifecycle management.
@@ -458,7 +458,7 @@ For more information about this module, see the [terraform-ibm-transit-gateway d
 {: note}
 
 ## Configure variables and deploy the infrastructure
-{: #tim-deploy-infrastructure}
+{: #hubspoke_deployInfra}
 {: step}
 
 In this step, you will configure your environment-specific variables and deploy the complete infrastructure using Terraform. This includes initializing modules, previewing planned changes, and applying the configuration to provision resources in IBM Cloud.
@@ -467,7 +467,7 @@ For more details about TIM module deployments, see [Deploy TIM Module guide](dep
 {: note}
 
 ### Secure variables
-{: #tim-deploy-infrastructure}
+{: #hubSpoke_secure-variables}
 {: step}
 
 Create or update the `terraform.tfvars` file with your environment-specific values:
@@ -486,7 +486,7 @@ region           = "us-south"        # Set the IBM Cloud region
 4. Ensure this file is **not checked into source control** as it contains sensitive information.
 
 ### Deploy the infrastructure
-{: #tim-terraform-deploy}
+{: #hubSpoke_deployInfra}
 {: step}
 
 Open a terminal and run the following commands to deploy the infrastructure:
@@ -930,7 +930,7 @@ For more information about this module, see the [terraform-ibm-cos documentation
 {: note}
 
 ## Define outputs
-{: #tim-define-outputs}
+{: #hubSpoke_defineOutputs}
 {: step}
 
 Define output values to provide quick access to important resource information after deployment:
@@ -1021,8 +1021,6 @@ The provisioning process will take several minutes (typically 10-15 minutes, wit
 For each of the links above, copy the URL and paste it into the private browser window where you are logged into your target IBM Cloud account. Ensure the region is set to the value defined in the environment variable file (`envar`) on each page.
 {: note}
 
----
-
 After completing the deployment of all compute, networking, and storage resources with Terraform, your IBM Cloud environment is fully provisioned. This includes the public and private load balancers, jumpbox, workload servers, virtual private endpoints, and Cloud Object Storage instance. All components are interconnected according to the hub-and-spoke VPC architecture, with secure communication paths and controlled internet exposure. The next step is to **verify that everything works as expected** by testing connectivity, SSH access, and end-to-end application functionality.
 
 ## Testing Connectivity and Applications
@@ -1031,8 +1029,8 @@ After completing the deployment of all compute, networking, and storage resource
 
 After deploying your IBM Cloud infrastructure, it’s essential to **verify connectivity and ensure that all resources are operational**. This section guides you through accessing the jumpbox, testing private workload server connectivity, and preparing for application deployment.
 
-**Tip**: Open the architecture diagram in a separate tab to keep a view of how we’re progressing through the test environment: Hub and Spoke VPC Diagram
-{: note}
+Open the architecture diagram in a separate tab to keep a view of how we’re progressing through the test environment: Hub and Spoke VPC Diagram
+{: tip}
 
 ### Get Your Infrastructure Outputs
 {: #tim-infra-outputs}
@@ -1159,8 +1157,6 @@ With the private key on the jumpbox, you can now access a private workload serve
 When prompted to continue connecting, type `yes`. If the connection is successful, your prompt will change to `root@<workload-server-name>`.
 
 **Success**: You have successfully "jumped" from the public internet into the secure, private workload environment.
-{: note}
-
 **Terminal Management**: Your **Terminal 1** window is now connected to the workload server. We’ll refer to this as the **Workload Session**. Keep this connection active.
 {: note}
 

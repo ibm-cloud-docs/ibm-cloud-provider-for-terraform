@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-12-08"
+lastupdated: "2025-12-17"
 
 keywords: terraform mcp, ai assistant, claude, ibm bob, model context protocol, terraform modules, infrastructure as code
 
@@ -16,7 +16,6 @@ completion-time: 30min
 {{site.data.keyword.attribute-definition-list}}
 
 # Using TIM-MCP with AI assistants
-
 {: #using-tim-mcp}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="30min"}
@@ -28,7 +27,6 @@ Always review AI-generated infrastructure code with skilled practitioners before
 {: important}
 
 ## What is TIM-MCP?
-
 {: #tim-mcp-what-is}
 
 The [Terraform IBM Modules MCP Server (TIM-MCP)](https://github.com/terraform-ibm-modules/tim-mcp){: external} implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io){: external} to connect AI assistants with the Terraform IBM Modules ecosystem. This integration enables AI models to:
@@ -39,7 +37,6 @@ The [Terraform IBM Modules MCP Server (TIM-MCP)](https://github.com/terraform-ib
 - Generate infrastructure code following IBM Cloud standards
 
 ### Why use TIM-MCP?
-
 {: #tim-mcp-benefits}
 
 TIM-MCP enhances AI-assisted infrastructure development by:
@@ -57,7 +54,6 @@ TIM-MCP enhances AI-assisted infrastructure development by:
 :   By connecting models to documentation across many repositories, TIM-MCP helps AI leverage the collective expertise embedded in the Terraform IBM Modules ecosystem.
 
 ## Before you begin
-
 {: #tim-mcp-prereqs}
 
 Before you can use TIM-MCP, you need:
@@ -78,7 +74,6 @@ Before you can use TIM-MCP, you need:
    ```bash
    curl -LsSf https://astral.sh/uv/install.sh | sh
    ```
-
    {: pre}
 
    **Windows:**
@@ -86,7 +81,6 @@ Before you can use TIM-MCP, you need:
    ```powershell
    winget install --id=astral-sh.uv -e
    ```
-
    {: pre}
 
    Verify installation:
@@ -94,7 +88,6 @@ Before you can use TIM-MCP, you need:
    ```bash
    uv --version
    ```
-
    {: pre}
 
 3. **GitHub Personal Access Token (optional but recommended)**
@@ -113,14 +106,12 @@ Before you can use TIM-MCP, you need:
    4. Copy and save the token securely
 
 ## Installing TIM-MCP for IBM Project Bob
-
 {: #tim-mcp-ibm-bob}
 {: step}
 
 IBM Project Bob supports MCP servers through the IBM Project Bob Marketplace or manual configuration files.
 
 ### Installing from IBM Project Bob Marketplace
-
 {: #tim-mcp-bob-marketplace}
 
 1. **Open IBM Project Bob Marketplace**:
@@ -147,7 +138,6 @@ IBM Project Bob supports MCP servers through the IBM Project Bob Marketplace or 
    - The server will be automatically configured with your settings
 
 ### Manual configuration
-
 {: #tim-mcp-bob-manual}
 
 If you prefer manual configuration or need project-specific settings:
@@ -193,7 +183,6 @@ If you prefer manual configuration or need project-specific settings:
 5. Add the TIM-MCP configuration using the same JSON format as above
 
 ## Installing TIM-MCP for Claude Desktop
-
 {: #tim-mcp-claude-desktop}
 {: step}
 
@@ -221,7 +210,6 @@ Claude Desktop is a standalone application that supports MCP servers through JSO
      }
    }
    ```
-
    {: codeblock}
 
    **Recommended configuration (with GitHub token):**
@@ -243,7 +231,6 @@ Claude Desktop is a standalone application that supports MCP servers through JSO
      }
    }
    ```
-
    {: codeblock}
 
 3. **Restart Claude Desktop** completely
@@ -253,7 +240,6 @@ Claude Desktop is a standalone application that supports MCP servers through JSO
    - Ask: "What IBM Cloud VPC modules are available?"
 
 ## Installing TIM-MCP for VS Code
-
 {: #tim-mcp-vscode}
 {: step}
 
@@ -284,11 +270,9 @@ VS Code supports MCP servers through the MCP extension.
      }
    }
    ```
-
    {: codeblock}
 
 ## Installing TIM-MCP for Cursor
-
 {: #tim-mcp-cursor}
 {: step}
 
@@ -301,7 +285,6 @@ Cursor IDE supports MCP servers through configuration files.
 2. **Add the configuration** using the same JSON format as shown in previous sections
 
 ## Installing TIM-MCP for Claude Code
-
 {: #tim-mcp-claude-code}
 {: step}
 
@@ -312,7 +295,6 @@ Claude Code supports MCP configuration via CLI or config file.
    ```bash
    cd /path/to/your/project
    ```
-
    {: pre}
 
 2. **Add TIM-MCP using the CLI**:
@@ -323,7 +305,6 @@ Claude Code supports MCP configuration via CLI or config file.
    claude mcp add tim-mcp --env GITHUB_TOKEN=your_github_token_here \
      -- uvx --from git+https://github.com/terraform-ibm-modules/tim-mcp.git tim-mcp
    ```
-
    {: pre}
 
    **Without GitHub token:**
@@ -331,7 +312,6 @@ Claude Code supports MCP configuration via CLI or config file.
    ```bash
    claude mcp add tim-mcp -- uvx --from git+https://github.com/terraform-ibm-modules/tim-mcp.git tim-mcp
    ```
-
    {: pre}
 
 3. **Verify configuration**:
@@ -339,18 +319,15 @@ Claude Code supports MCP configuration via CLI or config file.
    ```bash
    claude mcp list
    ```
-
    {: pre}
 
 ## Using TIM-MCP with AI assistants
-
 {: #tim-mcp-usage}
 {: step}
 
 Once TIM-MCP is configured, your AI assistant can help you build IBM Cloud infrastructure from simple to complex deployments.
 
 ### Getting started examples
-
 {: #tim-mcp-examples-basic}
 
 Try these prompts to get started:
@@ -368,7 +345,6 @@ I am new to IBM Cloud. Help me create a simple and cheap OpenShift cluster and a
 ```
 
 ### Enterprise infrastructure examples
-
 {: #tim-mcp-examples-enterprise}
 
 For more complex scenarios:
@@ -402,7 +378,6 @@ Financial Services requirements with HPCS encryption, audit logging, and regulat
 ```
 
 ### Best practices for AI-assisted development
-
 {: #tim-mcp-best-practices}
 
 When using TIM-MCP with AI assistants:
@@ -416,11 +391,9 @@ When using TIM-MCP with AI assistants:
 7. **Document customizations**: Add comments explaining any modifications to generated code
 
 ## Troubleshooting
-
 {: #tim-mcp-troubleshooting}
 
 ### Server not starting
-
 {: #tim-mcp-troubleshoot-server}
 
 **Problem:** TIM-MCP server fails to start
@@ -432,7 +405,6 @@ When using TIM-MCP with AI assistants:
 - Review error logs in your AI assistant's console
 
 ### No tools appearing
-
 {: #tim-mcp-troubleshoot-tools}
 
 **Problem:** MCP tools don't appear in AI assistant
@@ -444,7 +416,6 @@ When using TIM-MCP with AI assistants:
 - Check configuration file location is correct
 
 ### Rate limiting errors
-
 {: #tim-mcp-troubleshoot-rate-limit}
 
 **Problem:** GitHub API rate limit exceeded
@@ -455,14 +426,12 @@ When using TIM-MCP with AI assistants:
 - Verify token has public repository access permissions
 - Test token manually:
 
-  ```bash
+```bash
   curl -H "Authorization: token YOUR_TOKEN" https://api.github.com/user
-  ```
-
-  {: pre}
+```
+{: pre}
 
 ### Token authentication fails
-
 {: #tim-mcp-troubleshoot-token}
 
 **Problem:** GitHub token not working
@@ -475,7 +444,6 @@ When using TIM-MCP with AI assistants:
 4. Regenerate token if needed
 
 ## Version pinning for production
-
 {: #tim-mcp-version-pinning}
 
 For production use, pin TIM-MCP to a specific version to ensure consistent behavior:
@@ -497,14 +465,12 @@ For production use, pin TIM-MCP to a specific version to ensure consistent behav
   }
 }
 ```
-
 {: codeblock}
 
 Check the [TIM-MCP releases page](https://github.com/terraform-ibm-modules/tim-mcp/releases){: external} for the latest version.
 
 ## Next steps
-
-{: #tim-mcp-next-steps}
+{: #mcp-next-steps}
 
 - Explore [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external}
 - Learn about [Model Context Protocol](https://modelcontextprotocol.io){: external}

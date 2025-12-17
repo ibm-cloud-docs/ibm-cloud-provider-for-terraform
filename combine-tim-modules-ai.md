@@ -26,7 +26,7 @@ This **IBM Cloud Terraform tutorial** shows how to compose and integrate reusabl
 
 The solution is built by **composing modular Terraform components**, each encapsulating a distinct IBM Cloud service. These modules are integrated through well-defined inputs and outputs to form a complete, secure, and repeatable **Infrastructure as Code deployment pattern**.
 
-The application simulates a bank loan processing workflow where AI agents evaluate risk and determine interest rates. The source code is available at:  
+The application simulates a bank loan processing workflow where AI agents evaluate risk and determine interest rates. The source code is available at:
 https://github.com/IBM/ai-agent-for-loan-risk
 {: note}
 
@@ -102,7 +102,7 @@ touch main.tf variables.tf outputs.tf providers.tf version.tf terraform.tfvars
 Before you can provision any resources, Terraform needs to know **how to connect to IBM Cloud**. In this step, you will configure the IBM Cloud provider and specify required provider versions to ensure compatibility. This involves updating two files: `providers.tf` and `version.tf`.
 
 ### Configure the IBM Cloud and REST API providers
-{: #tim-configure-providers}
+{: #secureai_configure-providers}
 {: step}
 
 The `providers.tf` file tells Terraform how to authenticate with IBM Cloud and interact with services. You also configure the REST API provider to allow API calls to external endpoints.
@@ -131,7 +131,7 @@ Make sure your IBM Cloud API key and region are defined as input variables in `v
 {: note}
 
 ### Specify Terraform and provider versions
-{: #tim-terraform-version}
+{: #secureai_terraform-version}
 {: step}
 
 The `version.tf` file ensures that Terraform uses the correct version and compatible provider versions for IBM Cloud and REST API.
@@ -156,7 +156,7 @@ terraform {
 {: pre}
 
 ## Define input variables
-{: #tim-define-input-variables}
+{: #secureai_define-input-variables}
 {: step}
 
 To make your Terraform configuration **flexible and reusable**, you define input variables that allow you to manage sensitive information, environment-specific values, and configuration parameters outside of your main code. In this step, you will define the required variables `ibmcloud_api_key` and `prefix`, as well as the optional variables `watsonx_ai_api_key` and `region`, enabling different environments (dev, test, prod) to use the same Terraform code with different values.
@@ -201,10 +201,10 @@ variable "region" {
 In this step, you will build the **main Terraform configuration** that defines all the infrastructure components required to deploy the Loan Risk AI Agents application. The `main.tf` file orchestrates `resource groups`, `Code Engine project`, `secrets`, `builds`, `kms`, `cos` and the `application deployment`. All resources will use a **consistent naming prefix** (`${var.prefix}-`) to prevent naming conflicts and maintain uniformity across the deployment.
 
 ### Create a Resource Group (Foundation)
-{: #tim-create-resource-group}
+{: #secureai_create-resource-group}
 {: step}
 
-A **resource group** is a logical container for IBM Cloud resources used for organization, IAM access control, and lifecycle management.  
+A **resource group** is a logical container for IBM Cloud resources used for organization, IAM access control, and lifecycle management.
 This module typically acts as the **root dependency** for all other modules.
 
 Add the following code to your `main.tf` file:
@@ -412,19 +412,19 @@ For more information about this module, see the [terraform-ibm-cos documentation
 
 Create a **watsonx.ai project** with integrated **Cloud Object Storage (COS)** and **customer-managed encryption keys**. This project will securely store data for AI workloads and provide the project ID needed for deploying the Agentic AI agent.
 
-**Key inputs:**  
-- **project_name** – Name of the watsonx.ai project  
-- **watsonx_ai_studio_plan** – Service plan for watsonx.ai Studio (e.g., `professional-v1`)  
-- **watsonx_ai_runtime_plan** – Service plan for runtime environments (e.g., `v2-professional`)  
-- **cos_instance_crn**, **cos_kms_key_crn**, **enable_cos_kms_encryption** – COS settings  
-- **resource_group_id**, **region** – Deployment settings  
+**Key inputs:**
+- **project_name** – Name of the watsonx.ai project
+- **watsonx_ai_studio_plan** – Service plan for watsonx.ai Studio (e.g., `professional-v1`)
+- **watsonx_ai_runtime_plan** – Service plan for runtime environments (e.g., `v2-professional`)
+- **cos_instance_crn**, **cos_kms_key_crn**, **enable_cos_kms_encryption** – COS settings
+- **resource_group_id**, **region** – Deployment settings
 
 Add the following code to your `main.tf` file:
 
 ```hcl
 data "ibm_iam_auth_token" "restapi" {
 }
- 
+
 module "watsonx_ai" {
   source                    = "terraform-ibm-modules/watsonx-ai/ibm"
   version                   = "2.12.0"
@@ -485,7 +485,7 @@ For more information about this module, see the [terraform-ibm-code-engine-appli
 {: note}
 
 ## Define outputs
-{: #tim-define-outputs}
+{: #secureai_defineOutputs}
 {: step}
 
 Define output values to provide quick access to important resource information after deployment:
@@ -494,7 +494,7 @@ Define output values to provide quick access to important resource information a
 - **Code Engine Project ID** – For managing workloads
 - **Container Image URL** – For deployments
 - **Application Route URL** – Public endpoint to access the application
-- **watsonx.ai Project ID** – Required for AI agent integrations  
+- **watsonx.ai Project ID** – Required for AI agent integrations
 
 Add the following content to `outputs.tf`:
 
@@ -527,7 +527,7 @@ output "watsonx_ai_project_id" {
 {: pre}
 
 ## Configure variables and deploy the infrastructure
-{: #tim-deploy-infrastructure}
+{: #secureai_deploy-infrastructure}
 {: step}
 
 In this step, you will configure your environment-specific variables and deploy the complete infrastructure using Terraform. This includes initializing modules, previewing planned changes, and applying the configuration to provision resources in IBM Cloud.
@@ -536,7 +536,7 @@ For more details about TIM module deployments, see [Deploy TIM Module guide](dep
 {: note}
 
 ### Secure variables
-{: #tim-deploy-infrastructure}
+{: #secureai_secure-variables}
 {: step}
 
 Create or update the `terraform.tfvars` file with your environment-specific values:
@@ -548,13 +548,13 @@ prefix                       = "<your-prefix>"                   # Define prefix
 ```
 {: pre}
 
-**Guidelines:**  
-1. Replace `<your-IBM-cloud-api-key>` with your actual IBM Cloud API key.  
-2. Replace `<your-prefix>` with a short, unique prefix for your resources.  
+**Guidelines:**
+1. Replace `<your-IBM-cloud-api-key>` with your actual IBM Cloud API key.
+2. Replace `<your-prefix>` with a short, unique prefix for your resources.
 3. Ensure this file is **not checked into source control** as it contains sensitive information.
 
 ### Deploy the infrastructure
-{: #tim-terraform-deploy}
+{: #secureai_deployInfra}
 {: step}
 
 Open a terminal and run the following commands to deploy the infrastructure:
@@ -586,36 +586,36 @@ Make sure you open these links in the target sandbox account:
 {: note}
 
 ## Next steps — Verify and explore your deployment
-{: #tim-next-steps}
+{: #secureai-next-steps}
 {: step}
 
 After the Terraform apply completes, it’s important to verify that all resources have been correctly provisioned and are functioning as expected. This step guides you through exploring your IBM Cloud sandbox account to confirm deployment status.
 
 ### Explore Code Engine Project
-{: #tim-next-steps-code-engine}
+{: #secureai-code-engine}
 {: step}
 
-Open the Code Engine Project section: [https://cloud.ibm.com/containers/serverless/projects](https://cloud.ibm.com/containers/serverless/projects)  
+Open the Code Engine Project section: [https://cloud.ibm.com/containers/serverless/projects](https://cloud.ibm.com/containers/serverless/projects)
 
-1. Click on your serverless project named `<your-prefix>-ce-project`.  
-2. Navigate to the **Image builds** section to view your build configuration.  
-3. Click on the build, then **step-source-default** to see the logs of the AI app being built.  
-4. Once the build is complete, go to the **Applications** section to check that your app is starting.  
+1. Click on your serverless project named `<your-prefix>-ce-project`.
+2. Navigate to the **Image builds** section to view your build configuration.
+3. Click on the build, then **step-source-default** to see the logs of the AI app being built.
+4. Once the build is complete, go to the **Applications** section to check that your app is starting.
 5. Review the **Secrets and configmaps** section to confirm registry credentials and application secrets.
 
 ### Check Resource Groups
-{: #tim-next-steps-resource-groups}
+{: #secureai-resource-groups}
 {: step}
 
-Open the Resource Groups section: [https://cloud.ibm.com/account/resource-groups](https://cloud.ibm.com/account/resource-groups)  
+Open the Resource Groups section: [https://cloud.ibm.com/account/resource-groups](https://cloud.ibm.com/account/resource-groups)
 
 - Confirm that your resource group exists and that all associated resources are listed.
 
 ###  View all resources
-{: #tim-next-steps-all-resources}
+{: #secureai-all-resources}
 {: step}
 
-Open the All Resources view: [https://cloud.ibm.com/resources](https://cloud.ibm.com/resources)  
+Open the All Resources view: [https://cloud.ibm.com/resources](https://cloud.ibm.com/resources)
 
-- Use your prefix in the search/filter to locate all deployed resources.  
+- Use your prefix in the search/filter to locate all deployed resources.
 - Verify that each resource is provisioned according to your configuration.

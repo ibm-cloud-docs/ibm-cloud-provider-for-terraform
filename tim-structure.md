@@ -93,7 +93,7 @@ Always check the required IAM permissions before using a module.
 {: tip}
 
 ### Usage example
-{: #module-usage}
+{: #timstructure-module-usage}
 
 The usage example provides a reference implementation that demonstrates how to consume the module. It helps users understand required inputs, optional parameters, and common configuration patterns. The following is an example shown for a Cloud Object Storage module.
 
@@ -105,7 +105,7 @@ module "my_service" {
   resource_group_id = "xxXXxxXXxXXXXxxXxxxXXXxXXXX"
   region = "us-south"
   cos_instance_name = "my-cos-instance"
-  bucket_name = "my-cos-bucket" 
+  bucket_name = "my-cos-bucket"
   existing_kms_instance_guid = "xxxxxxxx-XXXX-XXXX-XXXX-xxxxxxxx"
   kms_key_crn = "crn:v1:bluemix:public:kms:us-south:a/xXXXxxXXxXXXXxxXxxxXXXxXXXX:xxxxxx-XXXX-XXXX-XXXX-xxxxxx:key:xxxxxx-XXXX-XXXX-XXXX-xxxxxx"
 }
@@ -164,4 +164,3 @@ Now that you understand the TIM module structure, you can:
 ## Feedback
 
 If you have questions or feedback for any specific module, open an issue in the relevant module repository.
-
