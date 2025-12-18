@@ -609,6 +609,12 @@ subcollection: ibm-cloud-provider-for-terraform
 [Deploy Terraform IBM Modules using Schematics](/docs/schematics?topic=schematics-sch-create-wks)
 
 
+## Deploying an OpenShift Cluster using TIM modules and Terragrunt
+{: #sitemap_deploying-an-openshift-cluster-using-tim-modules-and-terragrunt}
+
+[Deploying an OpenShift Cluster using TIM modules and Terragrunt](https://github.com/terraform-ibm-modules/sample-iac-solutions/tree/main/terragrunt){: external}
+
+
 ## Sample Terraform templates for {{site.data.keyword.cloud_notm}}
 {: #sitemap_sample_terraform_templates_for_}
 
@@ -887,8 +893,6 @@ subcollection: ibm-cloud-provider-for-terraform
 ## IBM Cloud Provider plug-in for Terraform
 {: #sitemap_ibm_cloud_provider_plug-in_for_terraform}
 
-
-[IBM Cloud Provider release and updates](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}
 
 [Architecture reference - Highly available, secured, and managed Kubernetes environment](https://github.com/ibm-cloud-architecture/refarch-public-iaas-iks){: external}
 

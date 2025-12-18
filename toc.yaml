@@ -32,6 +32,9 @@ toc:
       - link:
           label: Deploy Terraform IBM Modules using Schematics
           href: /schematics/schematics-sch-create-wks
+      - link:
+          label: Deploying an OpenShift Cluster using TIM modules and Terragrunt
+          href: https://github.com/terraform-ibm-modules/sample-iac-solutions/tree/main/terragrunt
       - provider-template.md
       - clusters.md
       - install-redhat-openshift.md
@@ -62,9 +65,6 @@ toc:
           label: IBM Cloud Provider plug-in for Terraform
           topics:
           - provider/provider-sitemap.md
-          - link:
-              label: IBM Cloud Provider release and updates
-              href: https://github.com/IBM-Cloud/terraform-provider-ibm/releases
           - link:
               label: Architecture reference - Highly available, secured, and managed Kubernetes environment
               href: https://github.com/ibm-cloud-architecture/refarch-public-iaas-iks
