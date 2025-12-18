@@ -25,6 +25,9 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 ## December 2025
 {: #release-dec-2025}
+
+### 18 December 2025
+{: #18dec2025}
 {: release-note}
 
 Added Terraform IBM Modules documentation.
