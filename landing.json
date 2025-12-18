@@ -1,40 +1,40 @@
 {
-    "version": 2,
-    "title": "Terraform on IBM Cloud docs",
-    "introduction": "Explore the capabilities of the IBM Cloud Provider plug-in for Terraform. You can get started by installing the Terraform CLI and configure the IBM Cloud Provider plug-in. Then, you can try out a tutorial to create an IBM Cloud Kubernetes Service or Red Hat OpenShift on IBM Cloud cluster by using Terraform. You can also choose one of the IBM-provided Terraform templates to get started with the provisioning of other IBM Cloud services with Terraform, such as IBM Cloud Object Storage or IBM Key Protect. ",
-    "product_page": "https://www.ibm.com/products/hashicorp",
-    "section_topics": {
-      "links": [
-        {
-          "title": "Set up the Terraform CLI and IBM Cloud Provider plug-in",
-          "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started"
-        },
-        {
-           "title": "Browse Terraform templates",
-           "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#sample-templates"
-        },
-        {
-          "title": "Create Kubernetes and OpenShift clusters",
-          "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters"
-        },
-        {
-          "title": "Create a virtual server in a VPC",
-          "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config"
-        }
-      ]
-    },
-    "section_highlights": [  
+  "version": 2,
+  "title": "Terraform on IBM Cloud",
+  "introduction": "Accelerate your cloud journey with the IBM Cloud Provider plug-in for Terraform and the Terraform IBM Modules Library — a curated collection of open-source, enterprise-ready modules built for speed, security, and scalability. Built using the IBM Cloud Provider plug-in, the Terraform IBM Modules are secure-by-default and fully aligned with IBM Cloud best practices. They enable you to automate infrastructure provisioning effortlessly, reduce complexity, and deploy production-grade environments with confidence.",
+  "product_page": "https://www.ibm.com/products/hashicorp",
+  "section_topics": {
+    "links": [
       {
-        "title": "Training",
-        "description": "Build your skill with IBM Cloud training. ",
-        "href": "https://www.ibm.com/training/cloud",
-        "type": "training"
-      } 
-    ],
-    "section_devtools": {
-      "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs"
-    },
-    "section_updates": {
-      "view_more": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes"
+        "title": "Set up the Terraform CLI and IBM Cloud Provider plug-in",
+        "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started"
+      },
+      {
+        "title": "Getting started with Terraform IBM Modules (TIM)",
+        "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim"
+      },
+      {
+        "title": "Deploy a TIM module",
+        "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module"
+      },
+      {
+        "title": "Provision a virtual server in a VPC using IBM Cloud Provider plug-in",
+        "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config"
+      }
+    ]
+  },
+  "section_highlights": [
+    {
+      "title": "Training",
+      "description": "Build your skill with IBM Cloud training. ",
+      "href": "https://www.ibm.com/training/cloud",
+      "type": "training"
     }
+  ],
+  "section_devtools": {
+    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs"
+  },
+  "section_updates": {
+    "view_more": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes"
+  }
 }

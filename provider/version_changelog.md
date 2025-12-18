@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-17"
+lastupdated: "2025-12-12"
 
 keywords: terraform, terraform provider release, terraform provider versions
 
@@ -471,3 +471,5 @@ The following table shows the changes that are included in version 1.2.1 of the 
 | -------- | ------- | ----------- |
 | 1.2.0 | 1.2.1 | [See the release notes for the Terraform on IBM Cloud version 1.2.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.2.1){: external}.|
 {: caption="Terraform on IBM Cloud provider 1.2.1" caption-side="top"}
+
+

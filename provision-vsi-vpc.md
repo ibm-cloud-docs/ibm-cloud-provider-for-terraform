@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-08"
+lastupdated: "2025-12-09"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for vpc
 
@@ -24,7 +24,7 @@ completion-time: 2h
 {: toc-services="terraform, vpc"}
 {: toc-completion-time="2h"}
 
-Use {{site.data.keyword.cloud_notm}} Provider plug-in to provision a VPC, and set up networking for your VPC, and provision a virtual server for VPC in your {{site.data.keyword.cloud_notm}} account. A VPC allows you to create your own space in {{site.data.keyword.cloud_notm}} so that you can run an isolated environment in the public cloud with custom network policies. 
+Use {{site.data.keyword.cloud_notm}} Provider plug-in to provision a VPC, and set up networking for your VPC, and provision a virtual server for VPC in your {{site.data.keyword.cloud_notm}} account. A VPC allows you to create your own space in {{site.data.keyword.cloud_notm}} so that you can run an isolated environment in the public cloud with custom network policies.
 {: shortdesc}
 
 ## Objectives
@@ -57,10 +57,10 @@ This tutorial is intended for system administrators who want to learn how to pro
 {: #vpc-tutorial-create}
 {: step}
 
-1. Make sure that you have the [required permissions](/docs/vpc?topic=vpc-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure. 
+1. Make sure that you have the [required permissions](/docs/vpc?topic=vpc-managing-user-permissions-for-vpc-resources) to create and work with VPC infrastructure.
 
 2. In the Terraform directory, create a configuration file names `versions.tf` file as specified in the code block. For more information, about `versions.tf`, refer to [sample Terraform version file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#tf_installation_step).
-    
+
     ```terraform
     terraform {
      required_version = ">=1.0.0, <2.0"
@@ -79,7 +79,7 @@ This tutorial is intended for system administrators who want to learn how to pro
 
     `export IC_API_KEY="<provide your IBM Cloud API Key>"`
 
-4. In the Terraform directory, create a Terraform configuration file and name it `vpc.tf`. The configuration file includes the following definition blocks: 
+4. In the Terraform directory, create a Terraform configuration file and name it `vpc.tf`. The configuration file includes the following definition blocks:
 
     ```terraform
     variable "ssh_key" {
@@ -147,7 +147,7 @@ This tutorial is intended for system administrators who want to learn how to pro
         output "sshcommand" {
         value = "ssh root@${ibm_is_floating_ip.fip1.address}"
         }
-     }   
+     }
     ```
     {: codeblock}
 
@@ -186,7 +186,7 @@ Example output
 2021/06/22 16:47:27 [WARN] Log levels other than TRACE are currently unreliable, and are supported only for backward compatibility.
 Use TF_LOG=TRACE to see Terraform's internal logs.
 ----
-2021/06/22 16:47:27 [INFO] Terraform version: 0.13.5  
+2021/06/22 16:47:27 [INFO] Terraform version: 0.13.5
 2021/06/22 16:47:27 [INFO] Go runtime version: go1.14.7
 terraform/plugins/darwin_amd64/lock.json: no such file or directory
 
@@ -324,7 +324,7 @@ sshcommand = ssh root@ibm_is_floating_ip.fip1.address
 1. Log in to your VPC VSI by using the `ssh` command that is listed at the end of your command-line output of the previous step.
 
     ```sh
-    ssh root@52.118.150.55 
+    ssh root@52.118.150.55
     ```
     {: pre}
 
@@ -341,16 +341,16 @@ sshcommand = ssh root@ibm_is_floating_ip.fip1.address
     ```
     {: screen}
 
-2. You can verify that VPC and VSI are created by accessing your [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com). 
-    - Click **Navigation Menu** icon > **VPC Infrastructure** > **VPCs** to view VPC named `vpctestexample` is created 
-    - Click **Navigation Menu** icon > **VPC Infrastructure** > **Virtual server instances** to view VSI named `vsi1` is created 
+2. You can verify that VPC and VSI are created by accessing your [{{site.data.keyword.cloud_notm}} console](https://cloud.ibm.com).
+    - Click **Navigation Menu** icon > **VPC Infrastructure** > **VPCs** to view VPC named `vpctestexample` is created
+    - Click **Navigation Menu** icon > **VPC Infrastructure** > **Virtual server instances** to view VSI named `vsi1` is created
 
 ## Executing Terraform destroy
 {: #vpc-tutorial-destroy}
 {: step}
 
 Optional: If you don't want to work with your VPC infrastructure resources anymore, remove them.
-    
+
 ```sh
 terraform destroy
 ```
@@ -359,4 +359,4 @@ terraform destroy
 ## What's next?
 {: #vpc-tutorial-whatsnext}
 
-Explore other [{{site.data.keyword.cloud_notm}} resources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/) that you can provision by using Terraform on IBM Cloud. 
+Explore other [{{site.data.keyword.cloud_notm}} resources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/) that you can provision by using Terraform on IBM Cloud.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-05-27"
+lastupdated: "2025-12-09"
 
 keywords: Terraform on IBM Cloud, ansible, red hat, openshift, automate, automation, iaas
 
@@ -34,7 +34,7 @@ Instead of manually installing Red Hat® OpenShift Container Platform on {{site.
 
 This tutorial shows how you can set up OpenShift Container Platform 3.11 on {{site.data.keyword.cloud_notm}} classic infrastructure with Terraform on IBM Cloud to try out the high availability capabilities of native Kubernetes and {{site.data.keyword.cloud_notm}}. Review the following image to find an architectural overview of the classic infrastructure components that are needed for the Red Hat OpenShift Container Platform to work properly.
 
-<img src="../images/infra-diagram.png" alt="Infrastructure components for the Red Hat® OpenShift Container Platform on {{site.data.keyword.cloud_notm}}" width="800" style="width: 800px; border-style: none"/>
+<img src="images/infra-diagram.png" alt="Infrastructure components for the Red Hat® OpenShift Container Platform on {{site.data.keyword.cloud_notm}}" width="800" style="width: 800px; border-style: none"/>
 
 When you complete this tutorial, the following classic infrastructure components are provisioned for you: 
 - 1 OpenShift Container Platform master node 
@@ -862,3 +862,6 @@ Great! You successfully installed Red Hat OpenShift Container Platform on {{site
 
 - [Explore other features in Red Hat OpenShift Container Platform ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.redhat.com/en/documentation/openshift_container_platform/3.11). 
 - Remove your OpenShift cluster by running the `make destroy` command. 
+
+
+

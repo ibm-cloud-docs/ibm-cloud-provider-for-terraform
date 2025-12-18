@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-03-03"
+  years: 2025, 2025
+lastupdated: "2025-12-18"
 
-keywords: Terraform on IBM Cloud help, Terraform on IBM Cloud troubleshooting, ansible help, ansible troubleshooting
+keywords: Terraform on IBM Cloud help, Terraform on IBM Cloud troubleshooting, ansible help, ansible troubleshooting, Terraform IBM Modules troubleshooting, Terraform IBM Modules help
 
 subcollection: ibm-cloud-provider-for-terraform
 
@@ -16,12 +16,12 @@ subcollection: ibm-cloud-provider-for-terraform
 # Getting help and support 
 {: #gettinghelp}
 
-If you run into an issue with the Terraform on IBM Cloud provider plug-in or want to ask questions about how to configure {{site.data.keyword.cloud_notm}} resources, choose one of the following support channels:  
+If you run into an issue with the Terraform on IBM Cloud provider plug-in or Terraform IBM Modules or want to ask questions about how to configure {{site.data.keyword.cloud_notm}} resources, choose one of the following support channels:  
 
 ## For instance
 {: #for-instance}
 
-- **GitHub**: The Terraform on IBM Cloud provider plug-in is managed as an open source project where you can submit [issues](https://github.com/IBM-Cloud/terraform-provider-ibm/issues){: external} for the development team.
+- **GitHub**: The Terraform on IBM Cloud provider plug-in is managed as an open source project where you can submit [issues](https://github.com/IBM-Cloud/terraform-provider-ibm/issues){: external} for the development team. If you have questions or feedback for any specific Terraform IBM Modules, open an issue in the relevant module repository.
 - **IBM Support**: If you run into an issue with the Terraform on IBM Cloud provider plug-in by using {{site.data.keyword.bplong_notm}}, you can also contact IBM Support by [Opening a support case](/docs/account?topic=account-using-avatar).
 
     If you are working with a third-party product that uses Terraform to deploy images, support is provided by the third-party vendor.

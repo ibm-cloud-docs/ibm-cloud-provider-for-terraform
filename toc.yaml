@@ -9,20 +9,32 @@ toc:
     product-page: https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs
     path: ibm-cloud-provider-for-terraform
     label: Terraform on IBM Cloud
-#  List your getting started tutorial (getting-started.md) as the first item in the Get started nav group. See https://test.cloud.ibm.com/docs/writing?topic=writing-navigation for more details on the toc design.
   entries:
   - navgroup:
       id: learn
       topics:
       - getting-started.md
       - about.md
+      - about-tim.md
+      - tim-structure.md
+      - about-tim-mcp.md
       - release-notes.md
   - navgroup:
       id: tutorial
       topics:
+      - topic: deploy-tim-module.md
+      - topic: deploy-tim-using-hashicorpwp.md
+      - topic: package-and-publish-da.md
+      - topic: combine-tim-modules-ai.md
+      - topic: combine-tim-modules-hub-spoke.md
+      - topic: using-tim-mcp.md
+        navtitle: Using TIM-MCP with AI assistants
+      - link:
+          label: Deploy Terraform IBM Modules using Schematics
+          href: /schematics/schematics-sch-create-wks
       - provider-template.md
-      - tutorials/clusters.md
-      - tutorials/install_redhat_openshift.md
+      - clusters.md
+      - install-redhat-openshift.md
       - provision-vsi-vpc.md
       - link:
           label: Deploying a 3-Tier web app in a VPC
@@ -56,11 +68,20 @@ toc:
           - link:
               label: Architecture reference - Highly available, secured, and managed Kubernetes environment
               href: https://github.com/ibm-cloud-architecture/refarch-public-iaas-iks
+      - link:
+          label: IBM Cloud Provider release and updates
+          href: https://github.com/IBM-Cloud/terraform-provider-ibm/releases
+      - link:
+          label: IBM Cloud Terraform IBM Modules release and updates
+          href: https://github.com/terraform-ibm-modules
+      - link:
+          label: Terraform IBM Modules MCP Server
+          href: https://github.com/terraform-ibm-modules/tim-mcp
   - navgroup:
       id: help
       topics:
       - faqs.md
-      - terraform_ts_index.md
+      - terraform-ts-index.md
       - whats-new.md
       - provider/version_changelog.md
       - topicgroup:
@@ -69,5 +90,5 @@ toc:
           - topicgroup:
               label: Debugging Kubernetes service errors
               topics:
-              - troubleshooting/tg-kubernetes-service.md
+              - tg-kubernetes-service.md
       - sitemap.md

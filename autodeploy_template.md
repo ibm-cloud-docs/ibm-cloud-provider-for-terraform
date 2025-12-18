@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2024
 lastupdated: "2024-09-23"
 
-keywords: terraform provider deployment, automation, schematics workspace, ibm cloud terraform provider deployment, schematics workspace creation, auto deploy 
+keywords: terraform provider deployment, automation, schematics workspace, ibm cloud terraform provider deployment, schematics workspace creation, auto deploy
 
 subcollection: ibm-cloud-provider-for-terraform
 

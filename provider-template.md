@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-27"
+  years: 2017, 2025
+lastupdated: "2025-12-09"
 
 keywords: terraform templates, templates, sample terraform templates, private catalog
 
@@ -49,7 +49,6 @@ For more information, about how the Ansible based automation is configured to lo
 The code snippets provides the templates that you can use to understand how to configure {{site.data.keyword.cloud_notm}} service. You can also use the snippets as a starting point for your custom templates.
 {: shortdesc}
 
-- [API Gateway](#api-gwy-snippet)
 - [Certificate Manager](#cert-mgr-snippet)
 - [Cloud Databases templates](#cloud-db-snippet)
 - [Cloud Foundry](#cloud-foundry-snippet)

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-03-07"
+  years: 2017, 2025
+lastupdated: "2025-12-12"
 
 keywords: install Terraform on IBM Cloud cli, set up Terraform on IBM Cloud cli, ibm cloud provider plugin, Terraform on IBM Cloud
 

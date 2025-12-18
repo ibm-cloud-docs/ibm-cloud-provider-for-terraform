@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-03-07"
+  years: 2017, 2025
+lastupdated: "2025-12-17"
 
 keywords: Add resources, remove resources, iaas, softlayer, ibm cloud resources, ibm cloud services, Terraform on IBM Cloud, provision resources
 
@@ -30,32 +30,32 @@ You can upgrade your Terraform version from `Terraform v0.12 to Terraform v0.13`
 To upgrade the Terraform template from the old version to the latest version, refer to [Upgrading the Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version).
 {: important}
 
-Complete the following steps to upgrade your configuration files: 
+Complete the following steps to upgrade your configuration files:
 
 1. Follow the [instructions](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli) to install existing Terraform with the latest version of the Terraform.
-2. Copy your existing Terraform version configuration files into your Terraform working directory. 
+2. Copy your existing Terraform version configuration files into your Terraform working directory.
     ```sh
     mv <tf_config_file_path> $HOME/terraform
     ```
     {: codeblock}
 
-3. Use the Terraform upgrade command to automatically apply the new syntax to your Terraform configuration files. 
+3. Use the Terraform upgrade command to automatically apply the new syntax to your Terraform configuration files.
 
     Syntax
-    
+
     ```sh
     terraform <0.xx>upgrade
     ```
     {: codeblock}
 
     Example to upgrade Terraform v0.12 to Terraform v0.13
-    
+
     ```sh
     terraform 0.13upgrade
     ```
     {: codeblock}
 
-    Example output: 
+    Example output:
     ```text
     This command rewrites the configuration files in the given directory to
     use the new syntax features from Terraform on IBM Cloud v0.12, and identify
@@ -134,8 +134,8 @@ Complete the following steps to upgrade your configuration files:
 
 This completes your Terraform version upgrade.
 
-## Version control 
-{: #versions}
+## Version control
+{: #migrate_versions}
 
 The versions that are associated with the resources and data sources are:
 
@@ -144,7 +144,3 @@ The versions that are associated with the resources and data sources are:
 
 With the release of Terraform version 0.12, the syntax for configuration files changed. If you want to run your infrastructure code by using Terraform version 0.12, you must first refer to refer to [Upgrading the Terraform template version](/docs/schematics?topic=schematics-migrating-terraform-version).
 {: important}
-
-
-
-
