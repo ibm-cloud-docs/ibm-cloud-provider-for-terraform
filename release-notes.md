@@ -21,7 +21,7 @@ Use the release notes to learn about the current changes to the {{site.data.keyw
 
 - To know more about Terraform IBM Modules releases, refer [TIM GitHub Org](https://github.com/terraform-ibm-modules/).
 
----
+
 
 ## December 2025
 {: #release-dec-2025}
