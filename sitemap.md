@@ -112,6 +112,8 @@ subcollection: ibm-cloud-provider-for-terraform
 
 * [December 2025](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#release-dec-2025)
 
+    * [18 December 2025](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#18dec2025)
+
 * [March 2025](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#release-mar-2025)
 
     * [17 March 2025](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#17mar2025)
