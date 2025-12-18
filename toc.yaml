@@ -16,16 +16,14 @@ toc:
       - getting-started.md
       - about.md
       - about-tim.md
+      - tim-structure.md
       - about-tim-mcp.md
       - release-notes.md
   - navgroup:
       id: tutorial
       topics:
-      - topic: tim-structure.md
       - topic: deploy-tim-module.md
       - topic: deploy-tim-using-hashicorpwp.md
-      - topic: deploy-tim-using-pulumi.md
-        navtitle: Deploy Terraform IBM Modules using Pulumi
       - topic: package-and-publish-da.md
       - topic: combine-tim-modules-ai.md
       - topic: combine-tim-modules-hub-spoke.md
@@ -83,7 +81,7 @@ toc:
       id: help
       topics:
       - faqs.md
-      - terraform_ts_index.md
+      - terraform-ts-index.md
       - whats-new.md
       - provider/version_changelog.md
       - topicgroup:

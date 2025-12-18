@@ -62,6 +62,35 @@ subcollection: ibm-cloud-provider-for-terraform
 * [Deployment options](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#tim-deployment-options)
 
 
+## Understanding the Terraform IBM Module Structure
+{: #sitemap_understanding_the_terraform_ibm_module_structure}
+
+
+[Understanding the Terraform IBM Module Structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#understand-tim-structure)
+
+* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-structure-audience)
+
+* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-structure-objectives)
+
+* [Navigating a Terraform IBM Module](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#navigating-tim-module)
+
+* [Module Structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-structure)
+
+    * [Root-level module files](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#module-root-code)
+
+    * [Module documentation](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#module-documentation)
+
+    * [Usage example](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#timstructure-module-usage)
+
+    * [Examples](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#module-examples)
+
+    * [Submodules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-submodules)
+
+* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-structure-next-steps)
+
+* [Feedback](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#feedback)
+
+
 ## About Terraform IBM Modules MCP Server (TIM-MCP)
 {: #sitemap_about_terraform_ibm_modules_mcp_server_tim-mcp}
 
@@ -80,6 +109,8 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 [Release notes](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#release-notes)
+
+* [December 2025](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#release-dec-2025)
 
 * [March 2025](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#release-mar-2025)
 
@@ -304,35 +335,6 @@ subcollection: ibm-cloud-provider-for-terraform
     * [12 October 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#12oct2021)
 
 
-## Understanding the Terraform IBM Module Structure
-{: #sitemap_understanding_the_terraform_ibm_module_structure}
-
-
-[Understanding the Terraform IBM Module Structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#understand-tim-structure)
-
-* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-structure-audience)
-
-* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-structure-objectives)
-
-* [Navigating a Terraform IBM Module](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#navigating-tim-module)
-
-* [Module Structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-structure)
-
-    * [Root-level module files](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#module-root-code)
-
-    * [Module documentation](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#module-documentation)
-
-    * [Usage example](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#timstructure-module-usage)
-
-    * [Examples](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#module-examples)
-
-    * [Submodules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-submodules)
-
-* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-structure-next-steps)
-
-* [Feedback](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#feedback)
-
-
 ## Deploy a Terraform IBM Module using Terraform CLI
 {: #sitemap_deploy_a_terraform_ibm_module_using_terraform_cli}
 
@@ -387,35 +389,6 @@ subcollection: ibm-cloud-provider-for-terraform
 * [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#deploytim-hcpwp-next-steps)
 
 * [Related links](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#waypointrelated-links)
-
-
-## Deploy Terraform IBM Modules using Pulumi
-{: #sitemap_deploy_terraform_ibm_modules_using_pulumi}
-
-
-[Deploy Terraform IBM Modules using Pulumi](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#pulumi-with-terraform-ibm-modules)
-
-* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMobjectives)
-
-* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMaudience)
-
-* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMprereqs)
-
-* [Set up your environment](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMlesson1-setup)
-
-* [Configure the IBM Cloud provider](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMlesson2-provider)
-
-* [Use Terraform IBM Modules in Pulumi](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMlesson3-ibm-modules)
-
-* [Deploy your Pulumi stack](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMlesson4-deploy)
-
-* [Advanced usage](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMlesson5-advanced)
-
-* [Clean up resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMlesson6-cleanup)
-
-* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMnext-steps)
-
-* [Related links](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMrelated-links)
 
 
 ## Package a Deployable Architecture and Publish to a Private Catalog
@@ -999,6 +972,15 @@ subcollection: ibm-cloud-provider-for-terraform
 * [How can I deploy one resources in two different {{site.data.keyword.cloud_notm}} account?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-faqs#terraform-depolyresource-faq)
 
 * [Can I automate the certificates to the Secrets Manager by using Terraform provider?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-faqs#terraform-secretmanager-faq)
+
+
+## Getting help and support
+{: #sitemap_getting_help_and_support}
+
+
+[Getting help and support](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-gettinghelp#gettinghelp)
+
+* [For instance](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-gettinghelp#for-instance)
 
 
 ## What's new in Terraform on IBM Cloud?

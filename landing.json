@@ -18,7 +18,7 @@
         "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module"
       },
       {
-        "title": "Create a virtual server in a VPC",
+        "title": "Provision a virtual server in a VPC using IBM Cloud Provider plug-in",
         "href": "/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config"
       }
     ]
