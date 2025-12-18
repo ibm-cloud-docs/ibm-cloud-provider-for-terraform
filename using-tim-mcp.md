@@ -393,6 +393,8 @@ When using TIM-MCP with AI assistants:
 ## Troubleshooting
 {: #tim-mcp-troubleshooting}
 
+Following are some common errors you might face while experimenting with TIM-MCP server. 
+
 ### Server not starting
 {: #tim-mcp-troubleshoot-server}
 
