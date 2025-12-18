@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-  lastupdated: "2025-12-17"
+  lastupdated: "2025-12-18"
 
 keywords: Terraform IBM Modules, code structure, Terraform IBM Modules structure, module structure, module code
 
@@ -21,11 +21,12 @@ The [Terraform IBM Modules](https://registry.terraform.io/namespaces/terraform-i
 This document provides a comprehensive guide to understanding the TIM module code structure, helping you effectively consume, contribute to, and extend these modules in your infrastructure-as-code projects.
 
 ## Audience
+{: #tim-structure-audience}
 
 This document focuses on understanding the structure and organization of Terraform IBM Modules (TIM) modules. It's designed for developers and architects who want to effectively consume and work with these modules in their IaC projects.
 
 ## Objectives
-{: #tim-objectives}
+{: #tim-structure-objectives}
 
 At the end, you'll understand:
 
@@ -62,7 +63,7 @@ terraform-ibm-<module-name>/
 
 Module repositories also contain additional development and CI/CD tooling (workflows, build automation, etc.) that are primarily relevant to module contributors.
 
-### Root-level module code
+### Root-level module files
 {: #module-root-code}
 
 The root-level module code contains the core Terraform configuration files that serves as the primary interface for consuming the module. It includes the following:
@@ -151,6 +152,7 @@ source = "terraform-ibm-modules/<module-name>/ibm//modules/<submodule-name>"
 ```
 
 ## Next steps
+{: #tim-structure-next-steps}
 
 Now that you understand the TIM module structure, you can:
 

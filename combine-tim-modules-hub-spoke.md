@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-12-17"
+lastupdated: "2025-12-18"
 
 keywords: Secure Hub-and-Spoke, Terraform IBM Modules, TIM Modules
 
@@ -41,14 +41,14 @@ The deployment architecture uses these core components:
   - **Virtual Private Endpoints (VPEs)**: Enable private connections from workload servers to IBM Cloud services, such as Cloud Object Storage.
 
 ## Before you begin
-{: #tim-modules-prereqs}
+{: #tim-modules-hub-and-spoke-prereqs}
 
 Before you begin this tutorial, ensure you have the required tools, skills, and familiarity with IBM Cloud services. Meeting these prerequisites will help you successfully provision infrastructure using Terraform modules and deploy the hub-and-spoke network architecture.
 
-* [Install the {{site.data.keyword.cloud_notm}} CLI](https://cloud.ibm.com/docs/cli?topic=cli-getting-started)
-* [Install terraform CLI](https://developer.hashicorp.com/terraform/install)
-* [Basic knowledge of Terraform syntax and workflows](https://developer.hashicorp.com/terraform/tutorials)
-* [Understanding of IBM Cloud services](https://www.ibm.com/solutions/cloud)
+* [Install the {{site.data.keyword.cloud_notm}} CLI](https://cloud.ibm.com/docs/cli?topic=cli-getting-started).
+* [Install terraform CLI](https://developer.hashicorp.com/terraform/install).
+* [Basic knowledge of Terraform syntax and workflows](https://developer.hashicorp.com/terraform/tutorials).
+* [Understanding of IBM Cloud services](https://www.ibm.com/solutions/cloud).
 * [IBM Cloud apikey](/docs/account?topic=account-userapikey&interface=ui) to access the IBM Cloud.
 
 ## Set up Terraform project structure for TIM-Based IaC
@@ -75,7 +75,7 @@ cd my-terraform-project
 {: #hubspoke_createterraform-files}
 {: step}
 
-The project follows a standard Terraform layout, where each file serves a single purpose. This structure promotes clarity, reuse, and predictable behavior.
+The project follows a standard Terraform layout, where each file serves a single purpose. This structure promotes clarity, reuse, and predictable behavior. Refer [this](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure) for more information.
 
 ```sh
 .
@@ -302,7 +302,7 @@ module "management_vpc" {
 ```
 {: pre}
 
-For more information about this module, see the [terraform-ibm-landing-zone-vpc documentation](https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vpc).
+For more information about this module, see the [terraform-ibm-landing-zone-vpc documentation](https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vpc/blob/main/README.md).
 {: note}
 
 <details>
@@ -413,7 +413,7 @@ module "workload_vpc" {
 ```
 {: pre}
 
-For more information about this module, see the [terraform-ibm-landing-zone-vpc documentation](https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vpc).
+For more information about this module, see the [terraform-ibm-landing-zone-vpc documentation](https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vpc/blob/main/README.md).
 {: note}
 
 <details>
@@ -454,7 +454,7 @@ module "transit_gateway" {
 ```
 {: pre}
 
-For more information about this module, see the [terraform-ibm-transit-gateway documentation](https://github.com/terraform-ibm-modules/terraform-ibm-transit-gateway).
+For more information about this module, see the [terraform-ibm-transit-gateway documentation](https://github.com/terraform-ibm-modules/terraform-ibm-transit-gateway/blob/main/README.md).
 {: note}
 
 ## Configure variables and deploy the infrastructure
@@ -463,7 +463,7 @@ For more information about this module, see the [terraform-ibm-transit-gateway d
 
 In this step, you will configure your environment-specific variables and deploy the complete infrastructure using Terraform. This includes initializing modules, previewing planned changes, and applying the configuration to provision resources in IBM Cloud.
 
-For more details about TIM module deployments, see [Deploy TIM Module guide](deploy-tim-module.md) or learn more about deployment best practices.
+For more details about TIM module deployments, see [Deploy TIM Module guide](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module) or learn more about deployment best practices.
 {: note}
 
 ### Secure variables
@@ -540,7 +540,7 @@ resource "ibm_is_ssh_key" "ssh_key" {
 ```
 {: pre}
 
-**Security Note**: Saving private keys directly to the filesystem is done here for tutorial simplicity. In a production environment, you should use a secure secret management tool like **IBM Cloud Secrets Manager**.
+Saving private keys directly to the filesystem is done here for tutorial simplicity. In a production environment, you should use a secure secret management tool like **IBM Cloud Secrets Manager**.
 {: note}
 
 
@@ -613,7 +613,7 @@ module "jumpbox_server" {
 ```
 {: pre}
 
-For more information about this module, see the [terraform-ibm-landing-zone-vsi documentation](https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vsi).
+For more information about this module, see the [terraform-ibm-landing-zone-vsi documentation](https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vsi/blob/main/README.md).
 {: note}
 
 <details>
@@ -759,7 +759,7 @@ module "workload_servers" {
 ```
 {: pre}
 
-For more information about this module, see the [terraform-ibm-landing-zone-vsi documentation](https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vsi).
+For more information about this module, see the [terraform-ibm-landing-zone-vsi documentation](https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vsi/blob/main/README.md).
 {: note}
 
 ## Exposing the Application to the Internet
@@ -829,7 +829,7 @@ module "public_lb_security_group" {
 ```
 {: pre}
 
-For more information about this module, see the [terraform-ibm-security-group documentation](https://github.com/terraform-ibm-modules/terraform-ibm-security-group).
+For more information about this module, see the [terraform-ibm-security-group documentation](https://github.com/terraform-ibm-modules/terraform-ibm-security-group/blob/main/README.md).
 {: note}
 
 <details>
@@ -896,7 +896,7 @@ module "workload_vpes" {
 ```
 {: pre}
 
-For more information about this module, see the [terraform-ibm-security-group](https://github.com/terraform-ibm-modules/terraform-ibm-security-group) and [terraform-ibm-vpe-gateway documentation](https://github.com/terraform-ibm-modules/terraform-ibm-vpe-gateway).
+For more information about the module, see the [terraform-ibm-security-group](https://github.com/terraform-ibm-modules/terraform-ibm-security-group) and [terraform-ibm-vpe-gateway](https://github.com/terraform-ibm-modules/terraform-ibm-vpe-gateway).
 {: note}
 
 ## Provision Cloud Object Storage
@@ -926,7 +926,7 @@ module "cos_storage" {
 ```
 {: pre}
 
-For more information about this module, see the [terraform-ibm-cos documentation](https://github.com/terraform-ibm-modules/terraform-ibm-cos).
+For more information about this module, see the [terraform-ibm-cos documentation](https://github.com/terraform-ibm-modules/terraform-ibm-cos/blob/main/README.md).
 {: note}
 
 ## Define outputs
@@ -1029,7 +1029,7 @@ After completing the deployment of all compute, networking, and storage resource
 
 After deploying your IBM Cloud infrastructure, it’s essential to **verify connectivity and ensure that all resources are operational**. This section guides you through accessing the jumpbox, testing private workload server connectivity, and preparing for application deployment.
 
-Open the architecture diagram in a separate tab to keep a view of how we’re progressing through the test environment: Hub and Spoke VPC Diagram
+Open the architecture diagram in a separate tab to keep a view of how it's progressing through the test environment: Hub and Spoke VPC Diagram
 {: tip}
 
 ### Get Your Infrastructure Outputs

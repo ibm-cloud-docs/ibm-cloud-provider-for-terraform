@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-12-17"
+lastupdated: "2025-12-18"
 
 keywords: Secure AI infrastructure, Terraform IBM Modules, TIM Modules, terraform-ibm-modules, Code Engine, COS, KMS, IaC, Infrastructure as Code, watsonx, AI
 
@@ -26,8 +26,7 @@ This **IBM Cloud Terraform tutorial** shows how to compose and integrate reusabl
 
 The solution is built by **composing modular Terraform components**, each encapsulating a distinct IBM Cloud service. These modules are integrated through well-defined inputs and outputs to form a complete, secure, and repeatable **Infrastructure as Code deployment pattern**.
 
-The application simulates a bank loan processing workflow where AI agents evaluate risk and determine interest rates. The source code is available at:
-https://github.com/IBM/ai-agent-for-loan-risk
+The application simulates a bank loan processing workflow where AI agents evaluate risk and determine interest rates. The source code is available at: https://github.com/IBM/ai-agent-for-loan-risk
 {: note}
 
 The deployment architecture uses these core components:
@@ -39,16 +38,16 @@ The deployment architecture uses these core components:
 - **Security**: Key Protect for encryption
 
 ## Before you begin
-{: #tim-modules-prereqs}
+{: #tim-modules-ai-prereqs}
 
 Before starting this tutorial, make sure you have the necessary tools, knowledge, and familiarity with IBM Cloud services. These prerequisites will help you follow along with provisioning infrastructure using Terraform modules and deploying the example Loan Risk AI Agents application.
 
-* [Install the {{site.data.keyword.cloud_notm}} CLI](https://cloud.ibm.com/docs/cli?topic=cli-getting-started)
-* [Install terraform CLI](https://developer.hashicorp.com/terraform/install)
-* [Basic knowledge of Terraform syntax and workflows](https://developer.hashicorp.com/terraform/tutorials)
-* [Understanding of IBM Cloud services](https://www.ibm.com/solutions/cloud)
+* [Install the {{site.data.keyword.cloud_notm}} CLI](https://cloud.ibm.com/docs/cli?topic=cli-getting-started).
+* [Install terraform CLI](https://developer.hashicorp.com/terraform/install).
+* [Basic knowledge of Terraform syntax and workflows](https://developer.hashicorp.com/terraform/tutorials).
+* [Understanding of IBM Cloud services](https://www.ibm.com/solutions/cloud).
 * [IBM Cloud apikey](/docs/account?topic=account-userapikey&interface=ui) to access the IBM Cloud.
-* [Familiar with the Loan Risk AI Agents application](https://github.com/IBM/ai-agent-for-loan-risk)
+* [Familiar with the Loan Risk AI Agents application](https://github.com/IBM/ai-agent-for-loan-risk).
 
 ## Set up Terraform project structure for TIM-Based IaC
 {: #tim-setup-project-structure}
@@ -74,7 +73,7 @@ cd my-terraform-project
 {: #tim-create-terraform-files}
 {: step}
 
-The project follows a standard Terraform layout, where each file serves a single purpose. This structure promotes clarity, reuse, and predictable behavior.
+The project follows a standard Terraform layout, where each file serves a single purpose. This structure promotes clarity, reuse, and predictable behavior. Refer [this](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure) for more information.
 
 ```sh
 .
@@ -218,7 +217,7 @@ module "resource_group" {
 ```
 {: pre}
 
-For more information about this module, see the [terraform-ibm-resource-group documentation](https://github.com/terraform-ibm-modules/terraform-ibm-resource-group).
+For more information about this module, see the [terraform-ibm-resource-group documentation](https://github.com/terraform-ibm-modules/terraform-ibm-resource-group/blob/main/README.md).
 {: note}
 
 ### Create a Code Engine Project
@@ -287,14 +286,14 @@ module "namespace" {
 ```
 {: pre}
 
-For more information about this module, see the [terraform-ibm-container-registry documentation](https://github.com/terraform-ibm-modules/terraform-ibm-container-registry).
+For more information about this module, see the [terraform-ibm-container-registry documentation](https://github.com/terraform-ibm-modules/terraform-ibm-container-registry/blob/main/README.md).
 {: note}
 
 ### Create a Code Engine build to automatically build container image from source code
 {: #tim-code-engine-build}
 {: step}
 
-This **Code Engine build** configuration builds a **container image from source code** hosted at [Loan Risk AI Agents repository](https://github.com/IBM/ai-agent-for-loan-risk) using the **Dockerfile** included in the repository. The build output is pushed to **IBM Cloud Container Registry** using the previously created **registry authentication secret**. The resulting **container image** serves as the **foundation for our AI application deployment**, enabling a **reproducible**, **automated**, and **build-from-source** workflow that integrates seamlessly with **Code Engine**
+This **Code Engine build** configuration builds a **container image from source code** hosted at [Loan Risk AI Agents repository](https://github.com/IBM/ai-agent-for-loan-risk) using the **Dockerfile** included in the repository. The build output is pushed to **IBM Cloud Container Registry** using the previously created **registry authentication secret**. The resulting **container image** serves as the **foundation for the AI application deployment**, enabling a **reproducible**, **automated**, and **build-from-source** workflow that integrates seamlessly with **Code Engine**
 
 Key inputs:
 - **source_url** – Git repository containing the AI application source code
@@ -370,7 +369,7 @@ module "key_protect_all_inclusive" {
 ```
 {: pre}
 
-For more information about this module, see the [terraform-ibm-kms-all-inclusive documentation](https://github.com/terraform-ibm-modules/terraform-ibm-kms-all-inclusive).
+For more information about this module, see the [terraform-ibm-kms-all-inclusive documentation](https://github.com/terraform-ibm-modules/terraform-ibm-kms-all-inclusive/blob/main/README.md).
 {: note}
 
 ### Create Cloud Object Storage with Key Protect Encryption
@@ -403,7 +402,7 @@ module "cos" {
 ```
 {: pre}
 
-For more information about this module, see the [terraform-ibm-cos documentation](https://github.com/terraform-ibm-modules/terraform-ibm-cos).
+For more information about this module, see the [terraform-ibm-cos documentation](https://github.com/terraform-ibm-modules/terraform-ibm-cos/blob/main/README.md).
 {: note}
 
 ### Deploy watsonx.ai Project with COS Encryption
@@ -441,7 +440,7 @@ module "watsonx_ai" {
 ```
 {: pre}
 
-For more information about this module, see the [terraform-ibm-watsonx-ai documentation](https://github.com/terraform-ibm-modules/terraform-ibm-watsonx-ai).
+For more information about this module, see the [terraform-ibm-watsonx-ai documentation](https://github.com/terraform-ibm-modules/terraform-ibm-watsonx-ai/blob/main/README.md).
 {: note}
 
 ### Create a Code Engine Application
@@ -532,7 +531,7 @@ output "watsonx_ai_project_id" {
 
 In this step, you will configure your environment-specific variables and deploy the complete infrastructure using Terraform. This includes initializing modules, previewing planned changes, and applying the configuration to provision resources in IBM Cloud.
 
-For more details about TIM module deployments, see [Deploy TIM Module guide](deploy-tim-module.md) or learn more about deployment best practices.
+For more details about TIM module deployments, see [Deploy TIM Module guide](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module) or learn more about deployment best practices.
 {: note}
 
 ### Secure variables

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-12-17"
+lastupdated: "2025-12-18"
 
 keywords: terraform mcp, ai assistant, claude, ibm bob, model context protocol, terraform modules, infrastructure as code
 
@@ -37,7 +37,7 @@ The [Terraform IBM Modules MCP Server (TIM-MCP)](https://github.com/terraform-ib
 - Generate infrastructure code following IBM Cloud standards
 
 ### Why use TIM-MCP?
-{: #tim-mcp-benefits}
+{: #using-tim-mcp-benefits}
 
 TIM-MCP enhances AI-assisted infrastructure development by:
 
@@ -470,7 +470,7 @@ For production use, pin TIM-MCP to a specific version to ensure consistent behav
 Check the [TIM-MCP releases page](https://github.com/terraform-ibm-modules/tim-mcp/releases){: external} for the latest version.
 
 ## Next steps
-{: #mcp-next-steps}
+{: #tim-mcp-next-steps}
 
 - Explore [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external}
 - Learn about [Model Context Protocol](https://modelcontextprotocol.io){: external}

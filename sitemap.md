@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-17"
+lastupdated: "2025-12-18"
 
 keywords: terraform, sitemap
 
@@ -310,15 +310,15 @@ subcollection: ibm-cloud-provider-for-terraform
 
 [Understanding the Terraform IBM Module Structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#understand-tim-structure)
 
-* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#audience)
+* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-structure-audience)
 
-* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-objectives)
+* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-structure-objectives)
 
 * [Navigating a Terraform IBM Module](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#navigating-tim-module)
 
 * [Module Structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-structure)
 
-    * [Root-level module code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#module-root-code)
+    * [Root-level module files](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#module-root-code)
 
     * [Module documentation](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#module-documentation)
 
@@ -328,7 +328,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
     * [Submodules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-submodules)
 
-* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#next-steps)
+* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#tim-structure-next-steps)
 
 * [Feedback](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure#feedback)
 
@@ -418,19 +418,15 @@ subcollection: ibm-cloud-provider-for-terraform
 * [Related links](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-UseLangWithTIM#UseTIMrelated-links)
 
 
-## Package as a Deployable Architecture and Publish to a Private Catalog
-{: #sitemap_package_as_a_deployable_architecture_and_publish_to_a_private_catalog}
+## Package a Deployable Architecture and Publish to a Private Catalog
+{: #sitemap_package_a_deployable_architecture_and_publish_to_a_private_catalog}
 
 
-[Package as a Deployable Architecture and Publish to a Private Catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#package-and-publish-da)
+[Package a Deployable Architecture and Publish to a Private Catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#package-and-publish-da)
 
 * [Before you begin](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#before-you-begin)
 
 * [Package the Terraform code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#create-da-bundle)
-
-    * [Create a release](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#create-a-release)
-
-    * [Copy the `.tar.gz` bundle link](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#copy-the-targz-bundle-link)
 
 * [Publish to a Private Catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#publish-da)
 
@@ -451,7 +447,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 [Build Secure IBM Cloud Infrastructure with Terraform Modules for AI Applications](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-secure-ai-infrastructure#secure-ai-infrastructure)
 
-* [Before you begin](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-secure-ai-infrastructure#tim-modules-prereqs)
+* [Before you begin](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-secure-ai-infrastructure#tim-modules-ai-prereqs)
 
 * [Set up Terraform project structure for TIM-Based IaC](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-secure-ai-infrastructure#tim-setup-project-structure)
 
@@ -510,7 +506,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 [Build a Secure Hub-and-Spoke Infrastructure Using Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-hub-spoke-infrastructure#hub-spoke-infrastructure)
 
-* [Before you begin](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-hub-spoke-infrastructure#tim-modules-prereqs)
+* [Before you begin](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-hub-spoke-infrastructure#tim-modules-hub-and-spoke-prereqs)
 
 * [Set up Terraform project structure for TIM-Based IaC](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-hub-spoke-infrastructure#tim-setup-project-structure)
 
@@ -595,7 +591,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 * [What is TIM-MCP?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-what-is)
 
-    * [Why use TIM-MCP?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-benefits)
+    * [Why use TIM-MCP?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#using-tim-mcp-benefits)
 
 * [Before you begin](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-prereqs)
 
@@ -633,7 +629,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 * [Version pinning for production](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-version-pinning)
 
-* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#mcp-next-steps)
+* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-next-steps)
 
 [Deploy Terraform IBM Modules using Schematics](/docs/schematics?topic=schematics-sch-create-wks)
 

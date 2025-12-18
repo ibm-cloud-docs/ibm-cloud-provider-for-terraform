@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-12-16"
+lastupdated: "2025-12-18"
 
 keywords: Package module as DA, Publish in Private Catalog, DA, Catalog
 
@@ -12,12 +12,14 @@ subcollection: ibm-cloud-provider-for-terraform
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Package as a Deployable Architecture and Publish to a Private Catalog
+# Package a Deployable Architecture and Publish to a Private Catalog
 {: #package-and-publish-da}
 
 A [Deployable Architecture](https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-understand-module-da&interface=ui)(DA) is a terraform solution often built using multiple TIM modules to create an architectural pattern. The DA can be published as a deployable solution in the IBM Cloud catalog that creates a self-service experience, allowing developers and other teams to deploy this entire architecture with just a few clicks in the IBM Cloud console, without needing to understand the underlying Terraform code.
 
-Considering you have successfully built and tested a secure infrastructure using Terraform . The next step in the platform engineering lifecycle is to package this automation so that others in your organization can easily reuse it. In this tutorial you will learn how to package a TIM module as a Deployable Architecture (DA) and publish it to a private catalog.
+Considering you have successfully built and tested a secure infrastructure using Terraform by following this [guide](https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-create-da&interface=ui). This tutorial provides you a [sample DA](https://github.com/IBM/deployable-architecture-iac-lab-materials/tree/main) for reference. The next step in the platform engineering lifecycle is to package this automation so it can be easily reused across your organization. 
+
+In this tutorial you will learn how to package the source code and publish it to a private catalog.
 
 ## Before you begin
 
@@ -29,36 +31,21 @@ Ensure that you have the following:
 {: #create-da-bundle}
 {: step}
 
-Before you onboard a Deployable Architecture, you must create a Terraform bundle from your repository.
+The [catalog manifest file](https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-create-da&interface=ui#create-manifest) located at root of your DA code, defines the metadata required to create a catalog tile. Before onboarding a DA, you must package the source code. 
 
-### Create a release
-
-1. In your GitHub repository, go to **Releases** → **Draft a new release**.
-2. In **Tag version**, create a new tag. For example,  `v1.0.0-test`.
-3. Select the target branch. For example, `main`.
-4. Provide a release title.  
-5. (Optional) Select **Set as a pre-release**.
-6. Click **Publish release**.
-
-### Copy the `.tar.gz` bundle link
-
-GitHub automatically generates the bundle.
-
-1. Open the release you created.
-2. Under **Assets**, locate `Source code (tar.gz)`
-3. Right-click and select **Copy link address**.
-
-The link follows this format:
+The packaged source code(`.tar.gz` file) is typically generated from a release in a source code repository like GitHub or GitLab. Detailed instructions are available [here](https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-onboard-da#package-source). For the purpose of this tutorial, a public URL to a pre-packaged bundle is provided to simplify the process.
 
 ```text
-https://github.com/<org>/<repo>/archive/refs/tags/<tag>.tar.gz
+https://github.com/IBM/deployable-architecture-iac-lab-materials/archive/refs/tags/v1.0.3.tar.gz
 ```
 
-Use this URL as the **Source URL** when onboarding the Deployable Architecture.
+Use this URL as the **Source URL** in the next step.
 
 ## Publish to a Private Catalog
 {: #publish-da}
 {: step}
+
+Now, you will create a private catalog and add your deployable architecture to the private catalog within your IBM Cloud account.
 
 ### Create a private catalog
 
@@ -118,4 +105,5 @@ Users can now deploy the full architecture without writing Terraform code. This 
 
 ## Next steps
 
-- Learn how to [deploy a Deployable Architecture](https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-setup-project&interface=ui) by using IBM Cloud Projects:  
+- Explore how to [edit your private catalog](https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-onboard-da) entry.
+- Learn how to [deploy a Deployable Architecture](https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-setup-project&interface=ui) by using IBM Cloud Projects.  

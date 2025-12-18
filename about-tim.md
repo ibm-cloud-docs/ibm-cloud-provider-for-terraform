@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2025
-lastupdated: "2025-12-17"
+lastupdated: "2025-12-18"
 
 keywords: terraform-ibm-modules, Terraform on IBM Cloud, configuration files, resources, what is Terraform IBM Modules, automation
 
@@ -49,6 +49,8 @@ Before integrating a module into your project, review the available `README` doc
 
 Terraform’s modular design allows you to integrate two or more TIM modules together to create a larger, opinionated, and production-ready solution. Instead of deploying modules separately, you can compose them within a [root configuration](https://developer.hashicorp.com/terraform/language/modules/develop/composition){: external} and use the complete architecture. By combining modules, you can construct a cohesive solution such as a secure VPC-based architecture with monitoring, logging, and encryption enabled. Outputs from one module can become inputs to another, enabling dependency chaining and consistent architecture composition.
 
+See the provided examples built using TIM modules, [Secure infrastructure for AI applications](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-secure-ai-infrastructure) and [Build a Secure Hub-and-Spoke Infrastructure](docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-hub-spoke-infrastructure).
+
 ## Deployment options
 {: #tim-deployment-options}
 
@@ -56,7 +58,7 @@ You can deploy your architecture using several different approaches depending on
 
 Some common deployment patterns include:
 
-1. **Deployable Architecture (DA)**: A [Deployable Architecture](https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-understand-module-da&interface=ui) is a terraform solution often built using multiple TIM modules to create an architectural pattern. The DA can be published as a deployable solution in the IBM Cloud catalog which allows teams to consume complex architecture without writing or understanding Terraform. Publishing as a DA is one option for teams who want to make reusable architectures available inside their organization.
+1. **Deployable Architecture (DA)**: A [Deployable Architecture](https://cloud.ibm.com/docs/secure-enterprise?topic=secure-enterprise-understand-module-da&interface=ui) is a terraform solution often built using multiple TIM modules to create an architectural pattern. The DA can be published as a deployable solution in the IBM Cloud catalog which allows teams to consume complex architecture without writing or understanding Terraform. Publishing as a DA is one option for teams who want to make reusable architectures available inside their organization. Refer [this](docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da) for deployment steps.
 
 2. **Plain Terraform**: Create a Terraform configuration that calls multiple TIM modules. This configuration can be deployed either using [Terraform CLI](https://developer.hashicorp.com/terraform/cli/commands){: external} or through IBM Cloud [Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started).
 
