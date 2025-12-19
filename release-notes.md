@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-18"
+lastupdated: "2025-12-19"
 
-keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new 
+keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new
 
 subcollection: ibm-cloud-provider-for-terraform
 ---
@@ -15,22 +15,23 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #release-notes}
 
 Use the release notes to learn about the current changes to the {{site.data.keyword.cloud}} Terraform documentation.
-{: shortdesc}
-
 - To get information on the latest releases of {{site.data.keyword.cloud_notm}} provider plug-in for Terraform, refer [here](https://github.com/IBM-Cloud/terraform-provider-ibm/releases).
 
 - To know more about Terraform IBM Modules releases, refer [TIM GitHub Org](https://github.com/terraform-ibm-modules/).
-
----
+{: shortdesc}
 
 ## December 2025
 {: #release-dec-2025}
+
+Review the release notes for December 2025.
+{: shortdesc}
 
 ### 18 December 2025
 {: #18dec2025}
 {: release-note}
 
 Added Terraform IBM Modules documentation.
+:   Learn more about [Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim).
 
 ## March 2025
 {: #release-mar-2025}
@@ -45,7 +46,7 @@ Review the release notes for March 2025.
 Added a video to install Terraform on IBM Cloud
 :   Included a [video](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#tf_installation_step) with the steps to install Terraform on IBM Cloud.
 
-Updated the change log 
+Updated the change log
 :   The [change log](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-versiontaglist) version tags for Terraform on IBM Cloud.
 
 
@@ -540,7 +541,7 @@ Features and enhancements with the bug fixes
 {: #release-november-2022}
 
 Review the release notes for November 2022.
-{: shortdesc} 
+{: shortdesc}
 
 ### 8 November 2022
 {: #8nov2022}
@@ -688,7 +689,7 @@ Enhancements
 {: #3mar2022}
 {: release-note}
 
-Enhancements 
+Enhancements
 :   For the current fixes for `ibm_is_instance` resource on VPC VSI, see [Updates and fixes in v1.39.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.39.1) release.
 
 Terraform current version support
@@ -698,8 +699,8 @@ Terraform current version support
 {: #1mar2022}
 {: release-note}
 
-Enhancements 
-:   For the current enhancements and fixes to support resources and data sources of VPC infrastructure and {{site.data.keyword.cis_short}} webhooks, see [Updates and fixes in v1.39.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.39.0) release. 
+Enhancements
+:   For the current enhancements and fixes to support resources and data sources of VPC infrastructure and {{site.data.keyword.cis_short}} webhooks, see [Updates and fixes in v1.39.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.39.0) release.
 
 ## January 2022
 {: #release-jan-2022}
@@ -711,8 +712,8 @@ Review the release notes for January 2022.
 {: #28jan2022}
 {: release-note}
 
-Enhancements 
-:   For the current enhancements on integration of security group with VPE gateway and update the deprecation notice of policy management in KMS resources, see [Updates and fixes in v1.38.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.38.1) release. 
+Enhancements
+:   For the current enhancements on integration of security group with VPE gateway and update the deprecation notice of policy management in KMS resources, see [Updates and fixes in v1.38.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.38.1) release.
 
 ### 14 January 2022
 {: #14jan2022}

@@ -35,6 +35,9 @@ toc:
       - link:
           label: Deploying an OpenShift Cluster using TIM modules and Terragrunt
           href: https://github.com/terraform-ibm-modules/sample-iac-solutions/tree/main/terragrunt
+      - link:
+          label: Deploy a Landing zone for containerized applications with OpenShift
+          href: https://github.com/terraform-ibm-modules/terraform-ibm-base-ocp-vpc/tree/main/examples/containerized_app_landing_zone
       - provider-template.md
       - clusters.md
       - install-redhat-openshift.md

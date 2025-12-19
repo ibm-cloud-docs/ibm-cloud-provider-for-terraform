@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-18"
+lastupdated: "2025-12-19"
 
 keywords: terraform, sitemap
 
@@ -613,6 +613,12 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #sitemap_deploying-an-openshift-cluster-using-tim-modules-and-terragrunt}
 
 [Deploying an OpenShift Cluster using TIM modules and Terragrunt](https://github.com/terraform-ibm-modules/sample-iac-solutions/tree/main/terragrunt){: external}
+
+
+## Deploy a Landing zone for containerized applications with OpenShift
+{: #sitemap_deploy-a-landing-zone-for-containerized-applications-with-openshift}
+
+[Deploy a Landing zone for containerized applications with OpenShift](https://github.com/terraform-ibm-modules/terraform-ibm-base-ocp-vpc/tree/main/examples/containerized_app_landing_zone){: external}
 
 
 ## Sample Terraform templates for {{site.data.keyword.cloud_notm}}
