@@ -31,6 +31,7 @@ Review the release notes for December 2025.
 {: release-note}
 
 Added Terraform IBM Modules documentation.
+:   Learn more about [Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim).
 
 ## March 2025
 {: #release-mar-2025}
