@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-19"
+lastupdated: "2025-12-22"
 
 keywords: terraform, sitemap
 
@@ -391,6 +391,33 @@ subcollection: ibm-cloud-provider-for-terraform
 * [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#deploytim-hcpwp-next-steps)
 
 * [Related links](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#waypointrelated-links)
+
+
+## Deploy Terraform IBM Modules using Pulumi
+{: #sitemap_deploy_terraform_ibm_modules_using_pulumi}
+
+
+[Deploy Terraform IBM Modules using Pulumi](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-pulumi-with-tim#pulumi-with-tim)
+
+    * [Pulumi Overview](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-pulumi-with-tim#pulumi-overview)
+
+* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-pulumi-with-tim#pulumi-with-tim-objectives)
+
+* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-pulumi-with-tim#pulumi-with-tim-audience)
+
+* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-pulumi-with-tim#pulumi-with-tim-prereqs)
+
+* [Set up Pulumi environment](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-pulumi-with-tim#pulumi-with-tim-setup)
+
+* [Configure Terraform IBM Modules in Pulumi](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-pulumi-with-tim#configure-tim-module-in-pulumi)
+
+* [Deploy your Pulumi stack](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-pulumi-with-tim#deploy-tim-with-pulumi)
+
+* [Clean up resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-pulumi-with-tim#pulumi-with-tim-cleanup)
+
+* [Additional Examples](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-pulumi-with-tim#example-tim-with-pulumi)
+
+* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-pulumi-with-tim#pulumi-with-tim-next-steps)
 
 
 ## Package a Deployable Architecture and Publish to a Private Catalog
