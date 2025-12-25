@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-19"
+lastupdated: "2025-12-23"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new
 
@@ -14,11 +14,14 @@ subcollection: ibm-cloud-provider-for-terraform
 # Release notes
 {: #release-notes}
 
-Use the release notes to learn about the current changes to the {{site.data.keyword.cloud}} Terraform documentation.
-- To get information on the latest releases of {{site.data.keyword.cloud_notm}} provider plug-in for Terraform, refer [here](https://github.com/IBM-Cloud/terraform-provider-ibm/releases).
-
-- To know more about Terraform IBM Modules releases, refer [TIM GitHub Org](https://github.com/terraform-ibm-modules/).
+Use the release notes to learn about the current changes to the {{site.data.keyword.cloud}} Terraform on IBM Cloud documentation that are grouped month-wise.
 {: shortdesc}
+
+To get information on the latest releases of Terraform on IBM Cloud, refer to the [Terraform on IBM Cloud](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
+{: important}
+
+To know more about Terraform IBM Modules releases, refer [Terraform IBM Modules GitHub Org](https://github.com/terraform-ibm-modules/){: external}.
+{: important}
 
 ## December 2025
 {: #release-dec-2025}

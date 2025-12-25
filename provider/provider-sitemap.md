@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-18"
+lastupdated: "2025-12-24"
 
 keywords: terraform provider plugin, terraform functions, terraform open whisk, terraform function action, terraform serverless
 
@@ -15,6 +15,10 @@ subcollection: ibm-cloud-provider-for-terraform
 
 # Index of Terraform on IBM Cloud resources and data sources
 {: #resources-datasource-list}
+
+Use the [{{site.data.keyword.cloud}} Provider Registry link](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external} to view the up-to-date index of Terraform resources and data sources available on {{site.data.keyword.cloud_notm}}, along with their detailed documentation.
+{: note}
+
 
 
 
@@ -324,7 +328,7 @@ subcollection: ibm-cloud-provider-for-terraform
 </tbody>
 </table>
 
-## Global Tagging 
+## Global Tagging
 {: #ibm-global-tagging_rd}
 
 <table>
@@ -372,7 +376,7 @@ subcollection: ibm-cloud-provider-for-terraform
 </tbody>
 </table>
 
-## Identity & Access Management (IAM)
+## Identity and Access Management (IAM)
 {: #ibm-iam-resource_rd}
 
 <table>
@@ -393,7 +397,7 @@ subcollection: ibm-cloud-provider-for-terraform
         <li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/iam_trusted_profile_policy">ibm_iam_trusted_profile_policy</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/iam_trusted_profiles">ibm_iam_trusted_profiles</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/iam_user_policy">ibm_iam_user_policy</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/iam_user_profile">ibm_iam_user_profile</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/iam_users">ibm_iam_users</a></li></ul></td>
     </tr>
     </tbody>
-    </table> 
+    </table>
 
 ## Internet services
 {: #ibm-internet-services_rd}
@@ -446,7 +450,7 @@ subcollection: ibm-cloud-provider-for-terraform
     <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_addons">ibm_container_addons</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_alb">ibm_container_alb</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_alb_cert">ibm_container_alb_cert</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_bind_service">ibm_container_bind_service</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_cluster">ibm_container_cluster</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_cluster_config">ibm_container_cluster_config</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_cluster_versions">ibm_container_cluster_versions</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_cluster_worker">ibm_container_cluster_worker</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_dedicated_host">ibm_container_dedicated_host</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_dedicated_host_flavor">ibm_container_dedicated_host_flavor</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_dedicated_host_flavors">ibm_container_dedicated_host_flavors</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_dedicated_host_pool">ibm_container_dedicated_host_pool</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_nlb_dns">ibm_container_nlb_dns</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_storage_attachment">ibm_container_storage_attachment</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_vpc_alb">ibm_container_vpc_alb</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_vpc_cluster">ibm_container_vpc_cluster</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_vpc_cluster_worker">ibm_container_vpc_cluster_worker</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_vpc_cluster_worker_pool">ibm_container_vpc_cluster_worker_pool</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/container_worker_pool">ibm_container_worker_pool</a></li></ul></td>
 </tr>
 </tbody>
-</table> 
+</table>
 
 
 ## Object Storage
@@ -479,10 +483,10 @@ subcollection: ibm-cloud-provider-for-terraform
     <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_catalog_images">ibm_pi_catalog_images</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_cloud_connection">ibm_pi_cloud_connection</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_cloud_connections">ibm_pi_cloud_connections</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_cloud_instance">ibm_pi_cloud_instance</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_console_languages">ibm_pi_console_languages</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_dhcp">ibm_pi_dhcp</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_dhcps">ibm_pi_dhcps</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_disaster_recovery_location">ibm_pi_disaster_recovery_location</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_disaster_recovery_locations">ibm_pi_disaster_recovery_locations</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_image">ibm_pi_image</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_images">ibm_pi_images</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_instance">ibm_pi_instance</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_instance_ip">ibm_pi_instance_ip</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_instance_snapshots">ibm_pi_instance_snapshots</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_instance_volumes">ibm_pi_instance_volumes</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_instances">ibm_pi_instances</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_key">ibm_pi_key</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_keys">ibm_pi_keys</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_network">ibm_pi_network</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_placement_group">ibm_pi_placement_group</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_placement_groups">ibm_pi_placement_groups</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_public_network">ibm_pi_public_network</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_pvm_snapshots">ibm_pi_pvm_snapshots</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/1.37.0/docs/data-sources/pi_sap_profile">ibm_pi_sap_profile</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/1.37.0/docs/data-sources/pi_sap_profiles">ibm_pi_sap_profiles</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_shared_processor_pool">ibm_pi_shared_processor_pool</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_shared_processor_pools">ibm_pi_shared_processor_pools</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_spp_placement_group">ibm_pi_spp_placement_group</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_spp_placement_groups">ibm_pi_spp_placement_groups</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_storage_pool_capacity">ibm_pi_storage_pool_capacity</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_storage_pools_capacity">ibm_pi_storage_pools_capacity</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_storage_type_capacity">ibm_pi_storage_type_capacity</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_storage_types_capacity">ibm_pi_storage_types_capacity</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_system_pools">ibm_pi_system_pools</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_tenant">ibm_pi_tenant</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume">ibm_pi_volume</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_flash_copy_mappings_html">ibm_pi_volume_flash_copy_mappings_html</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_group">ibm_pi_volume_group</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_group_details">ibm_pi_volume_group_details</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_group_remote_copy_relationships">ibm_pi_volume_group_remote_copy_relationships</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_group_storage_details">ibm_pi_volume_group_storage_details</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_groups">ibm_pi_volume_groups</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_groups_details">ibm_pi_volume_groups_details</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_onboarding">ibm_pi_volume_onboarding</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_onboardings">ibm_pi_volume_onboardings</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_remote_copy_relationship">ibm_pi_volume_remote_copy_relationship</a></li></ul></td>
 </tr>
 </tbody>
-</table> 
+</table>
 
 
-## Push notifications 
+## Push notifications
 {: #ibm-push-notifications_rd}
 
 <table>
@@ -514,7 +518,7 @@ subcollection: ibm-cloud-provider-for-terraform
 </tbody>
 </table>
 
-## Satellite 
+## Satellite
 {: #ibm-satellite_rd}
 
 <table>
@@ -528,9 +532,9 @@ subcollection: ibm-cloud-provider-for-terraform
     <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/satellite_attach_host_script">ibm_satellite_attach_host_script</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/satellite_cluster">ibm_satellite_cluster</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/satellite_cluster_worker_pool">ibm_satellite_cluster_worker_pool</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/satellite_cluster_worker_pool_zone_attachment">ibm_satellite_cluster_worker_pool_zone_attachment</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/satellite_endpoint">ibm_satellite_endpoint</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/satellite_link">ibm_satellite_link</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/satellite_location">ibm_satellite_location</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/satellite_location_nlb_dns">ibm_satellite_location_nlb_dns</a></li></ul></td>
 </tr>
 </tbody>
-</table> 
+</table>
 
-## Schematics 
+## Schematics
 {: #ibm-schematics-data_rd}
 
 <table>
@@ -544,10 +548,10 @@ subcollection: ibm-cloud-provider-for-terraform
     <td><ul><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_action">ibm_schematics_action</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_inventory">ibm_schematics_inventory</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_job">ibm_schematics_job</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_output">ibm_schematics_output</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_resource_query">ibm_schematics_resource_query</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_state">ibm_schematics_state</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/schematics_workspace">ibm_schematics_workspace</a></li></ul></td>
 </tr>
 </tbody>
-</table> 
+</table>
 
 
-## Secrets manager 
+## Secrets manager
 {: #ibm-secrets-manager-data_rd}
 
 <table>
@@ -562,7 +566,7 @@ subcollection: ibm-cloud-provider-for-terraform
 </a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/sm_kv_secret_metadata">ibm_sm_kv_secret_metadata</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/sm_private_certificate">ibm_sm_private_certificate</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/sm_private_certificate_configuration_intermediate_ca">ibm_sm_private_certificate_configuration_intermediate_ca</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/sm_private_certificate_configuration_root_ca">ibm_sm_private_certificate_configuration_root_ca</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/sm_private_certificate_configuration_template">ibm_sm_private_certificate_configuration_template</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/sm_private_certificate_metadata">ibm_sm_private_certificate_metadata</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/sm_public_certificate">ibm_sm_public_certificate</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/sm_public_certificate_configuration_ca_lets_encrypt">ibm_sm_public_certificate_configuration_ca_lets_encrypt</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/sm_public_certificate_configuration_dns_cis">ibm_sm_public_certificate_configuration_dns_cis</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/sm_public_certificate_configuration_dns_classic_infrastructure">ibm_sm_public_certificate_configuration_dns_classic_infrastructure</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/sm_public_certificate_metadata">ibm_sm_public_certificate_metadata</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/sm_secret_group">ibm_sm_secret_group</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/sm_secret_groups">ibm_sm_secret_groups</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/sm_secrets">ibm_sm_secrets</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/sm_username_password_secret">ibm_sm_username_password_secret</a></li><li><a href="https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/sm_username_password_secret_metadata">ibm_sm_username_password_secret_metadata</a></li></ul></td>
 </tr>
 </tbody>
-</table> 
+</table>
 
 ## Security and Compliance Center
 {: #ibm-security-compliance-data_rd}
@@ -604,7 +608,7 @@ subcollection: ibm-cloud-provider-for-terraform
  </table>
 
 
-## Transit Gateway 
+## Transit Gateway
 {: #ibm-transit-gateway_rd}
 
 <table>
