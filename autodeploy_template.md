@@ -16,7 +16,7 @@ subcollection: ibm-cloud-provider-for-terraform
 # Creating a deployment to IBM Cloud Schematics link
 {: #create_deploy_to_schematics}
 
-The deploy to {{site.data.keyword.cloud}} URL is an efficient way for you to enable users to deploy solutions on {{site.data.keyword.cloud_notm}} from a public Git repository sample configuration. The URL requires minimal configuration and you can insert it anywhere in your documentation that supports markup. When the user clicks the hyper link, they are taken directly to the {{site.data.keyword.bpshort}} workspace setup page and only need to click the create button for workspace creation in {{site.data.keyword.bpshort}}.
+The deploy to {{site.data.keyword.cloud}} URL is an efficient way for you to enable users to deploy solutions on {{site.data.keyword.cloud_notm}} from a public GitHub repository sample configuration. The URL requires minimal configuration and you can insert it anywhere in your documentation that supports markup. When the user clicks the hyper link, they are taken directly to the {{site.data.keyword.bpshort}} workspace setup page and only need to click the create button for workspace creation in {{site.data.keyword.bpshort}}.
 
 The following steps show how to create a URL to deploy to `Terraform >=1.0.0, <2.0` template example in {{site.data.keyword.bplong_notm}}.
 {: shortdesc}
@@ -30,14 +30,14 @@ The following steps show how to create a URL to deploy to `Terraform >=1.0.0, <2
     ```text
     https://cloud.ibm.com/schematics/workspaces/create?repository=<template public Git repository example url>&terraform_version=<terraform_v1.x.x>
     ```
-    {: pre}
+    {: codeblock}
 
     Example
 
     ```text
     https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cis&terraform_version=terraform_v1.6
     ```
-    {: pre}
+    {: codeblock}
 
     The URL contains two parameters, first parameter is provided with the workspace name as `ibm-cis` and second parameter is provided with the Terraform version as `terraform_v1.0`. For more information, about the parameters refer to this example, `https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cis&terraform_version=terraform_v1.6`. If you do not provide any parameters or ignore one parameter, the `Deploy to {{site.data.keyword.cloud_notm}}` link defaults to the repository's master branch. You can provide the Terraform version parameter that you are using.
     {: important}
@@ -54,7 +54,7 @@ Syntax
 ```html
 <a href="https://cloud.ibm.com/schematics/workspaces/create?repository=<public Git repository example URL>/<workspace name>&terraform_version=terraform_xx">Deploy to IBM Cloud Schematics <img src=<image location>></a>
 ```
-{: pre}
+{: codeblock}
 
 Example
 
@@ -64,7 +64,7 @@ Example
     <area alt="Deploy to IBM Cloud}" title="Deploy to IBM Cloud" href="https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cis&terraform_version=terraform_v1.6" target="_blank" coords="3,1,140,20" shape="rect">
 </map>
 ```
-{: pre}
+{: codeblock}
 
 Output
 

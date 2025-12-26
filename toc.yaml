@@ -46,7 +46,7 @@ toc:
       - provision-vsi-vpc.md
       - link:
           label: Deploying a 3-Tier web app in a VPC
-          href: https://github.com/jonghall/ibmcloud-terraform-vpc
+          href: https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vpc#ibm-secure-landing-zone-vpc-module
       - provision-vsi-classic.md
       - link:
           label: Deploying a VPC environment on IBM Cloud by using Bastion host

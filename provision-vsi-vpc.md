@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-09"
+lastupdated: "2025-12-26"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for vpc
 
@@ -51,7 +51,7 @@ This tutorial is intended for system administrators who want to learn how to pro
 {: #vpc-tutorial-prereq}
 
 - Install the [latest Terraform on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#tf_installation) and the latest [{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider).
-- Retrieve your [{{site.data.keyword.cloud_notm}} credentials, upload an SSH key, and configure the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ssh-keys?topic=ssh-keys-getting-started-tutorial#getting-started-tutorial).
+- Retrieve your [{{site.data.keyword.cloud_notm}} credentials, [upload an SSH key](/docs/ssh-keys?topic=ssh-keys-about-ssh-keys), and [configure the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference).
 
 ## Create the Terraform configuration files
 {: #vpc-tutorial-create}
