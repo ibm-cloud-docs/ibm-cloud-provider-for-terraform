@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-22"
+lastupdated: "2025-12-26"
 
 keywords: terraform, sitemap
 
@@ -787,7 +787,7 @@ subcollection: ibm-cloud-provider-for-terraform
 ## Deploying a 3-Tier web app in a VPC
 {: #sitemap_deploying-a-3-tier-web-app-in-a-vpc}
 
-[Deploying a 3-Tier web app in a VPC](https://github.com/jonghall/ibmcloud-terraform-vpc){: external}
+[Deploying a 3-Tier web app in a VPC](https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vpc#ibm-secure-landing-zone-vpc-module){: external}
 
 
 ## Provisioning an {{site.data.keyword.cloud_notm}} virtual server for classic infrastructure
