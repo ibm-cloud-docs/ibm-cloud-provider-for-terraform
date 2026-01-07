@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-12-24"
+  years: 2017, 2026
+lastupdated: "2026-01-07"
 
 keywords: terraform provider plugin, terraform functions, terraform open whisk, terraform function action, terraform serverless
 
@@ -18,7 +18,6 @@ subcollection: ibm-cloud-provider-for-terraform
 
 Use the [{{site.data.keyword.cloud}} Provider Registry link](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external} to view the up-to-date index of Terraform resources and data sources available on {{site.data.keyword.cloud_notm}}, along with their detailed documentation.
 {: note}
-
 
 
 

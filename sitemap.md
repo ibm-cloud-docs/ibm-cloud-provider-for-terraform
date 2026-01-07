@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-12-26"
+  years: 2017, 2026
+lastupdated: "2026-01-07"
 
 keywords: terraform, sitemap
 
@@ -28,6 +28,8 @@ subcollection: ibm-cloud-provider-for-terraform
 * [Configuring the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#install_provider-step)
 
 * [Testing your configuration](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#test-terraform-template)
+
+* [Index of Terraform on IBM Cloud resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#provider-resources-datasource-list)
 
 
 ## About Terraform on IBM Cloud
