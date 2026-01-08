@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-01-07"
+lastupdated: "2026-01-08"
 
 keywords: terraform, sitemap
 
@@ -29,7 +29,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 * [Testing your configuration](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#test-terraform-template)
 
-* [Index of Terraform on IBM Cloud resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#provider-resources-datasource-list)
+* [Overview of Terraform resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#provider-resources-datasource-list)
 
 
 ## About Terraform on IBM Cloud
@@ -111,6 +111,10 @@ subcollection: ibm-cloud-provider-for-terraform
 
 
 [Release notes](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#release-notes)
+
+* [January 2026](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#release-jan-2026)
+
+    * [08 January 2026](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#08jan2026)
 
 * [December 2025](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#release-dec-2025)
 
@@ -824,7 +828,7 @@ subcollection: ibm-cloud-provider-for-terraform
 ## Deploying a VPC environment on IBM Cloud by using Bastion host
 {: #sitemap_deploying-a-vpc-environment-on-ibm-cloud-by-using-bastion-host}
 
-[Deploying a VPC environment on IBM Cloud by using Bastion host](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/){: external}
+[Deploying a VPC environment on IBM Cloud by using Bastion host](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform){: external}
 
 
 ## Deploying multitiered VPC on IBM Cloud by using Bastion host

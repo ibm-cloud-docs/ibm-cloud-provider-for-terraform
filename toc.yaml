@@ -50,7 +50,7 @@ toc:
       - provision-vsi-classic.md
       - link:
           label: Deploying a VPC environment on IBM Cloud by using Bastion host
-          href: https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform/
+          href: https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform
       - link:
           label: Deploying multitiered VPC on IBM Cloud by using Bastion host
           href: https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md
@@ -69,7 +69,6 @@ toc:
       - topicgroup:
           label: IBM Cloud Provider plug-in for Terraform
           topics:
-          - provider/provider-sitemap.md
           - link:
               label: Architecture reference - Highly available, secured, and managed Kubernetes environment
               href: https://github.com/ibm-cloud-architecture/refarch-public-iaas-iks

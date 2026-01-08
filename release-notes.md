@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-12-23"
+  years: 2017, 2026
+lastupdated: "2026-01-08"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new
 
@@ -14,14 +14,27 @@ subcollection: ibm-cloud-provider-for-terraform
 # Release notes
 {: #release-notes}
 
-Use the release notes to learn about the current changes to the {{site.data.keyword.cloud}} Terraform on IBM Cloud documentation that are grouped month-wise.
+Use the release notes to learn about the current changes to the {{site.data.keyword.cloud}} Terraform on IBM Cloud documentation that is grouped month-wise.
 {: shortdesc}
 
-To get information on the latest releases of Terraform on IBM Cloud, refer to the [Terraform on IBM Cloud](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
+For the current updates on Terraform on IBM Cloud releases, visit the [Terraform on IBM Cloud](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external} page.
 {: important}
 
 To know more about Terraform IBM Modules releases, refer [Terraform IBM Modules GitHub Org](https://github.com/terraform-ibm-modules/){: external}.
 {: important}
+
+## January 2026
+{: #release-jan-2026}
+
+Review the release notes for January 2026.
+{: shortdesc}
+
+### 08 January 2026
+{: #08jan2026}
+{: release-note}
+
+Review Terraform resources and data sources
+:   Getting started includes a topic to view available [Terraform resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#provider-resources-datasource-list) and removes the index on [Index of Terraform on IBM Cloud resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list) page.
 
 ## December 2025
 {: #release-dec-2025}
