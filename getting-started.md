@@ -154,7 +154,7 @@ Explore [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: exte
 ## Overview of Terraform resources and data sources
 {: #provider-resources-datasource-list}
 
-For an overview of the Terraform resources and data sources that you can use, see the [Terraform on {{site.data.keyword.cloud_notm}} resources and data sources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/doc){: external}.
+For an overview of the Terraform resources and data sources that you can use, see the [Terraform on {{site.data.keyword.cloud_notm}} resources and data sources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external}.
 {: shortdesc}
 
 To get information on the up-to-date Terraform on IBM Cloud releases, refer to the [Terraform on IBM Cloud](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
