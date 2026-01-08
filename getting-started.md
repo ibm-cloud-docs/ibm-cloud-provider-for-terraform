@@ -151,11 +151,10 @@ Now that you have configured the {{site.data.keyword.cloud_notm}} Provider plug-
 
 Explore [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external} along with the complete Terraform configuration files to test. Review the module [code structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tim-structure) and follow the deployment instructions provided [here](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module).
 
-For an overview of the Terraform resources and data sources that you can use, see the [Terraform on {{site.data.keyword.cloud_notm}} resources and data sources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external}.
-
-
-## Index of Terraform on IBM Cloud resources and data sources
+## Overview of Terraform resources and data sources
 {: #provider-resources-datasource-list}
 
-Use the [{{site.data.keyword.cloud}} Provider Registry link](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs){: external} to view the up-to-date index of Terraform resources and data sources available on {{site.data.keyword.cloud_notm}}, along with their detailed documentation.
-{: note}
+For an overview of the Terraform resources and data sources that you can use, see the [Terraform on {{site.data.keyword.cloud_notm}} resources and data sources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/doc){: external}.
+{: shortdesc}
+
+To get information on the up-to-date Terraform on IBM Cloud releases, refer to the [Terraform on IBM Cloud](https://github.com/IBM-Cloud/terraform-provider-ibm/releases){: external}.
