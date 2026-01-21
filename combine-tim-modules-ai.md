@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-12-18"
+  years: 2026
+lastupdated: "2026-01-21"
 
 keywords: Secure AI infrastructure, Terraform IBM Modules, TIM Modules, terraform-ibm-modules, Code Engine, COS, KMS, IaC, Infrastructure as Code, watsonx, AI
 
@@ -42,7 +42,7 @@ The deployment architecture uses these core components:
 
 Before starting this tutorial, make sure you have the necessary tools, knowledge, and familiarity with IBM Cloud services. These prerequisites will help you follow along with provisioning infrastructure using Terraform modules and deploying the example Loan Risk AI Agents application.
 
-* [Install the {{site.data.keyword.cloud_notm}} CLI](https://cloud.ibm.com/docs/cli?topic=cli-getting-started).
+* [Install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
 * [Install terraform CLI](https://developer.hashicorp.com/terraform/install).
 * [Basic knowledge of Terraform syntax and workflows](https://developer.hashicorp.com/terraform/tutorials).
 * [Understanding of IBM Cloud services](https://www.ibm.com/solutions/cloud).
@@ -480,7 +480,7 @@ module "code_engine_app" {
 ```
 {: pre}
 
-For more information about this module, see the [terraform-ibm-code-engine-application documentation](https://github.com/terraform-ibm-modules/terraform-ibm-code-engine/tree/main/modules/application).
+For more information about this module, see the [terraform-ibm-code-engine-application documentation](https://github.com/terraform-ibm-modules/terraform-ibm-code-engine/tree/main/modules/app).
 {: note}
 
 ## Define outputs

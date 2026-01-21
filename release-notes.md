@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-01-08"
+lastupdated: "2026-01-21"
 
 keywords: terraform resources, terraform modules, terraform, ibm cloud provider, release notes, what's new
 
@@ -34,7 +34,7 @@ Review the release notes for January 2026.
 {: release-note}
 
 Review Terraform resources and data sources
-:   Getting started includes a topic to view available [Terraform resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-getting-started#provider-resources-datasource-list) and removes the index on [Index of Terraform on IBM Cloud resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list) page.
+:   Getting started includes a topic to view available [Terraform resources and data sources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs) and removes the index on [Index of Terraform on IBM Cloud resources and data sources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs) page.
 
 ## December 2025
 {: #release-dec-2025}
@@ -531,14 +531,14 @@ Review the release notes for January 2023.
 {: release-note}
 
 Features and enhancements with the bug fixes
-:   The [1.50.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.50.0){: external} version release contains the [resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list) support for VPC. For the current resources, data sources, enhancements, and bug fixes, see [Updates and fixes in v1.50.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.50.0){: external}.
+:   The [1.50.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.50.0){: external} version release contains the [resources and data sources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs) support for VPC. For the current resources, data sources, enhancements, and bug fixes, see [Updates and fixes in v1.50.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.50.0){: external}.
 
 ### 12 January 2023
 {: #12jan2023}
 {: release-note}
 
 Features and enhancements with the bug fixes
-:   The [1.49.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.49.0){: external} version release contains the [resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list) support for the catalog management and {{site.data.keyword.vpc_short}}. For the current resources, data sources, enhancements, and bug fixes, see [Updates and fixes in v1.49.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.49.0){: external}.
+:   The [1.49.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.49.0){: external} version release contains the [resources and data sources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs) support for the catalog management and {{site.data.keyword.vpc_short}}. For the current resources, data sources, enhancements, and bug fixes, see [Updates and fixes in v1.49.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.49.0){: external}.
 
 ## December 2022
 {: #release-december-2022}
@@ -551,7 +551,7 @@ Review the release notes for December 2022.
 {: release-note}
 
 Features and enhancements with the bug fixes
-:   The [1.48.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.48.0) version release contains the [resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list) support for Powervs and support for KMS. For the current resources, data sources, enhancements, and bug fixes, see [Updates and fixes in v1.48.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.48.0).
+:   The [1.48.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.48.0) version release contains the [resources and data sources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs) support for Powervs and support for KMS. For the current resources, data sources, enhancements, and bug fixes, see [Updates and fixes in v1.48.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.48.0).
 
 ## November 2022
 {: #release-november-2022}
@@ -571,7 +571,7 @@ Features and enhancements with the bug fixes
 {: release-note}
 
 Features and enhancements with the bug fixes
-:   The [1.47.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.47.0) version release contains the [resources and data sources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list) support for {{site.data.keyword.containershort}}, {{site.data.keyword.appconfig_short}}, and {{site.data.keyword.dl_short}}. For the current resources, data sources, enhancements, and bug fixes, see [Updates and fixes in v1.47.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.47.0).
+:   The [1.47.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.47.0) version release contains the [resources and data sources](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs) support for {{site.data.keyword.containershort}}, {{site.data.keyword.appconfig_short}}, and {{site.data.keyword.dl_short}}. For the current resources, data sources, enhancements, and bug fixes, see [Updates and fixes in v1.47.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases/tag/v1.47.0).
 
 ## October 2022
 {: #release-october-2022}

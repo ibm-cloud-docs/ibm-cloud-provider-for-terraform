@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025
-lastupdated: "2025-12-18"
+  years: 2026
+lastupdated: "2026-01-21"
 
 keywords: Secure Hub-and-Spoke, Terraform IBM Modules, TIM Modules
 
@@ -45,7 +45,7 @@ The deployment architecture uses these core components:
 
 Before you begin this tutorial, ensure you have the required tools, skills, and familiarity with IBM Cloud services. Meeting these prerequisites will help you successfully provision infrastructure using Terraform modules and deploy the hub-and-spoke network architecture.
 
-* [Install the {{site.data.keyword.cloud_notm}} CLI](https://cloud.ibm.com/docs/cli?topic=cli-getting-started).
+* [Install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started).
 * [Install terraform CLI](https://developer.hashicorp.com/terraform/install).
 * [Basic knowledge of Terraform syntax and workflows](https://developer.hashicorp.com/terraform/tutorials).
 * [Understanding of IBM Cloud services](https://www.ibm.com/solutions/cloud).

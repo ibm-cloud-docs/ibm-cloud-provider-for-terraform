@@ -124,7 +124,7 @@ The following steps show how to set up the provider plug-in for Terraform v1.x o
     ```
     {: codeblock}
 
-5. Create a providers file to configure your endpoint URLs, cloud regions, or other settings before Terraform can use them, so that Terraform can install and use them in the [provider configuration](https://developer.hashicorp.com/terraform/language/providers/configuration){: external} file that is named `providers.tf`. Use this file to configure the {{site.data.keyword.cloud_notm}} Provider plug-in with the {{site.data.keyword.cloud_notm}} API key from your `terraform.tfvars` file. The plug-in uses this key to access {{site.data.keyword.cloud_notm}} and to work with your {{site.data.keyword.cloud_notm}} service. To access a variable value from the `terraform.tfvars` file, you must first declare the variable in the `providers.tf` file and then reference the variable by using the `var.<variable_name>` syntax.
+5. Create a providers file to configure your endpoint URLs, cloud regions, or other settings before Terraform can use them, so that Terraform can install and use them in the [provider configuration](https://developer.hashicorp.com/terraform/language/block/provider){: external} file that is named `providers.tf`. Use this file to configure the {{site.data.keyword.cloud_notm}} Provider plug-in with the {{site.data.keyword.cloud_notm}} API key from your `terraform.tfvars` file. The plug-in uses this key to access {{site.data.keyword.cloud_notm}} and to work with your {{site.data.keyword.cloud_notm}} service. To access a variable value from the `terraform.tfvars` file, you must first declare the variable in the `providers.tf` file and then reference the variable by using the `var.<variable_name>` syntax.
 
     Example of `providers.tf` file
 
@@ -149,7 +149,7 @@ The following steps show how to set up the provider plug-in for Terraform v1.x o
 Now that you have configured the {{site.data.keyword.cloud_notm}} Provider plug-in for your resource, you can start by using Terraform on IBM Cloud to initialize, execute plan, and apply commands to provision the resource. For more information about Terraform commands to test your configuration, see [Provisioning IBM Cloud resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-manage_resources#provision_resources).
 {: shortdesc}
 
-Explore [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external} along with the complete Terraform configuration files to test. Review the module [code structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tim-structure) and follow the deployment instructions provided [here](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module).
+Explore [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external} along with the complete Terraform configuration files to test. Review the module [code structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure) and follow the deployment instructions provided [here](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module).
 
 ## Overview of Terraform resources and data sources
 {: #provider-resources-datasource-list}

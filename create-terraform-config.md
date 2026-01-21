@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-12-26"
+  years: 2017, 2026
+lastupdated: "2026-01-21"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -49,7 +49,7 @@ To configure the `provider` block:
     - **Option 1: Create a separate `provider.tf` file.** The information in this file is loaded by Terraform on IBM Cloud and {{site.data.keyword.bplong_notm}}, and applied to all Terraform on IBM Cloud configuration files that exist in the same GitHub directory or tape archive file (`.tar`). This approach is useful if you split out your infrastructure code across multiple files.
     - **Option 2: Add a `provider` block to your Terraform on IBM Cloud configuration file.** You might choose this option if you prefer to specify the provider alongside with your variables and resources in one Terraform on IBM Cloud configuration file.
 
-    The providers file is used to configure your endpoint URLs, cloud regions, or other settings before Terraform can use them, so that Terraform can install and use them in the [provider configuration](https://developer.hashicorp.com/terraform/language/providers/configuration){: external} file that is named `provider.tf`.
+    The providers file is used to configure your endpoint URLs, cloud regions, or other settings before Terraform can use them, so that Terraform can install and use them in the [provider configuration](https://developer.hashicorp.com/terraform/language/block/provider){: external} file that is named `provider.tf`.
     {: note}
 
 2. Review what credentials and information you must provide in the `provider` block to work with your resources in [required input parameters for each resource category](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters). {{site.data.keyword.bpshort}} automatically retrieves your {{site.data.keyword.cloud_notm}} API key so that you do not need to specify this information in your `provider` block.
@@ -108,7 +108,7 @@ To configure the `provider` block:
 Use `resource` blocks to define the {{site.data.keyword.cloud_notm}} resources that you want to manage with {{site.data.keyword.bplong_notm}}.
 {: shortdesc}
 
-To support a multi-cloud approach, Terraform on IBM Cloud works with multiple cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, every supported cloud provider must provide a command line plug-in for Terraform on IBM Cloud that users can use to work with the resources. To find an overview of the resources that you can provision in {{site.data.keyword.cloud_notm}}, see the [Terraform on IBM Cloud reference](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-resources-datasource-list).
+To support a multi-cloud approach, Terraform on IBM Cloud works with multiple cloud providers. A cloud provider is responsible for understanding the resources that you can provision, their API, and the methods to expose these resources in the cloud. To make this knowledge available to users, every supported cloud provider must provide a command line plug-in for Terraform on IBM Cloud that users can use to work with the resources. To find an overview of the resources that you can provision in {{site.data.keyword.cloud_notm}}, see the [Terraform on IBM Cloud reference](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs).
 
 Example infrastructure code for provisioning a VPC
 
