@@ -26,6 +26,7 @@ Learn how to use [Pulumi](https://www.pulumi.com/docs/get-started/){: external} 
 {: shortdesc}
 
 ### Pulumi Overview
+{: #pulumi-overview}
 
 Pulumi enables developers to write Infrastructure as Code (IaC) using familiar languages such as Python, Go, TypeScript, or C#. With Pulumi, you can leverage existing Terraform providers and modules to manage {{site.data.keyword.cloud_notm}} resources efficiently and consistently.
 
