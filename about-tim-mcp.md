@@ -1,12 +1,12 @@
 ---
 
 copyright:
-  years: 2025, 2025
-lastupdated: "2025-12-17"
+  years: 2025, 2026
+lastupdated: "2026-01-21"
 
 keywords: terraform-ibm-modules, Terraform on IBM Cloud, MCP, TIM-MCP, automation
 
-subcollection: ibm-cloud-terraform-ibm-modules
+subcollection: ibm-cloud-provider-for-terraform
 
 ---
 

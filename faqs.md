@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2025
-lastupdated: "2025-12-12"
+  years: 2017, 2026
+lastupdated: "2026-01-21"
 
 keywords: terraform faqs, softlayer, iaas
 
@@ -18,15 +18,15 @@ content-type: faq
 # FAQs
 {: #faqs}
 
-## How do I find the flavor and parameters to configure a virtual service instance in {{site.data.keyword.Bluemix_notm}}? 
+## How do I find the flavor and parameters to configure a virtual service instance in {{site.data.keyword.Bluemix_notm}}?
 {: #vsi_config}
 {: faq}
 
-The Terraform on IBM Cloud `ibm_compute_vm_instance` resource includes optional and mandatory configuration parameters. To find an overview of how you can configure your virtual server, use the {{site.data.keyword.Bluemix_notm}} CLI.  
+The Terraform on IBM Cloud `ibm_compute_vm_instance` resource includes optional and mandatory configuration parameters. To find an overview of how you can configure your virtual server, use the {{site.data.keyword.Bluemix_notm}} CLI.
 
-1. Install the [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli). 
+1. Install the [{{site.data.keyword.Bluemix_notm}} CLI](/docs/cli?topic=cli-install-ibmcloud-cli).
 
-2. List supported configuration options for virtual servers in {{site.data.keyword.Bluemix_notm}}. The listed options include available data centers, machine flavors, CPU, memory, operating systems, local disk and SAN disk sizes, and network interface controllers (NIC). {{site.data.keyword.Bluemix_notm}} offers multiple virtual server offerings that each come with a specific configuration. The configuration of an offering is optimized for a specific workload need, such as high performance, or real-time analytics. For more information, see [Public Virtual Servers](/docs/virtual-servers?topic=virtual-servers-about-public-virtual-servers). 
+2. List supported configuration options for virtual servers in {{site.data.keyword.Bluemix_notm}}. The listed options include available data centers, machine flavors, CPU, memory, operating systems, local disk and SAN disk sizes, and network interface controllers (NIC). {{site.data.keyword.Bluemix_notm}} offers multiple virtual server offerings that each come with a specific configuration. The configuration of an offering is optimized for a specific workload need, such as high performance, or real-time analytics. For more information, see [Public Virtual Servers](/docs/virtual-servers?topic=virtual-servers-about-public-virtual-servers).
     ```sh
     ibmcloud sl vs options
     ```
@@ -36,11 +36,11 @@ The Terraform on IBM Cloud `ibm_compute_vm_instance` resource includes optional 
 {: #provisioning_times}
 {: faq}
 
-Most {{site.data.keyword.Bluemix_notm}} platform resources provision within a few seconds. Infrastructure resources, including Bare Metal servers, virtual servers, and {{site.data.keyword.Bluemix_notm}} Load Balancers can take longer. When you run the `terraform apply` or `terraform destroy` command, the command might take a few minutes to complete and you are not able to enter a different command during that time. The `terraform apply` command returns when your resources are fully provisioned, whereas the `terraform destroy` command might return before your resources are deleted from your {{site.data.keyword.Bluemix_notm}} platform or infrastructure portfolio. 
+Most {{site.data.keyword.Bluemix_notm}} platform resources provision within a few seconds. Infrastructure resources, including Bare Metal servers, virtual servers, and {{site.data.keyword.Bluemix_notm}} Load Balancers can take longer. When you run the `terraform apply` or `terraform destroy` command, the command might take a few minutes to complete and you are not able to enter a different command during that time. The `terraform apply` command returns when your resources are fully provisioned, whereas the `terraform destroy` command might return before your resources are deleted from your {{site.data.keyword.Bluemix_notm}} platform or infrastructure portfolio.
 
-Use the `terraform apply` and `terraform destroy` times in the following table as a reference for when you can expect your commands to complete. 
+Use the `terraform apply` and `terraform destroy` times in the following table as a reference for when you can expect your commands to complete.
 
-If the Terraform on IBM Cloud operation does not complete due to a timeout, wait for the resource state change to complete and retry the operation. 
+If the Terraform on IBM Cloud operation does not complete due to a timeout, wait for the resource state change to complete and retry the operation.
 {: tip}
 
 | Resource | terraform apply return time | terraform destroy return time |
@@ -66,14 +66,14 @@ For detailed steps, see how to [install the Terraform on IBM Cloud](/docs/ibm-cl
     Error: Error waiting for create resource alb cert (buvlsclf0qcur3hjcrng/ingress-tls-cert) : The resource alb cert buvlsclf0qcur3hjcrng/ingress-tls-cert does not exist anymore: Request failed with status code: 404, ServerErrorResponse: {"incidentID":"5f82fa1696ce299a-IAD","code":"E0024","description":"The specified Ingress secret name is not found for this cluster.","type":"ALBSecret","recoveryCLI":"To list the Ingress secrets for a cluster, run 'ibmcloud ks ingress secret ls -c \u003ccluster_name_or_ID\u003e'."}
     ```
 
-You need to update the {{site.data.keyword.cloud_notm}} provider version to `version 1.16.1` or above to support [create secret](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_alb_cert){: external} feature in `ibm_container_alb_cert`. 
+You need to update the {{site.data.keyword.cloud_notm}} provider version to `version 1.16.1` or above to support [create secret](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/container_alb_cert){: external} feature in `ibm_container_alb_cert`.
 
 ## How can I set or add multiple address prefixes to the configuration file when provisioning VPC?
 {: #addressprefix}
 {: faq}
 {: support}
 
-The `address_prefix_management` argument indicates a default address prefix should be created automatically or manually for each zone in the VPC. Supported values are **auto** and **manual**. The default value is **auto**. Most scenario covers default address prefixes set as optional without specifying during the creation of VPC through Terraform. 
+The `address_prefix_management` argument indicates a default address prefix should be created automatically or manually for each zone in the VPC. Supported values are **auto** and **manual**. The default value is **auto**. Most scenario covers default address prefixes set as optional without specifying during the creation of VPC through Terraform.
 
 If you require one or more address prefixes you should define as part of resource provisioning in the configuration file. To configure multiple address prefix with arguments define the code as stated in the code block. For more information, see [ibm_is_vpc_address_prefix data source](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/is_vpc_address_prefixes#attribute-reference){: external}.
 
@@ -104,7 +104,7 @@ If you require one or more address prefixes you should define as part of resourc
 {: faq}
 {: support}
 
-A access group policy is a way to organize your account having create, modify, or delete an IAM access groups, where user can grant permissions to members with appropriate privileges such as **Manager**, **Viewer** and **Administrator**. For more information, about [`ibm_access_group_policy resource`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group_policy){: external} and [iam_service_policy resource](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_service_policy){: external}. 
+A access group policy is a way to organize your account having create, modify, or delete an IAM access groups, where user can grant permissions to members with appropriate privileges such as **Manager**, **Viewer** and **Administrator**. For more information, about [`ibm_access_group_policy resource`](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group_policy){: external} and [iam_service_policy resource](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_service_policy){: external}.
 
     ```terraform
     resource "ibm_iam_access_group" "accgrp" {
@@ -122,14 +122,14 @@ A access group policy is a way to organize your account having create, modify, o
     }
     ```
     {: codeblock}
-    
+
 
 ## How do I configure policy for all services in all the resource groups for an user?
 {: #user-policy-faq}
 {: faq}
 {: support}
 
-The sample code block helps to configure the policy for all services in all resource group. But you have to enter all the roles in the list. 
+The sample code block helps to configure the policy for all services in all resource group. But you have to enter all the roles in the list.
 
     ```terraform
     resource "ibm_iam_user_policy" "policy" {
@@ -138,7 +138,7 @@ The sample code block helps to configure the policy for all services in all reso
     }
     ```
     {: codeblock}
-    
+
 
 ## How can I configure a target resource to connect from different regions?
 {: #target-regions-faq}
@@ -170,7 +170,7 @@ You need to configure the different regions in the provider block by using `regi
 {: faq}
 {: support}
 
-You can connect and retrieve information from a multiple regions by using `aliases` parameter as shown in the example code block. For more information, about configuring multiple provider block, see [Multiple provider configurations](https://developer.hashicorp.com/terraform/language/providers/configuration#alias-multiple-provider-configurations).
+You can connect and retrieve information from a multiple regions by using `aliases` parameter as shown in the example code block. For more information, about configuring multiple provider block, see [Multiple provider configurations](https://developer.hashicorp.com/terraform/language/block/provider#alias-multiple-provider-configurations).
 
 
     ```terraform
@@ -204,16 +204,16 @@ You can connect and retrieve information from a multiple regions by using `alias
 You can configure only one region for a resource list to a group policy, as shown in the code block. For more information, about configuring resource block, see [Multiple provider configurations](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_user_policy#user-policy-using-service-with-region).
 
     ```terraform
-    resource "ibm_iam_user_policy"  "policy" { 
-    ibm_id = "test@in.ibm.com" 
-    roles = ["Viewer"] 
-    resources { 
-      service = "kms" 
-    } 
-    } 
+    resource "ibm_iam_user_policy"  "policy" {
+    ibm_id = "test@in.ibm.com"
+    roles = ["Viewer"]
+    resources {
+      service = "kms"
+    }
+    }
     ```
     {: codeblock}
-    
+
 
 ## How can I create access group policies and add memo as an attribute to the policy?
 {: #alias-attributes-gpolicy}
@@ -305,14 +305,14 @@ Yes, but the VPC API’s are region specific so `ibm_is_vpcs` gives only one reg
 
     output "vpcs" {
       value = concat(
-        tolist(data.ibm_is_vpcs.eu-de.vpcs), 
+        tolist(data.ibm_is_vpcs.eu-de.vpcs),
         tolist(data.ibm_is_vpcs.dal.vpcs)
         )
-    } 
+    }
 
     ```
     {: codeblock}
-    
+
 
 ## How can I edit the flavor of an existing IKS worker pool without deleting or destroying an existing one by updating its machine_type?
 {: #alias-flavoriks-machinetype}
@@ -341,11 +341,11 @@ Updating the machine type in the Terraform file allows to built or provision new
         wait_for_worker_update    = "true"
 
         resource_group_id         = var.resource_group.id
-    } 
+    }
 
     ```
     {: codeblock}
-    
+
 
 ## How can I secure a workspace by setting an environment variable?
 {: #alias-squential-envvariable}
@@ -370,7 +370,7 @@ Currently, the {{site.data.keyword.bplong_notm}} service team is working to enab
         }
       ]
     ```
-    
+
 
 ## How can I create `ibm_function_trigger` with Terraform that connects to an Event Stream?
 {: #alias-functional-trigger}
@@ -401,10 +401,10 @@ The sample code block allows to create the resources of the same type in a seque
 
     ```text
     {
-      
+
       "StatusCode": 400,
       "Headers": {
-        
+
         "Cache-Control": ["max-age=0, no-cache, no-store, must-revalidate"],
         "Cf-Cache-Status": ["DYNAMIC"],
         "Cf-Ray": ["6ab6a5e86ac41b69-DEL"],
@@ -423,13 +423,13 @@ The sample code block allows to create the resources of the same type in a seque
         "X-Xss-Protection": ["1; mode=block"]
       },
       "Result": {
-        
+
         "errors": [{
-          
+
           "code": "bad_field",
           "message": "Failed to attach public gateway of different zone to the subnet",
           "target": {
-            
+
             "name": "public_gateway.id",
             "type": "field",
             "value": "r010-2df568da-f87e-468d-9696-27b05e126179"
@@ -460,7 +460,7 @@ resource "ibm_database" "messages-for-rabbitmq" {
   adminpassword                = "password12"
   members_memory_allocation_mb = 2048
   members_disk_allocation_mb   = 1024
-  
+
   service_endpoints = var.service_endpoints
 }
 ```
@@ -508,7 +508,7 @@ resource "ibm_container_cluster" "mycluster" {
 ```
 {: codeblock}
 
-## Can I update the changes into the current existing Terraform file? 
+## Can I update the changes into the current existing Terraform file?
 {: #setchanges-terraform-faq}
 {: faq}
 {: support}
@@ -520,7 +520,7 @@ Yes, Terraform saves the configuration in the form of the state file and identif
 {: faq}
 {: support}
 
-You can use [module blocks](https://developer.hashicorp.com/terraform/language/modules/syntax){: external} which is a container for multiple resources that are used together. The Terraform configuration has at least one module known as its root module, which consists of the resources defined in the `.tf` files of the main working directory. For more information, about reusing configuration through modules, see [terraform-ibm-modules](https://github.com/terraform-ibm-modules/){: external}.
+You can use [module blocks](https://developer.hashicorp.com/terraform/language/block/module){: external} which is a container for multiple resources that are used together. The Terraform configuration has at least one module known as its root module, which consists of the resources defined in the `.tf` files of the main working directory. For more information, about reusing configuration through modules, see [terraform-ibm-modules](https://github.com/terraform-ibm-modules/){: external}.
 
 ## Can I always set Terraform to use the latest or default version?
 {: #terraform-defaultversion-faq}

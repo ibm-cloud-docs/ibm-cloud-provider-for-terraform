@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025, 2025
-lastupdated: "2025-12-22"
+  years: 2025, 2026
+lastupdated: "2026-01-21"
 
 keywords: pulumi, ibmcloud, automation, infrastructure-as-code, terraform-ibm-modules, pulumi and ibmcloud, terraform
 
@@ -22,7 +22,7 @@ completion-time: 1h
 {: toc-content-type="tutorial"}
 {: toc-completion-time="30m"}
 
-Learn how to use [Pulumi](https://www.pulumi.com/docs/iac/get-started/){: external} with the [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external} to define and manage your {{site.data.keyword.cloud_notm}} infrastructure using the programming language of your choice.
+Learn how to use [Pulumi](https://www.pulumi.com/docs/get-started/){: external} with the [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external} to define and manage your {{site.data.keyword.cloud_notm}} infrastructure using the programming language of your choice.
 {: shortdesc}
 
 ### Pulumi Overview
@@ -54,7 +54,7 @@ This tutorial is for developers, DevOps engineers, and SREs familiar with Terraf
 Before you begin, ensure that you have the following:
 
 - An {{site.data.keyword.cloud_notm}} account with permissions to create and manage infrastructure, and access to API key credentials.
-- [Pulumi CLI](https://www.pulumi.com/docs/get-started/install/){: external} installed.
+- [Pulumi CLI](https://www.pulumi.com/docs/get-started/download-install/){: external} installed.
 
 ## Set up Pulumi environment
 {: #pulumi-with-tim-setup}
@@ -115,7 +115,7 @@ Configure your Pulumi project by adding IBM Provider package and Terraform IBM M
    - Run this command to add the IBM provider package to the Project
 
       ```bash
-      pulumi package add terraform-provider ibm-cloud/ibm 
+      pulumi package add terraform-provider ibm-cloud/ibm
       ```
       {: pre}
 
@@ -248,7 +248,7 @@ pulumi stack rm <stack-name>
 
 Now that you have learned how to deploy a Terraform IBM Module using Pulumi, you can explore additional modules such as `Key Protect` and `Object Storage` by following the same steps outlined above.
 
-The related module code is provided [here](https://github.com/terraform-ibm-modules/sample-iac-solutions/tree/main/pulumi/__main__.py). You can use these [examples](https://github.com/terraform-ibm-modules/sample-iac-solutions/tree/main/pulumi/terraform_ibm_modules) and [instructions](https://github.com/terraform-ibm-modules/sample-iac-solutions/tree/main/pulumi/README.md) directly to deploy the modules.
+The related module code is provided [here](https://github.com/terraform-ibm-modules/sample-iac-solutions/blob/main/pulumi/__main__.py). You can use these [examples](https://github.com/terraform-ibm-modules/sample-iac-solutions/tree/main/pulumi/terraform_ibm_modules) and [instructions](https://github.com/terraform-ibm-modules/sample-iac-solutions/blob/main/pulumi/README.md) directly to deploy the modules.
 
 ## Next steps
 {: #pulumi-with-tim-next-steps}

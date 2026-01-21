@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-27"
+  years: 2017, 2026
+lastupdated: "2026-01-21"
 
 keywords: terraform identity and access, terraform iam, terraform permissions, terraform iam policy
 
@@ -16,15 +16,15 @@ subcollection: ibm-cloud-provider-for-terraform
 # Configuring the {{site.data.keyword.cloud_notm}} Provider plug-in
 {: #provider-reference}
 
-Before you can start working with Terraform on IBM Cloud, you must retrieve the credentials and parameters that are required for a Terraform resource or data source, and specify them in the `provider` configuration. This configuration is used by the {{site.data.keyword.cloud_notm}} Provider plug-in to authenticate with the {{site.data.keyword.cloud_notm}} platform and to view, create, update, or delete {{site.data.keyword.cloud_notm}} resources and services. 
+Before you can start working with Terraform on IBM Cloud, you must retrieve the credentials and parameters that are required for a Terraform resource or data source, and specify them in the `provider` configuration. This configuration is used by the {{site.data.keyword.cloud_notm}} Provider plug-in to authenticate with the {{site.data.keyword.cloud_notm}} platform and to view, create, update, or delete {{site.data.keyword.cloud_notm}} resources and services.
 {: shortdesc}
 
 ## Required input parameters for each resource category
 {: #required-parameters}
 
-The configuration of the {{site.data.keyword.cloud_notm}} Provider plug-in varies depending on the resource or data source category that you want to work with as shown in the following table. The values in this table are required. To retrieve the values or view more parameters that you can specify, see the [Supported input parameters](#provider-parameter-ov). 
+The configuration of the {{site.data.keyword.cloud_notm}} Provider plug-in varies depending on the resource or data source category that you want to work with as shown in the following table. The values in this table are required. To retrieve the values or view more parameters that you can specify, see the [Supported input parameters](#provider-parameter-ov).
 
-By default, the {{site.data.keyword.cloud_notm}} Provider plug-in is configured to create resources in the `us-south` region. If you want to create your resources in a different region, specify this region by adding the `region` parameter to your `provider` configuration. 
+By default, the {{site.data.keyword.cloud_notm}} Provider plug-in is configured to create resources in the `us-south` region. If you want to create your resources in a different region, specify this region by adding the `region` parameter to your `provider` configuration.
 {: note}
 
 |Required parameters|Classic infrastructure|Cloud Foundry|Functions|Power Systems|Other IAM-enabled services|
@@ -50,7 +50,7 @@ Review what parameters you can set in the `provider` block of your Terraform on 
 |`iaas_classic_timeout`|Optional|The number of seconds to wait until the classic infrastructure API is considered unavailable. The default values is `60`. You can specify this information in the `provider` block or retrieve it from the `IAAS_CLASSIC_TIMEOUT` environment variable.|
 |`ibmcloud_api_key`|Required|The {{site.data.keyword.cloud_notm}} API key to authenticate with the {{site.data.keyword.cloud_notm}} platform. For more information, about how to create an API key, see [Creating an API key](/docs/account?topic=account-userapikey&interface=ui). You can specify the API key in the `provider` block or retrieve the value from the `IC_API_KEY` or `IBMCLOUD_API_KEY` environment variables. If both environment variables are defined, `IC_API_KEY` takes precedence.|
 |`ibmcloud_timeout`|Optional|The number of seconds that you want to wait until the {{site.data.keyword.cloud_notm}} API is considered unavailable. The default value is `60`. You can specify the timeout in the `provider` block or retrieve the value from the `IC_TIMEOUT` or `IBMCLOUD_TIMEOUT` environment variables. If both variables are specified, `IC_TIMEOUT` takes precedence.|
-|`function_namespace`|Required for Functions|The {{site.data.keyword.openwhisk}} namespace that you want to use. The namespace is composed from your Cloud Foundry organization and space in the format `<org>_<space>`. You can specify the namespace in your `provider` block or retrieve the value from the `FUNCTION_NAMESPACE` environment variable. 
+|`function_namespace`|Required for Functions|The {{site.data.keyword.openwhisk}} namespace that you want to use. The namespace is composed from your Cloud Foundry organization and space in the format `<org>_<space>`. You can specify the namespace in your `provider` block or retrieve the value from the `FUNCTION_NAMESPACE` environment variable.
 |`generation`|Required for VPC infrastructure|(Deprecated) The generation of Virtual Private Cloud infrastructure that you want to use. If this value is not specified, `2` is used by default. You can specify the generation in your `provider` block or retrieve the value from the `IC_GENERATION` or `IBMCLOUD_GENERATION` environment variables. If both environment variables are defined, `IC_GENERATION` takes precedence.|
 |`max_retries`|Optional|The maximum number of times that a request to the {{site.data.keyword.cloud_notm}} infrastructure API is sent before the request is considered failed. The default value is `10`. Use this parameter when you receive network-related timeouts or rate limit exceeded error codes. You can specify the number in your `provider` block or retrieve the value from the `MAX_RETRIES` environment variable.|
 |`region`|Optional|The {{site.data.keyword.cloud_notm}} region where you want to create your resources. If this value is not specified, `us-south` is used by default. You can specify the region in the `provider` block or retrieve the value from the `IBMCLOUD_REGION` or `IC_REGION` environment variables. If both environment variables are specified, `IC_REGION` takes precedence.|
@@ -62,15 +62,15 @@ Review what parameters you can set in the `provider` block of your Terraform on 
 ## Specifying the `provider` block
 {: #provider-example}
 
-After you [retrieved the required parameters](#required-parameters) to work with a Terraform resource or data source, you can now specify your provider block. 
+After you [retrieved the required parameters](#required-parameters) to work with a Terraform resource or data source, you can now specify your provider block.
 
 ### Creating a static `provider.tf` file
 {: #static}
 
-You can declare the input parameters in the `provider` block directly. 
+You can declare the input parameters in the `provider` block directly.
 {: shortdesc}
 
-Because the `provider` block includes sensitive information, do not commit this file into a public source repository. To add version control to your provider configuration, use a local [`terraform.tfvars` file](#tf-variables). 
+Because the `provider` block includes sensitive information, do not commit this file into a public source repository. To add version control to your provider configuration, use a local [`terraform.tfvars` file](#tf-variables).
 {: important}
 
 1. Create a `provider.tf` file and specify the input parameters that are required for your resource or data source.
@@ -83,7 +83,7 @@ Because the `provider` block includes sensitive information, do not commit this 
     ```
     {: codeblock}
 
-2. Initialize the Terraform CLI. 
+2. Initialize the Terraform CLI.
     ```sh
     terraform init
     ```
@@ -95,10 +95,10 @@ Because the `provider` block includes sensitive information, do not commit this 
 You can store sensitive information, such as credentials, in a local `terraform.tfvars` file and reference these credentials in your `provider` block.
 {: shortdesc}
 
-Do not commit the `terraform.tfvars` into a public source repository. This file is meant to be stored in your local machine only. 
+Do not commit the `terraform.tfvars` into a public source repository. This file is meant to be stored in your local machine only.
 {: important}
 
-1. Create a `terraform.tfvars` file on your local machine and add the input parameters that are required for your resource or data source. 
+1. Create a `terraform.tfvars` file on your local machine and add the input parameters that are required for your resource or data source.
     ```sh
     ibmcloud_api_key = "<ibmcloud_api_key>"
     iaas_classic_username = "<classic_infrastructure_username>"
@@ -106,7 +106,7 @@ Do not commit the `terraform.tfvars` into a public source repository. This file 
     ```
     {: codeblock}
 
-2. Create a `provider.tf` file and use Terraform interpolation syntax to reference the variables from the `terraform.tfvars`. 
+2. Create a `provider.tf` file and use Terraform interpolation syntax to reference the variables from the `terraform.tfvars`.
     ```terraform
     variable "ibmcloud_api_key" {}
     variable "iaas_classic_username" {}
@@ -120,7 +120,7 @@ Do not commit the `terraform.tfvars` into a public source repository. This file 
     ```
     {: codeblock}
 
-3. Initialize the Terraform CLI. 
+3. Initialize the Terraform CLI.
     ```sh
     terraform init
     ```
@@ -130,17 +130,17 @@ Do not commit the `terraform.tfvars` into a public source repository. This file 
 ### Using environment variables
 {: #env-vars}
 
-You can configure the {{site.data.keyword.cloud_notm}} Provider plug-in by exporting required parameters as environment variables on your local machine. Environment variables are automatically loaded when you initialize the Terraform CLI. 
+You can configure the {{site.data.keyword.cloud_notm}} Provider plug-in by exporting required parameters as environment variables on your local machine. Environment variables are automatically loaded when you initialize the Terraform CLI.
 {: shortdesc}
 
-1. [Retrieve the environment variable names](#provider-parameter-ov) for the provider parameters that you want to export. For example, to specify a classic infrastructure username, use `IAAS_CLASSIC_USERNAME`. 
+1. [Retrieve the environment variable names](#provider-parameter-ov) for the provider parameters that you want to export. For example, to specify a classic infrastructure username, use `IAAS_CLASSIC_USERNAME`.
 2. Create a `provider.tf` file and add an empty provider block.
     ```terraform
     provider "ibm" {}
     ```
     {: codeblock}
 
-3. Set the environment variables on your local machine. 
+3. Set the environment variables on your local machine.
     ```sh
     export IC_API_KEY="<ibmcloud_api_key>"
     export IAAS_CLASSIC_USERNAME="<classic_username>"
@@ -152,16 +152,16 @@ You can configure the {{site.data.keyword.cloud_notm}} Provider plug-in by expor
     ```sh
     terraform init
     ```
-    {: pre} 
+    {: pre}
 
 
 ## Creating multiple `provider` configurations
 {: #multiple-providers}
 
-You can add multiple `provider` configurations within the same Terraform on IBM Cloud configuration file to create your {{site.data.keyword.cloud_notm}} resources with different provider parameters. 
+You can add multiple `provider` configurations within the same Terraform on IBM Cloud configuration file to create your {{site.data.keyword.cloud_notm}} resources with different provider parameters.
 {: shortdesc}
 
-Creating multiple `provider` configurations is useful when you want to use different input parameters, such as different regions, zones, infrastructure generations, or accounts to create the {{site.data.keyword.cloud_notm}} resources in your Terraform on IBM Cloud configuration file. For more information, see [Multiple Provider Instances](https://developer.hashicorp.com/terraform/language/providers/configuration){: external}. 
+Creating multiple `provider` configurations is useful when you want to use different input parameters, such as different regions, zones, infrastructure generations, or accounts to create the {{site.data.keyword.cloud_notm}} resources in your Terraform on IBM Cloud configuration file. For more information, see [Multiple Provider Instances](https://developer.hashicorp.com/terraform/language/block/provider){: external}.
 
 1. In your Terraform on IBM Cloud configuration or `provider.tf` file, create multiple provider blocks with the same provider name. The provider configuration without an alias is considered the default provider configuration and is used for every resource where you do not specify a specific provider configuration. Any more provider configurations must include an alias so that you can reference this provider from your resource definition.
     ```terraform
@@ -190,10 +190,10 @@ Creating multiple `provider` configurations is useful when you want to use diffe
 ## Configuring non-default cloud service endpoints
 {: #config-provider}
 
-The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform can be configured to use non-default {{site.data.keyword.cloud_notm}} service endpoints. 
+The {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform can be configured to use non-default {{site.data.keyword.cloud_notm}} service endpoints.
 {: shortdesc}
 
-Support for using non-default {{site.data.keyword.cloud_notm}} service endpoints is offered as best effort. Individual Terraform resources might require compatibility updates to support the declaration of custom service endpoints. 
+Support for using non-default {{site.data.keyword.cloud_notm}} service endpoints is offered as best effort. Individual Terraform resources might require compatibility updates to support the declaration of custom service endpoints.
 {: important}
 
 The steps that are involved in configuring your {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform on IBM Cloud to use the private Cloud Service Endpoint (CSE) of an {{site.data.keyword.cloud_notm}} service in  public CSE in [Production environment](https://cloud.ibm.com).
@@ -242,8 +242,3 @@ The steps that are involved in configuring your {{site.data.keyword.cloud_notm}}
 |User management|`IBMCLOUD_USER_MANAGEMENT_ENDPOINT`| [Endpoint URLs](`https://{DomainName}/apidocs/user-management#endpoint-urls`) |
 |VPC Gen2|`IBMCLOUD_IS_NG_API_ENDPOINT`|N/A|
 {: caption="Terraform on IBM Cloud environment variables" caption-side="top"}
-
-
-
-
-

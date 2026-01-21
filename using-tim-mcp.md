@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024, 2025
-lastupdated: "2025-12-18"
+  years: 2024, 2026
+lastupdated: "2026-01-21"
 
 keywords: terraform mcp, ai assistant, claude, ibm bob, model context protocol, terraform modules, infrastructure as code
 
@@ -29,7 +29,7 @@ Always review AI-generated infrastructure code with skilled practitioners before
 ## What is TIM-MCP?
 {: #tim-mcp-what-is}
 
-The [Terraform IBM Modules MCP Server (TIM-MCP)](https://github.com/terraform-ibm-modules/tim-mcp){: external} implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io){: external} to connect AI assistants with the Terraform IBM Modules ecosystem. This integration enables AI models to:
+The [Terraform IBM Modules MCP Server (TIM-MCP)](https://github.com/terraform-ibm-modules/tim-mcp){: external} implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro){: external} to connect AI assistants with the Terraform IBM Modules ecosystem. This integration enables AI models to:
 
 - Search and discover relevant IBM Cloud Terraform modules
 - Access accurate module documentation, inputs, and outputs
@@ -60,10 +60,10 @@ Before you can use TIM-MCP, you need:
 
 1. **An MCP-compatible AI assistant**
    - [IBM Project Bob](https://www.ibm.com/products/bob){: external}
-   - [Claude Desktop](https://claude.ai/download){: external}
+   - [Claude Desktop](https://claude.com/download){: external}
    - [VS Code](https://code.visualstudio.com/){: external} with MCP extension
-   - [Cursor IDE](https://cursor.sh/){: external}
-   - [Claude Code](https://docs.anthropic.com/en/docs/build-with-claude/claude-code){: external}
+   - [Cursor IDE](https://cursor.com/){: external}
+   - [Claude Code](https://platform.claude.com/docs/en/build-with-claude/claude-code){: external}
 
 2. **uv package manager**
 
@@ -393,7 +393,7 @@ When using TIM-MCP with AI assistants:
 ## Troubleshooting
 {: #tim-mcp-troubleshooting}
 
-Following are some common errors you might face while experimenting with TIM-MCP server. 
+Following are some common errors you might face while experimenting with TIM-MCP server.
 
 ### Server not starting
 {: #tim-mcp-troubleshoot-server}
@@ -475,6 +475,6 @@ Check the [TIM-MCP releases page](https://github.com/terraform-ibm-modules/tim-m
 {: #tim-mcp-next-steps}
 
 - Explore [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external}
-- Learn about [Model Context Protocol](https://modelcontextprotocol.io){: external}
+- Learn about [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro){: external}
 - Review [IBM Cloud Terraform best practices white paper](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform){: external}
 - Join the [Terraform IBM Modules community](https://github.com/terraform-ibm-modules){: external}
