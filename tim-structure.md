@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025, 2025
-  lastupdated: "2025-12-18"
+  years: 2025, 2026
+  lastupdated: "2026-01-21"
 
 keywords: Terraform IBM Modules, code structure, Terraform IBM Modules structure, module structure, module code
 
@@ -164,5 +164,6 @@ Now that you understand the TIM module structure, you can:
 
 
 ## Feedback
+{: #feedback}
 
 If you have questions or feedback for any specific module, open an issue in the relevant module repository.

@@ -22,6 +22,7 @@ Considering you have successfully built and tested a secure infrastructure using
 In this tutorial you will learn how to package the source code and publish it to a private catalog.
 
 ## Before you begin
+{: #before-you-begin}
 
 Ensure that you have the following:
 
@@ -48,6 +49,8 @@ Use this URL as the **Source URL** in the next step.
 Now, you will create a private catalog and add your deployable architecture to the private catalog within your IBM Cloud account.
 
 ### Create a private catalog
+{: #create-a-private-catalog}
+{: step}
 
 Create a private catalog to host and distribute your Deployable Architectures.
 
@@ -61,6 +64,8 @@ Your catalog is now ready for onboarding.
 
 
 ### Onboard the Deployable Architecture
+{: #onboard-the-deployable-architecture}
+{: step}
 
 Add your Terraform bundle to the catalog.
 
@@ -80,6 +85,8 @@ Add your Terraform bundle to the catalog.
 The product enters **Draft** state.
 
 ### Mark the version as pre-release
+{: #mark-the-version-as-pre-release}
+{: step}
 
 To enable testing without full validation:
 
@@ -91,6 +98,8 @@ To enable testing without full validation:
 
 
 ### View the Deployable Architecture in the catalog
+{: #view-the-deployable-architecture-in-the-catalog}
+{: step}
 
 1. In the IBM Cloud console, open **Catalog**.
 2. Under **My private catalogs**, choose your catalog.
@@ -104,6 +113,8 @@ To enable testing without full validation:
 Users can now deploy the full architecture without writing Terraform code. This is the key benefit of creating a Deployable Architecture, your organization can now deploy this complex infrastructure consistently with just a few clicks, reducing deployment time while maintaining security standards.
 
 ## Next steps
+{: #next-steps}
+{: step}
 
 - Explore how to [edit your private catalog](/docs/secure-enterprise?topic=secure-enterprise-onboard-da) entry.
 - Learn how to [deploy a Deployable Architecture](/docs/secure-enterprise?topic=secure-enterprise-setup-project&interface=ui) by using IBM Cloud Projects.
