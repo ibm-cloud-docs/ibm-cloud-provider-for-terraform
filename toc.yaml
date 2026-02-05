@@ -57,6 +57,7 @@ toc:
   - navgroup:
       id: howto
       topics:
+      - kms-deletion.md
       - setup_cli.md
       - provider/provider-ref.md
       - migrate.md

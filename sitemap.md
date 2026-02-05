@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-01-08"
+lastupdated: "2026-02-05"
 
 keywords: terraform, sitemap
 
@@ -835,6 +835,23 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #sitemap_deploying-multitiered-vpc-on-ibm-cloud-by-using-bastion-host}
 
 [Deploying multitiered VPC on IBM Cloud by using Bastion host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md){: external}
+
+
+## Managing encryption keys in Terraform IBM Modules(TIM)
+{: #sitemap_managing_encryption_keys_in_terraform_ibm_modulestim}
+
+
+[Managing encryption keys in Terraform IBM Modules(TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion)
+
+* [Understanding `force_delete`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion-understanding)
+
+* [Guidance to use `force_delete` in Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#key-deletion-tim)
+
+* [Examples](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion-examples)
+
+* [Summary](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion-summary)
+
+* [Learn more](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion-references)
 
 
 ## Installing the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in
