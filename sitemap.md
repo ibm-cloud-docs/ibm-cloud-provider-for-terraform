@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-02-05"
+lastupdated: "2026-02-11"
 
 keywords: terraform, sitemap
 
@@ -343,11 +343,11 @@ subcollection: ibm-cloud-provider-for-terraform
     * [12 October 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-release-notes#12oct2021)
 
 
-## Deploy a Terraform IBM Module using Terraform CLI
-{: #sitemap_deploy_a_terraform_ibm_module_using_terraform_cli}
+## Deploying Terraform IBM Modules
+{: #sitemap_deploying_terraform_ibm_modules}
 
 
-[Deploy a Terraform IBM Module using Terraform CLI](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module)
+[Using Terraform CLI](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module)
 
 * [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-objectives)
 
@@ -371,12 +371,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 * [What you learned](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-learnings)
 
-
-## Deploy Terraform IBM Modules using HashiCorp Cloud Platform (HCP) Waypoint
-{: #sitemap_deploy_terraform_ibm_modules_using_hashicorp_cloud_platform_hcp_waypoint}
-
-
-[Deploy Terraform IBM Modules using HashiCorp Cloud Platform (HCP) Waypoint](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#deploy-tim-using-hcp-waypoint)
+[Using HashiCorp Waypoint](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#deploy-tim-using-hcp-waypoint)
 
 * [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#waypoint_objectives)
 
@@ -398,12 +393,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 * [Related links](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#waypointrelated-links)
 
-
-## Deploy Terraform IBM Modules using Pulumi
-{: #sitemap_deploy_terraform_ibm_modules_using_pulumi}
-
-
-[Deploy Terraform IBM Modules using Pulumi](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-pulumi-with-tim#pulumi-with-tim)
+[Using Pulumi](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-pulumi-with-tim#pulumi-with-tim)
 
     * [Pulumi Overview](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-pulumi-with-tim#pulumi-overview)
 
@@ -425,32 +415,105 @@ subcollection: ibm-cloud-provider-for-terraform
 
 * [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-pulumi-with-tim#pulumi-with-tim-next-steps)
 
+[Using Schematics](/docs/schematics?topic=schematics-sch-create-wks)
 
-## Package a Deployable Architecture and Publish to a Private Catalog
-{: #sitemap_package_a_deployable_architecture_and_publish_to_a_private_catalog}
-
-
-[Package a Deployable Architecture and Publish to a Private Catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#package-and-publish-da)
-
-* [Before you begin](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#before-you-begin)
-
-* [Package the Terraform code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#create-da-bundle)
-
-* [Publish to a Private Catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#publish-da)
-
-    * [Create a private catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#create-a-private-catalog)
-
-    * [Onboard the Deployable Architecture](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#onboard-the-deployable-architecture)
-
-    * [Mark the version as pre-release](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#mark-the-version-as-pre-release)
-
-    * [View the Deployable Architecture in the catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#view-the-deployable-architecture-in-the-catalog)
-
-* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#next-steps)
+[Using Terragrunt](https://github.com/terraform-ibm-modules/sample-iac-solutions/tree/main/terragrunt){: external}
 
 
-## Build Secure IBM Cloud Infrastructure with Terraform Modules for AI Applications
-{: #sitemap_build_secure_ibm_cloud_infrastructure_with_terraform_modules_for_ai_applications}
+## Solutions
+{: #sitemap_solutions}
+
+
+
+### Using IBM Cloud Provider plug-in
+{: #sitemap_using_ibm_cloud_provider_plug-in}
+
+
+[Provisioning an {{site.data.keyword.cloud_notm}} virtual server for VPC](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#sample_vpc_config)
+
+* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-objective)
+
+* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-audience)
+
+* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-prereq)
+
+* [Create the Terraform configuration files](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-create)
+
+* [Initializing Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-init)
+
+* [Generating Terraform plan](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-plan)
+
+* [Executing Terraform apply](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-apply)
+
+* [Analyzing the provisioned resource](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-analyze)
+
+* [Executing Terraform destroy](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-destroy)
+
+* [What's next?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-whatsnext)
+
+[Provisioning an {{site.data.keyword.cloud_notm}} virtual server for classic infrastructure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#sample_infrastructure_config)
+
+* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-objective)
+
+* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-audience)
+
+* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-prereq)
+
+* [Configure the resource file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-resource)
+
+* [Configure Terraform and provider version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-version)
+
+* [Initializing Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-init)
+
+* [Generating Terraform plan](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-plan)
+
+* [Executing Terraform apply](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-apply)
+
+* [Running Terraform show](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-show)
+
+* [Executing Terraform destroy](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-destroy)
+
+* [What's next?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-whatsnext)
+
+[Creating single and multizone Kubernetes and OpenShift clusters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#tutorial-tf-clusters)
+
+* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#cluster-tutorial-objectives)
+
+* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#cluster-tutorial-audience)
+
+* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#cluster-tutorial-prereq)
+
+* [Prepare your Terraform on IBM Cloud environment](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#prepare-tf)
+
+* [Create a single zone cluster](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#create-cluster)
+
+* [Convert your single zone cluster into a multizone cluster](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#multizone)
+
+* [Add a worker pool to your cluster](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#workerpool-add)
+
+* [Remove the default worker pool from your cluster](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#rm-default-wp)
+
+* [What's next?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#multizone-whatsnext)
+
+[Using Terraform on IBM Cloud to manage your own Red Hat OpenShift Container Platform on IBM Cloud classic infrastructure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-redhat#redhat)
+
+* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-redhat#objectives)
+
+* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-redhat#audience)
+
+* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-redhat#prerequisites)
+
+* [Lesson 1: Configure your environment](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-redhat#configure_environment)
+
+* [Lesson 2: Provision the IBM Cloud classic infrastructure for your Red Hat OpenShift cluster](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-redhat#provision_infrastructure)
+
+* [Lesson 3: Deploy Red Hat OpenShift Container Platform on your classic infrastructure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-redhat#deploy_openshift)
+
+* [Lesson 4: Deploy an app in your Red Hat OpenShift cluster](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-redhat#deploy_app)
+
+
+### Using Terraform IBM Modules
+{: #sitemap_using_terraform_ibm_modules}
 
 
 [Build Secure IBM Cloud Infrastructure with Terraform Modules for AI Applications](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-secure-ai-infrastructure#secure-ai-infrastructure)
@@ -506,11 +569,6 @@ subcollection: ibm-cloud-provider-for-terraform
     * [Check Resource Groups](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-secure-ai-infrastructure#secureai-resource-groups)
 
     * [ View all resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-secure-ai-infrastructure#secureai-all-resources)
-
-
-## Build a Secure Hub-and-Spoke Infrastructure Using Terraform IBM Modules
-{: #sitemap_build_a_secure_hub-and-spoke_infrastructure_using_terraform_ibm_modules}
-
 
 [Build a Secure Hub-and-Spoke Infrastructure Using Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-hub-spoke-infrastructure#hub-spoke-infrastructure)
 
@@ -639,24 +697,54 @@ subcollection: ibm-cloud-provider-for-terraform
 
 * [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-next-steps)
 
-[Deploy Terraform IBM Modules using Schematics](/docs/schematics?topic=schematics-sch-create-wks)
+
+## Working with IBM Cloud Provider plug-in
+{: #sitemap_working_with_ibm_cloud_provider_plug-in}
 
 
-## Deploying an OpenShift Cluster using TIM modules and Terragrunt
-{: #sitemap_deploying-an-openshift-cluster-using-tim-modules-and-terragrunt}
+[Installing the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#setup_cli)
 
-[Deploying an OpenShift Cluster using TIM modules and Terragrunt](https://github.com/terraform-ibm-modules/sample-iac-solutions/tree/main/terragrunt){: external}
+* [Installing the Terraform CLI](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#tf_installation)
 
+* [Installing the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider)
 
-## Deploy a Landing zone for containerized applications with OpenShift
-{: #sitemap_deploy-a-landing-zone-for-containerized-applications-with-openshift}
+    * [Upgrading to Terraform v0.13.x](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v13)
 
-[Deploy a Landing zone for containerized applications with OpenShift](https://github.com/terraform-ibm-modules/terraform-ibm-base-ocp-vpc/tree/main/examples/containerized_app_landing_zone){: external}
+    * [Specifying Terraform version constraints](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#terraform-operators)
 
+    * [Upgrading Terraform v0.12.x and earlier](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v12)
 
-## Sample Terraform templates for {{site.data.keyword.cloud_notm}}
-{: #sitemap_sample_terraform_templates_for_}
+[Configuring the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-reference)
 
+* [Required input parameters for each resource category](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters)
+
+* [Supported input parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-parameter-ov)
+
+* [Specifying the `provider` block](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-example)
+
+    * [Creating a static `provider.tf` file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#static)
+
+    * [Referencing credentials from a `terraform.tfvars` file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#tf-variables)
+
+    * [Using environment variables](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#env-vars)
+
+* [Creating multiple `provider` configurations](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#multiple-providers)
+
+* [Configuring non-default cloud service endpoints](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#config-provider)
+
+[Creating Terraform on IBM Cloud configurations](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create-tf-config#create-tf-config)
+
+* [Configuring the `provider` block](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create-tf-config#configure-provider)
+
+* [Adding {{site.data.keyword.cloud_notm}} resources to the `resource` block](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create-tf-config#configure-resources)
+
+    * [Referencing resources in other resource blocks](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create-tf-config#reference-resource-info)
+
+* [Using `variable` blocks to customize resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create-tf-config#configure-variables)
+
+    * [Referencing variables](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create-tf-config#reference-variables)
+
+* [Storing your Terraform on IBM Cloud configurations](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create-tf-config#store-template)
 
 [Sample Terraform templates for {{site.data.keyword.cloud_notm}}](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#provider-template)
 
@@ -716,130 +804,46 @@ subcollection: ibm-cloud-provider-for-terraform
 
     * [VPC infrastructure templates (Gen 2 compute)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-template#vpc-gen2-snippet)
 
+[Managing {{site.data.keyword.cloud_notm}} resources with Terraform on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-manage_resources#manage_resources)
 
-## Creating single and multizone Kubernetes and OpenShift clusters
-{: #sitemap_creating_single_and_multizone_kubernetes_and_openshift_clusters}
+* [Provisioning {{site.data.keyword.cloud_notm}} resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-manage_resources#provision_resources)
 
+* [Updating IBM Cloud resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-manage_resources#update_resources)
 
-[Creating single and multizone Kubernetes and OpenShift clusters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#tutorial-tf-clusters)
+* [Removing IBM Cloud resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-manage_resources#remove_resources)
 
-* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#cluster-tutorial-objectives)
+[Migrating and version controlling](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol#migration-versioncontrol)
 
-* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#cluster-tutorial-audience)
+* [Upgrading the Terraform version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol#tf-0.1x-migration)
 
-* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#cluster-tutorial-prereq)
+* [Version control](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol#migrate_versions)
 
-* [Prepare your Terraform on IBM Cloud environment](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#prepare-tf)
+[Creating a deployment to IBM Cloud Schematics link](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create_deploy_to_schematics#create_deploy_to_schematics)
 
-* [Create a single zone cluster](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#create-cluster)
+* [Adding an image on deployment to {{site.data.keyword.cloud_notm}} link](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create_deploy_to_schematics#add_an_image)
 
-* [Convert your single zone cluster into a multizone cluster](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#multizone)
 
-* [Add a worker pool to your cluster](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#workerpool-add)
+## Working with Terraform IBM Modules
+{: #sitemap_working_with_terraform_ibm_modules}
 
-* [Remove the default worker pool from your cluster](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#rm-default-wp)
 
-* [What's next?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-tutorial-tf-clusters#multizone-whatsnext)
+[Package a Deployable Architecture and Publish to a Private Catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#package-and-publish-da)
 
+* [Before you begin](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#before-you-begin)
 
-## Using Terraform on IBM Cloud to manage your own Red Hat OpenShift Container Platform on IBM Cloud classic infrastructure
-{: #sitemap_using_terraform_on_ibm_cloud_to_manage_your_own_red_hat_openshift_container_platform_on_ibm_cloud_classic_infrastructure}
+* [Package the Terraform code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#create-da-bundle)
 
+* [Publish to a Private Catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#publish-da)
 
-[Using Terraform on IBM Cloud to manage your own Red Hat OpenShift Container Platform on IBM Cloud classic infrastructure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-redhat#redhat)
+    * [Create a private catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#create-a-private-catalog)
 
-* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-redhat#objectives)
+    * [Onboard the Deployable Architecture](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#onboard-the-deployable-architecture)
 
-* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-redhat#audience)
+    * [Mark the version as pre-release](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#mark-the-version-as-pre-release)
 
-* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-redhat#prerequisites)
+    * [View the Deployable Architecture in the catalog](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#view-the-deployable-architecture-in-the-catalog)
 
-* [Lesson 1: Configure your environment](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-redhat#configure_environment)
-
-* [Lesson 2: Provision the IBM Cloud classic infrastructure for your Red Hat OpenShift cluster](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-redhat#provision_infrastructure)
-
-* [Lesson 3: Deploy Red Hat OpenShift Container Platform on your classic infrastructure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-redhat#deploy_openshift)
-
-* [Lesson 4: Deploy an app in your Red Hat OpenShift cluster](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-redhat#deploy_app)
-
-
-## Provisioning an {{site.data.keyword.cloud_notm}} virtual server for VPC
-{: #sitemap_provisioning_an_virtual_server_for_vpc}
-
-
-[Provisioning an {{site.data.keyword.cloud_notm}} virtual server for VPC](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#sample_vpc_config)
-
-* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-objective)
-
-* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-audience)
-
-* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-prereq)
-
-* [Create the Terraform configuration files](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-create)
-
-* [Initializing Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-init)
-
-* [Generating Terraform plan](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-plan)
-
-* [Executing Terraform apply](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-apply)
-
-* [Analyzing the provisioned resource](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-analyze)
-
-* [Executing Terraform destroy](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-destroy)
-
-* [What's next?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_vpc_config#vpc-tutorial-whatsnext)
-
-
-## Deploying a 3-Tier web app in a VPC
-{: #sitemap_deploying-a-3-tier-web-app-in-a-vpc}
-
-[Deploying a 3-Tier web app in a VPC](https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vpc#ibm-secure-landing-zone-vpc-module){: external}
-
-
-## Provisioning an {{site.data.keyword.cloud_notm}} virtual server for classic infrastructure
-{: #sitemap_provisioning_an_virtual_server_for_classic_infrastructure}
-
-
-[Provisioning an {{site.data.keyword.cloud_notm}} virtual server for classic infrastructure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#sample_infrastructure_config)
-
-* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-objective)
-
-* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-audience)
-
-* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-prereq)
-
-* [Configure the resource file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-resource)
-
-* [Configure Terraform and provider version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-version)
-
-* [Initializing Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-init)
-
-* [Generating Terraform plan](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-plan)
-
-* [Executing Terraform apply](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-apply)
-
-* [Running Terraform show](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-show)
-
-* [Executing Terraform destroy](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-destroy)
-
-* [What's next?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-sample_infrastructure_config#classic-tutorial-whatsnext)
-
-
-## Deploying a VPC environment on IBM Cloud by using Bastion host
-{: #sitemap_deploying-a-vpc-environment-on-ibm-cloud-by-using-bastion-host}
-
-[Deploying a VPC environment on IBM Cloud by using Bastion host](https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform){: external}
-
-
-## Deploying multitiered VPC on IBM Cloud by using Bastion host
-{: #sitemap_deploying-multitiered-vpc-on-ibm-cloud-by-using-bastion-host}
-
-[Deploying multitiered VPC on IBM Cloud by using Bastion host](https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md){: external}
-
-
-## Managing encryption keys in Terraform IBM Modules(TIM)
-{: #sitemap_managing_encryption_keys_in_terraform_ibm_modulestim}
-
+* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#next-steps)
 
 [Managing encryption keys in Terraform IBM Modules(TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion)
 
@@ -852,98 +856,6 @@ subcollection: ibm-cloud-provider-for-terraform
 * [Summary](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion-summary)
 
 * [Learn more](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion-references)
-
-
-## Installing the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in
-{: #sitemap_installing_the_terraform_cli_and_the_provider_plug-in}
-
-
-[Installing the Terraform CLI and the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#setup_cli)
-
-* [Installing the Terraform CLI](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#tf_installation)
-
-* [Installing the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install_provider)
-
-    * [Upgrading to Terraform v0.13.x](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v13)
-
-    * [Specifying Terraform version constraints](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#terraform-operators)
-
-    * [Upgrading Terraform v0.12.x and earlier](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-setup_cli#install-provider-v12)
-
-
-## Configuring the {{site.data.keyword.cloud_notm}} Provider plug-in
-{: #sitemap_configuring_the_provider_plug-in}
-
-
-[Configuring the {{site.data.keyword.cloud_notm}} Provider plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-reference)
-
-* [Required input parameters for each resource category](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#required-parameters)
-
-* [Supported input parameters](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-parameter-ov)
-
-* [Specifying the `provider` block](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#provider-example)
-
-    * [Creating a static `provider.tf` file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#static)
-
-    * [Referencing credentials from a `terraform.tfvars` file](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#tf-variables)
-
-    * [Using environment variables](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#env-vars)
-
-* [Creating multiple `provider` configurations](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#multiple-providers)
-
-* [Configuring non-default cloud service endpoints](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-reference#config-provider)
-
-
-## Migrating and version controlling
-{: #sitemap_migrating_and_version_controlling}
-
-
-[Migrating and version controlling](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol#migration-versioncontrol)
-
-* [Upgrading the Terraform version](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol#tf-0.1x-migration)
-
-* [Version control](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-migration-versioncontrol#migrate_versions)
-
-
-## Creating Terraform on IBM Cloud templates
-{: #sitemap_creating_terraform_on_ibm_cloud_templates}
-
-
-[Creating Terraform on IBM Cloud templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create-tf-config#create-tf-config)
-
-* [Configuring the `provider` block](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create-tf-config#configure-provider)
-
-* [Adding {{site.data.keyword.cloud_notm}} resources to the `resource` block](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create-tf-config#configure-resources)
-
-    * [Referencing resources in other resource blocks](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create-tf-config#reference-resource-info)
-
-* [Using `variable` blocks to customize resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create-tf-config#configure-variables)
-
-    * [Referencing variables](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create-tf-config#reference-variables)
-
-* [Storing your Terraform on IBM Cloud templates](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create-tf-config#store-template)
-
-
-## Managing {{site.data.keyword.cloud_notm}} resources with Terraform on IBM Cloud
-{: #sitemap_managing_resources_with_terraform_on_ibm_cloud}
-
-
-[Managing {{site.data.keyword.cloud_notm}} resources with Terraform on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-manage_resources#manage_resources)
-
-* [Provisioning {{site.data.keyword.cloud_notm}} resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-manage_resources#provision_resources)
-
-* [Updating IBM Cloud resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-manage_resources#update_resources)
-
-* [Removing IBM Cloud resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-manage_resources#remove_resources)
-
-
-## Creating a deployment to IBM Cloud Schematics link
-{: #sitemap_creating_a_deployment_to_ibm_cloud_schematics_link}
-
-
-[Creating a deployment to IBM Cloud Schematics link](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create_deploy_to_schematics#create_deploy_to_schematics)
-
-* [Adding an image on deployment to {{site.data.keyword.cloud_notm}} link](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-create_deploy_to_schematics#add_an_image)
 
 
 ## IBM Cloud Provider plug-in for Terraform
