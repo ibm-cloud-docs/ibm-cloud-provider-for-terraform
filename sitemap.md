@@ -845,13 +845,13 @@ subcollection: ibm-cloud-provider-for-terraform
 
 * [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#next-steps)
 
-[Managing encryption keys in Terraform IBM Modules(TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion)
+[Managing encryption keys in Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion)
 
 * [Understanding `force_delete`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion-understanding)
 
 * [Guidance to use `force_delete` in Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#key-deletion-tim)
 
-* [Examples](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion-examples)
+* [Example](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion-example)
 
 * [Summary](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion-summary)
 
