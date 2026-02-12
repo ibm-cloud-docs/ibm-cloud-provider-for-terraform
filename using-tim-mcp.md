@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-01-21"
+lastupdated: "2026-02-12"
 
 keywords: terraform mcp, ai assistant, claude, ibm bob, model context protocol, terraform modules, infrastructure as code
 
@@ -393,57 +393,7 @@ When using TIM-MCP with AI assistants:
 ## Troubleshooting
 {: #tim-mcp-troubleshooting}
 
-Following are some common errors you might face while experimenting with TIM-MCP server.
-
-### Server not starting
-{: #tim-mcp-troubleshoot-server}
-
-**Problem:** TIM-MCP server fails to start
-
-**Solution:**
-
-- Verify `uv` is installed and in your PATH: `uv --version`
-- Check JSON configuration syntax is valid
-- Review error logs in your AI assistant's console
-
-### No tools appearing
-{: #tim-mcp-troubleshoot-tools}
-
-**Problem:** MCP tools don't appear in AI assistant
-
-**Solution:**
-
-- Restart your IDE or Claude Desktop completely
-- Verify the 🔨 icon appears in the input box
-- Check configuration file location is correct
-
-### Rate limiting errors
-{: #tim-mcp-troubleshoot-rate-limit}
-
-**Problem:** GitHub API rate limit exceeded
-
-**Solution:**
-
-- Add a `GITHUB_TOKEN` environment variable with a valid personal access token
-- Verify token has public repository access permissions
-- Test token manually:
-
-```bash
-  curl -H "Authorization: token YOUR_TOKEN" https://api.github.com/user
-```
-{: pre}
-
-### Token authentication fails
-{: #tim-mcp-troubleshoot-token}
-
-**Problem:** GitHub token not working
-
-**Solution:**
-
-1. Verify token is valid and not expired
-2. Check token has public repository access
-3. Ensure token is in quotes in JSON configuration
-4. Regenerate token if needed
+To troubleshoot errors that you experience when you use TIM-MCP, visit the topic, [How can I resolve the errors while experimenting with TIM-MCP server ?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-troubleshoot-tim-mcp-error).
 
 ## Version pinning for production
 {: #tim-mcp-version-pinning}

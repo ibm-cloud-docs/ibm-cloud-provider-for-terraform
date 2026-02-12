@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-01-21"
+lastupdated: "2026-02-12"
 
 keywords: pulumi, ibmcloud, automation, infrastructure-as-code, terraform-ibm-modules, pulumi and ibmcloud, terraform
 
@@ -10,7 +10,6 @@ subcollection: ibm-cloud-provider-for-terraform
 
 content-type: tutorial
 services: pulumi, ibm-cloud-services
-account-plan:
 completion-time: 1h
 
 ---
@@ -20,12 +19,12 @@ completion-time: 1h
 # Use your favorite programming language with Terraform IBM Modules and Pulumi
 {: #pulumi-with-tim}
 {: toc-content-type="tutorial"}
-{: toc-completion-time="30m"}
+{: toc-completion-time="1h"}
 
 Learn how to use [Pulumi](https://www.pulumi.com/docs/get-started/){: external} with the [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external} to define and manage your {{site.data.keyword.cloud_notm}} infrastructure using the programming language of your choice.
 {: shortdesc}
 
-### Pulumi Overview
+## Pulumi Overview
 {: #pulumi-overview}
 
 Pulumi enables developers to write Infrastructure as Code (IaC) using familiar languages such as Python, Go, TypeScript, or C#. With Pulumi, you can leverage existing Terraform providers and modules to manage {{site.data.keyword.cloud_notm}} resources efficiently and consistently.
