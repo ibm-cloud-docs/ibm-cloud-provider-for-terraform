@@ -112,10 +112,8 @@ toc:
       - topicgroup:
           label: Troubleshooting
           topics:
-          - topicgroup:
-              label: Debugging Terraform IBM Modules MCP Server
-              topics:
-              - tg-tim-mcp-server.md
+          - topic: tg-tim-mcp-server.md
+            navtitle: Debugging Terraform IBM Modules MCP Server errors
           - topicgroup:
               label: Debugging Kubernetes service errors
               topics:

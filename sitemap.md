@@ -1079,12 +1079,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #sitemap_troubleshooting}
 
 
-
-### Debugging Terraform IBM Modules MCP Server
-{: #sitemap_debugging_terraform_ibm_modules_mcp_server}
-
-
-[How can I resolve the errors while experimenting with TIM-MCP server?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-troubleshoot-tim-mcp-error#troubleshoot-tim-mcp-error)
+[Debugging Terraform IBM Modules MCP Server errors](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-troubleshoot-tim-mcp-error#troubleshoot-tim-mcp-error)
 
 * [Server not starting](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-troubleshoot-tim-mcp-error#tim-mcp-troubleshoot-server)
 

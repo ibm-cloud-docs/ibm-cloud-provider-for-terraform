@@ -13,6 +13,7 @@ content-type: troubleshoot
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 # How can I resolve the errors while experimenting with TIM-MCP server?
 {: #troubleshoot-tim-mcp-error}
 
