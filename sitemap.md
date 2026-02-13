@@ -1067,6 +1067,24 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #sitemap_known_issues}
 
 
+[Kubernetes / Red Hat OpenShift on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues#known-issues)
+
+* [Cluster creation fails with "The specified API key could not be found"](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues#ki-apikey-error)
+
+    * [Workaround](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues#ki-apikey-error-workaround)
+
+* [OpenShift cluster creation fails due to entitlement not found](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues#ki-entitlement-error)
+
+    * [Workaround](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues#ki-apikey-error-workaround)
+
+* [Update in place identified for `kube_version`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues#ki-kube-version-update)
+
+    * [Workaround](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues#ki-kube-version-update-workaround)
+
+* [The refresh token contains subject type 'ServiceId', which is not valid for the intended operation](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues#ki-refresh-token-error)
+
+    * [Workaround](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues#ki-refresh-token-workaround)
+
 
 ## Troubleshooting
 {: #sitemap_troubleshooting}

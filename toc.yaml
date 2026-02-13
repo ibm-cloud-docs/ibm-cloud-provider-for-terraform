@@ -111,7 +111,7 @@ toc:
       - topicgroup:
           label: Known issues
           topics:
-          - include: known-issues-iks.md
+          - topic: known-issues-iks.md
             navtitle: Kubernetes / Red Hat OpenShift on IBM Cloud
       - topicgroup:
           label: Troubleshooting
