@@ -73,7 +73,6 @@ toc:
           label: Working with Terraform IBM Modules
           topics:
           - topic: package-and-publish-da.md
-          - topic: kms-deletion.md
       - topicgroup:
           label: Working with IBM Cloud Provider plug-in
           topics:
@@ -109,6 +108,11 @@ toc:
       - terraform-ts-index.md
       - whats-new.md
       - provider/version_changelog.md
+      - topicgroup:
+          label: Known issues
+          topics:
+          - include: known-issues-iks.md
+            navtitle: Kubernetes / Red Hat OpenShift on IBM Cloud
       - topicgroup:
           label: Troubleshooting
           topics:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-02-12"
+lastupdated: "2026-02-13"
 
 keywords: terraform, sitemap
 
@@ -712,18 +712,6 @@ subcollection: ibm-cloud-provider-for-terraform
 
 * [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-package-and-publish-da#next-steps)
 
-[Managing encryption keys in Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion)
-
-* [Understanding `force_delete`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion-understanding)
-
-* [Guidance to use `force_delete` in Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#key-deletion-tim)
-
-* [Example](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion-example)
-
-* [Summary](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion-summary)
-
-* [Learn more](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-kms-key-deletion#kms-key-deletion-references)
-
 
 ## Working with IBM Cloud Provider plug-in
 {: #sitemap_working_with_ibm_cloud_provider_plug-in}
@@ -1073,6 +1061,11 @@ subcollection: ibm-cloud-provider-for-terraform
 * [Change log for 1.2.2, released 26 February 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#changelog-v122)
 
 * [Change log for 1.2.1, released 13 February 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-provider-changelog#121)
+
+
+## Known issues
+{: #sitemap_known_issues}
+
 
 
 ## Troubleshooting

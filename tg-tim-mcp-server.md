@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-02-12"
+lastupdated: "2026-02-13"
 
 keywords: question about tim mcp server, troubleshooting guide
 
@@ -29,7 +29,7 @@ TIM-MCP server fails to start.
 To resolve this issue, follow these steps:
 {: tsResolve}
 
-1. Verify `uv` is installed and in your PATH: `uv --version`
+1. Verify if `uv` is installed and in your PATH: `uv --version`
 1. Check JSON configuration syntax is valid
 1. Review error logs in your AI assistant's console
 
@@ -60,11 +60,10 @@ To resolve this issue, follow these steps:
 1. Add a `GITHUB_TOKEN` environment variable with a valid personal access token
 1. Verify token has public repository access permissions
 1. Test token manually:
-
-        ```bash
-        curl -H "Authorization: token YOUR_TOKEN" https://api.github.com/user
-        ```
-        {: pre}
+    ```bash
+       curl -H "Authorization: token YOUR_TOKEN" https://api.github.com/rate_limit
+    ```
+    {: pre}
 
 ## Token authentication fails
 {: #tim-mcp-troubleshoot-token}
