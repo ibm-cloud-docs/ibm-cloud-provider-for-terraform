@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-01-21"
+lastupdated: "2026-02-11"
 
 keywords: terraform template guidelines, terraform config file guidelines, sample terraform files, terraform provider, terraform variables, terraform input variables, terraform template
 
@@ -13,13 +13,13 @@ subcollection: ibm-cloud-provider-for-terraform
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Creating Terraform on IBM Cloud templates
+# Creating Terraform on IBM Cloud configurations
 {: #create-tf-config}
 
-Learn how to create Terraform on IBM Cloud templates that are well-structured, reusable, and comprehensive.
+Learn how to create Terraform on IBM Cloud configurations that are well-structured, reusable, and comprehensive.
 {: shortdesc}
 
-An Terraform on IBM Cloud template consists of one or more Terraform on IBM Cloud configuration files that declare the state that you want to achieve for your {{site.data.keyword.cloud_notm}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](#configure-provider) and [add resources to your resource block](#configure-resources). Optionally, you can use [input variables](#configure-variables) to customize your resources.
+An Terraform on IBM Cloud configuration consists of one or more Terraform on IBM Cloud configuration files that declare the state that you want to achieve for your {{site.data.keyword.cloud_notm}} resources. To successfully work with your resources, you must [configure IBM as your cloud provider](#configure-provider) and [add resources to your resource block](#configure-resources). Optionally, you can use [input variables](#configure-variables) to customize your resources.
 
 You can write your Terraform on IBM Cloud configuration file by using HashiCorp Configuration Language (HCL) or JSON syntax. For more information, see [Configuration language](https://developer.hashicorp.com/terraform/language){: external}.
 
@@ -172,7 +172,7 @@ The {{site.data.keyword.cloud_notm}} Provider plug-in reference includes two typ
 ## Using `variable` blocks to customize resources
 {: #configure-variables}
 
-You can use `variable` blocks to create templates for your infrastructure code. For example, instead of creating multiple Terraform on IBM Cloud configuration files for a resource that you want to deploy in multiple data centers, simply reuse the same configuration and use an input variable to define the data center.
+You can use `variable` blocks to create configurations for your infrastructure code. For example, instead of creating multiple Terraform on IBM Cloud configuration files for a resource that you want to deploy in multiple data centers, simply reuse the same configuration and use an input variable to define the data center.
 {: shortdesc}
 
 **Where do I store my variable declarations?** </br>
@@ -220,10 +220,10 @@ resource ibm_container_cluster "test_cluster" {
 
 For more information, about variable configurations, see the [Terraform documentation](https://developer.hashicorp.com/terraform/language/values/variables){: external}.
 
-## Storing your Terraform on IBM Cloud templates
+## Storing your Terraform on IBM Cloud configurations
 {: #store-template}
 
-Your Terraform on IBM Cloud configuration files contain infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or GitLab repository. With version control, you can revert to previous versions, audit changes, and share code with multiple teams. If you do not want to store your files in GitHub, you have the option to provide your template by uploading a [tape archive file (`.tar`)](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) from your local machine instead.
+Your Terraform on IBM Cloud configuration files contain infrastructure code that you must treat as regular code. To support collaboration, source and version control, store your files in a GitHub or GitLab repository. With version control, you can revert to previous versions, audit changes, and share code with multiple teams. If you do not want to store your files in GitHub, you have the option to provide your configuration by uploading a [tape archive file (`.tar`)](/docs/schematics?topic=schematics-schematics-cli-reference#schematics-workspace-upload) from your local machine instead.
 {: shortdesc}
 
 Cloning GitHub repository in {{site.data.keyword.bplong_notm}} is allowed only to the listed extension files. The blocked extension files having more than 500 KB in size, and any invalid image is considered as vulnerable files while cloning.
@@ -231,7 +231,7 @@ Cloning GitHub repository in {{site.data.keyword.bplong_notm}} is allowed only t
 -    Blocked extension: `.php5` `.pht` `.phtml` `.shtml` `.asa` `.cer` `.asax` `.swf` `.xap` `.tfstate` `.tfstate.backup`
 -    Allowed image extension: `.tif` `.tiff` `.gif` `.png` `.bmp` `.jpg` `.jpeg`
 
-The directory structure of the Terraform on IBM Cloud template in the GitHub repository looks like listed in the table with the last updated time.
+The directory structure of the Terraform on IBM Cloud configuration in the GitHub repository looks like listed in the table with the last updated time.
 
 | File | Description |
 |----|-----|

@@ -22,65 +22,85 @@ toc:
   - navgroup:
       id: tutorial
       topics:
-      - topic: deploy-tim-module.md
-      - topic: deploy-tim-using-hashicorpwp.md
-      - topic: deploy-tim-using-pulumi.md
-        navtitle: Deploy Terraform IBM Modules using Pulumi
-      - topic: package-and-publish-da.md
-      - topic: combine-tim-modules-ai.md
-      - topic: combine-tim-modules-hub-spoke.md
+      - topicgroup:
+          label: Deploying Terraform IBM Modules
+          topics:
+          - topic: deploy-tim-module.md
+            navtitle: Using Terraform CLI
+          - link:
+              label: Using IBM Cloud Schematics
+              href: /schematics/schematics-sch-create-wks
+          - topic: deploy-tim-using-hashicorpwp.md
+            navtitle: Using HashiCorp Waypoint
+          - topic: deploy-tim-using-pulumi.md
+            navtitle: Using Pulumi
+          - link:
+              label: Using Terragrunt
+              href: https://github.com/terraform-ibm-modules/sample-iac-solutions/tree/main/terragrunt
+      - topicgroup:
+          label: Solutions
+          topics:
+          - topicgroup:
+              label: Using Terraform IBM Modules
+              topics:
+              - topic: combine-tim-modules-ai.md
+              - topic: combine-tim-modules-hub-spoke.md
+              - link:
+                  label: Deploy a Landing zone for containerized applications with OpenShift
+                  href: https://github.com/terraform-ibm-modules/terraform-ibm-base-ocp-vpc/tree/main/examples/containerized_app_landing_zone
+          - topicgroup:
+              label: Using IBM Cloud Provider plug-in
+              topics:
+              - provision-vsi-vpc.md
+              - provision-vsi-classic.md
+              - clusters.md
+              - install-redhat-openshift.md
+              - link:
+                  label: Deploying a 3-Tier web app in a VPC
+                  href: https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vpc#ibm-secure-landing-zone-vpc-module
+              - link:
+                  label: Deploying a VPC environment on IBM Cloud by using Bastion host
+                  href: https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform
+              - link:
+                  label: Deploying multitiered VPC on IBM Cloud by using Bastion host
+                  href: https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md
       - topic: using-tim-mcp.md
         navtitle: Using TIM-MCP with AI assistants
-      - link:
-          label: Deploy Terraform IBM Modules using Schematics
-          href: /schematics/schematics-sch-create-wks
-      - link:
-          label: Deploying an OpenShift Cluster using TIM modules and Terragrunt
-          href: https://github.com/terraform-ibm-modules/sample-iac-solutions/tree/main/terragrunt
-      - link:
-          label: Deploy a Landing zone for containerized applications with OpenShift
-          href: https://github.com/terraform-ibm-modules/terraform-ibm-base-ocp-vpc/tree/main/examples/containerized_app_landing_zone
-      - provider-template.md
-      - clusters.md
-      - install-redhat-openshift.md
-      - provision-vsi-vpc.md
-      - link:
-          label: Deploying a 3-Tier web app in a VPC
-          href: https://github.com/terraform-ibm-modules/terraform-ibm-landing-zone-vpc#ibm-secure-landing-zone-vpc-module
-      - provision-vsi-classic.md
-      - link:
-          label: Deploying a VPC environment on IBM Cloud by using Bastion host
-          href: https://developer.ibm.com/articles/secure-vpc-access-with-a-bastion-host-and-terraform
-      - link:
-          label: Deploying multitiered VPC on IBM Cloud by using Bastion host
-          href: https://github.com/Cloud-Schematics/multitier-vpc-bastion-host/blob/master/README.md
   - navgroup:
       id: howto
       topics:
-      - setup_cli.md
-      - provider/provider-ref.md
-      - migrate.md
-      - create-terraform-config.md
-      - manage_resources.md
-      - autodeploy_template.md
+      - topicgroup:
+          label: Working with Terraform IBM Modules
+          topics:
+          - topic: package-and-publish-da.md
+      - topicgroup:
+          label: Working with IBM Cloud Provider plug-in
+          topics:
+          - setup_cli.md
+          - provider/provider-ref.md
+          - create-terraform-config.md
+          - provider-template.md
+          - manage_resources.md
+          - migrate.md
+          - autodeploy_template.md
   - navgroup:
       id: reference
       topics:
+      - link:
+          label: IBM Cloud Terraform IBM Modules release and updates
+          href: https://github.com/terraform-ibm-modules
+      - link:
+          label: IBM Cloud Provider release and updates
+          href: https://github.com/IBM-Cloud/terraform-provider-ibm/releases
+      - link:
+          label: Terraform IBM Modules MCP Server
+          href: https://github.com/terraform-ibm-modules/tim-mcp
       - topicgroup:
           label: IBM Cloud Provider plug-in for Terraform
           topics:
           - link:
               label: Architecture reference - Highly available, secured, and managed Kubernetes environment
               href: https://github.com/ibm-cloud-architecture/refarch-public-iaas-iks
-      - link:
-          label: IBM Cloud Provider release and updates
-          href: https://github.com/IBM-Cloud/terraform-provider-ibm/releases
-      - link:
-          label: IBM Cloud Terraform IBM Modules release and updates
-          href: https://github.com/terraform-ibm-modules
-      - link:
-          label: Terraform IBM Modules MCP Server
-          href: https://github.com/terraform-ibm-modules/tim-mcp
   - navgroup:
       id: help
       topics:
@@ -89,8 +109,15 @@ toc:
       - whats-new.md
       - provider/version_changelog.md
       - topicgroup:
+          label: Known issues
+          topics:
+          - topic: known-issues-iks.md
+            navtitle: Kubernetes / Red Hat OpenShift on IBM Cloud
+      - topicgroup:
           label: Troubleshooting
           topics:
+          - topic: tg-tim-mcp-server.md
+            navtitle: Debugging Terraform IBM Modules MCP Server errors
           - topicgroup:
               label: Debugging Kubernetes service errors
               topics:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-01-07"
+lastupdated: "2026-02-11"
 
 keywords: terraform quickstart, terraform getting started, terraform tutorial, virtual server for vpc
 
@@ -30,7 +30,7 @@ Use {{site.data.keyword.cloud_notm}} Provider plug-in to provision a VPC, and se
 ## Objectives
 {: #vpc-tutorial-objective}
 
-In this tutorial, you will learn to provisions:
+In this tutorial, you will learn to provision:
 
 - 1 VPC where you provision your VPC virtual server instance
 - 1 security group and a rule for this security group to allow SSH connection to your virtual server instance
