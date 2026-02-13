@@ -15,11 +15,6 @@ subcollection: ibm-cloud-provider-for-terraform
 # Known issues with Red Hat OpenShift on IBM Cloud / IBM Cloud Kubernetes Service when using terraform
 {: #known-issues}
 
-- [Cluster creation fails with "The specified API key could not be found"](#ki-apikey-error)
-- [OpenShift cluster creation fails due to entitlement not found](#ki-entitlement-error)
-- [Update in place identified for `kube_version`](#ki-update-in-place)
-- [The refresh token contains subject type 'ServiceId', which is not valid for the intended operation](#ki-refresh-token-error)
-
 ## Cluster creation fails with "The specified API key could not be found"
 {: #ki-apikey-error}
 
