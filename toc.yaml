@@ -13,8 +13,9 @@ toc:
   - navgroup:
       id: learn
       topics:
-      - getting-started.md
       - about.md
+      - getting-started.md
+      - about-provider-plugin.md
       - about-tim.md
       - tim-structure.md
       - about-tim-mcp.md
@@ -72,6 +73,7 @@ toc:
       - topicgroup:
           label: Working with Terraform IBM Modules
           topics:
+          - topic: deploy-tim-module-example.md
           - topic: package-and-publish-da.md
       - topicgroup:
           label: Working with IBM Cloud Provider plug-in
