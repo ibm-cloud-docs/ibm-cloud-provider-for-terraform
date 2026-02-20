@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2025
 lastupdated: "2025-05-27"
 
-keywords: Terraform on IBM Cloud, configuration files, resources, what is Terraform on IBM Cloud, automation, automate
+keywords: Terraform on IBM Cloud, Infrastructure as code, resources, what is Terraform on IBM Cloud, automation, automate, IaC
 
 subcollection: ibm-cloud-provider-for-terraform
 
@@ -16,16 +16,60 @@ subcollection: ibm-cloud-provider-for-terraform
 # About Terraform on IBM Cloud
 {: #about}
 
-Infrastructure as Code (IaC) enables you to define, manage, and provision cloud resources — such as compute, network, and storage — using code instead of manually configuration through consoles or scripts. Terraform on IBM Cloud provides a powerful, automated approach to implementing IaC. Using Terraform, you define your infrastructure using simple, declarative configuration files - while the platform takes care of deployment, updates, and lifecycle management, so you can focus on innovation.
+Infrastructure as Code (IaC) enables you to define, manage, and provision cloud resources — such as compute, network, and storage — using code instead of manual configuration through consoles or scripts. Terraform on IBM Cloud provides a powerful, automated approach to implement IaC. Using Terraform, you define your infrastructure using simple, declarative configuration files - while the platform takes care of deployment, updates, and lifecycle management, so you can focus on innovation.
 
-On IBM Cloud, you have two flexible options to build your infrastructure:
+## Two approaches to Terraform on IBM Cloud
+{: #two-approaches}
 
-- [**IBM Cloud Terraform Provider**](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#provider-plugin-ov) – Use the provider directly to build fully customizable solutions. This approach offers fine-grained control over IBM Cloud services, allowing you to define every aspect of your architecture.
+IBM Cloud provides following two complementary approaches for implementing infrastructure as code with Terraform, each designed for different use cases and skill levels.
 
-- [**Terraform IBM Modules Library**](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) – A curated set of open-source, enterprise-ready modules built for speed, security, and scalability. These modules are secure by default and aligned with IBM Cloud best practices, enabling you to deploy robust architectures quickly while maintaining strong governance and reliability.
+### 1. Terraform IBM Modules (TIM)
+{: #approach-modules}
 
-Together, these options empower you to build repeatable, scalable, and compliant IBM Cloud environments with confidence and efficiency.
-{: shortdesc}
+**Terraform IBM Modules** provide pre-built, open-source, enterprise-ready and secure-by-default building blocks that follow IBM Cloud best practices. They enable you to deploy robust architectures quickly while maintaining strong governance and reliability. This approach is ideal when you need:
+
+- **Rapid deployment** - Get production-ready infrastructure quickly
+- **Best practices built-in** - Security, compliance, and reliability by default
+- **Composable architectures** - Combine modules to build complex solutions
+- **Reduced maintenance** - Benefit from community updates and improvements
+- **Consistency** - Standardize infrastructure across teams and projects
+
+**Example use case:** Deploying a secure, multi-zone VPC with monitoring, logging, and encryption enabled using tested, validated modules.
+
+**Get started:** [Working with Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim)
+
+### 2. IBM Cloud Provider Plug-in
+{: #approach-provider}
+
+The **IBM Cloud Provider Plug-in** gives you direct, fine-grained control over IBM Cloud resources using Terraform's native resource syntax. This approach is ideal when you need:
+
+- **Maximum flexibility** - Define every aspect of your infrastructure
+- **Custom configurations** - Build unique architectures not covered by pre-built modules
+- **Learning Terraform** - Understand core Terraform concepts and IBM Cloud APIs
+- **Granular control** - Manage individual resources with precise specifications
+
+**Example use case:** Creating a custom VPC configuration with specific subnet layouts, security groups, and routing rules tailored to your organization's unique requirements.
+
+**Get started:** [Learn more about the IBM Cloud Provider Plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-ibm-cloud-provider-plugin)
+
+
+### Which approach should you choose?
+{: #choosing-approach}
+
+The choice between Terraform IBM Modules and the IBM Cloud Provider Plug-in depends on your specific requirements, team expertise, and project goals. Use this guide to determine the best fit for your use case.
+
+| Scenario | Recommended Approach |
+|----------|---------------------|
+| Learning Terraform and IBM Cloud | **Provider Plug-in** - Start with basics |
+| Full control over Terraform resources | **Provider Plug-in** - Maximum flexibility |
+| Deploying production workloads quickly | **Terraform IBM Modules** - Pre-validated solutions |
+| Standardizing across teams | **Terraform IBM Modules** - Consistent patterns |
+| Complex enterprise architectures | **Terraform IBM Modules** - Composable building blocks |
+| Limited Terraform expertise | **Terraform IBM Modules** - Easier to learn |
+| Specific compliance requirements | **Provider Plug-in** - Custom controls |
+
+These approaches are not mutually exclusive. Many organizations use both - modules for common patterns and the provider plug-in for custom requirements.
+{: tip}
 
 ## How does Terraform on IBM Cloud work?
 {: #how-it-works}
@@ -34,25 +78,12 @@ Together, these options empower you to build repeatable, scalable, and compliant
 
 Let's say you want to spin up multiple copies of your cloud environment that uses a cluster of virtual servers, a load balancer, and a database server on {{site.data.keyword.cloud_notm}}. You could learn how to create each resource, review the API or the commands that you need, and write a bash script to spin up these components. But it's easier, faster, and more orderly to use one language to declare all your requirements, document them in a configuration file, and let Terraform on IBM Cloud do it all for you.
 
-### What is the {{site.data.keyword.cloud_notm}} Provider plug-in?
-{: #provider-plugin-ov}
-
-To abstract the APIs and complexity of the cloud resource provisioning and management process to the user, cloud providers create a plug-in for Terraform that contains the information for how to connect to the cloud provider and what APIs to call to work with a certain cloud resource. IBM's plug-in is called the **{{site.data.keyword.cloud_notm}} Provider plug-in for Terraform**. The plug-in analyzes the resources that you specified and determines the order in which these resources must be provisioned, including any dependencies that must be considered.
-
-### How does Terraform on IBM Cloud provision and manage cloud services?
-{: #resource-lifecycle-ov}
-
-To use Terraform on IBM Cloud, you must create a Terraform configuration file that describes the {{site.data.keyword.cloud_notm}} resources that you need and how you want to configure them. Based on your configuration, Terraform creates an execution plan and describes the actions that need to be executed to get to the required state. You can review the execution plan, change it, or simply execute the plan. When you change your configuration, Terraform on IBM Cloud can determine what changed and create incremental execution plans that you can apply to your existing {{site.data.keyword.cloud_notm}} resources.
-
-The following points specifies how Terraform on IBM Cloud provisions your services in {{site.data.keyword.cloud_notm}}.
-
-1. You declare the {{site.data.keyword.cloud_notm}} resources that you want in a Terraform configuration file by using HashiCorp Configuration Language (HCL). Store this configuration file in a source code repository that is version-controlled and that allows teams to collaborate, such as GitHub or GitLab.
-2. Configure the {{site.data.keyword.cloud_notm}} Provider plug-in.
-3. Create a Terraform execution plan that summarizes all the actions that Terraform needs to run to create, update, or delete the {{site.data.keyword.cloud_notm}} resources in your Terraform template.
-4. Apply the Terraform configuration file in {{site.data.keyword.cloud_notm}}.
+Based on your configuration, Terraform creates an execution plan and describes the actions that need to be executed to get to the required state. You can review the execution plan, change it, or simply execute the plan. When you change your configuration, Terraform on IBM Cloud can determine what changed and create incremental execution plans that you can apply to your existing {{site.data.keyword.cloud_notm}} resources.
 
 ## What are the benefits of using Terraform on IBM Cloud?
 {: #abt-benefits}
+
+Here are the key benefits of using Terraform to manage your IBM Cloud deployments.
 
 |Benefit|Description|
 |--|--|

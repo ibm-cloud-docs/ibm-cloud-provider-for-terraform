@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-02-13"
+lastupdated: "2026-02-20"
 
 keywords: terraform, sitemap
 
@@ -38,11 +38,15 @@ subcollection: ibm-cloud-provider-for-terraform
 
 [About Terraform on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#about)
 
+* [Two approaches to Terraform on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#two-approaches)
+
+    * [1. Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#approach-modules)
+
+    * [2. IBM Cloud Provider Plug-in](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#approach-provider)
+
+    * [Which approach should you choose?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#choosing-approach)
+
 * [How does Terraform on IBM Cloud work?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#how-it-works)
-
-    * [What is the {{site.data.keyword.cloud_notm}} Provider plug-in?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#provider-plugin-ov)
-
-    * [How does Terraform on IBM Cloud provision and manage cloud services?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#resource-lifecycle-ov)
 
 * [What are the benefits of using Terraform on IBM Cloud?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about#abt-benefits)
 
@@ -55,13 +59,15 @@ subcollection: ibm-cloud-provider-for-terraform
 
 [About Terraform IBM Modules (TIM)](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#about-tim)
 
-* [How to use Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#using-terraform-ibm-modules)
+* [How to use Terraform IBM Modules?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#using-terraform-ibm-modules)
 
 * [Benefits of using Terraform IBM Modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#about-tim-benefits)
 
 * [Building larger solutions using multiple modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#integrating-multiple-modules)
 
 * [Deployment options](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#tim-deployment-options)
+
+* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim#tim-next-steps)
 
 
 ## Understanding the Terraform IBM Module Structure
@@ -353,11 +359,15 @@ subcollection: ibm-cloud-provider-for-terraform
 
 * [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-prerequisites)
 
-* [Clone the repository](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson1-clone)
+* [Analyze the code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson1-code)
 
-* [Understand the code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson2-code)
+* [Create your configuration](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson2-configuration)
 
-* [Configure the variables](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson3-configure)
+    * [Review the examples](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#review-the-examples)
+
+    * [Write your code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#write-your-code)
+
+* [Define variables](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson3-configure)
 
 * [Initialize Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson4-init)
 
@@ -369,7 +379,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 * [Clean-up the resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-lesson8-destroy)
 
-* [What you learned](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-learnings)
+* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module#deploy-tim-module-next-steps)
 
 [Using IBM Cloud Schematics](/docs/schematics?topic=schematics-sch-create-wks)
 
