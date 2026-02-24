@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2025, 2025
-lastupdated: "2025-12-18"
+  years: 2025, 2026
+lastupdated: "2026-02-20"
 
 keywords: Terraform IBM Modules, Deploy a Terraform IBM Module, terraform module deployment
 
@@ -24,140 +24,137 @@ In this tutorial, you will learn how to deploy a terraform-ibm-module (TIM) modu
 ## Objectives
 {: #deploy-tim-module-objectives}
 
-By the end of this tutorial, you will be able to:
-- Configure and manage variables in modules using `terraform.tfvars`.
-- Use Terraform CLI commands to deploy and manage resources.
+By the end of this tutorial, you will learn to deploy and manage resources on IBM Cloud by using a Terraform IBM Module.
 
-While this tutorial uses the [Cloud Object Storage module](https://github.com/terraform-ibm-modules/terraform-ibm-cos) as an example, the skills gained here will be transferable to all Terraform modules.
+While this tutorial uses the [Cloud Object Storage module](https://github.com/terraform-ibm-modules/terraform-ibm-cos) as an example, you can apply these techniques to any Terraform IBM Module.
 
 ## Prerequisites
 {: #deploy-tim-module-prerequisites}
 
-Before you begin, ensure you have the following:
-- [Git CLI](https://git-scm.com/install/) installed.
-- [Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli).
+Before you get started, make sure you have:
+
+- [Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) installed.
 - [IBM Cloud apikey](/docs/account?topic=account-userapikey&interface=ui) to access the IBM Cloud.
 
-## Clone the repository
-{: #deploy-tim-module-lesson1-clone}
+
+## Analyze the code
+{: #deploy-tim-module-lesson1-code}
 {: step}
 
-Start by cloning the GitHub repository containing the Terraform module.
+The Terraform IBM module provides reusable infrastructure code for IBM Cloud resources. You can find the Cloud Object Storage module code in the [terraform-ibm-cos repository](https://github.com/terraform-ibm-modules/terraform-ibm-cos){: external}.
 
-You can use `git clone` command as follows:
+The repository contains:
+1. **Module source code**: The core Terraform configuration files
+2. **Examples directory**: Reference implementations showing different use cases
+3. **Documentation**: Variable definitions, outputs, and usage guidelines
+ 
+See [Understanding the Terraform IBM Module Structure](/docs/ibm-cloud-provider-for-terraform/ibm-cloud-provider-for-terraform-understand-tim-structure) for more details.
 
-```bash
-git clone https://github.com/terraform-ibm-modules/terraform-ibm-cos.git
-```
-
-## Understand the code
-{: #deploy-tim-module-lesson2-code}
+## Create your configuration
+{: #deploy-tim-module-lesson2-configuration}
 {: step}
 
-In the root of the cloned project, there exists a folder called `examples`. The `examples` directory contains working demonstrations of how to use the module. Each example is a complete, runnable Terraform configuration.
-This tutorial uses the `basic` example. Navigate to this example directory as follows:
+To deploy infrastructure using this module, you need to write your own Terraform configuration that references the module. Follow these steps:
 
-```bash
-cd terraform-ibm-cos/examples/basic
-```
-This example provisions the following resources:
-- A new resource group (if an existing one is not provided)
-- An IBM Cloud Object Storage instance
-- Two buckets in the newly provisioned Object Storage instance
+### Review the examples
 
-## Configure the variables
+Explore the `examples/` directory to understand how the module can be used. Each example is a complete, runnable Terraform configuration. It demonstrates:
+
+- Module configuration with specific parameters
+- Required variable values
+- Integration patterns with other resources
+
+### Write your code
+
+Create a new Terraform project directory and write your own Terraform configuration file that invokes this module. For guidance, refer to the [usage section](https://github.com/terraform-ibm-modules/terraform-ibm-cos/?tab=readme-ov-file#terraform-ibm-cos){: external}.
+
+
+## Define variables
 {: #deploy-tim-module-lesson3-configure}
 {: step}
 
-Create a new file named `terraform.tfvars` in the basic folder. This file is used to provide values for the input variables in the `variables.tf` file.
+Once you have written your Terraform configuration, the next step is to set up your variables. The input variables are declared in `variables.tf`. You can [set input variables](https://developer.hashicorp.com/terraform/language/values/variables#manage-variables-in-hcp-terraform){: external} by setting environment variables, passing them as command-line arguments, defining them directly in variables.tf or specifying them in `terraform.tfvars`.
 
-In the `basic` example, the module defines various input variables in `variables.tf`. Some variables such as `ibmcloud_api_key`, `prefix` and `region`, don't have default values, making them required. Terraform needs the values for the required variables. Defining them in `terraform.tfvars` enables automatic loading. The `prefix` variable is a string added to the beginning of resource names to keep them organized and easily identifiable.
 
-Add these required variables in the file:
+This tutorial uses the `terraform.tfvars` file to provide values for the input variables. Create a new file named `terraform.tfvars` and add variables as shown below.
 
 ```hcl
 ibmcloud_api_key = "<your-api-key>"
 prefix = "tf-demo" # you can choose a prefix of your choice
 region = "us-south"
+...
 ```
 
-Review the `variables.tf` file and update `terraform.tfvars` to override any default values do not meet your requirements.
+Review the input variables in your code and update `terraform.tfvars` to override any default values that don't align with your requirements.
+
+Never commit this file if it contains your `ibmcloud_api_key`, as it exposes sensitive credentials. You can also set the value safely by using a `TF_VAR_ibmcloud_api_key` environment variable instead.
+{: note}
 
 ## Initialize Terraform
 {: #deploy-tim-module-lesson4-init}
 {: step}
 
-Initialize Terraform in the working directory (`examples/basic`) using the following command:
+The `terraform init` command initializes Terraform in the working directory. It reads the backend configuration from your files to download and install the required provider plugins and the modules.
 
 ```bash
 terraform init
 ```
 
-This command downloads and installs plugins for the required providers as specified in `providers.tf`.
-
 ## Generate execution plan
 {: #deploy-tim-module-lesson5-plan}
 {: step}
 
-Run the following command:
+The `terraform plan` command generates an execution plan that provides a preview of the changes Terraform intends to make to your infrastructure based on your configuration files, allowing you to review and verify the proposed changes. To generate this execution plan, run the following command:
 
 ```bash
 terraform plan
 ```
 
-This command displays the execution plan, which provides a preview of the changes Terraform intends to make to your infrastructure based on your configuration files, allowing you to review and verify the proposed changes.
-
-For this basic example, the command output shows that:
-- A new resource group called `<your-prefix>-resource-group` will be created
-- A Cloud Object Storage instance will be created
-- Two buckets will be created in the chosen region
+Review the output of the plan and make any necessary changes to your configuration files before proceeding to the next step.
 
 ## Deploy the resources
 {: #deploy-tim-module-lesson6-deploy}
 {: step}
 
-Run the following command to begin the deployment:
+The `terraform apply` command deploys the resources specified in your configuration files to your IBM Cloud account. To deploy these resources, run the following command:
 
 ```bash
 terraform apply
 ```
 
 Approve the deployment when prompted, by typing `yes`. Alternatively, you may use `terraform apply -auto-approve` to automatically approve the changes.
-Once confirmed, Terraform will begin provisioning all resources defined in the execution plan. This step make take some time depending on the configuration.
+
+If you confirm, Terraform starts provisioning all resources defined in the execution plan. This step may take some time depending on the configuration.
+
+You can also save the execution plan in a file called `tfplan` by using `terraform plan -out=tfplan`  and then run `terraform apply tfplan` to execute the infrastructure changes specified in the saved plan file.
+{: tip}
 
 ## Verify the deployed resources
 {: #deploy-tim-module-lesson7-verify}
 {: step}
 
-After Terraform completes applying the configuration, verify that the resources have been successfully created in your IBM Cloud account. To verify the resources:
+After Terraform completes applying the configuration, verify that the resources have been successfully created in your IBM Cloud account. To verify if the resources are deployed properly,
 
 - Go to the [IBM Cloud dashboard](https://cloud.ibm.com/).
 - Navigate to **Resource List** in the left panel.
-- Check under the appropriate category (**Storage** in this case), or you can search for the prefix that was used for the deployment.
+- Check under the appropriate category (**Storage** in this case), or you can search for the prefix used for the deployment.
 
-The module has been deployed successfully, and you can now see the resources on the dashboard. You’re all set to start using them.
+The infrastructure has been deployed successfully, and the resources are now visible on the dashboard. You’re all set to start using them.
 
 ## Clean-up the resources
 {: #deploy-tim-module-lesson8-destroy}
 {: step}
 
-
-When the resources deployed are no longer needed, you can clean up your environment by removing everything Terraform created. Use the following command to perform this step:
+When the resources deployed are no longer needed, you can clean up your environment by removing everything Terraform created. Cleaning up is important to avoid unnecessary charges for cloud resources and keeps your IBM Cloud account organized. Even small resources, like storage buckets, can accumulate costs over time. To delete the resources, run the following command:
 
 ```bash
 terraform destroy
 ```
 
-This will show a summary of the resources that will be removed. Once you confirm, Terraform will initiate delete requests for all resources managed by the module.
+This displays a summary of the resources that will be removed. If you confirm, Terraform proceeds to delete all resources managed by the module.
 
-Cleaning up is important to avoid unnecessary charges for cloud resources and keeps your IBM Cloud account organized. Even small resources, like storage buckets, can accumulate costs over time.
 
-## What you learned
-{: #deploy-tim-module-learnings}
+## Next steps
+{: #deploy-tim-module-next-steps}
 
-By completing this tutorial, you have:
-
-- Learned how to provide values for input variables using the `terraform.tfvars` file.
-- Practiced using essential Terraform CLI commands such as `init`, `plan` and `apply` to provision cloud resources using a [terraform-ibm-module](https://github.com/terraform-ibm-modules).
-
-Although this tutorial used the Cloud Object Storage module as an example, these learnings apply to any Terraform IBM module, providing a reusable pattern you can apply across your infrastructure projects.
+You have now completed the deployment of a Terraform module - Cloud Object Storage. You can now explore other [modules](https://registry.terraform.io/search/modules?q=terraform-ibm-modules){: external} to deploy more resources in your IBM Cloud account according to your business needs.
