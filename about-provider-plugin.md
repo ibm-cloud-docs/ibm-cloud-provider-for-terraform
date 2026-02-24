@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-02-20"
+lastupdated: "2026-02-24"
 
 keywords: Terraform on IBM Cloud, resources, Terraform Provider, Terraform provider plug-in, IBM Cloud provider plug-in for Terraform
 
@@ -23,7 +23,6 @@ The provider plug-in acts as a bridge between Terraform and IBM Cloud, translati
 
 ## How does it work?
 {: #resource-lifecycle-ov}
-{: #how-it-works-provider-plugin}
 
 To use Terraform on IBM Cloud, you must create a Terraform configuration file by using HashiCorp Configuration Language (HCL) that describes the {{site.data.keyword.cloud_notm}} resources that you need and how you want to configure them. Store this configuration file in a source code repository that is version-controlled and that allows teams to collaborate, such as GitHub or GitLab. And configure the {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform.
 

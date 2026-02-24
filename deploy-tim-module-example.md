@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-02-20"
+lastupdated: "2026-02-24"
 
 keywords: Terraform IBM Modules, Deploy a Terraform IBM Module, terraform module deployment, TIM example, deploy TIM example
 
@@ -12,7 +12,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Deploy a VPC using example of Terraform IBM Module
+# Deploy a VPC using an example
 {: #deploy-tim-module-example}
 {: toc-content-type="how-to"}
 {: toc-services="vpc"}
@@ -144,5 +144,3 @@ This displays a summary of the resources that will be removed. If you confirm, T
 Congratulations! You have successfully deployed the IBM Cloud VPC using the example.
 
 You’re now ready to use the example code as a foundation for building your own configuration, complete with your own customizations. To learn more, refer to the [tutorial](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module) provided.
-
-

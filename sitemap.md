@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-02-20"
+lastupdated: "2026-02-24"
 
 keywords: terraform, sitemap
 
@@ -59,7 +59,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 [About {{site.data.keyword.cloud_notm}} Provider plug-in for Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-ibm-cloud-provider-plugin#about-ibm-cloud-provider-plugin)
 
-* [How does it work?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-ibm-cloud-provider-plugin#how-it-works-provider-plugin)
+* [How does it work?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-ibm-cloud-provider-plugin#resource-lifecycle-ov)
 
 * [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-ibm-cloud-provider-plugin#provider-next-steps)
 
@@ -715,7 +715,7 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #sitemap_working_with_terraform_ibm_modules}
 
 
-[Deploy a VPC using example of Terraform IBM Module](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module-example#deploy-tim-module-example)
+[Deploy a VPC using an example](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module-example#deploy-tim-module-example)
 
 * [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module-example#deploy-tim-module-example-objectives)
 
