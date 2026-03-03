@@ -114,7 +114,9 @@ toc:
           label: Known issues
           topics:
           - topic: known-issues-iks.md
-            navtitle: Kubernetes / Red Hat OpenShift on IBM Cloud
+            navtitle: Kubernetes / Red Hat OpenShift module
+          - topic: known-issues-vpc.md
+            navtitle: Virtual Private Cloud (VPC) module
       - topicgroup:
           label: Troubleshooting
           topics:

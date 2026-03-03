@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-02-24"
+lastupdated: "2026-03-03"
 
 keywords: terraform, sitemap
 
@@ -1112,23 +1112,27 @@ subcollection: ibm-cloud-provider-for-terraform
 {: #sitemap_known_issues}
 
 
-[Kubernetes / Red Hat OpenShift on IBM Cloud](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues#known-issues)
+[Kubernetes / Red Hat OpenShift module](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-iks#known-issues-iks)
 
-* [Cluster creation fails with "The specified API key could not be found"](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues#ki-apikey-error)
+* [Cluster creation fails with "The specified API key could not be found"](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-iks#ki-apikey-error)
 
-    * [Workaround](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues#ki-apikey-error-workaround)
+    * [Workaround](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-iks#ki-apikey-error-workaround)
 
-* [OpenShift cluster creation fails due to entitlement not found](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues#ki-entitlement-error)
+* [OpenShift cluster creation fails due to entitlement not found](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-iks#ki-entitlement-error)
 
-    * [Workaround](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues#ki-apikey-error-workaround)
+    * [Workaround](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-iks#ki-apikey-error-workaround)
 
-* [Update in place identified for `kube_version`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues#ki-kube-version-update)
+* [Update in place identified for `kube_version`](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-iks#ki-kube-version-update)
 
-    * [Workaround](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues#ki-kube-version-update-workaround)
+    * [Workaround](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-iks#ki-kube-version-update-workaround)
 
-* [The refresh token contains subject type 'ServiceId', which is not valid for the intended operation](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues#ki-refresh-token-error)
+* [The refresh token contains subject type 'ServiceId', which is not valid for the intended operation](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-iks#ki-refresh-token-error)
 
-    * [Workaround](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues#ki-refresh-token-workaround)
+    * [Workaround](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-iks#ki-refresh-token-workaround)
+
+[Virtual Private Cloud (VPC) module](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-vpc#known-issues-vpc)
+
+* [Changing prefix value recreates subnets and address prefixes](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-vpc#ki-vpc-prefix-change-recreate)
 
 
 ## Troubleshooting
