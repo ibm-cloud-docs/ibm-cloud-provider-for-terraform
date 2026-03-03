@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026, 2026
-lastupdated: "2026-02-13"
+lastupdated: "2026-03-03"
 
 keywords:
 
@@ -12,8 +12,10 @@ subcollection: ibm-cloud-provider-for-terraform
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Known issues with Red Hat OpenShift on IBM Cloud / IBM Cloud Kubernetes Service when using terraform
-{: #known-issues}
+# Known issues with Terraform IBM Module for Red Hat OpenShift
+{: #known-issues-iks}
+
+You might encounter the following known issues when you work with the [terraform-ibm-base-ocp-vpc](https://github.com/terraform-ibm-modules/terraform-ibm-base-ocp-vpc){: external}.
 
 ## Cluster creation fails with "The specified API key could not be found"
 {: #ki-apikey-error}
