@@ -117,6 +117,8 @@ toc:
             navtitle: Kubernetes / Red Hat OpenShift module
           - topic: known-issues-vpc.md
             navtitle: Virtual Private Cloud (VPC) module
+          - topic: known-issues-watsonx-ai.md
+            navtitle: watsonx.ai module
       - topicgroup:
           label: Troubleshooting
           topics:
