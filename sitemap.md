@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-03-03"
+lastupdated: "2026-03-12"
 
 keywords: terraform, sitemap
 
@@ -1133,6 +1133,44 @@ subcollection: ibm-cloud-provider-for-terraform
 [Virtual Private Cloud (VPC) module](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-vpc#known-issues-vpc)
 
 * [Changing prefix value recreates subnets and address prefixes](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-vpc#ki-vpc-prefix-change-recreate)
+
+[watsonx.ai module](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#known-issues-watsonx-ai)
+
+* [Error attaching existing COS instance to watsonx.ai project](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#ki-cos-error)
+
+    * [Reason](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#ki-cos-error-reason)
+
+    * [Workaround](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#ki-cos-error-workaround)
+
+* [Non-existing COS instances appear in storage delegation list](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#ki-non-existing-cos)
+
+    * [Reason](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#ki-non-existing-cos-reason)
+
+    * [Solution](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#ki-non-existing-cos-solution)
+
+* [Insufficient account entitlements error (403) during storage delegation](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#ki-insufficient-acc-entitlement)
+
+    * [Reason](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#ki-insufficient-acc-entitlement-reason)
+
+    * [Solution](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#ki-insufficient-acc-entitlement-solution)
+
+* [User profile does not exist error (400) when configuring project](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#ki-user-profile-error)
+
+    * [Reason](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#ki-user-profile-error-reason)
+
+    * [Solution](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#ki-user-profile-error-solution)
+
+* [Project creation succeeds despite 502 error](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#ki-project-create-error)
+
+    * [Reason](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#ki-project-create-error-reason)
+
+    * [Workaround](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#ki-project-create-error-workaround)
+
+* [Entitlement failure after deleting and recreating storage delegation](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#ki-entitlement-fail-error)
+
+    * [Reason](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#ki-entitlement-fail-error-reason)
+
+    * [Workaround](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-watsonx-ai#ki-entitlement-fail-error-workaround)
 
 
 ## Troubleshooting
