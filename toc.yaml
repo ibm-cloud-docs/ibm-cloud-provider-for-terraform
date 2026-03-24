@@ -33,6 +33,8 @@ toc:
               href: /schematics/schematics-sch-create-wks
           - topic: deploy-tim-using-hashicorpwp.md
             navtitle: Using HashiCorp Waypoint
+          - topic: deploy-tim-using-hcp-stacks.md
+            navtitle: Using HashiCorp Stacks
           - topic: deploy-tim-using-pulumi.md
             navtitle: Using Pulumi
           - link:

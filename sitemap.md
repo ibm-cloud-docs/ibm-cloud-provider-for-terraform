@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-03-23"
+lastupdated: "2026-03-24"
 
 keywords: terraform, sitemap
 
@@ -415,6 +415,50 @@ subcollection: ibm-cloud-provider-for-terraform
 * [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#deploytim-hcpwp-next-steps)
 
 * [Related links](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-waypoint#waypointrelated-links)
+
+[Using HashiCorp Stacks](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#deploy-tim-using-hcp-stacks)
+
+* [Objectives](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#stacks_objectives)
+
+* [Audience](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#stacks-audience)
+
+* [Prerequisites](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#stacks-prerequisites)
+
+* [Understand HCP Terraform stacks](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#understand-stacks)
+
+* [Create stack components using Terraform IBM modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#stacks-create-components)
+
+    * [Set up your stack directory structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#stacks-directory-structure)
+
+* [Publish your stack to HCP Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#stacks-publish)
+
+* [Create and configure variable sets](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#stacks-variable-sets)
+
+* [Deploy your stack](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#stacks-deploy)
+
+* [Manage and update your stack](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#stacks-manage)
+
+    * [Add a new deployment](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#add-a-new-deployment)
+
+    * [Update components](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#update-components)
+
+    * [Destroy resources](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#destroy-resources)
+
+* [Known limitations](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#stacks-known-limitations)
+
+    * [Local-exec provisioner not supported](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#local-exec-provisioner-not-supported)
+
+* [Best practices](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#stacks-best-practices)
+
+* [Example use cases](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#stacks-use-cases)
+
+    * [Multi-region high availability](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#multi-region-high-availability)
+
+    * [Environment separation](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#environment-separation)
+
+* [Next steps](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#deploytim-hcp-stacks-next-steps)
+
+* [Related links](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#stacks-related-links)
 
 [Using Pulumi](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-pulumi-with-tim#pulumi-with-tim)
 
