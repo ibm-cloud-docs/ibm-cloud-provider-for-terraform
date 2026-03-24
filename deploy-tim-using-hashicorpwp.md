@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-03-23"
+lastupdated: "2026-03-24"
 
 keywords: no-code, ibmcloud, infrastructure-as-code, terraform-ibm-modules, no-code and ibmcloud, terraform, hcp, waypoint, hashicorp
 
@@ -73,13 +73,13 @@ To create a configuration using Terraform IBM Modules, follow these steps:
 
 1. **Create a Terraform configuration** that composes one or more [Terraform IBM Modules (TIM)](https://github.com/terraform-ibm-modules){: external} to define your infrastructure pattern. Your configuration acts as a wrapper that calls the underlying TIM modules with specific configurations tailored to your organization's requirements.
 
-  * **Select appropriate Terraform IBM Modules** from the [Terraform IBM Modules GitHub organization](https://github.com/terraform-ibm-modules){: external} or the public [Terraform Registry](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external}. These modules cover various IBM Cloud services including VPC, OpenShift, databases, security services, and more. Each module is designed with security and best practices in mind, ensuring your infrastructure follows IBM Cloud standards.
+    * **Select appropriate Terraform IBM Modules** from the [Terraform IBM Modules GitHub organization](https://github.com/terraform-ibm-modules){: external} or the public [Terraform Registry](https://registry.terraform.io/namespaces/terraform-ibm-modules){: external}. These modules cover various IBM Cloud services including VPC, OpenShift, databases, security services, and more. Each module is designed with security and best practices in mind, ensuring your infrastructure follows IBM Cloud standards.
 
-  * **Configure module inputs** by defining variables that expose the necessary parameters for your infrastructure pattern. This allows developers to customize deployments while maintaining the underlying secure architecture defined by the TIM modules.
+    * **Configure module inputs** by defining variables that expose the necessary parameters for your infrastructure pattern. This allows developers to customize deployments while maintaining the underlying secure architecture defined by the TIM modules.
 
 1. **Store your configuration in version control** (such as GitHub, GitLab, or Bitbucket) to enable versioning, collaboration, and integration with HCP Terraform. Ensure your repository follows Terraform module structure conventions with proper documentation.
 
-   For comprehensive examples of using Terraform IBM Modules, refer to the [Sample IaC Solutions](https://github.com/terraform-ibm-modules/sample-iac-solutions){: external}. These examples demonstrate end-to-end infrastructure patterns, such as deploying containerized applications on OpenShift within a secure landing zone architecture that includes VPC networking, security groups, observability services, and key management. Each example shows how multiple TIM modules work together to create production-ready infrastructure following IBM Cloud best practices. {: tip}
+    For comprehensive examples of using Terraform IBM Modules, refer to the [Sample IaC Solutions](https://github.com/terraform-ibm-modules/sample-iac-solutions){: external}. These examples demonstrate end-to-end infrastructure patterns, such as deploying containerized applications on OpenShift within a secure landing zone architecture that includes VPC networking, security groups, observability services, and key management. Each example shows how multiple TIM modules work together to create production-ready infrastructure following IBM Cloud best practices.{: tip}
 
 Your configuration is now ready to be published to the HCP Terraform Registry, where it can be enabled for no-code provisioning and consumed through Waypoint templates.
 
