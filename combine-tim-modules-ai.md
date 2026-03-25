@@ -50,15 +50,16 @@ This solution integrates the following Terraform IBM Modules (TIM):
 
 Module | Purpose
 --- | ---
-[**Resource Group**](https://github.com/terraform-ibm-modules/terraform-ibm-resource-group) | Logical container for organizing IBM Cloud resources
-[**Code Engine Project**](https://github.com/terraform-ibm-modules/terraform-ibm-code-engine/tree/main/modules/project) | Serverless container platform for hosting the application
-[**Code Engine Secret**](https://github.com/terraform-ibm-modules/terraform-ibm-code-engine/tree/main/modules/secret) | Secure storage for container registry credentials
-[**Container Registry Namespace**](https://github.com/terraform-ibm-modules/terraform-ibm-container-registry) | Organization for container images
-[**Code Engine Build**](https://github.com/terraform-ibm-modules/terraform-ibm-code-engine/tree/main/modules/build) | Automated container image builds from source code
-[**Key Protect**](https://github.com/terraform-ibm-modules/terraform-ibm-kms-all-inclusive) | Customer-managed encryption keys for data security
-[**Cloud Object Storage**](https://github.com/terraform-ibm-modules/terraform-ibm-cos) | Encrypted object storage for AI project data
-[**watsonx.ai Project**](https://github.com/terraform-ibm-modules/terraform-ibm-watsonx-ai) | AI workload management with integrated storage
-[**Code Engine Application**](https://github.com/terraform-ibm-modules/terraform-ibm-code-engine/tree/main/modules/app) | Scalable deployment of the containerized application
+[Resource Group](https://github.com/terraform-ibm-modules/terraform-ibm-resource-group) | Logical container for organizing IBM Cloud resources
+[Code Engine Project](https://github.com/terraform-ibm-modules/terraform-ibm-code-engine/tree/main/modules/project) | Serverless container platform for hosting the application
+[Code Engine Secret](https://github.com/terraform-ibm-modules/terraform-ibm-code-engine/tree/main/modules/secret) | Secure storage for container registry credentials
+[Container Registry Namespace](https://github.com/terraform-ibm-modules/terraform-ibm-container-registry) | Organization for container images
+[Code Engine Build](https://github.com/terraform-ibm-modules/terraform-ibm-code-engine/tree/main/modules/build) | Automated container image builds from source code
+[Key Protect](https://github.com/terraform-ibm-modules/terraform-ibm-kms-all-inclusive) | Customer-managed encryption keys for data security
+[Cloud Object Storage](https://github.com/terraform-ibm-modules/terraform-ibm-cos) | Encrypted object storage for AI project data
+[watsonx.ai Project](https://github.com/terraform-ibm-modules/terraform-ibm-watsonx-ai) | AI workload management with integrated storage
+[Code Engine Application](https://github.com/terraform-ibm-modules/terraform-ibm-code-engine/tree/main/modules/app) | Scalable deployment of the containerized application
+{: caption="Terraform IBM Modules used in this solution" caption-side="bottom"}
 
 ## Deploy the AI application
 {: #deploy-ai-application}
