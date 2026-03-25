@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-03-24"
+lastupdated: "2026-03-25"
 
 keywords: infrastructure-as-code, terraform-ibm-modules, terraform, hcp, stacks, hashicorp, multi-region, orchestration
 
@@ -125,6 +125,25 @@ To create a stack configuration for deploying Terraform IBM modules, you need to
     You will use this Git repository to connect your stack configuration to HCP Terraform in the next steps.
     {: note}
 
+## Create and configure variable sets
+{: #stacks-variable-sets}
+{: step}
+
+Before deploying, create a variable set in HCP Terraform to store your IBM Cloud credentials:
+
+To create a variable set, follow these steps:
+
+1. In HCP Terraform, navigate to **Settings** > **Variable Sets**.
+2. Click **Create variable set**.
+3. Name it (e.g., `ibm-credentials`).
+4. Add a variable:
+    * **Key:** `ibmcloud_api_key`
+    * **Value:** Your IBM Cloud API key
+    * Mark as **Sensitive**
+    * **Category:** Terraform
+5. Apply the variable set to your stack.
+6. Note the variable set ID (format: `varset-XXXXXXXXXX`) and update it in your `deployments.tfdeploy.hcl` file.
+
 ## Publish your stack to HCP Terraform
 {: #stacks-publish}
 {: step}
@@ -156,25 +175,6 @@ To create a stack configuration for deploying Terraform IBM modules, you need to
     * Add a **Description** explaining the stack's purpose.
     * Configure **Variable sets** to store your IBM Cloud API key securely.
     * Click **Save**.
-
-## Create and configure variable sets
-{: #stacks-variable-sets}
-{: step}
-
-Before deploying, create a variable set in HCP Terraform to store your IBM Cloud credentials:
-
-To create a variable set, follow these steps:
-
-1. In HCP Terraform, navigate to **Settings** > **Variable Sets**.
-2. Click **Create variable set**.
-3. Name it (e.g., `ibm-credentials`).
-4. Add a variable:
-    * **Key:** `ibmcloud_api_key`
-    * **Value:** Your IBM Cloud API key
-    * Mark as **Sensitive**
-    * **Category:** Terraform
-5. Apply the variable set to your stack.
-6. Note the variable set ID (format: `varset-XXXXXXXXXX`) and update it in your `deployments.tfdeploy.hcl` file.
 
 ## Deploy your stack
 {: #stacks-deploy}
@@ -210,9 +210,10 @@ To modify your infrastructure, update the `components.tfcomponent.hcl` file. Com
 To remove infrastructure from a specific deployment:
 
 1. In HCP Terraform, navigate to your stack.
-2. Select the deployment you want to destroy.
-3. Click **Actions** > **Destroy**.
-4. Confirm the destruction.
+2. Go to **Settings**.
+3. Select the **Destruction and Deletion** tab.
+4. Click the **Force delete** button.
+5. Confirm the deletion.
 
 ## Known limitations
 {: #stacks-known-limitations}
