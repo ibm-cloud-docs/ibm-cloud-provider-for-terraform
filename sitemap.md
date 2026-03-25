@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-03-24"
+lastupdated: "2026-03-25"
 
 keywords: terraform, sitemap
 
@@ -430,9 +430,9 @@ subcollection: ibm-cloud-provider-for-terraform
 
     * [Set up your stack directory structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#stacks-directory-structure)
 
-* [Publish your stack to HCP Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#stacks-publish)
-
 * [Create and configure variable sets](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#stacks-variable-sets)
+
+* [Publish your stack to HCP Terraform](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#stacks-publish)
 
 * [Deploy your stack](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-using-hcp-stacks#stacks-deploy)
 
