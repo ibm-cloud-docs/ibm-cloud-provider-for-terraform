@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-03-24"
+lastupdated: "2026-03-25"
 
 keywords: Secure AI infrastructure, Terraform IBM Modules, TIM Modules, terraform-ibm-modules, Code Engine, COS, KMS, IaC, Infrastructure as Code, watsonx, AI
 
@@ -29,7 +29,7 @@ This guide demonstrates how to compose and integrate reusable Terraform modules 
 
 This solution demonstrates **composing modular Terraform components**, where each component encapsulates a distinct IBM Cloud service. These modules are integrated through well-defined inputs and outputs to form a complete, secure, and repeatable **Infrastructure as Code deployment pattern**.
 
-The example application simulates a bank loan processing workflow where AI agents evaluate risk and determine interest rates. The source code is available [here](https://github.com/terraform-ibm-modules/sample-iac-solutions/secure-infra-ai-app/ai-app-for-loan-risk).
+The example application simulates a bank loan processing workflow where AI agents evaluate risk and determine interest rates. The source code is available [here](https://github.com/terraform-ibm-modules/sample-iac-solutions/tree/main/secure-infra-ai-app/ai-app-for-loan-risk).
 {: note}
 
 ### Architecture components
@@ -97,6 +97,6 @@ The architecture implements security best practices:
 ## Next steps
 {: #secure-ai-next-steps}
 
-- Follow the [complete tutorial](https://github.com/terraform-ibm-modules/sample-iac-solutions/tree/main/secure-infra-ai-app/ai-app-for-loan-risk) to deploy the solution.
-- Learn more about [Terraform IBM Modules structure](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure).
-- Explore [deploying TIM modules](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module).
+- Follow the [complete tutorial](https://github.com/terraform-ibm-modules/sample-iac-solutions/tree/main/secure-infra-ai-app/README.md) to deploy the solution.
+- Learn more about [Terraform IBM Modules structure](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-understand-tim-structure).
+- Explore [deploying TIM modules](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module).
