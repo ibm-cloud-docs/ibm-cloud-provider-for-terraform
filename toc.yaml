@@ -77,6 +77,7 @@ toc:
           topics:
           - topic: deploy-tim-module-example.md
           - topic: package-and-publish-da.md
+          - topic: kms-deletion.md
       - topicgroup:
           label: Working with IBM Cloud Provider plug-in
           topics:

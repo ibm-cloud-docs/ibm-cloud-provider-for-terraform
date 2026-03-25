@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-03-24"
+lastupdated: "2026-03-25"
 
 keywords: Secure Hub-and-Spoke, Terraform IBM Modules, TIM Modules
 
@@ -98,7 +98,7 @@ Each module is versioned and maintained by the Terraform IBM Modules team, givin
 ## What you will learn
 {: #hub-spoke-learning-outcomes}
 
-By going to the [repo](https://github.com/terraform-ibm-modules/sample-iac-solutions){: external} and doing this tutorial hands-on, you will gain practical experience with:
+By going to the [repo](https://github.com/terraform-ibm-modules/sample-iac-solutions/tree/main/hub-and-spoke){: external} and doing this tutorial hands-on, you will gain practical experience with:
 
 - **Composing Terraform modules** — Building infrastructure by assembling well-tested modules instead of writing resources from scratch.
 - **VPC network design** — Creating hub-and-spoke topologies with proper CIDR planning, subnet isolation, and inter-VPC routing.
