@@ -111,7 +111,6 @@ toc:
       topics:
       - faqs.md
       - terraform-ts-index.md
-      - whats-new.md
       - provider/version_changelog.md
       - topicgroup:
           label: Known issues

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-03-25"
+lastupdated: "2026-04-14"
 
 keywords: terraform, sitemap
 
@@ -940,43 +940,6 @@ subcollection: ibm-cloud-provider-for-terraform
 [Getting help and support](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-gettinghelp#gettinghelp)
 
 * [For instance](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-gettinghelp#for-instance)
-
-
-## What's new in Terraform on IBM Cloud?
-{: #sitemap_whats_new_in_terraform_on_ibm_cloud}
-
-
-[What's new in Terraform on IBM Cloud?](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform#new-in-terraform)
-
-* [September 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform#sept-2021)
-
-* [August 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform#aug-2021)
-
-* [31 July 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform#31-July-2021)
-
-* [9 June 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform#9-June-2021)
-
-* [20 May 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform#20-may-2021)
-
-* [26 April 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform#26-april-2021)
-
-* [4 April 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform#4-april-2021)
-
-* [1 April 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform#1-april-2021)
-
-* [16 March 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform#16-march-2021)
-
-* [04 March 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform#04-march-2021)
-
-* [17 February 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform#17-february-2021)
-
-* [28 January 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform#28-january-2021)
-
-* [13 January 2021](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform#13-january-2021)
-
-* [29 December 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform#29-december-2020)
-
-* [14 December 2020](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-new-in-terraform#14-december-2020)
 
 
 ## Version changelog
