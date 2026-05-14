@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-02-12"
+lastupdated: "2026-05-14"
 
 keywords: terraform mcp, ai assistant, claude, ibm bob, model context protocol, terraform modules, infrastructure as code
 
@@ -56,7 +56,8 @@ TIM-MCP enhances AI-assisted infrastructure development by:
 ## Before you begin
 {: #tim-mcp-prereqs}
 
-Before you can use TIM-MCP, you need:
+Before you can use TIM-MCP, you need the following prerequisites.
+{: shortdesc}
 
 1. **An MCP-compatible AI assistant**
    - [IBM Project Bob](https://www.ibm.com/products/bob){: external}
@@ -97,45 +98,46 @@ Before you can use TIM-MCP, you need:
    - With token: 5,000 requests/hour
 
    To create a token:
-   1. Go to [GitHub Settings → Developer settings → Personal access tokens → Fine-grained tokens](https://github.com/settings/tokens?type=beta){: external}
-   2. Click **Generate new token**
+   1. Go to [GitHub Settings → Developer settings → Personal access tokens → Fine-grained tokens](https://github.com/settings/tokens?type=beta){: external}.
+   2. Click **Generate new token**.
    3. Configure the token:
       - **Repository access:** Public repositories only
       - **Permissions:** No private access scopes needed
       - **Expiration:** Set to 90 days or longer
-   4. Copy and save the token securely
+   4. Copy and save the token securely.
 
-## Installing TIM-MCP for IBM Project Bob
+## Install TIM-MCP for IBM Project Bob
 {: #tim-mcp-ibm-bob}
 {: step}
 
 IBM Project Bob supports MCP servers through the IBM Project Bob Marketplace or manual configuration files.
+{: shortdesc}
 
-### Installing from IBM Project Bob Marketplace
+### Install from IBM Project Bob Marketplace
 {: #tim-mcp-bob-marketplace}
 
-1. **Open IBM Project Bob Marketplace**:
-   - Click the marketplace icon in the Bob pane
-   - Navigate to the **MCP** tab
+1. Open IBM Project Bob Marketplace:
+   - Click the marketplace icon in the Bob pane.
+   - Navigate to the **MCP** tab.
 
-2. **Find and install TIM-MCP**:
-   - Search for "Terraform IBM Modules (TIM)"
-   - Click **Install** on the TIM-MCP server card
+2. Find and install TIM-MCP:
+   - Search for "Terraform IBM Modules (TIM)".
+   - Click **Install** on the TIM-MCP server card.
 
-3. **Choose installation method**:
-   - **Installation Scope**: Select Project (current workspace) or Global (all workspaces)
-   - **Installation Method**: Choose UVX or UVX (Pinned Version)
+3. Choose installation method:
+   - **Installation Scope**: Select Project (current workspace) or Global (all workspaces).
+   - **Installation Method**: Choose UVX or UVX (Pinned Version).
    - **Version**:
-     - For latest version: Leave as "latest"
-     - For pinned version (recommended for production): Enter specific version (e.g., "v1.0.0")
+     - For latest version: Leave as "latest".
+     - For pinned version (recommended for production): Enter specific version (e.g., "v1.0.0").
 
-4. **Configure GitHub token (optional but recommended)**:
-   - In the **GitHub Token** field, enter your GitHub personal access token
-   - This helps avoid API rate limits (60 requests/hour without token, 5,000 with token)
+4. Configure GitHub token (optional but recommended):
+   - In the **GitHub Token** field, enter your GitHub personal access token.
+   - This helps avoid API rate limits (60 requests/hour without token, 5,000 with token).
 
-5. **Complete installation**:
-   - Click **Install**
-   - The server will be automatically configured with your settings
+5. Complete installation:
+   - Click **Install**.
+   - The server will be automatically configured with your settings.
 
 ### Manual configuration
 {: #tim-mcp-bob-manual}
@@ -145,11 +147,9 @@ If you prefer manual configuration or need project-specific settings:
 **Project-level configuration:**
 
 1. Create `.bob/mcp.json` in your project directory:
-
    ```bash
    mkdir -p .bob
    ```
-
    {: pre}
 
 2. Add the configuration:
@@ -171,30 +171,30 @@ If you prefer manual configuration or need project-specific settings:
      }
    }
    ```
-
    {: codeblock}
 
 **Global configuration:**
 
-1. Open Bob settings in IBM Project Bob IDE
-2. Click the ⚙️ icon in the top navigation of the Bob pane
-3. Scroll to the bottom of the MCP settings view
-4. Click **Edit Global MCP** to open `mcp_settings.json`
-5. Add the TIM-MCP configuration using the same JSON format as above
+1. Open Bob settings in IBM Project Bob IDE.
+2. Click the ⚙️ icon in the top navigation of the Bob pane.
+3. Scroll to the bottom of the MCP settings view.
+4. Click **Edit Global MCP** to open `mcp_settings.json`.
+5. Add the TIM-MCP configuration by using the same JSON format as shown in the [Install TIM-MCP for Claude Desktop](#tim-mcp-claude-desktop) section.
 
-## Installing TIM-MCP for Claude Desktop
+## Install TIM-MCP for Claude Desktop
 {: #tim-mcp-claude-desktop}
 {: step}
 
 Claude Desktop is a standalone application that supports MCP servers through JSON configuration.
+{: shortdesc}
 
-1. **Locate the configuration file**:
+1. Locate the configuration file:
    - **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
    - **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
 
-2. **Add TIM-MCP configuration**:
+2. Add TIM-MCP configuration:
 
-   **Basic configuration (without GitHub token):**
+   Basic configuration (without GitHub token):
 
    ```json
    {
@@ -212,7 +212,7 @@ Claude Desktop is a standalone application that supports MCP servers through JSO
    ```
    {: codeblock}
 
-   **Recommended configuration (with GitHub token):**
+   Recommended configuration (with GitHub token):
 
    ```json
    {
@@ -233,25 +233,26 @@ Claude Desktop is a standalone application that supports MCP servers through JSO
    ```
    {: codeblock}
 
-3. **Restart Claude Desktop** completely
+3. Restart Claude Desktop completely.
 
-4. **Verify installation**:
-   - Look for the 🔨 (hammer) icon in the input box
+4. Verify the installation:
+   - Look for the 🔨 (hammer) icon in the input box.
    - Ask: "What IBM Cloud VPC modules are available?"
 
-## Installing TIM-MCP for VS Code
+## Install TIM-MCP for VS Code
 {: #tim-mcp-vscode}
 {: step}
 
 VS Code supports MCP servers through the MCP extension.
+{: shortdesc}
 
-1. **Install the MCP extension** from the VS Code marketplace
+1. Install the MCP extension from the VS Code marketplace.
 
-2. **Configure TIM-MCP** using one of these methods:
-   - Create `.vscode/mcp.json` in your project directory
-   - Use Command Palette (Ctrl+Shift+P or Cmd+Shift+P) → "MCP: Add Server"
+2. Configure TIM-MCP by using one of these methods:
+   - Create `.vscode/mcp.json` in your project directory.
+   - Use Command Palette (Ctrl+Shift+P or Cmd+Shift+P) → "MCP: Add Server".
 
-3. **Add the configuration**:
+3. Add the configuration:
 
    ```json
    {
@@ -272,34 +273,36 @@ VS Code supports MCP servers through the MCP extension.
    ```
    {: codeblock}
 
-## Installing TIM-MCP for Cursor
+## Install TIM-MCP for Cursor
 {: #tim-mcp-cursor}
 {: step}
 
 Cursor IDE supports MCP servers through configuration files.
+{: shortdesc}
 
-1. **Create the configuration file**:
-   - Project-level: `.cursor/mcp.json` in your project directory
-   - Global: `~/.cursor/mcp.json` for all projects
+1. Create the configuration file:
+   - Project-level: `.cursor/mcp.json` in your project directory.
+   - Global: `~/.cursor/mcp.json` for all projects.
 
-2. **Add the configuration** using the same JSON format as shown in previous sections
+2. Add the configuration by using the same JSON format as shown in previous sections.
 
-## Installing TIM-MCP for Claude Code
+## Install TIM-MCP for Claude Code
 {: #tim-mcp-claude-code}
 {: step}
 
 Claude Code supports MCP configuration via CLI or config file.
+{: shortdesc}
 
-1. **Navigate to your project directory**:
+1. Navigate to your project directory:
 
    ```bash
    cd /path/to/your/project
    ```
    {: pre}
 
-2. **Add TIM-MCP using the CLI**:
+2. Add TIM-MCP using the CLI:
 
-   **With GitHub token (recommended):**
+   With GitHub token (recommended):
 
    ```bash
    claude mcp add tim-mcp --env GITHUB_TOKEN=your_github_token_here \
@@ -307,38 +310,39 @@ Claude Code supports MCP configuration via CLI or config file.
    ```
    {: pre}
 
-   **Without GitHub token:**
+   Without GitHub token:
 
    ```bash
    claude mcp add tim-mcp -- uvx --from git+https://github.com/terraform-ibm-modules/tim-mcp.git tim-mcp
    ```
    {: pre}
 
-3. **Verify configuration**:
+3. Verify configuration:
 
    ```bash
    claude mcp list
    ```
    {: pre}
 
-## Using TIM-MCP with AI assistants
+## Use TIM-MCP with AI assistants
 {: #tim-mcp-usage}
 {: step}
 
 Once TIM-MCP is configured, your AI assistant can help you build IBM Cloud infrastructure from simple to complex deployments.
+{: shortdesc}
 
 ### Getting started examples
 {: #tim-mcp-examples-basic}
 
 Try these prompts to get started:
 
-**Simple virtual server:**
+Simple virtual server:
 
 ```text
 I want to create a simple basic virtual server on IBM Cloud and SSH to it
 ```
 
-**OpenShift cluster:**
+OpenShift cluster:
 
 ```text
 I am new to IBM Cloud. Help me create a simple and cheap OpenShift cluster and access the console
@@ -349,28 +353,28 @@ I am new to IBM Cloud. Help me create a simple and cheap OpenShift cluster and a
 
 For more complex scenarios:
 
-**VPC with OpenShift:**
+VPC with OpenShift:
 
 ```text
 Design a VPC + OpenShift: Create a complete container platform with networking,
 including multi-zone VPC, subnets, OpenShift/ROKS cluster, and load balancers
 ```
 
-**Secure landing zone:**
+Secure landing zone:
 
 ```text
 Design a Secure Landing Zone: Implement enterprise-grade security with network
 isolation, encryption key management, private endpoints, and security groups
 ```
 
-**Multi-zone HA database:**
+Multi-zone HA database:
 
 ```text
 Design a Multi-Zone HA Database: Design resilient database infrastructure across
 3+ availability zones with automated failover, backup strategies, and disaster recovery
 ```
 
-**Financial Services validated architecture:**
+Financial Services validated architecture:
 
 ```text
 Design a FS-Validated Architecture: Deploy compliant infrastructure meeting
@@ -382,13 +386,13 @@ Financial Services requirements with HPCS encryption, audit logging, and regulat
 
 When using TIM-MCP with AI assistants:
 
-1. **Start with clear requirements**: Describe your infrastructure needs, constraints, and compliance requirements
-2. **Review generated code**: Always review AI-generated Terraform code before applying
-3. **Test in non-production**: Deploy to development or staging environments first
-4. **Validate configurations**: Run `terraform plan` to review changes before applying
-5. **Use version pinning**: Pin module versions in production deployments
-6. **Follow security best practices**: Review security group rules, IAM policies, and encryption settings
-7. **Document customizations**: Add comments explaining any modifications to generated code
+1. Start with clear requirements - Describe your infrastructure needs, constraints, and compliance requirements.
+2. Review generated code - Always review AI-generated Terraform code before applying.
+3. Test in non-production - Deploy to development or staging environments first.
+4. Validate configurations - Run `terraform plan` to review changes before applying.
+5. Use version pinning - Pin module versions in production deployments.
+6. Follow security best practices - Review security group rules, IAM policies, and encryption settings.
+7. Document customizations - Add comments explaining any modifications to generated code.
 
 ## Troubleshooting
 {: #tim-mcp-troubleshooting}
@@ -424,7 +428,7 @@ Check the [TIM-MCP releases page](https://github.com/terraform-ibm-modules/tim-m
 ## Next steps
 {: #tim-mcp-next-steps}
 
-- Explore [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external}
-- Learn about [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro){: external}
-- Review [IBM Cloud Terraform best practices white paper](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform){: external}
-- Join the [Terraform IBM Modules community](https://github.com/terraform-ibm-modules){: external}
+- Explore [Terraform IBM Modules](https://github.com/terraform-ibm-modules){: external}.
+- Learn about [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro){: external}.
+- Review [IBM Cloud Terraform best practices white paper](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform){: external}.
+- Join the [Terraform IBM Modules community](https://github.com/terraform-ibm-modules){: external}.
