@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-04-14"
+lastupdated: "2026-05-14"
 
 keywords: terraform, sitemap
 
@@ -630,21 +630,21 @@ subcollection: ibm-cloud-provider-for-terraform
 
 * [Before you begin](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-prereqs)
 
-* [Installing TIM-MCP for IBM Project Bob](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-ibm-bob)
+* [Install TIM-MCP for IBM Project Bob](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-ibm-bob)
 
-    * [Installing from IBM Project Bob Marketplace](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-bob-marketplace)
+    * [Install from IBM Project Bob Marketplace](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-bob-marketplace)
 
     * [Manual configuration](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-bob-manual)
 
-* [Installing TIM-MCP for Claude Desktop](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-claude-desktop)
+* [Install TIM-MCP for Claude Desktop](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-claude-desktop)
 
-* [Installing TIM-MCP for VS Code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-vscode)
+* [Install TIM-MCP for VS Code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-vscode)
 
-* [Installing TIM-MCP for Cursor](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-cursor)
+* [Install TIM-MCP for Cursor](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-cursor)
 
-* [Installing TIM-MCP for Claude Code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-claude-code)
+* [Install TIM-MCP for Claude Code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-claude-code)
 
-* [Using TIM-MCP with AI assistants](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-usage)
+* [Use TIM-MCP with AI assistants](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-usage)
 
     * [Getting started examples](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-examples-basic)
 
