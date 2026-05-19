@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026, 2026
-lastupdated: "2026-03-03"
+lastupdated: "2026-05-19"
 
 keywords:
 
@@ -128,3 +128,64 @@ provider "ibm" {
   region           = var.region
 }
 ```
+
+## Terraform destroy fails with Secrets Manager integration when API key expires
+{: #ki-secrets-manager-destroy-expired-key}
+
+When deploying the [Landing Zone for containerized applications with OpenShift](https://cloud.ibm.com/catalog/architecture/deploy-arch-ibm-slz-ocp) Deployable Architecture (DA) with Standard and Integrated with configurable services variation and Secrets Manager integration enabled, you may encounter a failure during `terraform destroy` if the API key used during `terraform apply` has expired or been revoked.
+
+This issue occurs specifically when the following conditions are met:
+- `enable_secrets_manager_integration` is set to `true`
+- `secrets_manager_secret_group_id` is set to `null`
+
+When `secrets_manager_secret_group_id` is `null`, the DA creates a new secret group to store the ingress certificate secret (rather than using the default group, which is not a recommended practice). The Secrets Manager service automatically creates and manages an ingress certificate secret within this group through the `ibm_container_ingress_instance` terraform resource.
+
+However, when `terraform destroy` is executed, the automatically created secret is not deleted by the Secrets Manager service. To handle this, the DA includes a `terraform_data` resource with a destroy-time provisioner that runs a script to delete the secrets before Terraform attempts to delete the secret group because a secret group with active secrets inside it can not be deleted and terraform will throw an error.
+
+The problem arises because the `terraform_data` resource does not refresh its data during destroy operations. The API key stored in the resource during `terraform apply` remains unchanged, even if you provide a new API key when running `terraform destroy`. The destroy-time provisioner script attempts to generate an IAM token from this stale API key, which fails if the key has expired or been revoked.
+
+This issue is particularly problematic when using IBM Cloud Trusted Profile API keys, as these keys are valid for only a single operation and will always be expired by the time `terraform destroy` is executed.
+
+When this occurs, you will see an error similar to:
+
+```
+Error: local-exec provisioner error
+
+  with terraform_data.delete_secrets[0],
+  on main.tf line 263, in resource "terraform_data" "delete_secrets":
+ 263:   provisioner "local-exec" {
+
+Error running command './scripts/delete_secrets.sh
+76ed4f0f-3f02-89d2-39b8-a14031aab329 private
+3d04d5a3-940a-4d62-8693-df20039a78a4 us-south private': exit status 1.
+Output: "Provided API key could not be found."
+Could not obtain an IAM access token
+```
+
+### Workaround
+{: #ki-secrets-manager-destroy-expired-key-workaround}
+
+To work around this issue, manually delete the secrets and remove the problematic resource from the Terraform state:
+
+1. **Delete secrets manually using IBM Cloud UI or CLI:**
+   - Navigate to your Secrets Manager instance in the IBM Cloud console
+   - Locate the secret group that was created by the DA (it will be named after your cluster ID)
+   - Delete all secrets within that secret group
+
+2. **Remove the `terraform_data.delete_secrets` resource from the Terraform state:**
+
+   If you are using Terraform locally:
+   ```bash
+   terraform state rm 'terraform_data.delete_secrets[0]'
+   ```
+
+   If you are using IBM Cloud Schematics:
+   ```bash
+   ibmcloud schematics workspace state rm --id WORKSPACE_ID --address 'terraform_data.delete_secrets[0]'
+   ```
+
+   Replace `WORKSPACE_ID` with your actual Schematics workspace ID.
+
+3. **Run `terraform destroy` again:**
+
+   After completing the above steps, run `terraform destroy` again. The destroy operation should now complete successfully, as the secret group will be empty and the problematic provisioner will not execute.
