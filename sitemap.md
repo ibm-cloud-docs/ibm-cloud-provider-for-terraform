@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-05-14"
+lastupdated: "2026-05-19"
 
 keywords: terraform, sitemap
 
@@ -1052,6 +1052,10 @@ subcollection: ibm-cloud-provider-for-terraform
 * [The refresh token contains subject type 'ServiceId', which is not valid for the intended operation](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-iks#ki-refresh-token-error)
 
     * [Workaround](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-iks#ki-refresh-token-workaround)
+
+* [Terraform destroy fails with Secrets Manager integration when API key expires](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-iks#ki-secrets-manager-destroy-expired-key)
+
+    * [Workaround](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-iks#ki-secrets-manager-destroy-expired-key-workaround)
 
 [Virtual Private Cloud (VPC) module](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-known-issues-vpc#known-issues-vpc)
 
