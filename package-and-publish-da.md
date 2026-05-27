@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025, 2026
-lastupdated: "2026-01-21"
+lastupdated: "2026-05-27"
 
 keywords: Package module as DA, Publish in Private Catalog, DA, Catalog
 
@@ -17,7 +17,7 @@ subcollection: ibm-cloud-provider-for-terraform
 
 A [Deployable Architecture](/docs/secure-enterprise?topic=secure-enterprise-understand-module-da&interface=ui)(DA) is a terraform solution often built using multiple TIM modules to create an architectural pattern. The DA can be published as a deployable solution in the IBM Cloud catalog that creates a self-service experience, allowing developers and other teams to deploy this entire architecture with just a few clicks in the IBM Cloud console, without needing to understand the underlying Terraform code.
 
-Considering you have successfully built and tested a secure infrastructure using Terraform by following this [guide](/docs/secure-enterprise?topic=secure-enterprise-create-da&interface=ui). This tutorial provides you a [sample DA](https://github.com/IBM/deployable-architecture-iac-lab-materials/tree/main) for reference. The next step in the platform engineering lifecycle is to package this automation so it can be easily reused across your organization.
+Considering you have successfully built and tested a secure infrastructure using Terraform by following this [guide](/docs/secure-enterprise?topic=secure-enterprise-create-da&interface=ui). This tutorial provides you a [sample DA](https://github.com/terraform-ibm-modules/sample-iac-solutions/tree/v1.0.0) for reference. The next step in the platform engineering lifecycle is to package this automation so it can be easily reused across your organization.
 
 In this tutorial you will learn how to package the source code and publish it to a private catalog.
 
@@ -37,7 +37,7 @@ The [catalog manifest file](/docs/secure-enterprise?topic=secure-enterprise-crea
 The packaged source code(`.tar.gz` file) is typically generated from a release in a source code repository like GitHub or GitLab. Detailed instructions are available [here](/docs/secure-enterprise?topic=secure-enterprise-onboard-da#package-source). For the purpose of this tutorial, a public URL to a pre-packaged bundle is provided to simplify the process.
 
 ```text
-https://github.com/IBM/deployable-architecture-iac-lab-materials/archive/refs/tags/v1.0.3.tar.gz
+https://github.com/terraform-ibm-modules/sample-iac-solutions/archive/refs/tags/v1.0.0.tar.gz
 ```
 
 Use this URL as the **Source URL** in the next step.
