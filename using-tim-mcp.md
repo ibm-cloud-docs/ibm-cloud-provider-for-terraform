@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026
-lastupdated: "2026-05-14"
+lastupdated: "2026-07-22"
 
 keywords: terraform mcp, ai assistant, claude, ibm bob, model context protocol, terraform modules, infrastructure as code
 
@@ -175,11 +175,12 @@ If you prefer manual configuration or need project-specific settings:
 
 **Global configuration:**
 
-1. Open Bob settings in IBM Project Bob IDE.
-2. Click the ⚙️ icon in the top navigation of the Bob pane.
-3. Scroll to the bottom of the MCP settings view.
-4. Click **Edit Global MCP** to open `mcp_settings.json`.
-5. Add the TIM-MCP configuration by using the same JSON format as shown in the [Install TIM-MCP for Claude Desktop](#tim-mcp-claude-desktop) section.
+1. Click the **Settings** icon (⚙️) in the top navigation of the Bob pane.
+2. Scroll to the bottom of the MCP settings view.
+3. Click **Edit Global MCP** to open `mcp_settings.json`.
+4. Add the TIM-MCP configuration by using the same JSON format as mentioned in the [Install TIM-MCP for Claude Desktop](#tim-mcp-claude-desktop) section.
+5. Verify the installation:
+   - Click the **Settings** icon (⚙️) in the Bob panel → MCP settings to confirm `tim-mcp` shows as connected.
 
 ## Install TIM-MCP for Claude Desktop
 {: #tim-mcp-claude-desktop}
@@ -236,8 +237,7 @@ Claude Desktop is a standalone application that supports MCP servers through JSO
 3. Restart Claude Desktop completely.
 
 4. Verify the installation:
-   - Look for the 🔨 (hammer) icon in the input box.
-   - Ask: "What IBM Cloud VPC modules are available?"
+   - Check **Settings** icon (⚙️) → Connectors to confirm `tim-mcp` is connected.
 
 ## Install TIM-MCP for VS Code
 {: #tim-mcp-vscode}
@@ -246,17 +246,23 @@ Claude Desktop is a standalone application that supports MCP servers through JSO
 VS Code supports MCP servers through the MCP extension.
 {: shortdesc}
 
-1. Install the MCP extension from the VS Code marketplace.
+### Quick install
+{: #tim-mcp-vscode-quick}
 
-2. Configure TIM-MCP by using one of these methods:
+To install TIM-MCP directly into VS Code, click [Install TIM-MCP](https://vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522tim-mcp%2522%252C%2522command%2522%253A%2522uvx%2522%252C%2522args%2522%253A%255B%2522--from%2522%252C%2522git%252Bhttps%253A%2F%2Fgithub.com%2Fterraform-ibm-modules%2Ftim-mcp.git%2522%252C%2522tim-mcp%2522%255D%257D){: external} (requires VS Code 1.99+ with GitHub Copilot).
+
+### Manual installation
+{: #tim-mcp-vscode-manual}
+
+1. Configure TIM-MCP by using one of these methods:
    - Create `.vscode/mcp.json` in your project directory.
-   - Use Command Palette (Ctrl+Shift+P or Cmd+Shift+P) → "MCP: Add Server".
+   - Use Command Palette (Ctrl+Shift+P or Cmd+Shift+P) → `MCP: Add Server`.
 
-3. Add the configuration:
+2. Add the configuration:
 
    ```json
    {
-     "mcpServers": {
+     "servers": {
        "tim-mcp": {
          "command": "uvx",
          "args": [
@@ -273,6 +279,10 @@ VS Code supports MCP servers through the MCP extension.
    ```
    {: codeblock}
 
+3. Restart VS Code.
+
+4. To start the server, open the Command Palette (Ctrl+Shift+P on Windows or Cmd+Shift+P on macOS), select `MCP: Show Servers`, right-click `tim-mcp`, and select `Start Server`.
+
 ## Install TIM-MCP for Cursor
 {: #tim-mcp-cursor}
 {: step}
@@ -284,7 +294,10 @@ Cursor IDE supports MCP servers through configuration files.
    - Project-level: `.cursor/mcp.json` in your project directory.
    - Global: `~/.cursor/mcp.json` for all projects.
 
-2. Add the configuration by using the same JSON format as shown in previous sections.
+2. Add the TIM-MCP configuration by using the same JSON format as mentioned in the [Install TIM-MCP for Claude Desktop](#tim-mcp-claude-desktop) section.
+
+3. Verify the installation:
+   - Check MCP Servers panel to confirm `tim-mcp` is connected.
 
 ## Install TIM-MCP for Claude Code
 {: #tim-mcp-claude-code}
