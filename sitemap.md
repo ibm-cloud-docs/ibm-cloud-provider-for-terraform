@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2026
-lastupdated: "2026-05-19"
+lastupdated: "2026-07-22"
 
 keywords: terraform, sitemap
 
@@ -639,6 +639,10 @@ subcollection: ibm-cloud-provider-for-terraform
 * [Install TIM-MCP for Claude Desktop](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-claude-desktop)
 
 * [Install TIM-MCP for VS Code](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-vscode)
+
+    * [Quick install](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-vscode-quick)
+
+    * [Manual installation](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-vscode-manual)
 
 * [Install TIM-MCP for Cursor](/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-using-tim-mcp#tim-mcp-cursor)
 
